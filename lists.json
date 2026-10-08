@@ -80,6 +80,84 @@
    ]
   },
   {
+   "id": "nicolas-cage-movies",
+   "title": "Nicolas Cage movies",
+   "items": [
+    {
+     "id": "m9802",
+     "name": "The Rock",
+     "note": "1996",
+     "poster": "/eBcoxveWzzXQrCrwWMGAROcqgpP.jpg"
+    },
+    {
+     "id": "m1701",
+     "name": "Con Air",
+     "note": "1997",
+     "poster": "/kOKjgrEzGOP92rVQ6srA9jtp60l.jpg"
+    },
+    {
+     "id": "m754",
+     "name": "Face/Off",
+     "note": "1997",
+     "poster": "/69Xzn8UdPbVnmqSChKz2RTpoNfB.jpg"
+    },
+    {
+     "id": "m9679",
+     "name": "Gone in Sixty Seconds",
+     "note": "2000",
+     "poster": "/fToQDmkBtiXYGh9xfgAh3gpo6GZ.jpg"
+    },
+    {
+     "id": "m2059",
+     "name": "National Treasure",
+     "note": "2004",
+     "poster": "/jKbZBMRFpF2EfFuvrsDZ2uQYsEQ.jpg"
+    },
+    {
+     "id": "m1830",
+     "name": "Lord of War",
+     "note": "2005",
+     "poster": "/3MGQD4yXokufNlW1AyRXdiy7ytP.jpg"
+    },
+    {
+     "id": "m1738",
+     "name": "Next",
+     "note": "2007",
+     "poster": "/wtBOCJBCP0MWNjmBwjMAzbwgtTK.jpg"
+    },
+    {
+     "id": "m6637",
+     "name": "National Treasure: Book of Secrets",
+     "note": "2007",
+     "poster": "/xxoIBbvmTj1ZttzV439jAvoovTw.jpg"
+    },
+    {
+     "id": "m13811",
+     "name": "Knowing",
+     "note": "2009",
+     "poster": "/OG0mxQt4YaNIWiz8EKJSHe9lPh.jpg"
+    },
+    {
+     "id": "m23483",
+     "name": "Kick-Ass",
+     "note": "2010",
+     "poster": "/iHMbrTHJwocsNvo5murCBw0CwTo.jpg"
+    },
+    {
+     "id": "m27022",
+     "name": "The Sorcerer's Apprentice",
+     "note": "2010",
+     "poster": "/b5pIUsGll0418NyfNA5eYCI9aoK.jpg"
+    },
+    {
+     "id": "m1226578",
+     "name": "Longlegs",
+     "note": "2024",
+     "poster": "/1EwNyiiNFd863H4e8nWEzutnZD7.jpg"
+    }
+   ]
+  },
+  {
    "id": "films-directed-by-james-cameron",
    "title": "Films directed by James Cameron",
    "items": [
@@ -640,6 +718,138 @@
      "name": "The Lord of the Rings: The Fellowship of the Ring",
      "note": "2001",
      "poster": "/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg"
+    }
+   ]
+  },
+  {
+   "id": "friends-seasons",
+   "title": "Friends seasons",
+   "items": [
+    {
+     "id": "s4573",
+     "name": "Season 1",
+     "note": "1994",
+     "poster": "/odCW88Cq5hAF0ZFVOkeJmeQv1nV.jpg"
+    },
+    {
+     "id": "s4574",
+     "name": "Season 2",
+     "note": "1995",
+     "poster": "/kC9VHoMh1KkoAYfsY3QlHpZRxDy.jpg"
+    },
+    {
+     "id": "s4575",
+     "name": "Season 3",
+     "note": "1996",
+     "poster": "/n9u4pslqb6tpiLc8soldL5IbAyG.jpg"
+    },
+    {
+     "id": "s4576",
+     "name": "Season 4",
+     "note": "1997",
+     "poster": "/3WdH3FNMXgp3Qlx21T7kwKS8Mtc.jpg"
+    },
+    {
+     "id": "s4577",
+     "name": "Season 5",
+     "note": "1998",
+     "poster": "/aEwLXWbo6gV1TNIv9veu4rRwsPZ.jpg"
+    },
+    {
+     "id": "s4578",
+     "name": "Season 6",
+     "note": "1999",
+     "poster": "/7EU6bV6d8j1Xbc1F8QoNkOZrpsi.jpg"
+    },
+    {
+     "id": "s4579",
+     "name": "Season 7",
+     "note": "2000",
+     "poster": "/yvUZVChjOnqCjB9rjdEqEmpDdnQ.jpg"
+    },
+    {
+     "id": "s4580",
+     "name": "Season 8",
+     "note": "2001",
+     "poster": "/eh6PPkrzkXsEksRJDcdtx9lZsqX.jpg"
+    },
+    {
+     "id": "s4581",
+     "name": "Season 9",
+     "note": "2002",
+     "poster": "/1IvIdN4I5jJ0bwC3BkmDCy4pQ9j.jpg"
+    },
+    {
+     "id": "s4582",
+     "name": "Season 10",
+     "note": "2003",
+     "poster": "/67ETB6XIqYc5vZkyAjN8XINOX5i.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stargate-sg-1-seasons",
+   "title": "Stargate SG-1 seasons",
+   "items": [
+    {
+     "id": "s14151",
+     "name": "Season 1",
+     "note": "1997",
+     "poster": "/tiib6A0kZ0NoUeuUbcU0hIu2jlM.jpg"
+    },
+    {
+     "id": "s14141",
+     "name": "Season 2",
+     "note": "1998",
+     "poster": "/lBMPJS97E8t6ULrE6hrZSkdne15.jpg"
+    },
+    {
+     "id": "s14142",
+     "name": "Season 3",
+     "note": "1999",
+     "poster": "/y784rvtXTNm2g6x3LqIpAFWY6di.jpg"
+    },
+    {
+     "id": "s14143",
+     "name": "Season 4",
+     "note": "2000",
+     "poster": "/vpPEa8vqMr1WtXbE6fA0ABGeFoe.jpg"
+    },
+    {
+     "id": "s14144",
+     "name": "Season 5",
+     "note": "2001",
+     "poster": "/tn0VrEaDdiefOGnphHkTJNAeqxM.jpg"
+    },
+    {
+     "id": "s14145",
+     "name": "Season 6",
+     "note": "2002",
+     "poster": "/hFSLju61oOogrqiq0VD4eLdjV84.jpg"
+    },
+    {
+     "id": "s14146",
+     "name": "Season 7",
+     "note": "2003",
+     "poster": "/r16NyHvsOFbm95j7ezfD2ZmMi5l.jpg"
+    },
+    {
+     "id": "s14147",
+     "name": "Season 8",
+     "note": "2004",
+     "poster": "/47vubDA11B0y6edXbgVunQh9SBF.jpg"
+    },
+    {
+     "id": "s14148",
+     "name": "Season 9",
+     "note": "2005",
+     "poster": "/qthzwn3wvra7UXHeuGONacTO0lT.jpg"
+    },
+    {
+     "id": "s14149",
+     "name": "Season 10",
+     "note": "2006",
+     "poster": "/zWQUWJ1NbLLQhMDcyQ9OImG6oGg.jpg"
     }
    ]
   }
