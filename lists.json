@@ -1919,6 +1919,2674 @@
    ]
   },
   {
+   "id": "taylor-swift-albums",
+   "cat": "Music",
+   "group": "Taylor Swift",
+   "short": "Albums",
+   "title": "Taylor Swift albums",
+   "items": [
+    {
+     "id": "aba1d0c2a-bb07-38bc-835c-a880f76f1309",
+     "name": "Taylor Swift",
+     "note": "2006",
+     "img": "https://coverartarchive.org/release-group/ba1d0c2a-bb07-38bc-835c-a880f76f1309/front-250",
+     "sq": true
+    },
+    {
+     "id": "a63eba062-847c-3b73-8b0f-6baf27bba6fa",
+     "name": "Fearless",
+     "note": "2008",
+     "img": "https://coverartarchive.org/release-group/63eba062-847c-3b73-8b0f-6baf27bba6fa/front-250",
+     "sq": true
+    },
+    {
+     "id": "aba1259eb-d41e-41c5-a70c-0e6fa73e6708",
+     "name": "Speak Now",
+     "note": "2010",
+     "img": "https://coverartarchive.org/release-group/ba1259eb-d41e-41c5-a70c-0e6fa73e6708/front-250",
+     "sq": true
+    },
+    {
+     "id": "aa73cecde-0923-40ad-aad1-e8c24ba6c3d2",
+     "name": "Red",
+     "note": "2012",
+     "img": "https://coverartarchive.org/release-group/a73cecde-0923-40ad-aad1-e8c24ba6c3d2/front-250",
+     "sq": true
+    },
+    {
+     "id": "a4d9ec1c2-58ec-48a4-aa0a-916718adead0",
+     "name": "1989",
+     "note": "2014",
+     "img": "https://coverartarchive.org/release-group/4d9ec1c2-58ec-48a4-aa0a-916718adead0/front-250",
+     "sq": true
+    },
+    {
+     "id": "af060c8fd-bec9-426e-800e-8efc040a71e6",
+     "name": "reputation",
+     "note": "2017",
+     "img": "https://coverartarchive.org/release-group/f060c8fd-bec9-426e-800e-8efc040a71e6/front-250",
+     "sq": true
+    },
+    {
+     "id": "a30e9785b-7b50-4d29-b3d1-96fb55e3397f",
+     "name": "Lover",
+     "note": "2019",
+     "img": "https://coverartarchive.org/release-group/30e9785b-7b50-4d29-b3d1-96fb55e3397f/front-250",
+     "sq": true
+    },
+    {
+     "id": "af1d08326-c23b-4b43-be3b-20b33ab10bf6",
+     "name": "folklore",
+     "note": "2020",
+     "img": "https://coverartarchive.org/release-group/f1d08326-c23b-4b43-be3b-20b33ab10bf6/front-250",
+     "sq": true
+    },
+    {
+     "id": "ae86d6219-f5a2-4edd-bf2b-3f9eab190ae0",
+     "name": "evermore",
+     "note": "2020",
+     "img": "https://coverartarchive.org/release-group/e86d6219-f5a2-4edd-bf2b-3f9eab190ae0/front-250",
+     "sq": true
+    },
+    {
+     "id": "ad2e4838d-90e1-471c-bda0-fd816dabb2d4",
+     "name": "Fearless (Taylor’s Version)",
+     "note": "2021",
+     "img": "https://coverartarchive.org/release-group/d2e4838d-90e1-471c-bda0-fd816dabb2d4/front-250",
+     "sq": true
+    },
+    {
+     "id": "a67727253-f1c0-4243-9270-f9f1401c3b8c",
+     "name": "Red (Taylor’s Version)",
+     "note": "2021",
+     "img": "https://coverartarchive.org/release-group/67727253-f1c0-4243-9270-f9f1401c3b8c/front-250",
+     "sq": true
+    },
+    {
+     "id": "a0dcc84fb-c592-46e9-ba92-a52bb44dd553",
+     "name": "Midnights",
+     "note": "2022",
+     "img": "https://coverartarchive.org/release-group/0dcc84fb-c592-46e9-ba92-a52bb44dd553/front-250",
+     "sq": true
+    },
+    {
+     "id": "a0441b1b2-de57-4a9a-b007-1f6e159921d5",
+     "name": "Speak Now (Taylor’s Version)",
+     "note": "2023",
+     "img": "https://coverartarchive.org/release-group/0441b1b2-de57-4a9a-b007-1f6e159921d5/front-250",
+     "sq": true
+    },
+    {
+     "id": "a1c4770b3-b7a3-4d44-a7a9-8e2dbb74b85a",
+     "name": "1989 (Taylor’s Version)",
+     "note": "2023",
+     "img": "https://coverartarchive.org/release-group/1c4770b3-b7a3-4d44-a7a9-8e2dbb74b85a/front-250",
+     "sq": true
+    },
+    {
+     "id": "a71c3eed6-466c-4aef-ad12-65a36d19467a",
+     "name": "THE TORTURED POETS DEPARTMENT",
+     "note": "2024",
+     "img": "https://coverartarchive.org/release-group/71c3eed6-466c-4aef-ad12-65a36d19467a/front-250",
+     "sq": true
+    },
+    {
+     "id": "a9ae7e7e9-ac40-4874-bd43-d77a9bb9b617",
+     "name": "The Life of a Showgirl",
+     "note": "2025",
+     "img": "https://coverartarchive.org/release-group/9ae7e7e9-ac40-4874-bd43-d77a9bb9b617/front-250",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "taylor-swift-taylor-swift-songs",
+   "cat": "Music",
+   "group": "Taylor Swift",
+   "short": "Taylor Swift songs",
+   "title": "Taylor Swift: Taylor Swift songs",
+   "items": [
+    {
+     "id": "kcd3fd065-d7d8-498d-8e47-fa7f8bcf6f36",
+     "name": "Tim McGraw",
+     "note": "Track 1"
+    },
+    {
+     "id": "kc9d5d953-1c13-42fa-b911-e70bf009bea3",
+     "name": "Picture to Burn",
+     "note": "Track 2"
+    },
+    {
+     "id": "k709cff98-5dd9-4cfb-8350-0554ef40aa26",
+     "name": "Teardrops on My Guitar",
+     "note": "Track 3"
+    },
+    {
+     "id": "kc1186788-73f3-40eb-8e07-e3256a6cdfe4",
+     "name": "A Place in This World",
+     "note": "Track 4"
+    },
+    {
+     "id": "k943cb325-507a-44a0-9507-6bbe20a814da",
+     "name": "Cold as You",
+     "note": "Track 5"
+    },
+    {
+     "id": "kc3b2d171-5d24-4a6d-8326-0623ca67da41",
+     "name": "The Outside",
+     "note": "Track 6"
+    },
+    {
+     "id": "k02a779e6-801a-44ee-acfb-af43d04a0a11",
+     "name": "Tied Together With a Smile",
+     "note": "Track 7"
+    },
+    {
+     "id": "k3b7ac5b5-310f-486e-a194-0eda6c19c771",
+     "name": "Stay Beautiful",
+     "note": "Track 8"
+    },
+    {
+     "id": "kc3273ca7-b264-4c08-9e7f-91060fbe4c00",
+     "name": "Should’ve Said No",
+     "note": "Track 9"
+    },
+    {
+     "id": "kea490557-ef55-4a15-997a-b6737ad97435",
+     "name": "Mary’s Song (Oh My My My)",
+     "note": "Track 10"
+    },
+    {
+     "id": "k71ecce93-8b9b-4e31-af08-4b24ac931506",
+     "name": "Our Song",
+     "note": "Track 11"
+    }
+   ]
+  },
+  {
+   "id": "taylor-swift-fearless-songs",
+   "cat": "Music",
+   "group": "Taylor Swift",
+   "short": "Fearless songs",
+   "title": "Taylor Swift: Fearless songs",
+   "items": [
+    {
+     "id": "k44805bca-d192-387f-8d06-87fb561fe2f9",
+     "name": "Fearless",
+     "note": "Track 1"
+    },
+    {
+     "id": "ke2bf2298-78e9-3bf0-ae83-6ac0379d200c",
+     "name": "Fifteen",
+     "note": "Track 2"
+    },
+    {
+     "id": "k2734c34c-5554-3a40-b1f4-d2e0f00e010a",
+     "name": "Love Story",
+     "note": "Track 3"
+    },
+    {
+     "id": "k555bb67b-b7cc-30c4-9a1d-36c7ca993208",
+     "name": "Hey Stephen",
+     "note": "Track 4"
+    },
+    {
+     "id": "k3dbf0362-390a-386b-a442-728a55a64b31",
+     "name": "White Horse",
+     "note": "Track 5"
+    },
+    {
+     "id": "k7a8b1c5a-34f6-3f6e-bde3-2a3697948a04",
+     "name": "You Belong With Me",
+     "note": "Track 6"
+    },
+    {
+     "id": "kfd413e8f-88f6-3f8e-80cf-613fef411cff",
+     "name": "Breathe",
+     "note": "Track 7"
+    },
+    {
+     "id": "k909a99d4-99e5-355e-8e78-104335baeae6",
+     "name": "Tell Me Why",
+     "note": "Track 8"
+    },
+    {
+     "id": "kb8f20c1d-70f1-3ff0-8369-c0bdfd187bba",
+     "name": "You’re Not Sorry",
+     "note": "Track 9"
+    },
+    {
+     "id": "k4dfb4af1-1c16-3f6d-b06a-896b63da9658",
+     "name": "The Way I Loved You",
+     "note": "Track 10"
+    },
+    {
+     "id": "kb82d5021-6928-34ef-9473-b90eb8feb477",
+     "name": "Forever & Always",
+     "note": "Track 11"
+    },
+    {
+     "id": "k5ff5d3a4-8de4-3f78-814b-0f31f2ebb95e",
+     "name": "The Best Day",
+     "note": "Track 12"
+    },
+    {
+     "id": "k7cbad40e-2bc2-3b50-bc09-010a76a63080",
+     "name": "Change",
+     "note": "Track 13"
+    }
+   ]
+  },
+  {
+   "id": "taylor-swift-speak-now-songs",
+   "cat": "Music",
+   "group": "Taylor Swift",
+   "short": "Speak Now songs",
+   "title": "Taylor Swift: Speak Now songs",
+   "items": [
+    {
+     "id": "k8ed525af-17fd-48f3-bd7e-b1fee0e78ca2",
+     "name": "Mine",
+     "note": "Track 1"
+    },
+    {
+     "id": "ka3ea40cc-788d-4ed7-a2ad-b9c4ddac623c",
+     "name": "Sparks Fly",
+     "note": "Track 2"
+    },
+    {
+     "id": "kbe9e3e64-8cf6-496d-bc8b-eb056318e1cc",
+     "name": "Back to December",
+     "note": "Track 3"
+    },
+    {
+     "id": "k3e5449d6-9e62-4743-bc35-cc3a4d36f8c2",
+     "name": "Speak Now",
+     "note": "Track 4"
+    },
+    {
+     "id": "k081e7bb4-de4b-464b-b248-602dcd04c8a5",
+     "name": "Dear John",
+     "note": "Track 5"
+    },
+    {
+     "id": "k3387522b-1c68-4b86-843d-21b2b08747a4",
+     "name": "Mean",
+     "note": "Track 6"
+    },
+    {
+     "id": "k49c4b89a-0038-40e5-8fd8-2f45941e491e",
+     "name": "The Story of Us",
+     "note": "Track 7"
+    },
+    {
+     "id": "kff658240-bd88-47eb-8d2e-f87524413dc8",
+     "name": "Never Grow Up",
+     "note": "Track 8"
+    },
+    {
+     "id": "kff51c308-2581-47a7-87fe-2df71fa722a0",
+     "name": "Enchanted",
+     "note": "Track 9"
+    },
+    {
+     "id": "kf1a095ed-61c5-4d57-9c42-6ecba7e26ee2",
+     "name": "Better Than Revenge",
+     "note": "Track 10"
+    },
+    {
+     "id": "kc086d340-fdcc-4c5e-a32d-b2d52bd01b40",
+     "name": "Innocent",
+     "note": "Track 11"
+    },
+    {
+     "id": "kbec1d3e4-5f71-41be-8e4f-a358e8557bab",
+     "name": "Haunted",
+     "note": "Track 12"
+    },
+    {
+     "id": "k4b5a3b67-fc60-4fae-b6d5-13fe7486fbd7",
+     "name": "Last Kiss",
+     "note": "Track 13"
+    },
+    {
+     "id": "k2c3c6742-7574-478a-851e-cfb705a99f78",
+     "name": "Long Live",
+     "note": "Track 14"
+    }
+   ]
+  },
+  {
+   "id": "taylor-swift-red-songs",
+   "cat": "Music",
+   "group": "Taylor Swift",
+   "short": "Red songs",
+   "title": "Taylor Swift: Red songs",
+   "items": [
+    {
+     "id": "kb8fe8b89-fb70-4916-9561-2c3b0e55c6dc",
+     "name": "State of Grace",
+     "note": "Track 1"
+    },
+    {
+     "id": "k408fe09f-46a4-4c4b-9613-c924691da83e",
+     "name": "Red",
+     "note": "Track 2"
+    },
+    {
+     "id": "k368de921-1f66-4f70-b1cb-982ea6c9ee99",
+     "name": "Treacherous",
+     "note": "Track 3"
+    },
+    {
+     "id": "kdb8d3a57-6b69-4c1a-9dda-81361f2991a2",
+     "name": "I Knew You Were Trouble.",
+     "note": "Track 4"
+    },
+    {
+     "id": "k57b7b16f-a296-4510-b442-0a5a6957df7f",
+     "name": "All Too Well",
+     "note": "Track 5"
+    },
+    {
+     "id": "k9f3967de-74d0-477c-b765-5c3bc4ab2435",
+     "name": "22",
+     "note": "Track 6"
+    },
+    {
+     "id": "kc9ae49f5-2885-412d-8f7b-8ca40d1ccdec",
+     "name": "I Almost Do",
+     "note": "Track 7"
+    },
+    {
+     "id": "k47602211-09f0-4b32-99cb-5b10282aa05d",
+     "name": "We Are Never Ever Getting Back Together",
+     "note": "Track 8"
+    },
+    {
+     "id": "k445243b8-37b2-4ca6-9ef7-1f5a3d388c08",
+     "name": "Stay Stay Stay",
+     "note": "Track 9"
+    },
+    {
+     "id": "k8d8002fe-caf1-43f0-b5a8-3c70c422178c",
+     "name": "The Last Time",
+     "note": "Track 10"
+    },
+    {
+     "id": "k830bd916-6cd0-473b-b2d1-e41d46640815",
+     "name": "Holy Ground",
+     "note": "Track 11"
+    },
+    {
+     "id": "k48fd4bdb-64d3-4e27-8759-4bb6386232df",
+     "name": "Sad Beautiful Tragic",
+     "note": "Track 12"
+    },
+    {
+     "id": "k2f08fad5-f49d-4e3f-87ad-40d82bbec46b",
+     "name": "The Lucky One",
+     "note": "Track 13"
+    },
+    {
+     "id": "k6c0eab95-5b58-4d43-a571-e3e0537ee756",
+     "name": "Everything Has Changed",
+     "note": "Track 14"
+    },
+    {
+     "id": "kd07a7763-1059-4149-b70c-6d456e74cc35",
+     "name": "Starlight",
+     "note": "Track 15"
+    },
+    {
+     "id": "k97a85949-599c-4ec5-b2d9-fd3725a68de2",
+     "name": "Begin Again",
+     "note": "Track 16"
+    },
+    {
+     "id": "k340cd0a2-bb04-40b1-85b0-319625b25a72",
+     "name": "The Moment I Knew",
+     "note": "Track 17"
+    },
+    {
+     "id": "k479791b5-211c-47c2-9b5a-8982c37f18a2",
+     "name": "Come Back… Be Here",
+     "note": "Track 18"
+    },
+    {
+     "id": "k3464e9e3-ebc1-4917-a48e-e4da4abf2ec4",
+     "name": "Girl at Home",
+     "note": "Track 19"
+    },
+    {
+     "id": "kb3a41719-6a13-443b-b94e-01fd029ae00c",
+     "name": "Treacherous (original demo recording)",
+     "note": "Track 20"
+    },
+    {
+     "id": "k408a81b8-5890-4fd6-96d5-c861d4b4ddc1",
+     "name": "Red (original demo recording)",
+     "note": "Track 21"
+    },
+    {
+     "id": "k047e4113-5a05-4de3-920e-dac79f2591ac",
+     "name": "State of Grace (acoustic version)",
+     "note": "Track 22"
+    }
+   ]
+  },
+  {
+   "id": "taylor-swift-1989-songs",
+   "cat": "Music",
+   "group": "Taylor Swift",
+   "short": "1989 songs",
+   "title": "Taylor Swift: 1989 songs",
+   "items": [
+    {
+     "id": "kaf863af6-8429-4f0b-8579-8d66f204dab5",
+     "name": "Welcome to New York",
+     "note": "Track 1"
+    },
+    {
+     "id": "kd0329a31-2737-431c-821a-6d4948b113e9",
+     "name": "Blank Space",
+     "note": "Track 2"
+    },
+    {
+     "id": "k1fb6e90c-63f0-4a9f-8fd8-d7620e2d6204",
+     "name": "Style",
+     "note": "Track 3"
+    },
+    {
+     "id": "kaa78c17e-7b43-45bb-a11c-6ccb5cabd5e1",
+     "name": "Out of the Woods",
+     "note": "Track 4"
+    },
+    {
+     "id": "k0511256e-3ccf-4a91-a715-b761b960635f",
+     "name": "All You Had to Do Was Stay",
+     "note": "Track 5"
+    },
+    {
+     "id": "k9bc5a743-82f8-4ef4-8ce4-7fbda19301d6",
+     "name": "Shake It Off",
+     "note": "Track 6"
+    },
+    {
+     "id": "ked501da9-3210-4afe-8099-0307019d7e66",
+     "name": "I Wish You Would",
+     "note": "Track 7"
+    },
+    {
+     "id": "k5ab568b0-574b-4ea0-be10-31b4c7d0e65a",
+     "name": "Bad Blood",
+     "note": "Track 8"
+    },
+    {
+     "id": "k9babfb8e-1094-43e4-b323-cc237f0f9fc6",
+     "name": "Wildest Dreams",
+     "note": "Track 9"
+    },
+    {
+     "id": "k585a2ca4-9ce7-418a-b7e0-b2060f75196b",
+     "name": "How You Get the Girl",
+     "note": "Track 10"
+    },
+    {
+     "id": "k8a18047c-f2a9-44ee-8e02-cf270670c225",
+     "name": "This Love",
+     "note": "Track 11"
+    },
+    {
+     "id": "k03c8db15-2032-44a7-b193-6d90d0e36799",
+     "name": "I Know Places",
+     "note": "Track 12"
+    },
+    {
+     "id": "k18020265-fd6c-4d4b-a7be-a329a84747ac",
+     "name": "Clean",
+     "note": "Track 13"
+    },
+    {
+     "id": "k3e20bc36-e4ae-41d2-9355-2c0318efffeb",
+     "name": "Wonderland",
+     "note": "Track 14"
+    },
+    {
+     "id": "k0dcf8e5f-c9ed-4f0f-84d0-d363483750dd",
+     "name": "You Are in Love",
+     "note": "Track 15"
+    },
+    {
+     "id": "kb9acd650-2266-4fa3-8f98-f54534c67895",
+     "name": "New Romantics",
+     "note": "Track 16"
+    },
+    {
+     "id": "kd0f9dc33-97a3-4b7c-adea-a88e8735a60a",
+     "name": "I Know Places (piano/vocal)",
+     "note": "Track 17"
+    },
+    {
+     "id": "k9278b4fb-8da4-41ff-9324-a49e01268a64",
+     "name": "I Wish You Would (track/vocal)",
+     "note": "Track 18"
+    },
+    {
+     "id": "kb6df7345-1d7e-49e1-8a5b-7a7589adedbc",
+     "name": "Blank Space (guitar/vocal)",
+     "note": "Track 19"
+    }
+   ]
+  },
+  {
+   "id": "taylor-swift-reputation-songs",
+   "cat": "Music",
+   "group": "Taylor Swift",
+   "short": "reputation songs",
+   "title": "Taylor Swift: reputation songs",
+   "items": [
+    {
+     "id": "k57c81376-6c22-42fa-8346-059142bb2610",
+     "name": "…Ready for It?",
+     "note": "Track 1"
+    },
+    {
+     "id": "k145aea16-45ea-438f-a0db-661c3faa8146",
+     "name": "End Game",
+     "note": "Track 2"
+    },
+    {
+     "id": "kc8895d58-d888-4d1f-8a64-c6955bfb9cea",
+     "name": "I Did Something Bad",
+     "note": "Track 3"
+    },
+    {
+     "id": "k9392bc8b-f589-428a-8170-8b08813369dd",
+     "name": "Don’t Blame Me",
+     "note": "Track 4"
+    },
+    {
+     "id": "k796e416a-d623-4abb-8190-7455af67a873",
+     "name": "Delicate",
+     "note": "Track 5"
+    },
+    {
+     "id": "kb80ff3a4-e3a3-4854-a46b-865c585c629e",
+     "name": "Look What You Made Me Do",
+     "note": "Track 6"
+    },
+    {
+     "id": "k25fa51cd-ccf1-449f-a44a-e4d72832ec50",
+     "name": "So It Goes…",
+     "note": "Track 7"
+    },
+    {
+     "id": "kf4966c58-dc59-4dd2-a351-e165fd1e4c12",
+     "name": "Gorgeous",
+     "note": "Track 8"
+    },
+    {
+     "id": "k05b479e6-b2f4-45cc-9836-61d2ce370dac",
+     "name": "Getaway Car",
+     "note": "Track 9"
+    },
+    {
+     "id": "keaff4724-32d1-468b-a7d4-a2ad2c48ee66",
+     "name": "King of My Heart",
+     "note": "Track 10"
+    },
+    {
+     "id": "kddd31af6-db94-4c80-b572-4dd6cddc83ff",
+     "name": "Dancing With Our Hands Tied",
+     "note": "Track 11"
+    },
+    {
+     "id": "k7e18b743-bf78-4cee-9265-8f7ef08a48a5",
+     "name": "Dress",
+     "note": "Track 12"
+    },
+    {
+     "id": "k275af69c-b9a3-4cde-8554-f7b21eb75ddd",
+     "name": "This Is Why We Can’t Have Nice Things",
+     "note": "Track 13"
+    },
+    {
+     "id": "kd1dac8a9-ebf3-4895-97b6-4ec545b27f8d",
+     "name": "Call It What You Want",
+     "note": "Track 14"
+    },
+    {
+     "id": "kf47d5945-d5df-40e4-8179-4aeeb8127514",
+     "name": "New Year’s Day",
+     "note": "Track 15"
+    }
+   ]
+  },
+  {
+   "id": "taylor-swift-lover-songs",
+   "cat": "Music",
+   "group": "Taylor Swift",
+   "short": "Lover songs",
+   "title": "Taylor Swift: Lover songs",
+   "items": [
+    {
+     "id": "k09807b33-f0d2-48a0-9215-f737a9169edd",
+     "name": "I Forgot That You Existed",
+     "note": "Track 1"
+    },
+    {
+     "id": "k47993614-1768-4370-b004-10a90ebdfcf0",
+     "name": "Cruel Summer",
+     "note": "Track 2"
+    },
+    {
+     "id": "kbd9de9e8-7054-43ce-b610-47e2ab6031c0",
+     "name": "Lover",
+     "note": "Track 3"
+    },
+    {
+     "id": "k5eb4d272-763b-40a7-8927-29e8a36426c2",
+     "name": "The Man",
+     "note": "Track 4"
+    },
+    {
+     "id": "k3b016b36-f967-4f2c-8c4a-3f57627e539e",
+     "name": "The Archer",
+     "note": "Track 5"
+    },
+    {
+     "id": "ke222c97b-89c4-4c1b-9c86-1fd3b7cfefa3",
+     "name": "I Think He Knows",
+     "note": "Track 6"
+    },
+    {
+     "id": "k9e05e5e0-1287-425f-b795-b09685b43b29",
+     "name": "Miss Americana & the Heartbreak Prince",
+     "note": "Track 7"
+    },
+    {
+     "id": "k06fef99d-d6cb-4288-a5ac-809aeb4511bb",
+     "name": "Paper Rings",
+     "note": "Track 8"
+    },
+    {
+     "id": "k6350b676-699d-4989-a7e4-fef7963a86dd",
+     "name": "Cornelia Street",
+     "note": "Track 9"
+    },
+    {
+     "id": "k338e1acc-c2e9-485c-8bb1-5974d8ff5ca7",
+     "name": "Death by a Thousand Cuts",
+     "note": "Track 10"
+    },
+    {
+     "id": "k6be5dd14-ea75-42e7-9504-e37df9fd2041",
+     "name": "London Boy",
+     "note": "Track 11"
+    },
+    {
+     "id": "k64e570ab-10c6-4431-8bed-2e209c15dead",
+     "name": "Soon You’ll Get Better",
+     "note": "Track 12"
+    },
+    {
+     "id": "kf06877e6-15e9-40f5-9ab7-c40e1d2f0e2e",
+     "name": "False God",
+     "note": "Track 13"
+    },
+    {
+     "id": "kdd7fea9e-6b56-4022-a6db-46970cdb8ab2",
+     "name": "You Need to Calm Down",
+     "note": "Track 14"
+    },
+    {
+     "id": "k5579f9e1-a1eb-453c-8ba0-f28900fd8a13",
+     "name": "Afterglow",
+     "note": "Track 15"
+    },
+    {
+     "id": "kd6ceda2d-7ab3-4702-a4a6-8023f43d1ae0",
+     "name": "ME!",
+     "note": "Track 16"
+    },
+    {
+     "id": "kc4cc44f0-c5a0-43be-acc7-ac49a674e1f2",
+     "name": "It’s Nice to Have a Friend",
+     "note": "Track 17"
+    },
+    {
+     "id": "kbedaa5ab-fe36-4a8d-8443-5d03615f4d8d",
+     "name": "Daylight",
+     "note": "Track 18"
+    },
+    {
+     "id": "k4aa98703-9b18-4087-a1d6-412d4611a786",
+     "name": "I Forgot That You Existed (piano/vocal)",
+     "note": "Track 19"
+    },
+    {
+     "id": "kd0b4a7f0-f688-41b1-86a9-f2e2736431d7",
+     "name": "Lover (piano/vocal)",
+     "note": "Track 20"
+    }
+   ]
+  },
+  {
+   "id": "taylor-swift-folklore-songs",
+   "cat": "Music",
+   "group": "Taylor Swift",
+   "short": "folklore songs",
+   "title": "Taylor Swift: folklore songs",
+   "items": [
+    {
+     "id": "k70d57be7-9b97-4bee-8ade-670ee14d8e12",
+     "name": "the 1",
+     "note": "Track 1"
+    },
+    {
+     "id": "kbe075934-e03d-48e4-8a29-775c4416717b",
+     "name": "cardigan",
+     "note": "Track 2"
+    },
+    {
+     "id": "k954e91ff-cb79-447e-96a5-9894f5f5d6bd",
+     "name": "the last great american dynasty",
+     "note": "Track 3"
+    },
+    {
+     "id": "k2f88fa84-372d-4e7a-9776-b29db7448959",
+     "name": "exile",
+     "note": "Track 4"
+    },
+    {
+     "id": "k6cfbe8dc-fa68-4ccf-90b3-440db823508a",
+     "name": "my tears ricochet",
+     "note": "Track 5"
+    },
+    {
+     "id": "k803bb680-024f-4fd3-a4bd-c79c935f889c",
+     "name": "mirrorball",
+     "note": "Track 6"
+    },
+    {
+     "id": "ka04d951d-4b06-443b-8b9d-78d9144ccf8a",
+     "name": "seven",
+     "note": "Track 7"
+    },
+    {
+     "id": "kfd7d939a-745a-4f42-9504-4b52f467a476",
+     "name": "august",
+     "note": "Track 8"
+    },
+    {
+     "id": "k35095df8-2089-4210-b41d-07e21fb16178",
+     "name": "this is me trying",
+     "note": "Track 9"
+    },
+    {
+     "id": "k5950686c-06e7-4dff-82a5-736671c334c3",
+     "name": "illicit affairs",
+     "note": "Track 10"
+    },
+    {
+     "id": "k0e099e44-210f-4583-bf33-fd84189dc792",
+     "name": "invisible string",
+     "note": "Track 11"
+    },
+    {
+     "id": "kbc11cc39-49de-4675-a115-1edf6a4ada0d",
+     "name": "mad woman",
+     "note": "Track 12"
+    },
+    {
+     "id": "k822acd40-9560-4387-a5fa-0abf622894e8",
+     "name": "epiphany",
+     "note": "Track 13"
+    },
+    {
+     "id": "kc1d8a91d-8e65-4eab-8cb1-6843a7def946",
+     "name": "betty",
+     "note": "Track 14"
+    },
+    {
+     "id": "k00f19ab9-8e1b-41da-b6ee-4c2ec3a59380",
+     "name": "peace",
+     "note": "Track 15"
+    },
+    {
+     "id": "kd83470f3-43c4-41c2-829a-e4867115484a",
+     "name": "hoax",
+     "note": "Track 16"
+    },
+    {
+     "id": "k2d90202a-7a6c-4523-8f05-44884880af46",
+     "name": "the lakes",
+     "note": "Track 17"
+    }
+   ]
+  },
+  {
+   "id": "taylor-swift-evermore-songs",
+   "cat": "Music",
+   "group": "Taylor Swift",
+   "short": "evermore songs",
+   "title": "Taylor Swift: evermore songs",
+   "items": [
+    {
+     "id": "kd379b8c7-86fa-4a84-abe8-373a03c39ac7",
+     "name": "willow",
+     "note": "Track 1"
+    },
+    {
+     "id": "kedce381d-286b-45f8-b570-e5612cc9b0cd",
+     "name": "champagne problems",
+     "note": "Track 2"
+    },
+    {
+     "id": "kfe815543-81f9-443f-a52e-838d4117d7fb",
+     "name": "gold rush",
+     "note": "Track 3"
+    },
+    {
+     "id": "kdc23b53d-8ffe-4b63-9e7a-fea2993cd4f9",
+     "name": "’tis the damn season",
+     "note": "Track 4"
+    },
+    {
+     "id": "k59193971-3d2d-4bec-8399-9217d1a7d583",
+     "name": "tolerate it",
+     "note": "Track 5"
+    },
+    {
+     "id": "k92a97e07-6f6d-4ee1-b1ea-6653e4fafd26",
+     "name": "no body, no crime",
+     "note": "Track 6"
+    },
+    {
+     "id": "kf995b57c-355b-4eb2-9e7a-c27a5ca3e329",
+     "name": "happiness",
+     "note": "Track 7"
+    },
+    {
+     "id": "k814690dd-33ae-4f40-8dcd-f001af5d6d6d",
+     "name": "dorothea",
+     "note": "Track 8"
+    },
+    {
+     "id": "k6bab504c-8e78-44cc-a3b1-97fda05e490a",
+     "name": "coney island",
+     "note": "Track 9"
+    },
+    {
+     "id": "k4359e102-ab3d-4976-ae35-c9c1351b5d22",
+     "name": "ivy",
+     "note": "Track 10"
+    },
+    {
+     "id": "k1ea2ac0e-9dbc-4361-98f2-18ae9af103f0",
+     "name": "cowboy like me",
+     "note": "Track 11"
+    },
+    {
+     "id": "k7c24b371-e569-4e8d-87f7-01eb1d68d041",
+     "name": "long story short",
+     "note": "Track 12"
+    },
+    {
+     "id": "k51cf7592-a1bf-450f-9794-7f338b4c8684",
+     "name": "marjorie",
+     "note": "Track 13"
+    },
+    {
+     "id": "kc6d0d06b-98bc-4654-9a8c-9977814d2b60",
+     "name": "closure",
+     "note": "Track 14"
+    },
+    {
+     "id": "k266c04fe-5ad0-4611-a4c4-d4b3263b120e",
+     "name": "evermore",
+     "note": "Track 15"
+    }
+   ]
+  },
+  {
+   "id": "taylor-swift-fearless-taylor-s-version-songs",
+   "cat": "Music",
+   "group": "Taylor Swift",
+   "short": "Fearless (Taylor’s Version) songs",
+   "title": "Taylor Swift: Fearless (Taylor’s Version) songs",
+   "items": [
+    {
+     "id": "k2e37f126-c1e3-4fbb-9751-7e997419b421",
+     "name": "Fearless (Taylor’s version)",
+     "note": "Track 1"
+    },
+    {
+     "id": "kc5f31eda-89d8-4d4a-ba9b-95f76818d97b",
+     "name": "Fifteen (Taylor’s version)",
+     "note": "Track 2"
+    },
+    {
+     "id": "k273ce392-1b2b-4d36-b894-3beb125d7f78",
+     "name": "Love Story (Taylor’s version)",
+     "note": "Track 3"
+    },
+    {
+     "id": "k0c10cd08-fecc-4ad3-a2ca-13a17465a0de",
+     "name": "Hey Stephen (Taylor’s version)",
+     "note": "Track 4"
+    },
+    {
+     "id": "k5005191e-4a64-4c58-b6f4-61db0b9f52f4",
+     "name": "White Horse (Taylor’s version)",
+     "note": "Track 5"
+    },
+    {
+     "id": "k5f6c8cce-781a-48fc-9a22-4b92a735b934",
+     "name": "You Belong With Me (Taylor’s version)",
+     "note": "Track 6"
+    },
+    {
+     "id": "k31388717-3417-4604-a280-88da7fed178c",
+     "name": "Breathe (Taylor’s version)",
+     "note": "Track 7"
+    },
+    {
+     "id": "k016c6523-d50e-4f59-835d-fb7c7513e7e6",
+     "name": "Tell Me Why (Taylor’s version)",
+     "note": "Track 8"
+    },
+    {
+     "id": "kdec7222b-f445-4317-9ce5-04e2d764f3bf",
+     "name": "You’re Not Sorry (Taylor’s version)",
+     "note": "Track 9"
+    },
+    {
+     "id": "k4a244013-aa7f-4d86-b758-9dfe7740537e",
+     "name": "The Way I Loved You (Taylor’s version)",
+     "note": "Track 10"
+    },
+    {
+     "id": "kfbb9c8f8-2679-4c9e-b973-0e1dd0d477e2",
+     "name": "Forever & Always (Taylor’s version)",
+     "note": "Track 11"
+    },
+    {
+     "id": "k735fb202-ff6e-4015-a7cb-401486ad8c50",
+     "name": "The Best Day (Taylor’s version)",
+     "note": "Track 12"
+    },
+    {
+     "id": "kd3c9a671-0510-4392-be9e-2fa47de41e11",
+     "name": "Change (Taylor’s version)",
+     "note": "Track 13"
+    },
+    {
+     "id": "k9df66f8b-d849-4b31-b4e0-cd5754af8add",
+     "name": "Jump Then Fall (Taylor’s version)",
+     "note": "Track 14"
+    },
+    {
+     "id": "kf12a038c-0c46-44d2-80b1-8a580f1a166f",
+     "name": "Untouchable (Taylor’s version)",
+     "note": "Track 15"
+    },
+    {
+     "id": "k89eb9873-5a9f-484e-8653-6b7cc1b0aa56",
+     "name": "Forever & Always (piano version) (Taylor’s version)",
+     "note": "Track 16"
+    },
+    {
+     "id": "k40b921c7-e31e-4124-8697-7bb48cf0fa5b",
+     "name": "Come In With the Rain (Taylor’s version)",
+     "note": "Track 17"
+    },
+    {
+     "id": "kcb285dbb-fde0-4fbc-a4a4-79f1859ea162",
+     "name": "Superstar (Taylor’s version)",
+     "note": "Track 18"
+    },
+    {
+     "id": "kd27db83d-7b2f-4c45-954a-a1dc712efc0a",
+     "name": "The Other Side of the Door (Taylor’s version)",
+     "note": "Track 19"
+    },
+    {
+     "id": "k3259dd02-f812-4900-bcd1-15751c1bcbfc",
+     "name": "Today Was a Fairytale (Taylor’s version)",
+     "note": "Track 20"
+    },
+    {
+     "id": "kca33181b-223b-4bc0-a7a7-34bfc4ffd0f6",
+     "name": "You All Over Me (from The Vault)",
+     "note": "Track 21"
+    },
+    {
+     "id": "kcf5c679c-5791-4e2c-b97a-13832126095a",
+     "name": "Mr. Perfectly Fine (from The Vault)",
+     "note": "Track 22"
+    },
+    {
+     "id": "kb4df472b-2560-4c0e-b9db-14f37c62ba76",
+     "name": "We Were Happy (from The Vault)",
+     "note": "Track 23"
+    },
+    {
+     "id": "k4b11d7ff-292d-41fe-8455-7c4fb2d952ed",
+     "name": "That’s When (from The Vault)",
+     "note": "Track 24"
+    },
+    {
+     "id": "ka96d0cb0-482c-4b3a-ab72-be52fbcd1bdf",
+     "name": "Don’t You (from The Vault)",
+     "note": "Track 25"
+    },
+    {
+     "id": "k73d816dd-0ade-49d3-8115-c12e0a5f8731",
+     "name": "Bye Bye Baby (from The Vault)",
+     "note": "Track 26"
+    },
+    {
+     "id": "k65c376df-3307-454e-b256-4205ac68faf9",
+     "name": "Love Story (Taylor’s version) (Elvira remix)",
+     "note": "Track 27"
+    }
+   ]
+  },
+  {
+   "id": "taylor-swift-red-taylor-s-version-songs",
+   "cat": "Music",
+   "group": "Taylor Swift",
+   "short": "Red (Taylor’s Version) songs",
+   "title": "Taylor Swift: Red (Taylor’s Version) songs",
+   "items": [
+    {
+     "id": "k5befb065-42b1-4a9c-8a10-e811c5c57358",
+     "name": "State of Grace (Taylor’s version)",
+     "note": "Track 1"
+    },
+    {
+     "id": "k12467b70-9a99-45f2-9206-1e5f9264b2b4",
+     "name": "Red (Taylor’s version)",
+     "note": "Track 2"
+    },
+    {
+     "id": "k3ca281fc-1520-4eb8-9df2-b95da99ed6b9",
+     "name": "Treacherous (Taylor’s version)",
+     "note": "Track 3"
+    },
+    {
+     "id": "kd8cb3c78-450b-4b37-ba57-74757da79229",
+     "name": "I Knew You Were Trouble (Taylor’s version)",
+     "note": "Track 4"
+    },
+    {
+     "id": "k43a63dcf-06fd-4e2e-a34c-4957afc1634a",
+     "name": "All Too Well (Taylor’s version)",
+     "note": "Track 5"
+    },
+    {
+     "id": "k0fdcc709-ea80-402b-a5ca-c78d1ab6c21e",
+     "name": "22 (Taylor’s version)",
+     "note": "Track 6"
+    },
+    {
+     "id": "k4142da5b-8d4e-49e2-b0f9-cbea116eebfc",
+     "name": "I Almost Do (Taylor’s version)",
+     "note": "Track 7"
+    },
+    {
+     "id": "k9c11e34f-4c3e-4558-af92-f82bb0fb652a",
+     "name": "We Are Never Ever Getting Back Together (Taylor’s version)",
+     "note": "Track 8"
+    },
+    {
+     "id": "k6480718d-adc1-4dfc-b364-189de2515de7",
+     "name": "Stay Stay Stay (Taylor’s version)",
+     "note": "Track 9"
+    },
+    {
+     "id": "k4e93449c-b1d8-4917-95c5-2299fe40e563",
+     "name": "The Last Time (Taylor’s version)",
+     "note": "Track 10"
+    },
+    {
+     "id": "k5bb5db59-5b83-47b3-8610-b592c4e134cf",
+     "name": "Holy Ground (Taylor’s version)",
+     "note": "Track 11"
+    },
+    {
+     "id": "k3fe6c6f9-38fd-4a69-81d8-60c632e586c5",
+     "name": "Sad Beautiful Tragic (Taylor’s version)",
+     "note": "Track 12"
+    },
+    {
+     "id": "k5429510c-077f-4ae5-a9df-e637cdf0995a",
+     "name": "The Lucky One (Taylor’s version)",
+     "note": "Track 13"
+    },
+    {
+     "id": "k92eeb4f8-b04d-4bc5-9c21-ccc65a89ebc1",
+     "name": "Everything Has Changed (Taylor’s version)",
+     "note": "Track 14"
+    },
+    {
+     "id": "k26473669-b8cb-4231-9267-814d27b7bb13",
+     "name": "Starlight (Taylor’s version)",
+     "note": "Track 15"
+    },
+    {
+     "id": "kbb71b92b-fb55-4d6d-b8da-b4f35713b115",
+     "name": "Begin Again (Taylor’s version)",
+     "note": "Track 16"
+    },
+    {
+     "id": "k266f8c22-3259-4f5a-8607-cc941c29016d",
+     "name": "The Moment I Knew (Taylor’s version)",
+     "note": "Track 17"
+    },
+    {
+     "id": "k0c0d0122-da09-4915-8f47-a5b87c5c0876",
+     "name": "Come Back… Be Here (Taylor’s version)",
+     "note": "Track 18"
+    },
+    {
+     "id": "k0a4eb085-bbc2-441a-9058-370f57e97a14",
+     "name": "Girl at Home (Taylor’s version)",
+     "note": "Track 19"
+    },
+    {
+     "id": "k27398ff7-cf8a-4e32-bbc5-db236c5ad12b",
+     "name": "State of Grace (acoustic version) (Taylor’s version)",
+     "note": "Track 20"
+    },
+    {
+     "id": "k23c7f839-1b24-4ad5-9967-6ab57141f5ce",
+     "name": "Ronan (Taylor’s version)",
+     "note": "Track 21"
+    },
+    {
+     "id": "k3e4f0e3b-dff8-4be4-83f4-2610544a7eb7",
+     "name": "Better Man (Taylor’s version) (from The Vault)",
+     "note": "Track 22"
+    },
+    {
+     "id": "k46ad570b-8459-4b46-ac9a-b0c3bd4c32b1",
+     "name": "Nothing New (Taylor’s version) (from The Vault)",
+     "note": "Track 23"
+    },
+    {
+     "id": "k569868ad-8564-4bf7-b2d5-77b4b8fcaf9f",
+     "name": "Babe (Taylor’s version) (from The Vault)",
+     "note": "Track 24"
+    },
+    {
+     "id": "k0fb2023e-92f8-4f4c-8bee-1c12d863e3d8",
+     "name": "Message in a Bottle (Taylor’s version) (from The Vault)",
+     "note": "Track 25"
+    },
+    {
+     "id": "k20aae71e-9937-441f-a22e-123619e4ecd6",
+     "name": "I Bet You Think About Me (Taylor’s version) (from The Vault)",
+     "note": "Track 26"
+    },
+    {
+     "id": "k45d600fe-9aad-4ed5-b60d-df5097592d8e",
+     "name": "Forever Winter (Taylor’s version) (from The Vault)",
+     "note": "Track 27"
+    }
+   ]
+  },
+  {
+   "id": "taylor-swift-midnights-songs",
+   "cat": "Music",
+   "group": "Taylor Swift",
+   "short": "Midnights songs",
+   "title": "Taylor Swift: Midnights songs",
+   "items": [
+    {
+     "id": "k6540b780-ecc0-4041-9a48-8161fb3b2df0",
+     "name": "Lavender Haze",
+     "note": "Track 1"
+    },
+    {
+     "id": "k32391fb1-22ae-4d28-a054-3a9796f9f942",
+     "name": "Maroon",
+     "note": "Track 2"
+    },
+    {
+     "id": "k985d562c-d079-4f9b-8e93-bbeecc12b3bc",
+     "name": "Anti‐Hero",
+     "note": "Track 3"
+    },
+    {
+     "id": "ke9e431b3-db71-430e-a42b-f4d95400082b",
+     "name": "Snow on the Beach",
+     "note": "Track 4"
+    },
+    {
+     "id": "kca33e745-aaf3-40f4-9556-877d601b3ddb",
+     "name": "You’re on Your Own, Kid",
+     "note": "Track 5"
+    },
+    {
+     "id": "k532ee65f-66a6-4b98-944f-4377a9c4e85c",
+     "name": "Midnight Rain",
+     "note": "Track 6"
+    },
+    {
+     "id": "k20ea75d4-a5e7-4ba6-83be-15cdb089c2ca",
+     "name": "Question…?",
+     "note": "Track 7"
+    },
+    {
+     "id": "k9f7120f8-810e-41da-a26c-b79f43daa57c",
+     "name": "Vigilante Shit",
+     "note": "Track 8"
+    },
+    {
+     "id": "k7282ce66-78f6-461f-9363-c20320edbebd",
+     "name": "Bejeweled",
+     "note": "Track 9"
+    },
+    {
+     "id": "k626280dc-7f21-411b-a85e-3dc2732eaeb0",
+     "name": "Labyrinth",
+     "note": "Track 10"
+    },
+    {
+     "id": "kaedca816-1ec1-41df-8cf2-49c124af163b",
+     "name": "Karma",
+     "note": "Track 11"
+    },
+    {
+     "id": "k3d3afea6-bcd4-475f-a8fb-b1871b051828",
+     "name": "Sweet Nothing",
+     "note": "Track 12"
+    },
+    {
+     "id": "k01d89dcc-9632-45d4-8065-69fa62eae4c4",
+     "name": "Mastermind",
+     "note": "Track 13"
+    },
+    {
+     "id": "k22304516-0f2b-460e-8bf1-390b920440aa",
+     "name": "The Great War",
+     "note": "Track 14"
+    },
+    {
+     "id": "k94dc3bad-5f2e-48ab-b2fc-affb11b6dcfe",
+     "name": "Bigger Than the Whole Sky",
+     "note": "Track 15"
+    },
+    {
+     "id": "k0ad3dfd9-78db-455e-a6dd-0973d05294df",
+     "name": "Paris",
+     "note": "Track 16"
+    },
+    {
+     "id": "k15dc87d9-7811-4e48-9e18-6dd50fc85ed7",
+     "name": "High Infidelity",
+     "note": "Track 17"
+    },
+    {
+     "id": "k3e358e94-dacd-41e5-9143-c6081ca6a4c1",
+     "name": "Glitch",
+     "note": "Track 18"
+    },
+    {
+     "id": "k1b15c37d-1270-463d-9323-d0f43bfb2fea",
+     "name": "Would’ve, Could’ve, Should’ve",
+     "note": "Track 19"
+    },
+    {
+     "id": "k4a482b29-ea0c-4d46-9457-a05ab1f9e06f",
+     "name": "Dear Reader",
+     "note": "Track 20"
+    }
+   ]
+  },
+  {
+   "id": "taylor-swift-speak-now-taylor-s-version-songs",
+   "cat": "Music",
+   "group": "Taylor Swift",
+   "short": "Speak Now (Taylor’s Version) songs",
+   "title": "Taylor Swift: Speak Now (Taylor’s Version) songs",
+   "items": [
+    {
+     "id": "k4768ab1e-70ff-4384-970a-5d85e875e38d",
+     "name": "Mine (Taylor's Version)",
+     "note": "Track 1"
+    },
+    {
+     "id": "k39b87520-baca-4555-af20-efce35459e90",
+     "name": "Sparks Fly (Taylor's Version)",
+     "note": "Track 2"
+    },
+    {
+     "id": "k76510dff-d9be-43bd-be1c-1ecca2a28451",
+     "name": "Back to December (Taylor's Version)",
+     "note": "Track 3"
+    },
+    {
+     "id": "k66c28e6f-5161-440f-8660-22ebaee4ae28",
+     "name": "Speak Now (Taylor's Version)",
+     "note": "Track 4"
+    },
+    {
+     "id": "kc7241add-4524-4f93-ac8c-ad5ea90f6d4f",
+     "name": "Dear John (Taylor's Version)",
+     "note": "Track 5"
+    },
+    {
+     "id": "k9c786e06-172a-4083-bf3d-30e5c882683d",
+     "name": "Mean (Taylor's Version)",
+     "note": "Track 6"
+    },
+    {
+     "id": "k72d178bb-0ea9-4a85-a103-62adb4713510",
+     "name": "The Story of Us (Taylor's Version)",
+     "note": "Track 7"
+    },
+    {
+     "id": "k64425fe2-3fc1-4f9c-a88b-e1f04e59df53",
+     "name": "Never Grow Up (Taylor's Version)",
+     "note": "Track 8"
+    },
+    {
+     "id": "k9d344ea3-f747-4da4-b819-1e413eae6e26",
+     "name": "Enchanted (Taylor's Version)",
+     "note": "Track 9"
+    },
+    {
+     "id": "kf95d240d-e10d-474b-aadb-5ec6a151d940",
+     "name": "Better Than Revenge (Taylor's Version)",
+     "note": "Track 10"
+    },
+    {
+     "id": "kec72c477-ce28-4a9e-8a1e-ca09f205f7d3",
+     "name": "Innocent (Taylor's Version)",
+     "note": "Track 11"
+    },
+    {
+     "id": "kf2b499ac-e475-47a3-a06b-48e88a2ce83a",
+     "name": "Haunted (Taylor's Version)",
+     "note": "Track 12"
+    },
+    {
+     "id": "k2cd20d31-fa93-4446-91d9-d9b7c45ebf80",
+     "name": "Last Kiss (Taylor's Version)",
+     "note": "Track 13"
+    },
+    {
+     "id": "k33687552-d880-4838-b3c4-56f4094eb1da",
+     "name": "Long Live (Taylor's Version)",
+     "note": "Track 14"
+    },
+    {
+     "id": "k2e152452-2381-45a5-aed1-cb008c7d8d5c",
+     "name": "Ours (Taylor’s Version)",
+     "note": "Track 15"
+    },
+    {
+     "id": "kd7f63977-0b10-4a14-988a-c0032c1764e4",
+     "name": "Superman (Taylor’s version)",
+     "note": "Track 16"
+    },
+    {
+     "id": "k37832ba9-7bd6-472d-b2a7-568bdc2b3954",
+     "name": "Electric Touch (feat. Fall Out Boy) (Taylor’s Version) (From the Vault)",
+     "note": "Track 17"
+    },
+    {
+     "id": "k2cfaf716-b20d-4789-aa31-89d8e982b3ea",
+     "name": "When Emma Falls in Love (Taylor’s Version) (From the Vault)",
+     "note": "Track 18"
+    },
+    {
+     "id": "k4f65e975-1e6b-42da-a837-b415dab33105",
+     "name": "I Can See You (Taylor’s version) (from The Vault)",
+     "note": "Track 19"
+    },
+    {
+     "id": "k9fef23f5-3515-4751-ae2e-862c8bb6d24b",
+     "name": "Castles Crumbling (Taylor’s version) (from The Vault)",
+     "note": "Track 20"
+    },
+    {
+     "id": "kb83bc125-f7fe-4b7a-8f03-1d5f040a986e",
+     "name": "Foolish One (Taylor’s version) (from The Vault)",
+     "note": "Track 21"
+    },
+    {
+     "id": "ka1c9d1a5-e378-442f-bbc0-ab633b0b40d4",
+     "name": "Timeless (Taylor’s version) (from The Vault)",
+     "note": "Track 22"
+    }
+   ]
+  },
+  {
+   "id": "taylor-swift-1989-taylor-s-version-songs",
+   "cat": "Music",
+   "group": "Taylor Swift",
+   "short": "1989 (Taylor’s Version) songs",
+   "title": "Taylor Swift: 1989 (Taylor’s Version) songs",
+   "items": [
+    {
+     "id": "kdc31f9ec-b8bc-4755-93c8-abebb4b87237",
+     "name": "Welcome to New York (Taylor’s version)",
+     "note": "Track 1"
+    },
+    {
+     "id": "keabe3339-32e9-4bd4-b870-7eb739b684dd",
+     "name": "Blank Space (Taylor’s version)",
+     "note": "Track 2"
+    },
+    {
+     "id": "ke2625b7a-1c07-43fd-8a35-e422ea265559",
+     "name": "Style (Taylor’s version)",
+     "note": "Track 3"
+    },
+    {
+     "id": "k581ff519-c5b6-4ae6-aca8-3e0de4a90890",
+     "name": "Out of the Woods (Taylor’s version)",
+     "note": "Track 4"
+    },
+    {
+     "id": "k1c20fc9b-7eca-416f-95ab-b8fd24df845b",
+     "name": "All You Had to Do Was Stay (Taylor’s version)",
+     "note": "Track 5"
+    },
+    {
+     "id": "k62b88bb8-5461-4bf5-980d-4afaf9e0cd23",
+     "name": "Shake It Off (Taylor’s version)",
+     "note": "Track 6"
+    },
+    {
+     "id": "kf3d31bae-0c36-4d3c-aab8-fbca4f0f883f",
+     "name": "I Wish You Would (Taylor’s version)",
+     "note": "Track 7"
+    },
+    {
+     "id": "kb9b03eda-f947-4759-a625-07a789098558",
+     "name": "Bad Blood (Taylor’s version)",
+     "note": "Track 8"
+    },
+    {
+     "id": "k85a59ece-602c-48f0-8fd8-6c359b64a723",
+     "name": "Wildest Dreams (Taylor’s version)",
+     "note": "Track 9"
+    },
+    {
+     "id": "k3e3bc9ce-4b6e-4a1a-9438-501423d8d337",
+     "name": "How You Get the Girl (Taylor’s version)",
+     "note": "Track 10"
+    },
+    {
+     "id": "k2f08efaa-a896-42d1-a19d-8cff29489383",
+     "name": "This Love (Taylor’s version)",
+     "note": "Track 11"
+    },
+    {
+     "id": "k56c04398-debb-49fa-8442-f2829467f1a7",
+     "name": "I Know Places (Taylor’s version)",
+     "note": "Track 12"
+    },
+    {
+     "id": "k7ce1d414-9211-438f-a75b-4dad18b3fa82",
+     "name": "Clean (Taylor’s version)",
+     "note": "Track 13"
+    },
+    {
+     "id": "ka89d81b8-3d26-4054-8cbc-fdfaee309c2c",
+     "name": "Wonderland (Taylor’s version)",
+     "note": "Track 14"
+    },
+    {
+     "id": "kf92388a2-c74e-4e66-9b1a-954f3ae8574f",
+     "name": "You Are in Love (Taylor’s version)",
+     "note": "Track 15"
+    },
+    {
+     "id": "ka26df87b-5b90-478f-a4a1-0249470c29d3",
+     "name": "New Romantics (Taylor’s version)",
+     "note": "Track 16"
+    },
+    {
+     "id": "ke988718a-66bb-4ff2-93da-46d7295e86c1",
+     "name": "“Slut!” (Taylor’s version) (from The Vault)",
+     "note": "Track 17"
+    },
+    {
+     "id": "k853761c2-2073-4207-a97f-c9449e9a4a00",
+     "name": "Say Don’t Go (Taylor’s version) (from The Vault)",
+     "note": "Track 18"
+    },
+    {
+     "id": "k9ee6220c-bd77-4c20-97ba-bb88237efd08",
+     "name": "Now That We Don’t Talk (Taylor’s version) (from The Vault)",
+     "note": "Track 19"
+    },
+    {
+     "id": "kd6315ed9-37da-4f14-be27-04824b4133cd",
+     "name": "Suburban Legends (Taylor’s version) (from The Vault)",
+     "note": "Track 20"
+    },
+    {
+     "id": "k9f3b48be-bb11-40ee-b862-d2906c818d6d",
+     "name": "Is It Over Now? (Taylor’s version) (from The Vault)",
+     "note": "Track 21"
+    }
+   ]
+  },
+  {
+   "id": "taylor-swift-the-tortured-poets-department-songs",
+   "cat": "Music",
+   "group": "Taylor Swift",
+   "short": "THE TORTURED POETS DEPARTMENT songs",
+   "title": "Taylor Swift: THE TORTURED POETS DEPARTMENT songs",
+   "items": [
+    {
+     "id": "k25d78df2-e24a-4631-a91e-0404b7a20991",
+     "name": "Fortnight",
+     "note": "Track 1"
+    },
+    {
+     "id": "k7fa114d8-c55e-4164-877b-0a9cecf01223",
+     "name": "The Tortured Poets Department",
+     "note": "Track 2"
+    },
+    {
+     "id": "ked33273c-312a-4215-9dfd-9048a777029b",
+     "name": "My Boy Only Breaks His Favorite Toys",
+     "note": "Track 3"
+    },
+    {
+     "id": "k72f6448e-5095-4511-b09f-0c0f8aacf90a",
+     "name": "Down Bad",
+     "note": "Track 4"
+    },
+    {
+     "id": "k07b1a290-4e42-4082-845e-2d463dd82fc9",
+     "name": "So Long, London",
+     "note": "Track 5"
+    },
+    {
+     "id": "kad1ca667-1e84-495b-abd8-8d43dc5af27a",
+     "name": "But Daddy I Love Him",
+     "note": "Track 6"
+    },
+    {
+     "id": "k557132b7-baad-4a3b-97b2-d7106fbb034c",
+     "name": "Fresh Out the Slammer",
+     "note": "Track 7"
+    },
+    {
+     "id": "k3fbaea5b-a1ae-427d-8eb8-701ab5bfc4bd",
+     "name": "Florida!!!",
+     "note": "Track 8"
+    },
+    {
+     "id": "k374d9147-6701-4283-bfd8-cf567d4f9c82",
+     "name": "Guilty as Sin?",
+     "note": "Track 9"
+    },
+    {
+     "id": "kdb2ca9d9-9ed4-480d-a373-57fdba626ef2",
+     "name": "Who’s Afraid of Little Old Me?",
+     "note": "Track 10"
+    },
+    {
+     "id": "ka933b7a0-9eea-478c-b914-59e2af833a10",
+     "name": "I Can Fix Him (No Really I Can)",
+     "note": "Track 11"
+    },
+    {
+     "id": "kabacf051-85f2-4c7e-9858-52b48697305e",
+     "name": "loml",
+     "note": "Track 12"
+    },
+    {
+     "id": "k57f01720-d7fb-4c37-ba3b-875117636f09",
+     "name": "I Can Do It With a Broken Heart",
+     "note": "Track 13"
+    },
+    {
+     "id": "k09013bf2-1e5b-45b9-8896-1959a1c8bf5a",
+     "name": "The Smallest Man Who Ever Lived",
+     "note": "Track 14"
+    },
+    {
+     "id": "k7f7ea4d7-31cd-4bc6-b70e-4343fbac5ac7",
+     "name": "The Alchemy",
+     "note": "Track 15"
+    },
+    {
+     "id": "k2dd0b9aa-5ac8-4556-ad4b-2eb8eb1bb900",
+     "name": "Clara Bow",
+     "note": "Track 16"
+    },
+    {
+     "id": "k04ac2df1-d15a-4eb0-a3f8-6938f32dacb8",
+     "name": "The Black Dog",
+     "note": "Track 17"
+    }
+   ]
+  },
+  {
+   "id": "taylor-swift-the-life-of-a-showgirl-songs",
+   "cat": "Music",
+   "group": "Taylor Swift",
+   "short": "The Life of a Showgirl songs",
+   "title": "Taylor Swift: The Life of a Showgirl songs",
+   "items": [
+    {
+     "id": "k7c1fb165-a0b3-4045-915b-b4c329d76ca3",
+     "name": "The Fate of Ophelia",
+     "note": "Track 1"
+    },
+    {
+     "id": "k39f7a0e7-7114-4141-9938-7cf0b366386b",
+     "name": "Elizabeth Taylor",
+     "note": "Track 2"
+    },
+    {
+     "id": "kbfb54920-09df-40c6-a067-2fa2b61da8cb",
+     "name": "Opalite",
+     "note": "Track 3"
+    },
+    {
+     "id": "kee65d728-2c4e-4bd3-87ce-d728f6fc68de",
+     "name": "Father Figure",
+     "note": "Track 4"
+    },
+    {
+     "id": "kfca0c9d3-a0d7-4ff6-b2ec-55f1d477fb83",
+     "name": "Eldest Daughter",
+     "note": "Track 5"
+    },
+    {
+     "id": "kd746a505-df4e-4364-bcc5-ee917222d369",
+     "name": "Ruin the Friendship",
+     "note": "Track 6"
+    },
+    {
+     "id": "k4e984695-3c4d-4aea-8c4e-469b7e712923",
+     "name": "Actually Romantic",
+     "note": "Track 7"
+    },
+    {
+     "id": "k3bed1291-2532-4d99-bb0b-0ea8c03c8516",
+     "name": "Wi$h Li$t",
+     "note": "Track 8"
+    },
+    {
+     "id": "kcf0a3fab-8801-4007-a571-4b87c01c8745",
+     "name": "Wood",
+     "note": "Track 9"
+    },
+    {
+     "id": "k5cd039c6-02c5-4a34-b686-80c5c9cf296a",
+     "name": "CANCELLED!",
+     "note": "Track 10"
+    },
+    {
+     "id": "kcec8cfcf-ac58-48ad-9fbe-37d7220460b2",
+     "name": "Honey",
+     "note": "Track 11"
+    },
+    {
+     "id": "kbe74db11-24bf-413b-afae-bec889b1be3f",
+     "name": "The Life of a Showgirl",
+     "note": "Track 12"
+    }
+   ]
+  },
+  {
+   "id": "sleater-kinney-albums",
+   "cat": "Music",
+   "group": "Sleater‐Kinney",
+   "short": "Albums",
+   "title": "Sleater‐Kinney albums",
+   "items": [
+    {
+     "id": "ae652c8d0-a4fa-35a0-afaf-01860fe2bdf6",
+     "name": "Sleater-Kinney",
+     "note": "1995",
+     "img": "https://coverartarchive.org/release-group/e652c8d0-a4fa-35a0-afaf-01860fe2bdf6/front-250",
+     "sq": true
+    },
+    {
+     "id": "a3da3cb84-2196-34bf-a67b-f9e4ee22ae76",
+     "name": "Call the Doctor",
+     "note": "1996",
+     "img": "https://coverartarchive.org/release-group/3da3cb84-2196-34bf-a67b-f9e4ee22ae76/front-250",
+     "sq": true
+    },
+    {
+     "id": "a209b45b7-8b2f-3e07-b194-efff9cde80dd",
+     "name": "Dig Me Out",
+     "note": "1997",
+     "img": "https://coverartarchive.org/release-group/209b45b7-8b2f-3e07-b194-efff9cde80dd/front-250",
+     "sq": true
+    },
+    {
+     "id": "aeaefa29b-e02a-3b28-836f-2641670d455b",
+     "name": "The Hot Rock",
+     "note": "1999",
+     "img": "https://coverartarchive.org/release-group/eaefa29b-e02a-3b28-836f-2641670d455b/front-250",
+     "sq": true
+    },
+    {
+     "id": "a1e6a0fd9-8c91-3ee7-941a-4af11765f25d",
+     "name": "All Hands on the Bad One",
+     "note": "2000",
+     "img": "https://coverartarchive.org/release-group/1e6a0fd9-8c91-3ee7-941a-4af11765f25d/front-250",
+     "sq": true
+    },
+    {
+     "id": "a55f3d073-ec82-3cb2-a1d8-0f47aa639ad2",
+     "name": "One Beat",
+     "note": "2002",
+     "img": "https://coverartarchive.org/release-group/55f3d073-ec82-3cb2-a1d8-0f47aa639ad2/front-250",
+     "sq": true
+    },
+    {
+     "id": "ab7d0d3f5-8980-32c6-995d-db6f8226f1ca",
+     "name": "The Woods",
+     "note": "2005",
+     "img": "https://coverartarchive.org/release-group/b7d0d3f5-8980-32c6-995d-db6f8226f1ca/front-250",
+     "sq": true
+    },
+    {
+     "id": "aaeacebc7-34fc-44ff-bde9-779e6fde7ade",
+     "name": "No Cities to Love",
+     "note": "2015",
+     "img": "https://coverartarchive.org/release-group/aeacebc7-34fc-44ff-bde9-779e6fde7ade/front-250",
+     "sq": true
+    },
+    {
+     "id": "a474906cf-88cc-414e-9b50-e8112dd44431",
+     "name": "The Center Won’t Hold",
+     "note": "2019",
+     "img": "https://coverartarchive.org/release-group/474906cf-88cc-414e-9b50-e8112dd44431/front-250",
+     "sq": true
+    },
+    {
+     "id": "a66018a12-50af-4274-be9c-16706fc60507",
+     "name": "Path of Wellness",
+     "note": "2021",
+     "img": "https://coverartarchive.org/release-group/66018a12-50af-4274-be9c-16706fc60507/front-250",
+     "sq": true
+    },
+    {
+     "id": "a369bf9b7-87e3-48f1-9b8e-03033428cb3e",
+     "name": "Dig Me In: A Dig Me Out Covers Album",
+     "note": "2022",
+     "img": "https://coverartarchive.org/release-group/369bf9b7-87e3-48f1-9b8e-03033428cb3e/front-250",
+     "sq": true
+    },
+    {
+     "id": "aebfca4fe-da13-4edc-818a-1facf255d0fc",
+     "name": "Little Rope",
+     "note": "2024",
+     "img": "https://coverartarchive.org/release-group/ebfca4fe-da13-4edc-818a-1facf255d0fc/front-250",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "metallica-albums",
+   "cat": "Music",
+   "group": "Metallica",
+   "short": "Albums",
+   "title": "Metallica albums",
+   "items": [
+    {
+     "id": "af44f4f73-a714-31a1-a4b8-bfcaaf311f50",
+     "name": "Kill ’Em All",
+     "note": "1983",
+     "img": "https://coverartarchive.org/release-group/f44f4f73-a714-31a1-a4b8-bfcaaf311f50/front-250",
+     "sq": true
+    },
+    {
+     "id": "a0da580f2-6768-498f-af9d-2becaddf15e0",
+     "name": "Ride the Lightning",
+     "note": "1984",
+     "img": "https://coverartarchive.org/release-group/0da580f2-6768-498f-af9d-2becaddf15e0/front-250",
+     "sq": true
+    },
+    {
+     "id": "a3d00fb45-f8ab-3436-a8e1-b4bfc4d66913",
+     "name": "Master of Puppets",
+     "note": "1986",
+     "img": "https://coverartarchive.org/release-group/3d00fb45-f8ab-3436-a8e1-b4bfc4d66913/front-250",
+     "sq": true
+    },
+    {
+     "id": "a67553e23-8dad-3792-b6f2-8fedd5650ff3",
+     "name": "…And Justice for All",
+     "note": "1988",
+     "img": "https://coverartarchive.org/release-group/67553e23-8dad-3792-b6f2-8fedd5650ff3/front-250",
+     "sq": true
+    },
+    {
+     "id": "ae8f70201-8899-3f0c-9e07-5d6495bc8046",
+     "name": "Metallica",
+     "note": "1991",
+     "img": "https://coverartarchive.org/release-group/e8f70201-8899-3f0c-9e07-5d6495bc8046/front-250",
+     "sq": true
+    },
+    {
+     "id": "ae389b7df-862d-3d91-a612-acca150f6e71",
+     "name": "Load",
+     "note": "1996",
+     "img": "https://coverartarchive.org/release-group/e389b7df-862d-3d91-a612-acca150f6e71/front-250",
+     "sq": true
+    },
+    {
+     "id": "a8fd32554-02a7-3788-a761-7012e0e75e55",
+     "name": "Reload",
+     "note": "1997",
+     "img": "https://coverartarchive.org/release-group/8fd32554-02a7-3788-a761-7012e0e75e55/front-250",
+     "sq": true
+    },
+    {
+     "id": "a8f1cc89b-7e80-3e1c-b571-8cf2b98db347",
+     "name": "St. Anger",
+     "note": "2003",
+     "img": "https://coverartarchive.org/release-group/8f1cc89b-7e80-3e1c-b571-8cf2b98db347/front-250",
+     "sq": true
+    },
+    {
+     "id": "a5c8a25bf-4764-3cce-8f37-30af79d3b101",
+     "name": "Death Magnetic",
+     "note": "2008",
+     "img": "https://coverartarchive.org/release-group/5c8a25bf-4764-3cce-8f37-30af79d3b101/front-250",
+     "sq": true
+    },
+    {
+     "id": "a38d1077e-c270-49a8-92ca-87e7eb8d9fe4",
+     "name": "Lulu",
+     "note": "2011",
+     "img": "https://coverartarchive.org/release-group/38d1077e-c270-49a8-92ca-87e7eb8d9fe4/front-250",
+     "sq": true
+    },
+    {
+     "id": "a55d8ab42-990b-4c94-93c8-9ca7927b5fc0",
+     "name": "Hardwired… to Self‐Destruct",
+     "note": "2016",
+     "img": "https://coverartarchive.org/release-group/55d8ab42-990b-4c94-93c8-9ca7927b5fc0/front-250",
+     "sq": true
+    },
+    {
+     "id": "aa0b7b436-94db-4df6-8c5f-bc0e5932a90e",
+     "name": "72 Seasons",
+     "note": "2023",
+     "img": "https://coverartarchive.org/release-group/a0b7b436-94db-4df6-8c5f-bc0e5932a90e/front-250",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "lorde-pure-heroine-songs",
+   "cat": "Music",
+   "group": "Lorde",
+   "short": "Pure Heroine songs",
+   "title": "Lorde: Pure Heroine songs",
+   "items": [
+    {
+     "id": "k473f4df0-d28a-4076-969b-8aa202b629ce",
+     "name": "Tennis Court",
+     "note": "Track 1"
+    },
+    {
+     "id": "k077964e9-ab23-4837-a0af-bd8cd56727a5",
+     "name": "400 Lux",
+     "note": "Track 2"
+    },
+    {
+     "id": "k3d8850b4-675b-4f4d-be93-29aea1e4c05a",
+     "name": "Royals",
+     "note": "Track 3"
+    },
+    {
+     "id": "ke852597e-6ffd-4e71-af08-3b80a26d0de4",
+     "name": "Ribs",
+     "note": "Track 4"
+    },
+    {
+     "id": "k9a9830c2-fe31-4125-b7cd-654d02544b13",
+     "name": "Buzzcut Season",
+     "note": "Track 5"
+    },
+    {
+     "id": "k17c3c062-ea12-4a90-8b12-682f55fe7519",
+     "name": "Team",
+     "note": "Track 6"
+    },
+    {
+     "id": "kd6bfac51-de25-4543-ab43-2ad8c68bdc06",
+     "name": "Glory and Gore",
+     "note": "Track 7"
+    },
+    {
+     "id": "kac22a804-049a-4985-b7a1-7a7602e61ffe",
+     "name": "Still Sane",
+     "note": "Track 8"
+    },
+    {
+     "id": "kb1b4d33f-b67b-4428-9843-3453e8a480ab",
+     "name": "White Teeth Teens",
+     "note": "Track 9"
+    },
+    {
+     "id": "k1ed44183-b663-4ba4-8487-aad42fd1f5d3",
+     "name": "A World Alone",
+     "note": "Track 10"
+    }
+   ]
+  },
+  {
+   "id": "lorde-melodrama-songs",
+   "cat": "Music",
+   "group": "Lorde",
+   "short": "Melodrama songs",
+   "title": "Lorde: Melodrama songs",
+   "items": [
+    {
+     "id": "k353b798f-4462-4dd4-9928-c2ee4fcf00c4",
+     "name": "Green Light",
+     "note": "Track 1"
+    },
+    {
+     "id": "k58b6a497-f9ef-4b25-91f2-cb7aa6e77408",
+     "name": "Sober",
+     "note": "Track 2"
+    },
+    {
+     "id": "k7e87be87-5a96-4d13-872b-ee930effa451",
+     "name": "Homemade Dynamite",
+     "note": "Track 3"
+    },
+    {
+     "id": "k915e81d4-b3c2-4408-901d-37f3d9a340d2",
+     "name": "The Louvre",
+     "note": "Track 4"
+    },
+    {
+     "id": "k0b9f55b7-4efa-49f8-91a0-991068e0f157",
+     "name": "Liability",
+     "note": "Track 5"
+    },
+    {
+     "id": "k2bdd80a5-2f33-42dd-9247-92ad6bf52f00",
+     "name": "Hard Feelings/Loveless",
+     "note": "Track 6"
+    },
+    {
+     "id": "ka3b45af8-d70e-4049-8e9e-78e1e738c899",
+     "name": "Sober II (Melodrama)",
+     "note": "Track 7"
+    },
+    {
+     "id": "k5fef4ac9-68b2-4793-89fb-e47198bf7d86",
+     "name": "Writer in the Dark",
+     "note": "Track 8"
+    },
+    {
+     "id": "k5e584069-6733-4a93-b44e-56370ac0cc72",
+     "name": "Supercut",
+     "note": "Track 9"
+    },
+    {
+     "id": "k76c02fd6-aa9f-4c0b-8c52-4a5a917c35aa",
+     "name": "Liability (reprise)",
+     "note": "Track 10"
+    },
+    {
+     "id": "k25a5e8b8-0bd1-4db2-a1b1-dc4bdb74c49a",
+     "name": "Perfect Places",
+     "note": "Track 11"
+    }
+   ]
+  },
+  {
+   "id": "lorde-virgin-songs",
+   "cat": "Music",
+   "group": "Lorde",
+   "short": "Virgin songs",
+   "title": "Lorde: Virgin songs",
+   "items": [
+    {
+     "id": "k2c26cdb7-d4dd-4e99-8f15-bef626370c7f",
+     "name": "Hammer",
+     "note": "Track 1"
+    },
+    {
+     "id": "k5c98c389-851c-4eca-bc0c-66cd2f6944ce",
+     "name": "What Was That",
+     "note": "Track 2"
+    },
+    {
+     "id": "k18200933-0604-4e40-9350-3fcfa8489eb5",
+     "name": "Shapeshifter",
+     "note": "Track 3"
+    },
+    {
+     "id": "k08612490-86dd-4f66-99dc-9a7b356ea7ab",
+     "name": "Man of the Year",
+     "note": "Track 4"
+    },
+    {
+     "id": "k078e7673-151e-46a6-8473-474ad0f0c4e7",
+     "name": "Favourite Daughter",
+     "note": "Track 5"
+    },
+    {
+     "id": "kb8c60bfc-651f-4044-9d16-c4acb8845542",
+     "name": "Current Affairs",
+     "note": "Track 6"
+    },
+    {
+     "id": "k09b92a4b-6fea-4068-9298-680c52d6d254",
+     "name": "Clearblue",
+     "note": "Track 7"
+    },
+    {
+     "id": "k63b69064-8362-4cfe-8220-4b8b906ae1d4",
+     "name": "GRWM",
+     "note": "Track 8"
+    },
+    {
+     "id": "k17627900-5f8f-41f6-96a4-fae401d4fa7e",
+     "name": "Broken Glass",
+     "note": "Track 9"
+    },
+    {
+     "id": "k4eb8a2e7-4f90-4763-91ad-58c69cd5fa93",
+     "name": "If She Could See Me Now",
+     "note": "Track 10"
+    },
+    {
+     "id": "k23a901de-8af0-4a5d-aa5b-2f6b188b9a6b",
+     "name": "David",
+     "note": "Track 11"
+    }
+   ]
+  },
+  {
+   "id": "top-metal-albums",
+   "cat": "Music",
+   "group": "Top albums",
+   "short": "Metal",
+   "title": "Top metal albums",
+   "items": [
+    {
+     "id": "cblack-sabbath-paranoid",
+     "name": "Paranoid",
+     "note": "Black Sabbath, 1970",
+     "img": "https://coverartarchive.org/release-group/cc053745-c447-3566-8f27-bed5438c9133/front-250",
+     "sq": true
+    },
+    {
+     "id": "cjudas-priest-british-steel",
+     "name": "British Steel",
+     "note": "Judas Priest, 1980",
+     "img": "https://coverartarchive.org/release-group/5bd56af7-2bd6-392e-a815-b39354e3780d/front-250",
+     "sq": true
+    },
+    {
+     "id": "cmotorhead-ace-of-spades",
+     "name": "Ace of Spades",
+     "note": "Motörhead, 1980",
+     "img": "https://coverartarchive.org/release-group/51d51de2-0312-4798-8529-bed2ae2581c6/front-250",
+     "sq": true
+    },
+    {
+     "id": "ciron-maiden-the-number-of-the-beast",
+     "name": "The Number of the Beast",
+     "note": "Iron Maiden, 1982",
+     "img": "https://coverartarchive.org/release-group/4ebfe175-e7ed-34cd-8e91-67c7e4a53579/front-250",
+     "sq": true
+    },
+    {
+     "id": "cdio-holy-diver",
+     "name": "Holy Diver",
+     "note": "Dio, 1983",
+     "img": "https://coverartarchive.org/release-group/4e7b34de-0d87-356a-a3da-b21f769b7d4d/front-250",
+     "sq": true
+    },
+    {
+     "id": "cmetallica-master-of-puppets",
+     "name": "Master of Puppets",
+     "note": "Metallica, 1986",
+     "img": "https://coverartarchive.org/release-group/3d00fb45-f8ab-3436-a8e1-b4bfc4d66913/front-250",
+     "sq": true
+    },
+    {
+     "id": "cslayer-reign-in-blood",
+     "name": "Reign in Blood",
+     "note": "Slayer, 1986",
+     "img": "https://coverartarchive.org/release-group/dbf1b3c0-1efb-4e5f-9fe1-4c42b144aa24/front-250",
+     "sq": true
+    },
+    {
+     "id": "cmegadeth-rust-in-peace",
+     "name": "Rust in Peace",
+     "note": "Megadeth, 1990",
+     "img": "https://coverartarchive.org/release-group/19e7c9f3-7c4c-3a56-ba50-4156b39f76ca/front-250",
+     "sq": true
+    },
+    {
+     "id": "cmetallica-metallica",
+     "name": "Metallica",
+     "note": "Metallica, 1991",
+     "img": "https://coverartarchive.org/release-group/e8f70201-8899-3f0c-9e07-5d6495bc8046/front-250",
+     "sq": true
+    },
+    {
+     "id": "cpantera-vulgar-display-of-power",
+     "name": "Vulgar Display of Power",
+     "note": "Pantera, 1992",
+     "img": "https://coverartarchive.org/release-group/814e0b20-6884-31c5-9d99-d215f048cfd6/front-250",
+     "sq": true
+    },
+    {
+     "id": "ctool-nima",
+     "name": "Ænima",
+     "note": "Tool, 1996",
+     "img": "https://coverartarchive.org/release-group/ef1e8130-dd5f-336a-85fa-4936a47342bd/front-250",
+     "sq": true
+    },
+    {
+     "id": "copeth-blackwater-park",
+     "name": "Blackwater Park",
+     "note": "Opeth, 2001",
+     "img": "https://coverartarchive.org/release-group/1f4a9f6f-9621-3e46-977d-8503e8386768/front-250",
+     "sq": true
+    },
+    {
+     "id": "csystem-of-a-down-toxicity",
+     "name": "Toxicity",
+     "note": "System of a Down, 2001",
+     "img": "https://coverartarchive.org/release-group/f50fbcb4-bfcd-3784-b4c9-44f4793e66b2/front-250",
+     "sq": true
+    },
+    {
+     "id": "cslipknot-iowa",
+     "name": "Iowa",
+     "note": "Slipknot, 2001",
+     "img": "https://coverartarchive.org/release-group/082c68eb-d993-36cf-9b32-6663cba2d052/front-250",
+     "sq": true
+    },
+    {
+     "id": "cmastodon-leviathan",
+     "name": "Leviathan",
+     "note": "Mastodon, 2004",
+     "img": "https://coverartarchive.org/release-group/7902c486-f670-3336-9850-b4112079d9e6/front-250",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "top-albums-of-the-1990s",
+   "cat": "Music",
+   "group": "Top albums",
+   "short": "1990s",
+   "title": "Top albums of the 1990s",
+   "items": [
+    {
+     "id": "cnirvana-nevermind",
+     "name": "Nevermind",
+     "note": "Nirvana, 1991",
+     "img": "https://coverartarchive.org/release-group/1b022e01-4da6-387b-8658-8678046e4cef/front-250",
+     "sq": true
+    },
+    {
+     "id": "cpearl-jam-ten",
+     "name": "Ten",
+     "note": "Pearl Jam, 1991",
+     "img": "https://coverartarchive.org/release-group/cea5d18a-1924-3cda-bebc-38933834b25d/front-250",
+     "sq": true
+    },
+    {
+     "id": "cdr-dre-the-chronic",
+     "name": "The Chronic",
+     "note": "Dr. Dre, 1992",
+     "img": "https://coverartarchive.org/release-group/ad444843-7160-33d7-b0c9-fc99f2c14a99/front-250",
+     "sq": true
+    },
+    {
+     "id": "cr-e-m-automatic-for-the-people",
+     "name": "Automatic for the People",
+     "note": "R.E.M., 1992",
+     "img": "https://coverartarchive.org/release-group/c86c6af9-d10e-3079-b34b-30b682a797eb/front-250",
+     "sq": true
+    },
+    {
+     "id": "cthe-smashing-pumpkins-siamese-dream",
+     "name": "Siamese Dream",
+     "note": "The Smashing Pumpkins, 1993",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "cnas-illmatic",
+     "name": "Illmatic",
+     "note": "Nas, 1994",
+     "img": "https://coverartarchive.org/release-group/28298e2c-4d70-3eed-a0f5-a3280c662b3d/front-250",
+     "sq": true
+    },
+    {
+     "id": "cgreen-day-dookie",
+     "name": "Dookie",
+     "note": "Green Day, 1994",
+     "img": "https://coverartarchive.org/release-group/314cffd4-daa5-3337-85e5-e54165a96113/front-250",
+     "sq": true
+    },
+    {
+     "id": "cportishead-dummy",
+     "name": "Dummy",
+     "note": "Portishead, 1994",
+     "img": "https://coverartarchive.org/release-group/48140466-cff6-3222-bd55-63c27e43190d/front-250",
+     "sq": true
+    },
+    {
+     "id": "cthe-notorious-b-i-g-ready-to-die",
+     "name": "Ready to Die",
+     "note": "The Notorious B.I.G., 1994",
+     "img": "https://coverartarchive.org/release-group/5afcfeac-118a-35e6-af0d-35ec9003354d/front-250",
+     "sq": true
+    },
+    {
+     "id": "calanis-morissette-jagged-little-pill",
+     "name": "Jagged Little Pill",
+     "note": "Alanis Morissette, 1995",
+     "img": "https://coverartarchive.org/release-group/ee3d18ed-d6a8-37c7-a964-41bbdb6d59f1/front-250",
+     "sq": true
+    },
+    {
+     "id": "coasis-what-s-the-story-morning-glory",
+     "name": "(What's the Story) Morning Glory?",
+     "note": "Oasis, 1995",
+     "img": "https://coverartarchive.org/release-group/cc7e6348-cc55-31fa-aeb2-748a46a81cb3/front-250",
+     "sq": true
+    },
+    {
+     "id": "cfugees-the-score",
+     "name": "The Score",
+     "note": "Fugees",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "cbeck-odelay",
+     "name": "Odelay",
+     "note": "Beck, 1996",
+     "img": "https://coverartarchive.org/release-group/df0bfd42-78a9-40c3-a45f-a12e10d446f8/front-250",
+     "sq": true
+    },
+    {
+     "id": "cradiohead-ok-computer",
+     "name": "OK Computer",
+     "note": "Radiohead, 1997",
+     "img": "https://coverartarchive.org/release-group/b1392450-e666-3926-a536-22c65f834433/front-250",
+     "sq": true
+    },
+    {
+     "id": "clauryn-hill-the-miseducation-of-lauryn-hill",
+     "name": "The Miseducation of Lauryn Hill",
+     "note": "Lauryn Hill, 1998",
+     "img": "https://coverartarchive.org/release-group/8691d12c-abd8-385c-b1eb-d841190124f7/front-250",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "top-albums-of-the-2000s",
+   "cat": "Music",
+   "group": "Top albums",
+   "short": "2000s",
+   "title": "Top albums of the 2000s",
+   "items": [
+    {
+     "id": "cradiohead-kid-a",
+     "name": "Kid A",
+     "note": "Radiohead, 2000",
+     "img": "https://coverartarchive.org/release-group/e75c0549-ad55-39e3-8025-c72c5d4a3c5d/front-250",
+     "sq": true
+    },
+    {
+     "id": "coutkast-stankonia",
+     "name": "Stankonia",
+     "note": "OutKast, 2000",
+     "img": "https://coverartarchive.org/release-group/00d2cd53-21c9-3738-b683-56847b7b0040/front-250",
+     "sq": true
+    },
+    {
+     "id": "ceminem-the-marshall-mathers-lp",
+     "name": "The Marshall Mathers LP",
+     "note": "Eminem, 2000",
+     "img": "https://coverartarchive.org/release-group/b0fa91c8-0996-38f1-ab84-797f58d7c4eb/front-250",
+     "sq": true
+    },
+    {
+     "id": "cdaft-punk-discovery",
+     "name": "Discovery",
+     "note": "Daft Punk, 2001",
+     "img": "https://coverartarchive.org/release-group/48117b90-a16e-34ca-a514-19c702df1158/front-250",
+     "sq": true
+    },
+    {
+     "id": "cthe-strokes-is-this-it",
+     "name": "Is This It",
+     "note": "The Strokes, 2001",
+     "img": "https://coverartarchive.org/release-group/efea26d1-a016-30f6-b8e2-bc8c02336b0a/front-250",
+     "sq": true
+    },
+    {
+     "id": "cjay-z-the-blueprint",
+     "name": "The Blueprint",
+     "note": "Jay-Z, 2001",
+     "img": "https://coverartarchive.org/release-group/11ae8c9c-27c1-3308-9761-edb87c8f54ea/front-250",
+     "sq": true
+    },
+    {
+     "id": "ccoldplay-a-rush-of-blood-to-the-head",
+     "name": "A Rush of Blood to the Head",
+     "note": "Coldplay, 2002",
+     "img": "https://coverartarchive.org/release-group/120c786d-a3b2-3c19-b4ff-2b7b3b4435bf/front-250",
+     "sq": true
+    },
+    {
+     "id": "cthe-white-stripes-elephant",
+     "name": "Elephant",
+     "note": "The White Stripes, 2003",
+     "img": "https://coverartarchive.org/release-group/d85b9684-4277-3565-b89b-115c8b4b7fd3/front-250",
+     "sq": true
+    },
+    {
+     "id": "cyeah-yeah-yeahs-fever-to-tell",
+     "name": "Fever to Tell",
+     "note": "Yeah Yeah Yeahs, 2003",
+     "img": "https://coverartarchive.org/release-group/e8e2d824-dd32-3b24-9c7c-24619fbe86a9/front-250",
+     "sq": true
+    },
+    {
+     "id": "cbeyonce-dangerously-in-love",
+     "name": "Dangerously in Love",
+     "note": "Beyoncé, 2003",
+     "img": "https://coverartarchive.org/release-group/f639ba46-b371-3262-b494-5f2dbee36f5c/front-250",
+     "sq": true
+    },
+    {
+     "id": "ckanye-west-the-college-dropout",
+     "name": "The College Dropout",
+     "note": "Kanye West, 2004",
+     "img": "https://coverartarchive.org/release-group/8a01217e-6947-3927-a39b-6691104694f1/front-250",
+     "sq": true
+    },
+    {
+     "id": "carcade-fire-funeral",
+     "name": "Funeral",
+     "note": "Arcade Fire",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "cgreen-day-american-idiot",
+     "name": "American Idiot",
+     "note": "Green Day, 2004",
+     "img": "https://coverartarchive.org/release-group/de9bf827-a9b0-348b-a7c9-556c03c3fb07/front-250",
+     "sq": true
+    },
+    {
+     "id": "camy-winehouse-back-to-black",
+     "name": "Back to Black",
+     "note": "Amy Winehouse",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "clcd-soundsystem-sound-of-silver",
+     "name": "Sound of Silver",
+     "note": "LCD Soundsystem, 2007",
+     "img": "https://coverartarchive.org/release-group/5cbcdd9f-4b7d-3b3c-b9f2-6b0e75971157/front-250",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "top-albums-of-the-2010s",
+   "cat": "Music",
+   "group": "Top albums",
+   "short": "2010s",
+   "title": "Top albums of the 2010s",
+   "items": [
+    {
+     "id": "ckanye-west-my-beautiful-dark-twisted-fantasy",
+     "name": "My Beautiful Dark Twisted Fantasy",
+     "note": "Kanye West, 2010",
+     "img": "https://coverartarchive.org/release-group/5d6e21e1-deb5-428e-bb42-c2a567f3619b/front-250",
+     "sq": true
+    },
+    {
+     "id": "carcade-fire-the-suburbs",
+     "name": "The Suburbs",
+     "note": "Arcade Fire, 2010",
+     "img": "https://coverartarchive.org/release-group/bf306022-c851-449d-a619-7864caddf5c7/front-250",
+     "sq": true
+    },
+    {
+     "id": "cadele-21",
+     "name": "21",
+     "note": "Adele, 2011",
+     "img": "https://coverartarchive.org/release-group/e4174758-d333-4a8e-a31f-dd0edd51518e/front-250",
+     "sq": true
+    },
+    {
+     "id": "ckendrick-lamar-good-kid-m-a-a-d-city",
+     "name": "good kid, m.A.A.d city",
+     "note": "Kendrick Lamar",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "cdaft-punk-random-access-memories",
+     "name": "Random Access Memories",
+     "note": "Daft Punk, 2013",
+     "img": "https://coverartarchive.org/release-group/aa997ea0-2936-40bd-884d-3af8a0e064dc/front-250",
+     "sq": true
+    },
+    {
+     "id": "cvampire-weekend-modern-vampires-of-the-city",
+     "name": "Modern Vampires of the City",
+     "note": "Vampire Weekend, 2013",
+     "img": "https://coverartarchive.org/release-group/eb143c5a-9a85-4bce-a78c-f7faf72c0169/front-250",
+     "sq": true
+    },
+    {
+     "id": "ctaylor-swift-1989",
+     "name": "1989",
+     "note": "Taylor Swift, 2014",
+     "img": "https://coverartarchive.org/release-group/4d9ec1c2-58ec-48a4-aa0a-916718adead0/front-250",
+     "sq": true
+    },
+    {
+     "id": "ckendrick-lamar-to-pimp-a-butterfly",
+     "name": "To Pimp a Butterfly",
+     "note": "Kendrick Lamar, 2015",
+     "img": "https://coverartarchive.org/release-group/d9103c72-3807-4378-9ce7-b6f3e8fdd547/front-250",
+     "sq": true
+    },
+    {
+     "id": "ctame-impala-currents",
+     "name": "Currents",
+     "note": "Tame Impala, 2015",
+     "img": "https://coverartarchive.org/release-group/08aa7a6c-3e43-4459-87b2-e47faf3a088a/front-250",
+     "sq": true
+    },
+    {
+     "id": "cbeyonce-lemonade",
+     "name": "Lemonade",
+     "note": "Beyoncé, 2016",
+     "img": "https://coverartarchive.org/release-group/c1f22e07-7bdf-4a4f-8b50-7747c1091ef6/front-250",
+     "sq": true
+    },
+    {
+     "id": "cfrank-ocean-blonde",
+     "name": "Blonde",
+     "note": "Frank Ocean, 2016",
+     "img": "https://coverartarchive.org/release-group/0da340a0-6ad7-4fc2-a272-6f94393a7831/front-250",
+     "sq": true
+    },
+    {
+     "id": "clorde-melodrama",
+     "name": "Melodrama",
+     "note": "Lorde, 2017",
+     "img": "https://coverartarchive.org/release-group/668e80e0-b35e-4471-9788-0a3d797fe42c/front-250",
+     "sq": true
+    },
+    {
+     "id": "csza-ctrl",
+     "name": "Ctrl",
+     "note": "SZA, 2017",
+     "img": "https://coverartarchive.org/release-group/8f892c1b-0709-4cf4-9711-493892a9eb9b/front-250",
+     "sq": true
+    },
+    {
+     "id": "cbillie-eilish-when-we-all-fall-asleep-where-do-we-go",
+     "name": "When We All Fall Asleep, Where Do We Go?",
+     "note": "Billie Eilish, 2019",
+     "img": "https://coverartarchive.org/release-group/72375978-a9a1-4254-b957-85565c716b7e/front-250",
+     "sq": true
+    },
+    {
+     "id": "clana-del-rey-norman-fucking-rockwell",
+     "name": "Norman Fucking Rockwell!",
+     "note": "Lana Del Rey, 2019",
+     "img": "https://coverartarchive.org/release-group/24fd0887-9e83-42e3-b27e-e7f89ead4c03/front-250",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "canadian-rock-albums",
+   "cat": "Music",
+   "group": "Top albums",
+   "short": "Canadian rock",
+   "title": "Canadian rock albums",
+   "items": [
+    {
+     "id": "cthe-guess-who-american-woman",
+     "name": "American Woman",
+     "note": "The Guess Who, 1970",
+     "img": "https://coverartarchive.org/release-group/b51242a1-d51e-365f-8b9b-0ecb29e0f540/front-250",
+     "sq": true
+    },
+    {
+     "id": "cneil-young-harvest",
+     "name": "Harvest",
+     "note": "Neil Young, 1972",
+     "img": "https://coverartarchive.org/release-group/b25419cf-71bf-3a54-8cd4-2161c61056a0/front-250",
+     "sq": true
+    },
+    {
+     "id": "crush-moving-pictures",
+     "name": "Moving Pictures",
+     "note": "Rush, 1981",
+     "img": "https://coverartarchive.org/release-group/40e30dc1-55ac-33e1-85d3-1f1508140bfc/front-250",
+     "sq": true
+    },
+    {
+     "id": "cbryan-adams-reckless",
+     "name": "Reckless",
+     "note": "Bryan Adams",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "cbarenaked-ladies-gordon",
+     "name": "Gordon",
+     "note": "Barenaked Ladies, 1992",
+     "img": "https://coverartarchive.org/release-group/6e36db18-ed74-3422-b564-946cb34db79b/front-250",
+     "sq": true
+    },
+    {
+     "id": "cthe-tragically-hip-fully-completely",
+     "name": "Fully Completely",
+     "note": "The Tragically Hip, 1992",
+     "img": "https://coverartarchive.org/release-group/2959fc5f-2cf0-3325-af9d-b20e6cc1d1a9/front-250",
+     "sq": true
+    },
+    {
+     "id": "calanis-morissette-jagged-little-pill",
+     "name": "Jagged Little Pill",
+     "note": "Alanis Morissette, 1995",
+     "img": "https://coverartarchive.org/release-group/ee3d18ed-d6a8-37c7-a964-41bbdb6d59f1/front-250",
+     "sq": true
+    },
+    {
+     "id": "cour-lady-peace-clumsy",
+     "name": "Clumsy",
+     "note": "Our Lady Peace, 1997",
+     "img": "https://coverartarchive.org/release-group/289e4a2b-29ba-3557-953d-8e7dd6b14127/front-250",
+     "sq": true
+    },
+    {
+     "id": "csum-41-all-killer-no-filler",
+     "name": "All Killer No Filler",
+     "note": "Sum 41, 2001",
+     "img": "https://coverartarchive.org/release-group/dd2c168f-41a6-37f5-a727-6e188bf22c6e/front-250",
+     "sq": true
+    },
+    {
+     "id": "cnickelback-silver-side-up",
+     "name": "Silver Side Up",
+     "note": "Nickelback, 2001",
+     "img": "https://coverartarchive.org/release-group/f35498a6-e3a4-3834-b243-8a67d3d1f88c/front-250",
+     "sq": true
+    },
+    {
+     "id": "cavril-lavigne-let-go",
+     "name": "Let Go",
+     "note": "Avril Lavigne, 2002",
+     "img": "https://coverartarchive.org/release-group/0837aca2-319e-3f2f-a2d3-c525802068d6/front-250",
+     "sq": true
+    },
+    {
+     "id": "csimple-plan-no-pads-no-helmets-just-balls",
+     "name": "No Pads, No Helmets...Just Balls",
+     "note": "Simple Plan, 2002",
+     "img": "https://coverartarchive.org/release-group/918e4df1-d1c3-33d1-805a-1228f9c684db/front-250",
+     "sq": true
+    },
+    {
+     "id": "carcade-fire-funeral",
+     "name": "Funeral",
+     "note": "Arcade Fire, 2004",
+     "img": "https://coverartarchive.org/release-group/05affa96-5959-32da-8d75-1c9eb985ca59/front-250",
+     "sq": true
+    },
+    {
+     "id": "cbilly-talent-billy-talent-ii",
+     "name": "Billy Talent II",
+     "note": "Billy Talent, 2006",
+     "img": "https://coverartarchive.org/release-group/28e3683e-437f-3b89-a86b-ffa9135946e4/front-250",
+     "sq": true
+    },
+    {
+     "id": "cmetric-fantasies",
+     "name": "Fantasies",
+     "note": "Metric, 2009",
+     "img": "https://coverartarchive.org/release-group/0f943236-96e1-4d9d-b35d-4906023fa0e5/front-250",
+     "sq": true
+    }
+   ]
+  },
+  {
    "id": "friends-seasons",
    "cat": "TV",
    "title": "Friends seasons",
