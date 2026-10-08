@@ -3,6 +3,7 @@
  "lists": [
   {
    "id": "leonardo-dicaprio-movies",
+   "cat": "Actors & directors",
    "title": "Leonardo DiCaprio movies",
    "items": [
     {
@@ -81,6 +82,7 @@
   },
   {
    "id": "nicolas-cage-movies",
+   "cat": "Actors & directors",
    "title": "Nicolas Cage movies",
    "items": [
     {
@@ -159,6 +161,7 @@
   },
   {
    "id": "films-directed-by-james-cameron",
+   "cat": "Actors & directors",
    "title": "Films directed by James Cameron",
    "items": [
     {
@@ -225,6 +228,7 @@
   },
   {
    "id": "films-directed-by-ridley-scott",
+   "cat": "Actors & directors",
    "title": "Films directed by Ridley Scott",
    "items": [
     {
@@ -303,6 +307,7 @@
   },
   {
    "id": "films-directed-by-christopher-nolan",
+   "cat": "Actors & directors",
    "title": "Films directed by Christopher Nolan",
    "items": [
     {
@@ -381,6 +386,7 @@
   },
   {
    "id": "films-directed-by-steven-spielberg",
+   "cat": "Actors & directors",
    "title": "Films directed by Steven Spielberg",
    "items": [
     {
@@ -459,6 +465,7 @@
   },
   {
    "id": "harry-potter-films",
+   "cat": "Franchises",
    "title": "Harry Potter films",
    "items": [
     {
@@ -513,6 +520,7 @@
   },
   {
    "id": "mission-impossible-films",
+   "cat": "Franchises",
    "title": "Mission: Impossible films",
    "items": [
     {
@@ -567,6 +575,7 @@
   },
   {
    "id": "biggest-movies-of-1999",
+   "cat": "Movies by year",
    "title": "Biggest movies of 1999",
    "items": [
     {
@@ -645,6 +654,7 @@
   },
   {
    "id": "biggest-movies-of-2001",
+   "cat": "Movies by year",
    "title": "Biggest movies of 2001",
    "items": [
     {
@@ -723,6 +733,7 @@
   },
   {
    "id": "friends-seasons",
+   "cat": "TV",
    "title": "Friends seasons",
    "items": [
     {
@@ -789,6 +800,7 @@
   },
   {
    "id": "stargate-sg-1-seasons",
+   "cat": "TV",
    "title": "Stargate SG-1 seasons",
    "items": [
     {
@@ -850,6 +862,188 @@
      "name": "Season 10",
      "note": "2006",
      "poster": "/zWQUWJ1NbLLQhMDcyQ9OImG6oGg.jpg"
+    }
+   ]
+  },
+  {
+   "id": "friends-season-5-episodes",
+   "cat": "TV",
+   "title": "Friends season 5 episodes",
+   "items": [
+    {
+     "id": "e86534",
+     "name": "The One After Ross Says Rachel",
+     "note": "Episode 1",
+     "poster": "/cy99mz7wO24VK9j6x2fwT0AslMI.jpg",
+     "wide": true
+    },
+    {
+     "id": "e86535",
+     "name": "The One with All the Kissing",
+     "note": "Episode 2",
+     "poster": "/5LswaLN9QpjjBNFbtPrLQoHXSi0.jpg",
+     "wide": true
+    },
+    {
+     "id": "e86542",
+     "name": "The One with the Yeti",
+     "note": "Episode 6",
+     "poster": "/t8frUbTNAaU585dwir1wRcylauR.jpg",
+     "wide": true
+    },
+    {
+     "id": "e86548",
+     "name": "The One with All the Thanksgivings",
+     "note": "Episode 8",
+     "poster": "/49W5shiaO1VYhHErOt2tJXCqfz0.jpg",
+     "wide": true
+    },
+    {
+     "id": "e86551",
+     "name": "The One with Ross's Sandwich",
+     "note": "Episode 9",
+     "poster": "/zcsl24ON4OM0O5Nsy6ZAdF9469c.jpg",
+     "wide": true
+    },
+    {
+     "id": "e86553",
+     "name": "The One with the Inappropriate Sister",
+     "note": "Episode 10",
+     "poster": "/pUeg9m9Nplam46nlchyfGeE9ZWC.jpg",
+     "wide": true
+    },
+    {
+     "id": "e86558",
+     "name": "The One with All the Resolutions",
+     "note": "Episode 11",
+     "poster": "/842QH0JXJixa6GKeL5AyVbbIhrI.jpg",
+     "wide": true
+    },
+    {
+     "id": "e86566",
+     "name": "The One with Chandler's Work Laugh",
+     "note": "Episode 12",
+     "poster": "/6NlO0o3YwcrC22ODfSJJlMq37r5.jpg",
+     "wide": true
+    },
+    {
+     "id": "e86721",
+     "name": "The One Where Everybody Finds Out",
+     "note": "Episode 14",
+     "poster": "/widPOemNRxvcAnV5QthXouKyTK.jpg",
+     "wide": true
+    },
+    {
+     "id": "e86727",
+     "name": "The One with the Cop",
+     "note": "Episode 16",
+     "poster": "/qDSmE7EeiiWQkVPMTOi7XqtkLsk.jpg",
+     "wide": true
+    },
+    {
+     "id": "e86574",
+     "name": "The One with Rachel's Inadvertent Kiss",
+     "note": "Episode 17",
+     "poster": "/sPCW94qruOX0aRPuj5Uy8vlJKSJ.jpg",
+     "wide": true
+    },
+    {
+     "id": "e86620",
+     "name": "The One in Vegas",
+     "note": "Episode 23",
+     "poster": "/jB39sjCHdWGoyHOkFdbM9AN1fLK.jpg",
+     "wide": true
+    }
+   ]
+  },
+  {
+   "id": "stargate-sg-1-season-1-episodes",
+   "cat": "TV",
+   "title": "Stargate SG-1 season 1 episodes",
+   "items": [
+    {
+     "id": "e336043",
+     "name": "Children of the Gods (1)",
+     "note": "Episode 1",
+     "poster": "/jjJoOsD0RM46kzbBs6nVHREj3yH.jpg",
+     "wide": true
+    },
+    {
+     "id": "e336044",
+     "name": "The Enemy Within",
+     "note": "Episode 3",
+     "poster": "/t5Kg93QzxR8CldKdwoj11D554yU.jpg",
+     "wide": true
+    },
+    {
+     "id": "e336046",
+     "name": "Emancipation",
+     "note": "Episode 4",
+     "poster": "/rbvs2Gw6et2qzAIwq5OLpWV5JO6.jpg",
+     "wide": true
+    },
+    {
+     "id": "e336045",
+     "name": "The Broca Divide",
+     "note": "Episode 5",
+     "poster": "/zSX1pMwn6JGxEeOY7VvL4xhZUaA.jpg",
+     "wide": true
+    },
+    {
+     "id": "e336047",
+     "name": "The First Commandment",
+     "note": "Episode 6",
+     "poster": "/y5VkbscsvghuutICqJeGMkMzd3H.jpg",
+     "wide": true
+    },
+    {
+     "id": "e336048",
+     "name": "Cold Lazarus",
+     "note": "Episode 7",
+     "poster": "/jHxNmLLpziKN8lWP4tXCkmGNgo1.jpg",
+     "wide": true
+    },
+    {
+     "id": "e336049",
+     "name": "The Nox",
+     "note": "Episode 8",
+     "poster": "/qHgjTcA8smI6NVLnycMsLuBYXCP.jpg",
+     "wide": true
+    },
+    {
+     "id": "e336050",
+     "name": "Brief Candle",
+     "note": "Episode 9",
+     "poster": "/3qK3pZYEaeJ4KIchbOPvALQytyt.jpg",
+     "wide": true
+    },
+    {
+     "id": "e336051",
+     "name": "Thor's Hammer",
+     "note": "Episode 10",
+     "poster": "/sMCNB4FF3C0P44UfPxFmbu4xD8M.jpg",
+     "wide": true
+    },
+    {
+     "id": "e336052",
+     "name": "The Torment of Tantalus",
+     "note": "Episode 11",
+     "poster": "/3aGtvUHO4Hu3olrV4Ag9Rr2lJWl.jpg",
+     "wide": true
+    },
+    {
+     "id": "e336042",
+     "name": "Enigma",
+     "note": "Episode 17",
+     "poster": "/vnru5BxcpklCvYqXlnILdDAPvuI.jpg",
+     "wide": true
+    },
+    {
+     "id": "e336055",
+     "name": "Solitudes",
+     "note": "Episode 18",
+     "poster": "/iHT9OH0rkPPlnXvU8o3Y3oBAUfN.jpg",
+     "wide": true
     }
    ]
   }
