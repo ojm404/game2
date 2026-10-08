@@ -8,20 +8,23 @@ const fs = require("fs");
 const DEFS = [
   { type: "actor",      name: "Leonardo Dicaprio" },
   { type: "actor",      name: "Nicolas Cage" },
-    { type: "director",      name: "James Cameron" },
-  { type: "director",      name: "Ridley Scott" },
+  { type: "director",   name: "James Cameron" },
+  { type: "director",   name: "Ridley Scott" },
   { type: "director",   name: "Christopher Nolan" },
   { type: "director",   name: "Steven Spielberg" },
   { type: "collection", name: "Harry Potter" },
   { type: "collection", name: "Mission: Impossible" },
+  { type: "collection", name: "Star Trek" },
   { type: "year",       year: 1999 },
   { type: "year",       year: 2001 },
-  { type: "tv",       name: "Friends" },
-  { type: "tv",       name: "Stargate SG-1" },
-  { type: "collection",  name: "Star Trek" } ,
-
+  // TV, two ways to play: "tv" ranks a show's seasons, "episodes" ranks the episodes inside one season.
+  { type: "tv",         name: "Friends" },
+  { type: "tv",         name: "Stargate SG-1" },
+  { type: "episodes",   name: "Friends", season: 5 },
+  { type: "episodes",   name: "Stargate SG-1", season: 1 }
 ];
 const MAX_ITEMS = 12;        // items per list
+const MAX_EPISODES = 12;    // long seasons are trimmed to their most-voted episodes
 const MIN_ITEMS = 5;         // skip lists that come out shorter than this
 const MIN_VOTES = 300;       // drops obscure titles
 const EXCLUDE_MARVEL = true; // set false to allow Marvel films
@@ -74,27 +77,29 @@ async function findPerson(name) {
   return r.results[0];
 }
 
+const CATS = { people: "Actors & directors", franchise: "Franchises", year: "Movies by year", tv: "TV" };
+
 const builders = {
   async actor(def) {
     const p = await findPerson(def.name);
     const c = await tmdb(`/person/${p.id}/movie_credits`);
     const leads = c.cast.filter(m => m.order !== undefined && m.order < 8 && !/uncredited|voice|self/i.test(m.character || ""));
-    return { title: `${p.name} movies`, items: await pickMovies(leads) };
+    return { cat: CATS.people, title: `${p.name} movies`, items: await pickMovies(leads) };
   },
   async director(def) {
     const p = await findPerson(def.name);
     const c = await tmdb(`/person/${p.id}/movie_credits`);
-    return { title: `Films directed by ${p.name}`, items: await pickMovies(c.crew.filter(m => m.job === "Director")) };
+    return { cat: CATS.people, title: `Films directed by ${p.name}`, items: await pickMovies(c.crew.filter(m => m.job === "Director")) };
   },
   async collection(def) {
     const r = await tmdb("/search/collection", { query: def.name });
     if (!r.results.length) throw new Error("No collection found for " + def.name);
     const c = await tmdb(`/collection/${r.results[0].id}`);
-    return { title: c.name.replace(/ Collection$/, "") + " films", items: await pickMovies(c.parts, { minVotes: 0 }) };
+    return { cat: CATS.franchise, title: c.name.replace(/ Collection$/, "") + " films", items: await pickMovies(c.parts, { minVotes: 0 }) };
   },
   async year(def) {
     const pages = await Promise.all([1, 2].map(page => tmdb("/discover/movie", { primary_release_year: def.year, sort_by: "vote_count.desc", page })));
-    return { title: `Biggest movies of ${def.year}`, items: await pickMovies(pages.flatMap(p => p.results)) };
+    return { cat: CATS.year, title: `Biggest movies of ${def.year}`, items: await pickMovies(pages.flatMap(p => p.results)) };
   },
   async tv(def) {
     const r = await tmdb("/search/tv", { query: def.name });
@@ -104,7 +109,20 @@ const builders = {
       .filter(s => s.season_number > 0 && s.air_date && s.air_date <= today)
       .slice(0, 16)
       .map(s => ({ id: "s" + s.id, name: s.name, note: year(s.air_date), poster: s.poster_path || show.poster_path || null }));
-    return { title: `${show.name} seasons`, items };
+    return { cat: CATS.tv, title: `${show.name} seasons`, items };
+  },
+  async episodes(def) {
+    const r = await tmdb("/search/tv", { query: def.name });
+    if (!r.results.length) throw new Error("No show found for " + def.name);
+    const show = r.results[0];
+    const season = await tmdb(`/tv/${show.id}/season/${def.season}`);
+    const items = season.episodes
+      .filter(e => e.air_date && e.air_date <= today)
+      .sort((a, b) => b.vote_count - a.vote_count)
+      .slice(0, MAX_EPISODES)
+      .sort((a, b) => a.episode_number - b.episode_number)
+      .map(e => ({ id: "e" + e.id, name: e.name, note: "Episode " + e.episode_number, poster: e.still_path || null, wide: true }));
+    return { cat: CATS.tv, title: `${show.name} season ${def.season} episodes`, items };
   }
 };
 
@@ -117,7 +135,7 @@ const builders = {
       lists.push({ id: slug(list.title), ...list });
       console.log(`${list.title}: ${list.items.length} items`);
     } catch (e) {
-      console.warn(`Skipped ${def.type} ${def.name || def.year}: ${e.message}`);
+      console.warn(`Skipped ${def.type} ${def.name || def.year}${def.season ? " season " + def.season : ""}: ${e.message}`);
     }
   }
   if (!lists.length) { console.error("No lists built; lists.json left unchanged."); process.exit(1); }
