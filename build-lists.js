@@ -8,20 +8,34 @@ const fs = require("fs");
 const DEFS = [
   { type: "actor",      name: "Leonardo Dicaprio" },
   { type: "actor",      name: "Nicolas Cage" },
+  { type: "actor",      name: "Bruce Willis" },
+  { type: "actor",      name: "Matt Damon" },
   { type: "director",   name: "James Cameron" },
   { type: "director",   name: "Ridley Scott" },
   { type: "director",   name: "Christopher Nolan" },
   { type: "director",   name: "Steven Spielberg" },
+  { type: "director",   name: "Kevin Smith" },
   { type: "collection", name: "Harry Potter" },
   { type: "collection", name: "Mission: Impossible" },
   { type: "collection", name: "Star Trek" },
+  { type: "genre",      name: "Science Fiction" },
+  { type: "genre",      name: "Horror" },
+  { type: "genre",      name: "Comedy" },
+  { type: "keyword",    name: "musical", title: "Biggest musical movies" },
+  { type: "year",       year: 1997 },
   { type: "year",       year: 1999 },
   { type: "year",       year: 2001 },
+  { type: "year",       year: 2005 },
+  { type: "year",       year: 2010 },
+  { type: "year",       year: 2015 },
   // TV, two ways to play: "tv" ranks a show's seasons, "episodes" ranks the episodes inside one season.
   { type: "tv",         name: "Friends" },
   { type: "tv",         name: "Stargate SG-1" },
-  { type: "episodes",   name: "Friends", season: 5 },
-  { type: "episodes",   name: "Stargate SG-1", season: 1 }
+  { type: "tv",         name: "American Horror Story" },
+  { type: "tvgenre",    name: "Sci-Fi & Fantasy", title: "Hit sci-fi TV shows" },
+  // seasons can be "all", one number (season: 5), or a few (seasons: [1, 2, 3]). Each season becomes its own list.
+  { type: "episodes",   name: "Friends", seasons: "all" },
+  { type: "episodes",   name: "Stargate SG-1", seasons: "all" }
 ];
 const MAX_ITEMS = 15;        // items per list
 const MAX_EPISODES = 27;    // long seasons are trimmed to their most-voted episodes
@@ -77,7 +91,19 @@ async function findPerson(name) {
   return r.results[0];
 }
 
-const CATS = { people: "Actors & directors", franchise: "Franchises", year: "Movies by year", tv: "TV" };
+async function findShow(name) {
+  const r = await tmdb("/search/tv", { query: name });
+  if (!r.results.length) throw new Error("No show found for " + name);
+  return r.results.find(s => s.name.toLowerCase() === name.toLowerCase()) || r.results[0];
+}
+
+async function isMarvelShow(id) {
+  const d = await tmdb(`/tv/${id}`, { append_to_response: "keywords" });
+  const names = [...(d.production_companies || []), ...((d.keywords && d.keywords.results) || [])].map(x => x.name.toLowerCase());
+  return names.some(n => n.includes("marvel"));
+}
+
+const CATS = { people: "Actors & directors", franchise: "Franchises", genre: "Genres", year: "Movies by year", tv: "TV" };
 
 const builders = {
   async actor(def) {
@@ -101,10 +127,15 @@ const builders = {
     const pages = await Promise.all([1, 2].map(page => tmdb("/discover/movie", { primary_release_year: def.year, sort_by: "vote_count.desc", page })));
     return { cat: CATS.year, title: `Biggest movies of ${def.year}`, items: await pickMovies(pages.flatMap(p => p.results)) };
   },
+  async genre(def) {
+    const all = (await tmdb("/genre/movie/list")).genres;
+    const g = all.find(x => x.name.toLowerCase() === def.name.toLowerCase());
+    if (!g) throw new Error(`No genre called "${def.name}". Options: ${all.map(x => x.name).join(", ")}`);
+    const pages = await Promise.all([1, 2, 3].map(page => tmdb("/discover/movie", { with_genres: g.id, sort_by: "vote_count.desc", page })));
+    return { cat: CATS.genre, title: `Biggest ${g.name.toLowerCase()} movies`, items: await pickMovies(pages.flatMap(p => p.results)) };
+  },
   async tv(def) {
-    const r = await tmdb("/search/tv", { query: def.name });
-    if (!r.results.length) throw new Error("No show found for " + def.name);
-    const show = await tmdb(`/tv/${r.results[0].id}`);
+    const show = await tmdb(`/tv/${(await findShow(def.name)).id}`);
     const items = show.seasons
       .filter(s => s.season_number > 0 && s.air_date && s.air_date <= today)
       .slice(0, 16)
@@ -112,17 +143,47 @@ const builders = {
     return { cat: CATS.tv, title: `${show.name} seasons`, items };
   },
   async episodes(def) {
-    const r = await tmdb("/search/tv", { query: def.name });
-    if (!r.results.length) throw new Error("No show found for " + def.name);
-    const show = r.results[0];
-    const season = await tmdb(`/tv/${show.id}/season/${def.season}`);
-    const items = season.episodes
-      .filter(e => e.air_date && e.air_date <= today)
-      .sort((a, b) => b.vote_count - a.vote_count)
-      .slice(0, MAX_EPISODES)
-      .sort((a, b) => a.episode_number - b.episode_number)
-      .map(e => ({ id: "e" + e.id, name: e.name, note: "Episode " + e.episode_number, poster: e.still_path || null, wide: true }));
-    return { cat: CATS.tv, title: `${show.name} season ${def.season} episodes`, items };
+    const show = await tmdb(`/tv/${(await findShow(def.name)).id}`);
+    const want = def.seasons === "all"
+      ? show.seasons.filter(s => s.season_number > 0 && s.air_date && s.air_date <= today).map(s => s.season_number)
+      : [].concat(def.seasons || def.season);
+    const out = [];
+    for (const n of want) {
+      const season = await tmdb(`/tv/${show.id}/season/${n}`);
+      const items = season.episodes
+        .filter(e => e.air_date && e.air_date <= today)
+        .sort((a, b) => b.vote_count - a.vote_count)
+        .slice(0, MAX_EPISODES)
+        .sort((a, b) => a.episode_number - b.episode_number)
+        .map(e => ({ id: "e" + e.id, name: e.name, note: "Episode " + e.episode_number, poster: e.still_path || null, wide: true }));
+      out.push({ cat: CATS.tv, title: `${show.name} season ${n} episodes`, items });
+    }
+    return out;
+  },
+  // Movies tagged with a TMDB keyword, e.g. "musical", "time travel", "heist".
+  async keyword(def) {
+    const r = await tmdb("/search/keyword", { query: def.name });
+    const k = r.results.find(x => x.name.toLowerCase() === def.name.toLowerCase()) || r.results[0];
+    if (!k) throw new Error(`No keyword called "${def.name}"`);
+    const pages = await Promise.all([1, 2, 3].map(page => tmdb("/discover/movie", { with_keywords: k.id, sort_by: "vote_count.desc", page })));
+    return { cat: CATS.genre, title: def.title || `Biggest ${k.name} movies`, items: await pickMovies(pages.flatMap(p => p.results)) };
+  },
+  // A list of TV shows (not seasons) from one TMDB TV genre.
+  async tvgenre(def) {
+    const all = (await tmdb("/genre/tv/list")).genres;
+    const g = all.find(x => x.name.toLowerCase() === def.name.toLowerCase());
+    if (!g) throw new Error(`No TV genre called "${def.name}". Options: ${all.map(x => x.name).join(", ")}`);
+    const pages = await Promise.all([1, 2].map(page => tmdb("/discover/tv", { with_genres: g.id, sort_by: "vote_count.desc", page })));
+    const out = [];
+    for (const s of pages.flatMap(p => p.results)) {
+      if (out.length >= MAX_ITEMS) break;
+      if (!s.first_air_date || s.first_air_date > today || out.some(x => x.id === s.id)) continue;
+      if (EXCLUDE_MARVEL && await isMarvelShow(s.id)) continue;
+      out.push(s);
+    }
+    const items = out.sort((a, b) => a.first_air_date.localeCompare(b.first_air_date))
+      .map(s => ({ id: "t" + s.id, name: s.name, note: year(s.first_air_date), poster: s.poster_path || null }));
+    return { cat: CATS.tv, title: def.title || `Biggest ${g.name} shows`, items };
   }
 };
 
@@ -130,10 +191,11 @@ const builders = {
   const lists = [];
   for (const def of DEFS) {
     try {
-      const list = await builders[def.type](def);
-      if (list.items.length < MIN_ITEMS) { console.warn(`Skipped "${list.title}": only ${list.items.length} items`); continue; }
-      lists.push({ id: slug(list.title), ...list });
-      console.log(`${list.title}: ${list.items.length} items`);
+      for (const list of [].concat(await builders[def.type](def))) {
+        if (list.items.length < MIN_ITEMS) { console.warn(`Skipped "${list.title}": only ${list.items.length} items`); continue; }
+        lists.push({ id: slug(list.title), ...list });
+        console.log(`${list.title}: ${list.items.length} items`);
+      }
     } catch (e) {
       console.warn(`Skipped ${def.type} ${def.name || def.year}${def.season ? " season " + def.season : ""}: ${e.message}`);
     }
