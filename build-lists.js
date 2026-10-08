@@ -7,6 +7,7 @@ const fs = require("fs");
 /* ======== EDIT THIS: the face-off lists you want ======== */
 const DEFS = [
   { type: "actor",      name: "Leonardo Dicaprio" },
+  { type: "actor",      name: "Nicolas Cage" },
     { type: "director",      name: "James Cameron" },
   { type: "director",      name: "Ridley Scott" },
   { type: "director",   name: "Christopher Nolan" },
@@ -14,7 +15,10 @@ const DEFS = [
   { type: "collection", name: "Harry Potter" },
   { type: "collection", name: "Mission: Impossible" },
   { type: "year",       year: 1999 },
-  {type: "year",       year: 2001 },
+  { type: "year",       year: 2001 },
+  { type: "tv",       name: "Friends" },
+  { type: "tv",       name: "Stargate SG-1" },
+  { type: "collection",  name: "Star Trek" } ,
 
 ];
 const MAX_ITEMS = 12;        // items per list
