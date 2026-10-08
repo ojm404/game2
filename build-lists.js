@@ -23,8 +23,8 @@ const DEFS = [
   { type: "episodes",   name: "Friends", season: 5 },
   { type: "episodes",   name: "Stargate SG-1", season: 1 }
 ];
-const MAX_ITEMS = 12;        // items per list
-const MAX_EPISODES = 12;    // long seasons are trimmed to their most-voted episodes
+const MAX_ITEMS = 15;        // items per list
+const MAX_EPISODES = 27;    // long seasons are trimmed to their most-voted episodes
 const MIN_ITEMS = 5;         // skip lists that come out shorter than this
 const MIN_VOTES = 300;       // drops obscure titles
 const EXCLUDE_MARVEL = true; // set false to allow Marvel films
