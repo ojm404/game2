@@ -1,4 +1,4 @@
-// Builds lists.json for Tier Battleship from TMDB.
+// Builds lists.json for OutRanked from TMDB (film and TV) and MusicBrainz (music).
 // Run locally:  TMDB_API_KEY=xxxx node build-lists.js   (Node 18+)
 // Works with either a TMDB v3 API key or a v4 read access token.
 
@@ -28,6 +28,45 @@ const DEFS = [
   { type: "year",       year: 2005 },
   { type: "year",       year: 2010 },
   { type: "year",       year: 2015 },
+  // Music (from MusicBrainz, no key needed).
+  //   "albums" ranks an artist's studio albums. Add songs: true to also build a song list for every one of those albums.
+  //   "tracks" ranks the songs on the albums you name.
+  //   Optional on albums: from / to years, e.g. { type: "albums", name: "Bob Dylan", from: 1962, to: 1976 }
+  { type: "albums",     name: "Taylor Swift", songs: true },
+  { type: "albums",     name: "Sleater-Kinney" },
+  { type: "albums",     name: "Metallica" },
+  { type: "tracks",     artist: "Lorde", albums: ["Pure Heroine", "Melodrama", "Virgin"] },
+  //   "curated" is a hand-picked list: MusicBrainz has no popularity data, so "top" lists are chosen here. Edit freely.
+  { type: "curated", title: "Top metal albums", short: "Metal", picks: [
+    ["Black Sabbath", "Paranoid"], ["Judas Priest", "British Steel"], ["Motörhead", "Ace of Spades"],
+    ["Iron Maiden", "The Number of the Beast"], ["Dio", "Holy Diver"], ["Metallica", "Master of Puppets"],
+    ["Slayer", "Reign in Blood"], ["Megadeth", "Rust in Peace"], ["Metallica", "Metallica"],
+    ["Pantera", "Vulgar Display of Power"], ["Tool", "Ænima"], ["Opeth", "Blackwater Park"],
+    ["System of a Down", "Toxicity"], ["Slipknot", "Iowa"], ["Mastodon", "Leviathan"] ] },
+  { type: "curated", title: "Top albums of the 1990s", short: "1990s", picks: [
+    ["Nirvana", "Nevermind"], ["Pearl Jam", "Ten"], ["Dr. Dre", "The Chronic"], ["R.E.M.", "Automatic for the People"],
+    ["The Smashing Pumpkins", "Siamese Dream"], ["Nas", "Illmatic"], ["Green Day", "Dookie"], ["Portishead", "Dummy"],
+    ["The Notorious B.I.G.", "Ready to Die"], ["Alanis Morissette", "Jagged Little Pill"],
+    ["Oasis", "(What's the Story) Morning Glory?"], ["Fugees", "The Score"], ["Beck", "Odelay"],
+    ["Radiohead", "OK Computer"], ["Lauryn Hill", "The Miseducation of Lauryn Hill"] ] },
+  { type: "curated", title: "Top albums of the 2000s", short: "2000s", picks: [
+    ["Radiohead", "Kid A"], ["OutKast", "Stankonia"], ["Eminem", "The Marshall Mathers LP"], ["Daft Punk", "Discovery"],
+    ["The Strokes", "Is This It"], ["Jay-Z", "The Blueprint"], ["Coldplay", "A Rush of Blood to the Head"],
+    ["The White Stripes", "Elephant"], ["Yeah Yeah Yeahs", "Fever to Tell"], ["Beyoncé", "Dangerously in Love"],
+    ["Kanye West", "The College Dropout"], ["Arcade Fire", "Funeral"], ["Green Day", "American Idiot"],
+    ["Amy Winehouse", "Back to Black"], ["LCD Soundsystem", "Sound of Silver"] ] },
+  { type: "curated", title: "Top albums of the 2010s", short: "2010s", picks: [
+    ["Kanye West", "My Beautiful Dark Twisted Fantasy"], ["Arcade Fire", "The Suburbs"], ["Adele", "21"],
+    ["Kendrick Lamar", "good kid, m.A.A.d city"], ["Daft Punk", "Random Access Memories"],
+    ["Vampire Weekend", "Modern Vampires of the City"], ["Taylor Swift", "1989"], ["Kendrick Lamar", "To Pimp a Butterfly"],
+    ["Tame Impala", "Currents"], ["Beyoncé", "Lemonade"], ["Frank Ocean", "Blonde"], ["Lorde", "Melodrama"],
+    ["SZA", "Ctrl"], ["Billie Eilish", "When We All Fall Asleep, Where Do We Go?"], ["Lana Del Rey", "Norman Fucking Rockwell!"] ] },
+  { type: "curated", title: "Canadian rock albums", short: "Canadian rock", picks: [
+    ["The Guess Who", "American Woman"], ["Neil Young", "Harvest"], ["Rush", "Moving Pictures"], ["Bryan Adams", "Reckless"],
+    ["Barenaked Ladies", "Gordon"], ["The Tragically Hip", "Fully Completely"], ["Alanis Morissette", "Jagged Little Pill"],
+    ["Our Lady Peace", "Clumsy"], ["Sum 41", "All Killer No Filler"], ["Nickelback", "Silver Side Up"],
+    ["Avril Lavigne", "Let Go"], ["Simple Plan", "No Pads, No Helmets...Just Balls"], ["Arcade Fire", "Funeral"],
+    ["Billy Talent", "Billy Talent II"], ["Metric", "Fantasies"] ] },
   // TV, two ways to play: "tv" ranks a show's seasons, "episodes" ranks the episodes inside one season.
   { type: "tv",         name: "Friends" },
   { type: "tv",         name: "Stargate SG-1" },
@@ -39,10 +78,14 @@ const DEFS = [
 ];
 const MAX_ITEMS = 15;        // items per list
 const MAX_EPISODES = 27;    // long seasons are trimmed to their most-voted episodes
+const MAX_ALBUMS = 20;      // albums per artist; use from / to on the entry to choose an era for bigger catalogues
 const MIN_ITEMS = 5;         // skip lists that come out shorter than this
 const MIN_VOTES = 300;       // drops obscure titles
 const EXCLUDE_MARVEL = true; // set false to allow Marvel films
 /* ========================================================= */
+
+// MusicBrainz asks every app to identify itself and to stay under one request per second.
+const MB_AGENT = "OutRanked/1.0 ( https://github.com/ojm404/game2 )";
 
 const KEY = process.env.TMDB_API_KEY;
 if (!KEY) { console.error("Set the TMDB_API_KEY environment variable."); process.exit(1); }
@@ -91,6 +134,51 @@ async function findPerson(name) {
   return r.results[0];
 }
 
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+async function mb(path, params = {}) {
+  await sleep(1100);
+  const url = new URL("https://musicbrainz.org/ws/2" + path);
+  Object.entries({ ...params, fmt: "json" }).forEach(([k, v]) => url.searchParams.set(k, v));
+  const res = await fetch(url, { headers: { "User-Agent": MB_AGENT, Accept: "application/json" } });
+  if (!res.ok) throw new Error(`MusicBrainz ${res.status} on ${path}`);
+  return res.json();
+}
+async function findArtist(name) {
+  const r = await mb("/artist", { query: `artist:"${name}"`, limit: 5 });
+  if (!r.artists || !r.artists.length) throw new Error("No artist found for " + name);
+  return r.artists.find(a => a.name.toLowerCase() === name.toLowerCase()) || r.artists[0];
+}
+// Returns the cover image address if the Cover Art Archive has one for this album, otherwise null.
+async function coverUrl(releaseGroupId) {
+  const url = `https://coverartarchive.org/release-group/${releaseGroupId}/front-250`;
+  try { const res = await fetch(url, { method: "HEAD", redirect: "manual" }); return res.status < 400 ? url : null; }
+  catch (e) { return null; }
+}
+
+// Finds an album (a MusicBrainz "release group") by artist and title.
+async function findAlbum(artist, album) {
+  const s = await mb("/release-group", { query: `releasegroup:"${album}" AND artist:"${artist}" AND primarytype:album`, limit: 10 });
+  const found = s["release-groups"] || [];
+  const plain = found.filter(x => !(x["secondary-types"] || []).length);
+  const pool = plain.length ? plain : found;
+  return pool.find(x => x.title.toLowerCase() === album.toLowerCase()) || pool[0] || null;
+}
+// Song list for one album, using its earliest official release so later bonus tracks are left out.
+async function trackList(g, artistName) {
+  const releases = [];
+  for (let offset = 0; offset < 300; offset += 100) {
+    const r = await mb("/release", { "release-group": g.id, status: "official", limit: 100, offset });
+    releases.push(...(r.releases || []));
+    if (offset + 100 >= (r["release-count"] || 0)) break;
+  }
+  const first = releases.sort((a, b) => (a.date || "9999").localeCompare(b.date || "9999"))[0];
+  if (!first) throw new Error(`No official release found for "${g.title}"`);
+  const full = await mb(`/release/${first.id}`, { inc: "recordings" });
+  const items = (full.media || []).flatMap(m => m.tracks || []).slice(0, MAX_EPISODES)
+    .map((t, i) => ({ id: "k" + t.id, name: t.title, note: "Track " + (i + 1) }));
+  return { cat: CATS.music, group: artistName, short: `${g.title} songs`, title: `${artistName}: ${g.title} songs`, items };
+}
+
 async function findShow(name) {
   const r = await tmdb("/search/tv", { query: name });
   if (!r.results.length) throw new Error("No show found for " + name);
@@ -103,7 +191,7 @@ async function isMarvelShow(id) {
   return names.some(n => n.includes("marvel"));
 }
 
-const CATS = { people: "Actors & directors", franchise: "Franchises", genre: "Genres", year: "Movies by year", tv: "TV" };
+const CATS = { music: "Music", people: "Actors & directors", franchise: "Franchises", genre: "Genres", year: "Movies by year", tv: "TV" };
 
 const builders = {
   async actor(def) {
@@ -160,6 +248,63 @@ const builders = {
     }
     return out;
   },
+  async albums(def) {
+    const artist = await findArtist(def.name);
+    const groups = [];
+    for (let offset = 0; offset < 500; offset += 100) {
+      const base = { artist: artist.id, type: "album", limit: 100, offset };
+      let r;
+      try { r = await mb("/release-group", { ...base, "release-group-status": "website-default" }); }
+      catch (e) { r = await mb("/release-group", base); }
+      groups.push(...(r["release-groups"] || []));
+      if (offset + 100 >= (r["release-group-count"] || 0)) break;
+    }
+    const seen = new Set();
+    let studio = groups
+      .filter(g => g["primary-type"] === "Album" && !(g["secondary-types"] || []).length)   // no live albums, compilations, soundtracks
+      .filter(g => g["first-release-date"] && g["first-release-date"] <= today)
+      .filter(g => (!def.from || year(g["first-release-date"]) >= String(def.from)) && (!def.to || year(g["first-release-date"]) <= String(def.to)))
+      .filter(g => !seen.has(g.title.toLowerCase()) && seen.add(g.title.toLowerCase()))
+      .sort((a, b) => a["first-release-date"].localeCompare(b["first-release-date"]));
+    if (studio.length > MAX_ALBUMS) {
+      console.warn(`${artist.name} has ${studio.length} studio albums; keeping the first ${MAX_ALBUMS}. Add from / to years to choose an era.`);
+      studio = studio.slice(0, MAX_ALBUMS);
+    }
+    const items = [];
+    for (const g of studio) items.push({ id: "a" + g.id, name: g.title, note: year(g["first-release-date"]), img: await coverUrl(g.id), sq: true });
+    const era = def.from || def.to ? ` (${def.from || ""}-${def.to || ""})` : "";
+    const out = [{ cat: CATS.music, group: artist.name, short: "Albums" + era, title: `${artist.name} albums${era}`, items }];
+    if (def.songs) for (const g of studio) {
+      try { out.push(await trackList(g, artist.name)); }
+      catch (e) { console.warn(`Skipped songs for ${g.title}: ${e.message}`); }
+    }
+    return out;
+  },
+  async tracks(def) {
+    const out = [];
+    for (const album of [].concat(def.albums || def.album)) {
+      const g = await findAlbum(def.artist, album);
+      if (!g) { console.warn(`Skipped ${def.artist} "${album}": album not found`); continue; }
+      const artistName = (g["artist-credit"] && g["artist-credit"][0] && g["artist-credit"][0].name) || def.artist;
+      out.push(await trackList(g, artistName));
+    }
+    return out;
+  },
+  // A hand-picked list of albums. Each pick is ["Artist", "Album"]; the year and cover are looked up.
+  async curated(def) {
+    const items = [];
+    for (const [artist, album] of def.picks) {
+      let g = null;
+      try { g = await findAlbum(artist, album); } catch (e) {}
+      if (!g) console.warn(`  no MusicBrainz match for ${artist} - ${album}; added without a cover`);
+      items.push({
+        id: "c" + slug(artist + " " + album), name: album,
+        note: artist + (g && g["first-release-date"] ? ", " + year(g["first-release-date"]) : ""),
+        img: g ? await coverUrl(g.id) : null, sq: true
+      });
+    }
+    return { cat: CATS.music, group: def.group || "Top albums", short: def.short || def.title, title: def.title, items };
+  },
   // Movies tagged with a TMDB keyword, e.g. "musical", "time travel", "heist".
   async keyword(def) {
     const r = await tmdb("/search/keyword", { query: def.name });
@@ -197,7 +342,7 @@ const builders = {
         console.log(`${list.title}: ${list.items.length} items`);
       }
     } catch (e) {
-      console.warn(`Skipped ${def.type} ${def.name || def.year}${def.season ? " season " + def.season : ""}: ${e.message}`);
+      console.warn(`Skipped ${def.type} ${def.name || def.title || def.artist || def.year}${def.season ? " season " + def.season : ""}: ${e.message}`);
     }
   }
   if (!lists.length) { console.error("No lists built; lists.json left unchanged."); process.exit(1); }
