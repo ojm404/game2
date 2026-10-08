@@ -1,0 +1,647 @@
+{
+ "generated": "2026-10-08",
+ "lists": [
+  {
+   "id": "leonardo-dicaprio-movies",
+   "title": "Leonardo DiCaprio movies",
+   "items": [
+    {
+     "id": "m597",
+     "name": "Titanic",
+     "note": "1997",
+     "poster": "/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg"
+    },
+    {
+     "id": "m640",
+     "name": "Catch Me If You Can",
+     "note": "2002",
+     "poster": "/ctjEj2xM32OvBXCq8zAdK3ZrsAj.jpg"
+    },
+    {
+     "id": "m1422",
+     "name": "The Departed",
+     "note": "2006",
+     "poster": "/nT97ifVT2J1yMQmeq20Qblg61T.jpg"
+    },
+    {
+     "id": "m1372",
+     "name": "Blood Diamond",
+     "note": "2006",
+     "poster": "/sYAUuiWpoXGKHxUfHyjTj7Apj2h.jpg"
+    },
+    {
+     "id": "m11324",
+     "name": "Shutter Island",
+     "note": "2010",
+     "poster": "/nrmXQ0zcZUL8jFLrakWc90IR8z9.jpg"
+    },
+    {
+     "id": "m27205",
+     "name": "Inception",
+     "note": "2010",
+     "poster": "/xlaY2zyzMfkhk0HSC5VUwzoZPU1.jpg"
+    },
+    {
+     "id": "m68718",
+     "name": "Django Unchained",
+     "note": "2012",
+     "poster": "/7oWY8VDWW7thTzWh3OKYRkWUlD5.jpg"
+    },
+    {
+     "id": "m64682",
+     "name": "The Great Gatsby",
+     "note": "2013",
+     "poster": "/nimh1rrDDLhgpG8XAYoUZXHYwb6.jpg"
+    },
+    {
+     "id": "m106646",
+     "name": "The Wolf of Wall Street",
+     "note": "2013",
+     "poster": "/kW9LmvYHAaS9iA0tHmZVq8hQYoq.jpg"
+    },
+    {
+     "id": "m281957",
+     "name": "The Revenant",
+     "note": "2015",
+     "poster": "/ji3ecJphATlVgWNY0B0RVXZizdf.jpg"
+    },
+    {
+     "id": "m466272",
+     "name": "Once Upon a Time... in Hollywood",
+     "note": "2019",
+     "poster": "/8j58iEBw9pOXFD2L0nt0ZXeHviB.jpg"
+    },
+    {
+     "id": "m646380",
+     "name": "Don't Look Up",
+     "note": "2021",
+     "poster": "/th4E1yqsE8DGpAseLiUrI60Hf8V.jpg"
+    }
+   ]
+  },
+  {
+   "id": "films-directed-by-james-cameron",
+   "title": "Films directed by James Cameron",
+   "items": [
+    {
+     "id": "m31646",
+     "name": "Piranha II: The Spawning",
+     "note": "1982",
+     "poster": "/gOPhCh4Ko5crlsyQewPsq1sYLiA.jpg"
+    },
+    {
+     "id": "m218",
+     "name": "The Terminator",
+     "note": "1984",
+     "poster": "/qvktm0BHcnmDpul4Hz01GIazWPr.jpg"
+    },
+    {
+     "id": "m679",
+     "name": "Aliens",
+     "note": "1986",
+     "poster": "/r1x5JGpyqZU8PYhbs4UcrO1Xb6x.jpg"
+    },
+    {
+     "id": "m2756",
+     "name": "The Abyss",
+     "note": "1989",
+     "poster": "/2dCit3XAtv9KWCJvRKdPkJ0FAkH.jpg"
+    },
+    {
+     "id": "m280",
+     "name": "Terminator 2: Judgment Day",
+     "note": "1991",
+     "poster": "/jFTVD4XoWQTcg7wdyJKa8PEds5q.jpg"
+    },
+    {
+     "id": "m36955",
+     "name": "True Lies",
+     "note": "1994",
+     "poster": "/pqdvCBDThAOjlA0XBzbNm7GvwpU.jpg"
+    },
+    {
+     "id": "m597",
+     "name": "Titanic",
+     "note": "1997",
+     "poster": "/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg"
+    },
+    {
+     "id": "m19995",
+     "name": "Avatar",
+     "note": "2009",
+     "poster": "/gKY6q7SjCkAU6FqvqWybDYgUKIF.jpg"
+    },
+    {
+     "id": "m76600",
+     "name": "Avatar: The Way of Water",
+     "note": "2022",
+     "poster": "/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg"
+    },
+    {
+     "id": "m83533",
+     "name": "Avatar: Fire and Ash",
+     "note": "2025",
+     "poster": "/bRBeSHfGHwkEpImlhxPmOcUsaeg.jpg"
+    }
+   ]
+  },
+  {
+   "id": "films-directed-by-ridley-scott",
+   "title": "Films directed by Ridley Scott",
+   "items": [
+    {
+     "id": "m348",
+     "name": "Alien",
+     "note": "1979",
+     "poster": "/vfrQk5IPloGg1v9Rzbh2Eg3VGyM.jpg"
+    },
+    {
+     "id": "m78",
+     "name": "Blade Runner",
+     "note": "1982",
+     "poster": "/63N9uy8nd9j7Eog2axPQ8lbr3Wj.jpg"
+    },
+    {
+     "id": "m98",
+     "name": "Gladiator",
+     "note": "2000",
+     "poster": "/aDb548BOkFfI4nFm0kx8A3Ezh7H.jpg"
+    },
+    {
+     "id": "m9740",
+     "name": "Hannibal",
+     "note": "2001",
+     "poster": "/v5wAZwRqpGWmyAaaJ8BBHYuNXnj.jpg"
+    },
+    {
+     "id": "m855",
+     "name": "Black Hawk Down",
+     "note": "2001",
+     "poster": "/7fU5dSqKRL4XHeEUz62rCKBfYok.jpg"
+    },
+    {
+     "id": "m1495",
+     "name": "Kingdom of Heaven",
+     "note": "2005",
+     "poster": "/2NaFdWy9hkM35vZB1hkqsnTcms8.jpg"
+    },
+    {
+     "id": "m4982",
+     "name": "American Gangster",
+     "note": "2007",
+     "poster": "/sX9idXDqRUxE5ffww3n3RV5gL55.jpg"
+    },
+    {
+     "id": "m20662",
+     "name": "Robin Hood",
+     "note": "2010",
+     "poster": "/9NS5QGOfck24yL3bZqWeW06PgPC.jpg"
+    },
+    {
+     "id": "m70981",
+     "name": "Prometheus",
+     "note": "2012",
+     "poster": "/qsYQflQhOuhDpQ0W2aOcwqgDAeI.jpg"
+    },
+    {
+     "id": "m147441",
+     "name": "Exodus: Gods and Kings",
+     "note": "2014",
+     "poster": "/uaDj37JtvLan9tihxZ18e6qL33b.jpg"
+    },
+    {
+     "id": "m286217",
+     "name": "The Martian",
+     "note": "2015",
+     "poster": "/5BHuvQ6p9kfc091Z8RiFNhCwL4b.jpg"
+    },
+    {
+     "id": "m126889",
+     "name": "Alien: Covenant",
+     "note": "2017",
+     "poster": "/zecMELPbU5YMQpC81Z8ImaaXuf9.jpg"
+    }
+   ]
+  },
+  {
+   "id": "films-directed-by-christopher-nolan",
+   "title": "Films directed by Christopher Nolan",
+   "items": [
+    {
+     "id": "m77",
+     "name": "Memento",
+     "note": "2000",
+     "poster": "/nzlv62aC0octS5AklAiWpXLX9Z0.jpg"
+    },
+    {
+     "id": "m320",
+     "name": "Insomnia",
+     "note": "2002",
+     "poster": "/riVXh3EimGO0y5dgQxEWPRy5Itg.jpg"
+    },
+    {
+     "id": "m272",
+     "name": "Batman Begins",
+     "note": "2005",
+     "poster": "/sPX89Td70IDDjVr85jdSBb4rWGr.jpg"
+    },
+    {
+     "id": "m1124",
+     "name": "The Prestige",
+     "note": "2006",
+     "poster": "/Ag2B2KHKQPukjH7WutmgnnSNurZ.jpg"
+    },
+    {
+     "id": "m155",
+     "name": "The Dark Knight",
+     "note": "2008",
+     "poster": "/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
+    },
+    {
+     "id": "m27205",
+     "name": "Inception",
+     "note": "2010",
+     "poster": "/xlaY2zyzMfkhk0HSC5VUwzoZPU1.jpg"
+    },
+    {
+     "id": "m49026",
+     "name": "The Dark Knight Rises",
+     "note": "2012",
+     "poster": "/hr0L2aueqlP2BYUblTTjmtn0hw4.jpg"
+    },
+    {
+     "id": "m157336",
+     "name": "Interstellar",
+     "note": "2014",
+     "poster": "/yQvGrMoipbRoddT0ZR8tPoR7NfX.jpg"
+    },
+    {
+     "id": "m374720",
+     "name": "Dunkirk",
+     "note": "2017",
+     "poster": "/b4Oe15CGLL61Ped0RAS9JpqdmCt.jpg"
+    },
+    {
+     "id": "m577922",
+     "name": "Tenet",
+     "note": "2020",
+     "poster": "/aCIFMriQh8rvhxpN1IWGgvH0Tlg.jpg"
+    },
+    {
+     "id": "m872585",
+     "name": "Oppenheimer",
+     "note": "2023",
+     "poster": "/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg"
+    },
+    {
+     "id": "m1368337",
+     "name": "The Odyssey",
+     "note": "2026",
+     "poster": "/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg"
+    }
+   ]
+  },
+  {
+   "id": "films-directed-by-steven-spielberg",
+   "title": "Films directed by Steven Spielberg",
+   "items": [
+    {
+     "id": "m578",
+     "name": "Jaws",
+     "note": "1975",
+     "poster": "/lxM6kqilAdpdhqUl2biYp5frUxE.jpg"
+    },
+    {
+     "id": "m85",
+     "name": "Raiders of the Lost Ark",
+     "note": "1981",
+     "poster": "/ceG9VzoRAVGwivFU403Wc3AHRys.jpg"
+    },
+    {
+     "id": "m601",
+     "name": "E.T. the Extra-Terrestrial",
+     "note": "1982",
+     "poster": "/an0nD6uq6byfxXCfk6lQBzdL2J1.jpg"
+    },
+    {
+     "id": "m87",
+     "name": "Indiana Jones and the Temple of Doom",
+     "note": "1984",
+     "poster": "/gpdVNUaa4LhRMLfJOPj1AZdhAZ3.jpg"
+    },
+    {
+     "id": "m89",
+     "name": "Indiana Jones and the Last Crusade",
+     "note": "1989",
+     "poster": "/sizg1AU8f8JDZX4QIgE4pjUMBvx.jpg"
+    },
+    {
+     "id": "m329",
+     "name": "Jurassic Park",
+     "note": "1993",
+     "poster": "/d9mtMGQDLANKieb9PbD3yK7xxzo.jpg"
+    },
+    {
+     "id": "m424",
+     "name": "Schindler's List",
+     "note": "1993",
+     "poster": "/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg"
+    },
+    {
+     "id": "m857",
+     "name": "Saving Private Ryan",
+     "note": "1998",
+     "poster": "/uqx37cS8cpHg8U35f9U5IBlrCV3.jpg"
+    },
+    {
+     "id": "m180",
+     "name": "Minority Report",
+     "note": "2002",
+     "poster": "/qtgFcnwh9dAFLocsDk2ySDVS8UF.jpg"
+    },
+    {
+     "id": "m640",
+     "name": "Catch Me If You Can",
+     "note": "2002",
+     "poster": "/ctjEj2xM32OvBXCq8zAdK3ZrsAj.jpg"
+    },
+    {
+     "id": "m74",
+     "name": "War of the Worlds",
+     "note": "2005",
+     "poster": "/6Biy7R9LfumYshur3YKhpj56MpB.jpg"
+    },
+    {
+     "id": "m333339",
+     "name": "Ready Player One",
+     "note": "2018",
+     "poster": "/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg"
+    }
+   ]
+  },
+  {
+   "id": "harry-potter-films",
+   "title": "Harry Potter films",
+   "items": [
+    {
+     "id": "m671",
+     "name": "Harry Potter and the Philosopher's Stone",
+     "note": "2001",
+     "poster": "/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg"
+    },
+    {
+     "id": "m672",
+     "name": "Harry Potter and the Chamber of Secrets",
+     "note": "2002",
+     "poster": "/sdEOH0992YZ0QSxgXNIGLq1ToUi.jpg"
+    },
+    {
+     "id": "m673",
+     "name": "Harry Potter and the Prisoner of Azkaban",
+     "note": "2004",
+     "poster": "/aWxwnYoe8p2d2fcxOqtvAtJ72Rw.jpg"
+    },
+    {
+     "id": "m674",
+     "name": "Harry Potter and the Goblet of Fire",
+     "note": "2005",
+     "poster": "/fECBtHlr0RB3foNHDiCBXeg9Bv9.jpg"
+    },
+    {
+     "id": "m675",
+     "name": "Harry Potter and the Order of the Phoenix",
+     "note": "2007",
+     "poster": "/5aOyriWkPec0zUDxmHFP9qMmBaj.jpg"
+    },
+    {
+     "id": "m767",
+     "name": "Harry Potter and the Half-Blood Prince",
+     "note": "2009",
+     "poster": "/z7uo9zmQdQwU5ZJHFpv2Upl30i1.jpg"
+    },
+    {
+     "id": "m12444",
+     "name": "Harry Potter and the Deathly Hallows: Part 1",
+     "note": "2010",
+     "poster": "/iGoXIpQb7Pot00EEdwpwPajheZ5.jpg"
+    },
+    {
+     "id": "m12445",
+     "name": "Harry Potter and the Deathly Hallows: Part 2",
+     "note": "2011",
+     "poster": "/c54HpQmuwXjHq2C9wmoACjxoom3.jpg"
+    }
+   ]
+  },
+  {
+   "id": "mission-impossible-films",
+   "title": "Mission: Impossible films",
+   "items": [
+    {
+     "id": "m954",
+     "name": "Mission: Impossible",
+     "note": "1996",
+     "poster": "/l5uxY5m5OInWpcExIpKG6AR3rgL.jpg"
+    },
+    {
+     "id": "m955",
+     "name": "Mission: Impossible II",
+     "note": "2000",
+     "poster": "/hfnrual76gPeNFduhD4xzHWpfTw.jpg"
+    },
+    {
+     "id": "m956",
+     "name": "Mission: Impossible III",
+     "note": "2006",
+     "poster": "/vKGYCpmQyV9uHybWDzXuII8Los5.jpg"
+    },
+    {
+     "id": "m56292",
+     "name": "Mission: Impossible - Ghost Protocol",
+     "note": "2011",
+     "poster": "/eRZTGx7GsiKqPch96k27LK005ZL.jpg"
+    },
+    {
+     "id": "m177677",
+     "name": "Mission: Impossible - Rogue Nation",
+     "note": "2015",
+     "poster": "/fRJLXQBHK2wyznK5yZbO7vmsuVK.jpg"
+    },
+    {
+     "id": "m353081",
+     "name": "Mission: Impossible - Fallout",
+     "note": "2018",
+     "poster": "/AkJQpZp9WoNdj7pLYSj1L0RcMMN.jpg"
+    },
+    {
+     "id": "m575264",
+     "name": "Mission: Impossible - Dead Reckoning Part One",
+     "note": "2023",
+     "poster": "/NNxYkU70HPurnNCSiCjYAmacwm.jpg"
+    },
+    {
+     "id": "m575265",
+     "name": "Mission: Impossible - The Final Reckoning",
+     "note": "2025",
+     "poster": "/iKPsC9EFUafRP9SrUznI61getVP.jpg"
+    }
+   ]
+  },
+  {
+   "id": "biggest-movies-of-1999",
+   "title": "Biggest movies of 1999",
+   "items": [
+    {
+     "id": "m4951",
+     "name": "10 Things I Hate About You",
+     "note": "1999",
+     "poster": "/ujERk3aKABXU3NDXOAxEQYTHe9A.jpg"
+    },
+    {
+     "id": "m603",
+     "name": "The Matrix",
+     "note": "1999",
+     "poster": "/dXNAPwY7VrqMAo51EKhhCJfaGb5.jpg"
+    },
+    {
+     "id": "m564",
+     "name": "The Mummy",
+     "note": "1999",
+     "poster": "/yhIsVvcUm7QxzLfT6HW2wLf5ajY.jpg"
+    },
+    {
+     "id": "m1893",
+     "name": "Star Wars: Episode I - The Phantom Menace",
+     "note": "1999",
+     "poster": "/6wkfovpn7Eq8dYNKaG5PY3q2oq6.jpg"
+    },
+    {
+     "id": "m37135",
+     "name": "Tarzan",
+     "note": "1999",
+     "poster": "/bTvHlcqiOjGa3lFtbrTLTM3zasY.jpg"
+    },
+    {
+     "id": "m2105",
+     "name": "American Pie",
+     "note": "1999",
+     "poster": "/5P68by2Thn8wHAziyWGEw2O7hco.jpg"
+    },
+    {
+     "id": "m745",
+     "name": "The Sixth Sense",
+     "note": "1999",
+     "poster": "/vOyfUXNFSnaTk7Vk5AjpsKTUWsu.jpg"
+    },
+    {
+     "id": "m14",
+     "name": "American Beauty",
+     "note": "1999",
+     "poster": "/wby9315QzVKdW9BonAefg8jGTTb.jpg"
+    },
+    {
+     "id": "m550",
+     "name": "Fight Club",
+     "note": "1999",
+     "poster": "/jSziioSwPVrOy9Yow3XhWIBDjq1.jpg"
+    },
+    {
+     "id": "m863",
+     "name": "Toy Story 2",
+     "note": "1999",
+     "poster": "/4rbcp3ng8n1MKHjpeqW0L7Fnpzz.jpg"
+    },
+    {
+     "id": "m2668",
+     "name": "Sleepy Hollow",
+     "note": "1999",
+     "poster": "/1GuK965FLJxqUw9fd1pmvjbFAlv.jpg"
+    },
+    {
+     "id": "m497",
+     "name": "The Green Mile",
+     "note": "1999",
+     "poster": "/8VG8fDNiy50H4FedGwdSVUPoaJe.jpg"
+    }
+   ]
+  },
+  {
+   "id": "biggest-movies-of-2001",
+   "title": "Biggest movies of 2001",
+   "items": [
+    {
+     "id": "m141",
+     "name": "Donnie Darko",
+     "note": "2001",
+     "poster": "/j2AtZFsflxiluaNtajMTI0Avm8C.jpg"
+    },
+    {
+     "id": "m194",
+     "name": "Amélie",
+     "note": "2001",
+     "poster": "/nSxDa3M9aMvGVLoItzWTepQ5h5d.jpg"
+    },
+    {
+     "id": "m1734",
+     "name": "The Mummy Returns",
+     "note": "2001",
+     "poster": "/kdJsW7hcy1lrj7tdMPycTAQPAiR.jpg"
+    },
+    {
+     "id": "m808",
+     "name": "Shrek",
+     "note": "2001",
+     "poster": "/iB64vpL3dIObOtMZgX3RqdVdQDc.jpg"
+    },
+    {
+     "id": "m9799",
+     "name": "The Fast and the Furious",
+     "note": "2001",
+     "poster": "/gqY0ITBgT7A82poL9jv851qdnIb.jpg"
+    },
+    {
+     "id": "m331",
+     "name": "Jurassic Park III",
+     "note": "2001",
+     "poster": "/oQXj4NUfS3r3gHXtDOzcJgj1lLc.jpg"
+    },
+    {
+     "id": "m129",
+     "name": "Spirited Away",
+     "note": "2001",
+     "poster": "/jUo8cNmU400WtZiJss45HNXlQ2e.jpg"
+    },
+    {
+     "id": "m585",
+     "name": "Monsters, Inc.",
+     "note": "2001",
+     "poster": "/wFSpyMsp7H0ttERbxY7Trlv8xry.jpg"
+    },
+    {
+     "id": "m671",
+     "name": "Harry Potter and the Philosopher's Stone",
+     "note": "2001",
+     "poster": "/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg"
+    },
+    {
+     "id": "m161",
+     "name": "Ocean's Eleven",
+     "note": "2001",
+     "poster": "/hQQCdZrsHtZyR6NbKH2YyCqd2fR.jpg"
+    },
+    {
+     "id": "m453",
+     "name": "A Beautiful Mind",
+     "note": "2001",
+     "poster": "/rEIg5yJdNOt9fmX4P8gU9LeNoTQ.jpg"
+    },
+    {
+     "id": "m120",
+     "name": "The Lord of the Rings: The Fellowship of the Ring",
+     "note": "2001",
+     "poster": "/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg"
+    }
+   ]
+  }
+ ]
+}
