@@ -52,6 +52,22 @@ const DEFS = [
   { type: "albums",     name: "Sleater-Kinney" },
   { type: "albums",     name: "Metallica" },
   { type: "tracks",     artist: "Lorde", albums: ["Pure Heroine", "Melodrama", "Virgin"] },
+  //   "singles" ranks an artist's singles.
+  { type: "singles",    name: "Spice Girls" },
+  { type: "singles",    name: "One Direction" },
+  //   "names" is a hand-picked list of artists to rank. No lookups, so these tiles have no pictures.
+  { type: "names", title: "Top K-pop boy groups", short: "K-pop boy groups", picks: [
+    "BTS", "EXO", "SEVENTEEN", "Stray Kids", "TOMORROW X TOGETHER", "ENHYPEN", "NCT 127", "NCT DREAM", "ATEEZ",
+    "BIGBANG", "SHINee", "GOT7", "MONSTA X", "Super Junior", "TVXQ" ] },
+  { type: "names", title: "Top K-pop girl groups", short: "K-pop girl groups", picks: [
+    "BLACKPINK", "TWICE", "Girls' Generation", "Red Velvet", "NewJeans", "aespa", "IVE", "LE SSERAFIM", "ITZY",
+    "(G)I-DLE", "MAMAMOO", "2NE1", "Wonder Girls", "KARA", "BABYMONSTER" ] },
+  { type: "names", title: "Dream Academy contestants", short: "Dream Academy contestants", picks: [
+    ["Sophia", "KATSEYE"], ["Lara", "KATSEYE"], ["Yoonchae", "KATSEYE"], ["Megan", "KATSEYE"], ["Daniela", "KATSEYE"], ["Manon", "KATSEYE"],
+    "Emily", "Ezrela", "Marquise", "Samara", "Nayoung", "Ua", "Celeste", "Brooklyn", "Karlee", "Iliya", "Mei", "Hinari", "Adéla", "Lexie" ] },
+  { type: "names", title: "Top pop solo women", short: "Pop solo women", picks: [
+    "Madonna", "Whitney Houston", "Mariah Carey", "Britney Spears", "Beyoncé", "Rihanna", "Lady Gaga", "Katy Perry",
+    "Adele", "Taylor Swift", "Ariana Grande", "Dua Lipa", "Billie Eilish", "Olivia Rodrigo", "Sabrina Carpenter" ] },
   //   "curated" is a hand-picked list: MusicBrainz has no popularity data, so "top" lists are chosen here. Edit freely.
   { type: "curated", title: "Top metal albums", short: "Metal", picks: [
     ["Black Sabbath", "Paranoid"], ["Judas Priest", "British Steel"], ["Motörhead", "Ace of Spades"],
@@ -158,9 +174,15 @@ async function mb(path, params = {}) {
   await sleep(1100);
   const url = new URL("https://musicbrainz.org/ws/2" + path);
   Object.entries({ ...params, fmt: "json" }).forEach(([k, v]) => url.searchParams.set(k, v));
-  const res = await fetch(url, { headers: { "User-Agent": MB_AGENT, Accept: "application/json" } });
-  if (!res.ok) throw new Error(`MusicBrainz ${res.status} on ${path}`);
-  return res.json();
+  // MusicBrainz answers 503 or 429 when it is busy or thinks we are going too fast: wait and try again, up to five times.
+  for (let attempt = 1; ; attempt++) {
+    let res = null;
+    try { res = await fetch(url, { headers: { "User-Agent": MB_AGENT, Accept: "application/json" } }); } catch (e) {}
+    if (res && res.ok) return res.json();
+    const busy = !res || res.status === 503 || res.status === 429 || res.status >= 500;
+    if (!busy || attempt === 5) throw new Error(`MusicBrainz ${res ? res.status : "network error"} on ${path}`);
+    await sleep(attempt * 4000);
+  }
 }
 async function findArtist(name) {
   const r = await mb("/artist", { query: `artist:"${name}"`, limit: 5 });
@@ -326,9 +348,40 @@ const builders = {
       const g = await findAlbum(def.artist, album);
       if (!g) { console.warn(`Skipped ${def.artist} "${album}": album not found`); continue; }
       const artistName = (g["artist-credit"] && g["artist-credit"][0] && g["artist-credit"][0].name) || def.artist;
-      out.push(await trackList(g, artistName));
+      try { out.push(await trackList(g, artistName)); }
+      catch (e) { console.warn(`Skipped ${def.artist} "${album}": ${e.message}`); }
     }
     return out;
+  },
+  // An artist's singles, oldest first.
+  async singles(def) {
+    const artist = await findArtist(def.name);
+    const groups = [];
+    for (let offset = 0; offset < 500; offset += 100) {
+      const base = { artist: artist.id, type: "single", limit: 100, offset };
+      let r;
+      try { r = await mb("/release-group", { ...base, "release-group-status": "website-default" }); }
+      catch (e) { r = await mb("/release-group", base); }
+      groups.push(...(r["release-groups"] || []));
+      if (offset + 100 >= (r["release-group-count"] || 0)) break;
+    }
+    const seen = new Set();
+    const singles = groups
+      .filter(g => g["primary-type"] === "Single" && !(g["secondary-types"] || []).length)
+      .filter(g => g["first-release-date"] && g["first-release-date"] <= today)
+      .filter(g => (!def.from || year(g["first-release-date"]) >= String(def.from)) && (!def.to || year(g["first-release-date"]) <= String(def.to)))
+      .filter(g => !seen.has(g.title.toLowerCase()) && seen.add(g.title.toLowerCase()))
+      .sort((a, b) => a["first-release-date"].localeCompare(b["first-release-date"]))
+      .slice(0, MAX_TRACKS);
+    const items = [];
+    for (const g of singles) items.push({ id: "g" + g.id, name: g.title, note: year(g["first-release-date"]), img: await coverUrl(g.id), sq: true });
+    return { cat: CATS.music, group: artist.name, short: "Singles", title: `${artist.name} singles`, items };
+  },
+  // A hand-picked list of names (artists, groups, anything) with no lookups and no pictures.
+  async names(def) {
+    // A pick is either "Name" or ["Name", "small note shown under it"].
+    const items = def.picks.map(p => { const [n, note] = [].concat(p); return { id: "n" + slug(n), name: n, ...(note ? { note } : {}), sq: true }; });
+    return { cat: def.cat || CATS.music, group: def.group || "Top artists", short: def.short || def.title, title: def.title, items };
   },
   // A hand-picked list of albums. Each pick is ["Artist", "Album"]; the year and cover are looked up.
   async curated(def) {
@@ -373,17 +426,29 @@ const builders = {
 };
 
 (async () => {
+  // The previous lists.json is kept as a safety net: if a list fails to build this time (a busy server, a network blip),
+  // last run's version of it is carried over instead of the list disappearing from the game.
+  let previous = [];
+  try { previous = JSON.parse(fs.readFileSync("lists.json", "utf8")).lists || []; } catch (e) {}
   const lists = [];
   for (const def of DEFS) {
+    const src = JSON.stringify(def);
+    const label = `${def.type} ${def.name || def.title || def.artist || def.year}`;
+    const built = [];
     try {
       for (const list of [].concat(await builders[def.type](def))) {
         if (list.items.length < MIN_ITEMS) { console.warn(`Skipped "${list.title}": only ${list.items.length} items`); continue; }
-        lists.push({ id: slug(list.title), ...list });
+        built.push({ id: slug(list.title), src, ...list });
         console.log(`${list.title}: ${list.items.length} items`);
       }
     } catch (e) {
-      console.warn(`Skipped ${def.type} ${def.name || def.title || def.artist || def.year}${def.season ? " season " + def.season : ""}: ${e.message}`);
+      console.warn(`Failed ${label}: ${e.message}`);
     }
+    for (const old of previous.filter(p => p.src === src && !built.some(n => n.id === p.id))) {
+      built.push(old);
+      console.warn(`Kept last run's "${old.title}" because it did not build this time`);
+    }
+    lists.push(...built);
   }
   if (!lists.length) { console.error("No lists built; lists.json left unchanged."); process.exit(1); }
   fs.writeFileSync("lists.json", JSON.stringify({ generated: today, lists }, null, 1));
