@@ -162,6 +162,7 @@
   .copybox p{margin:0 0 8px;color:var(--muted);font-size:.88rem}
   .copybox textarea{width:100%;font:inherit;font-size:.9rem;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px;resize:vertical}
   .picker{max-width:420px}
+  .ph-text{color:var(--muted)}
   .pickbtn{width:100%;display:flex;justify-content:space-between;gap:10px;align-items:center;text-align:left;padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg);font-weight:500}
   .pickpanel{margin-top:6px;border:1px solid var(--line);border-radius:10px;background:var(--bg);padding:4px;max-height:340px;overflow-y:auto}
   .pickpanel details{margin:0}
@@ -214,7 +215,7 @@
     <div class="list-name" id="listName"></div>
   </header>
   <div id="app"></div>
-  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive.<span class="build">Build 2026-10-09.9</span></footer>
+  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive.<span class="build">Build 2026-10-09.10</span></footer>
 </main>
 
 <script>
@@ -257,11 +258,11 @@ const PTS_EXACT = 3, PTS_NEAR = 1, BONUS = 3; // points for an exact guess, a gu
 /* ============ 3. WHERE THE PRE-BUILT TMDB LISTS LIVE ============ */
 // Same folder as this page by default. If the page is hosted elsewhere, use the raw GitHub URL of lists.json.
 // The public web address of this game, e.g. "https://yoursite.com/outranked". Used for invite links and shared results.
-const SITE_URL = "https://outranked.games";
+const SITE_URL = "https://ojm404.github.io/game2/";
 const LISTS_URL = "https://raw.githubusercontent.com/ojm404/game2/main/lists.json";
 const POSTER = "https://image.tmdb.org/t/p/w92";
 const POSTER_L = "https://image.tmdb.org/t/p/w185";
-let lists = [BUILTIN], pickId = BUILTIN.id;
+let lists = [BUILTIN], pickId = null;   // nothing is chosen until the player picks a list
 const L = () => room.list;
 // Tier names are set by whoever creates the room. Internally tiers are still positions, so scoring is unchanged.
 let tierNames = TIERS.slice();
@@ -277,7 +278,7 @@ const STORE = "tierBattleship";
 // What players can choose from on the Create and Join screens.
 const PALETTE = ["#FF5FA8", "#5CC8FF", "#B58CFF", "#FF8A4C", "#2DD4BF", "#E9DDFF"];
 const PALETTE_NAMES = ["Pink", "Blue", "Violet", "Orange", "Teal", "White"];
-const EMOJIS = ["\u{1F98A}", "\u{1F419}", "\u{1F335}", "\u{1F355}", "\u{1F47E}", "\u{1F3B8}", "\u{1F319}", "\u{1F680}"];   // no fire: it means "hot" on the results board
+const EMOJIS = ["\u{1F60D}", "\u{1F92C}", "\u{1F920}", "\u{1F63A}", "\u{1F921}", "\u{1F608}", "\u{1F984}", "\u{1F978}"];
 const rand = arr => arr[Math.floor(Math.random() * arr.length)];
 const blank = () => ({name:"", code:null, slot:null, round:0, own:{}, guess:{}, step:"own", reveal:0, color: rand(PALETTE), emoji: rand(EMOJIS)});
 // Colour and emoji for a seat, checked against the lists above so nothing unexpected from the database reaches the page.
@@ -412,18 +413,19 @@ function pickerTree(){
   });
 }
 function fillSelects(){
-  if (!lists.some(l => l.id === pickId)) pickId = lists[0].id;
-  const cur = lists.find(l => l.id === pickId);
+  const cur = lists.find(l => l.id === pickId) || null;
+  if (!cur) pickId = null;
   const opt = (l, label) => `<button type="button" class="opt${l.id === pickId ? " on" : ""}" data-act="pickList" data-id="${esc(l.id)}">${esc(label)}</button>`;
   const group = grp => grp.lists.length === 1 ? opt(grp.lists[0], grp.lists[0].title)
     : `<details${grp.lists.includes(cur) ? " open" : ""}><summary>${esc(grp.name)}</summary>${grp.lists.map(l => opt(l, shortOf(l))).join("")}</details>`;
   const panel = !pickOpen ? "" : `<div class="pickpanel">${pickerTree().map(c =>
     `<details${c.lists.includes(cur) ? " open" : ""}><summary>${esc(c.name)}</summary>${c.groups ? c.groups.map(group).join("") : c.lists.map(l => opt(l, l.title)).join("")}</details>`).join("")}</div>`;
-  const html = `<button type="button" class="pickbtn" data-act="togglePick" aria-expanded="${pickOpen}"><span>${esc(cur.title)}</span><span aria-hidden="true">${pickOpen ? "\u25B4" : "\u25BE"}</span></button>${panel}`;
+  const html = `<button type="button" class="pickbtn" data-act="togglePick" aria-expanded="${pickOpen}"><span${cur ? "" : ' class="ph-text"'}>${cur ? esc(cur.title) : "Choose a category and list"}</span><span aria-hidden="true">${pickOpen ? "\u25B4" : "\u25BE"}</span></button>${panel}`;
   document.querySelectorAll(".picker").forEach(p => { p.innerHTML = html; });
 }
 function chosenList(){
-  const l = lists.find(x => x.id === pickId) || lists[0];
+  const l = lists.find(x => x.id === pickId);
+  if (!l) return null;
   return JSON.parse(JSON.stringify({title: l.title, items: l.items}));
 }
 
@@ -471,6 +473,7 @@ async function createRoom(){
   const name = readName(); if (!name) return;
   const tiers = tierNames.map(t => t.trim().slice(0, 14)).filter(Boolean);
   if (tiers.length < 2) { errMsg = "Name at least two tiers."; render(); return; }
+  if (!chosenList()) { errMsg = "Choose what you are ranking first."; pickOpen = true; render(); return; }
   for (let tries = 0; tries < 5; tries++) {
     const code = newCode();
     const res = await db.ref("rooms/" + code).transaction(cur =>
@@ -573,7 +576,12 @@ const actions = {
     copyText(text, btn);
   },
   copy:   () => { navigator.clipboard && navigator.clipboard.writeText(me.code); },
-  rematch:() => {
+  rematch: btn => {
+    if (!chosenList()) {      // open the menu and say why nothing happened
+      pickOpen = true; fillSelects();
+      if (btn) { btn.textContent = "Choose the next list first"; setTimeout(() => { btn.textContent = "Play again"; }, 2000); }
+      return;
+    }
     const u = {round: room.round + 1, list: chosenList(), tiebreak: null, tb: null};
     ["p1","p2"].forEach(s => { u["players/"+s+"/ready"] = false; u["players/"+s+"/own"] = null; u["players/"+s+"/guess"] = null; });
     roomRef.update(u);
@@ -613,7 +621,7 @@ function draw(){
   const mine = room.players[me.slot], opp = room.players[otherSlot()];
   const oppName = opp ? opp.name : "your opponent";
   if (mine.own && opp && opp.own && opp.guess && mine.guess) {
-    if (resultsRound !== room.round) { resultsRound = room.round; revealLock = Date.now() + 800; justRevealed = null; }
+    if (resultsRound !== room.round) { resultsRound = room.round; pickId = null; pickOpen = false; revealLock = Date.now() + 800; justRevealed = null; }
     app.innerHTML = statusView(opp, true) + resultsView(mine, opp); return;
   }
   app.innerHTML = statusView(opp) + (me.step === "locked" ? waitingView(opp, oppName) : boardView(oppName));
