@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OutRanked</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+<style>
+  /* ---- colours: change these to match your other games exactly ---- */
+  :root{
+    --bg:#1B1030; --panel:#2A1A47; --panel2:#35225A; --line:#4B347A;
+    --text:#F6EEFF; --muted:#B9A6D9; --pink:#FF5FA8; --purple:#A66BFF; --win:#4ADE80;
+    --font:"Outfit",system-ui,-apple-system,"Segoe UI",sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.5 var(--font)}
+  main{max-width:680px;margin:0 auto;padding:28px 16px 64px}
+  header{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:22px}
+  h1{font:700 clamp(1.6rem,6vw,2.1rem)/1.1 var(--font);margin:0;background:linear-gradient(90deg,var(--pink),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent}
+  h2{font:600 1.3rem/1.2 var(--font);margin:0 0 6px}
+  .list-name{color:var(--muted);font-size:.9rem;text-align:right}
+  .panel{background:var(--panel);border-radius:16px;padding:22px}
+  .hint{color:var(--muted);margin:0 0 14px;max-width:60ch}
+  label{display:block;font-weight:600;margin:14px 0 4px;font-size:.9rem}
+  input{font:inherit;padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--text);width:100%;max-width:280px}
+  input.code{text-transform:uppercase;letter-spacing:.3em;max-width:140px;font-weight:600}
+  button{font:600 1rem var(--font);cursor:pointer;color:var(--text)}
+  .btn{padding:11px 20px;border:0;border-radius:999px;background:linear-gradient(90deg,var(--pink),var(--purple));color:#1B1030}
+  .btn.ghost{background:transparent;color:var(--text);box-shadow:inset 0 0 0 1px var(--line)}
+  .btn:disabled{opacity:.35;cursor:not-allowed}
+  :focus-visible{outline:2px solid var(--pink);outline-offset:2px}
+  .joinrow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .or{margin:20px 0 0;color:var(--muted)}
+  .err{color:var(--pink);font-weight:600;min-height:1.5em;margin:10px 0 0}
+  .status{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin-bottom:18px;font-size:.92rem;color:var(--muted)}
+  .status .rc{font-weight:700;letter-spacing:.18em;background:var(--panel2);color:var(--text);padding:5px 12px;border-radius:999px}
+  .status button.link{background:none;border:0;padding:0;text-decoration:underline;font-weight:400;color:var(--muted);margin-left:auto}
+  /* board */
+  .grid{display:grid;gap:6px}
+  .row{display:flex;min-height:54px;background:var(--panel);border-radius:12px;overflow:hidden;cursor:pointer}
+  .tl{flex:0 0 46px;border:0;background:var(--panel2);color:var(--text);font-weight:700;font-size:1.15rem}
+  .row[data-tier="S"] .tl{background:var(--pink);color:#1B1030}
+  .row[data-tier="A"] .tl{background:var(--purple);color:#1B1030}
+  .cells,.pool{display:flex;flex-wrap:wrap;gap:6px;padding:8px;flex:1;align-content:flex-start}
+  .picking .row:hover{background:var(--panel2)}
+  .pool{margin-top:14px;border:1px dashed var(--line);border-radius:12px;min-height:56px;cursor:pointer}
+  .pool .empty{color:var(--muted);align-self:center;padding-left:4px}
+  .chip{border:0;border-radius:8px;background:var(--panel2);padding:6px 10px;font-size:.9rem;font-weight:500;text-align:left;line-height:1.2}
+  .pool .chip{background:var(--panel)}
+  .chip{display:flex;gap:8px;align-items:center}
+  .chip img{width:28px;height:42px;object-fit:cover;border-radius:4px;flex:none}
+  select{font:inherit;padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--text);width:100%;max-width:280px}
+  footer{margin-top:40px;color:var(--muted);font-size:.75rem}
+  .chip small{display:block;font-weight:400;color:var(--muted);font-size:.72rem}
+  .chip.tv{box-shadow:inset 0 0 0 1px var(--purple)}
+  .chip.sel{background:var(--pink);color:#1B1030}.chip.sel small{color:#4A1F3A}
+  .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;align-items:center}
+  /* results */
+  .verdict{font:700 clamp(1.8rem,7vw,2.4rem)/1.1 var(--font);margin:0 0 6px}
+  .verdict.win{color:var(--win)}
+  .scores{display:flex;gap:10px;margin:14px 0 22px}
+  .scores div{flex:1;border-radius:12px;padding:12px 14px;background:var(--panel);color:var(--muted);font-size:.9rem}
+  .scores b{font-size:2rem;line-height:1.1;display:block;color:var(--text)}
+  table{width:100%;border-collapse:collapse;background:var(--panel);border-radius:12px;overflow:hidden}
+  th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--bg)}
+  th{font-size:.8rem;color:var(--muted);font-weight:500}
+  td.t{font-weight:700;width:3.2em}
+  td.p{width:3em;text-align:center}
+  .peg{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;font-weight:600;font-size:.82rem;background:var(--panel2);color:var(--muted);animation:drop .35s both}
+  .peg.hit{background:var(--pink);color:#1B1030}
+  @keyframes drop{from{transform:scale(.4);opacity:0}}
+  @media (prefers-reduced-motion:reduce){.peg{animation:none}}
+  .grid.long .tl{flex-basis:96px;font-size:.82rem;line-height:1.15;padding:0 6px;overflow-wrap:anywhere;text-align:center}
+  .tiernames{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;max-width:420px}
+  .tiernames input{max-width:none;padding:8px 10px}
+  .row.perfect{box-shadow:inset 0 0 0 2px var(--win)}
+  .ptag{align-self:center;margin-left:auto;color:var(--win);font-weight:600;font-size:.82rem;padding-right:6px}
+  .scores .bonus{display:block;color:var(--win);font-weight:600}
+  .choice{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+  .btn.big{border-radius:14px;padding:18px 16px;text-align:left;font-size:1.1rem}
+  .btn.big small{display:block;font-weight:400;font-size:.82rem;margin-top:2px;opacity:.8}
+  @media (max-width:460px){.choice{grid-template-columns:1fr}}
+  .chip img.wide{width:50px;height:28px}
+  .chip img.sq{width:36px;height:36px}
+  .tile.sq{width:96px}
+  .tile.sq img{width:96px;height:96px}
+  .ph{display:grid;place-items:center;flex:none;width:36px;height:36px;border-radius:4px;background:linear-gradient(135deg,var(--pink),var(--purple));color:#1B1030;font-size:1.1rem}
+  .tile .ph{width:96px;height:96px;border-radius:8px;font-size:2.6rem}
+  .tile.hit .ph{box-shadow:0 0 0 3px var(--pink)}
+  .tile:not(.hit) .ph{filter:saturate(.55) brightness(.8)}
+  .status button.link.inv{margin-left:0}
+  .tile .back{display:grid;place-items:center;width:76px;height:114px;border-radius:8px;background:var(--panel2);box-shadow:inset 0 0 0 1px var(--line);color:var(--muted);font-weight:700;font-size:1.4rem}
+  .tile.sq .back{width:96px;height:96px}
+  .tile.wide .back{width:114px;height:64px}
+  .tile.flip{animation:flip .45s both}
+  @keyframes flip{from{transform:rotateY(90deg);opacity:0}}
+  .tile .badge.still{animation:none}
+  .scores b.bump{animation:bump .4s}
+  @keyframes bump{50%{transform:scale(1.25);color:var(--pink)}}
+  .scores b{transform-origin:left center}
+  .revealbar{margin:0 0 22px}
+  /* side-by-side lanes */
+  .row.reveal{align-items:stretch}
+  .lanes{flex:1;display:grid;grid-template-columns:1fr 1fr;min-width:0}
+  .lane{min-width:0;padding:6px 8px 8px}
+  .lane.real{border-left:1px solid var(--bg);background:rgba(255,255,255,.03)}
+  .lane .cells{padding:6px 0 0;gap:10px 8px}
+  .lanetag{display:block;font-size:.68rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+  .lanetag .ptag{float:right;text-transform:none;letter-spacing:0;padding:0;font-size:.72rem}
+  .lane .none{color:var(--line);font-size:.8rem}
+  .tile{width:60px}
+  .tile img,.tile .back{width:60px;height:90px}
+  .tile .noimg{width:60px;height:60px;font-size:.62rem;padding:3px;overflow:hidden}
+  .tile.sq{width:66px}
+  .tile.sq img,.tile.sq .back,.tile .ph{width:66px;height:66px}
+  .tile .ph{font-size:1.8rem}
+  .tile.wide{width:92px}
+  .tile.wide img,.tile.wide .back{width:92px;height:52px}
+  .tile figcaption{font-size:.62rem}
+  .tile .badge{min-width:22px;height:22px;line-height:22px;padding:0 6px;font-size:.7rem;top:-7px;right:-6px;max-width:70px}
+  .tile.plain img,.tile.plain .ph{filter:none}
+  .tile.miss .noimg{opacity:.65}
+  .tile.judged{animation:judge .5s}
+  @keyframes judge{40%{transform:scale(1.12)}}
+  @media (max-width:560px){
+    .lanes{grid-template-columns:1fr}
+    .lane.real{border-left:0;border-top:1px solid var(--bg)}
+  }
+  /* reveals are instant: no flip, pop or bump animations, so every browser shows the same thing */
+  .tile.flip,.tile.judged,.scores b.bump,.tile .badge,.peg{animation:none !important}
+  .row.reveal.fresh{box-shadow:inset 4px 0 0 var(--pink)}
+  .row.reveal.fresh.perfect{box-shadow:inset 4px 0 0 var(--pink),inset 0 0 0 2px var(--win)}
+  .revealbar{justify-content:space-between}
+  .skiplink{background:none;border:0;padding:6px 0;color:var(--muted);text-decoration:underline;font-weight:400;font-size:.88rem}
+  /* each player has a colour: host pink, guest blue */
+  .pc-p1{--pc:var(--p1c,#FF5FA8)}.pc-p2{--pc:var(--p2c,#5CC8FF)}
+  .em{margin-right:.35em}
+  .swatches{display:flex;flex-wrap:wrap;gap:8px}
+  .sw{width:36px;height:36px;border-radius:50%;border:0;background:var(--c);box-shadow:0 0 0 2px var(--panel)}
+  .sw.on{box-shadow:0 0 0 2px var(--panel),0 0 0 4px var(--text)}
+  .emo{width:40px;height:40px;border-radius:10px;border:0;background:var(--panel2);font-size:1.25rem;line-height:1;padding:0}
+  .emo.on{box-shadow:0 0 0 2px var(--text)}
+  .dot{display:inline-block;width:.6em;height:.6em;border-radius:50%;background:var(--pc);margin-right:.4em;vertical-align:.05em}
+  .vs .pc-p1,.vs .pc-p2{color:var(--pc)}
+  .scores div{border-top:4px solid var(--pc)}
+  .lane{box-shadow:inset 0 3px 0 var(--pc)}
+  .lane .lanetag{color:var(--pc)}
+  /* tile outlines replace the old badges */
+  .tile.hit img,.tile.hit .noimg,.tile.hit .ph{box-shadow:0 0 0 3px var(--win)}
+  .tile.near img,.tile.near .noimg,.tile.near .ph{box-shadow:0 0 0 3px #FFC857;filter:none;opacity:1}
+  .tile.miss img,.tile.miss .ph{filter:saturate(.4) brightness(.6)}
+  .tile.miss .noimg{opacity:.5}
+  .legend{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;color:var(--muted);font-size:.85rem;margin:0 0 12px}
+  .legend .key{display:inline-block;width:14px;height:14px;border-radius:4px;margin-right:-10px;background:var(--panel2)}
+  .legend .key.hit{box-shadow:0 0 0 2px var(--win)}.legend .key.near{box-shadow:0 0 0 2px #FFC857}.legend .key.miss{opacity:.5}
+  .heat{display:block;height:1.5em;line-height:1.5em;margin-top:3px;font-size:.8rem;text-align:center;white-space:nowrap}
+  .legend span{white-space:nowrap}
+  .copybox{background:var(--panel);border-radius:12px;padding:12px 14px;margin:12px 0}
+  .copybox p{margin:0 0 8px;color:var(--muted);font-size:.88rem}
+  .copybox textarea{width:100%;font:inherit;font-size:.9rem;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px;resize:vertical}
+  .tiebox{background:var(--panel);border-radius:14px;padding:16px 18px;margin:0 0 20px;box-shadow:inset 0 0 0 2px var(--purple)}
+  .tbpair{display:flex;gap:10px;flex-wrap:wrap}
+  .tbpick{flex:1;min-width:140px;display:flex;gap:10px;align-items:center;background:var(--panel2);border:0;border-radius:12px;padding:10px;text-align:left;font-weight:600}
+  .tbpick img{width:44px;height:66px;object-fit:cover;border-radius:6px;flex:none}
+  .tbpick img.sq{height:44px}.tbpick img.wide{width:72px;height:40px}
+  .tbpick small{display:block;font-weight:400;color:var(--pink);font-size:.78rem;margin-top:2px}
+  .tbpick.on{box-shadow:inset 0 0 0 2px var(--pink)}
+  .tbpick:disabled{cursor:default}
+  .tbpick:disabled:not(.on){opacity:.6}
+  .tiebox p{margin:0 0 12px;color:var(--muted)}
+  .build{display:block;margin-top:4px;opacity:.7}
+  .tile.wide{width:114px}
+  .tile.wide img{width:114px;height:64px}
+  [hidden]{display:none !important}
+  .vs{color:var(--text);font-weight:600}
+  .scores .who{display:block;color:var(--text);font-weight:600;font-size:1rem}
+  .scores .lead{box-shadow:inset 0 0 0 2px var(--win)}
+  .row.reveal{cursor:default;min-height:64px}
+  .row.reveal .tl{display:grid;place-items:center}
+  .row.reveal .cells{gap:10px;padding:10px}
+  .tile{position:relative;margin:0;width:76px}
+  .tile img,.tile .noimg{display:block;width:76px;height:114px;object-fit:cover;border-radius:8px;background:var(--panel2)}
+  .tile .noimg{display:grid;place-items:center;text-align:center;padding:6px;font-size:.78rem;font-weight:600;line-height:1.2;height:76px}
+  .tile.hit img,.tile.hit .noimg{box-shadow:0 0 0 3px var(--pink)}
+  .tile:not(.hit) img{filter:saturate(.55) brightness(.8)}
+  .tile .badge{position:absolute;top:-8px;right:-8px;display:block;min-width:28px;max-width:88px;height:28px;line-height:28px;padding:0 8px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-radius:999px;font-weight:700;font-size:.85rem;background:var(--bg);color:var(--text);box-shadow:0 0 0 2px var(--line);animation:drop .35s both}
+  .tile.hit .badge{background:var(--pink);color:#1B1030;box-shadow:none}
+  .tile figcaption{font-size:.68rem;color:var(--muted);line-height:1.2;margin-top:4px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+  .tile:has(.noimg) figcaption{display:none}
+  @media (prefers-reduced-motion:reduce){.tile .badge{animation:none}}
+  details{margin-top:18px}
+  summary{cursor:pointer;font-weight:600;padding:8px 0}
+  code{background:var(--bg);padding:1px 6px;border-radius:4px}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>OutRanked</h1>
+    <div class="list-name" id="listName"></div>
+  </header>
+  <div id="app"></div>
+  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive.<span class="build">Build 2026-10-09.8</span></footer>
+</main>
+
+<script>
+/* ============ 1. PASTE YOUR FIREBASE CONFIG HERE ============ */
+const firebaseConfig = {
+  apiKey: "AIzaSyAAxhEJfBKWUr92JnrPp5YEe5aqhbWSvdo",
+  authDomain: "outranked-4ec06.firebaseapp.com",
+  databaseURL: "https://outranked-4ec06-default-rtdb.firebaseio.com",
+  projectId: "outranked-4ec06",
+  appId: "1:957210594199:web:29092a794880ecad4b92d2"
+};
+
+/* ============ 2. THE LIST BEING RANKED (swap this for other topics) ============ */
+const BUILTIN = {
+  id: "taylor-swift-albums",
+  cat: "Music", group: "Taylor Swift", short: "Albums",
+  title: "Taylor Swift albums",
+  items: [
+    {id:"debut",       name:"Taylor Swift", note:"2006", sq:true},
+    {id:"fearless",    name:"Fearless", note:"2008", sq:true},
+    {id:"speaknow",    name:"Speak Now", note:"2010", sq:true},
+    {id:"red",         name:"Red", note:"2012", sq:true},
+    {id:"a1989",       name:"1989", note:"2014", sq:true},
+    {id:"reputation",  name:"reputation", note:"2017", sq:true},
+    {id:"lover",       name:"Lover", note:"2019", sq:true},
+    {id:"folklore",    name:"folklore", note:"2020", sq:true},
+    {id:"evermore",    name:"evermore", note:"2020", sq:true},
+    {id:"fearless_tv", name:"Fearless", note:"Taylor's Version, 2021", tv:true, sq:true},
+    {id:"red_tv",      name:"Red", note:"Taylor's Version, 2021", tv:true, sq:true},
+    {id:"midnights",   name:"Midnights", note:"2022", sq:true},
+    {id:"speaknow_tv", name:"Speak Now", note:"Taylor's Version, 2023", tv:true, sq:true},
+    {id:"a1989_tv",    name:"1989", note:"Taylor's Version, 2023", tv:true, sq:true},
+    {id:"ttpd",        name:"The Tortured Poets Department", note:"2024", sq:true},
+    {id:"showgirl",    name:"The Life of a Showgirl", note:"2025", sq:true}
+  ]
+};
+const TIERS = ["S","A","B","C","D","F"];
+const PTS_EXACT = 3, PTS_NEAR = 1, BONUS = 3; // points for an exact guess, a guess one tier off, and each perfectly predicted tier row
+
+/* ============ 3. WHERE THE PRE-BUILT TMDB LISTS LIVE ============ */
+// Same folder as this page by default. If the page is hosted elsewhere, use the raw GitHub URL of lists.json.
+// The public web address of this game, e.g. "https://yoursite.com/outranked". Used for invite links and shared results.
+const SITE_URL = "https://ojm404.github.io/game2/";
+const LISTS_URL = "https://raw.githubusercontent.com/ojm404/game2/main/lists.json";
+const POSTER = "https://image.tmdb.org/t/p/w92";
+const POSTER_L = "https://image.tmdb.org/t/p/w185";
+let lists = [BUILTIN], pickId = BUILTIN.id;
+const L = () => room.list;
+// Tier names are set by whoever creates the room. Internally tiers are still positions, so scoring is unchanged.
+let tierNames = TIERS.slice();
+const roomTiers = () => (room && room.tiers) || TIERS;
+const keys = () => TIERS.slice(0, roomTiers().length);
+const tlabel = k => esc(roomTiers()[TIERS.indexOf(k)] || k);
+const longTiers = () => roomTiers().some(t => t.length > 2);
+
+/* ============ GAME ============ */
+const app = document.getElementById("app");
+const configured = !firebaseConfig.apiKey.startsWith("PASTE");
+const STORE = "tierBattleship";
+// What players can choose from on the Create and Join screens.
+const PALETTE = ["#FF5FA8", "#5CC8FF", "#B58CFF", "#FF8A4C", "#2DD4BF", "#E9DDFF"];
+const PALETTE_NAMES = ["Pink", "Blue", "Violet", "Orange", "Teal", "White"];
+const EMOJIS = ["\u{1F98A}", "\u{1F419}", "\u{1F335}", "\u{1F355}", "\u{1F47E}", "\u{1F3B8}", "\u{1F319}", "\u{1F680}"];   // no fire: it means "hot" on the results board
+const rand = arr => arr[Math.floor(Math.random() * arr.length)];
+const blank = () => ({name:"", code:null, slot:null, round:0, own:{}, guess:{}, step:"own", reveal:0, color: rand(PALETTE), emoji: rand(EMOJIS)});
+// Colour and emoji for a seat, checked against the lists above so nothing unexpected from the database reaches the page.
+function look(slot){
+  const p = room && room.players && room.players[slot] || {};
+  return { color: PALETTE.includes(p.color) ? p.color : (slot === "p1" ? PALETTE[0] : PALETTE[1]), emoji: EMOJIS.includes(p.emoji) ? p.emoji : "" };
+}
+const mark = slot => { const e = look(slot).emoji; return e ? `<span class="em">${e}</span>` : '<i class="dot"></i>'; };
+let me = blank();
+try { me = Object.assign(blank(), JSON.parse(localStorage.getItem(STORE)) || {}); } catch(e){}
+if (!EMOJIS.includes(me.emoji)) me.emoji = rand(EMOJIS);   // e.g. a saved choice that is no longer offered
+if (!PALETTE.includes(me.color)) me.color = rand(PALETTE);
+let room = null, roomRef = null, selected = null, errMsg = "", db = null, lobbyCode = "", lobbyMode = null;
+// The game's public address, used in invite links and copied results. When the game is embedded in a site builder
+// the page cannot always see its own address, so SITE_URL (set near the top of this script) is used when filled in.
+function pageUrl(){
+  if (SITE_URL) return SITE_URL;
+  try { if (window.top !== window.self) return window.top.location.href.split(/[?#]/)[0]; } catch (e) {}
+  if (location.origin && location.origin !== "null") return location.origin + location.pathname;
+  if (document.referrer) return document.referrer.split(/[?#]/)[0];
+  return "";
+}
+function urlParam(name){
+  for (const read of [() => window.top.location.search, () => location.search, () => new URL(document.referrer).search]) {
+    try { const v = new URLSearchParams(read()).get(name); if (v) return v; } catch (e) {}
+  }
+  return "";
+}
+// An invite link (?room=ABCD) opens straight on the Join screen with the code filled in.
+const invited = (urlParam("room") || "").toUpperCase().replace(/[^A-Z]/g, "").slice(0, 4);
+if (invited.length === 4 && !me.code) { lobbyMode = "join"; lobbyCode = invited; }
+
+// Copies text three ways, because embedded pages are often not allowed to use the modern clipboard:
+// 1) the classic copy command, 2) the modern clipboard, 3) a box with the text selected so it can be copied by hand.
+function copyText(text, btn){
+  const flash = msg => { if (!btn) return; const old = btn.dataset.label || btn.textContent; btn.dataset.label = old; btn.textContent = msg; setTimeout(() => { btn.textContent = old; }, 1800); };
+  const classic = () => {
+    const ta = document.createElement("textarea");
+    ta.value = text; ta.setAttribute("readonly", ""); ta.style.cssText = "position:fixed;top:0;left:0;width:1px;height:1px;opacity:0";
+    document.body.appendChild(ta); ta.focus(); ta.select(); ta.setSelectionRange(0, text.length);
+    let ok = false; try { ok = document.execCommand("copy"); } catch (e) {}
+    ta.remove(); return ok;
+  };
+  const byHand = () => {
+    document.querySelectorAll(".copybox").forEach(b => b.remove());
+    const box = document.createElement("div"); box.className = "copybox";
+    box.innerHTML = '<p>Copying is blocked here, so select the text below and copy it yourself.</p>';
+    const ta = document.createElement("textarea"); ta.value = text; ta.readOnly = true; ta.rows = Math.min(8, text.split("\n").length + 1);
+    box.appendChild(ta);
+    (btn && btn.closest(".actions, .status") || app).insertAdjacentElement("afterend", box);
+    ta.focus(); ta.select();
+  };
+  if (classic()) { flash("Copied"); return; }
+  try { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(text).then(() => flash("Copied"), byHand); return; } } catch (e) {}
+  byHand();
+}
+
+function scoreOf(g, a){
+  const n = d => L().items.filter(x => dist(g[x.id], a[x.id]) === d).length;
+  return n(0) * PTS_EXACT + n(1) * PTS_NEAR + perfectRows(g, a).length * BONUS;
+}
+function shareText(){
+  const mine = room.players[me.slot], opp = room.players[otherSlot()];
+  const a = scoreOf(mine.guess, opp.own), b = scoreOf(opp.guess, mine.own);
+  const who = (slot, p) => { const e = look(slot).emoji; return (e ? e + " " : "") + p.name; };
+  const exact = (g, real) => L().items.filter(x => g[x.id] === real[x.id]).length;
+  const me1 = who(me.slot, mine), them = who(otherSlot(), opp), n = L().items.length;
+  const T = room.tb, settled = a === b && T && T.pick && T.guess;
+  let line;
+  if (a > b) line = `${me1} beat ${them} ${a}-${b}`;
+  else if (b > a) line = `${them} beat ${me1} ${b}-${a}`;
+  else if (settled) { const w = (T.pick === T.guess ? T.guesser : T.chooser) === me.slot ? mine : opp; line = `${me1} and ${them} tied ${a}-${b}, and ${w.name} won the tiebreaker`; }
+  else line = `${me1} and ${them} tied ${a}-${b}`;
+  const url = pageUrl();
+  return [`OutRanked: ${L().title}`, line,
+    `Exact hits: ${mine.name} ${exact(mine.guess, opp.own)}, ${opp.name} ${exact(opp.guess, mine.own)} (out of ${n})`,
+    "Rank a list, then guess how your friend ranked it." + (url ? " Play: " + url : "")].join("\n");
+}
+
+
+const save = () => { try { localStorage.setItem(STORE, JSON.stringify(me)); } catch(e){} };
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fullName = a => a.name + (a.tv ? " (TV)" : "");
+const otherSlot = () => me.slot === "p1" ? "p2" : "p1";
+
+fetch(LISTS_URL).then(r => r.ok ? r.json() : null).then(d => {
+  if (d && Array.isArray(d.lists)) { // The built-in list steps aside once the build script supplies its own list with the same title.
+    const dupe = d.lists.some(l => (l.title || "").toLowerCase() === BUILTIN.title.toLowerCase());
+    lists = dupe ? d.lists : [BUILTIN, ...d.lists]; fillSelects(); }
+}).catch(() => {});
+
+// Lists are grouped into categories. build-lists.js sets "cat" on each list; older files are sorted by their title.
+const CAT_ORDER = ["Music", "Franchises", "Actors & directors", "Genres", "TV", "Movies by year"];
+let pickCat = "Music";
+function catOf(l){
+  if (l.cat) return l.cat;
+  const t = l.title || "";
+  if (/ (seasons|episodes)$/.test(t)) return "TV";
+  if (/^Biggest movies of/.test(t)) return "Movies by year";
+  if (/^Films directed by| movies$/.test(t)) return "Actors & directors";
+  if (/ films$/.test(t)) return "Franchises";
+  return "Other";
+}
+// Second level: in a category where lists belong to a show (TV), pick the show first, then seasons or one season's episodes.
+let pickGroup = null;
+function groupOf(l){
+  if (l.group) return l.group;
+  const m = /^(.*) season \d+ episodes$/.exec(l.title || "") || /^(.*) seasons$/.exec(l.title || "");
+  return m ? m[1] : null;
+}
+function shortOf(l){
+  const g = groupOf(l), t = l.title || "";
+  if (l.short) return l.short;
+  if (g && t.startsWith(g + " ")) { const rest = t.slice(g.length + 1); return rest.charAt(0).toUpperCase() + rest.slice(1); }
+  return t;
+}
+function pickerState(){
+  const present = [...new Set(lists.map(catOf))];
+  const cats = [...CAT_ORDER.filter(c => present.includes(c)), ...present.filter(c => !CAT_ORDER.includes(c))];
+  if (!cats.includes(pickCat)) pickCat = cats[0];
+  const inCat = lists.filter(l => catOf(l) === pickCat);
+  const other = pickCat === "TV" ? "Show rankings" : "Other";
+  const g = l => groupOf(l) || other;
+  const groups = inCat.some(groupOf) ? [...new Set(inCat.map(g))] : [];
+  let shown = inCat;
+  if (groups.length) {
+    if (!groups.includes(pickGroup)) pickGroup = groups[0];
+    shown = inCat.filter(l => g(l) === pickGroup);
+  }
+  if (!shown.some(l => l.id === pickId)) pickId = shown[0].id;
+  return {cats, groups, shown};
+}
+function fillSelects(){
+  const {cats, groups, shown} = pickerState();
+  const opts = (arr, val, text) => arr.map(x => `<option value="${esc(val(x))}">${esc(text(x))}</option>`).join("");
+  document.querySelectorAll("select.catpick").forEach(sel => { sel.innerHTML = opts(cats, c => c, c => c); sel.value = pickCat; });
+  document.querySelectorAll(".groupwrap").forEach(w => { w.hidden = !groups.length; });
+  const groupWord = pickCat === "Music" ? "Artist or collection" : "Show";
+  document.querySelectorAll(".grouplabel").forEach(l => { l.textContent = groupWord; });
+  document.querySelectorAll("select.grouppick").forEach(sel => sel.setAttribute("aria-label", groupWord));
+  document.querySelectorAll("select.grouppick").forEach(sel => { sel.innerHTML = opts(groups, x => x, x => x); if (groups.length) sel.value = pickGroup; });
+  document.querySelectorAll("select.listpick").forEach(sel => {
+    sel.innerHTML = opts(shown, l => l.id, l => groups.length ? shortOf(l) : l.title);
+    sel.value = pickId;
+  });
+}
+function chosenList(){
+  const l = lists.find(x => x.id === pickId) || lists[0];
+  return JSON.parse(JSON.stringify({title: l.title, items: l.items}));
+}
+
+if (configured) {
+  firebase.initializeApp(firebaseConfig);
+  db = firebase.database();
+  if (me.code) subscribe();
+}
+render();
+
+function subscribe(){
+  roomRef = db.ref("rooms/" + me.code);
+  roomRef.on("value", snap => {
+    room = snap.val();
+    if (!room || !room.list || !room.players || !room.players[me.slot]) { leave("That room no longer exists."); return; }
+    if (room.round !== me.round) { me.round = room.round; me.own = {}; me.guess = {}; me.step = "own"; me.reveal = 0; me.tbPick = null; selected = null; save(); }
+    sync(); render();
+  });
+}
+
+// Rankings stay on your own device until both players have locked in.
+function sync(){
+  const mine = room.players[me.slot], opp = room.players[otherSlot()];
+  const mineRef = roomRef.child("players/" + me.slot);
+  if (me.step === "locked" && !mine.ready) mineRef.update({ready:true});
+  if (me.step === "locked" && mine.ready && opp && opp.ready && !mine.own) mineRef.update({own:me.own, guess:me.guess});
+  const T = room.tb;
+  if (T && T.chooser === me.slot && T.guess && !T.pick && me.tbPick && me.tbPick.id === T.id) roomRef.child("tb").update({pick: me.tbPick.pick});
+}
+
+function leave(msg){
+  if (roomRef) roomRef.off();
+  roomRef = null; room = null; lobbyMode = null; lobbyCode = "";
+  me = Object.assign(blank(), {name: me.name, color: me.color, emoji: me.emoji}); save();
+  errMsg = msg || ""; render();
+}
+
+function newCode(){
+  const abc = "ABCDEFGHJKMNPQRSTUVWXYZ"; let c = "";
+  for (let i = 0; i < 4; i++) c += abc[Math.floor(Math.random()*abc.length)];
+  return c;
+}
+
+async function createRoom(){
+  const name = readName(); if (!name) return;
+  const tiers = tierNames.map(t => t.trim().slice(0, 14)).filter(Boolean);
+  if (tiers.length < 2) { errMsg = "Name at least two tiers."; render(); return; }
+  for (let tries = 0; tries < 5; tries++) {
+    const code = newCode();
+    const res = await db.ref("rooms/" + code).transaction(cur =>
+      cur === null ? {created: firebase.database.ServerValue.TIMESTAMP, round:1, list: chosenList(), tiers, players:{p1:{name, ready:false, color: me.color, emoji: me.emoji}}} : undefined);
+    if (res.committed) { enter(code, "p1", name); return; }
+  }
+  errMsg = "Could not create a room. Try again."; render();
+}
+
+async function joinRoom(){
+  const name = readName(); if (!name) return;
+  const code = (document.getElementById("code").value || "").trim().toUpperCase();
+  if (code.length !== 4) { errMsg = "Enter the 4-letter room code."; render(); return; }
+  const res = await db.ref("rooms/" + code).transaction(cur => {
+    if (cur === null) return null;
+    if (cur.players && cur.players.p2) return;
+    // If the host already has this colour or emoji, take the next one along so the two players stay distinct.
+    const host = cur.players.p1 || {};
+    const next = (arr, mine, theirs) => mine === theirs ? arr[(arr.indexOf(mine) + 1) % arr.length] : mine;
+    cur.players.p2 = {name, ready:false, color: next(PALETTE, me.color, host.color), emoji: next(EMOJIS, me.emoji, host.emoji)};
+    return cur;
+  });
+  if (!res.snapshot.exists()) errMsg = "No room with code " + code + ". Check it with your opponent.";
+  else if (!res.committed) errMsg = "Room " + code + " already has two players.";
+  else { enter(code, "p2", name); return; }
+  render();
+}
+
+function readName(){
+  const v = (document.getElementById("name").value || "").trim().slice(0, 20);
+  const c = document.getElementById("code");
+  lobbyCode = c ? c.value.trim().toUpperCase() : "";
+  me.name = v;
+  if (!v) { errMsg = "Enter your name first so your opponent knows who they are playing."; render(); }
+  return v;
+}
+function enter(code, slot, name){
+  me = Object.assign(blank(), {name, code, slot, color: me.color, emoji: me.emoji}); errMsg = ""; save(); subscribe();
+}
+
+const keepName = () => { const n = document.getElementById("name"); if (n) me.name = n.value.trim().slice(0, 20); };
+// Marks the tapped swatch without redrawing the screen, so anything typed in the form is kept.
+function choose(btn, key){
+  me[key] = btn.dataset.v; save();
+  btn.parentElement.querySelectorAll("button").forEach(b => { const on = b === btn; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on); });
+}
+const actions = {
+  setColor: btn => choose(btn, "color"),
+  setEmoji: btn => choose(btn, "emoji"),
+  pickCreate: () => { lobbyMode = "create"; errMsg = ""; render(); },
+  pickJoin:   () => { lobbyMode = "join"; errMsg = ""; render(); },
+  home:       () => { keepName(); lobbyMode = null; errMsg = ""; render(); },
+  create: () => createRoom().catch(showErr),
+  join:   () => joinRoom().catch(showErr),
+  next:   () => { me.step = "guess"; selected = null; save(); render(); window.scrollTo(0,0); },
+  back:   () => { me.step = "own"; selected = null; save(); render(); },
+  lock:   () => { me.step = "locked"; save(); sync(); render(); },
+  leave:  () => leave(),
+  reveal: () => {
+    if (Date.now() < revealLock) return;      // ignore stray or doubled taps
+    revealLock = Date.now() + 500;
+    const steps = revealSteps(room.players[me.slot], room.players[otherSlot()]);
+    justRevealed = steps[me.reveal || 0] || null;
+    me.reveal = Math.min((me.reveal || 0) + 1, steps.length); save(); render();
+  },
+  revealAll: () => { if (Date.now() < revealLock) return; justRevealed = null; me.reveal = 99; save(); render(); },
+  // Sudden death: two picks the guest put in the same tier. The guest secretly chooses a favourite, the host guesses it.
+  tiebreak: () => {
+    let chooser = "p2", pair = samePair(room.players.p2.own);
+    if (!pair) { chooser = "p1"; pair = samePair(room.players.p1.own); }   // guest has no two picks sharing a tier
+    if (!pair) { actions.tiebreakRound(); return; }                         // nobody does: fall back to a short extra round
+    roomRef.child("tb").set({id: Date.now().toString(36), a: pair[0], b: pair[1], chooser, guesser: chooser === "p1" ? "p2" : "p1", picked: false});
+  },
+  tbChoose: btn => {
+    const T = room.tb, id = btn.dataset.id;
+    if (!T || T.pick) return;
+    if (me.slot === T.chooser) {
+      if (me.tbPick && me.tbPick.id === T.id) return;
+      me.tbPick = {id: T.id, pick: id}; save();
+      roomRef.child("tb").update({picked: true}); render();
+    } else if (T.picked && !T.guess) {
+      roomRef.child("tb").update({guess: id});
+    }
+  },
+  tiebreakRound: () => {
+    const u = {round: room.round + 1, list: tiebreakList(), tiebreak: true, tb: null};
+    ["p1","p2"].forEach(s => { u["players/"+s+"/ready"] = false; u["players/"+s+"/own"] = null; u["players/"+s+"/guess"] = null; });
+    roomRef.update(u);
+  },
+  invite: btn => {
+    const url = pageUrl(), link = url ? url + (url.includes("?") ? "&" : "?") + "room=" + me.code : "";
+    copyText(["Join my OutRanked game" + (link ? ": " + link : ""), "Room code: " + me.code].join("\n"), btn);
+  },
+  share:  btn => {
+    let text;
+    try { text = shareText(); }
+    catch (e) { console.error(e); btn.textContent = "Could not build results: " + e.message; return; }
+    copyText(text, btn);
+  },
+  copy:   () => { navigator.clipboard && navigator.clipboard.writeText(me.code); },
+  rematch:() => {
+    const u = {round: room.round + 1, list: chosenList(), tiebreak: null, tb: null};
+    ["p1","p2"].forEach(s => { u["players/"+s+"/ready"] = false; u["players/"+s+"/own"] = null; u["players/"+s+"/guess"] = null; });
+    roomRef.update(u);
+  }
+};
+function showErr(e){ errMsg = "Connection problem: " + e.message; render(); }
+
+app.addEventListener("toggle", e => { if (e.target.matches && e.target.matches("details.theirs")) theirsOpen = e.target.open; }, true);
+app.addEventListener("input", e => { if (e.target.matches(".tierin")) tierNames[+e.target.dataset.i] = e.target.value; });
+app.addEventListener("change", e => {
+  if (e.target.matches("select.listpick")) pickId = e.target.value;
+  if (e.target.matches("select.catpick")) { pickCat = e.target.value; pickGroup = null; pickId = null; fillSelects(); }
+  if (e.target.matches("select.grouppick")) { pickGroup = e.target.value; pickId = null; fillSelects(); }
+});
+app.addEventListener("click", e => {
+  const chip = e.target.closest(".chip");
+  if (chip) { selected = selected === chip.dataset.id ? null : chip.dataset.id; render(); return; }
+  const act = e.target.closest("[data-act]");
+  if (act) { actions[act.dataset.act](act); return; }
+  const zone = e.target.closest("[data-tier]");
+  if (zone && selected) {
+    const board = me[me.step];
+    if (zone.dataset.tier) board[selected] = zone.dataset.tier; else delete board[selected];
+    selected = null; save(); render();
+  }
+});
+
+/* ---------- views ---------- */
+function render(){
+  if (app.style) { app.style.setProperty("--p1c", look("p1").color); app.style.setProperty("--p2c", look("p2").color); }
+  draw(); fillSelects();
+  document.getElementById("listName").textContent = room && room.list ? "Now ranking: " + room.list.title : "";
+}
+function draw(){
+  if (!configured) { app.innerHTML = setupView(); return; }
+  if (!me.code || !room) { app.innerHTML = lobbyView(); return; }
+  const mine = room.players[me.slot], opp = room.players[otherSlot()];
+  const oppName = opp ? opp.name : "your opponent";
+  if (mine.own && opp && opp.own && opp.guess && mine.guess) {
+    if (resultsRound !== room.round) { resultsRound = room.round; revealLock = Date.now() + 800; justRevealed = null; }
+    app.innerHTML = statusView(opp, true) + resultsView(mine, opp); return;
+  }
+  app.innerHTML = statusView(opp) + (me.step === "locked" ? waitingView(opp, oppName) : boardView(oppName));
+}
+
+function setupView(){
+  return `<div class="panel"><h2>Connect your Firebase database</h2>
+  <p class="hint">Open this file in a text editor and replace the <code>firebaseConfig</code> values near the top of the script with the ones from your Firebase project. Then reload.</p></div>`;
+}
+
+function lobbyView(){
+  const err = `<p class="err" role="alert">${esc(errMsg)}</p>`;
+  const nameField = `<label for="name">Your name</label>
+    <input id="name" maxlength="20" value="${esc(me.name)}" autocomplete="off" placeholder="Shown to your opponent">
+    <label id="collab">Your colour</label>
+    <div class="swatches" role="group" aria-labelledby="collab">${PALETTE.map((c, i) => `<button class="sw${me.color === c ? " on" : ""}" data-act="setColor" data-v="${c}" style="--c:${c}" aria-label="${PALETTE_NAMES[i]}" aria-pressed="${me.color === c}"></button>`).join("")}</div>
+    <label id="emolab">Your emoji</label>
+    <div class="swatches" role="group" aria-labelledby="emolab">${EMOJIS.map(e => `<button class="emo${me.emoji === e ? " on" : ""}" data-act="setEmoji" data-v="${e}" aria-pressed="${me.emoji === e}">${e}</button>`).join("")}</div>`;
+  const back = `<button class="btn ghost" data-act="home">Back</button>`;
+  if (lobbyMode === "create") return `<div class="panel">
+    <h2>Create a room</h2>
+    <p class="hint">Set up the game, then send the room code to your opponent.</p>
+    ${nameField}
+    <label for="cat">Category</label>
+    <select id="cat" class="catpick"></select>
+    <div class="groupwrap" hidden><label for="grp" class="grouplabel">Show</label>
+    <select id="grp" class="grouppick"></select></div>
+    <label for="pick">What are you ranking?</label>
+    <select id="pick" class="listpick"></select>
+    <label id="tnl">Tier names, best to worst</label>
+    <div class="tiernames" role="group" aria-labelledby="tnl">${tierNames.map((t, i) => `<input class="tierin" data-i="${i}" maxlength="14" value="${esc(t)}" aria-label="Tier ${i + 1} name">`).join("")}</div>
+    <p class="hint" style="margin:6px 0 0;font-size:.82rem">Rename them however you like. Leave a box empty to play with fewer tiers.</p>
+    <div class="actions">${back}<button class="btn" data-act="create">Create room</button></div>
+    ${err}
+  </div>`;
+  if (lobbyMode === "join") return `<div class="panel">
+    <h2>Join a room</h2>
+    <p class="hint">Enter your name and the 4-letter code your opponent sent you.</p>
+    ${nameField}
+    <label for="code">Room code</label>
+    <input id="code" class="code" maxlength="4" autocomplete="off" value="${esc(lobbyCode)}">
+    <div class="actions">${back}<button class="btn" data-act="join">Join room</button></div>
+    ${err}
+  </div>`;
+  return `<div class="panel">
+    <h2>A tier list ranking game for two</h2>
+    <p class="hint">Rank the list your way, then guess how your opponent ranked it. The best guesser wins.</p>
+    <div class="choice">
+      <button class="btn big" data-act="pickCreate">Create a room<small>Pick the list and invite someone</small></button>
+      <button class="btn ghost big" data-act="pickJoin">Join a room<small>I have a room code</small></button>
+    </div>
+    ${err}
+  </div>`;
+}
+
+function statusView(opp, done){
+  let s = `Waiting for someone to join. <button class="link inv" data-act="invite">Copy invite link</button>`;
+  if (opp) s = done ? "Playing " + esc(opp.name) : esc(opp.name) + (opp.ready ? " has locked in" : " is still ranking");
+  const vs = opp ? `<span class="vs"><span class="pc-${me.slot}">${mark(me.slot)}${esc(me.name)}</span> vs <span class="pc-${otherSlot()}">${mark(otherSlot())}${esc(opp.name)}</span></span>` : "";
+  if (opp && done) s = "";
+  if (room.tiebreak) s = "Tiebreaker round" + (s ? ". " + s : "");
+  return `<div class="status"><span class="rc" title="Room code">${esc(me.code)}</span>${vs}<span>${s}</span>
+    <button class="link" data-act="leave">Leave room</button></div>`;
+}
+
+// TMDB items carry a poster path; music items carry a full cover image address.
+const hasImg = a => !!(a.img || a.poster);
+const imgSrc = (a, base) => esc(a.img || base + a.poster);
+// Music items with no cover art get a same-sized square with a note, so rows stay even.
+const NOTE = '<span class="ph" aria-hidden="true">\u266A</span>';
+function noArt(img){
+  const music = img.classList.contains("sq") || img.closest(".tile.sq");
+  if (!music) { img.remove(); return; }
+  const s = document.createElement("span"); s.className = "ph"; s.setAttribute("aria-hidden", "true"); s.textContent = "\u266A";
+  img.replaceWith(s);
+}
+function chipHtml(a){
+  return `<button class="chip${a.tv ? " tv" : ""}${selected === a.id ? " sel" : ""}" data-id="${a.id}" aria-pressed="${selected === a.id}">${hasImg(a) ? `<img class="${a.wide ? "wide" : a.sq ? "sq" : ""}" src="${imgSrc(a, POSTER)}" alt="" loading="lazy" onerror="noArt(this)">` : a.sq ? NOTE : ""}<span>${esc(a.name)}<small>${esc(a.note || "")}</small></span></button>`;
+}
+
+function boardView(oppName){
+  const own = me.step === "own", board = me[me.step];
+  const placed = L().items.filter(a => board[a.id]).length, all = placed === L().items.length;
+  const rows = keys().map(t => `<div class="row" data-tier="${t}">
+      <button class="tl" aria-label="Place the selected pick in ${tlabel(t)}">${tlabel(t)}</button>
+      <div class="cells">${L().items.filter(a => board[a.id] === t).map(chipHtml).join("")}</div></div>`).join("");
+  const loose = L().items.filter(a => !board[a.id]).map(chipHtml).join("");
+  return `<div class="board${selected ? " picking" : ""}">
+    <h2>${own ? "Rank them your way" : "Predict " + esc(oppName) + "'s ranking"}</h2>
+    <p class="hint">Tap one, then tap a tier. ${own
+      ? "This is your honest ranking. It stays hidden until you both lock in."
+      : "Put each one where you think " + esc(oppName) + " put it."}</p>
+    <div class="grid${longTiers() ? " long" : ""}">${rows}</div>
+    <div class="pool" data-tier="">${loose || '<span class="empty">All placed. Tap one to move it.</span>'}</div>
+    <div class="actions">
+      ${own ? "" : '<button class="btn ghost" data-act="back">Back to my ranking</button>'}
+      <button class="btn" data-act="${own ? "next" : "lock"}" ${all ? "" : "disabled"}>${own ? "Next: predict theirs" : "Lock in"}</button>
+      <span class="hint" style="align-self:center;margin:0">${placed} of ${L().items.length} placed</span>
+    </div></div>`;
+}
+
+function waitingView(opp, oppName){
+  return `<div class="panel"><h2>Locked in</h2>
+    <p class="hint">${opp ? "Results appear as soon as " + esc(oppName) + " locks in too." : "No one has joined yet. Send them the room code " + esc(me.code) + "."}</p></div>`;
+}
+
+const dist = (g, a) => Math.abs(TIERS.indexOf(g) - TIERS.indexOf(a));
+// A row is perfect when it has at least one pick in it and you guessed exactly that set for it: none missing, no extras.
+const perfectRows = (guess, actual) => keys().filter(t =>
+  L().items.some(a => actual[a.id] === t) && L().items.every(a => (guess[a.id] === t) === (actual[a.id] === t)));
+const total = (guess, actual) => L().items.reduce((s, a) => s + dist(guess[a.id], actual[a.id]), 0);
+
+// A tier board of the real ranking. Each tile carries a badge with the tier that was guessed for it.
+// Results are revealed one tier row at a time. me.reveal counts how many rows this player has turned over so far.
+let justRevealed = null, theirsOpen = false, revealLock = 0, resultsRound = null;
+// Two random picks that one player placed in the same tier, or null if every tier of theirs holds at most one.
+function samePair(own){
+  const groups = keys().map(t => L().items.filter(a => own[a.id] === t)).filter(g => g.length >= 2);
+  if (!groups.length) return null;
+  const g = groups[Math.floor(Math.random() * groups.length)].slice().sort(() => Math.random() - 0.5);
+  return [g[0].id, g[1].id];
+}
+function tbPanel(score){
+  const T = room.tb;
+  if (!T) return `<div class="tiebox"><p>${score} points each. Settle it with sudden death: one question, winner takes the game.</p>
+      <button class="btn" data-act="tiebreak">Play the tiebreaker</button></div>`;
+  const chooser = room.players[T.chooser], guesser = room.players[T.guesser];
+  const cn = esc(chooser.name), gn = esc(guesser.name), iChoose = me.slot === T.chooser;
+  const tier = tlabel(chooser.own[T.a]);
+  const myPick = iChoose && me.tbPick && me.tbPick.id === T.id ? me.tbPick.pick : null;
+  const settled = T.pick && T.guess;
+  const canTap = !settled && (iChoose ? !myPick : (T.picked && !T.guess));
+  const pick = id => {
+    const a = L().items.find(x => x.id === id), tags = [];
+    if (settled && T.pick === id) tags.push(`${cn}'s favourite`);
+    if (settled && T.guess === id) tags.push(`${gn}'s guess`);
+    if (!settled && myPick === id) tags.push("Your choice");
+    if (!settled && !iChoose && T.guess === id) tags.push("Your guess");
+    const on = tags.length ? " on" : "";
+    return `<button class="tbpick${on}" data-act="tbChoose" data-id="${a.id}" ${canTap ? "" : "disabled"}>
+      ${hasImg(a) ? `<img class="${a.wide ? "wide" : a.sq ? "sq" : ""}" src="${imgSrc(a, POSTER)}" alt="" onerror="noArt(this)">` : a.sq ? NOTE : ""}
+      <span>${esc(fullName(a))}${tags.length ? `<small>${tags.join(" and ")}</small>` : ""}</span></button>`;
+  };
+  let msg;
+  if (settled) msg = T.pick === T.guess ? `${gn} guessed right and takes the game.` : `${gn} guessed wrong, so ${cn} takes the game.`;
+  else if (iChoose) msg = myPick ? `Locked in. Waiting for ${gn} to guess.` : `Sudden death. You put both of these in ${tier}. Which do you actually prefer? ${gn} has to guess your answer.`;
+  else msg = !T.picked ? `Sudden death. ${cn} put both of these in ${tier} and is choosing a favourite. Then you guess which.`
+    : T.guess ? `Guess sent. Waiting for the answer.` : `${cn} has chosen. Which one does ${cn} prefer? Guess right and you win; guess wrong and you lose.`;
+  return `<div class="tiebox"><p>${msg}</p><div class="tbpair">${pick(T.a)}${pick(T.b)}</div></div>`;
+}
+// A short sudden-death round: five random picks from a different list.
+function tiebreakList(){
+  const current = (room.list.title || "").replace(/^Tiebreaker: /, "");
+  const pool = lists.filter(l => l.title !== current && l.items.length >= 5);
+  const l = pool.length ? pool[Math.floor(Math.random() * pool.length)] : lists[0];
+  const items = l.items.slice().sort(() => Math.random() - 0.5).slice(0, 5);
+  return JSON.parse(JSON.stringify({title: "Tiebreaker: " + l.title, items}));
+}
+function revealSteps(mine, opp){
+  return keys().filter(t => L().items.some(a => opp.own[a.id] === t || mine.own[a.id] === t));
+}
+
+// Hot and cold marker for one guess: a tick for exact, fire for one tier off, snowflake for further away.
+// The arrow says where the real answer is from the guess: up means it was really ranked higher.
+function heatMark(g, a){
+  const d = dist(g, a);
+  if (d === 0) return "\u2705";
+  return (d === 1 ? "\u{1F525}" : "\u2744\uFE0F") + (TIERS.indexOf(a) < TIERS.indexOf(g) ? "\u2B06\uFE0F" : "\u2B07\uFE0F");
+}
+
+// One results tile. state is "hit" (exact), "near" (one tier off) or "miss". marker is the emoji line under the picture.
+function tileHtml(a, state, tip, marker){
+  const shape = a.wide ? " wide" : a.sq ? " sq" : "", label = esc(fullName(a));
+  return `<figure class="tile ${state}${shape}" title="${label}: ${tip}">
+    ${hasImg(a) ? `<img src="${imgSrc(a, POSTER_L)}" alt="${label}" loading="lazy" onerror="noArt(this)">` : a.sq ? NOTE : `<div class="noimg">${label}</div>`}
+    <span class="heat">${marker}</span>
+    <figcaption>${label}</figcaption></figure>`;
+}
+
+// Side-by-side results. Each tier row has two lanes, one per player, in that player's colour:
+// left is what the guesser predicted for that tier (with a hot or cold marker), right is what the owner really put there
+// (carrying the guesser's emoji wherever the guess was exactly right).
+function revealBoard(guess, actual, gSlot, oSlot){
+  const gName = esc(room.players[gSlot].name), oName = esc(room.players[oSlot].name);
+  const peg = (look(gSlot).emoji || "") + "\u2705";
+  const perf = perfectRows(guess, actual);
+  const tile = real => a => {
+    const d = dist(guess[a.id], actual[a.id]);
+    const tip = d === 0 ? "exact match" : `${gName} guessed ${tlabel(guess[a.id])}, ${oName} ranked it ${tlabel(actual[a.id])}`;
+    const marker = real ? (d === 0 ? peg : "") : heatMark(guess[a.id], actual[a.id]);
+    return tileHtml(a, d === 0 ? "hit" : d === 1 ? "near" : "miss", tip, marker);
+  };
+  const rows = keys().map(t => {
+    const guessLane = L().items.filter(a => guess[a.id] === t).map(tile(false)).join("");
+    const realLane = L().items.filter(a => actual[a.id] === t).map(tile(true)).join("");
+    const p = perf.includes(t);
+    return `<div class="row reveal${p ? " perfect" : ""}" data-tier="${t}"><div class="tl">${tlabel(t)}</div>
+      <div class="lanes">
+        <div class="lane pc-${gSlot}"><span class="lanetag">${mark(gSlot)}${gName} guessed</span><div class="cells">${guessLane || '<span class="none">nothing</span>'}</div></div>
+        <div class="lane real pc-${oSlot}"><span class="lanetag">${mark(oSlot)}${oName} ranked${p ? ` <span class="ptag">Perfect row, +${BONUS}</span>` : ""}</span><div class="cells">${realLane || '<span class="none">nothing</span>'}</div></div>
+      </div></div>`;
+  }).join("");
+  return `<div class="grid${longTiers() ? " long" : ""}">${rows}</div>`;
+}
+
+// Score from the rows revealed so far (all rows once the reveal is finished).
+function tally(g, a, shown){
+  const items = L().items.filter(x => shown.includes(a[x.id]));
+  const count = d => items.filter(x => dist(g[x.id], a[x.id]) === d).length;
+  const exact = count(0), near = count(1), perf = perfectRows(g, a).filter(t => shown.includes(t)).length;
+  return {exact, near, perf, score: exact * PTS_EXACT + near * PTS_NEAR + perf * BONUS};
+}
+
+function resultsView(mine, opp){
+  const all = keys(), mySlot = me.slot, oppSlot = otherSlot();
+  const my = tally(mine.guess, opp.own, all), their = tally(opp.guess, mine.own, all);
+  const on = esc(opp.name), myName = esc(mine.name);
+  const tie = my.score === their.score;
+  const T = room.tb, settled = !!(tie && T && T.pick && T.guess);
+  const tbWinner = settled ? (T.pick === T.guess ? T.guesser : T.chooser) : null;
+  const iWin = settled ? tbWinner === me.slot : my.score > their.score;
+  const oppWin = settled ? tbWinner !== me.slot : their.score > my.score;
+  const tb = room.tiebreak || settled ? " the tiebreaker" : "";
+  const verdict = tie && !settled ? "It's a tie" : iWin ? "You win" + tb : on + " wins" + tb;
+  const card = (name, t, lead, slot) => `<div class="pc-${slot}${lead ? " lead" : ""}"><span class="who">${mark(slot)}${name}</span><b>${t.score}</b>${t.exact} exact, ${t.near} one tier off${t.perf ? `<span class="bonus">+${BONUS * t.perf} for ${t.perf} perfect ${t.perf === 1 ? "row" : "rows"}</span>` : ""}</div>`;
+  const legend = `<p class="legend"><span>\u2705 Exact, ${PTS_EXACT} points</span><span>\u{1F525} Hot: one tier off, ${PTS_NEAR} point</span><span>\u2744\uFE0F Cold: two or more off</span><span>\u2B06\uFE0F\u2B07\uFE0F The real answer is higher or lower</span></p>`;
+  return `<p class="verdict${iWin ? " win" : ""}">${verdict}</p>
+    <p class="hint">Highest score wins. A perfect row is worth ${BONUS} bonus points.</p>
+    <div class="scores">${card(myName, my, iWin, mySlot)}${card(on, their, oppWin, oppSlot)}</div>
+    ${tie ? tbPanel(my.score) : ""}
+    <h2>Your guess against ${on}'s real ranking</h2>
+    ${legend}
+    ${revealBoard(mine.guess, opp.own, mySlot, oppSlot)}
+    <details class="theirs"${theirsOpen ? " open" : ""}><summary>See ${on}'s guess against your real ranking</summary>
+      ${legend}
+      ${revealBoard(opp.guess, mine.own, oppSlot, mySlot)}</details>
+    <div class="actions"><button class="btn ghost" data-act="share">Copy results</button></div>
+    <label for="nextList">Next list</label>
+    <div class="actions" style="margin-top:0"><select class="catpick" aria-label="Category"></select><span class="groupwrap" hidden><select class="grouppick" aria-label="Show"></select></span><select id="nextList" class="listpick"></select><button class="btn" data-act="rematch">Play again</button></div>`;
+}
+</script>
+</body>
+</html>
