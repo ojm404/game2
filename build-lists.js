@@ -3,6 +3,8 @@
 // Works with either a TMDB v3 API key or a v4 read access token.
 
 const fs = require("fs");
+// years(1990, 2019) makes one "biggest movies of the year" list for every year in that range.
+const years = (from, to) => Array.from({ length: to - from + 1 }, (_, i) => ({ type: "year", year: from + i }));
 
 /* ======== EDIT THIS: the face-off lists you want ======== */
 const DEFS = [
@@ -17,17 +19,31 @@ const DEFS = [
   { type: "director",   name: "Kevin Smith" },
   { type: "collection", name: "Harry Potter" },
   { type: "collection", name: "Mission: Impossible" },
-  { type: "collection", name: "Star Trek" },
+  // TMDB splits Star Trek into three collections, each too short on its own, so "names" merges them into one list.
+  { type: "collection", title: "Star Trek films", names: ["Star Trek: The Original Series Collection", "Star Trek: The Next Generation Collection", "Star Trek: Alternate Reality Collection"] },
   { type: "genre",      name: "Science Fiction" },
   { type: "genre",      name: "Horror" },
   { type: "genre",      name: "Comedy" },
   { type: "keyword",    name: "musical", title: "Biggest musical movies" },
-  { type: "year",       year: 1997 },
-  { type: "year",       year: 1999 },
-  { type: "year",       year: 2001 },
-  { type: "year",       year: 2005 },
-  { type: "year",       year: 2010 },
-  { type: "year",       year: 2015 },
+  { type: "genre",      name: "Family", title: "Popular kids' movies" },
+  { type: "keyword",    name: "biography", title: "Best biopics" },
+  ...years(1990, 2019),
+  //   "films" is a hand-picked movie list. Each pick is ["Title", release year]; posters are looked up on TMDB.
+  { type: "films", cat: "Franchises", title: "Disney princess movies", picks: [
+    ["Snow White and the Seven Dwarfs", 1937], ["Cinderella", 1950], ["Sleeping Beauty", 1959], ["The Little Mermaid", 1989],
+    ["Beauty and the Beast", 1991], ["Aladdin", 1992], ["Pocahontas", 1995], ["Mulan", 1998], ["The Princess and the Frog", 2009],
+    ["Tangled", 2010], ["Brave", 2012], ["Frozen", 2013], ["Moana", 2016], ["Raya and the Last Dragon", 2021] ] },
+  { type: "films", cat: "Awards", group: "Best Picture winners", short: "1990s", title: "Best Picture winners: 1990s", picks: [
+    ["Dances with Wolves", 1990], ["The Silence of the Lambs", 1991], ["Unforgiven", 1992], ["Schindler's List", 1993],
+    ["Forrest Gump", 1994], ["Braveheart", 1995], ["The English Patient", 1996], ["Titanic", 1997],
+    ["Shakespeare in Love", 1998], ["American Beauty", 1999] ] },
+  { type: "films", cat: "Awards", group: "Best Picture winners", short: "2000s", title: "Best Picture winners: 2000s", picks: [
+    ["Gladiator", 2000], ["A Beautiful Mind", 2001], ["Chicago", 2002], ["The Lord of the Rings: The Return of the King", 2003],
+    ["Million Dollar Baby", 2004], ["Crash", 2005], ["The Departed", 2006], ["No Country for Old Men", 2007],
+    ["Slumdog Millionaire", 2008], ["The Hurt Locker", 2008] ] },
+  { type: "films", cat: "Awards", group: "Best Picture winners", short: "2010s", title: "Best Picture winners: 2010s", picks: [
+    ["The King's Speech", 2010], ["The Artist", 2011], ["Argo", 2012], ["12 Years a Slave", 2013], ["Birdman", 2014],
+    ["Spotlight", 2015], ["Moonlight", 2016], ["The Shape of Water", 2017], ["Green Book", 2018], ["Parasite", 2019] ] },
   // Music (from MusicBrainz, no key needed).
   //   "albums" ranks an artist's studio albums. Add songs: true to also build a song list for every one of those albums.
   //   "tracks" ranks the songs on the albums you name.
@@ -71,13 +87,16 @@ const DEFS = [
   { type: "tv",         name: "Friends" },
   { type: "tv",         name: "Stargate SG-1" },
   { type: "tv",         name: "American Horror Story" },
+  { type: "tv",         name: "The Office", year: 2005 },          // year = first aired, to get the US show and not the UK one
   { type: "tvgenre",    name: "Sci-Fi & Fantasy", title: "Hit sci-fi TV shows" },
   // seasons can be "all", one number (season: 5), or a few (seasons: [1, 2, 3]). Each season becomes its own list.
   { type: "episodes",   name: "Friends", seasons: "all" },
-  { type: "episodes",   name: "Stargate SG-1", seasons: "all" }
+  { type: "episodes",   name: "Stargate SG-1", seasons: "all" },
+  { type: "episodes",   name: "The Office", year: 2005, seasons: "all" }
 ];
 const MAX_ITEMS = 15;        // items per list
 const MAX_EPISODES = 27;    // long seasons are trimmed to their most-voted episodes
+const MAX_TRACKS = 30;      // songs per album
 const MAX_ALBUMS = 20;      // albums per artist; use from / to on the entry to choose an era for bigger catalogues
 const MIN_ITEMS = 5;         // skip lists that come out shorter than this
 const MIN_VOTES = 300;       // drops obscure titles
@@ -174,13 +193,13 @@ async function trackList(g, artistName) {
   const first = releases.sort((a, b) => (a.date || "9999").localeCompare(b.date || "9999"))[0];
   if (!first) throw new Error(`No official release found for "${g.title}"`);
   const full = await mb(`/release/${first.id}`, { inc: "recordings" });
-  const items = (full.media || []).flatMap(m => m.tracks || []).slice(0, MAX_EPISODES)
+  const items = (full.media || []).flatMap(m => m.tracks || []).slice(0, MAX_TRACKS)
     .map((t, i) => ({ id: "k" + t.id, name: t.title, note: "Track " + (i + 1) }));
   return { cat: CATS.music, group: artistName, short: `${g.title} songs`, title: `${artistName}: ${g.title} songs`, items };
 }
 
-async function findShow(name) {
-  const r = await tmdb("/search/tv", { query: name });
+async function findShow(name, firstAired) {
+  const r = await tmdb("/search/tv", firstAired ? { query: name, first_air_date_year: firstAired } : { query: name });
   if (!r.results.length) throw new Error("No show found for " + name);
   return r.results.find(s => s.name.toLowerCase() === name.toLowerCase()) || r.results[0];
 }
@@ -206,24 +225,45 @@ const builders = {
     return { cat: CATS.people, title: `Films directed by ${p.name}`, items: await pickMovies(c.crew.filter(m => m.job === "Director")) };
   },
   async collection(def) {
-    const r = await tmdb("/search/collection", { query: def.name });
-    if (!r.results.length) throw new Error("No collection found for " + def.name);
-    const c = await tmdb(`/collection/${r.results[0].id}`);
-    return { cat: CATS.franchise, title: c.name.replace(/ Collection$/, "") + " films", items: await pickMovies(c.parts, { minVotes: 0 }) };
+    const parts = [];
+    let first = null;
+    for (const name of [].concat(def.names || def.name)) {
+      const r = await tmdb("/search/collection", { query: name });
+      if (!r.results.length) { console.warn(`  no collection found for "${name}"`); continue; }
+      const c = await tmdb(`/collection/${r.results[0].id}`);
+      first = first || c;
+      parts.push(...c.parts);
+    }
+    if (!first) throw new Error("No collection found");
+    return { cat: CATS.franchise, title: def.title || first.name.replace(/ Collection$/, "") + " films", items: await pickMovies(parts, { minVotes: 0 }) };
   },
   async year(def) {
     const pages = await Promise.all([1, 2].map(page => tmdb("/discover/movie", { primary_release_year: def.year, sort_by: "vote_count.desc", page })));
-    return { cat: CATS.year, title: `Biggest movies of ${def.year}`, items: await pickMovies(pages.flatMap(p => p.results)) };
+    return { cat: CATS.year, group: `${Math.floor(def.year / 10) * 10}s`, short: String(def.year), title: `Biggest movies of ${def.year}`, items: await pickMovies(pages.flatMap(p => p.results)) };
   },
   async genre(def) {
     const all = (await tmdb("/genre/movie/list")).genres;
     const g = all.find(x => x.name.toLowerCase() === def.name.toLowerCase());
     if (!g) throw new Error(`No genre called "${def.name}". Options: ${all.map(x => x.name).join(", ")}`);
     const pages = await Promise.all([1, 2, 3].map(page => tmdb("/discover/movie", { with_genres: g.id, sort_by: "vote_count.desc", page })));
-    return { cat: CATS.genre, title: `Biggest ${g.name.toLowerCase()} movies`, items: await pickMovies(pages.flatMap(p => p.results)) };
+    return { cat: CATS.genre, title: def.title || `Biggest ${g.name.toLowerCase()} movies`, items: await pickMovies(pages.flatMap(p => p.results)) };
+  },
+  // A hand-picked movie list. Titles are matched on TMDB by name and release year; the Marvel filter is not applied.
+  async films(def) {
+    const items = [];
+    for (const [title, yr] of def.picks) {
+      // Search by title, then prefer the best-known result released within a year of the given year.
+      const r = await tmdb("/search/movie", { query: title });
+      const close = r.results.filter(x => !yr || Math.abs(Number(year(x.release_date)) - yr) <= 1);
+      const exact = close.filter(x => x.title.toLowerCase() === title.toLowerCase());
+      const m = (exact.length ? exact : close).sort((x, y) => y.vote_count - x.vote_count)[0];
+      if (!m) { console.warn(`  no TMDB match for "${title}" (${yr || "any year"}); left out`); continue; }
+      items.push(movieItem(m));
+    }
+    return { cat: def.cat || CATS.franchise, ...(def.group ? { group: def.group, short: def.short || def.title } : {}), title: def.title, items };
   },
   async tv(def) {
-    const show = await tmdb(`/tv/${(await findShow(def.name)).id}`);
+    const show = await tmdb(`/tv/${(await findShow(def.name, def.year)).id}`);
     const items = show.seasons
       .filter(s => s.season_number > 0 && s.air_date && s.air_date <= today)
       .slice(0, 16)
@@ -231,7 +271,7 @@ const builders = {
     return { cat: CATS.tv, title: `${show.name} seasons`, items };
   },
   async episodes(def) {
-    const show = await tmdb(`/tv/${(await findShow(def.name)).id}`);
+    const show = await tmdb(`/tv/${(await findShow(def.name, def.year)).id}`);
     const want = def.seasons === "all"
       ? show.seasons.filter(s => s.season_number > 0 && s.air_date && s.air_date <= today).map(s => s.season_number)
       : [].concat(def.seasons || def.season);
