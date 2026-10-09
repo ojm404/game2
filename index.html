@@ -161,6 +161,17 @@
   .copybox{background:var(--panel);border-radius:12px;padding:12px 14px;margin:12px 0}
   .copybox p{margin:0 0 8px;color:var(--muted);font-size:.88rem}
   .copybox textarea{width:100%;font:inherit;font-size:.9rem;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px;resize:vertical}
+  .picker{max-width:420px}
+  .pickbtn{width:100%;display:flex;justify-content:space-between;gap:10px;align-items:center;text-align:left;padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg);font-weight:500}
+  .pickpanel{margin-top:6px;border:1px solid var(--line);border-radius:10px;background:var(--bg);padding:4px;max-height:340px;overflow-y:auto}
+  .pickpanel details{margin:0}
+  .pickpanel summary{padding:9px 10px;font-weight:600;border-radius:8px}
+  .pickpanel details details{margin-left:14px}
+  .pickpanel details details summary{font-weight:500;color:var(--muted)}
+  .pickpanel details[open] > summary{color:var(--pink)}
+  .opt{display:block;width:calc(100% - 14px);margin-left:14px;text-align:left;background:none;border:0;border-radius:8px;padding:8px 10px;font-weight:400}
+  .opt:hover{background:var(--panel)}
+  .opt.on{background:var(--panel2);font-weight:600}
   .tiebox{background:var(--panel);border-radius:14px;padding:16px 18px;margin:0 0 20px;box-shadow:inset 0 0 0 2px var(--purple)}
   .tbpair{display:flex;gap:10px;flex-wrap:wrap}
   .tbpick{flex:1;min-width:140px;display:flex;gap:10px;align-items:center;background:var(--panel2);border:0;border-radius:12px;padding:10px;text-align:left;font-weight:600}
@@ -203,7 +214,7 @@
     <div class="list-name" id="listName"></div>
   </header>
   <div id="app"></div>
-  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive.<span class="build">Build 2026-10-09.8</span></footer>
+  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive.<span class="build">Build 2026-10-09.9</span></footer>
 </main>
 
 <script>
@@ -246,7 +257,7 @@ const PTS_EXACT = 3, PTS_NEAR = 1, BONUS = 3; // points for an exact guess, a gu
 /* ============ 3. WHERE THE PRE-BUILT TMDB LISTS LIVE ============ */
 // Same folder as this page by default. If the page is hosted elsewhere, use the raw GitHub URL of lists.json.
 // The public web address of this game, e.g. "https://yoursite.com/outranked". Used for invite links and shared results.
-const SITE_URL = "https://marvelless.games/outranked";
+const SITE_URL = "https://outranked.games";
 const LISTS_URL = "https://raw.githubusercontent.com/ojm404/game2/main/lists.json";
 const POSTER = "https://image.tmdb.org/t/p/w92";
 const POSTER_L = "https://image.tmdb.org/t/p/w185";
@@ -374,44 +385,42 @@ function catOf(l){
 let pickGroup = null;
 function groupOf(l){
   if (l.group) return l.group;
+  const y = /^Biggest movies of (\d{3})\d$/.exec(l.title || "");
+  if (y) return y[1] + "0s";
   const m = /^(.*) season \d+ episodes$/.exec(l.title || "") || /^(.*) seasons$/.exec(l.title || "");
   return m ? m[1] : null;
 }
 function shortOf(l){
   const g = groupOf(l), t = l.title || "";
   if (l.short) return l.short;
+  const yr = /^Biggest movies of (\d{4})$/.exec(t);
+  if (yr) return yr[1];
   if (g && t.startsWith(g + " ")) { const rest = t.slice(g.length + 1); return rest.charAt(0).toUpperCase() + rest.slice(1); }
   return t;
 }
-function pickerState(){
+// One dropdown with submenus: category, then (where lists belong to a show, artist or decade) that group, then the list.
+let pickOpen = false;
+function pickerTree(){
   const present = [...new Set(lists.map(catOf))];
   const cats = [...CAT_ORDER.filter(c => present.includes(c)), ...present.filter(c => !CAT_ORDER.includes(c))];
-  if (!cats.includes(pickCat)) pickCat = cats[0];
-  const inCat = lists.filter(l => catOf(l) === pickCat);
-  const other = pickCat === "TV" ? "Show rankings" : "Other";
-  const g = l => groupOf(l) || other;
-  const groups = inCat.some(groupOf) ? [...new Set(inCat.map(g))] : [];
-  let shown = inCat;
-  if (groups.length) {
-    if (!groups.includes(pickGroup)) pickGroup = groups[0];
-    shown = inCat.filter(l => g(l) === pickGroup);
-  }
-  if (!shown.some(l => l.id === pickId)) pickId = shown[0].id;
-  return {cats, groups, shown};
+  return cats.map(c => {
+    const inCat = lists.filter(l => catOf(l) === c);
+    const other = c === "TV" ? "Show rankings" : "Other";
+    const g = l => groupOf(l) || other;
+    const groups = inCat.some(groupOf) ? [...new Set(inCat.map(g))].map(name => ({name, lists: inCat.filter(l => g(l) === name)})) : null;
+    return {name: c, groups, lists: inCat};
+  });
 }
 function fillSelects(){
-  const {cats, groups, shown} = pickerState();
-  const opts = (arr, val, text) => arr.map(x => `<option value="${esc(val(x))}">${esc(text(x))}</option>`).join("");
-  document.querySelectorAll("select.catpick").forEach(sel => { sel.innerHTML = opts(cats, c => c, c => c); sel.value = pickCat; });
-  document.querySelectorAll(".groupwrap").forEach(w => { w.hidden = !groups.length; });
-  const groupWord = pickCat === "Music" ? "Artist or collection" : "Show";
-  document.querySelectorAll(".grouplabel").forEach(l => { l.textContent = groupWord; });
-  document.querySelectorAll("select.grouppick").forEach(sel => sel.setAttribute("aria-label", groupWord));
-  document.querySelectorAll("select.grouppick").forEach(sel => { sel.innerHTML = opts(groups, x => x, x => x); if (groups.length) sel.value = pickGroup; });
-  document.querySelectorAll("select.listpick").forEach(sel => {
-    sel.innerHTML = opts(shown, l => l.id, l => groups.length ? shortOf(l) : l.title);
-    sel.value = pickId;
-  });
+  if (!lists.some(l => l.id === pickId)) pickId = lists[0].id;
+  const cur = lists.find(l => l.id === pickId);
+  const opt = (l, label) => `<button type="button" class="opt${l.id === pickId ? " on" : ""}" data-act="pickList" data-id="${esc(l.id)}">${esc(label)}</button>`;
+  const group = grp => grp.lists.length === 1 ? opt(grp.lists[0], grp.lists[0].title)
+    : `<details${grp.lists.includes(cur) ? " open" : ""}><summary>${esc(grp.name)}</summary>${grp.lists.map(l => opt(l, shortOf(l))).join("")}</details>`;
+  const panel = !pickOpen ? "" : `<div class="pickpanel">${pickerTree().map(c =>
+    `<details${c.lists.includes(cur) ? " open" : ""}><summary>${esc(c.name)}</summary>${c.groups ? c.groups.map(group).join("") : c.lists.map(l => opt(l, l.title)).join("")}</details>`).join("")}</div>`;
+  const html = `<button type="button" class="pickbtn" data-act="togglePick" aria-expanded="${pickOpen}"><span>${esc(cur.title)}</span><span aria-hidden="true">${pickOpen ? "\u25B4" : "\u25BE"}</span></button>${panel}`;
+  document.querySelectorAll(".picker").forEach(p => { p.innerHTML = html; });
 }
 function chosenList(){
   const l = lists.find(x => x.id === pickId) || lists[0];
@@ -509,6 +518,8 @@ function choose(btn, key){
   btn.parentElement.querySelectorAll("button").forEach(b => { const on = b === btn; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on); });
 }
 const actions = {
+  togglePick: () => { pickOpen = !pickOpen; fillSelects(); },
+  pickList: btn => { pickId = btn.dataset.id; pickOpen = false; fillSelects(); },
   setColor: btn => choose(btn, "color"),
   setEmoji: btn => choose(btn, "emoji"),
   pickCreate: () => { lobbyMode = "create"; errMsg = ""; render(); },
@@ -626,12 +637,8 @@ function lobbyView(){
     <h2>Create a room</h2>
     <p class="hint">Set up the game, then send the room code to your opponent.</p>
     ${nameField}
-    <label for="cat">Category</label>
-    <select id="cat" class="catpick"></select>
-    <div class="groupwrap" hidden><label for="grp" class="grouplabel">Show</label>
-    <select id="grp" class="grouppick"></select></div>
-    <label for="pick">What are you ranking?</label>
-    <select id="pick" class="listpick"></select>
+    <label id="picklab">What are you ranking?</label>
+    <div class="picker" role="group" aria-labelledby="picklab"></div>
     <label id="tnl">Tier names, best to worst</label>
     <div class="tiernames" role="group" aria-labelledby="tnl">${tierNames.map((t, i) => `<input class="tierin" data-i="${i}" maxlength="14" value="${esc(t)}" aria-label="Tier ${i + 1} name">`).join("")}</div>
     <p class="hint" style="margin:6px 0 0;font-size:.82rem">Rename them however you like. Leave a box empty to play with fewer tiers.</p>
@@ -840,8 +847,9 @@ function resultsView(mine, opp){
       ${legend}
       ${revealBoard(opp.guess, mine.own, oppSlot, mySlot)}</details>
     <div class="actions"><button class="btn ghost" data-act="share">Copy results</button></div>
-    <label for="nextList">Next list</label>
-    <div class="actions" style="margin-top:0"><select class="catpick" aria-label="Category"></select><span class="groupwrap" hidden><select class="grouppick" aria-label="Show"></select></span><select id="nextList" class="listpick"></select><button class="btn" data-act="rematch">Play again</button></div>`;
+    <label id="nextlab">Next list</label>
+    <div class="picker" role="group" aria-labelledby="nextlab"></div>
+    <div class="actions"><button class="btn" data-act="rematch">Play again</button></div>`;
 }
 </script>
 </body>
