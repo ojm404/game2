@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-08",
+ "generated": "2026-10-09",
  "lists": [
   {
    "id": "leonardo-dicaprio-movies",
@@ -628,7 +628,7 @@
      "id": "m577922",
      "name": "Tenet",
      "note": "2020",
-     "poster": "/aCIFMriQh8rvhxpN1IWGgvH0Tlg.jpg"
+     "poster": "/rrKH3VhHssGTCfPuaEQkxvEoElv.jpg"
     },
     {
      "id": "m872585",
@@ -3481,100 +3481,6 @@
    ]
   },
   {
-   "id": "taylor-swift-the-tortured-poets-department-songs",
-   "cat": "Music",
-   "group": "Taylor Swift",
-   "short": "THE TORTURED POETS DEPARTMENT songs",
-   "title": "Taylor Swift: THE TORTURED POETS DEPARTMENT songs",
-   "items": [
-    {
-     "id": "k25d78df2-e24a-4631-a91e-0404b7a20991",
-     "name": "Fortnight",
-     "note": "Track 1"
-    },
-    {
-     "id": "k7fa114d8-c55e-4164-877b-0a9cecf01223",
-     "name": "The Tortured Poets Department",
-     "note": "Track 2"
-    },
-    {
-     "id": "ked33273c-312a-4215-9dfd-9048a777029b",
-     "name": "My Boy Only Breaks His Favorite Toys",
-     "note": "Track 3"
-    },
-    {
-     "id": "k72f6448e-5095-4511-b09f-0c0f8aacf90a",
-     "name": "Down Bad",
-     "note": "Track 4"
-    },
-    {
-     "id": "k07b1a290-4e42-4082-845e-2d463dd82fc9",
-     "name": "So Long, London",
-     "note": "Track 5"
-    },
-    {
-     "id": "kad1ca667-1e84-495b-abd8-8d43dc5af27a",
-     "name": "But Daddy I Love Him",
-     "note": "Track 6"
-    },
-    {
-     "id": "k557132b7-baad-4a3b-97b2-d7106fbb034c",
-     "name": "Fresh Out the Slammer",
-     "note": "Track 7"
-    },
-    {
-     "id": "k3fbaea5b-a1ae-427d-8eb8-701ab5bfc4bd",
-     "name": "Florida!!!",
-     "note": "Track 8"
-    },
-    {
-     "id": "k374d9147-6701-4283-bfd8-cf567d4f9c82",
-     "name": "Guilty as Sin?",
-     "note": "Track 9"
-    },
-    {
-     "id": "kdb2ca9d9-9ed4-480d-a373-57fdba626ef2",
-     "name": "Who’s Afraid of Little Old Me?",
-     "note": "Track 10"
-    },
-    {
-     "id": "ka933b7a0-9eea-478c-b914-59e2af833a10",
-     "name": "I Can Fix Him (No Really I Can)",
-     "note": "Track 11"
-    },
-    {
-     "id": "kabacf051-85f2-4c7e-9858-52b48697305e",
-     "name": "loml",
-     "note": "Track 12"
-    },
-    {
-     "id": "k57f01720-d7fb-4c37-ba3b-875117636f09",
-     "name": "I Can Do It With a Broken Heart",
-     "note": "Track 13"
-    },
-    {
-     "id": "k09013bf2-1e5b-45b9-8896-1959a1c8bf5a",
-     "name": "The Smallest Man Who Ever Lived",
-     "note": "Track 14"
-    },
-    {
-     "id": "k7f7ea4d7-31cd-4bc6-b70e-4343fbac5ac7",
-     "name": "The Alchemy",
-     "note": "Track 15"
-    },
-    {
-     "id": "k2dd0b9aa-5ac8-4556-ad4b-2eb8eb1bb900",
-     "name": "Clara Bow",
-     "note": "Track 16"
-    },
-    {
-     "id": "k04ac2df1-d15a-4eb0-a3f8-6938f32dacb8",
-     "name": "The Black Dog",
-     "note": "Track 17"
-    }
-   ]
-  },
-  {
    "id": "taylor-swift-the-life-of-a-showgirl-songs",
    "cat": "Music",
    "group": "Taylor Swift",
@@ -4096,8 +4002,8 @@
     {
      "id": "ctool-nima",
      "name": "Ænima",
-     "note": "Tool, 1996",
-     "img": "https://coverartarchive.org/release-group/ef1e8130-dd5f-336a-85fa-4936a47342bd/front-250",
+     "note": "Tool",
+     "img": null,
      "sq": true
     },
     {
@@ -4161,8 +4067,8 @@
     {
      "id": "cr-e-m-automatic-for-the-people",
      "name": "Automatic for the People",
-     "note": "R.E.M., 1992",
-     "img": "https://coverartarchive.org/release-group/c86c6af9-d10e-3079-b34b-30b682a797eb/front-250",
+     "note": "R.E.M.",
+     "img": null,
      "sq": true
     },
     {
@@ -4210,15 +4116,15 @@
     {
      "id": "coasis-what-s-the-story-morning-glory",
      "name": "(What's the Story) Morning Glory?",
-     "note": "Oasis, 1995",
-     "img": "https://coverartarchive.org/release-group/cc7e6348-cc55-31fa-aeb2-748a46a81cb3/front-250",
+     "note": "Oasis",
+     "img": null,
      "sq": true
     },
     {
      "id": "cfugees-the-score",
      "name": "The Score",
-     "note": "Fugees",
-     "img": null,
+     "note": "Fugees, 1996",
+     "img": "https://coverartarchive.org/release-group/dd2203dd-a149-316b-ad7f-a303dc4fc459/front-250",
      "sq": true
     },
     {
@@ -4382,15 +4288,15 @@
     {
      "id": "cadele-21",
      "name": "21",
-     "note": "Adele, 2011",
-     "img": "https://coverartarchive.org/release-group/e4174758-d333-4a8e-a31f-dd0edd51518e/front-250",
+     "note": "Adele",
+     "img": null,
      "sq": true
     },
     {
      "id": "ckendrick-lamar-good-kid-m-a-a-d-city",
      "name": "good kid, m.A.A.d city",
-     "note": "Kendrick Lamar",
-     "img": null,
+     "note": "Kendrick Lamar, 2012",
+     "img": "https://coverartarchive.org/release-group/499c19c8-0dab-4824-884b-6191d145e95b/front-250",
      "sq": true
     },
     {
@@ -4452,8 +4358,8 @@
     {
      "id": "csza-ctrl",
      "name": "Ctrl",
-     "note": "SZA, 2017",
-     "img": "https://coverartarchive.org/release-group/8f892c1b-0709-4cf4-9711-493892a9eb9b/front-250",
+     "note": "SZA",
+     "img": null,
      "sq": true
     },
     {
@@ -4466,8 +4372,8 @@
     {
      "id": "clana-del-rey-norman-fucking-rockwell",
      "name": "Norman Fucking Rockwell!",
-     "note": "Lana Del Rey, 2019",
-     "img": "https://coverartarchive.org/release-group/24fd0887-9e83-42e3-b27e-e7f89ead4c03/front-250",
+     "note": "Lana Del Rey",
+     "img": null,
      "sq": true
     }
    ]
