@@ -3,6 +3,7 @@
  "lists": [
   {
    "id": "leonardo-dicaprio-movies",
+   "src": "{\"type\":\"actor\",\"name\":\"Leonardo Dicaprio\"}",
    "cat": "Actors & directors",
    "title": "Leonardo DiCaprio movies",
    "items": [
@@ -100,6 +101,7 @@
   },
   {
    "id": "nicolas-cage-movies",
+   "src": "{\"type\":\"actor\",\"name\":\"Nicolas Cage\"}",
    "cat": "Actors & directors",
    "title": "Nicolas Cage movies",
    "items": [
@@ -197,6 +199,7 @@
   },
   {
    "id": "bruce-willis-movies",
+   "src": "{\"type\":\"actor\",\"name\":\"Bruce Willis\"}",
    "cat": "Actors & directors",
    "title": "Bruce Willis movies",
    "items": [
@@ -294,6 +297,7 @@
   },
   {
    "id": "matt-damon-movies",
+   "src": "{\"type\":\"actor\",\"name\":\"Matt Damon\"}",
    "cat": "Actors & directors",
    "title": "Matt Damon movies",
    "items": [
@@ -391,6 +395,7 @@
   },
   {
    "id": "films-directed-by-james-cameron",
+   "src": "{\"type\":\"director\",\"name\":\"James Cameron\"}",
    "cat": "Actors & directors",
    "title": "Films directed by James Cameron",
    "items": [
@@ -458,6 +463,7 @@
   },
   {
    "id": "films-directed-by-ridley-scott",
+   "src": "{\"type\":\"director\",\"name\":\"Ridley Scott\"}",
    "cat": "Actors & directors",
    "title": "Films directed by Ridley Scott",
    "items": [
@@ -555,6 +561,7 @@
   },
   {
    "id": "films-directed-by-christopher-nolan",
+   "src": "{\"type\":\"director\",\"name\":\"Christopher Nolan\"}",
    "cat": "Actors & directors",
    "title": "Films directed by Christopher Nolan",
    "items": [
@@ -646,6 +653,7 @@
   },
   {
    "id": "films-directed-by-steven-spielberg",
+   "src": "{\"type\":\"director\",\"name\":\"Steven Spielberg\"}",
    "cat": "Actors & directors",
    "title": "Films directed by Steven Spielberg",
    "items": [
@@ -743,6 +751,7 @@
   },
   {
    "id": "films-directed-by-kevin-smith",
+   "src": "{\"type\":\"director\",\"name\":\"Kevin Smith\"}",
    "cat": "Actors & directors",
    "title": "Films directed by Kevin Smith",
    "items": [
@@ -840,6 +849,7 @@
   },
   {
    "id": "harry-potter-films",
+   "src": "{\"type\":\"collection\",\"name\":\"Harry Potter\"}",
    "cat": "Franchises",
    "title": "Harry Potter films",
    "items": [
@@ -895,6 +905,7 @@
   },
   {
    "id": "mission-impossible-films",
+   "src": "{\"type\":\"collection\",\"name\":\"Mission: Impossible\"}",
    "cat": "Franchises",
    "title": "Mission: Impossible films",
    "items": [
@@ -950,6 +961,7 @@
   },
   {
    "id": "star-trek-films",
+   "src": "{\"type\":\"collection\",\"title\":\"Star Trek films\",\"names\":[\"Star Trek: The Original Series Collection\",\"Star Trek: The Next Generation Collection\",\"Star Trek: Alternate Reality Collection\"]}",
    "cat": "Franchises",
    "title": "Star Trek films",
    "items": [
@@ -1035,6 +1047,7 @@
   },
   {
    "id": "biggest-science-fiction-movies",
+   "src": "{\"type\":\"genre\",\"name\":\"Science Fiction\"}",
    "cat": "Genres",
    "title": "Biggest science fiction movies",
    "items": [
@@ -1132,6 +1145,7 @@
   },
   {
    "id": "biggest-horror-movies",
+   "src": "{\"type\":\"genre\",\"name\":\"Horror\"}",
    "cat": "Genres",
    "title": "Biggest horror movies",
    "items": [
@@ -1229,6 +1243,7 @@
   },
   {
    "id": "biggest-comedy-movies",
+   "src": "{\"type\":\"genre\",\"name\":\"Comedy\"}",
    "cat": "Genres",
    "title": "Biggest comedy movies",
    "items": [
@@ -1326,6 +1341,7 @@
   },
   {
    "id": "biggest-musical-movies",
+   "src": "{\"type\":\"keyword\",\"name\":\"musical\",\"title\":\"Biggest musical movies\"}",
    "cat": "Genres",
    "title": "Biggest musical movies",
    "items": [
@@ -1423,6 +1439,7 @@
   },
   {
    "id": "popular-kids-movies",
+   "src": "{\"type\":\"genre\",\"name\":\"Family\",\"title\":\"Popular kids' movies\"}",
    "cat": "Genres",
    "title": "Popular kids' movies",
    "items": [
@@ -1520,6 +1537,7 @@
   },
   {
    "id": "best-biopics",
+   "src": "{\"type\":\"keyword\",\"name\":\"biography\",\"title\":\"Best biopics\"}",
    "cat": "Genres",
    "title": "Best biopics",
    "items": [
@@ -1617,6 +1635,7 @@
   },
   {
    "id": "biggest-movies-of-1990",
+   "src": "{\"type\":\"year\",\"year\":1990}",
    "cat": "Movies by year",
    "group": "1990s",
    "short": "1990",
@@ -1716,6 +1735,7 @@
   },
   {
    "id": "biggest-movies-of-1991",
+   "src": "{\"type\":\"year\",\"year\":1991}",
    "cat": "Movies by year",
    "group": "1990s",
    "short": "1991",
@@ -1815,6 +1835,7 @@
   },
   {
    "id": "biggest-movies-of-1992",
+   "src": "{\"type\":\"year\",\"year\":1992}",
    "cat": "Movies by year",
    "group": "1990s",
    "short": "1992",
@@ -1914,6 +1935,7 @@
   },
   {
    "id": "biggest-movies-of-1993",
+   "src": "{\"type\":\"year\",\"year\":1993}",
    "cat": "Movies by year",
    "group": "1990s",
    "short": "1993",
@@ -2013,6 +2035,7 @@
   },
   {
    "id": "biggest-movies-of-1994",
+   "src": "{\"type\":\"year\",\"year\":1994}",
    "cat": "Movies by year",
    "group": "1990s",
    "short": "1994",
@@ -2112,6 +2135,7 @@
   },
   {
    "id": "biggest-movies-of-1995",
+   "src": "{\"type\":\"year\",\"year\":1995}",
    "cat": "Movies by year",
    "group": "1990s",
    "short": "1995",
@@ -2211,6 +2235,7 @@
   },
   {
    "id": "biggest-movies-of-1996",
+   "src": "{\"type\":\"year\",\"year\":1996}",
    "cat": "Movies by year",
    "group": "1990s",
    "short": "1996",
@@ -2310,6 +2335,7 @@
   },
   {
    "id": "biggest-movies-of-1997",
+   "src": "{\"type\":\"year\",\"year\":1997}",
    "cat": "Movies by year",
    "group": "1990s",
    "short": "1997",
@@ -2409,6 +2435,7 @@
   },
   {
    "id": "biggest-movies-of-1998",
+   "src": "{\"type\":\"year\",\"year\":1998}",
    "cat": "Movies by year",
    "group": "1990s",
    "short": "1998",
@@ -2508,6 +2535,7 @@
   },
   {
    "id": "biggest-movies-of-1999",
+   "src": "{\"type\":\"year\",\"year\":1999}",
    "cat": "Movies by year",
    "group": "1990s",
    "short": "1999",
@@ -2607,6 +2635,7 @@
   },
   {
    "id": "biggest-movies-of-2000",
+   "src": "{\"type\":\"year\",\"year\":2000}",
    "cat": "Movies by year",
    "group": "2000s",
    "short": "2000",
@@ -2706,6 +2735,7 @@
   },
   {
    "id": "biggest-movies-of-2001",
+   "src": "{\"type\":\"year\",\"year\":2001}",
    "cat": "Movies by year",
    "group": "2000s",
    "short": "2001",
@@ -2805,6 +2835,7 @@
   },
   {
    "id": "biggest-movies-of-2002",
+   "src": "{\"type\":\"year\",\"year\":2002}",
    "cat": "Movies by year",
    "group": "2000s",
    "short": "2002",
@@ -2904,6 +2935,7 @@
   },
   {
    "id": "biggest-movies-of-2003",
+   "src": "{\"type\":\"year\",\"year\":2003}",
    "cat": "Movies by year",
    "group": "2000s",
    "short": "2003",
@@ -3003,6 +3035,7 @@
   },
   {
    "id": "biggest-movies-of-2004",
+   "src": "{\"type\":\"year\",\"year\":2004}",
    "cat": "Movies by year",
    "group": "2000s",
    "short": "2004",
@@ -3102,6 +3135,7 @@
   },
   {
    "id": "biggest-movies-of-2005",
+   "src": "{\"type\":\"year\",\"year\":2005}",
    "cat": "Movies by year",
    "group": "2000s",
    "short": "2005",
@@ -3201,6 +3235,7 @@
   },
   {
    "id": "biggest-movies-of-2006",
+   "src": "{\"type\":\"year\",\"year\":2006}",
    "cat": "Movies by year",
    "group": "2000s",
    "short": "2006",
@@ -3300,6 +3335,7 @@
   },
   {
    "id": "biggest-movies-of-2007",
+   "src": "{\"type\":\"year\",\"year\":2007}",
    "cat": "Movies by year",
    "group": "2000s",
    "short": "2007",
@@ -3399,6 +3435,7 @@
   },
   {
    "id": "biggest-movies-of-2008",
+   "src": "{\"type\":\"year\",\"year\":2008}",
    "cat": "Movies by year",
    "group": "2000s",
    "short": "2008",
@@ -3498,6 +3535,7 @@
   },
   {
    "id": "biggest-movies-of-2009",
+   "src": "{\"type\":\"year\",\"year\":2009}",
    "cat": "Movies by year",
    "group": "2000s",
    "short": "2009",
@@ -3597,6 +3635,7 @@
   },
   {
    "id": "biggest-movies-of-2010",
+   "src": "{\"type\":\"year\",\"year\":2010}",
    "cat": "Movies by year",
    "group": "2010s",
    "short": "2010",
@@ -3696,6 +3735,7 @@
   },
   {
    "id": "biggest-movies-of-2011",
+   "src": "{\"type\":\"year\",\"year\":2011}",
    "cat": "Movies by year",
    "group": "2010s",
    "short": "2011",
@@ -3795,6 +3835,7 @@
   },
   {
    "id": "biggest-movies-of-2012",
+   "src": "{\"type\":\"year\",\"year\":2012}",
    "cat": "Movies by year",
    "group": "2010s",
    "short": "2012",
@@ -3894,6 +3935,7 @@
   },
   {
    "id": "biggest-movies-of-2013",
+   "src": "{\"type\":\"year\",\"year\":2013}",
    "cat": "Movies by year",
    "group": "2010s",
    "short": "2013",
@@ -3993,6 +4035,7 @@
   },
   {
    "id": "biggest-movies-of-2014",
+   "src": "{\"type\":\"year\",\"year\":2014}",
    "cat": "Movies by year",
    "group": "2010s",
    "short": "2014",
@@ -4092,6 +4135,7 @@
   },
   {
    "id": "biggest-movies-of-2015",
+   "src": "{\"type\":\"year\",\"year\":2015}",
    "cat": "Movies by year",
    "group": "2010s",
    "short": "2015",
@@ -4191,6 +4235,7 @@
   },
   {
    "id": "biggest-movies-of-2016",
+   "src": "{\"type\":\"year\",\"year\":2016}",
    "cat": "Movies by year",
    "group": "2010s",
    "short": "2016",
@@ -4290,6 +4335,7 @@
   },
   {
    "id": "biggest-movies-of-2017",
+   "src": "{\"type\":\"year\",\"year\":2017}",
    "cat": "Movies by year",
    "group": "2010s",
    "short": "2017",
@@ -4389,6 +4435,7 @@
   },
   {
    "id": "biggest-movies-of-2018",
+   "src": "{\"type\":\"year\",\"year\":2018}",
    "cat": "Movies by year",
    "group": "2010s",
    "short": "2018",
@@ -4488,6 +4535,7 @@
   },
   {
    "id": "biggest-movies-of-2019",
+   "src": "{\"type\":\"year\",\"year\":2019}",
    "cat": "Movies by year",
    "group": "2010s",
    "short": "2019",
@@ -4587,6 +4635,7 @@
   },
   {
    "id": "disney-princess-movies",
+   "src": "{\"type\":\"films\",\"cat\":\"Franchises\",\"title\":\"Disney princess movies\",\"picks\":[[\"Snow White and the Seven Dwarfs\",1937],[\"Cinderella\",1950],[\"Sleeping Beauty\",1959],[\"The Little Mermaid\",1989],[\"Beauty and the Beast\",1991],[\"Aladdin\",1992],[\"Pocahontas\",1995],[\"Mulan\",1998],[\"The Princess and the Frog\",2009],[\"Tangled\",2010],[\"Brave\",2012],[\"Frozen\",2013],[\"Moana\",2016],[\"Raya and the Last Dragon\",2021]]}",
    "cat": "Franchises",
    "title": "Disney princess movies",
    "items": [
@@ -4678,6 +4727,7 @@
   },
   {
    "id": "best-picture-winners-1990s",
+   "src": "{\"type\":\"films\",\"cat\":\"Awards\",\"group\":\"Best Picture winners\",\"short\":\"1990s\",\"title\":\"Best Picture winners: 1990s\",\"picks\":[[\"Dances with Wolves\",1990],[\"The Silence of the Lambs\",1991],[\"Unforgiven\",1992],[\"Schindler's List\",1993],[\"Forrest Gump\",1994],[\"Braveheart\",1995],[\"The English Patient\",1996],[\"Titanic\",1997],[\"Shakespeare in Love\",1998],[\"American Beauty\",1999]]}",
    "cat": "Awards",
    "group": "Best Picture winners",
    "short": "1990s",
@@ -4747,6 +4797,7 @@
   },
   {
    "id": "best-picture-winners-2000s",
+   "src": "{\"type\":\"films\",\"cat\":\"Awards\",\"group\":\"Best Picture winners\",\"short\":\"2000s\",\"title\":\"Best Picture winners: 2000s\",\"picks\":[[\"Gladiator\",2000],[\"A Beautiful Mind\",2001],[\"Chicago\",2002],[\"The Lord of the Rings: The Return of the King\",2003],[\"Million Dollar Baby\",2004],[\"Crash\",2005],[\"The Departed\",2006],[\"No Country for Old Men\",2007],[\"Slumdog Millionaire\",2008],[\"The Hurt Locker\",2008]]}",
    "cat": "Awards",
    "group": "Best Picture winners",
    "short": "2000s",
@@ -4816,6 +4867,7 @@
   },
   {
    "id": "best-picture-winners-2010s",
+   "src": "{\"type\":\"films\",\"cat\":\"Awards\",\"group\":\"Best Picture winners\",\"short\":\"2010s\",\"title\":\"Best Picture winners: 2010s\",\"picks\":[[\"The King's Speech\",2010],[\"The Artist\",2011],[\"Argo\",2012],[\"12 Years a Slave\",2013],[\"Birdman\",2014],[\"Spotlight\",2015],[\"Moonlight\",2016],[\"The Shape of Water\",2017],[\"Green Book\",2018],[\"Parasite\",2019]]}",
    "cat": "Awards",
    "group": "Best Picture winners",
    "short": "2010s",
@@ -4885,6 +4937,7 @@
   },
   {
    "id": "taylor-swift-albums",
+   "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
    "group": "Taylor Swift",
    "short": "Albums",
@@ -5006,6 +5059,7 @@
   },
   {
    "id": "taylor-swift-taylor-swift-songs",
+   "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
    "group": "Taylor Swift",
    "short": "Taylor Swift songs",
@@ -5070,6 +5124,7 @@
   },
   {
    "id": "taylor-swift-fearless-songs",
+   "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
    "group": "Taylor Swift",
    "short": "Fearless songs",
@@ -5144,6 +5199,7 @@
   },
   {
    "id": "taylor-swift-speak-now-songs",
+   "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
    "group": "Taylor Swift",
    "short": "Speak Now songs",
@@ -5223,6 +5279,7 @@
   },
   {
    "id": "taylor-swift-red-songs",
+   "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
    "group": "Taylor Swift",
    "short": "Red songs",
@@ -5342,6 +5399,7 @@
   },
   {
    "id": "taylor-swift-1989-songs",
+   "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
    "group": "Taylor Swift",
    "short": "1989 songs",
@@ -5446,6 +5504,7 @@
   },
   {
    "id": "taylor-swift-reputation-songs",
+   "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
    "group": "Taylor Swift",
    "short": "reputation songs",
@@ -5530,6 +5589,7 @@
   },
   {
    "id": "taylor-swift-lover-songs",
+   "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
    "group": "Taylor Swift",
    "short": "Lover songs",
@@ -5639,6 +5699,7 @@
   },
   {
    "id": "taylor-swift-folklore-songs",
+   "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
    "group": "Taylor Swift",
    "short": "folklore songs",
@@ -5733,6 +5794,7 @@
   },
   {
    "id": "taylor-swift-evermore-songs",
+   "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
    "group": "Taylor Swift",
    "short": "evermore songs",
@@ -5817,6 +5879,7 @@
   },
   {
    "id": "taylor-swift-fearless-taylor-s-version-songs",
+   "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
    "group": "Taylor Swift",
    "short": "Fearless (Taylor’s Version) songs",
@@ -5961,6 +6024,7 @@
   },
   {
    "id": "taylor-swift-red-taylor-s-version-songs",
+   "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
    "group": "Taylor Swift",
    "short": "Red (Taylor’s Version) songs",
@@ -6120,6 +6184,7 @@
   },
   {
    "id": "taylor-swift-midnights-songs",
+   "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
    "group": "Taylor Swift",
    "short": "Midnights songs",
@@ -6229,6 +6294,7 @@
   },
   {
    "id": "taylor-swift-speak-now-taylor-s-version-songs",
+   "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
    "group": "Taylor Swift",
    "short": "Speak Now (Taylor’s Version) songs",
@@ -6348,6 +6414,7 @@
   },
   {
    "id": "taylor-swift-1989-taylor-s-version-songs",
+   "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
    "group": "Taylor Swift",
    "short": "1989 (Taylor’s Version) songs",
@@ -6462,6 +6529,7 @@
   },
   {
    "id": "taylor-swift-the-tortured-poets-department-songs",
+   "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
    "group": "Taylor Swift",
    "short": "THE TORTURED POETS DEPARTMENT songs",
@@ -6556,6 +6624,7 @@
   },
   {
    "id": "taylor-swift-the-life-of-a-showgirl-songs",
+   "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
    "group": "Taylor Swift",
    "short": "The Life of a Showgirl songs",
@@ -6624,7 +6693,102 @@
    ]
   },
   {
+   "id": "sleater-kinney-albums",
+   "src": "{\"type\":\"albums\",\"name\":\"Sleater-Kinney\"}",
+   "cat": "Music",
+   "group": "Sleater‐Kinney",
+   "short": "Albums",
+   "title": "Sleater‐Kinney albums",
+   "items": [
+    {
+     "id": "ae652c8d0-a4fa-35a0-afaf-01860fe2bdf6",
+     "name": "Sleater-Kinney",
+     "note": "1995",
+     "img": "https://coverartarchive.org/release-group/e652c8d0-a4fa-35a0-afaf-01860fe2bdf6/front-250",
+     "sq": true
+    },
+    {
+     "id": "a3da3cb84-2196-34bf-a67b-f9e4ee22ae76",
+     "name": "Call the Doctor",
+     "note": "1996",
+     "img": "https://coverartarchive.org/release-group/3da3cb84-2196-34bf-a67b-f9e4ee22ae76/front-250",
+     "sq": true
+    },
+    {
+     "id": "a209b45b7-8b2f-3e07-b194-efff9cde80dd",
+     "name": "Dig Me Out",
+     "note": "1997",
+     "img": "https://coverartarchive.org/release-group/209b45b7-8b2f-3e07-b194-efff9cde80dd/front-250",
+     "sq": true
+    },
+    {
+     "id": "aeaefa29b-e02a-3b28-836f-2641670d455b",
+     "name": "The Hot Rock",
+     "note": "1999",
+     "img": "https://coverartarchive.org/release-group/eaefa29b-e02a-3b28-836f-2641670d455b/front-250",
+     "sq": true
+    },
+    {
+     "id": "a1e6a0fd9-8c91-3ee7-941a-4af11765f25d",
+     "name": "All Hands on the Bad One",
+     "note": "2000",
+     "img": "https://coverartarchive.org/release-group/1e6a0fd9-8c91-3ee7-941a-4af11765f25d/front-250",
+     "sq": true
+    },
+    {
+     "id": "a55f3d073-ec82-3cb2-a1d8-0f47aa639ad2",
+     "name": "One Beat",
+     "note": "2002",
+     "img": "https://coverartarchive.org/release-group/55f3d073-ec82-3cb2-a1d8-0f47aa639ad2/front-250",
+     "sq": true
+    },
+    {
+     "id": "ab7d0d3f5-8980-32c6-995d-db6f8226f1ca",
+     "name": "The Woods",
+     "note": "2005",
+     "img": "https://coverartarchive.org/release-group/b7d0d3f5-8980-32c6-995d-db6f8226f1ca/front-250",
+     "sq": true
+    },
+    {
+     "id": "aaeacebc7-34fc-44ff-bde9-779e6fde7ade",
+     "name": "No Cities to Love",
+     "note": "2015",
+     "img": "https://coverartarchive.org/release-group/aeacebc7-34fc-44ff-bde9-779e6fde7ade/front-250",
+     "sq": true
+    },
+    {
+     "id": "a474906cf-88cc-414e-9b50-e8112dd44431",
+     "name": "The Center Won’t Hold",
+     "note": "2019",
+     "img": "https://coverartarchive.org/release-group/474906cf-88cc-414e-9b50-e8112dd44431/front-250",
+     "sq": true
+    },
+    {
+     "id": "a66018a12-50af-4274-be9c-16706fc60507",
+     "name": "Path of Wellness",
+     "note": "2021",
+     "img": "https://coverartarchive.org/release-group/66018a12-50af-4274-be9c-16706fc60507/front-250",
+     "sq": true
+    },
+    {
+     "id": "a369bf9b7-87e3-48f1-9b8e-03033428cb3e",
+     "name": "Dig Me In: A Dig Me Out Covers Album",
+     "note": "2022",
+     "img": "https://coverartarchive.org/release-group/369bf9b7-87e3-48f1-9b8e-03033428cb3e/front-250",
+     "sq": true
+    },
+    {
+     "id": "aebfca4fe-da13-4edc-818a-1facf255d0fc",
+     "name": "Little Rope",
+     "note": "2024",
+     "img": "https://coverartarchive.org/release-group/ebfca4fe-da13-4edc-818a-1facf255d0fc/front-250",
+     "sq": true
+    }
+   ]
+  },
+  {
    "id": "metallica-albums",
+   "src": "{\"type\":\"albums\",\"name\":\"Metallica\"}",
    "cat": "Music",
    "group": "Metallica",
    "short": "Albums",
@@ -6717,7 +6881,890 @@
    ]
   },
   {
+   "id": "lorde-pure-heroine-songs",
+   "src": "{\"type\":\"tracks\",\"artist\":\"Lorde\",\"albums\":[\"Pure Heroine\",\"Melodrama\",\"Virgin\"]}",
+   "cat": "Music",
+   "group": "Lorde",
+   "short": "Pure Heroine songs",
+   "title": "Lorde: Pure Heroine songs",
+   "items": [
+    {
+     "id": "k473f4df0-d28a-4076-969b-8aa202b629ce",
+     "name": "Tennis Court",
+     "note": "Track 1"
+    },
+    {
+     "id": "k077964e9-ab23-4837-a0af-bd8cd56727a5",
+     "name": "400 Lux",
+     "note": "Track 2"
+    },
+    {
+     "id": "k3d8850b4-675b-4f4d-be93-29aea1e4c05a",
+     "name": "Royals",
+     "note": "Track 3"
+    },
+    {
+     "id": "ke852597e-6ffd-4e71-af08-3b80a26d0de4",
+     "name": "Ribs",
+     "note": "Track 4"
+    },
+    {
+     "id": "k9a9830c2-fe31-4125-b7cd-654d02544b13",
+     "name": "Buzzcut Season",
+     "note": "Track 5"
+    },
+    {
+     "id": "k17c3c062-ea12-4a90-8b12-682f55fe7519",
+     "name": "Team",
+     "note": "Track 6"
+    },
+    {
+     "id": "kd6bfac51-de25-4543-ab43-2ad8c68bdc06",
+     "name": "Glory and Gore",
+     "note": "Track 7"
+    },
+    {
+     "id": "kac22a804-049a-4985-b7a1-7a7602e61ffe",
+     "name": "Still Sane",
+     "note": "Track 8"
+    },
+    {
+     "id": "kb1b4d33f-b67b-4428-9843-3453e8a480ab",
+     "name": "White Teeth Teens",
+     "note": "Track 9"
+    },
+    {
+     "id": "k1ed44183-b663-4ba4-8487-aad42fd1f5d3",
+     "name": "A World Alone",
+     "note": "Track 10"
+    }
+   ]
+  },
+  {
+   "id": "lorde-melodrama-songs",
+   "src": "{\"type\":\"tracks\",\"artist\":\"Lorde\",\"albums\":[\"Pure Heroine\",\"Melodrama\",\"Virgin\"]}",
+   "cat": "Music",
+   "group": "Lorde",
+   "short": "Melodrama songs",
+   "title": "Lorde: Melodrama songs",
+   "items": [
+    {
+     "id": "k353b798f-4462-4dd4-9928-c2ee4fcf00c4",
+     "name": "Green Light",
+     "note": "Track 1"
+    },
+    {
+     "id": "k58b6a497-f9ef-4b25-91f2-cb7aa6e77408",
+     "name": "Sober",
+     "note": "Track 2"
+    },
+    {
+     "id": "k7e87be87-5a96-4d13-872b-ee930effa451",
+     "name": "Homemade Dynamite",
+     "note": "Track 3"
+    },
+    {
+     "id": "k915e81d4-b3c2-4408-901d-37f3d9a340d2",
+     "name": "The Louvre",
+     "note": "Track 4"
+    },
+    {
+     "id": "k0b9f55b7-4efa-49f8-91a0-991068e0f157",
+     "name": "Liability",
+     "note": "Track 5"
+    },
+    {
+     "id": "k2bdd80a5-2f33-42dd-9247-92ad6bf52f00",
+     "name": "Hard Feelings/Loveless",
+     "note": "Track 6"
+    },
+    {
+     "id": "ka3b45af8-d70e-4049-8e9e-78e1e738c899",
+     "name": "Sober II (Melodrama)",
+     "note": "Track 7"
+    },
+    {
+     "id": "k5fef4ac9-68b2-4793-89fb-e47198bf7d86",
+     "name": "Writer in the Dark",
+     "note": "Track 8"
+    },
+    {
+     "id": "k5e584069-6733-4a93-b44e-56370ac0cc72",
+     "name": "Supercut",
+     "note": "Track 9"
+    },
+    {
+     "id": "k76c02fd6-aa9f-4c0b-8c52-4a5a917c35aa",
+     "name": "Liability (reprise)",
+     "note": "Track 10"
+    },
+    {
+     "id": "k25a5e8b8-0bd1-4db2-a1b1-dc4bdb74c49a",
+     "name": "Perfect Places",
+     "note": "Track 11"
+    }
+   ]
+  },
+  {
+   "id": "lorde-virgin-songs",
+   "src": "{\"type\":\"tracks\",\"artist\":\"Lorde\",\"albums\":[\"Pure Heroine\",\"Melodrama\",\"Virgin\"]}",
+   "cat": "Music",
+   "group": "Lorde",
+   "short": "Virgin songs",
+   "title": "Lorde: Virgin songs",
+   "items": [
+    {
+     "id": "k2c26cdb7-d4dd-4e99-8f15-bef626370c7f",
+     "name": "Hammer",
+     "note": "Track 1"
+    },
+    {
+     "id": "k5c98c389-851c-4eca-bc0c-66cd2f6944ce",
+     "name": "What Was That",
+     "note": "Track 2"
+    },
+    {
+     "id": "k18200933-0604-4e40-9350-3fcfa8489eb5",
+     "name": "Shapeshifter",
+     "note": "Track 3"
+    },
+    {
+     "id": "k08612490-86dd-4f66-99dc-9a7b356ea7ab",
+     "name": "Man of the Year",
+     "note": "Track 4"
+    },
+    {
+     "id": "k078e7673-151e-46a6-8473-474ad0f0c4e7",
+     "name": "Favourite Daughter",
+     "note": "Track 5"
+    },
+    {
+     "id": "kb8c60bfc-651f-4044-9d16-c4acb8845542",
+     "name": "Current Affairs",
+     "note": "Track 6"
+    },
+    {
+     "id": "k09b92a4b-6fea-4068-9298-680c52d6d254",
+     "name": "Clearblue",
+     "note": "Track 7"
+    },
+    {
+     "id": "k63b69064-8362-4cfe-8220-4b8b906ae1d4",
+     "name": "GRWM",
+     "note": "Track 8"
+    },
+    {
+     "id": "k17627900-5f8f-41f6-96a4-fae401d4fa7e",
+     "name": "Broken Glass",
+     "note": "Track 9"
+    },
+    {
+     "id": "k4eb8a2e7-4f90-4763-91ad-58c69cd5fa93",
+     "name": "If She Could See Me Now",
+     "note": "Track 10"
+    },
+    {
+     "id": "k23a901de-8af0-4a5d-aa5b-2f6b188b9a6b",
+     "name": "David",
+     "note": "Track 11"
+    }
+   ]
+  },
+  {
+   "id": "spice-girls-singles",
+   "src": "{\"type\":\"singles\",\"name\":\"Spice Girls\"}",
+   "cat": "Music",
+   "group": "Spice Girls",
+   "short": "Singles",
+   "title": "Spice Girls singles",
+   "items": [
+    {
+     "id": "gb50ee798-2b55-3c1b-9d67-f8d0d8395732",
+     "name": "Wannabe",
+     "note": "1996",
+     "img": "https://coverartarchive.org/release-group/b50ee798-2b55-3c1b-9d67-f8d0d8395732/front-250",
+     "sq": true
+    },
+    {
+     "id": "g83ffb3a7-c3f5-393f-a9ce-fceb00bb9f8c",
+     "name": "Say You’ll Be There",
+     "note": "1996",
+     "img": "https://coverartarchive.org/release-group/83ffb3a7-c3f5-393f-a9ce-fceb00bb9f8c/front-250",
+     "sq": true
+    },
+    {
+     "id": "g3cc8d134-469e-33dd-9979-61ecf5061977",
+     "name": "2 Become 1",
+     "note": "1996",
+     "img": "https://coverartarchive.org/release-group/3cc8d134-469e-33dd-9979-61ecf5061977/front-250",
+     "sq": true
+    },
+    {
+     "id": "g2a90dc8e-a859-4941-854e-ca33c1c170bb",
+     "name": "Stop",
+     "note": "1997",
+     "img": "https://coverartarchive.org/release-group/2a90dc8e-a859-4941-854e-ca33c1c170bb/front-250",
+     "sq": true
+    },
+    {
+     "id": "gcc4c71b2-905f-3ddb-935b-103303680188",
+     "name": "Mama / Who Do You Think You Are",
+     "note": "1997",
+     "img": "https://coverartarchive.org/release-group/cc4c71b2-905f-3ddb-935b-103303680188/front-250",
+     "sq": true
+    },
+    {
+     "id": "g711ff5d9-902e-3b21-b94d-2782e4ce8da3",
+     "name": "Step to Me",
+     "note": "1997",
+     "img": "https://coverartarchive.org/release-group/711ff5d9-902e-3b21-b94d-2782e4ce8da3/front-250",
+     "sq": true
+    },
+    {
+     "id": "gaa8274d8-b201-4a1b-a03b-5e3d48f50f23",
+     "name": "Spice Up Your Life",
+     "note": "1997",
+     "img": "https://coverartarchive.org/release-group/aa8274d8-b201-4a1b-a03b-5e3d48f50f23/front-250",
+     "sq": true
+    },
+    {
+     "id": "g3552c358-a897-3570-be8d-12deb3ceb15f",
+     "name": "Too Much",
+     "note": "1997",
+     "img": "https://coverartarchive.org/release-group/3552c358-a897-3570-be8d-12deb3ceb15f/front-250",
+     "sq": true
+    },
+    {
+     "id": "gb245541b-41b7-3ad6-bb80-86028adeb3b3",
+     "name": "Viva Forever",
+     "note": "1998",
+     "img": "https://coverartarchive.org/release-group/b245541b-41b7-3ad6-bb80-86028adeb3b3/front-250",
+     "sq": true
+    },
+    {
+     "id": "g8c66ffff-4f95-3d9b-9286-574123e6063d",
+     "name": "Goodbye",
+     "note": "1998",
+     "img": "https://coverartarchive.org/release-group/8c66ffff-4f95-3d9b-9286-574123e6063d/front-250",
+     "sq": true
+    },
+    {
+     "id": "g2d7b5820-ea2f-434a-af7c-dd751b2fa25f",
+     "name": "It’s Only Rock ’n’ Roll",
+     "note": "1999",
+     "img": "https://coverartarchive.org/release-group/2d7b5820-ea2f-434a-af7c-dd751b2fa25f/front-250",
+     "sq": true
+    },
+    {
+     "id": "g9efe465a-7752-3a17-bdc6-c008ce8fc63e",
+     "name": "Holler / Let Love Lead the Way",
+     "note": "2000",
+     "img": "https://coverartarchive.org/release-group/9efe465a-7752-3a17-bdc6-c008ce8fc63e/front-250",
+     "sq": true
+    },
+    {
+     "id": "g741e5371-7f73-3e97-b539-cc803734a060",
+     "name": "Headlines (Friendship Never Ends)",
+     "note": "2007",
+     "img": "https://coverartarchive.org/release-group/741e5371-7f73-3e97-b539-cc803734a060/front-250",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "one-direction-singles",
+   "src": "{\"type\":\"singles\",\"name\":\"One Direction\"}",
+   "cat": "Music",
+   "group": "One Direction",
+   "short": "Singles",
+   "title": "One Direction singles",
+   "items": [
+    {
+     "id": "gc411302a-56bd-46b4-a6fe-01a229468809",
+     "name": "Viva la vida",
+     "note": "2010",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "g5ebb2e98-2a69-4d2e-81e0-602281c75c9b",
+     "name": "My Life Would Suck Without You",
+     "note": "2010",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "g6b7ffc1e-3e90-4f25-bb5e-34a759de96b8",
+     "name": "Nobody Knows",
+     "note": "2010",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "g244cce05-3569-4aff-b647-486005b057c2",
+     "name": "Total Eclipse of the Heart",
+     "note": "2010",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "g40dbeec7-c043-49f9-8e0a-dceb0bc85330",
+     "name": "Kids in America",
+     "note": "2010",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "gd3e19042-243c-4058-9d98-6e8bed2c57e6",
+     "name": "Something About the Way You Look Tonight",
+     "note": "2010",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "g244a66f0-edf4-4d0b-9633-e7d282538fc6",
+     "name": "All You Need Is Love",
+     "note": "2010",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "g4b5d1519-9ab6-4030-b665-4fc9570fdfd6",
+     "name": "Summer of '69",
+     "note": "2010",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "ge45afcfb-8166-41b1-bb80-b75058c7023c",
+     "name": "You Are So Beautiful",
+     "note": "2010",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "g0e5d3149-0a19-413a-beb2-66df4328929c",
+     "name": "Only Girl (in the World)",
+     "note": "2010",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "g94a6c7f0-b589-47ca-ab78-f8b57c03577f",
+     "name": "Chasing Cars",
+     "note": "2010",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "g909dd6cd-8967-4188-b61f-2fbba318c128",
+     "name": "Your Song",
+     "note": "2010",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "g071db04a-36fe-46aa-a81a-8987486de85f",
+     "name": "One Thing",
+     "note": "2011",
+     "img": "https://coverartarchive.org/release-group/071db04a-36fe-46aa-a81a-8987486de85f/front-250",
+     "sq": true
+    },
+    {
+     "id": "gfe620afc-3426-48fc-90b8-50d4d873d02f",
+     "name": "What Makes You Beautiful",
+     "note": "2011",
+     "img": "https://coverartarchive.org/release-group/fe620afc-3426-48fc-90b8-50d4d873d02f/front-250",
+     "sq": true
+    },
+    {
+     "id": "g5d3053f6-dc7c-4a9f-be1b-2bfb546f1dd3",
+     "name": "Forever Young",
+     "note": "2011",
+     "img": "https://coverartarchive.org/release-group/5d3053f6-dc7c-4a9f-be1b-2bfb546f1dd3/front-250",
+     "sq": true
+    },
+    {
+     "id": "gd715a038-31fb-486b-bc5c-d4e4020e47f5",
+     "name": "Gotta Be You",
+     "note": "2011",
+     "img": "https://coverartarchive.org/release-group/d715a038-31fb-486b-bc5c-d4e4020e47f5/front-250",
+     "sq": true
+    },
+    {
+     "id": "gb2e8ae67-d11a-4e61-be1f-58b5040b8cbd",
+     "name": "Wishing on a Star",
+     "note": "2011",
+     "img": "https://coverartarchive.org/release-group/b2e8ae67-d11a-4e61-be1f-58b5040b8cbd/front-250",
+     "sq": true
+    },
+    {
+     "id": "g06822cd3-5c22-4ff3-a5ca-e866622fc5a0",
+     "name": "More Than This",
+     "note": "2012",
+     "img": "https://coverartarchive.org/release-group/06822cd3-5c22-4ff3-a5ca-e866622fc5a0/front-250",
+     "sq": true
+    },
+    {
+     "id": "gb1181ecc-1dbe-4cb0-bd95-6c8b83a8094d",
+     "name": "Live While We’re Young",
+     "note": "2012",
+     "img": "https://coverartarchive.org/release-group/b1181ecc-1dbe-4cb0-bd95-6c8b83a8094d/front-250",
+     "sq": true
+    },
+    {
+     "id": "g3d7ddcfe-f2cc-4980-aaca-2c1d5dfa1a71",
+     "name": "Kiss You",
+     "note": "2013",
+     "img": "https://coverartarchive.org/release-group/3d7ddcfe-f2cc-4980-aaca-2c1d5dfa1a71/front-250",
+     "sq": true
+    },
+    {
+     "id": "g956bbcc6-7417-47d5-b7ba-46903af5ea6c",
+     "name": "One Way or Another (Teenage Kicks)",
+     "note": "2013",
+     "img": "https://coverartarchive.org/release-group/956bbcc6-7417-47d5-b7ba-46903af5ea6c/front-250",
+     "sq": true
+    },
+    {
+     "id": "gf98f6fb2-0ce2-467a-a32c-2da684b8d9bb",
+     "name": "Best Song Ever",
+     "note": "2013",
+     "img": "https://coverartarchive.org/release-group/f98f6fb2-0ce2-467a-a32c-2da684b8d9bb/front-250",
+     "sq": true
+    },
+    {
+     "id": "g758a48af-9704-4632-96cf-7803492a9b9f",
+     "name": "Story of My Life",
+     "note": "2013",
+     "img": "https://coverartarchive.org/release-group/758a48af-9704-4632-96cf-7803492a9b9f/front-250",
+     "sq": true
+    },
+    {
+     "id": "gc5f3f1ad-6eff-457c-8d55-09f4b468cb68",
+     "name": "Midnight Memories",
+     "note": "2014",
+     "img": "https://coverartarchive.org/release-group/c5f3f1ad-6eff-457c-8d55-09f4b468cb68/front-250",
+     "sq": true
+    },
+    {
+     "id": "g7f9cf461-b7c9-4442-8aa6-501e2291656d",
+     "name": "You & I",
+     "note": "2014",
+     "img": "https://coverartarchive.org/release-group/7f9cf461-b7c9-4442-8aa6-501e2291656d/front-250",
+     "sq": true
+    },
+    {
+     "id": "g9faa05ec-fddd-4b46-afd3-01c536f7b1fb",
+     "name": "Steal My Girl",
+     "note": "2014",
+     "img": "https://coverartarchive.org/release-group/9faa05ec-fddd-4b46-afd3-01c536f7b1fb/front-250",
+     "sq": true
+    },
+    {
+     "id": "g22a88671-6e07-4a08-8cc4-daf121d52ecd",
+     "name": "Fireproof",
+     "note": "2014",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "g28b8bcca-b09f-4f77-8f92-acbc772cd04b",
+     "name": "Night Changes",
+     "note": "2014",
+     "img": "https://coverartarchive.org/release-group/28b8bcca-b09f-4f77-8f92-acbc772cd04b/front-250",
+     "sq": true
+    },
+    {
+     "id": "g20442cf0-8dde-4477-8e25-2592f1a639ba",
+     "name": "Drag Me Down",
+     "note": "2015",
+     "img": "https://coverartarchive.org/release-group/20442cf0-8dde-4477-8e25-2592f1a639ba/front-250",
+     "sq": true
+    },
+    {
+     "id": "g5b645e88-a60f-4d8a-9c6e-b6236e65b3d4",
+     "name": "Perfect",
+     "note": "2015",
+     "img": "https://coverartarchive.org/release-group/5b645e88-a60f-4d8a-9c6e-b6236e65b3d4/front-250",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "top-k-pop-boy-groups",
+   "src": "{\"type\":\"names\",\"title\":\"Top K-pop boy groups\",\"short\":\"K-pop boy groups\",\"picks\":[\"BTS\",\"EXO\",\"SEVENTEEN\",\"Stray Kids\",\"TOMORROW X TOGETHER\",\"ENHYPEN\",\"NCT 127\",\"NCT DREAM\",\"ATEEZ\",\"BIGBANG\",\"SHINee\",\"GOT7\",\"MONSTA X\",\"Super Junior\",\"TVXQ\"]}",
+   "cat": "Music",
+   "group": "Top artists",
+   "short": "K-pop boy groups",
+   "title": "Top K-pop boy groups",
+   "items": [
+    {
+     "id": "nbts",
+     "name": "BTS",
+     "sq": true
+    },
+    {
+     "id": "nexo",
+     "name": "EXO",
+     "sq": true
+    },
+    {
+     "id": "nseventeen",
+     "name": "SEVENTEEN",
+     "sq": true
+    },
+    {
+     "id": "nstray-kids",
+     "name": "Stray Kids",
+     "sq": true
+    },
+    {
+     "id": "ntomorrow-x-together",
+     "name": "TOMORROW X TOGETHER",
+     "sq": true
+    },
+    {
+     "id": "nenhypen",
+     "name": "ENHYPEN",
+     "sq": true
+    },
+    {
+     "id": "nnct-127",
+     "name": "NCT 127",
+     "sq": true
+    },
+    {
+     "id": "nnct-dream",
+     "name": "NCT DREAM",
+     "sq": true
+    },
+    {
+     "id": "nateez",
+     "name": "ATEEZ",
+     "sq": true
+    },
+    {
+     "id": "nbigbang",
+     "name": "BIGBANG",
+     "sq": true
+    },
+    {
+     "id": "nshinee",
+     "name": "SHINee",
+     "sq": true
+    },
+    {
+     "id": "ngot7",
+     "name": "GOT7",
+     "sq": true
+    },
+    {
+     "id": "nmonsta-x",
+     "name": "MONSTA X",
+     "sq": true
+    },
+    {
+     "id": "nsuper-junior",
+     "name": "Super Junior",
+     "sq": true
+    },
+    {
+     "id": "ntvxq",
+     "name": "TVXQ",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "top-k-pop-girl-groups",
+   "src": "{\"type\":\"names\",\"title\":\"Top K-pop girl groups\",\"short\":\"K-pop girl groups\",\"picks\":[\"BLACKPINK\",\"TWICE\",\"Girls' Generation\",\"Red Velvet\",\"NewJeans\",\"aespa\",\"IVE\",\"LE SSERAFIM\",\"ITZY\",\"(G)I-DLE\",\"MAMAMOO\",\"2NE1\",\"Wonder Girls\",\"KARA\",\"BABYMONSTER\"]}",
+   "cat": "Music",
+   "group": "Top artists",
+   "short": "K-pop girl groups",
+   "title": "Top K-pop girl groups",
+   "items": [
+    {
+     "id": "nblackpink",
+     "name": "BLACKPINK",
+     "sq": true
+    },
+    {
+     "id": "ntwice",
+     "name": "TWICE",
+     "sq": true
+    },
+    {
+     "id": "ngirls-generation",
+     "name": "Girls' Generation",
+     "sq": true
+    },
+    {
+     "id": "nred-velvet",
+     "name": "Red Velvet",
+     "sq": true
+    },
+    {
+     "id": "nnewjeans",
+     "name": "NewJeans",
+     "sq": true
+    },
+    {
+     "id": "naespa",
+     "name": "aespa",
+     "sq": true
+    },
+    {
+     "id": "nive",
+     "name": "IVE",
+     "sq": true
+    },
+    {
+     "id": "nle-sserafim",
+     "name": "LE SSERAFIM",
+     "sq": true
+    },
+    {
+     "id": "nitzy",
+     "name": "ITZY",
+     "sq": true
+    },
+    {
+     "id": "ng-i-dle",
+     "name": "(G)I-DLE",
+     "sq": true
+    },
+    {
+     "id": "nmamamoo",
+     "name": "MAMAMOO",
+     "sq": true
+    },
+    {
+     "id": "n2ne1",
+     "name": "2NE1",
+     "sq": true
+    },
+    {
+     "id": "nwonder-girls",
+     "name": "Wonder Girls",
+     "sq": true
+    },
+    {
+     "id": "nkara",
+     "name": "KARA",
+     "sq": true
+    },
+    {
+     "id": "nbabymonster",
+     "name": "BABYMONSTER",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "dream-academy-contestants",
+   "src": "{\"type\":\"names\",\"title\":\"Dream Academy contestants\",\"short\":\"Dream Academy contestants\",\"picks\":[[\"Sophia\",\"KATSEYE\"],[\"Lara\",\"KATSEYE\"],[\"Yoonchae\",\"KATSEYE\"],[\"Megan\",\"KATSEYE\"],[\"Daniela\",\"KATSEYE\"],[\"Manon\",\"KATSEYE\"],\"Emily\",\"Ezrela\",\"Marquise\",\"Samara\",\"Nayoung\",\"Ua\",\"Celeste\",\"Brooklyn\",\"Karlee\",\"Iliya\",\"Mei\",\"Hinari\",\"Adéla\",\"Lexie\"]}",
+   "cat": "Music",
+   "group": "Top artists",
+   "short": "Dream Academy contestants",
+   "title": "Dream Academy contestants",
+   "items": [
+    {
+     "id": "nsophia",
+     "name": "Sophia",
+     "note": "KATSEYE",
+     "sq": true
+    },
+    {
+     "id": "nlara",
+     "name": "Lara",
+     "note": "KATSEYE",
+     "sq": true
+    },
+    {
+     "id": "nyoonchae",
+     "name": "Yoonchae",
+     "note": "KATSEYE",
+     "sq": true
+    },
+    {
+     "id": "nmegan",
+     "name": "Megan",
+     "note": "KATSEYE",
+     "sq": true
+    },
+    {
+     "id": "ndaniela",
+     "name": "Daniela",
+     "note": "KATSEYE",
+     "sq": true
+    },
+    {
+     "id": "nmanon",
+     "name": "Manon",
+     "note": "KATSEYE",
+     "sq": true
+    },
+    {
+     "id": "nemily",
+     "name": "Emily",
+     "sq": true
+    },
+    {
+     "id": "nezrela",
+     "name": "Ezrela",
+     "sq": true
+    },
+    {
+     "id": "nmarquise",
+     "name": "Marquise",
+     "sq": true
+    },
+    {
+     "id": "nsamara",
+     "name": "Samara",
+     "sq": true
+    },
+    {
+     "id": "nnayoung",
+     "name": "Nayoung",
+     "sq": true
+    },
+    {
+     "id": "nua",
+     "name": "Ua",
+     "sq": true
+    },
+    {
+     "id": "nceleste",
+     "name": "Celeste",
+     "sq": true
+    },
+    {
+     "id": "nbrooklyn",
+     "name": "Brooklyn",
+     "sq": true
+    },
+    {
+     "id": "nkarlee",
+     "name": "Karlee",
+     "sq": true
+    },
+    {
+     "id": "niliya",
+     "name": "Iliya",
+     "sq": true
+    },
+    {
+     "id": "nmei",
+     "name": "Mei",
+     "sq": true
+    },
+    {
+     "id": "nhinari",
+     "name": "Hinari",
+     "sq": true
+    },
+    {
+     "id": "nadela",
+     "name": "Adéla",
+     "sq": true
+    },
+    {
+     "id": "nlexie",
+     "name": "Lexie",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "top-pop-solo-women",
+   "src": "{\"type\":\"names\",\"title\":\"Top pop solo women\",\"short\":\"Pop solo women\",\"picks\":[\"Madonna\",\"Whitney Houston\",\"Mariah Carey\",\"Britney Spears\",\"Beyoncé\",\"Rihanna\",\"Lady Gaga\",\"Katy Perry\",\"Adele\",\"Taylor Swift\",\"Ariana Grande\",\"Dua Lipa\",\"Billie Eilish\",\"Olivia Rodrigo\",\"Sabrina Carpenter\"]}",
+   "cat": "Music",
+   "group": "Top artists",
+   "short": "Pop solo women",
+   "title": "Top pop solo women",
+   "items": [
+    {
+     "id": "nmadonna",
+     "name": "Madonna",
+     "sq": true
+    },
+    {
+     "id": "nwhitney-houston",
+     "name": "Whitney Houston",
+     "sq": true
+    },
+    {
+     "id": "nmariah-carey",
+     "name": "Mariah Carey",
+     "sq": true
+    },
+    {
+     "id": "nbritney-spears",
+     "name": "Britney Spears",
+     "sq": true
+    },
+    {
+     "id": "nbeyonce",
+     "name": "Beyoncé",
+     "sq": true
+    },
+    {
+     "id": "nrihanna",
+     "name": "Rihanna",
+     "sq": true
+    },
+    {
+     "id": "nlady-gaga",
+     "name": "Lady Gaga",
+     "sq": true
+    },
+    {
+     "id": "nkaty-perry",
+     "name": "Katy Perry",
+     "sq": true
+    },
+    {
+     "id": "nadele",
+     "name": "Adele",
+     "sq": true
+    },
+    {
+     "id": "ntaylor-swift",
+     "name": "Taylor Swift",
+     "sq": true
+    },
+    {
+     "id": "nariana-grande",
+     "name": "Ariana Grande",
+     "sq": true
+    },
+    {
+     "id": "ndua-lipa",
+     "name": "Dua Lipa",
+     "sq": true
+    },
+    {
+     "id": "nbillie-eilish",
+     "name": "Billie Eilish",
+     "sq": true
+    },
+    {
+     "id": "nolivia-rodrigo",
+     "name": "Olivia Rodrigo",
+     "sq": true
+    },
+    {
+     "id": "nsabrina-carpenter",
+     "name": "Sabrina Carpenter",
+     "sq": true
+    }
+   ]
+  },
+  {
    "id": "top-metal-albums",
+   "src": "{\"type\":\"curated\",\"title\":\"Top metal albums\",\"short\":\"Metal\",\"picks\":[[\"Black Sabbath\",\"Paranoid\"],[\"Judas Priest\",\"British Steel\"],[\"Motörhead\",\"Ace of Spades\"],[\"Iron Maiden\",\"The Number of the Beast\"],[\"Dio\",\"Holy Diver\"],[\"Metallica\",\"Master of Puppets\"],[\"Slayer\",\"Reign in Blood\"],[\"Megadeth\",\"Rust in Peace\"],[\"Metallica\",\"Metallica\"],[\"Pantera\",\"Vulgar Display of Power\"],[\"Tool\",\"Ænima\"],[\"Opeth\",\"Blackwater Park\"],[\"System of a Down\",\"Toxicity\"],[\"Slipknot\",\"Iowa\"],[\"Mastodon\",\"Leviathan\"]]}",
    "cat": "Music",
    "group": "Top albums",
    "short": "Metal",
@@ -6754,8 +7801,8 @@
     {
      "id": "cdio-holy-diver",
      "name": "Holy Diver",
-     "note": "Dio",
-     "img": null,
+     "note": "Dio, 1983",
+     "img": "https://coverartarchive.org/release-group/4e7b34de-0d87-356a-a3da-b21f769b7d4d/front-250",
      "sq": true
     },
     {
@@ -6789,8 +7836,8 @@
     {
      "id": "cpantera-vulgar-display-of-power",
      "name": "Vulgar Display of Power",
-     "note": "Pantera",
-     "img": null,
+     "note": "Pantera, 1992",
+     "img": "https://coverartarchive.org/release-group/814e0b20-6884-31c5-9d99-d215f048cfd6/front-250",
      "sq": true
     },
     {
@@ -6803,8 +7850,8 @@
     {
      "id": "copeth-blackwater-park",
      "name": "Blackwater Park",
-     "note": "Opeth",
-     "img": null,
+     "note": "Opeth, 2001",
+     "img": "https://coverartarchive.org/release-group/1f4a9f6f-9621-3e46-977d-8503e8386768/front-250",
      "sq": true
     },
     {
@@ -6832,6 +7879,7 @@
   },
   {
    "id": "top-albums-of-the-1990s",
+   "src": "{\"type\":\"curated\",\"title\":\"Top albums of the 1990s\",\"short\":\"1990s\",\"picks\":[[\"Nirvana\",\"Nevermind\"],[\"Pearl Jam\",\"Ten\"],[\"Dr. Dre\",\"The Chronic\"],[\"R.E.M.\",\"Automatic for the People\"],[\"The Smashing Pumpkins\",\"Siamese Dream\"],[\"Nas\",\"Illmatic\"],[\"Green Day\",\"Dookie\"],[\"Portishead\",\"Dummy\"],[\"The Notorious B.I.G.\",\"Ready to Die\"],[\"Alanis Morissette\",\"Jagged Little Pill\"],[\"Oasis\",\"(What's the Story) Morning Glory?\"],[\"Fugees\",\"The Score\"],[\"Beck\",\"Odelay\"],[\"Radiohead\",\"OK Computer\"],[\"Lauryn Hill\",\"The Miseducation of Lauryn Hill\"]]}",
    "cat": "Music",
    "group": "Top albums",
    "short": "1990s",
@@ -6847,8 +7895,8 @@
     {
      "id": "cpearl-jam-ten",
      "name": "Ten",
-     "note": "Pearl Jam",
-     "img": null,
+     "note": "Pearl Jam, 1991",
+     "img": "https://coverartarchive.org/release-group/cea5d18a-1924-3cda-bebc-38933834b25d/front-250",
      "sq": true
     },
     {
@@ -6946,6 +7994,7 @@
   },
   {
    "id": "top-albums-of-the-2000s",
+   "src": "{\"type\":\"curated\",\"title\":\"Top albums of the 2000s\",\"short\":\"2000s\",\"picks\":[[\"Radiohead\",\"Kid A\"],[\"OutKast\",\"Stankonia\"],[\"Eminem\",\"The Marshall Mathers LP\"],[\"Daft Punk\",\"Discovery\"],[\"The Strokes\",\"Is This It\"],[\"Jay-Z\",\"The Blueprint\"],[\"Coldplay\",\"A Rush of Blood to the Head\"],[\"The White Stripes\",\"Elephant\"],[\"Yeah Yeah Yeahs\",\"Fever to Tell\"],[\"Beyoncé\",\"Dangerously in Love\"],[\"Kanye West\",\"The College Dropout\"],[\"Arcade Fire\",\"Funeral\"],[\"Green Day\",\"American Idiot\"],[\"Amy Winehouse\",\"Back to Black\"],[\"LCD Soundsystem\",\"Sound of Silver\"]]}",
    "cat": "Music",
    "group": "Top albums",
    "short": "2000s",
@@ -6968,8 +8017,8 @@
     {
      "id": "ceminem-the-marshall-mathers-lp",
      "name": "The Marshall Mathers LP",
-     "note": "Eminem",
-     "img": null,
+     "note": "Eminem, 2000",
+     "img": "https://coverartarchive.org/release-group/b0fa91c8-0996-38f1-ab84-797f58d7c4eb/front-250",
      "sq": true
     },
     {
@@ -6982,8 +8031,8 @@
     {
      "id": "cthe-strokes-is-this-it",
      "name": "Is This It",
-     "note": "The Strokes",
-     "img": null,
+     "note": "The Strokes, 2001",
+     "img": "https://coverartarchive.org/release-group/efea26d1-a016-30f6-b8e2-bc8c02336b0a/front-250",
      "sq": true
     },
     {
@@ -7060,6 +8109,7 @@
   },
   {
    "id": "top-albums-of-the-2010s",
+   "src": "{\"type\":\"curated\",\"title\":\"Top albums of the 2010s\",\"short\":\"2010s\",\"picks\":[[\"Kanye West\",\"My Beautiful Dark Twisted Fantasy\"],[\"Arcade Fire\",\"The Suburbs\"],[\"Adele\",\"21\"],[\"Kendrick Lamar\",\"good kid, m.A.A.d city\"],[\"Daft Punk\",\"Random Access Memories\"],[\"Vampire Weekend\",\"Modern Vampires of the City\"],[\"Taylor Swift\",\"1989\"],[\"Kendrick Lamar\",\"To Pimp a Butterfly\"],[\"Tame Impala\",\"Currents\"],[\"Beyoncé\",\"Lemonade\"],[\"Frank Ocean\",\"Blonde\"],[\"Lorde\",\"Melodrama\"],[\"SZA\",\"Ctrl\"],[\"Billie Eilish\",\"When We All Fall Asleep, Where Do We Go?\"],[\"Lana Del Rey\",\"Norman Fucking Rockwell!\"]]}",
    "cat": "Music",
    "group": "Top albums",
    "short": "2010s",
@@ -7068,8 +8118,8 @@
     {
      "id": "ckanye-west-my-beautiful-dark-twisted-fantasy",
      "name": "My Beautiful Dark Twisted Fantasy",
-     "note": "Kanye West",
-     "img": null,
+     "note": "Kanye West, 2010",
+     "img": "https://coverartarchive.org/release-group/5d6e21e1-deb5-428e-bb42-c2a567f3619b/front-250",
      "sq": true
     },
     {
@@ -7152,8 +8202,8 @@
     {
      "id": "csza-ctrl",
      "name": "Ctrl",
-     "note": "SZA",
-     "img": null,
+     "note": "SZA, 2017",
+     "img": "https://coverartarchive.org/release-group/8f892c1b-0709-4cf4-9711-493892a9eb9b/front-250",
      "sq": true
     },
     {
@@ -7174,6 +8224,7 @@
   },
   {
    "id": "canadian-rock-albums",
+   "src": "{\"type\":\"curated\",\"title\":\"Canadian rock albums\",\"short\":\"Canadian rock\",\"picks\":[[\"The Guess Who\",\"American Woman\"],[\"Neil Young\",\"Harvest\"],[\"Rush\",\"Moving Pictures\"],[\"Bryan Adams\",\"Reckless\"],[\"Barenaked Ladies\",\"Gordon\"],[\"The Tragically Hip\",\"Fully Completely\"],[\"Alanis Morissette\",\"Jagged Little Pill\"],[\"Our Lady Peace\",\"Clumsy\"],[\"Sum 41\",\"All Killer No Filler\"],[\"Nickelback\",\"Silver Side Up\"],[\"Avril Lavigne\",\"Let Go\"],[\"Simple Plan\",\"No Pads, No Helmets...Just Balls\"],[\"Arcade Fire\",\"Funeral\"],[\"Billy Talent\",\"Billy Talent II\"],[\"Metric\",\"Fantasies\"]]}",
    "cat": "Music",
    "group": "Top albums",
    "short": "Canadian rock",
@@ -7196,8 +8247,8 @@
     {
      "id": "crush-moving-pictures",
      "name": "Moving Pictures",
-     "note": "Rush",
-     "img": null,
+     "note": "Rush, 1981",
+     "img": "https://coverartarchive.org/release-group/40e30dc1-55ac-33e1-85d3-1f1508140bfc/front-250",
      "sq": true
     },
     {
@@ -7210,8 +8261,8 @@
     {
      "id": "cbarenaked-ladies-gordon",
      "name": "Gordon",
-     "note": "Barenaked Ladies",
-     "img": null,
+     "note": "Barenaked Ladies, 1992",
+     "img": "https://coverartarchive.org/release-group/6e36db18-ed74-3422-b564-946cb34db79b/front-250",
      "sq": true
     },
     {
@@ -7288,6 +8339,7 @@
   },
   {
    "id": "friends-seasons",
+   "src": "{\"type\":\"tv\",\"name\":\"Friends\"}",
    "cat": "TV",
    "title": "Friends seasons",
    "items": [
@@ -7355,6 +8407,7 @@
   },
   {
    "id": "stargate-sg-1-seasons",
+   "src": "{\"type\":\"tv\",\"name\":\"Stargate SG-1\"}",
    "cat": "TV",
    "title": "Stargate SG-1 seasons",
    "items": [
@@ -7422,6 +8475,7 @@
   },
   {
    "id": "american-horror-story-seasons",
+   "src": "{\"type\":\"tv\",\"name\":\"American Horror Story\"}",
    "cat": "TV",
    "title": "American Horror Story seasons",
    "items": [
@@ -7507,6 +8561,7 @@
   },
   {
    "id": "the-office-seasons",
+   "src": "{\"type\":\"tv\",\"name\":\"The Office\",\"year\":2005}",
    "cat": "TV",
    "title": "The Office seasons",
    "items": [
@@ -7568,6 +8623,7 @@
   },
   {
    "id": "hit-sci-fi-tv-shows",
+   "src": "{\"type\":\"tvgenre\",\"name\":\"Sci-Fi & Fantasy\",\"title\":\"Hit sci-fi TV shows\"}",
    "cat": "TV",
    "title": "Hit sci-fi TV shows",
    "items": [
@@ -7665,6 +8721,7 @@
   },
   {
    "id": "friends-season-1-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"Friends\",\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "Friends season 1 episodes",
    "items": [
@@ -7840,6 +8897,7 @@
   },
   {
    "id": "friends-season-2-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"Friends\",\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "Friends season 2 episodes",
    "items": [
@@ -8015,6 +9073,7 @@
   },
   {
    "id": "friends-season-3-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"Friends\",\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "Friends season 3 episodes",
    "items": [
@@ -8197,6 +9256,7 @@
   },
   {
    "id": "friends-season-4-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"Friends\",\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "Friends season 4 episodes",
    "items": [
@@ -8365,6 +9425,7 @@
   },
   {
    "id": "friends-season-5-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"Friends\",\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "Friends season 5 episodes",
    "items": [
@@ -8533,6 +9594,7 @@
   },
   {
    "id": "friends-season-6-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"Friends\",\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "Friends season 6 episodes",
    "items": [
@@ -8701,6 +9763,7 @@
   },
   {
    "id": "friends-season-7-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"Friends\",\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "Friends season 7 episodes",
    "items": [
@@ -8869,6 +9932,7 @@
   },
   {
    "id": "friends-season-8-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"Friends\",\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "Friends season 8 episodes",
    "items": [
@@ -9037,6 +10101,7 @@
   },
   {
    "id": "friends-season-9-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"Friends\",\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "Friends season 9 episodes",
    "items": [
@@ -9205,6 +10270,7 @@
   },
   {
    "id": "friends-season-10-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"Friends\",\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "Friends season 10 episodes",
    "items": [
@@ -9331,6 +10397,7 @@
   },
   {
    "id": "stargate-sg-1-season-1-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"Stargate SG-1\",\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "Stargate SG-1 season 1 episodes",
    "items": [
@@ -9492,6 +10559,7 @@
   },
   {
    "id": "stargate-sg-1-season-2-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"Stargate SG-1\",\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "Stargate SG-1 season 2 episodes",
    "items": [
@@ -9653,6 +10721,7 @@
   },
   {
    "id": "stargate-sg-1-season-3-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"Stargate SG-1\",\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "Stargate SG-1 season 3 episodes",
    "items": [
@@ -9814,6 +10883,7 @@
   },
   {
    "id": "stargate-sg-1-season-4-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"Stargate SG-1\",\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "Stargate SG-1 season 4 episodes",
    "items": [
@@ -9975,6 +11045,7 @@
   },
   {
    "id": "stargate-sg-1-season-5-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"Stargate SG-1\",\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "Stargate SG-1 season 5 episodes",
    "items": [
@@ -10136,6 +11207,7 @@
   },
   {
    "id": "stargate-sg-1-season-6-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"Stargate SG-1\",\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "Stargate SG-1 season 6 episodes",
    "items": [
@@ -10297,6 +11369,7 @@
   },
   {
    "id": "stargate-sg-1-season-7-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"Stargate SG-1\",\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "Stargate SG-1 season 7 episodes",
    "items": [
@@ -10458,6 +11531,7 @@
   },
   {
    "id": "stargate-sg-1-season-8-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"Stargate SG-1\",\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "Stargate SG-1 season 8 episodes",
    "items": [
@@ -10605,6 +11679,7 @@
   },
   {
    "id": "stargate-sg-1-season-9-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"Stargate SG-1\",\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "Stargate SG-1 season 9 episodes",
    "items": [
@@ -10752,6 +11827,7 @@
   },
   {
    "id": "stargate-sg-1-season-10-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"Stargate SG-1\",\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "Stargate SG-1 season 10 episodes",
    "items": [
@@ -10899,6 +11975,7 @@
   },
   {
    "id": "the-office-season-1-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"The Office\",\"year\":2005,\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "The Office season 1 episodes",
    "items": [
@@ -10948,6 +12025,7 @@
   },
   {
    "id": "the-office-season-2-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"The Office\",\"year\":2005,\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "The Office season 2 episodes",
    "items": [
@@ -11109,6 +12187,7 @@
   },
   {
    "id": "the-office-season-3-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"The Office\",\"year\":2005,\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "The Office season 3 episodes",
    "items": [
@@ -11277,6 +12356,7 @@
   },
   {
    "id": "the-office-season-4-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"The Office\",\"year\":2005,\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "The Office season 4 episodes",
    "items": [
@@ -11382,6 +12462,7 @@
   },
   {
    "id": "the-office-season-5-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"The Office\",\"year\":2005,\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "The Office season 5 episodes",
    "items": [
@@ -11571,6 +12652,7 @@
   },
   {
    "id": "the-office-season-6-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"The Office\",\"year\":2005,\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "The Office season 6 episodes",
    "items": [
@@ -11746,6 +12828,7 @@
   },
   {
    "id": "the-office-season-7-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"The Office\",\"year\":2005,\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "The Office season 7 episodes",
    "items": [
@@ -11921,6 +13004,7 @@
   },
   {
    "id": "the-office-season-8-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"The Office\",\"year\":2005,\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "The Office season 8 episodes",
    "items": [
@@ -12096,6 +13180,7 @@
   },
   {
    "id": "the-office-season-9-episodes",
+   "src": "{\"type\":\"episodes\",\"name\":\"The Office\",\"year\":2005,\"seasons\":\"all\"}",
    "cat": "TV",
    "title": "The Office season 9 episodes",
    "items": [
