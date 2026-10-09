@@ -173,6 +173,7 @@
   .opt{display:block;width:calc(100% - 14px);margin-left:14px;text-align:left;background:none;border:0;border-radius:8px;padding:8px 10px;font-weight:400}
   .opt:hover{background:var(--panel)}
   .opt.on{background:var(--panel2);font-weight:600}
+  .tallyrow{display:flex;flex-wrap:wrap;gap:4px 14px;color:var(--text);font-size:1rem;font-weight:600}
   .tiebox{background:var(--panel);border-radius:14px;padding:16px 18px;margin:0 0 20px;box-shadow:inset 0 0 0 2px var(--purple)}
   .tbpair{display:flex;gap:10px;flex-wrap:wrap}
   .tbpick{flex:1;min-width:140px;display:flex;gap:10px;align-items:center;background:var(--panel2);border:0;border-radius:12px;padding:10px;text-align:left;font-weight:600}
@@ -215,7 +216,7 @@
     <div class="list-name" id="listName"></div>
   </header>
   <div id="app"></div>
-  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive.<span class="build">Build 2026-10-09.10</span></footer>
+  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive.<span class="build">Build 2026-10-09.11</span></footer>
 </main>
 
 <script>
@@ -828,7 +829,7 @@ function tally(g, a, shown){
   const items = L().items.filter(x => shown.includes(a[x.id]));
   const count = d => items.filter(x => dist(g[x.id], a[x.id]) === d).length;
   const exact = count(0), near = count(1), perf = perfectRows(g, a).filter(t => shown.includes(t)).length;
-  return {exact, near, perf, score: exact * PTS_EXACT + near * PTS_NEAR + perf * BONUS};
+  return {exact, near, cold: items.length - exact - near, perf, score: exact * PTS_EXACT + near * PTS_NEAR + perf * BONUS};
 }
 
 function resultsView(mine, opp){
@@ -842,7 +843,7 @@ function resultsView(mine, opp){
   const oppWin = settled ? tbWinner !== me.slot : their.score > my.score;
   const tb = room.tiebreak || settled ? " the tiebreaker" : "";
   const verdict = tie && !settled ? "It's a tie" : iWin ? "You win" + tb : on + " wins" + tb;
-  const card = (name, t, lead, slot) => `<div class="pc-${slot}${lead ? " lead" : ""}"><span class="who">${mark(slot)}${name}</span><b>${t.score}</b>${t.exact} exact, ${t.near} one tier off${t.perf ? `<span class="bonus">+${BONUS * t.perf} for ${t.perf} perfect ${t.perf === 1 ? "row" : "rows"}</span>` : ""}</div>`;
+  const card = (name, t, lead, slot) => `<div class="pc-${slot}${lead ? " lead" : ""}"><span class="who">${mark(slot)}${name}</span><b>${t.score}</b><span class="tallyrow" aria-label="${t.exact} exact, ${t.near} one tier off, ${t.cold} further off"><span>\u2705 ${t.exact}</span><span>\u{1F525} ${t.near}</span><span>\u2744\uFE0F ${t.cold}</span></span>${t.perf ? `<span class="bonus">+${BONUS * t.perf} for ${t.perf} perfect ${t.perf === 1 ? "row" : "rows"}</span>` : ""}</div>`;
   const legend = `<p class="legend"><span>\u2705 Exact, ${PTS_EXACT} points</span><span>\u{1F525} Hot: one tier off, ${PTS_NEAR} point</span><span>\u2744\uFE0F Cold: two or more off</span><span>\u2B06\uFE0F\u2B07\uFE0F The real answer is higher or lower</span></p>`;
   return `<p class="verdict${iWin ? " win" : ""}">${verdict}</p>
     <p class="hint">Highest score wins. A perfect row is worth ${BONUS} bonus points.</p>
