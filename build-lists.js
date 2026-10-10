@@ -14,21 +14,44 @@ const DEFS = [
   { type: "actor",      name: "Nicolas Cage" },
   { type: "actor",      name: "Bruce Willis" },
   { type: "actor",      name: "Matt Damon" },
+  { type: "actor",      name: "Meryl Streep" },
   { type: "director",   name: "James Cameron" },
   { type: "director",   name: "Ridley Scott" },
   { type: "director",   name: "Christopher Nolan" },
   { type: "director",   name: "Steven Spielberg" },
   { type: "director",   name: "Kevin Smith" },
+  { type: "director",   name: "Quentin Tarantino" },
   { type: "collection", name: "Harry Potter" },
   { type: "collection", name: "Mission: Impossible" },
+  { type: "collection", name: "The Fast and the Furious", title: "Fast & Furious films" },
+  { type: "films", cat: "Franchises", title: "Planet of the Apes films", picks: [
+    ["Planet of the Apes", 1968], ["Beneath the Planet of the Apes", 1970], ["Escape from the Planet of the Apes", 1971],
+    ["Conquest of the Planet of the Apes", 1972], ["Battle for the Planet of the Apes", 1973], ["Planet of the Apes", 2001],
+    ["Rise of the Planet of the Apes", 2011], ["Dawn of the Planet of the Apes", 2014], ["War for the Planet of the Apes", 2017],
+    ["Kingdom of the Planet of the Apes", 2024] ] },
   // TMDB splits Star Trek into three collections, each too short on its own, so "names" merges them into one list.
   { type: "collection", title: "Star Trek films", names: ["Star Trek: The Original Series Collection", "Star Trek: The Next Generation Collection", "Star Trek: Alternate Reality Collection"] },
   { type: "genre",      name: "Science Fiction" },
-  { type: "genre",      name: "Horror" },
+  { type: "genre",      name: "Horror", noSequels: true },       // noSequels keeps only the first film of any franchise
+  { type: "genre",      name: "Romance", title: "Biggest romance movies" },
+  { type: "genre",      name: "Romance", and: "Comedy", title: "Biggest rom-coms" },   // "and" = must be in both genres
+  { type: "keyword",    name: "period drama", title: "Period pieces" },
+  { type: "keyword",    name: "vampire", title: "Vampire movies", oneFranchise: true },
   { type: "genre",      name: "Comedy", noDisney: true },      // noDisney leaves out Disney films but keeps Pixar
   { type: "keyword",    name: "musical", title: "Biggest musical movies", noDisney: true },
   { type: "genre",      name: "Family", title: "Popular kids' movies", noDisney: true },
-  { type: "keyword",    name: "biography", title: "Best biopics" },
+  // Biopics must carry both TMDB keywords, "biography" and "based on true story", which weeds out loosely tagged films.
+  { type: "keyword",    name: "biography", and: "based on true story", title: "Biopics (true stories)" },
+  //   "filmcast" ranks the main characters of one film (use the first film of a franchise).
+  //   With "collection", characters are ranked by how big their role is across every film in the franchise.
+  { type: "filmcast",   collection: "The Twilight Saga", title: "Twilight main characters" },
+  { type: "names", cat: "Movies", group: "Characters", title: "Vampire characters (film and TV)", picks: [
+    ["Count Dracula", "Dracula"], ["Count Orlok", "Nosferatu"], ["Lestat de Lioncourt", "Interview with the Vampire"],
+    ["Louis de Pointe du Lac", "Interview with the Vampire"], ["David", "The Lost Boys"], ["Spike", "Buffy the Vampire Slayer"],
+    ["Angel", "Buffy the Vampire Slayer"], ["Selene", "Underworld"], ["Edward Cullen", "Twilight"], ["Alice Cullen", "Twilight"],
+    ["Eric Northman", "True Blood"], ["Bill Compton", "True Blood"], ["Damon Salvatore", "The Vampire Diaries"],
+    ["Klaus Mikaelson", "The Vampire Diaries"], ["Eli", "Let the Right One In"], ["Nandor the Relentless", "What We Do in the Shadows"],
+    ["Nadja", "What We Do in the Shadows"], ["Mavis", "Hotel Transylvania"], ["Alucard", "Castlevania"], ["Count von Count", "Sesame Street"] ] },
   ...decades(1980, 2010),     // listed before the years so "Whole decade" is the first option in each decade's submenu
   ...years(1980, 2019),
   //   "films" is a hand-picked movie list. Each pick is ["Title", release year]; posters are looked up on TMDB.
@@ -68,6 +91,11 @@ const DEFS = [
   { type: "names", title: "Dream Academy contestants", short: "Dream Academy contestants", picks: [
     ["Sophia", "KATSEYE"], ["Lara", "KATSEYE"], ["Yoonchae", "KATSEYE"], ["Megan", "KATSEYE"], ["Daniela", "KATSEYE"], ["Manon", "KATSEYE"],
     "Emily", "Ezrela", "Marquise", "Samara", "Nayoung", "Ua", "Celeste", "Brooklyn", "Karlee", "Iliya", "Mei", "Hinari", "Adéla", "Lexie" ] },
+  { type: "names", group: "Taylor Swift", title: "Taylor Swift track 5 songs", short: "Track 5 songs", picks: [
+    ["Cold As You", "Taylor Swift"], ["White Horse", "Fearless"], ["Dear John", "Speak Now"], ["All Too Well", "Red"],
+    ["All You Had to Do Was Stay", "1989"], ["Delicate", "reputation"], ["The Archer", "Lover"], ["my tears ricochet", "folklore"],
+    ["tolerate it", "evermore"], ["You're On Your Own, Kid", "Midnights"], ["So Long, London", "The Tortured Poets Department"],
+    ["Eldest Daughter", "The Life of a Showgirl"] ] },
   { type: "names", title: "Top pop solo women", short: "Pop solo women", picks: [
     "Madonna", "Whitney Houston", "Mariah Carey", "Britney Spears", "Beyoncé", "Rihanna", "Lady Gaga", "Katy Perry",
     "Adele", "Taylor Swift", "Ariana Grande", "Dua Lipa", "Billie Eilish", "Olivia Rodrigo", "Sabrina Carpenter" ] },
@@ -188,6 +216,13 @@ const DEFS = [
   { type: "cast",       name: "Grey's Anatomy" },
   { type: "cast",       name: "The Office", year: 2005 },
   { type: "cast",       name: "Friends" },
+  { type: "cast",       name: "Bridgerton" },
+  //   photos: false leaves the actor photos off, for animated shows where the picture would be the voice actor.
+  { type: "cast",       name: "Avatar: The Last Airbender", year: 2005, photos: false },
+  { type: "cast",       name: "The Legend of Korra", photos: false },
+  { type: "names", cat: "TV", group: "Avatar: The Last Airbender", title: "Avatar universe bending abilities", short: "Bending abilities", picks: [
+    "Waterbending", "Earthbending", "Firebending", "Airbending", "Metalbending", "Lightning generation", "Bloodbending", "Healing",
+    "Lavabending", "Sandbending", "Plantbending", "Combustionbending", "Energybending", "Spirit projection", "Flight" ] },
   // seasons can be "all", one number (season: 5), or a few (seasons: [1, 2, 3]). Each season becomes its own list.
   { type: "episodes",   name: "Friends", seasons: "all" },
   { type: "episodes",   name: "Stargate SG-1", seasons: "all" },
@@ -240,7 +275,17 @@ async function studioFlags(id) {
 // Takes candidate movies, keeps the best-known released features, returns them oldest first.
 // noDisney: true also leaves out Disney films, but keeps Pixar (used on lists where Disney would otherwise crowd everything out).
 // oneFranchise: true keeps only the best-known film from any one franchise (TMDB collection).
-async function pickMovies(candidates, { minVotes = MIN_VOTES, noDisney = false, oneFranchise = false } = {}) {
+// noSequels: true keeps a franchise film only if it is the first one released in its franchise.
+const firstFilmCache = new Map();
+async function firstFilmOf(collectionId) {
+  if (!firstFilmCache.has(collectionId)) {
+    const c = await tmdb(`/collection/${collectionId}`);
+    const dated = (c.parts || []).filter(p => p.release_date).sort((a, b) => a.release_date.localeCompare(b.release_date));
+    firstFilmCache.set(collectionId, dated.length ? dated[0].id : null);
+  }
+  return firstFilmCache.get(collectionId);
+}
+async function pickMovies(candidates, { minVotes = MIN_VOTES, noDisney = false, oneFranchise = false, noSequels = false } = {}) {
   const franchises = new Set();
   const seen = new Set();
   const pool = candidates
@@ -251,9 +296,10 @@ async function pickMovies(candidates, { minVotes = MIN_VOTES, noDisney = false, 
   const out = [];
   for (const m of pool) {
     if (out.length >= MAX_ITEMS) break;
-    if (EXCLUDE_MARVEL || noDisney || oneFranchise) {
+    if (EXCLUDE_MARVEL || noDisney || oneFranchise || noSequels) {
       const f = await studioFlags(m.id);
       if ((EXCLUDE_MARVEL && f.marvel) || (noDisney && f.disney)) continue;
+      if (noSequels && f.franchise && (await firstFilmOf(f.franchise)) !== m.id) continue;
       if (oneFranchise && f.franchise) {
         if (franchises.has(f.franchise)) continue;    // a bigger film from this franchise is already in
         franchises.add(f.franchise);
@@ -378,6 +424,8 @@ async function isMarvelShow(id) {
   return names.some(n => n.includes("marvel"));
 }
 
+// "Aang (voice)" -> "Aang"
+const cleanRole = s => s.replace(/\s*\((voice|uncredited)\)/gi, "").trim();
 const CATS = { games: "Games", music: "Music", people: "Actors & directors", franchise: "Franchises", genre: "Genres", year: "Movies by year", tv: "TV" };
 
 const builders = {
@@ -416,10 +464,15 @@ const builders = {
   },
   async genre(def) {
     const all = (await tmdb("/genre/movie/list")).genres;
-    const g = all.find(x => x.name.toLowerCase() === def.name.toLowerCase());
-    if (!g) throw new Error(`No genre called "${def.name}". Options: ${all.map(x => x.name).join(", ")}`);
-    const pages = await Promise.all((def.noDisney ? [1, 2, 3, 4, 5, 6] : [1, 2, 3]).map(page => tmdb("/discover/movie", { with_genres: g.id, sort_by: "vote_count.desc", page })));
-    return { cat: CATS.genre, title: def.title || `Biggest ${g.name.toLowerCase()} movies`, items: await pickMovies(pages.flatMap(p => p.results), { noDisney: !!def.noDisney }) };
+    const ids = [def.name].concat(def.and || []).map(n => {
+      const g = all.find(x => x.name.toLowerCase() === n.toLowerCase());
+      if (!g) throw new Error(`No genre called "${n}". Options: ${all.map(x => x.name).join(", ")}`);
+      return g.id;
+    });
+    const filtered = def.noDisney || def.oneFranchise || def.noSequels;
+    const pages = await Promise.all((filtered ? [1, 2, 3, 4, 5, 6] : [1, 2, 3]).map(page => tmdb("/discover/movie", { with_genres: ids.join(","), sort_by: "vote_count.desc", page })));
+    const opts = { noDisney: !!def.noDisney, oneFranchise: !!def.oneFranchise, noSequels: !!def.noSequels };
+    return { cat: CATS.genre, title: def.title || `Biggest ${def.name.toLowerCase()} movies`, items: await pickMovies(pages.flatMap(p => p.results), opts) };
   },
   // A hand-picked list of video games; artwork and years are looked up on RAWG.
   async games(def) {
@@ -497,11 +550,46 @@ const builders = {
       .sort((a, b) => b.total_episode_count - a.total_episode_count)
       // An actor can have several credits on one show; use the character they played in the most episodes.
       .map(p => ({ p, character: ((p.roles || []).slice().sort((a, b) => (b.episode_count || 0) - (a.episode_count || 0))[0] || {}).character || "" }))
-      .filter(x => x.character && !/\b(self|voice|uncredited)\b/i.test(x.character))
+      .map(x => ({ p: x.p, character: cleanRole(x.character) }))
+      .filter(x => x.character && !/^(self|additional voices?|various)\b/i.test(x.character))
       .filter(x => !seen.has(x.character.toLowerCase()) && seen.add(x.character.toLowerCase()))
       .slice(0, def.count || MAX_CAST)
-      .map(x => ({ id: "p" + x.p.id, name: x.character, note: x.p.name, poster: x.p.profile_path || null }));
+      .map(x => ({ id: "p" + x.p.id, name: x.character, note: x.p.name, poster: def.photos === false ? null : x.p.profile_path || null }));
     return { cat: CATS.tv, group: show.name, short: "Main characters", title: `${show.name} main characters`, items };
+  },
+  // The main characters of one film (in billing order), or of a whole franchise when "collection" is given.
+  // Across a franchise, a character scores for every film they are in, and more the higher they are billed.
+  async filmcast(def) {
+    let films, fallbackTitle;
+    if (def.collection) {
+      const r = await tmdb("/search/collection", { query: def.collection });
+      if (!r.results.length) throw new Error("No collection found for " + def.collection);
+      const c = await tmdb(`/collection/${r.results[0].id}`);
+      films = (c.parts || []).filter(p => p.release_date && p.release_date <= today);
+      fallbackTitle = c.name.replace(/ Collection$/, "") + " main characters";
+    } else {
+      const r = await tmdb("/search/movie", def.year ? { query: def.name, primary_release_year: def.year } : { query: def.name });
+      const m = (r.results || []).sort((a, b) => b.vote_count - a.vote_count)[0];
+      if (!m) throw new Error("No film found for " + def.name);
+      films = [m]; fallbackTitle = `${m.title} main characters`;
+    }
+    const people = new Map();
+    for (const f of films) {
+      const c = await tmdb(`/movie/${f.id}/credits`);
+      (c.cast || []).slice(0, 30).forEach(p => {
+        const character = cleanRole(p.character || "");
+        if (!character) return;
+        const x = people.get(p.id) || { p, score: 0, names: {} };
+        x.score += Math.max(1, 30 - (p.order || 0));                 // top billing in a film is worth the most
+        x.names[character] = (x.names[character] || 0) + 1;
+        if (!x.p.profile_path && p.profile_path) x.p = p;
+        people.set(p.id, x);
+      });
+    }
+    const items = [...people.values()].sort((a, b) => b.score - a.score).slice(0, def.count || MAX_CAST)
+      .map(x => ({ id: "p" + x.p.id, name: Object.entries(x.names).sort((a, b) => b[1] - a[1])[0][0], note: x.p.name, poster: def.photos === false ? null : x.p.profile_path || null }));
+    const title = def.title || fallbackTitle;
+    return { cat: "Movies", group: def.group || "Characters", short: title, title, items };
   },
   async episodes(def) {
     const show = await tmdb(`/tv/${(await findShow(def.name, def.year)).id}`);
@@ -591,7 +679,7 @@ const builders = {
   // A hand-picked list of names (artists, groups, anything) with no lookups and no pictures.
   async names(def) {
     // A pick is either "Name" or ["Name", "small note shown under it"].
-    const items = def.picks.map(p => { const [n, note] = [].concat(p); return { id: "n" + slug(n), name: n, ...(note ? { note } : {}), sq: true }; });
+    const items = def.picks.map(p => { const [n, note] = [].concat(p); return { id: "n" + slug(n), name: n, ...(note ? { note } : {}), ...((def.cat || CATS.music) === CATS.music ? { sq: true } : {}) }; });
     return { cat: def.cat || CATS.music, group: def.group || "Top artists", short: def.short || def.title, title: def.title, items };
   },
   // A hand-picked list of albums. Each pick is ["Artist", "Album"]; the year and cover are looked up.
@@ -611,11 +699,17 @@ const builders = {
   },
   // Movies tagged with a TMDB keyword, e.g. "musical", "time travel", "heist".
   async keyword(def) {
-    const r = await tmdb("/search/keyword", { query: def.name });
-    const k = r.results.find(x => x.name.toLowerCase() === def.name.toLowerCase()) || r.results[0];
-    if (!k) throw new Error(`No keyword called "${def.name}"`);
-    const pages = await Promise.all((def.noDisney ? [1, 2, 3, 4, 5, 6] : [1, 2, 3]).map(page => tmdb("/discover/movie", { with_keywords: k.id, sort_by: "vote_count.desc", page })));
-    return { cat: CATS.genre, title: def.title || `Biggest ${k.name} movies`, items: await pickMovies(pages.flatMap(p => p.results), { noDisney: !!def.noDisney }) };
+    const ids = [];
+    for (const name of [def.name].concat(def.and || [])) {
+      const r = await tmdb("/search/keyword", { query: name });
+      const k = r.results.find(x => x.name.toLowerCase() === name.toLowerCase()) || r.results[0];
+      if (!k) throw new Error(`No keyword called "${name}"`);
+      ids.push(k.id);
+    }
+    const filtered = def.noDisney || def.oneFranchise || def.noSequels;
+    const pages = await Promise.all((filtered ? [1, 2, 3, 4, 5, 6] : [1, 2, 3]).map(page => tmdb("/discover/movie", { with_keywords: ids.join(","), sort_by: "vote_count.desc", page })));
+    const opts = { noDisney: !!def.noDisney, oneFranchise: !!def.oneFranchise, noSequels: !!def.noSequels };
+    return { cat: CATS.genre, title: def.title || `Biggest ${def.name} movies`, items: await pickMovies(pages.flatMap(p => p.results), opts) };
   },
   // A list of TV shows (not seasons) from one TMDB TV genre.
   async tvgenre(def) {
@@ -636,6 +730,31 @@ const builders = {
   }
 };
 
+// Where each list sits in the game's menu. The menu is: category, then submenu, then list.
+//   Movies         > Franchises, Genres, Actors, Directors, By year: 1980s (one per decade), Awards, Characters
+//   TV             > one submenu per show, plus Show rankings
+//   Music          > one submenu per artist, plus Top albums and Top artists
+//   Games          > Franchises, Genres, Consoles, Awards
+function place(list, def) {
+  if (list.cat === CATS.franchise) return { ...list, cat: "Movies", group: "Franchises", short: list.title };
+  if (list.cat === CATS.people) return { ...list, cat: "Movies", group: def.type === "director" ? "Directors" : "Actors", short: list.title };
+  if (list.cat === CATS.genre) return { ...list, cat: "Movies", group: "Genres", short: list.title };
+  if (list.cat === "Awards") return { ...list, cat: "Movies", group: "Awards", short: list.title };
+  if (list.cat === CATS.year) return { ...list, cat: "Movies", group: "By year: " + list.group };     // e.g. "By year: 1990s"
+  return list;
+}
+// Submenus appear in the order their first list appears in the file, so the finished lists are sorted into this order.
+const MENU_ORDER = {
+  Movies: ["Franchises", "Genres", "Actors", "Directors", "By year", "Awards", "Characters"],
+  Games: ["Franchises", "Genres", "Consoles", "Awards"]
+};
+function menuRank(list) {
+  const order = MENU_ORDER[list.cat];
+  if (!order) return 0;
+  const i = order.findIndex(g => (list.group || "") === g || (list.group || "").startsWith(g + ":"));
+  return i < 0 ? order.length : i;
+}
+
 (async () => {
   // The previous lists.json is kept as a safety net: if a list fails to build this time (a busy server, a network blip),
   // last run's version of it is carried over instead of the list disappearing from the game.
@@ -649,7 +768,7 @@ const builders = {
     try {
       for (const list of [].concat(await builders[def.type](def))) {
         if (list.items.length < MIN_ITEMS) { console.warn(`Skipped "${list.title}": only ${list.items.length} items`); continue; }
-        built.push({ id: slug(list.title), src, ...list });
+        built.push({ id: slug(list.title), src, ...place(list, def) });
         console.log(`${list.title}: ${list.items.length} items`);
       }
     } catch (e) {
@@ -662,6 +781,9 @@ const builders = {
     lists.push(...built);
   }
   if (!lists.length) { console.error("No lists built; lists.json left unchanged."); process.exit(1); }
+  lists.forEach((l, i) => { l._i = i; });
+  lists.sort((a, b) => menuRank(a) - menuRank(b) || a._i - b._i);       // keeps the original order within each submenu
+  lists.forEach(l => { delete l._i; });
   fs.writeFileSync("lists.json", JSON.stringify({ generated: today, lists }, null, 1));
   console.log(`Wrote lists.json with ${lists.length} lists.`);
 })();
