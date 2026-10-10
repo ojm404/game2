@@ -1634,6 +1634,406 @@
    ]
   },
   {
+   "id": "biggest-movies-of-the-1980s",
+   "src": "{\"type\":\"decade\",\"decade\":1980}",
+   "cat": "Movies by year",
+   "group": "1980s",
+   "short": "Whole decade",
+   "title": "Biggest movies of the 1980s",
+   "items": [
+    {
+     "id": "m1891",
+     "name": "The Empire Strikes Back",
+     "note": "1980",
+     "poster": "/nNAeTmF4CtdSgMDplXTDPOpYzsX.jpg"
+    },
+    {
+     "id": "m694",
+     "name": "The Shining",
+     "note": "1980",
+     "poster": "/uAR0AWqhQL1hQa69UDEbb2rE5Wx.jpg"
+    },
+    {
+     "id": "m85",
+     "name": "Raiders of the Lost Ark",
+     "note": "1981",
+     "poster": "/ceG9VzoRAVGwivFU403Wc3AHRys.jpg"
+    },
+    {
+     "id": "m601",
+     "name": "E.T. the Extra-Terrestrial",
+     "note": "1982",
+     "poster": "/an0nD6uq6byfxXCfk6lQBzdL2J1.jpg"
+    },
+    {
+     "id": "m78",
+     "name": "Blade Runner",
+     "note": "1982",
+     "poster": "/63N9uy8nd9j7Eog2axPQ8lbr3Wj.jpg"
+    },
+    {
+     "id": "m1892",
+     "name": "Return of the Jedi",
+     "note": "1983",
+     "poster": "/jQYlydvHm3kUix1f8prMucrplhm.jpg"
+    },
+    {
+     "id": "m111",
+     "name": "Scarface",
+     "note": "1983",
+     "poster": "/iQ5ztdjvteGeboxtmRdXEChJOHh.jpg"
+    },
+    {
+     "id": "m218",
+     "name": "The Terminator",
+     "note": "1984",
+     "poster": "/qvktm0BHcnmDpul4Hz01GIazWPr.jpg"
+    },
+    {
+     "id": "m105",
+     "name": "Back to the Future",
+     "note": "1985",
+     "poster": "/vN5B5WgYscRGcQpVhHl6p9DDTP0.jpg"
+    },
+    {
+     "id": "m679",
+     "name": "Aliens",
+     "note": "1986",
+     "poster": "/r1x5JGpyqZU8PYhbs4UcrO1Xb6x.jpg"
+    },
+    {
+     "id": "m600",
+     "name": "Full Metal Jacket",
+     "note": "1987",
+     "poster": "/kMKyx1k8hWWscYFnPbnxxN4Eqo4.jpg"
+    },
+    {
+     "id": "m562",
+     "name": "Die Hard",
+     "note": "1988",
+     "poster": "/7Bjd8kfmDSOzpmhySpEhkUyK2oH.jpg"
+    },
+    {
+     "id": "m89",
+     "name": "Indiana Jones and the Last Crusade",
+     "note": "1989",
+     "poster": "/sizg1AU8f8JDZX4QIgE4pjUMBvx.jpg"
+    },
+    {
+     "id": "m207",
+     "name": "Dead Poets Society",
+     "note": "1989",
+     "poster": "/tNvKkSnnn4Z6RCBThyK1gfCSSvv.jpg"
+    },
+    {
+     "id": "m165",
+     "name": "Back to the Future Part II",
+     "note": "1989",
+     "poster": "/hQq8xZe5uLjFzSBt4LanNP7SQjl.jpg"
+    }
+   ]
+  },
+  {
+   "id": "biggest-movies-of-the-1990s",
+   "src": "{\"type\":\"decade\",\"decade\":1990}",
+   "cat": "Movies by year",
+   "group": "1990s",
+   "short": "Whole decade",
+   "title": "Biggest movies of the 1990s",
+   "items": [
+    {
+     "id": "m274",
+     "name": "The Silence of the Lambs",
+     "note": "1991",
+     "poster": "/uS9m8OBk1A8eM9I042bx8XXpqAq.jpg"
+    },
+    {
+     "id": "m329",
+     "name": "Jurassic Park",
+     "note": "1993",
+     "poster": "/d9mtMGQDLANKieb9PbD3yK7xxzo.jpg"
+    },
+    {
+     "id": "m424",
+     "name": "Schindler's List",
+     "note": "1993",
+     "poster": "/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg"
+    },
+    {
+     "id": "m8587",
+     "name": "The Lion King",
+     "note": "1994",
+     "poster": "/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg"
+    },
+    {
+     "id": "m13",
+     "name": "Forrest Gump",
+     "note": "1994",
+     "poster": "/pplybKImR7LKzSVzRylK6Cl4dzm.jpg"
+    },
+    {
+     "id": "m680",
+     "name": "Pulp Fiction",
+     "note": "1994",
+     "poster": "/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg"
+    },
+    {
+     "id": "m278",
+     "name": "The Shawshank Redemption",
+     "note": "1994",
+     "poster": "/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg"
+    },
+    {
+     "id": "m807",
+     "name": "Se7en",
+     "note": "1995",
+     "poster": "/191nKfP0ehp3uIvWqgPbFmI4lv9.jpg"
+    },
+    {
+     "id": "m862",
+     "name": "Toy Story",
+     "note": "1995",
+     "poster": "/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg"
+    },
+    {
+     "id": "m597",
+     "name": "Titanic",
+     "note": "1997",
+     "poster": "/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg"
+    },
+    {
+     "id": "m37165",
+     "name": "The Truman Show",
+     "note": "1998",
+     "poster": "/vuza0WqY239yBXOadKlGwJsZJFE.jpg"
+    },
+    {
+     "id": "m857",
+     "name": "Saving Private Ryan",
+     "note": "1998",
+     "poster": "/uqx37cS8cpHg8U35f9U5IBlrCV3.jpg"
+    },
+    {
+     "id": "m603",
+     "name": "The Matrix",
+     "note": "1999",
+     "poster": "/dXNAPwY7VrqMAo51EKhhCJfaGb5.jpg"
+    },
+    {
+     "id": "m550",
+     "name": "Fight Club",
+     "note": "1999",
+     "poster": "/jSziioSwPVrOy9Yow3XhWIBDjq1.jpg"
+    },
+    {
+     "id": "m497",
+     "name": "The Green Mile",
+     "note": "1999",
+     "poster": "/8VG8fDNiy50H4FedGwdSVUPoaJe.jpg"
+    }
+   ]
+  },
+  {
+   "id": "biggest-movies-of-the-2000s",
+   "src": "{\"type\":\"decade\",\"decade\":2000}",
+   "cat": "Movies by year",
+   "group": "2000s",
+   "short": "Whole decade",
+   "title": "Biggest movies of the 2000s",
+   "items": [
+    {
+     "id": "m98",
+     "name": "Gladiator",
+     "note": "2000",
+     "poster": "/aDb548BOkFfI4nFm0kx8A3Ezh7H.jpg"
+    },
+    {
+     "id": "m671",
+     "name": "Harry Potter and the Philosopher's Stone",
+     "note": "2001",
+     "poster": "/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg"
+    },
+    {
+     "id": "m120",
+     "name": "The Lord of the Rings: The Fellowship of the Ring",
+     "note": "2001",
+     "poster": "/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg"
+    },
+    {
+     "id": "m672",
+     "name": "Harry Potter and the Chamber of Secrets",
+     "note": "2002",
+     "poster": "/sdEOH0992YZ0QSxgXNIGLq1ToUi.jpg"
+    },
+    {
+     "id": "m121",
+     "name": "The Lord of the Rings: The Two Towers",
+     "note": "2002",
+     "poster": "/5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg"
+    },
+    {
+     "id": "m22",
+     "name": "Pirates of the Caribbean: The Curse of the Black Pearl",
+     "note": "2003",
+     "poster": "/poHwCZeWzJCShH7tOjg8RIoyjcw.jpg"
+    },
+    {
+     "id": "m122",
+     "name": "The Lord of the Rings: The Return of the King",
+     "note": "2003",
+     "poster": "/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg"
+    },
+    {
+     "id": "m673",
+     "name": "Harry Potter and the Prisoner of Azkaban",
+     "note": "2004",
+     "poster": "/aWxwnYoe8p2d2fcxOqtvAtJ72Rw.jpg"
+    },
+    {
+     "id": "m272",
+     "name": "Batman Begins",
+     "note": "2005",
+     "poster": "/sPX89Td70IDDjVr85jdSBb4rWGr.jpg"
+    },
+    {
+     "id": "m674",
+     "name": "Harry Potter and the Goblet of Fire",
+     "note": "2005",
+     "poster": "/fECBtHlr0RB3foNHDiCBXeg9Bv9.jpg"
+    },
+    {
+     "id": "m675",
+     "name": "Harry Potter and the Order of the Phoenix",
+     "note": "2007",
+     "poster": "/5aOyriWkPec0zUDxmHFP9qMmBaj.jpg"
+    },
+    {
+     "id": "m155",
+     "name": "The Dark Knight",
+     "note": "2008",
+     "poster": "/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
+    },
+    {
+     "id": "m14160",
+     "name": "Up",
+     "note": "2009",
+     "poster": "/mFvoEwSfLqbcWwFsDjQebn9bzFe.jpg"
+    },
+    {
+     "id": "m16869",
+     "name": "Inglourious Basterds",
+     "note": "2009",
+     "poster": "/aupnPtagH9JVBuMrGEanf4iqXEQ.jpg"
+    },
+    {
+     "id": "m19995",
+     "name": "Avatar",
+     "note": "2009",
+     "poster": "/gKY6q7SjCkAU6FqvqWybDYgUKIF.jpg"
+    }
+   ]
+  },
+  {
+   "id": "biggest-movies-of-the-2010s",
+   "src": "{\"type\":\"decade\",\"decade\":2010}",
+   "cat": "Movies by year",
+   "group": "2010s",
+   "short": "Whole decade",
+   "title": "Biggest movies of the 2010s",
+   "items": [
+    {
+     "id": "m11324",
+     "name": "Shutter Island",
+     "note": "2010",
+     "poster": "/nrmXQ0zcZUL8jFLrakWc90IR8z9.jpg"
+    },
+    {
+     "id": "m27205",
+     "name": "Inception",
+     "note": "2010",
+     "poster": "/xlaY2zyzMfkhk0HSC5VUwzoZPU1.jpg"
+    },
+    {
+     "id": "m12445",
+     "name": "Harry Potter and the Deathly Hallows: Part 2",
+     "note": "2011",
+     "poster": "/c54HpQmuwXjHq2C9wmoACjxoom3.jpg"
+    },
+    {
+     "id": "m70160",
+     "name": "The Hunger Games",
+     "note": "2012",
+     "poster": "/apa5G43Hha7kH7wJG0gkkHT7FA9.jpg"
+    },
+    {
+     "id": "m49026",
+     "name": "The Dark Knight Rises",
+     "note": "2012",
+     "poster": "/hr0L2aueqlP2BYUblTTjmtn0hw4.jpg"
+    },
+    {
+     "id": "m68718",
+     "name": "Django Unchained",
+     "note": "2012",
+     "poster": "/7oWY8VDWW7thTzWh3OKYRkWUlD5.jpg"
+    },
+    {
+     "id": "m106646",
+     "name": "The Wolf of Wall Street",
+     "note": "2013",
+     "poster": "/kW9LmvYHAaS9iA0tHmZVq8hQYoq.jpg"
+    },
+    {
+     "id": "m157336",
+     "name": "Interstellar",
+     "note": "2014",
+     "poster": "/yQvGrMoipbRoddT0ZR8tPoR7NfX.jpg"
+    },
+    {
+     "id": "m76341",
+     "name": "Mad Max: Fury Road",
+     "note": "2015",
+     "poster": "/ulcAi4dKpAjHwYGS08vNyx9H6I9.jpg"
+    },
+    {
+     "id": "m135397",
+     "name": "Jurassic World",
+     "note": "2015",
+     "poster": "/rhr4y79GpxQF9IsfJItRXVaoGs4.jpg"
+    },
+    {
+     "id": "m150540",
+     "name": "Inside Out",
+     "note": "2015",
+     "poster": "/2H1TmgdfNtsKlU9jKdeNyYL5y8T.jpg"
+    },
+    {
+     "id": "m286217",
+     "name": "The Martian",
+     "note": "2015",
+     "poster": "/5BHuvQ6p9kfc091Z8RiFNhCwL4b.jpg"
+    },
+    {
+     "id": "m297761",
+     "name": "Suicide Squad",
+     "note": "2016",
+     "poster": "/sk3FZgh3sRrmr8vyhaitNobMcfh.jpg"
+    },
+    {
+     "id": "m354912",
+     "name": "Coco",
+     "note": "2017",
+     "poster": "/6Ryitt95xrO8KXuqRGm1fUuNwqF.jpg"
+    },
+    {
+     "id": "m475557",
+     "name": "Joker",
+     "note": "2019",
+     "poster": "/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"
+    }
+   ]
+  },
+  {
    "id": "biggest-movies-of-1980",
    "src": "{\"type\":\"year\",\"year\":1980}",
    "cat": "Movies by year",
