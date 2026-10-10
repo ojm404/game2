@@ -173,9 +173,9 @@ const DEFS = [
     "Ultima Online", "EverQuest", "RuneScape", "EVE Online", "Lineage II", "World of Warcraft", "Guild Wars 2", "MapleStory",
     "Star Wars: The Old Republic", "The Elder Scrolls Online", "Final Fantasy XIV Online", "Black Desert Online", "Lost Ark",
     "New World", "Old School RuneScape" ] },
-  { type: "console", name: "Nintendo 64", title: "Best Nintendo 64 games" },
-  { type: "console", name: "SNES", title: "Best Super Nintendo games" },
-  { type: "console", name: "Nintendo Switch", title: "Best Nintendo Switch games", order: "-metacritic" },
+  { type: "console", name: "Nintendo 64", title: "Best Nintendo 64 games", since: 1996, oneSeries: true },
+  { type: "console", name: "SNES", title: "Best Super Nintendo games", since: 1990, oneSeries: true },
+  { type: "console", name: "Nintendo Switch", title: "Best Nintendo Switch games", order: "-metacritic", since: 2017, oneSeries: true },
   { type: "games", group: "Awards", title: "The Game Awards: Game of the Year winners", short: "Game of the Year winners", picks: [
     ["Dragon Age: Inquisition", "Dragon Age: Inquisition", 2014], ["The Witcher 3: Wild Hunt", "The Witcher 3: Wild Hunt", 2015],
     ["Overwatch", "Overwatch", 2016], ["Breath of the Wild", "The Legend of Zelda: Breath of the Wild", 2017],
@@ -433,16 +433,37 @@ const builders = {
     return { cat: CATS.games, ...(def.group ? { group: def.group, short: def.short || def.title } : {}), title: def.title, items };
   },
   // The best-known games on one console.
+  //   since: the console's launch year. With it, only games that debuted on this console are kept: nothing first released
+  //          before the console existed, and nothing that also came out on another company's machines (ports).
+  //          Later re-releases on the same maker's newer consoles are fine.
+  //   oneSeries: true keeps only the top game from each series, so sequels on the same console drop out.
   async console(def) {
     const p = await findPlatform(def.name);
-    const pages = [];
-    for (const page of [1, 2]) pages.push(await rawg("/games", { platforms: p.id, ordering: def.order || "-added", page_size: 40, page }));
-    const seen = new Set();
-    const items = pages.flatMap(r => r.results || [])
-      .filter(g => g.released && g.released <= today && !seen.has(plain(g.name)) && seen.add(plain(g.name)))
-      .slice(0, MAX_ITEMS)
-      .sort((a, b) => a.released.localeCompare(b.released))
-      .map(g => gameItem(g));
+    const family = new RegExp(def.family || "nintendo|wii|gamecube|game boy|nes", "i");
+    const candidates = [];
+    for (const page of [1, 2, 3, 4]) {
+      const r = await rawg("/games", { platforms: p.id, ordering: def.order || "-added", page_size: 40, page });
+      candidates.push(...(r.results || []));
+      if (!r.next) break;
+    }
+    const original = g => !def.since || (Number(year(g.released)) >= def.since &&
+      (g.platforms || []).every(x => x.platform.id === p.id || family.test(x.platform.name)));
+    const seenNames = new Set(), taken = new Set(), picked = [];
+    for (const g of candidates) {
+      if (picked.length >= MAX_ITEMS) break;
+      if (!g.released || g.released > today || seenNames.has(plain(g.name)) || taken.has(g.id) || !original(g)) continue;
+      seenNames.add(plain(g.name));
+      if (def.oneSeries) {
+        // Everything else in this game's series is now off the table.
+        for (const page of [1, 2, 3]) {
+          let s; try { s = await rawg(`/games/${g.id}/game-series`, { page_size: 40, page }); } catch (e) { break; }
+          (s.results || []).forEach(x => taken.add(x.id));
+          if (!s.next) break;
+        }
+      }
+      picked.push(g);
+    }
+    const items = picked.sort((a, b) => a.released.localeCompare(b.released)).map(g => gameItem(g));
     return { cat: CATS.games, group: "Consoles", short: def.title || p.name, title: def.title || `Best ${p.name} games`, items };
   },
   // A hand-picked movie list. Titles are matched on TMDB by name and release year; the Marvel filter is not applied.
@@ -474,7 +495,8 @@ const builders = {
     const seen = new Set();
     const items = (credits.cast || [])
       .sort((a, b) => b.total_episode_count - a.total_episode_count)
-      .map(p => ({ p, character: ((p.roles || [])[0] || {}).character || "" }))
+      // An actor can have several credits on one show; use the character they played in the most episodes.
+      .map(p => ({ p, character: ((p.roles || []).slice().sort((a, b) => (b.episode_count || 0) - (a.episode_count || 0))[0] || {}).character || "" }))
       .filter(x => x.character && !/\b(self|voice|uncredited)\b/i.test(x.character))
       .filter(x => !seen.has(x.character.toLowerCase()) && seen.add(x.character.toLowerCase()))
       .slice(0, def.count || MAX_CAST)
