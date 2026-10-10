@@ -218,7 +218,7 @@
     <div class="list-name" id="listName"></div>
   </header>
   <div id="app"></div>
-  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive.<span class="build">Build 2026-10-10.3</span></footer>
+  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive.<span class="build">Build 2026-10-10.4</span></footer>
 </main>
 
 <script>
@@ -470,9 +470,18 @@ function watchPresence(){
   conRef.on("value", snap => {
     if (snap.val() !== true) return;
     seat.child("online").onDisconnect().set(false);
-    seat.update({online: true, left: null});
+    seat.update({online: true, left: null, away: document.hidden === true});
   });
 }
+// Faster signals than waiting for the connection to time out: tell the room the moment this player switches tab or app,
+// comes back, or closes the page.
+function mySeat(){ return roomRef && room && me.slot ? roomRef.child("players/" + me.slot) : null; }
+document.addEventListener("visibilitychange", () => {
+  const seat = mySeat(); if (!seat) return;
+  seat.update(document.hidden ? {away: true} : {away: false, online: true});
+});
+window.addEventListener("pagehide", () => { const seat = mySeat(); if (seat) seat.update({online: false}); });
+window.addEventListener("pageshow", () => { const seat = mySeat(); if (seat) seat.update({online: true, away: false}); });
 function leave(msg, onPurpose){
   if (conRef) { conRef.off(); conRef = null; }
   if (roomRef && onPurpose && me.slot) {
@@ -644,6 +653,7 @@ function goneView(opp){
   const n = esc(opp.name);
   if (opp.left) return `<div class="notice" role="status"><strong>${n} has left the room.</strong> You can leave too and start a new one.</div>`;
   if (opp.online === false) return `<div class="notice" role="status"><strong>${n} has disconnected.</strong> If they reopen the game on the same device, they will drop back into this room.</div>`;
+  if (opp.away) return `<div class="notice" role="status"><strong>${n} has switched to another tab or app.</strong> The game carries on when they come back.</div>`;
   return "";
 }
 function draw(){
@@ -706,7 +716,7 @@ function lobbyView(){
 
 function statusView(opp, done){
   let s = `Waiting for someone to join. <button class="link inv" data-act="invite">Copy invite link</button>`;
-  if (opp) s = done ? "Playing " + esc(opp.name) : esc(opp.name) + (opp.ready ? " has locked in" : opp.left || opp.online === false ? " is away" : " is still ranking");
+  if (opp) s = done ? "Playing " + esc(opp.name) : esc(opp.name) + (opp.ready ? " has locked in" : opp.left || opp.online === false || opp.away ? " is away" : " is still ranking");
   const vs = opp ? `<span class="vs"><span class="pc-${me.slot}">${mark(me.slot)}${esc(me.name)}</span> vs <span class="pc-${otherSlot()}">${mark(otherSlot())}${esc(opp.name)}</span></span>` : "";
   if (opp && done) s = "";
   if (room.tiebreak) s = "Tiebreaker round" + (s ? ". " + s : "");
