@@ -242,7 +242,7 @@
   <div id="app"></div>
   <div id="rulers" aria-hidden="true"></div>
   <div id="modal"></div>
-  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive. Game data and artwork from RAWG.<span class="build">Build 2026-10-11.2</span></footer>
+  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive. Game data and artwork from RAWG.<span class="build">Build 2026-10-11.3</span></footer>
 </main>
 
 <script>
@@ -303,8 +303,9 @@ const app = document.getElementById("app");
 // Pop-up state lives up here because the very first draw of the page already consults it.
 const modalEl = document.getElementById("modal");
 let modal = null;                                   // which pop-up is showing, if any
-const seen = {round: null, gone: null, say: 0};     // what has already been announced, so pop-ups appear once
+const seen = {round: null, gone: null, say: 0, next: null};     // what has already been announced, so pop-ups appear once
 let vis = null;                                     // the part of the page currently on screen
+let modalTop = null, modalFor = null;               // where the open pop-up was placed, and which pop-up that was
 const configured = !firebaseConfig.apiKey.startsWith("PASTE");
 const STORE = "tierBattleship";
 // What players can choose from on the Create and Join screens.
@@ -630,10 +631,10 @@ const actions = {
   say: btn => { const mine = room.players[me.slot]; roomRef.child("players/" + me.slot + "/say").set({m: +btn.dataset.i, r: room.round, n: ((mine.say && mine.say.n) || 0) + 1}); },
   closeModal: () => { modal = null; renderModal(); },
   openRound: () => { modal = {kind: "round"}; renderModal(); },
-  nextRound: () => {
-    modal = null; pickOpen = true; render();
-    const p = document.querySelector(".picker"); if (p && p.scrollIntoView) p.scrollIntoView({block: "center"});
-  },
+  // Another round: one player asks, the other agrees, then the winner picks the list.
+  nextRound: () => roomRef.child("next").set({by: me.slot}),
+  agreeNext: () => roomRef.child("next").update({ok: true}),
+  cancelNext: () => roomRef.child("next").set(null),
   modalTiebreak: () => { modal = null; actions.tiebreak(); renderModal(); },
   endGame: () => roomRef.update({closed: {by: me.slot}}),
   closedOk: () => { modal = null; leave(); },
@@ -678,7 +679,7 @@ const actions = {
     }
   },
   tiebreakRound: () => {
-    const u = {round: room.round + 1, list: tiebreakList(), tiebreak: true, tb: null};
+    const u = {round: room.round + 1, list: tiebreakList(), tiebreak: true, tb: null, next: null};
     ["p1","p2"].forEach(s => { u["players/"+s+"/ready"] = false; u["players/"+s+"/own"] = null; u["players/"+s+"/guess"] = null; });
     roomRef.update(u);
   },
@@ -696,10 +697,10 @@ const actions = {
   rematch: btn => {
     if (!chosenList()) {      // open the menu and say why nothing happened
       pickOpen = true; fillSelects();
-      if (btn) { btn.textContent = "Choose the next list first"; setTimeout(() => { btn.textContent = "Play again"; }, 2000); }
+      if (btn) { btn.textContent = "Choose the next list first"; setTimeout(() => { btn.textContent = "Start round"; }, 2000); }
       return;
     }
-    const u = {round: room.round + 1, list: chosenList(), tiebreak: null, tb: null};
+    const u = {round: room.round + 1, list: chosenList(), tiebreak: null, tb: null, next: null};
     ["p1","p2"].forEach(s => { u["players/"+s+"/ready"] = false; u["players/"+s+"/own"] = null; u["players/"+s+"/guess"] = null; });
     roomRef.update(u);
   }
@@ -971,19 +972,23 @@ function tally(g, a, shown){
   const io = new IntersectionObserver(entries => {
     entries.forEach(en => { const i = +en.target.dataset.i; if (en.isIntersecting) on.add(i); else on.delete(i); });
     if (on.size) { const lo = Math.min(...on), hi = Math.max(...on); vis = {top: lo * STEP, height: (hi - lo + 1) * STEP}; }
-    placeModal();
   });
   for (let i = 0; i < 120; i++) { const m = document.createElement("i"); m.dataset.i = i; m.style.top = (i * STEP) + "px"; rulers.appendChild(m); io.observe(m); }
 })();
+// A pop-up is positioned once, in the part of the page on screen at the moment it opens, and then stays where it is.
 function placeModal(){
   const box = modalEl && modalEl.querySelector ? modalEl.querySelector(".mbox") : null;
-  if (!box) return;
-  const v = vis || {top: window.scrollY || 0, height: window.innerHeight || 600};
-  box.style.top = Math.max(12, v.top + Math.max(12, (v.height - box.offsetHeight) / 2)) + "px";
+  if (!box) { modalTop = null; modalFor = null; return; }
+  if (modalFor !== modal || modalTop === null) {
+    const v = vis || {top: window.scrollY || 0, height: window.innerHeight || 600};
+    modalTop = Math.max(12, v.top + Math.max(12, (v.height - box.offsetHeight) / 2));
+    modalFor = modal;
+  }
+  box.style.top = modalTop + "px";
 }
 
 function updateModal(){
-  if (!room || !me.code) { modal = null; seen.round = null; seen.gone = null; seen.say = 0; return; }
+  if (!room || !me.code) { modal = null; seen.round = null; seen.gone = null; seen.say = 0; seen.next = null; return; }
   if (room.closed) { modal = {kind: "closed"}; return; }
   const mine = room.players[me.slot], opp = room.players[otherSlot()];
   // Only a deliberate "Leave room" gets a pop-up. A dropped connection or a tab switch just shows the banner.
@@ -995,6 +1000,8 @@ function updateModal(){
   if (!done) { if (modal && (modal.kind === "round" || modal.kind === "say")) modal = null; return; }
   const T = room.tb, key = room.round + (T && T.pick && T.guess ? ":tb" : "");
   if (seen.round !== key) { seen.round = key; modal = {kind: "round"}; }
+  const nx = room.next ? room.next.by + (room.next.ok ? ":ok" : "") : null;
+  if (nx !== seen.next) { seen.next = nx; if (nx) modal = modal && modal.kind === "round" ? modal : {kind: "round"}; }
   const n = opp.say && opp.say.r === room.round ? opp.say.n : 0;
   if (n > seen.say) { seen.say = n; if (!modal) modal = {kind: "say"}; }
 }
@@ -1036,10 +1043,18 @@ function modalHtml(){
   const tbw = room.tiebreak || o.settled ? " the tiebreaker" : "";
   const title = o.tie && !o.settled ? "It's a tie" : o.iWin ? "You win" + tbw : on + " wins" + tbw;
   const row = (slot, t) => `<span class="pc-${slot}"><b>${t.score}</b>${mark(slot)}${esc(room.players[slot].name)}<span>${tallyText(t)}</span></span>`;
-  const next = o.tie && !o.settled && !room.tb
-    ? `<button class="btn" data-act="modalTiebreak">Play the tiebreaker</button>`
-    : o.tie && !o.settled ? `<button class="btn" data-act="closeModal">Go to the tiebreaker</button>`
-    : `<button class="btn" data-act="nextRound">Play another round</button>`;
+  // "What next?" depends on where the another-round conversation has got to.
+  const nx = room.next, chooser = o.iWin ? me.slot : o.oppWin ? otherSlot() : "p1";
+  const extra = `<button class="btn ghost" data-act="share">Copy results</button><button class="btn ghost" data-act="endGame">End game</button>`;
+  let next;
+  if (o.tie && !o.settled) next = `<div class="actions">${room.tb ? `<button class="btn" data-act="closeModal">Go to the tiebreaker</button>` : `<button class="btn" data-act="modalTiebreak">Play the tiebreaker</button>`}${extra}</div>`;
+  else if (!nx) next = `<div class="actions"><button class="btn" data-act="nextRound">Play another round</button>${extra}</div>`;
+  else if (!nx.ok && nx.by === me.slot) next = `<p>You asked for another round. Waiting for ${on} to agree.</p><div class="actions"><button class="btn ghost" data-act="cancelNext">Cancel request</button>${extra}</div>`;
+  else if (!nx.ok) next = `<p><strong style="color:var(--text)">${on} wants another round.</strong></p><div class="actions"><button class="btn" data-act="agreeNext">Agree</button><button class="btn ghost" data-act="endGame">End game</button></div>`;
+  else if (chooser === me.slot) next = `<p><strong style="color:var(--text)">You won, so you choose the next list.</strong></p>
+      <div class="picker" role="group" aria-label="Next list"></div>
+      <div class="actions"><button class="btn" data-act="rematch">Start round</button><button class="btn ghost" data-act="endGame">End game</button></div>`;
+  else next = `<p>${on} won and is choosing the next list.</p><div class="actions"><button class="btn ghost" data-act="endGame">End game</button></div>`;
   return `<button class="x" data-act="closeModal">View the board</button>
     <h2 class="${o.iWin ? "win" : ""}">${title}</h2>
     <p>${esc(L().title)}</p>
@@ -1047,16 +1062,16 @@ function modalHtml(){
     ${sessionHtml()}
     ${chatLog()}${says}
     <p class="sublabel">What next?</p>
-    <div class="actions">${next}<button class="btn ghost" data-act="share">Copy results</button><button class="btn ghost" data-act="endGame">End game</button></div>`;
+    ${next}`;
 }
 function renderModal(){
   if (!modalEl || !("innerHTML" in modalEl)) return;
   const html = modal && room ? modalHtml() : "";
   modalEl.innerHTML = html ? `<div class="mback"></div><div class="mbox pc-wrap" role="dialog" aria-modal="true">${html}</div>` : "";
   if (modalEl.style) { modalEl.style.setProperty("--p1c", look("p1").color); modalEl.style.setProperty("--p2c", look("p2").color); }
+  fillSelects();
   placeModal();
 }
-if (typeof window !== "undefined" && window.addEventListener) window.addEventListener("scroll", placeModal, {passive: true});
 
 function resultsView(mine, opp){
   const all = keys(), mySlot = me.slot, oppSlot = otherSlot();
@@ -1083,10 +1098,7 @@ function resultsView(mine, opp){
     <details class="theirs"${theirsOpen ? " open" : ""}><summary>See ${on}'s guess against your real ranking</summary>
       ${legend}
       ${revealBoard(opp.guess, mine.own, oppSlot, mySlot)}</details>
-    <div class="actions"><button class="btn ghost" data-act="share">Copy results</button></div>
-    <label id="nextlab">Next list</label>
-    <div class="picker" role="group" aria-labelledby="nextlab"></div>
-    <div class="actions"><button class="btn" data-act="rematch">Play again</button></div>`;
+    <div class="actions"><button class="btn" data-act="openRound">Open chat and next steps</button><button class="btn ghost" data-act="share">Copy results</button></div>`;
 }
 </script>
 </body>
