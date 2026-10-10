@@ -198,6 +198,10 @@
   .says button{background:var(--panel2);border:0;border-radius:999px;padding:7px 12px;font-size:.88rem;font-weight:500}
   .says button:hover{background:var(--line)}
   .sublabel{font-size:.78rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin:12px 0 6px}
+  .opt-tag{font-weight:400;font-size:.75rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px}
+  .presets{margin-top:8px}
+  .mbox .tiered{margin-top:4px}
+  .mbox .tiernames{max-width:none}
   .tiebox{background:var(--panel);border-radius:14px;padding:16px 18px;margin:0 0 20px;box-shadow:inset 0 0 0 2px var(--purple)}
   .tbpair{display:flex;gap:10px;flex-wrap:wrap}
   .tbpick{flex:1;min-width:140px;display:flex;gap:10px;align-items:center;background:var(--panel2);border:0;border-radius:12px;padding:10px;text-align:left;font-weight:600}
@@ -242,7 +246,7 @@
   <div id="app"></div>
   <div id="rulers" aria-hidden="true"></div>
   <div id="modal"></div>
-  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive. Game data and artwork from RAWG.<span class="build">Build 2026-10-11.4</span></footer>
+  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive. Game data and artwork from RAWG.<span class="build">Build 2026-10-12.3</span></footer>
 </main>
 
 <script>
@@ -448,7 +452,7 @@ fetch(LISTS_URL).then(r => r.ok ? r.json() : null).then(d => {
 }).catch(() => {});
 
 // Lists are grouped into categories. build-lists.js sets "cat" on each list; older files are sorted by their title.
-const CAT_ORDER = ["Music", "Franchises", "Actors & directors", "Genres", "TV", "Movies by year", "Awards", "Games"];
+const CAT_ORDER = ["Movies", "TV", "Music", "Games", "Movies by year"];
 let pickCat = "Music";
 function catOf(l){
   if (l.cat) return l.cat;
@@ -710,7 +714,12 @@ const actions = {
       if (btn) { btn.textContent = "Choose the next list first"; setTimeout(() => { btn.textContent = "Start round"; }, 2000); }
       return;
     }
-    const u = {round: room.round + 1, list: chosenList(), tiebreak: null, tb: null, next: null};
+    const tiers = tierNames.map(t => (t || "").trim().slice(0, 14)).filter(Boolean);
+    if (tiers.length < 2) {
+      if (btn) { btn.textContent = "Name at least two tiers"; setTimeout(() => { btn.textContent = "Start round"; }, 2000); }
+      return;
+    }
+    const u = {round: room.round + 1, list: chosenList(), tiers, tiebreak: null, tb: null, next: null};
     ["p1","p2"].forEach(s => { u["players/"+s+"/ready"] = false; u["players/"+s+"/own"] = null; u["players/"+s+"/guess"] = null; });
     roomRef.update(u);
   }
@@ -718,7 +727,9 @@ const actions = {
 function showErr(e){ errMsg = "Connection problem: " + e.message; render(); }
 
 app.addEventListener("toggle", e => { if (e.target.matches && e.target.matches("details.theirs")) theirsOpen = e.target.open; }, true);
-app.addEventListener("input", e => { if (e.target.matches(".tierin")) tierNames[+e.target.dataset.i] = e.target.value; });
+const onInput = e => { if (e.target.matches && e.target.matches(".tierin")) tierNames[+e.target.dataset.i] = e.target.value; };
+app.addEventListener("input", onInput);
+if (modalEl && modalEl.addEventListener) modalEl.addEventListener("input", onInput);
 app.addEventListener("change", e => {
   if (e.target.matches("select.listpick")) pickId = e.target.value;
   if (e.target.matches("select.catpick")) { pickCat = e.target.value; pickGroup = null; pickId = null; fillSelects(); }
@@ -762,7 +773,8 @@ function draw(){
   const mine = room.players[me.slot], opp = room.players[otherSlot()];
   const oppName = opp ? opp.name : "your opponent";
   if (mine.own && opp && opp.own && opp.guess && mine.guess) {
-    if (resultsRound !== room.round) { resultsRound = room.round; pickId = null; pickOpen = false; revealLock = Date.now() + 800; justRevealed = null; }
+    if (resultsRound !== room.round) { resultsRound = room.round; pickId = null; pickOpen = false;
+      tierNames = roomTiers().concat(["", "", "", "", "", ""]).slice(0, 6);   /* next-round tier boxes start from the current names */ revealLock = Date.now() + 800; justRevealed = null; }
     app.innerHTML = statusView(opp, true) + goneView(opp) + resultsView(mine, opp); return;
   }
   app.innerHTML = statusView(opp) + goneView(opp) + (me.step === "locked" ? waitingView(opp, oppName) : boardView(oppName));
@@ -773,6 +785,15 @@ function setupView(){
   <p class="hint">Open this file in a text editor and replace the <code>firebaseConfig</code> values near the top of the script with the ones from your Firebase project. Then reload.</p></div>`;
 }
 
+// The tier-name boxes, used when creating a room and again when the winner sets up the next round.
+// They start filled with S to F (or the current names, for a next round) and can simply be typed over.
+function tierEditor(){
+  return `<div class="tiered">
+    <label>Name your tiers <span class="opt-tag">optional</span></label>
+    <p class="hint" style="margin:0 0 8px;font-size:.85rem">Tiers are the rows you sort everything into, best at the top. Type over any name to change it.</p>
+    <div class="tiernames" role="group" aria-label="Tier names, best to worst">${tierNames.map((t, i) => `<input class="tierin" data-i="${i}" maxlength="14" value="${esc(t || "")}" placeholder="${TIERS[i]}" aria-label="Tier ${i + 1} name">`).join("")}</div>
+    <p class="hint" style="margin:6px 0 0;font-size:.82rem">Leave a box empty to play with fewer tiers.</p></div>`;
+}
 function lobbyView(){
   const err = `<p class="err" role="alert">${esc(errMsg)}</p>`;
   const nameField = `<label for="name">Your name</label>
@@ -788,9 +809,7 @@ function lobbyView(){
     ${nameField}
     <label id="picklab">What are you ranking?</label>
     <div class="picker" role="group" aria-labelledby="picklab"></div>
-    <label id="tnl">Tier names, best to worst</label>
-    <div class="tiernames" role="group" aria-labelledby="tnl">${tierNames.map((t, i) => `<input class="tierin" data-i="${i}" maxlength="14" value="${esc(t)}" aria-label="Tier ${i + 1} name">`).join("")}</div>
-    <p class="hint" style="margin:6px 0 0;font-size:.82rem">Rename them however you like. Leave a box empty to play with fewer tiers.</p>
+    ${tierEditor()}
     <div class="actions">${back}<button class="btn" data-act="create">Create room</button></div>
     ${err}
   </div>`;
@@ -1065,6 +1084,7 @@ function modalHtml(){
   else if (!nx.ok) next = `<p><strong style="color:var(--text)">${on} wants another round.</strong></p><div class="actions"><button class="btn" data-act="agreeNext">Agree</button><button class="btn ghost" data-act="endGame">End game</button></div>`;
   else if (chooser === me.slot) next = `<p><strong style="color:var(--text)">You won, so you choose the next list.</strong></p>
       <div class="picker" role="group" aria-label="Next list"></div>
+      ${tierEditor()}
       <div class="actions"><button class="btn" data-act="rematch">Start round</button><button class="btn ghost" data-act="endGame">End game</button></div>`;
   else next = `<p>${on} won and is choosing the next list.</p><div class="actions"><button class="btn ghost" data-act="endGame">End game</button></div>`;
   return `<button class="x" data-act="closeModal">View the board</button>
@@ -1079,6 +1099,8 @@ function modalHtml(){
 function renderModal(){
   if (!modalEl || !("innerHTML" in modalEl)) return;
   const html = modal && room ? modalHtml() : "";
+  const typing = html && modalEl.contains && document.activeElement && document.activeElement.tagName === "INPUT" && modalEl.contains(document.activeElement);
+  if (typing) return;      // redrawing would knock the cursor out of the box; the next update catches up
   modalEl.innerHTML = html ? `<div class="mback"></div><div class="mbox pc-wrap" role="dialog" aria-modal="true">${html}</div>` : "";
   if (modalEl.style) { modalEl.style.setProperty("--p1c", look("p1").color); modalEl.style.setProperty("--p2c", look("p2").color); }
   fillSelects();
