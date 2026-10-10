@@ -23,11 +23,11 @@ const DEFS = [
   { type: "collection", title: "Star Trek films", names: ["Star Trek: The Original Series Collection", "Star Trek: The Next Generation Collection", "Star Trek: Alternate Reality Collection"] },
   { type: "genre",      name: "Science Fiction" },
   { type: "genre",      name: "Horror" },
-  { type: "genre",      name: "Comedy" },
-  { type: "keyword",    name: "musical", title: "Biggest musical movies" },
-  { type: "genre",      name: "Family", title: "Popular kids' movies" },
+  { type: "genre",      name: "Comedy", noDisney: true },      // noDisney leaves out Disney films but keeps Pixar
+  { type: "keyword",    name: "musical", title: "Biggest musical movies", noDisney: true },
+  { type: "genre",      name: "Family", title: "Popular kids' movies", noDisney: true },
   { type: "keyword",    name: "biography", title: "Best biopics" },
-  ...years(1990, 2019),
+  ...years(1980, 2019),
   //   "films" is a hand-picked movie list. Each pick is ["Title", release year]; posters are looked up on TMDB.
   { type: "films", cat: "Franchises", title: "Disney princess movies", picks: [
     ["Snow White and the Seven Dwarfs", 1937], ["Cinderella", 1950], ["Sleeping Beauty", 1959], ["The Little Mermaid", 1989],
@@ -140,14 +140,21 @@ const slug = s => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "
 const year = d => (d || "").slice(0, 4);
 const movieItem = m => ({ id: "m" + m.id, name: m.title, note: year(m.release_date), poster: m.poster_path || null });
 
-async function isMarvel(id) {
+// Looks up one movie's studios and keywords to see whether it is a Marvel film or a Disney (but not Pixar) film.
+async function studioFlags(id) {
   const d = await tmdb(`/movie/${id}`, { append_to_response: "keywords" });
-  const names = [...(d.production_companies || []), ...((d.keywords && d.keywords.keywords) || [])].map(x => x.name.toLowerCase());
-  return names.some(n => n.includes("marvel")) || /deadpool/i.test(d.title);
+  const studios = (d.production_companies || []).map(x => x.name.toLowerCase());
+  const words = ((d.keywords && d.keywords.keywords) || []).map(x => x.name.toLowerCase());
+  return {
+    marvel: [...studios, ...words].some(n => n.includes("marvel")) || /deadpool/i.test(d.title),
+    // Pixar films also list Disney as a studio, so anything with Pixar on it is kept.
+    disney: studios.some(n => n.includes("disney")) && !studios.some(n => n.includes("pixar"))
+  };
 }
 
 // Takes candidate movies, keeps the best-known released features, returns them oldest first.
-async function pickMovies(candidates, { minVotes = MIN_VOTES } = {}) {
+// noDisney: true also leaves out Disney films, but keeps Pixar (used on lists where Disney would otherwise crowd everything out).
+async function pickMovies(candidates, { minVotes = MIN_VOTES, noDisney = false } = {}) {
   const seen = new Set();
   const pool = candidates
     .filter(m => m.release_date && m.release_date <= today && !m.video && m.vote_count >= minVotes)
@@ -157,7 +164,10 @@ async function pickMovies(candidates, { minVotes = MIN_VOTES } = {}) {
   const out = [];
   for (const m of pool) {
     if (out.length >= MAX_ITEMS) break;
-    if (EXCLUDE_MARVEL && await isMarvel(m.id)) continue;
+    if (EXCLUDE_MARVEL || noDisney) {
+      const f = await studioFlags(m.id);
+      if ((EXCLUDE_MARVEL && f.marvel) || (noDisney && f.disney)) continue;
+    }
     out.push(m);
   }
   return out.sort((a, b) => a.release_date.localeCompare(b.release_date)).map(movieItem);
@@ -267,8 +277,8 @@ const builders = {
     const all = (await tmdb("/genre/movie/list")).genres;
     const g = all.find(x => x.name.toLowerCase() === def.name.toLowerCase());
     if (!g) throw new Error(`No genre called "${def.name}". Options: ${all.map(x => x.name).join(", ")}`);
-    const pages = await Promise.all([1, 2, 3].map(page => tmdb("/discover/movie", { with_genres: g.id, sort_by: "vote_count.desc", page })));
-    return { cat: CATS.genre, title: def.title || `Biggest ${g.name.toLowerCase()} movies`, items: await pickMovies(pages.flatMap(p => p.results)) };
+    const pages = await Promise.all((def.noDisney ? [1, 2, 3, 4, 5, 6] : [1, 2, 3]).map(page => tmdb("/discover/movie", { with_genres: g.id, sort_by: "vote_count.desc", page })));
+    return { cat: CATS.genre, title: def.title || `Biggest ${g.name.toLowerCase()} movies`, items: await pickMovies(pages.flatMap(p => p.results), { noDisney: !!def.noDisney }) };
   },
   // A hand-picked movie list. Titles are matched on TMDB by name and release year; the Marvel filter is not applied.
   async films(def) {
@@ -403,8 +413,8 @@ const builders = {
     const r = await tmdb("/search/keyword", { query: def.name });
     const k = r.results.find(x => x.name.toLowerCase() === def.name.toLowerCase()) || r.results[0];
     if (!k) throw new Error(`No keyword called "${def.name}"`);
-    const pages = await Promise.all([1, 2, 3].map(page => tmdb("/discover/movie", { with_keywords: k.id, sort_by: "vote_count.desc", page })));
-    return { cat: CATS.genre, title: def.title || `Biggest ${k.name} movies`, items: await pickMovies(pages.flatMap(p => p.results)) };
+    const pages = await Promise.all((def.noDisney ? [1, 2, 3, 4, 5, 6] : [1, 2, 3]).map(page => tmdb("/discover/movie", { with_keywords: k.id, sort_by: "vote_count.desc", page })));
+    return { cat: CATS.genre, title: def.title || `Biggest ${k.name} movies`, items: await pickMovies(pages.flatMap(p => p.results), { noDisney: !!def.noDisney }) };
   },
   // A list of TV shows (not seasons) from one TMDB TV genre.
   async tvgenre(def) {
