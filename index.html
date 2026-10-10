@@ -242,7 +242,7 @@
   <div id="app"></div>
   <div id="rulers" aria-hidden="true"></div>
   <div id="modal"></div>
-  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive. Game data and artwork from RAWG.<span class="build">Build 2026-10-11.3</span></footer>
+  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive. Game data and artwork from RAWG.<span class="build">Build 2026-10-11.4</span></footer>
 </main>
 
 <script>
@@ -352,8 +352,10 @@ function copyText(text, btn){
   const flash = msg => { if (!btn) return; const old = btn.dataset.label || btn.textContent; btn.dataset.label = old; btn.textContent = msg; setTimeout(() => { btn.textContent = old; }, 1800); };
   const classic = () => {
     const ta = document.createElement("textarea");
-    ta.value = text; ta.setAttribute("readonly", ""); ta.style.cssText = "position:fixed;top:0;left:0;width:1px;height:1px;opacity:0";
-    document.body.appendChild(ta); ta.focus(); ta.select(); ta.setSelectionRange(0, text.length);
+    ta.value = text; ta.setAttribute("readonly", ""); // Placed right where the button is and focused without scrolling, so the page cannot jump under the player's finger.
+    const at = btn && btn.getBoundingClientRect ? btn.getBoundingClientRect() : {top: 0, left: 0};
+    ta.style.cssText = `position:fixed;top:${Math.max(0, at.top)}px;left:${Math.max(0, at.left)}px;width:1px;height:1px;opacity:0`;
+    document.body.appendChild(ta); ta.focus({preventScroll: true}); ta.select(); ta.setSelectionRange(0, text.length);
     let ok = false; try { ok = document.execCommand("copy"); } catch (e) {}
     ta.remove(); return ok;
   };
@@ -366,9 +368,9 @@ function copyText(text, btn){
     (btn && btn.closest(".actions, .status") || app).insertAdjacentElement("afterend", box);
     ta.focus(); ta.select();
   };
-  if (classic()) { flash("Copied"); return; }
-  try { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(text).then(() => flash("Copied"), byHand); return; } } catch (e) {}
-  byHand();
+  const fallback = () => { if (classic()) flash("Copied"); else byHand(); };
+  try { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(text).then(() => flash("Copied"), fallback); return; } } catch (e) {}
+  fallback();
 }
 
 function scoreOf(g, a){
@@ -402,24 +404,31 @@ function sessionStats(){
 }
 const winsText = n => n + (n === 1 ? " win" : " wins");
 function shareText(){
-  const o = outcome(), a = o.my.score, b = o.their.score;
+  const mine = room.players[me.slot], opp = room.players[otherSlot()];
   const who = slot => { const e = look(slot).emoji; return (e ? e + " " : "") + room.players[slot].name; };
   const me1 = who(me.slot), them = who(otherSlot());
-  let line;
-  if (a > b) line = `${me1} beat ${them} ${a}-${b}`;
-  else if (b > a) line = `${them} beat ${me1} ${b}-${a}`;
-  else if (o.settled) line = `${me1} and ${them} tied ${a}-${b}, and ${(o.iWin ? o.mine : o.opp).name} won the tiebreaker`;
-  else line = `${me1} and ${them} tied ${a}-${b}`;
-  const st = sessionStats();
+  const done = !!(mine.own && mine.guess && opp && opp.own && opp.guess);   // does the current round have results?
+  const st = sessionStats(), final = !!room.closed, tag = final ? "OutRanked final results: " : "OutRanked: ";
+  const rounds = `${st.rounds} ${st.rounds === 1 ? "round" : "rounds"}`;
   let out;
-  if (st.rounds > 1) {
-    // Two or more rounds played: share the running totals only, not this round's score.
+  if (st.rounds > 1 || (st.rounds === 1 && !done)) {
+    // Two or more rounds played (or the game ended between rounds): share the running totals only.
     const mw = st[me.slot].wins, tw = st[otherSlot()].wins;
-    const head = mw === tw ? `${me1} and ${them} are level at ${mw}-${tw}` : mw > tw ? `${me1} leads ${them} ${mw}-${tw}` : `${them} leads ${me1} ${tw}-${mw}`;
+    const head = final
+      ? (mw === tw ? `${me1} and ${them} finished level at ${mw}-${tw} over ${rounds}` : mw > tw ? `${me1} beat ${them} ${mw}-${tw} over ${rounds}` : `${them} beat ${me1} ${tw}-${mw} over ${rounds}`)
+      : (mw === tw ? `${me1} and ${them} are level at ${mw}-${tw} after ${rounds}` : mw > tw ? `${me1} leads ${them} ${mw}-${tw} after ${rounds}` : `${them} leads ${me1} ${tw}-${mw} after ${rounds}`);
     const side = slot => `${who(slot)}: ${winsText(st[slot].wins)}, ${tallyText(st[slot])}`;
-    out = [`OutRanked: ${head} after ${st.rounds} rounds${st.ties ? ` (${st.ties} tied)` : ""}`, side(me.slot), side(otherSlot())];
+    out = [tag + head + (st.ties ? ` (${st.ties} tied)` : ""), side(me.slot), side(otherSlot())];
+  } else if (done) {
+    const o = outcome(), a = o.my.score, b = o.their.score;
+    let line;
+    if (a > b) line = `${me1} beat ${them} ${a}-${b}`;
+    else if (b > a) line = `${them} beat ${me1} ${b}-${a}`;
+    else if (o.settled) line = `${me1} and ${them} tied ${a}-${b}, and ${(o.iWin ? o.mine : o.opp).name} won the tiebreaker`;
+    else line = `${me1} and ${them} tied ${a}-${b}`;
+    out = [tag + L().title, line, `${me1}: ${tallyText(o.my)}`, `${them}: ${tallyText(o.their)}`];
   } else {
-    out = [`OutRanked: ${L().title}`, line, `${me1}: ${tallyText(o.my)}`, `${them}: ${tallyText(o.their)}`];
+    out = [tag + `${me1} vs ${them}, no rounds finished`];
   }
   const url = pageUrl();
   out.push("Rank a list, then guess how your friend ranked it." + (url ? " Play: " + url : ""));
@@ -692,6 +701,7 @@ const actions = {
     try { text = shareText(); }
     catch (e) { console.error(e); btn.textContent = "Could not build results: " + e.message; return; }
     copyText(text, btn);
+    clickLock = Date.now() + 700;
   },
   copy:   () => { navigator.clipboard && navigator.clipboard.writeText(me.code); },
   rematch: btn => {
@@ -714,7 +724,9 @@ app.addEventListener("change", e => {
   if (e.target.matches("select.catpick")) { pickCat = e.target.value; pickGroup = null; pickId = null; fillSelects(); }
   if (e.target.matches("select.grouppick")) { pickGroup = e.target.value; pickId = null; fillSelects(); }
 });
+let clickLock = 0;      // taps are ignored until this time; set briefly after a copy so a stray second tap cannot press something else
 function onClick(e){
+  if (Date.now() < clickLock) return;
   const chip = e.target.closest(".chip");
   if (chip) { selected = selected === chip.dataset.id ? null : chip.dataset.id; render(); return; }
   const act = e.target.closest("[data-act]");
@@ -1016,7 +1028,7 @@ function sessionHtml(){
   const st = sessionStats();
   if (st.rounds < 1) return "";
   const side = slot => `${mark(slot)}${esc(room.players[slot].name)}: ${winsText(st[slot].wins)}, ${tallyText(st[slot])}`;
-  return `<div class="session"><strong>This room so far: ${st.rounds} ${st.rounds === 1 ? "round" : "rounds"}${st.ties ? `, ${st.ties} tied` : ""}</strong>
+  return `<div class="session"><strong>${room.closed ? "Final totals" : "This room so far"}: ${st.rounds} ${st.rounds === 1 ? "round" : "rounds"}${st.ties ? `, ${st.ties} tied` : ""}</strong>
     <div class="pc-${me.slot}">${side(me.slot)}</div><div class="pc-${otherSlot()}">${side(otherSlot())}</div></div>`;
 }
 function modalHtml(){
@@ -1024,8 +1036,8 @@ function modalHtml(){
   const opp = room.players[otherSlot()], on = opp ? esc(opp.name) : "Your opponent";
   if (modal.kind === "closed") {
     const by = room.closed.by === me.slot ? "You" : on;
-    return `<h2>Game over</h2><p>${by} ended the game and closed the room.</p>${sessionHtml()}
-      <div class="actions"><button class="btn" data-act="closedOk">Back to start</button></div>`;
+    return `<h2>Final results</h2><p>${by} ended the game. This room is now closed.</p>${sessionHtml() || "<p>No rounds were finished.</p>"}
+      <div class="actions"><button class="btn" data-act="share">Copy results</button><button class="btn ghost" data-act="closedOk">Back to start</button></div>`;
   }
   if (modal.kind === "gone") {
     return modal.why === "left"
