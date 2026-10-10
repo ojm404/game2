@@ -10000,6 +10000,1680 @@
    ]
   },
   {
+   "id": "the-legend-of-zelda-games",
+   "src": "{\"type\":\"games\",\"group\":\"Franchises\",\"title\":\"The Legend of Zelda games\",\"short\":\"The Legend of Zelda\",\"picks\":[[\"The Legend of Zelda\",\"The Legend of Zelda\",1986],[\"Zelda II: The Adventure of Link\",\"Zelda II: The Adventure of Link\",1987],[\"A Link to the Past\",\"The Legend of Zelda: A Link to the Past\",1991],[\"Link's Awakening\",\"The Legend of Zelda: Link's Awakening\",1993],[\"Ocarina of Time\",\"The Legend of Zelda: Ocarina of Time\",1998],[\"Majora's Mask\",\"The Legend of Zelda: Majora's Mask\",2000],[\"Oracle of Seasons\",\"The Legend of Zelda: Oracle of Seasons\",2001],[\"Oracle of Ages\",\"The Legend of Zelda: Oracle of Ages\",2001],[\"The Wind Waker\",\"The Legend of Zelda: The Wind Waker\",2002],[\"Four Swords Adventures\",\"The Legend of Zelda: Four Swords Adventures\",2004],[\"The Minish Cap\",\"The Legend of Zelda: The Minish Cap\",2004],[\"Twilight Princess\",\"The Legend of Zelda: Twilight Princess\",2006],[\"Phantom Hourglass\",\"The Legend of Zelda: Phantom Hourglass\",2007],[\"Spirit Tracks\",\"The Legend of Zelda: Spirit Tracks\",2009],[\"Skyward Sword\",\"The Legend of Zelda: Skyward Sword\",2011],[\"A Link Between Worlds\",\"The Legend of Zelda: A Link Between Worlds\",2013],[\"Tri Force Heroes\",\"The Legend of Zelda: Tri Force Heroes\",2015],[\"Breath of the Wild\",\"The Legend of Zelda: Breath of the Wild\",2017],[\"Tears of the Kingdom\",\"The Legend of Zelda: Tears of the Kingdom\",2023],[\"Echoes of Wisdom\",\"The Legend of Zelda: Echoes of Wisdom\",2024]]}",
+   "cat": "Games",
+   "group": "Franchises",
+   "short": "The Legend of Zelda",
+   "title": "The Legend of Zelda games",
+   "items": [
+    {
+     "id": "v24072",
+     "name": "The Legend of Zelda",
+     "note": "1986",
+     "img": "https://media.rawg.io/media/crop/600/400/games/f87/f87de0e93f02007fd044e4bf04d453d8.jpg",
+     "img2": "https://media.rawg.io/media/games/f87/f87de0e93f02007fd044e4bf04d453d8.jpg",
+     "wide": true
+    },
+    {
+     "id": "v53205",
+     "name": "Zelda II: The Adventure of Link",
+     "note": "1987",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/2dc/2dcc5b76de63a99799364f962334525f.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/2dc/2dcc5b76de63a99799364f962334525f.jpg",
+     "wide": true
+    },
+    {
+     "id": "v25096",
+     "name": "A Link to the Past",
+     "note": "1991",
+     "img": "https://media.rawg.io/media/crop/600/400/games/087/08727beb32c364d30e8b2a1aa8595f8e.jpg",
+     "img2": "https://media.rawg.io/media/games/087/08727beb32c364d30e8b2a1aa8595f8e.jpg",
+     "wide": true
+    },
+    {
+     "id": "v27057",
+     "name": "Link's Awakening",
+     "note": "1993",
+     "img": "https://media.rawg.io/media/crop/600/400/games/a1b/a1b2af4caa3c61f9922431baf1fca447.jpg",
+     "img2": "https://media.rawg.io/media/games/a1b/a1b2af4caa3c61f9922431baf1fca447.jpg",
+     "wide": true
+    },
+    {
+     "id": "v25097",
+     "name": "Ocarina of Time",
+     "note": "1998",
+     "img": "https://media.rawg.io/media/crop/600/400/games/3a0/3a0c8e9ed3a711c542218831b893a0fa.jpg",
+     "img2": "https://media.rawg.io/media/games/3a0/3a0c8e9ed3a711c542218831b893a0fa.jpg",
+     "wide": true
+    },
+    {
+     "id": "v25924",
+     "name": "Majora's Mask",
+     "note": "2000",
+     "img": "https://media.rawg.io/media/crop/600/400/games/b3c/b3c209cd49aae8a469a59b79b54dc599.jpg",
+     "img2": "https://media.rawg.io/media/games/b3c/b3c209cd49aae8a469a59b79b54dc599.jpg",
+     "wide": true
+    },
+    {
+     "id": "v27255",
+     "name": "Oracle of Seasons",
+     "note": "2001",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/8ab/8ab43c6316d0b5bf16039345867e025a.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/8ab/8ab43c6316d0b5bf16039345867e025a.jpg",
+     "wide": true
+    },
+    {
+     "id": "v27256",
+     "name": "Oracle of Ages",
+     "note": "2001",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/0e0/0e02b3c6aaf4bf6d7a59f8c001bb3fac.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/0e0/0e02b3c6aaf4bf6d7a59f8c001bb3fac.jpg",
+     "wide": true
+    },
+    {
+     "id": "v56092",
+     "name": "The Wind Waker",
+     "note": "2002",
+     "img": "https://media.rawg.io/media/crop/600/400/games/45f/45f6d31b0fcefe029e33d258a7beb6a2.jpg",
+     "img2": "https://media.rawg.io/media/games/45f/45f6d31b0fcefe029e33d258a7beb6a2.jpg",
+     "wide": true
+    },
+    {
+     "id": "v56093",
+     "name": "Four Swords Adventures",
+     "note": "2004",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/336/336e29b524e0e4f17ac2d2b9339baea4.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/336/336e29b524e0e4f17ac2d2b9339baea4.jpg",
+     "wide": true
+    },
+    {
+     "id": "v27418",
+     "name": "The Minish Cap",
+     "note": "2004",
+     "img": "https://media.rawg.io/media/crop/600/400/games/25d/25d9592abbd02dccd67d83108ae79582.jpg",
+     "img2": "https://media.rawg.io/media/games/25d/25d9592abbd02dccd67d83108ae79582.jpg",
+     "wide": true
+    },
+    {
+     "id": "v27015",
+     "name": "Twilight Princess",
+     "note": "2006",
+     "img": "https://media.rawg.io/media/crop/600/400/games/dd1/dd167cf8753db3748a975d61cc926e54.jpg",
+     "img2": "https://media.rawg.io/media/games/dd1/dd167cf8753db3748a975d61cc926e54.jpg",
+     "wide": true
+    },
+    {
+     "id": "v27023",
+     "name": "Phantom Hourglass",
+     "note": "2007",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/b23/b23b3b0f25b10123c0338cf9f5c8bc12.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/b23/b23b3b0f25b10123c0338cf9f5c8bc12.jpg",
+     "wide": true
+    },
+    {
+     "id": "v23850",
+     "name": "Spirit Tracks",
+     "note": "2009",
+     "img": "https://media.rawg.io/media/crop/600/400/games/4a1/4a1ed758c53873d6442562f0c772b640.jpeg",
+     "img2": "https://media.rawg.io/media/games/4a1/4a1ed758c53873d6442562f0c772b640.jpeg",
+     "wide": true
+    },
+    {
+     "id": "v26824",
+     "name": "Skyward Sword",
+     "note": "2011",
+     "img": "https://media.rawg.io/media/crop/600/400/games/884/884d12f527a9a12b5e486ee1b79ecf7f.jpeg",
+     "img2": "https://media.rawg.io/media/games/884/884d12f527a9a12b5e486ee1b79ecf7f.jpeg",
+     "wide": true
+    },
+    {
+     "id": "v27977",
+     "name": "A Link Between Worlds",
+     "note": "2013",
+     "img": "https://media.rawg.io/media/crop/600/400/games/c23/c231ef56cdd277fad5fbcd2f6b7d2951.jpg",
+     "img2": "https://media.rawg.io/media/games/c23/c231ef56cdd277fad5fbcd2f6b7d2951.jpg",
+     "wide": true
+    },
+    {
+     "id": "v27991",
+     "name": "Tri Force Heroes",
+     "note": "2015",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/eb8/eb82c4b98dacb91d5a5834c7e5570883.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/eb8/eb82c4b98dacb91d5a5834c7e5570883.jpg",
+     "wide": true
+    },
+    {
+     "id": "v22511",
+     "name": "Breath of the Wild",
+     "note": "2017",
+     "img": "https://media.rawg.io/media/crop/600/400/games/cc1/cc196a5ad763955d6532cdba236f730c.jpg",
+     "img2": "https://media.rawg.io/media/games/cc1/cc196a5ad763955d6532cdba236f730c.jpg",
+     "wide": true
+    },
+    {
+     "id": "v327239",
+     "name": "Tears of the Kingdom",
+     "note": "2023",
+     "img": "https://media.rawg.io/media/crop/600/400/games/556/55684bfd048706f4266d331d70050b37.jpg",
+     "img2": "https://media.rawg.io/media/games/556/55684bfd048706f4266d331d70050b37.jpg",
+     "wide": true
+    },
+    {
+     "id": "v983717",
+     "name": "Echoes of Wisdom",
+     "note": "2024",
+     "img": "https://media.rawg.io/media/crop/600/400/games/ef0/ef095574ebf35dbe30cbb85f3798b4e5.jpg",
+     "img2": "https://media.rawg.io/media/games/ef0/ef095574ebf35dbe30cbb85f3798b4e5.jpg",
+     "wide": true
+    }
+   ]
+  },
+  {
+   "id": "final-fantasy-numbered-games",
+   "src": "{\"type\":\"games\",\"group\":\"Franchises\",\"title\":\"Final Fantasy numbered games\",\"short\":\"Final Fantasy (numbered)\",\"picks\":[[\"Final Fantasy\",\"Final Fantasy\",1987],[\"Final Fantasy II\",\"Final Fantasy II\",1988],[\"Final Fantasy III\",\"Final Fantasy III\",1990],[\"Final Fantasy IV\",\"Final Fantasy IV\",1991],[\"Final Fantasy V\",\"Final Fantasy V\",1992],[\"Final Fantasy VI\",\"Final Fantasy VI\",1994],[\"Final Fantasy VII\",\"Final Fantasy VII\",1997],[\"Final Fantasy VIII\",\"Final Fantasy VIII\",1999],[\"Final Fantasy IX\",\"Final Fantasy IX\",2000],[\"Final Fantasy X\",\"Final Fantasy X\",2001],[\"Final Fantasy XI\",\"Final Fantasy XI\",2002],[\"Final Fantasy XII\",\"Final Fantasy XII\",2006],[\"Final Fantasy XIII\",\"Final Fantasy XIII\",2009],[\"Final Fantasy XIV\",\"Final Fantasy XIV Online\",2013],[\"Final Fantasy XV\",\"Final Fantasy XV\",2016],[\"Final Fantasy XVI\",\"Final Fantasy XVI\",2023]]}",
+   "cat": "Games",
+   "group": "Franchises",
+   "short": "Final Fantasy (numbered)",
+   "title": "Final Fantasy numbered games",
+   "items": [
+    {
+     "id": "v52936",
+     "name": "Final Fantasy",
+     "note": "1987",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/656/6566c32aebb7b23af0573091132c2f2c.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/656/6566c32aebb7b23af0573091132c2f2c.jpg",
+     "wide": true
+    },
+    {
+     "id": "v52935",
+     "name": "Final Fantasy II",
+     "note": "1988",
+     "img": "https://media.rawg.io/media/crop/600/400/games/f29/f29af1b9d00800b26af2a6fda55aa3b9.jpg",
+     "img2": "https://media.rawg.io/media/games/f29/f29af1b9d00800b26af2a6fda55aa3b9.jpg",
+     "wide": true
+    },
+    {
+     "id": "v308056",
+     "name": "Final Fantasy III",
+     "note": "1990",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/b06/b06926ca84cb706538399e778c8a4564.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/b06/b06926ca84cb706538399e778c8a4564.jpg",
+     "wide": true
+    },
+    {
+     "id": "v52937",
+     "name": "Final Fantasy IV",
+     "note": "1991",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/cb5/cb5fee4db77e93350719dc151a33d13f.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/cb5/cb5fee4db77e93350719dc151a33d13f.jpg",
+     "wide": true
+    },
+    {
+     "id": "v1922",
+     "name": "Final Fantasy V",
+     "note": "1992",
+     "img": "https://media.rawg.io/media/crop/600/400/games/7b1/7b184215cc792ea2abf115f4e566b486.jpg",
+     "img2": "https://media.rawg.io/media/games/7b1/7b184215cc792ea2abf115f4e566b486.jpg",
+     "wide": true
+    },
+    {
+     "id": "v1063",
+     "name": "Final Fantasy VI",
+     "note": "1994",
+     "img": "https://media.rawg.io/media/crop/600/400/games/98c/98c87b286cd2a2ba942167df384a9bd3.jpg",
+     "img2": "https://media.rawg.io/media/games/98c/98c87b286cd2a2ba942167df384a9bd3.jpg",
+     "wide": true
+    },
+    {
+     "id": "v52939",
+     "name": "Final Fantasy VII",
+     "note": "1997",
+     "img": "https://media.rawg.io/media/crop/600/400/games/6c0/6c00ee85d1344f58c469e8e47fd8ae7c.jpg",
+     "img2": "https://media.rawg.io/media/games/6c0/6c00ee85d1344f58c469e8e47fd8ae7c.jpg",
+     "wide": true
+    },
+    {
+     "id": "v5115",
+     "name": "Final Fantasy VIII",
+     "note": "1999",
+     "img": "https://media.rawg.io/media/crop/600/400/games/f77/f77510051b6a61decc35c5257193fc9e.jpg",
+     "img2": "https://media.rawg.io/media/games/f77/f77510051b6a61decc35c5257193fc9e.jpg",
+     "wide": true
+    },
+    {
+     "id": "v52943",
+     "name": "Final Fantasy IX",
+     "note": "2000",
+     "img": "https://media.rawg.io/media/crop/600/400/games/826/82626e2d7ee7d96656fb9838c2ef7302.jpg",
+     "img2": "https://media.rawg.io/media/games/826/82626e2d7ee7d96656fb9838c2ef7302.jpg",
+     "wide": true
+    },
+    {
+     "id": "v41128",
+     "name": "Final Fantasy X",
+     "note": "2001",
+     "img": "https://media.rawg.io/media/crop/600/400/games/ddc/ddc65c56f16bc3effb8d2645b095a8c5.jpg",
+     "img2": "https://media.rawg.io/media/games/ddc/ddc65c56f16bc3effb8d2645b095a8c5.jpg",
+     "wide": true
+    },
+    {
+     "id": "v34872",
+     "name": "Final Fantasy XI",
+     "note": "2002",
+     "img": "https://media.rawg.io/media/crop/600/400/games/6cc/6ccf7dab7819174130a3f022709e5ae1.jpg",
+     "img2": "https://media.rawg.io/media/games/6cc/6ccf7dab7819174130a3f022709e5ae1.jpg",
+     "wide": true
+    },
+    {
+     "id": "v301511",
+     "name": "Final Fantasy XII",
+     "note": "2006",
+     "img": "https://media.rawg.io/media/crop/600/400/games/6f9/6f932bffab5e38f540e10bb026621b08.jpg",
+     "img2": "https://media.rawg.io/media/games/6f9/6f932bffab5e38f540e10bb026621b08.jpg",
+     "wide": true
+    },
+    {
+     "id": "v20760",
+     "name": "Final Fantasy XIII",
+     "note": "2009",
+     "img": "https://media.rawg.io/media/crop/600/400/games/943/9432de383089b0a427a3cdf3687b2b73.jpg",
+     "img2": "https://media.rawg.io/media/games/943/9432de383089b0a427a3cdf3687b2b73.jpg",
+     "wide": true
+    },
+    {
+     "id": "v3727",
+     "name": "Final Fantasy XIV",
+     "note": "2013",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/515/515e8cda2f9e3ea1ca2785e99c1a1893.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/515/515e8cda2f9e3ea1ca2785e99c1a1893.jpg",
+     "wide": true
+    },
+    {
+     "id": "v750",
+     "name": "Final Fantasy XV",
+     "note": "2016",
+     "img": "https://media.rawg.io/media/crop/600/400/games/2ee/2eeed8524931b4fae1e4a40d0e5443b5.jpg",
+     "img2": "https://media.rawg.io/media/games/2ee/2eeed8524931b4fae1e4a40d0e5443b5.jpg",
+     "wide": true
+    },
+    {
+     "id": "v494382",
+     "name": "Final Fantasy XVI",
+     "note": "2023",
+     "img": "https://media.rawg.io/media/crop/600/400/games/22e/22e68bb62b3013283972cecf98ed51dc.jpg",
+     "img2": "https://media.rawg.io/media/games/22e/22e68bb62b3013283972cecf98ed51dc.jpg",
+     "wide": true
+    }
+   ]
+  },
+  {
+   "id": "kingdom-hearts-games",
+   "src": "{\"type\":\"games\",\"group\":\"Franchises\",\"title\":\"Kingdom Hearts games\",\"short\":\"Kingdom Hearts\",\"picks\":[[\"Kingdom Hearts\",\"Kingdom Hearts\",2002],[\"Chain of Memories\",\"Kingdom Hearts: Chain of Memories\",2004],[\"Kingdom Hearts II\",\"Kingdom Hearts II\",2005],[\"358/2 Days\",\"Kingdom Hearts 358/2 Days\",2009],[\"Birth by Sleep\",\"Kingdom Hearts Birth by Sleep\",2010],[\"Re:coded\",\"Kingdom Hearts Re:coded\",2010],[\"Dream Drop Distance\",\"Kingdom Hearts 3D: Dream Drop Distance\",2012],[\"Kingdom Hearts III\",\"Kingdom Hearts III\",2019],[\"Melody of Memory\",\"Kingdom Hearts: Melody of Memory\",2020]]}",
+   "cat": "Games",
+   "group": "Franchises",
+   "short": "Kingdom Hearts",
+   "title": "Kingdom Hearts games",
+   "items": [
+    {
+     "id": "v59184",
+     "name": "Kingdom Hearts",
+     "note": "2002",
+     "img": "https://media.rawg.io/media/crop/600/400/games/bc3/bc3c433821089108642a41a3057f92c5.jpg",
+     "img2": "https://media.rawg.io/media/games/bc3/bc3c433821089108642a41a3057f92c5.jpg",
+     "wide": true
+    },
+    {
+     "id": "v53357",
+     "name": "Chain of Memories",
+     "note": "2004",
+     "img": "https://media.rawg.io/media/crop/600/400/games/0a4/0a45869d5c720cecfd976b76b2fe2fd7.jpg",
+     "img2": "https://media.rawg.io/media/games/0a4/0a45869d5c720cecfd976b76b2fe2fd7.jpg",
+     "wide": true
+    },
+    {
+     "id": "v127659",
+     "name": "Kingdom Hearts II",
+     "note": "2005",
+     "img": "https://media.rawg.io/media/crop/600/400/games/92b/92b781d88f6d047b1c61b6e0d157343b.jpg",
+     "img2": "https://media.rawg.io/media/games/92b/92b781d88f6d047b1c61b6e0d157343b.jpg",
+     "wide": true
+    },
+    {
+     "id": "v26076",
+     "name": "358/2 Days",
+     "note": "2009",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/4c8/4c81708193fab89bd38e3d3094a890ab.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/4c8/4c81708193fab89bd38e3d3094a890ab.jpg",
+     "wide": true
+    },
+    {
+     "id": "v5596",
+     "name": "Birth by Sleep",
+     "note": "2010",
+     "img": "https://media.rawg.io/media/crop/600/400/games/f29/f29dfda4bbdfcd5b6d15d408643a2bbd.jpg",
+     "img2": "https://media.rawg.io/media/games/f29/f29dfda4bbdfcd5b6d15d408643a2bbd.jpg",
+     "wide": true
+    },
+    {
+     "id": "v24329",
+     "name": "Re:coded",
+     "note": "2010",
+     "img": "https://media.rawg.io/media/crop/600/400/games/65f/65f4371671478eff172fad8d60653a66.jpg",
+     "img2": "https://media.rawg.io/media/games/65f/65f4371671478eff172fad8d60653a66.jpg",
+     "wide": true
+    },
+    {
+     "id": "v27155",
+     "name": "Dream Drop Distance",
+     "note": "2012",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/2ea/2ea2447a772162504ba82c50c2d1ed0a.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/2ea/2ea2447a772162504ba82c50c2d1ed0a.jpg",
+     "wide": true
+    },
+    {
+     "id": "v51324",
+     "name": "Kingdom Hearts III",
+     "note": "2019",
+     "img": "https://media.rawg.io/media/crop/600/400/games/968/968e6210715fd61237139e3caa193be0.jpg",
+     "img2": "https://media.rawg.io/media/games/968/968e6210715fd61237139e3caa193be0.jpg",
+     "wide": true
+    },
+    {
+     "id": "v484501",
+     "name": "Melody of Memory",
+     "note": "2020",
+     "img": "https://media.rawg.io/media/crop/600/400/games/fa7/fa7e8ba1bca24d8ac299c8d04a0cef59.jpg",
+     "img2": "https://media.rawg.io/media/games/fa7/fa7e8ba1bca24d8ac299c8d04a0cef59.jpg",
+     "wide": true
+    }
+   ]
+  },
+  {
+   "id": "pokemon-generations",
+   "src": "{\"type\":\"games\",\"group\":\"Franchises\",\"title\":\"Pokémon generations\",\"short\":\"Pokémon generations\",\"picks\":[[\"Gen 1: Red, Blue & Yellow\",\"Pokémon Red\",1996],[\"Gen 2: Gold, Silver & Crystal\",\"Pokémon Gold\",1999],[\"Gen 3: Ruby, Sapphire & Emerald\",\"Pokémon Ruby\",2002],[\"Gen 4: Diamond, Pearl & Platinum\",\"Pokémon Diamond\",2006],[\"Gen 5: Black & White\",\"Pokémon Black\",2010],[\"Gen 6: X & Y\",\"Pokémon X\",2013],[\"Gen 7: Sun & Moon\",\"Pokémon Sun\",2016],[\"Gen 8: Sword & Shield\",\"Pokémon Sword\",2019],[\"Gen 9: Scarlet & Violet\",\"Pokémon Scarlet\",2022]]}",
+   "cat": "Games",
+   "group": "Franchises",
+   "short": "Pokémon generations",
+   "title": "Pokémon generations",
+   "items": [
+    {
+     "id": "v23762",
+     "name": "Gen 1: Red, Blue & Yellow",
+     "note": "1996",
+     "img": "https://media.rawg.io/media/crop/600/400/games/356/3566c06f8e5d3b45f4163dec1d9968a2.jpg",
+     "img2": "https://media.rawg.io/media/games/356/3566c06f8e5d3b45f4163dec1d9968a2.jpg",
+     "wide": true
+    },
+    {
+     "id": "v27936",
+     "name": "Gen 2: Gold, Silver & Crystal",
+     "note": "1999",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/6fe/6fee3969b73bfccd935517c0c15826d8.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/6fe/6fee3969b73bfccd935517c0c15826d8.jpg",
+     "wide": true
+    },
+    {
+     "id": "v53480",
+     "name": "Gen 3: Ruby, Sapphire & Emerald",
+     "note": "2002",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/869/869bef39191e7a641f1223154c8938f1.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/869/869bef39191e7a641f1223154c8938f1.jpg",
+     "wide": true
+    },
+    {
+     "id": "v25131",
+     "name": "Gen 4: Diamond, Pearl & Platinum",
+     "note": "2006",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/47b/47b915b28e72ead7a1775f057af421f6.jpeg",
+     "img2": "https://media.rawg.io/media/screenshots/47b/47b915b28e72ead7a1775f057af421f6.jpeg",
+     "wide": true
+    },
+    {
+     "id": "v330615",
+     "name": "Gen 5: Black & White",
+     "note": "2010",
+     "img": "https://media.rawg.io/media/crop/600/400/games/3dd/3ddf27683a9aecf1cf39605100651a99.jpg",
+     "img2": "https://media.rawg.io/media/games/3dd/3ddf27683a9aecf1cf39605100651a99.jpg",
+     "wide": true
+    },
+    {
+     "id": "v27312",
+     "name": "Gen 6: X & Y",
+     "note": "2013",
+     "img": "https://media.rawg.io/media/crop/600/400/games/753/753f5d584a5f7e69aa4c05dd3b6df7c9.jpg",
+     "img2": "https://media.rawg.io/media/games/753/753f5d584a5f7e69aa4c05dd3b6df7c9.jpg",
+     "wide": true
+    },
+    {
+     "id": "v23748",
+     "name": "Gen 7: Sun & Moon",
+     "note": "2016",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/a00/a0013d8c9ddb1878c2d1030c822b7525.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/a00/a0013d8c9ddb1878c2d1030c822b7525.jpg",
+     "wide": true
+    },
+    {
+     "id": "v282825",
+     "name": "Gen 8: Sword & Shield",
+     "note": "2019",
+     "img": "https://media.rawg.io/media/crop/600/400/games/82f/82f7b1424c5ee7eebee83faf694889c5.jpg",
+     "img2": "https://media.rawg.io/media/games/82f/82f7b1424c5ee7eebee83faf694889c5.jpg",
+     "wide": true
+    },
+    {
+     "id": "v747505",
+     "name": "Gen 9: Scarlet & Violet",
+     "note": "2022",
+     "img": "https://media.rawg.io/media/crop/600/400/games/5ab/5abb8e4af55eb8c867410c3a740355b9.jpg",
+     "img2": "https://media.rawg.io/media/games/5ab/5abb8e4af55eb8c867410c3a740355b9.jpg",
+     "wide": true
+    }
+   ]
+  },
+  {
+   "id": "call-of-duty-games",
+   "src": "{\"type\":\"games\",\"group\":\"Franchises\",\"title\":\"Call of Duty games\",\"short\":\"Call of Duty\",\"picks\":[[\"Call of Duty\",\"Call of Duty\",2003],[\"Call of Duty 2\",\"Call of Duty 2\",2005],[\"Call of Duty 3\",\"Call of Duty 3\",2006],[\"Call of Duty 4: Modern Warfare\",\"Call of Duty 4: Modern Warfare\",2007],[\"World at War\",\"Call of Duty: World at War\",2008],[\"Modern Warfare 2 (2009)\",\"Call of Duty: Modern Warfare 2\",2009],[\"Black Ops\",\"Call of Duty: Black Ops\",2010],[\"Modern Warfare 3 (2011)\",\"Call of Duty: Modern Warfare 3\",2011],[\"Black Ops II\",\"Call of Duty: Black Ops II\",2012],[\"Ghosts\",\"Call of Duty: Ghosts\",2013],[\"Advanced Warfare\",\"Call of Duty: Advanced Warfare\",2014],[\"Black Ops III\",\"Call of Duty: Black Ops III\",2015],[\"Infinite Warfare\",\"Call of Duty: Infinite Warfare\",2016],[\"WWII\",\"Call of Duty: WWII\",2017],[\"Black Ops 4\",\"Call of Duty: Black Ops 4\",2018],[\"Modern Warfare (2019)\",\"Call of Duty: Modern Warfare\",2019],[\"Black Ops Cold War\",\"Call of Duty: Black Ops Cold War\",2020],[\"Vanguard\",\"Call of Duty: Vanguard\",2021],[\"Modern Warfare II (2022)\",\"Call of Duty: Modern Warfare II\",2022],[\"Modern Warfare III (2023)\",\"Call of Duty: Modern Warfare III\",2023],[\"Black Ops 6\",\"Call of Duty: Black Ops 6\",2024],[\"Black Ops 7\",\"Call of Duty: Black Ops 7\",2025]]}",
+   "cat": "Games",
+   "group": "Franchises",
+   "short": "Call of Duty",
+   "title": "Call of Duty games",
+   "items": [
+    {
+     "id": "v19369",
+     "name": "Call of Duty",
+     "note": "2003",
+     "img": "https://media.rawg.io/media/crop/600/400/games/9c5/9c5bc0b6e67102bc96dcf1ba41509e42.jpg",
+     "img2": "https://media.rawg.io/media/games/9c5/9c5bc0b6e67102bc96dcf1ba41509e42.jpg",
+     "wide": true
+    },
+    {
+     "id": "v14331",
+     "name": "Call of Duty 2",
+     "note": "2005",
+     "img": "https://media.rawg.io/media/crop/600/400/games/50c/50c69996b917ae50d8d319f6ce9bed37.jpg",
+     "img2": "https://media.rawg.io/media/games/50c/50c69996b917ae50d8d319f6ce9bed37.jpg",
+     "wide": true
+    },
+    {
+     "id": "v25064",
+     "name": "Call of Duty 3",
+     "note": "2006",
+     "img": "https://media.rawg.io/media/crop/600/400/games/8fa/8fa1dd3783c7c3042ca704b76c95dfa8.jpg",
+     "img2": "https://media.rawg.io/media/games/8fa/8fa1dd3783c7c3042ca704b76c95dfa8.jpg",
+     "wide": true
+    },
+    {
+     "id": "v4535",
+     "name": "Call of Duty 4: Modern Warfare",
+     "note": "2007",
+     "img": "https://media.rawg.io/media/crop/600/400/games/9fb/9fbaea2168caea1f806546dfdaaeb1da.jpg",
+     "img2": "https://media.rawg.io/media/games/9fb/9fbaea2168caea1f806546dfdaaeb1da.jpg",
+     "wide": true
+    },
+    {
+     "id": "v5528",
+     "name": "World at War",
+     "note": "2008",
+     "img": "https://media.rawg.io/media/crop/600/400/games/da1/da15524e850ee9791b32973b748e08d5.jpg",
+     "img2": "https://media.rawg.io/media/games/da1/da15524e850ee9791b32973b748e08d5.jpg",
+     "wide": true
+    },
+    {
+     "id": "v4527",
+     "name": "Modern Warfare 2 (2009)",
+     "note": "2009",
+     "img": "https://media.rawg.io/media/crop/600/400/games/9af/9af24c1886e2c7b52a4a2c65aa874638.jpg",
+     "img2": "https://media.rawg.io/media/games/9af/9af24c1886e2c7b52a4a2c65aa874638.jpg",
+     "wide": true
+    },
+    {
+     "id": "v865",
+     "name": "Black Ops",
+     "note": "2010",
+     "img": "https://media.rawg.io/media/crop/600/400/games/410/41033a495ce8f7fd4b0934bdb975f12a.jpg",
+     "img2": "https://media.rawg.io/media/games/410/41033a495ce8f7fd4b0934bdb975f12a.jpg",
+     "wide": true
+    },
+    {
+     "id": "v11276",
+     "name": "Modern Warfare 3 (2011)",
+     "note": "2011",
+     "img": "https://media.rawg.io/media/crop/600/400/games/e9c/e9c042d14515eb3ff7cb4db9fe78e435.jpg",
+     "img2": "https://media.rawg.io/media/games/e9c/e9c042d14515eb3ff7cb4db9fe78e435.jpg",
+     "wide": true
+    },
+    {
+     "id": "v14446",
+     "name": "Black Ops II",
+     "note": "2012",
+     "img": "https://media.rawg.io/media/crop/600/400/games/8ee/8eed88e297441ef9202b5d1d35d7d86f.jpg",
+     "img2": "https://media.rawg.io/media/games/8ee/8eed88e297441ef9202b5d1d35d7d86f.jpg",
+     "wide": true
+    },
+    {
+     "id": "v7439",
+     "name": "Ghosts",
+     "note": "2013",
+     "img": "https://media.rawg.io/media/crop/600/400/games/eb2/eb24800b4491701eca481e7c990bce4a.jpg",
+     "img2": "https://media.rawg.io/media/games/eb2/eb24800b4491701eca481e7c990bce4a.jpg",
+     "wide": true
+    },
+    {
+     "id": "v842",
+     "name": "Advanced Warfare",
+     "note": "2014",
+     "img": "https://media.rawg.io/media/crop/600/400/games/e05/e053aae547e0978ad90280a1a3d8f177.jpg",
+     "img2": "https://media.rawg.io/media/games/e05/e053aae547e0978ad90280a1a3d8f177.jpg",
+     "wide": true
+    },
+    {
+     "id": "v906",
+     "name": "Black Ops III",
+     "note": "2015",
+     "img": "https://media.rawg.io/media/crop/600/400/games/fd6/fd6a1eecd3ec0f875f1924f3656b7dd9.jpg",
+     "img2": "https://media.rawg.io/media/games/fd6/fd6a1eecd3ec0f875f1924f3656b7dd9.jpg",
+     "wide": true
+    },
+    {
+     "id": "v887",
+     "name": "Infinite Warfare",
+     "note": "2016",
+     "img": "https://media.rawg.io/media/crop/600/400/games/6f7/6f7341dd656910be2c2cda39193a7ec9.jpg",
+     "img2": "https://media.rawg.io/media/games/6f7/6f7341dd656910be2c2cda39193a7ec9.jpg",
+     "wide": true
+    },
+    {
+     "id": "v21924",
+     "name": "WWII",
+     "note": "2017",
+     "img": "https://media.rawg.io/media/crop/600/400/games/1e5/1e5e33b88be978f451196a751424a72e.jpg",
+     "img2": "https://media.rawg.io/media/games/1e5/1e5e33b88be978f451196a751424a72e.jpg",
+     "wide": true
+    },
+    {
+     "id": "v58389",
+     "name": "Black Ops 4",
+     "note": "2018",
+     "img": "https://media.rawg.io/media/crop/600/400/games/450/4501d8493e6ed172bd4982a16b56e580.jpg",
+     "img2": "https://media.rawg.io/media/games/450/4501d8493e6ed172bd4982a16b56e580.jpg",
+     "wide": true
+    },
+    {
+     "id": "v323065",
+     "name": "Modern Warfare (2019)",
+     "note": "2019",
+     "img": "https://media.rawg.io/media/crop/600/400/games/e43/e43f9f0a1429bd9332020ac5876bc693.jpg",
+     "img2": "https://media.rawg.io/media/games/e43/e43f9f0a1429bd9332020ac5876bc693.jpg",
+     "wide": true
+    },
+    {
+     "id": "v481910",
+     "name": "Black Ops Cold War",
+     "note": "2020",
+     "img": "https://media.rawg.io/media/crop/600/400/games/6b1/6b14dc4cc1785e396580c69165e55d2d.jpg",
+     "img2": "https://media.rawg.io/media/games/6b1/6b14dc4cc1785e396580c69165e55d2d.jpg",
+     "wide": true
+    },
+    {
+     "id": "v647552",
+     "name": "Vanguard",
+     "note": "2021",
+     "img": "https://media.rawg.io/media/crop/600/400/games/fa8/fa870a46d5e3e8cb1fa0a5e4f798ff2a.jpg",
+     "img2": "https://media.rawg.io/media/games/fa8/fa870a46d5e3e8cb1fa0a5e4f798ff2a.jpg",
+     "wide": true
+    },
+    {
+     "id": "v791636",
+     "name": "Modern Warfare II (2022)",
+     "note": "2022",
+     "img": "https://media.rawg.io/media/crop/600/400/games/1af/1af8edc7491c6d9d0776fc423d93548d.jpg",
+     "img2": "https://media.rawg.io/media/games/1af/1af8edc7491c6d9d0776fc423d93548d.jpg",
+     "wide": true
+    },
+    {
+     "id": "v964285",
+     "name": "Modern Warfare III (2023)",
+     "note": "2023",
+     "img": "https://media.rawg.io/media/crop/600/400/games/b17/b17ce7ab3187cc3f42d263d9511adac0.jpg",
+     "img2": "https://media.rawg.io/media/games/b17/b17ce7ab3187cc3f42d263d9511adac0.jpg",
+     "wide": true
+    },
+    {
+     "id": "v983212",
+     "name": "Black Ops 6",
+     "note": "2024",
+     "img": "https://media.rawg.io/media/crop/600/400/games/e89/e89f9a409bce5d36873f65ea9659c36e.jpg",
+     "img2": "https://media.rawg.io/media/games/e89/e89f9a409bce5d36873f65ea9659c36e.jpg",
+     "wide": true
+    },
+    {
+     "id": "v1007995",
+     "name": "Black Ops 7",
+     "note": "2025",
+     "img": "https://media.rawg.io/media/crop/600/400/games/4ca/4cabe38446288beb37fc73b2fe047b08.jpg",
+     "img2": "https://media.rawg.io/media/games/4ca/4cabe38446288beb37fc73b2fe047b08.jpg",
+     "wide": true
+    }
+   ]
+  },
+  {
+   "id": "cosy-games",
+   "src": "{\"type\":\"games\",\"group\":\"Genres\",\"title\":\"Cosy games\",\"short\":\"Cosy games\",\"picks\":[\"Stardew Valley\",\"Animal Crossing: New Horizons\",\"A Short Hike\",\"Unpacking\",\"Spiritfarer\",\"Slime Rancher\",\"Cozy Grove\",\"Dorfromantik\",\"Disney Dreamlight Valley\",\"My Time at Portia\",\"Coffee Talk\",\"PowerWash Simulator\",\"Ooblets\",\"Dave the Diver\",\"Littlewood\"]}",
+   "cat": "Games",
+   "group": "Genres",
+   "short": "Cosy games",
+   "title": "Cosy games",
+   "items": [
+    {
+     "id": "v654",
+     "name": "Stardew Valley",
+     "note": "2016",
+     "img": "https://media.rawg.io/media/crop/600/400/games/713/713269608dc8f2f40f5a670a14b2de94.jpg",
+     "img2": "https://media.rawg.io/media/games/713/713269608dc8f2f40f5a670a14b2de94.jpg",
+     "wide": true
+    },
+    {
+     "id": "v421698",
+     "name": "Animal Crossing: New Horizons",
+     "note": "2020",
+     "img": "https://media.rawg.io/media/crop/600/400/games/42f/42fe1abd4d7c11ca92d93a0fb0f8662b.jpg",
+     "img2": "https://media.rawg.io/media/games/42f/42fe1abd4d7c11ca92d93a0fb0f8662b.jpg",
+     "wide": true
+    },
+    {
+     "id": "v304247",
+     "name": "A Short Hike",
+     "note": "2019",
+     "img": "https://media.rawg.io/media/crop/600/400/games/c38/c38deeb8f331a78c89e64ad71a1db361.jpg",
+     "img2": "https://media.rawg.io/media/games/c38/c38deeb8f331a78c89e64ad71a1db361.jpg",
+     "wide": true
+    },
+    {
+     "id": "v364942",
+     "name": "Unpacking",
+     "note": "2021",
+     "img": "https://media.rawg.io/media/crop/600/400/games/c11/c1118fbcfd846c631ecb7646f8efc780.jpg",
+     "img2": "https://media.rawg.io/media/games/c11/c1118fbcfd846c631ecb7646f8efc780.jpg",
+     "wide": true
+    },
+    {
+     "id": "v326236",
+     "name": "Spiritfarer",
+     "note": "2020",
+     "img": "https://media.rawg.io/media/crop/600/400/games/727/727f889060e688bbdcba7b2a5d26a603.jpg",
+     "img2": "https://media.rawg.io/media/games/727/727f889060e688bbdcba7b2a5d26a603.jpg",
+     "wide": true
+    },
+    {
+     "id": "v9736",
+     "name": "Slime Rancher",
+     "note": "2016",
+     "img": "https://media.rawg.io/media/crop/600/400/games/43f/43f4f3a50651f371c147ecce8ee841a9.jpg",
+     "img2": "https://media.rawg.io/media/games/43f/43f4f3a50651f371c147ecce8ee841a9.jpg",
+     "wide": true
+    },
+    {
+     "id": "v576532",
+     "name": "Cozy Grove",
+     "note": "2021",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/ea5/ea586b50b2cfe7ffa946488a91275dd1.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/ea5/ea586b50b2cfe7ffa946488a91275dd1.jpg",
+     "wide": true
+    },
+    {
+     "id": "v568931",
+     "name": "Dorfromantik",
+     "note": "2022",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/b00/b00b7cc04dd09531b631ea4575696276.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/b00/b00b7cc04dd09531b631ea4575696276.jpg",
+     "wide": true
+    },
+    {
+     "id": "v842395",
+     "name": "Disney Dreamlight Valley",
+     "note": "2023",
+     "img": "https://media.rawg.io/media/crop/600/400/games/2f7/2f77dc8fa62aa506e7a06887d3756c3f.jpg",
+     "img2": "https://media.rawg.io/media/games/2f7/2f77dc8fa62aa506e7a06887d3756c3f.jpg",
+     "wide": true
+    },
+    {
+     "id": "v44029",
+     "name": "My Time at Portia",
+     "note": "2019",
+     "img": "https://media.rawg.io/media/crop/600/400/games/176/1765390b699b432edc3a208d544c6ba0.jpg",
+     "img2": "https://media.rawg.io/media/games/176/1765390b699b432edc3a208d544c6ba0.jpg",
+     "wide": true
+    },
+    {
+     "id": "v59796",
+     "name": "Coffee Talk",
+     "note": "2020",
+     "img": "https://media.rawg.io/media/crop/600/400/games/4d9/4d90960bbb1c92966b8ec7a4f11864a7.jpg",
+     "img2": "https://media.rawg.io/media/games/4d9/4d90960bbb1c92966b8ec7a4f11864a7.jpg",
+     "wide": true
+    },
+    {
+     "id": "v581104",
+     "name": "PowerWash Simulator",
+     "note": "2022",
+     "img": "https://media.rawg.io/media/crop/600/400/games/659/65959a07c4e6dc7a9034993bbb3ba232.jpg",
+     "img2": "https://media.rawg.io/media/games/659/65959a07c4e6dc7a9034993bbb3ba232.jpg",
+     "wide": true
+    },
+    {
+     "id": "v28078",
+     "name": "Ooblets",
+     "note": "2022",
+     "img": "https://media.rawg.io/media/crop/600/400/games/88d/88d6f0c539aaa59f5d64333b312c1d3b.jpg",
+     "img2": "https://media.rawg.io/media/games/88d/88d6f0c539aaa59f5d64333b312c1d3b.jpg",
+     "wide": true
+    },
+    {
+     "id": "v871264",
+     "name": "Dave the Diver",
+     "note": "2023",
+     "img": "https://media.rawg.io/media/crop/600/400/games/1ee/1eec43616e3ff00a674124d746926b23.jpg",
+     "img2": "https://media.rawg.io/media/games/1ee/1eec43616e3ff00a674124d746926b23.jpg",
+     "wide": true
+    },
+    {
+     "id": "v288671",
+     "name": "Littlewood",
+     "note": "2020",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/d54/d54f13f25299c3c3a6ac7e966ff33daa.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/d54/d54f13f25299c3c3a6ac7e966ff33daa.jpg",
+     "wide": true
+    }
+   ]
+  },
+  {
+   "id": "first-person-shooters",
+   "src": "{\"type\":\"games\",\"group\":\"Genres\",\"title\":\"First-person shooters\",\"short\":\"First-person shooters\",\"picks\":[[\"DOOM (1993)\",\"DOOM\",1993],[\"GoldenEye 007\",\"GoldenEye 007\",1997],[\"Half-Life\",\"Half-Life\",1998],[\"Counter-Strike\",\"Counter-Strike\",2000],[\"Halo: Combat Evolved\",\"Halo: Combat Evolved\",2001],[\"Half-Life 2\",\"Half-Life 2\",2004],[\"Call of Duty 4: Modern Warfare\",\"Call of Duty 4: Modern Warfare\",2007],[\"BioShock\",\"BioShock\",2007],[\"Halo 3\",\"Halo 3\",2007],[\"Left 4 Dead 2\",\"Left 4 Dead 2\",2009],[\"Borderlands 2\",\"Borderlands 2\",2012],[\"Overwatch\",\"Overwatch\",2016],[\"DOOM (2016)\",\"DOOM\",2016],[\"Titanfall 2\",\"Titanfall 2\",2016],[\"Destiny 2\",\"Destiny 2\",2017]]}",
+   "cat": "Games",
+   "group": "Genres",
+   "short": "First-person shooters",
+   "title": "First-person shooters",
+   "items": [
+    {
+     "id": "v52884",
+     "name": "DOOM (1993)",
+     "note": "1993",
+     "img": "https://media.rawg.io/media/crop/600/400/games/47b/47b50d880be8453bf9cda6e5c007bc26.jpg",
+     "img2": "https://media.rawg.io/media/games/47b/47b50d880be8453bf9cda6e5c007bc26.jpg",
+     "wide": true
+    },
+    {
+     "id": "v54403",
+     "name": "GoldenEye 007",
+     "note": "1997",
+     "img": "https://media.rawg.io/media/crop/600/400/games/5a1/5a145fe3002fc988140f7f00edcb9715.jpg",
+     "img2": "https://media.rawg.io/media/games/5a1/5a145fe3002fc988140f7f00edcb9715.jpg",
+     "wide": true
+    },
+    {
+     "id": "v18080",
+     "name": "Half-Life",
+     "note": "1998",
+     "img": "https://media.rawg.io/media/crop/600/400/games/6c5/6c55e22185876626881b76c11922b073.jpg",
+     "img2": "https://media.rawg.io/media/games/6c5/6c55e22185876626881b76c11922b073.jpg",
+     "wide": true
+    },
+    {
+     "id": "v19301",
+     "name": "Counter-Strike",
+     "note": "2000",
+     "img": "https://media.rawg.io/media/crop/600/400/games/9c4/9c47f320eb73c9a02d462e12f6206b26.jpg",
+     "img2": "https://media.rawg.io/media/games/9c4/9c47f320eb73c9a02d462e12f6206b26.jpg",
+     "wide": true
+    },
+    {
+     "id": "v28448",
+     "name": "Halo: Combat Evolved",
+     "note": "2001",
+     "img": "https://media.rawg.io/media/crop/600/400/games/abf/abffd94ed6fe34027c720bee593c06d2.jpg",
+     "img2": "https://media.rawg.io/media/games/abf/abffd94ed6fe34027c720bee593c06d2.jpg",
+     "wide": true
+    },
+    {
+     "id": "v13537",
+     "name": "Half-Life 2",
+     "note": "2004",
+     "img": "https://media.rawg.io/media/crop/600/400/games/b8c/b8c243eaa0fbac8115e0cdccac3f91dc.jpg",
+     "img2": "https://media.rawg.io/media/games/b8c/b8c243eaa0fbac8115e0cdccac3f91dc.jpg",
+     "wide": true
+    },
+    {
+     "id": "v4535",
+     "name": "Call of Duty 4: Modern Warfare",
+     "note": "2007",
+     "img": "https://media.rawg.io/media/crop/600/400/games/9fb/9fbaea2168caea1f806546dfdaaeb1da.jpg",
+     "img2": "https://media.rawg.io/media/games/9fb/9fbaea2168caea1f806546dfdaaeb1da.jpg",
+     "wide": true
+    },
+    {
+     "id": "v4286",
+     "name": "BioShock",
+     "note": "2007",
+     "img": "https://media.rawg.io/media/crop/600/400/games/bc0/bc06a29ceac58652b684deefe7d56099.jpg",
+     "img2": "https://media.rawg.io/media/games/bc0/bc06a29ceac58652b684deefe7d56099.jpg",
+     "wide": true
+    },
+    {
+     "id": "v28589",
+     "name": "Halo 3",
+     "note": "2007",
+     "img": "https://media.rawg.io/media/crop/600/400/games/982/982ff61d574fed5e416cb1867b40d9b0.jpg",
+     "img2": "https://media.rawg.io/media/games/982/982ff61d574fed5e416cb1867b40d9b0.jpg",
+     "wide": true
+    },
+    {
+     "id": "v12020",
+     "name": "Left 4 Dead 2",
+     "note": "2009",
+     "img": "https://media.rawg.io/media/crop/600/400/games/d58/d588947d4286e7b5e0e12e1bea7d9844.jpg",
+     "img2": "https://media.rawg.io/media/games/d58/d588947d4286e7b5e0e12e1bea7d9844.jpg",
+     "wide": true
+    },
+    {
+     "id": "v802",
+     "name": "Borderlands 2",
+     "note": "2012",
+     "img": "https://media.rawg.io/media/crop/600/400/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg",
+     "img2": "https://media.rawg.io/media/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg",
+     "wide": true
+    },
+    {
+     "id": "v22508",
+     "name": "Overwatch",
+     "note": "2016",
+     "img": "https://media.rawg.io/media/crop/600/400/games/4ea/4ea507ceebeabb43edbc09468f5aaac6.jpg",
+     "img2": "https://media.rawg.io/media/games/4ea/4ea507ceebeabb43edbc09468f5aaac6.jpg",
+     "wide": true
+    },
+    {
+     "id": "v2454",
+     "name": "DOOM (2016)",
+     "note": "2016",
+     "img": "https://media.rawg.io/media/crop/600/400/games/587/587588c64afbff80e6f444eb2e46f9da.jpg",
+     "img2": "https://media.rawg.io/media/games/587/587588c64afbff80e6f444eb2e46f9da.jpg",
+     "wide": true
+    },
+    {
+     "id": "v923",
+     "name": "Titanfall 2",
+     "note": "2016",
+     "img": "https://media.rawg.io/media/crop/600/400/games/569/56978b5a77f13aa2ec5d09ec81d01cad.jpg",
+     "img2": "https://media.rawg.io/media/games/569/56978b5a77f13aa2ec5d09ec81d01cad.jpg",
+     "wide": true
+    },
+    {
+     "id": "v32",
+     "name": "Destiny 2",
+     "note": "2017",
+     "img": "https://media.rawg.io/media/crop/600/400/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg",
+     "img2": "https://media.rawg.io/media/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg",
+     "wide": true
+    }
+   ]
+  },
+  {
+   "id": "two-player-fighting-games",
+   "src": "{\"type\":\"games\",\"group\":\"Genres\",\"title\":\"Two-player fighting games\",\"short\":\"Two-player fighting games\",\"picks\":[[\"Street Fighter II\",\"Street Fighter II\",1991],[\"Mortal Kombat II\",\"Mortal Kombat II\",1993],[\"Killer Instinct\",\"Killer Instinct\",1994],[\"Tekken 3\",\"Tekken 3\",1997],[\"Street Fighter III: 3rd Strike\",\"Street Fighter III: 3rd Strike\",1999],[\"Super Smash Bros. Melee\",\"Super Smash Bros. Melee\",2001],[\"Soulcalibur II\",\"Soulcalibur II\",2002],[\"Street Fighter IV\",\"Street Fighter IV\",2008],[\"Injustice 2\",\"Injustice 2\",2017],[\"Tekken 7\",\"Tekken 7\",2015],[\"Dragon Ball FighterZ\",\"Dragon Ball FighterZ\",2018],[\"Super Smash Bros. Ultimate\",\"Super Smash Bros. Ultimate\",2018],[\"Mortal Kombat 11\",\"Mortal Kombat 11\",2019],[\"Guilty Gear -Strive-\",\"Guilty Gear -Strive-\",2021],[\"Street Fighter 6\",\"Street Fighter 6\",2023]]}",
+   "cat": "Games",
+   "group": "Genres",
+   "short": "Two-player fighting games",
+   "title": "Two-player fighting games",
+   "items": [
+    {
+     "id": "v55132",
+     "name": "Street Fighter II",
+     "note": "1991",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/40b/40b529990743d2515760b1909eb61020.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/40b/40b529990743d2515760b1909eb61020.jpg",
+     "wide": true
+    },
+    {
+     "id": "v29426",
+     "name": "Mortal Kombat II",
+     "note": "1993",
+     "img": "https://media.rawg.io/media/crop/600/400/games/0df/0dfe8852fa43d58cbdeb973765a9828d.jpg",
+     "img2": "https://media.rawg.io/media/games/0df/0dfe8852fa43d58cbdeb973765a9828d.jpg",
+     "wide": true
+    },
+    {
+     "id": "v55275",
+     "name": "Killer Instinct",
+     "note": "1994",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/b5a/b5a3a90006a391843dde7cb0b0c9c997.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/b5a/b5a3a90006a391843dde7cb0b0c9c997.jpg",
+     "wide": true
+    },
+    {
+     "id": "v57842",
+     "name": "Tekken 3",
+     "note": "1997",
+     "img": "https://media.rawg.io/media/crop/600/400/games/4aa/4aa1440932f4a12d9d0ea70a5e2164f6.jpg",
+     "img2": "https://media.rawg.io/media/games/4aa/4aa1440932f4a12d9d0ea70a5e2164f6.jpg",
+     "wide": true
+    },
+    {
+     "id": "v54757",
+     "name": "Street Fighter III: 3rd Strike",
+     "note": "1999",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/873/873d3853f8c388aded7506bedfdb0c4a.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/873/873d3853f8c388aded7506bedfdb0c4a.jpg",
+     "wide": true
+    },
+    {
+     "id": "v56222",
+     "name": "Super Smash Bros. Melee",
+     "note": "2001",
+     "img": "https://media.rawg.io/media/crop/600/400/games/b78/b780abf866cba1422d01bfa75612dd29.jpg",
+     "img2": "https://media.rawg.io/media/games/b78/b780abf866cba1422d01bfa75612dd29.jpg",
+     "wide": true
+    },
+    {
+     "id": "v400295",
+     "name": "Soulcalibur II",
+     "note": "2002",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/570/570a6ed91febd5f3ffc889368e13a46e.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/570/570a6ed91febd5f3ffc889368e13a46e.jpg",
+     "wide": true
+    },
+    {
+     "id": "v121",
+     "name": "Street Fighter IV",
+     "note": "2008",
+     "img": "https://media.rawg.io/media/crop/600/400/games/0a2/0a2ee705109a6d8d94e28bef03f6d598.jpg",
+     "img2": "https://media.rawg.io/media/games/0a2/0a2ee705109a6d8d94e28bef03f6d598.jpg",
+     "wide": true
+    },
+    {
+     "id": "v38",
+     "name": "Injustice 2",
+     "note": "2017",
+     "img": "https://media.rawg.io/media/crop/600/400/games/e42/e428e70c97064037326d7863a43a0454.jpg",
+     "img2": "https://media.rawg.io/media/games/e42/e428e70c97064037326d7863a43a0454.jpg",
+     "wide": true
+    },
+    {
+     "id": "v36",
+     "name": "Tekken 7",
+     "note": "2015",
+     "img": "https://media.rawg.io/media/crop/600/400/games/62b/62b035add7205737540d66e082b85930.jpg",
+     "img2": "https://media.rawg.io/media/games/62b/62b035add7205737540d66e082b85930.jpg",
+     "wide": true
+    },
+    {
+     "id": "v49225",
+     "name": "Dragon Ball FighterZ",
+     "note": "2018",
+     "img": "https://media.rawg.io/media/crop/600/400/games/96b/96b9420bbd4bd1b79bf2a67f7779733a.jpg",
+     "img2": "https://media.rawg.io/media/games/96b/96b9420bbd4bd1b79bf2a67f7779733a.jpg",
+     "wide": true
+    },
+    {
+     "id": "v58829",
+     "name": "Super Smash Bros. Ultimate",
+     "note": "2018",
+     "img": "https://media.rawg.io/media/crop/600/400/games/9f3/9f3c513b301d8d7250a64dd7e73c62df.jpg",
+     "img2": "https://media.rawg.io/media/games/9f3/9f3c513b301d8d7250a64dd7e73c62df.jpg",
+     "wide": true
+    },
+    {
+     "id": "v274480",
+     "name": "Mortal Kombat 11",
+     "note": "2019",
+     "img": "https://media.rawg.io/media/crop/600/400/games/eb5/eb514db62d397c64288160d5bd8fd67a.jpg",
+     "img2": "https://media.rawg.io/media/games/eb5/eb514db62d397c64288160d5bd8fd67a.jpg",
+     "wide": true
+    },
+    {
+     "id": "v374507",
+     "name": "Guilty Gear -Strive-",
+     "note": "2021",
+     "img": "https://media.rawg.io/media/crop/600/400/games/dfe/dfe14d30ed6fccd9db4ae79d3be51d54.jpg",
+     "img2": "https://media.rawg.io/media/games/dfe/dfe14d30ed6fccd9db4ae79d3be51d54.jpg",
+     "wide": true
+    },
+    {
+     "id": "v742771",
+     "name": "Street Fighter 6",
+     "note": "2023",
+     "img": "https://media.rawg.io/media/crop/600/400/games/ce2/ce2463db40cec363f360c29ddcc56884.jpg",
+     "img2": "https://media.rawg.io/media/games/ce2/ce2463db40cec363f360c29ddcc56884.jpg",
+     "wide": true
+    }
+   ]
+  },
+  {
+   "id": "mmorpgs",
+   "src": "{\"type\":\"games\",\"group\":\"Genres\",\"title\":\"MMORPGs\",\"short\":\"MMORPGs\",\"picks\":[\"Ultima Online\",\"EverQuest\",\"RuneScape\",\"EVE Online\",\"Lineage II\",\"World of Warcraft\",\"Guild Wars 2\",\"MapleStory\",\"Star Wars: The Old Republic\",\"The Elder Scrolls Online\",\"Final Fantasy XIV Online\",\"Black Desert Online\",\"Lost Ark\",\"New World\",\"Old School RuneScape\"]}",
+   "cat": "Games",
+   "group": "Genres",
+   "short": "MMORPGs",
+   "title": "MMORPGs",
+   "items": [
+    {
+     "id": "v30988",
+     "name": "Ultima Online",
+     "note": "1997",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/007/007fbea8c99b1fdf6c1dbb4d26503993.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/007/007fbea8c99b1fdf6c1dbb4d26503993.jpg",
+     "wide": true
+    },
+    {
+     "id": "v542578",
+     "name": "EverQuest",
+     "note": "1999",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/63b/63bf623ad3eb7f7d726132563bcfdc08.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/63b/63bf623ad3eb7f7d726132563bcfdc08.jpg",
+     "wide": true
+    },
+    {
+     "id": "v40746",
+     "name": "RuneScape",
+     "note": "2001",
+     "img": "https://media.rawg.io/media/crop/600/400/games/007/0073b6418763a47eb023fba88cb22e7c.jpg",
+     "img2": "https://media.rawg.io/media/games/007/0073b6418763a47eb023fba88cb22e7c.jpg",
+     "wide": true
+    },
+    {
+     "id": "v13498",
+     "name": "EVE Online",
+     "note": "2003",
+     "img": "https://media.rawg.io/media/crop/600/400/games/82b/82be203e68d737762846203811165933.jpg",
+     "img2": "https://media.rawg.io/media/games/82b/82be203e68d737762846203811165933.jpg",
+     "wide": true
+    },
+    {
+     "id": "v34852",
+     "name": "Lineage II",
+     "note": "2003",
+     "img": "https://media.rawg.io/media/crop/600/400/games/df4/df440e729bf260bc825738fcc4c78a00.jpg",
+     "img2": "https://media.rawg.io/media/games/df4/df440e729bf260bc825738fcc4c78a00.jpg",
+     "wide": true
+    },
+    {
+     "id": "v23599",
+     "name": "World of Warcraft",
+     "note": "2004",
+     "img": "https://media.rawg.io/media/crop/600/400/games/0d9/0d930ea604ee240c5af30c58f73ddf48.jpg",
+     "img2": "https://media.rawg.io/media/games/0d9/0d930ea604ee240c5af30c58f73ddf48.jpg",
+     "wide": true
+    },
+    {
+     "id": "v29746",
+     "name": "Guild Wars 2",
+     "note": "2012",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/420/4205650e0fd16a5ba7bf4f8524fac1f1.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/420/4205650e0fd16a5ba7bf4f8524fac1f1.jpg",
+     "wide": true
+    },
+    {
+     "id": "v11260",
+     "name": "MapleStory",
+     "note": "2012",
+     "img": "https://media.rawg.io/media/crop/600/400/games/ec5/ec52542078d1d019befc0514d588f5d6.jpg",
+     "img2": "https://media.rawg.io/media/games/ec5/ec52542078d1d019befc0514d588f5d6.jpg",
+     "wide": true
+    },
+    {
+     "id": "v38965",
+     "name": "Star Wars: The Old Republic",
+     "note": "2011",
+     "img": "https://media.rawg.io/media/crop/600/400/games/baa/baac774072d6319a166a453b8b3506df.jpg",
+     "img2": "https://media.rawg.io/media/games/baa/baac774072d6319a166a453b8b3506df.jpg",
+     "wide": true
+    },
+    {
+     "id": "v41458",
+     "name": "The Elder Scrolls Online",
+     "note": "2014",
+     "img": "https://media.rawg.io/media/crop/600/400/games/1af/1af8786543bcd0ec61a509604902a41f.jpg",
+     "img2": "https://media.rawg.io/media/games/1af/1af8786543bcd0ec61a509604902a41f.jpg",
+     "wide": true
+    },
+    {
+     "id": "v39530",
+     "name": "Final Fantasy XIV Online",
+     "note": "2010",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/8f7/8f73b974f60a58362532440e9183188c.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/8f7/8f73b974f60a58362532440e9183188c.jpg",
+     "wide": true
+    },
+    {
+     "id": "v22571",
+     "name": "Black Desert Online",
+     "note": "2014",
+     "img": "https://media.rawg.io/media/crop/600/400/games/651/651ae84f2d5e36206aad90976a453329.jpg",
+     "img2": "https://media.rawg.io/media/games/651/651ae84f2d5e36206aad90976a453329.jpg",
+     "wide": true
+    },
+    {
+     "id": "v372576",
+     "name": "Lost Ark",
+     "note": "2022",
+     "img": "https://media.rawg.io/media/crop/600/400/games/d9e/d9e868382c48ec98c9b23b8fbe6a2045.jpg",
+     "img2": "https://media.rawg.io/media/games/d9e/d9e868382c48ec98c9b23b8fbe6a2045.jpg",
+     "wide": true
+    },
+    {
+     "id": "v398414",
+     "name": "New World",
+     "note": "2021",
+     "img": "https://media.rawg.io/media/crop/600/400/games/4ad/4ad7dc0f8a01abea9855309e91e933fc.jpg",
+     "img2": "https://media.rawg.io/media/games/4ad/4ad7dc0f8a01abea9855309e91e933fc.jpg",
+     "wide": true
+    },
+    {
+     "id": "v219972",
+     "name": "Old School RuneScape",
+     "note": "2018",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/aca/aca80d402fcf64ea31d63cafe14cc6d2.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/aca/aca80d402fcf64ea31d63cafe14cc6d2.jpg",
+     "wide": true
+    }
+   ]
+  },
+  {
+   "id": "best-nintendo-64-games",
+   "src": "{\"type\":\"console\",\"name\":\"Nintendo 64\",\"title\":\"Best Nintendo 64 games\"}",
+   "cat": "Games",
+   "group": "Consoles",
+   "short": "Best Nintendo 64 games",
+   "title": "Best Nintendo 64 games",
+   "items": [
+    {
+     "id": "v21285",
+     "name": "HeXen: Beyond Heretic",
+     "note": "1995",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/0fa/0fa357fe0160e2b592a6fafff0e6683e.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/0fa/0fa357fe0160e2b592a6fafff0e6683e.jpg",
+     "wide": true
+    },
+    {
+     "id": "v54491",
+     "name": "Quake",
+     "note": "1996",
+     "img": "https://media.rawg.io/media/crop/600/400/games/3a8/3a82d7f5c90ab082fe475e28d58bee8b.jpg",
+     "img2": "https://media.rawg.io/media/games/3a8/3a82d7f5c90ab082fe475e28d58bee8b.jpg",
+     "wide": true
+    },
+    {
+     "id": "v54528",
+     "name": "Super Mario 64",
+     "note": "1996",
+     "img": "https://media.rawg.io/media/crop/600/400/games/1d5/1d565b99cad46c44b534d9803e27bd49.jpg",
+     "img2": "https://media.rawg.io/media/games/1d5/1d565b99cad46c44b534d9803e27bd49.jpg",
+     "wide": true
+    },
+    {
+     "id": "v14829",
+     "name": "Turok: Dinosaur Hunter",
+     "note": "1997",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/61f/61f183e3d12c7846ed6bd3c027a9fa47.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/61f/61f183e3d12c7846ed6bd3c027a9fa47.jpg",
+     "wide": true
+    },
+    {
+     "id": "v54381",
+     "name": "Doom 64",
+     "note": "1997",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/f7a/f7a19f45bbe8dfb2960ce167ad879d3e.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/f7a/f7a19f45bbe8dfb2960ce167ad879d3e.jpg",
+     "wide": true
+    },
+    {
+     "id": "v54492",
+     "name": "Quake II",
+     "note": "1997",
+     "img": "https://media.rawg.io/media/crop/600/400/games/0c5/0c5fcdf04048200da14b90e0e6cfaf6b.jpg",
+     "img2": "https://media.rawg.io/media/games/0c5/0c5fcdf04048200da14b90e0e6cfaf6b.jpg",
+     "wide": true
+    },
+    {
+     "id": "v5159",
+     "name": "Resident Evil 2 (1998)",
+     "note": "1998",
+     "img": "https://media.rawg.io/media/crop/600/400/games/d64/d646810b629081cc12aec49ed9f49441.jpg",
+     "img2": "https://media.rawg.io/media/games/d64/d646810b629081cc12aec49ed9f49441.jpg",
+     "wide": true
+    },
+    {
+     "id": "v32716",
+     "name": "StarCraft",
+     "note": "1998",
+     "img": "https://media.rawg.io/media/crop/600/400/games/68a/68a77a21ec04083f3e6af62cdbed9c0a.jpg",
+     "img2": "https://media.rawg.io/media/games/68a/68a77a21ec04083f3e6af62cdbed9c0a.jpg",
+     "wide": true
+    },
+    {
+     "id": "v28532",
+     "name": "Banjo-Kazooie",
+     "note": "1998",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/f0d/f0da831778e57b58636ccaf20a7cc6e6.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/f0d/f0da831778e57b58636ccaf20a7cc6e6.jpg",
+     "wide": true
+    },
+    {
+     "id": "v10446",
+     "name": "Turok 2: Seeds of Evil",
+     "note": "1998",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/4cf/4cf1e2b4cd701605225fb443d5e84f77.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/4cf/4cf1e2b4cd701605225fb443d5e84f77.jpg",
+     "wide": true
+    },
+    {
+     "id": "v25097",
+     "name": "The Legend of Zelda: Ocarina of Time (1998)",
+     "note": "1998",
+     "img": "https://media.rawg.io/media/crop/600/400/games/3a0/3a0c8e9ed3a711c542218831b893a0fa.jpg",
+     "img2": "https://media.rawg.io/media/games/3a0/3a0c8e9ed3a711c542218831b893a0fa.jpg",
+     "wide": true
+    },
+    {
+     "id": "v20466",
+     "name": "Worms Armageddon",
+     "note": "1999",
+     "img": "https://media.rawg.io/media/crop/600/400/games/96a/96a48ac7487d9db9179d83170afcb16a.jpg",
+     "img2": "https://media.rawg.io/media/games/96a/96a48ac7487d9db9179d83170afcb16a.jpg",
+     "wide": true
+    },
+    {
+     "id": "v25924",
+     "name": "The Legend of Zelda: Majora's Mask",
+     "note": "2000",
+     "img": "https://media.rawg.io/media/crop/600/400/games/b3c/b3c209cd49aae8a469a59b79b54dc599.jpg",
+     "img2": "https://media.rawg.io/media/games/b3c/b3c209cd49aae8a469a59b79b54dc599.jpg",
+     "wide": true
+    },
+    {
+     "id": "v28495",
+     "name": "Perfect Dark",
+     "note": "2000",
+     "img": "https://media.rawg.io/media/crop/600/400/games/f62/f62d090119e5ff05c59036480123fd83.jpg",
+     "img2": "https://media.rawg.io/media/games/f62/f62d090119e5ff05c59036480123fd83.jpg",
+     "wide": true
+    },
+    {
+     "id": "v22900",
+     "name": "John Romero's Daikatana",
+     "note": "2000",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/c1f/c1fd8b15793743563367688b3dd5faa6.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/c1f/c1fd8b15793743563367688b3dd5faa6.jpg",
+     "wide": true
+    }
+   ]
+  },
+  {
+   "id": "best-super-nintendo-games",
+   "src": "{\"type\":\"console\",\"name\":\"SNES\",\"title\":\"Best Super Nintendo games\"}",
+   "cat": "Games",
+   "group": "Consoles",
+   "short": "Best Super Nintendo games",
+   "title": "Best Super Nintendo games",
+   "items": [
+    {
+     "id": "v25080",
+     "name": "Super Mario Bros.",
+     "note": "1985",
+     "img": "https://media.rawg.io/media/crop/600/400/games/154/154fea9689109f26c49c6a2db6263ef9.jpg",
+     "img2": "https://media.rawg.io/media/games/154/154fea9689109f26c49c6a2db6263ef9.jpg",
+     "wide": true
+    },
+    {
+     "id": "v24030",
+     "name": "Super Mario Bros. 3",
+     "note": "1988",
+     "img": "https://media.rawg.io/media/crop/600/400/games/8f8/8f848239e24815506ff20eab31c6d6a9.jpg",
+     "img2": "https://media.rawg.io/media/games/8f8/8f848239e24815506ff20eab31c6d6a9.jpg",
+     "wide": true
+    },
+    {
+     "id": "v29391",
+     "name": "Eye of the Beholder",
+     "note": "1990",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/a35/a357dd9b955fd12f9363c6d45fcd4f86.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/a35/a357dd9b955fd12f9363c6d45fcd4f86.jpg",
+     "wide": true
+    },
+    {
+     "id": "v24899",
+     "name": "Super Mario World",
+     "note": "1990",
+     "img": "https://media.rawg.io/media/crop/600/400/games/3bb/3bb2c8d774c3a83eb2c17d0d3d51f020.jpg",
+     "img2": "https://media.rawg.io/media/games/3bb/3bb2c8d774c3a83eb2c17d0d3d51f020.jpg",
+     "wide": true
+    },
+    {
+     "id": "v29908",
+     "name": "Another World",
+     "note": "1991",
+     "img": "https://media.rawg.io/media/crop/600/400/games/b43/b43e17890809393784c90116434ee7f3.jpg",
+     "img2": "https://media.rawg.io/media/games/b43/b43e17890809393784c90116434ee7f3.jpg",
+     "wide": true
+    },
+    {
+     "id": "v25096",
+     "name": "The Legend of Zelda: A Link to the Past",
+     "note": "1991",
+     "img": "https://media.rawg.io/media/crop/600/400/games/087/08727beb32c364d30e8b2a1aa8595f8e.jpg",
+     "img2": "https://media.rawg.io/media/games/087/08727beb32c364d30e8b2a1aa8595f8e.jpg",
+     "wide": true
+    },
+    {
+     "id": "v4005",
+     "name": "Wolfenstein 3D",
+     "note": "1992",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/52b/52b958a7b263d4f264648b710e76a236.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/52b/52b958a7b263d4f264648b710e76a236.jpg",
+     "wide": true
+    },
+    {
+     "id": "v54285",
+     "name": "Mortal Kombat",
+     "note": "1992",
+     "img": "https://media.rawg.io/media/crop/600/400/games/e9a/e9a782a3f40f0e53ab64c7018251053e.jpg",
+     "img2": "https://media.rawg.io/media/games/e9a/e9a782a3f40f0e53ab64c7018251053e.jpg",
+     "wide": true
+    },
+    {
+     "id": "v1922",
+     "name": "FINAL FANTASY V",
+     "note": "1992",
+     "img": "https://media.rawg.io/media/crop/600/400/games/7b1/7b184215cc792ea2abf115f4e566b486.jpg",
+     "img2": "https://media.rawg.io/media/games/7b1/7b184215cc792ea2abf115f4e566b486.jpg",
+     "wide": true
+    },
+    {
+     "id": "v52884",
+     "name": "DOOM",
+     "note": "1993",
+     "img": "https://media.rawg.io/media/crop/600/400/games/47b/47b50d880be8453bf9cda6e5c007bc26.jpg",
+     "img2": "https://media.rawg.io/media/games/47b/47b50d880be8453bf9cda6e5c007bc26.jpg",
+     "wide": true
+    },
+    {
+     "id": "v27022",
+     "name": "Super Metroid",
+     "note": "1994",
+     "img": "https://media.rawg.io/media/crop/600/400/games/fc9/fc9bb16db9714d3731823fb0bf706533.jpg",
+     "img2": "https://media.rawg.io/media/games/fc9/fc9bb16db9714d3731823fb0bf706533.jpg",
+     "wide": true
+    },
+    {
+     "id": "v1063",
+     "name": "FINAL FANTASY VI",
+     "note": "1994",
+     "img": "https://media.rawg.io/media/crop/600/400/games/98c/98c87b286cd2a2ba942167df384a9bd3.jpg",
+     "img2": "https://media.rawg.io/media/games/98c/98c87b286cd2a2ba942167df384a9bd3.jpg",
+     "wide": true
+    },
+    {
+     "id": "v25663",
+     "name": "Earthworm Jim",
+     "note": "1994",
+     "img": "https://media.rawg.io/media/crop/600/400/games/360/360f00cbb4b4364b9af0e7ff8e397b65.jpg",
+     "img2": "https://media.rawg.io/media/games/360/360f00cbb4b4364b9af0e7ff8e397b65.jpg",
+     "wide": true
+    },
+    {
+     "id": "v5383",
+     "name": "Worms",
+     "note": "1995",
+     "img": "https://media.rawg.io/media/crop/600/400/games/8fc/8fcc2ff5c7bcdb58199b1a4326817ceb.jpg",
+     "img2": "https://media.rawg.io/media/games/8fc/8fcc2ff5c7bcdb58199b1a4326817ceb.jpg",
+     "wide": true
+    },
+    {
+     "id": "v52800",
+     "name": "Chrono Trigger",
+     "note": "1995",
+     "img": "https://media.rawg.io/media/crop/600/400/games/ae4/ae404f4e0f504131199703c09111bb78.jpg",
+     "img2": "https://media.rawg.io/media/games/ae4/ae404f4e0f504131199703c09111bb78.jpg",
+     "wide": true
+    }
+   ]
+  },
+  {
+   "id": "best-nintendo-switch-games",
+   "src": "{\"type\":\"console\",\"name\":\"Nintendo Switch\",\"title\":\"Best Nintendo Switch games\",\"order\":\"-metacritic\"}",
+   "cat": "Games",
+   "group": "Consoles",
+   "short": "Best Nintendo Switch games",
+   "title": "Best Nintendo Switch games",
+   "items": [
+    {
+     "id": "v25096",
+     "name": "The Legend of Zelda: A Link to the Past",
+     "note": "1991",
+     "img": "https://media.rawg.io/media/crop/600/400/games/087/08727beb32c364d30e8b2a1aa8595f8e.jpg",
+     "img2": "https://media.rawg.io/media/games/087/08727beb32c364d30e8b2a1aa8595f8e.jpg",
+     "wide": true
+    },
+    {
+     "id": "v54491",
+     "name": "Quake",
+     "note": "1996",
+     "img": "https://media.rawg.io/media/crop/600/400/games/3a8/3a82d7f5c90ab082fe475e28d58bee8b.jpg",
+     "img2": "https://media.rawg.io/media/games/3a8/3a82d7f5c90ab082fe475e28d58bee8b.jpg",
+     "wide": true
+    },
+    {
+     "id": "v25097",
+     "name": "The Legend of Zelda: Ocarina of Time (1998)",
+     "note": "1998",
+     "img": "https://media.rawg.io/media/crop/600/400/games/3a0/3a0c8e9ed3a711c542218831b893a0fa.jpg",
+     "img2": "https://media.rawg.io/media/games/3a0/3a0c8e9ed3a711c542218831b893a0fa.jpg",
+     "wide": true
+    },
+    {
+     "id": "v25924",
+     "name": "The Legend of Zelda: Majora's Mask",
+     "note": "2000",
+     "img": "https://media.rawg.io/media/crop/600/400/games/b3c/b3c209cd49aae8a469a59b79b54dc599.jpg",
+     "img2": "https://media.rawg.io/media/games/b3c/b3c209cd49aae8a469a59b79b54dc599.jpg",
+     "wide": true
+    },
+    {
+     "id": "v27024",
+     "name": "Super Mario Galaxy",
+     "note": "2007",
+     "img": "https://media.rawg.io/media/crop/600/400/games/936/936f0ffac0b3c9f5c8d185f610ed2631.jpg",
+     "img2": "https://media.rawg.io/media/games/936/936f0ffac0b3c9f5c8d185f610ed2631.jpg",
+     "wide": true
+    },
+    {
+     "id": "v4544",
+     "name": "Red Dead Redemption",
+     "note": "2010",
+     "img": "https://media.rawg.io/media/crop/600/400/games/686/686909717c3aa01518bc42ae2bf4259e.jpg",
+     "img2": "https://media.rawg.io/media/games/686/686909717c3aa01518bc42ae2bf4259e.jpg",
+     "wide": true
+    },
+    {
+     "id": "v27036",
+     "name": "Super Mario Galaxy 2",
+     "note": "2010",
+     "img": "https://media.rawg.io/media/crop/600/400/games/578/578ff52303d0e2563e28a4149f1485c2.jpeg",
+     "img2": "https://media.rawg.io/media/games/578/578ff52303d0e2563e28a4149f1485c2.jpeg",
+     "wide": true
+    },
+    {
+     "id": "v28623",
+     "name": "Batman: Arkham City",
+     "note": "2011",
+     "img": "https://media.rawg.io/media/crop/600/400/games/b5a/b5a1226bfd971284a735a4a0969086b3.jpg",
+     "img2": "https://media.rawg.io/media/games/b5a/b5a1226bfd971284a735a4a0969086b3.jpg",
+     "wide": true
+    },
+    {
+     "id": "v5679",
+     "name": "The Elder Scrolls V: Skyrim",
+     "note": "2011",
+     "img": "https://media.rawg.io/media/crop/600/400/games/7cf/7cfc9220b401b7a300e409e539c9afd5.jpg",
+     "img2": "https://media.rawg.io/media/games/7cf/7cfc9220b401b7a300e409e539c9afd5.jpg",
+     "wide": true
+    },
+    {
+     "id": "v4062",
+     "name": "BioShock Infinite",
+     "note": "2013",
+     "img": "https://media.rawg.io/media/crop/600/400/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg",
+     "img2": "https://media.rawg.io/media/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg",
+     "wide": true
+    },
+    {
+     "id": "v22511",
+     "name": "The Legend of Zelda: Breath of the Wild",
+     "note": "2017",
+     "img": "https://media.rawg.io/media/crop/600/400/games/cc1/cc196a5ad763955d6532cdba236f730c.jpg",
+     "img2": "https://media.rawg.io/media/games/cc1/cc196a5ad763955d6532cdba236f730c.jpg",
+     "wide": true
+    },
+    {
+     "id": "v10073",
+     "name": "Divinity: Original Sin 2",
+     "note": "2017",
+     "img": "https://media.rawg.io/media/crop/600/400/games/424/424facd40f4eb1f2794fe4b4bb28a277.jpg",
+     "img2": "https://media.rawg.io/media/games/424/424facd40f4eb1f2794fe4b4bb28a277.jpg",
+     "wide": true
+    },
+    {
+     "id": "v28026",
+     "name": "Super Mario Odyssey",
+     "note": "2017",
+     "img": "https://media.rawg.io/media/crop/600/400/games/267/267bd0dbc496f52692487d07d014c061.jpg",
+     "img2": "https://media.rawg.io/media/games/267/267bd0dbc496f52692487d07d014c061.jpg",
+     "wide": true
+    },
+    {
+     "id": "v59199",
+     "name": "Divinity: Original Sin 2 - Definitive Edition",
+     "note": "2018",
+     "img": "https://media.rawg.io/media/crop/600/400/games/cd2/cd2a1a360839002bceadc5a8b3c7dbf7.jpg",
+     "img2": "https://media.rawg.io/media/games/cd2/cd2a1a360839002bceadc5a8b3c7dbf7.jpg",
+     "wide": true
+    },
+    {
+     "id": "v327239",
+     "name": "The Legend of Zelda: Tears of the Kingdom",
+     "note": "2023",
+     "img": "https://media.rawg.io/media/crop/600/400/games/556/55684bfd048706f4266d331d70050b37.jpg",
+     "img2": "https://media.rawg.io/media/games/556/55684bfd048706f4266d331d70050b37.jpg",
+     "wide": true
+    }
+   ]
+  },
+  {
+   "id": "the-game-awards-game-of-the-year-winners",
+   "src": "{\"type\":\"games\",\"group\":\"Awards\",\"title\":\"The Game Awards: Game of the Year winners\",\"short\":\"Game of the Year winners\",\"picks\":[[\"Dragon Age: Inquisition\",\"Dragon Age: Inquisition\",2014],[\"The Witcher 3: Wild Hunt\",\"The Witcher 3: Wild Hunt\",2015],[\"Overwatch\",\"Overwatch\",2016],[\"Breath of the Wild\",\"The Legend of Zelda: Breath of the Wild\",2017],[\"God of War\",\"God of War\",2018],[\"Sekiro: Shadows Die Twice\",\"Sekiro: Shadows Die Twice\",2019],[\"The Last of Us Part II\",\"The Last of Us Part II\",2020],[\"It Takes Two\",\"It Takes Two\",2021],[\"Elden Ring\",\"Elden Ring\",2022],[\"Baldur's Gate 3\",\"Baldur's Gate 3\",2023],[\"Astro Bot\",\"Astro Bot\",2024],[\"Clair Obscur: Expedition 33\",\"Clair Obscur: Expedition 33\",2025]]}",
+   "cat": "Games",
+   "group": "Awards",
+   "short": "Game of the Year winners",
+   "title": "The Game Awards: Game of the Year winners",
+   "items": [
+    {
+     "id": "v28559",
+     "name": "Dragon Age: Inquisition",
+     "note": "2014",
+     "img": "https://media.rawg.io/media/crop/600/400/games/260/26023c855f1769a93411d6a7ea084632.jpeg",
+     "img2": "https://media.rawg.io/media/games/260/26023c855f1769a93411d6a7ea084632.jpeg",
+     "wide": true
+    },
+    {
+     "id": "v3328",
+     "name": "The Witcher 3: Wild Hunt",
+     "note": "2015",
+     "img": "https://media.rawg.io/media/crop/600/400/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg",
+     "img2": "https://media.rawg.io/media/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg",
+     "wide": true
+    },
+    {
+     "id": "v22508",
+     "name": "Overwatch",
+     "note": "2016",
+     "img": "https://media.rawg.io/media/crop/600/400/games/4ea/4ea507ceebeabb43edbc09468f5aaac6.jpg",
+     "img2": "https://media.rawg.io/media/games/4ea/4ea507ceebeabb43edbc09468f5aaac6.jpg",
+     "wide": true
+    },
+    {
+     "id": "v22511",
+     "name": "Breath of the Wild",
+     "note": "2017",
+     "img": "https://media.rawg.io/media/crop/600/400/games/cc1/cc196a5ad763955d6532cdba236f730c.jpg",
+     "img2": "https://media.rawg.io/media/games/cc1/cc196a5ad763955d6532cdba236f730c.jpg",
+     "wide": true
+    },
+    {
+     "id": "v58175",
+     "name": "God of War",
+     "note": "2018",
+     "img": "https://media.rawg.io/media/crop/600/400/games/4be/4be6a6ad0364751a96229c56bf69be59.jpg",
+     "img2": "https://media.rawg.io/media/games/4be/4be6a6ad0364751a96229c56bf69be59.jpg",
+     "wide": true
+    },
+    {
+     "id": "v50734",
+     "name": "Sekiro: Shadows Die Twice",
+     "note": "2019",
+     "img": "https://media.rawg.io/media/crop/600/400/games/67f/67f62d1f062a6164f57575e0604ee9f6.jpg",
+     "img2": "https://media.rawg.io/media/games/67f/67f62d1f062a6164f57575e0604ee9f6.jpg",
+     "wide": true
+    },
+    {
+     "id": "v51325",
+     "name": "The Last of Us Part II",
+     "note": "2020",
+     "img": "https://media.rawg.io/media/crop/600/400/games/909/909974d1c7863c2027241e265fe7011f.jpg",
+     "img2": "https://media.rawg.io/media/games/909/909974d1c7863c2027241e265fe7011f.jpg",
+     "wide": true
+    },
+    {
+     "id": "v455597",
+     "name": "It Takes Two",
+     "note": "2021",
+     "img": "https://media.rawg.io/media/crop/600/400/games/d47/d479582ed0a46496ad34f65c7099d7e5.jpg",
+     "img2": "https://media.rawg.io/media/games/d47/d479582ed0a46496ad34f65c7099d7e5.jpg",
+     "wide": true
+    },
+    {
+     "id": "v326243",
+     "name": "Elden Ring",
+     "note": "2022",
+     "img": "https://media.rawg.io/media/crop/600/400/games/b29/b294fdd866dcdb643e7bab370a552855.jpg",
+     "img2": "https://media.rawg.io/media/games/b29/b294fdd866dcdb643e7bab370a552855.jpg",
+     "wide": true
+    },
+    {
+     "id": "v324997",
+     "name": "Baldur's Gate 3",
+     "note": "2023",
+     "img": "https://media.rawg.io/media/crop/600/400/games/699/69907ecf13f172e9e144069769c3be73.jpg",
+     "img2": "https://media.rawg.io/media/games/699/69907ecf13f172e9e144069769c3be73.jpg",
+     "wide": true
+    },
+    {
+     "id": "v982817",
+     "name": "Astro Bot",
+     "note": "2024",
+     "img": "https://media.rawg.io/media/crop/600/400/games/b19/b19cdd6be95ffffd63fdd2d1fbac057a.jpg",
+     "img2": "https://media.rawg.io/media/games/b19/b19cdd6be95ffffd63fdd2d1fbac057a.jpg",
+     "wide": true
+    },
+    {
+     "id": "v983210",
+     "name": "Clair Obscur: Expedition 33",
+     "note": "2025",
+     "img": "https://media.rawg.io/media/crop/600/400/games/466/4667f17fdee9ebbcea2049e54f8e2b96.jpg",
+     "img2": "https://media.rawg.io/media/games/466/4667f17fdee9ebbcea2049e54f8e2b96.jpg",
+     "wide": true
+    }
+   ]
+  },
+  {
    "id": "stargate-sg-1-main-characters",
    "src": "{\"type\":\"cast\",\"name\":\"Stargate SG-1\"}",
    "cat": "TV",
