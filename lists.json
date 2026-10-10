@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-09",
+ "generated": "2026-10-10",
  "lists": [
   {
    "id": "leonardo-dicaprio-movies",
@@ -483,7 +483,7 @@
      "id": "m1541",
      "name": "Thelma & Louise",
      "note": "1991",
-     "poster": "/7D2DqmIKpPlkCU0RLVdlKLKR7XZ.jpg"
+     "poster": "/vbRAGLzbC75QfiKD1lKjmnQGuph.jpg"
     },
     {
      "id": "m98",
@@ -1243,7 +1243,7 @@
   },
   {
    "id": "biggest-comedy-movies",
-   "src": "{\"type\":\"genre\",\"name\":\"Comedy\"}",
+   "src": "{\"type\":\"genre\",\"name\":\"Comedy\",\"noDisney\":true}",
    "cat": "Genres",
    "title": "Biggest comedy movies",
    "items": [
@@ -1257,7 +1257,7 @@
      "id": "m13",
      "name": "Forrest Gump",
      "note": "1994",
-     "poster": "/Cw4hIUIAmSYfK9QfaUW5igp9La.jpg"
+     "poster": "/pplybKImR7LKzSVzRylK6Cl4dzm.jpg"
     },
     {
      "id": "m680",
@@ -1326,10 +1326,10 @@
      "poster": "/2H1TmgdfNtsKlU9jKdeNyYL5y8T.jpg"
     },
     {
-     "id": "m269149",
-     "name": "Zootopia",
+     "id": "m313369",
+     "name": "La La Land",
      "note": "2016",
-     "poster": "/hlK0e0wAQ3VLuJcsfIYPvb4JVud.jpg"
+     "poster": "/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg"
     },
     {
      "id": "m496243",
@@ -1341,21 +1341,21 @@
   },
   {
    "id": "biggest-musical-movies",
-   "src": "{\"type\":\"keyword\",\"name\":\"musical\",\"title\":\"Biggest musical movies\"}",
+   "src": "{\"type\":\"keyword\",\"name\":\"musical\",\"title\":\"Biggest musical movies\",\"noDisney\":true}",
    "cat": "Genres",
    "title": "Biggest musical movies",
    "items": [
     {
-     "id": "m10020",
-     "name": "Beauty and the Beast",
-     "note": "1991",
-     "poster": "/hUJ0UvQ5tgE2Z9WpfuduVSdiCiU.jpg"
+     "id": "m630",
+     "name": "The Wizard of Oz",
+     "note": "1939",
+     "poster": "/uCC3j4pV9eOZwzDUWp2ilbcTf1f.jpg"
     },
     {
-     "id": "m812",
-     "name": "Aladdin",
-     "note": "1992",
-     "poster": "/eLFfl7vS8dkeG1hKp5mwbm37V83.jpg"
+     "id": "m621",
+     "name": "Grease",
+     "note": "1978",
+     "poster": "/2rM7fQKpb7cs1Iq7IBqub9LFDzJ.jpg"
     },
     {
      "id": "m9479",
@@ -1364,16 +1364,16 @@
      "poster": "/oQffRNjK8e19rF7xVYEN8ew0j7b.jpg"
     },
     {
-     "id": "m8587",
-     "name": "The Lion King",
-     "note": "1994",
-     "poster": "/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg"
+     "id": "m9444",
+     "name": "Anastasia",
+     "note": "1997",
+     "poster": "/bppGWGA8zq1sRvTdDJnUzVW9GcH.jpg"
     },
     {
-     "id": "m10674",
-     "name": "Mulan",
-     "note": "1998",
-     "poster": "/jAbexAtB0aSfP5Ay4TpWHARyVnG.jpg"
+     "id": "m824",
+     "name": "Moulin Rouge!",
+     "note": "2001",
+     "poster": "/2kjM5CUZRIU5yOANUowrbJcRL9L.jpg"
     },
     {
      "id": "m3933",
@@ -1382,22 +1382,34 @@
      "poster": "/3RAoVTxUk1OzZClscAsynuu670p.jpg"
     },
     {
-     "id": "m38757",
-     "name": "Tangled",
-     "note": "2010",
-     "poster": "/ym7Kst6a4uodryxqbGOxmewF235.jpg"
+     "id": "m13885",
+     "name": "Sweeney Todd: The Demon Barber of Fleet Street",
+     "note": "2007",
+     "poster": "/gAW4J1bkRjZKmFsJsIiOBASeoAp.jpg"
     },
     {
-     "id": "m109445",
-     "name": "Frozen",
-     "note": "2013",
-     "poster": "/itAKcobTYGpYT8Phwjd8c9hleTo.jpg"
+     "id": "m11631",
+     "name": "Mamma Mia!",
+     "note": "2008",
+     "poster": "/xYLiCWmAMHJubx5jNZ7HuXKjAbV.jpg"
     },
     {
-     "id": "m277834",
-     "name": "Moana",
+     "id": "m46195",
+     "name": "Rio",
+     "note": "2011",
+     "poster": "/4nJxhUknKV8Gqdhov8pU1YWDYfb.jpg"
+    },
+    {
+     "id": "m82695",
+     "name": "Les Misérables",
+     "note": "2012",
+     "poster": "/6CuzBs2Lb8At7qQr64mLXg2RYRb.jpg"
+    },
+    {
+     "id": "m335797",
+     "name": "Sing",
      "note": "2016",
-     "poster": "/4JeejGugONWpJkbnvL12hVoYEDa.jpg"
+     "poster": "/rwopfpHqPCYBSgBuZwkaXXqHp14.jpg"
     },
     {
      "id": "m313369",
@@ -1406,49 +1418,31 @@
      "poster": "/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg"
     },
     {
-     "id": "m321612",
-     "name": "Beauty and the Beast",
+     "id": "m316029",
+     "name": "The Greatest Showman",
      "note": "2017",
-     "poster": "/hKegSKIDep2ewJWPUQD7u0KqFIp.jpg"
+     "poster": "/b9CeobiihCx1uG1tpw8hXmpi7nm.jpg"
     },
     {
-     "id": "m420817",
-     "name": "Aladdin",
+     "id": "m504608",
+     "name": "Rocketman",
      "note": "2019",
-     "poster": "/ykUEbfpkf8d0w49pHh0AD2KrT52.jpg"
+     "poster": "/f4FF18ia7yTvHf2izNrHqBmgH8U.jpg"
     },
     {
-     "id": "m420818",
-     "name": "The Lion King",
-     "note": "2019",
-     "poster": "/dzBtMocZuJbjLOXvrl4zGYigDzh.jpg"
-    },
-    {
-     "id": "m330457",
-     "name": "Frozen II",
-     "note": "2019",
-     "poster": "/mINJaa34MtknCYl5AjtNJzWj8cD.jpg"
-    },
-    {
-     "id": "m568124",
-     "name": "Encanto",
+     "id": "m438695",
+     "name": "Sing 2",
      "note": "2021",
-     "poster": "/4j0PNHkMr5ax3IA8tjtxcmPU3QT.jpg"
+     "poster": "/aWeKITRFbbwY8txG5uCj4rMCfSP.jpg"
     }
    ]
   },
   {
    "id": "popular-kids-movies",
-   "src": "{\"type\":\"genre\",\"name\":\"Family\",\"title\":\"Popular kids' movies\"}",
+   "src": "{\"type\":\"genre\",\"name\":\"Family\",\"title\":\"Popular kids' movies\",\"noDisney\":true}",
    "cat": "Genres",
    "title": "Popular kids' movies",
    "items": [
-    {
-     "id": "m8587",
-     "name": "The Lion King",
-     "note": "1994",
-     "poster": "/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg"
-    },
     {
      "id": "m862",
      "name": "Toy Story",
@@ -1456,16 +1450,16 @@
      "poster": "/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg"
     },
     {
+     "id": "m863",
+     "name": "Toy Story 2",
+     "note": "1999",
+     "poster": "/4rbcp3ng8n1MKHjpeqW0L7Fnpzz.jpg"
+    },
+    {
      "id": "m808",
      "name": "Shrek",
      "note": "2001",
      "poster": "/iB64vpL3dIObOtMZgX3RqdVdQDc.jpg"
-    },
-    {
-     "id": "m129",
-     "name": "Spirited Away",
-     "note": "2001",
-     "poster": "/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg"
     },
     {
      "id": "m585",
@@ -1486,6 +1480,18 @@
      "poster": "/2LqaLgk4Z226KkgPJuiOQ58wvrm.jpg"
     },
     {
+     "id": "m118",
+     "name": "Charlie and the Chocolate Factory",
+     "note": "2005",
+     "poster": "/iKP6wg3c6COUe8gYutoGG7qcPnO.jpg"
+    },
+    {
+     "id": "m920",
+     "name": "Cars",
+     "note": "2006",
+     "poster": "/2Touk3m5gzsqr1VsvxypdyHY5ci.jpg"
+    },
+    {
      "id": "m2062",
      "name": "Ratatouille",
      "note": "2007",
@@ -1504,28 +1510,22 @@
      "poster": "/mFvoEwSfLqbcWwFsDjQebn9bzFe.jpg"
     },
     {
-     "id": "m109445",
-     "name": "Frozen",
-     "note": "2013",
-     "poster": "/itAKcobTYGpYT8Phwjd8c9hleTo.jpg"
+     "id": "m10193",
+     "name": "Toy Story 3",
+     "note": "2010",
+     "poster": "/AbbXspMOwdvwWZgVN0nabZq03Ec.jpg"
     },
     {
-     "id": "m177572",
-     "name": "Big Hero 6",
-     "note": "2014",
-     "poster": "/2mxS4wUimwlLmI1xp6QW6NSU361.jpg"
+     "id": "m20352",
+     "name": "Despicable Me",
+     "note": "2010",
+     "poster": "/b1BT309QWjtFUlJPLmXmrcHOWEL.jpg"
     },
     {
      "id": "m150540",
      "name": "Inside Out",
      "note": "2015",
      "poster": "/2H1TmgdfNtsKlU9jKdeNyYL5y8T.jpg"
-    },
-    {
-     "id": "m269149",
-     "name": "Zootopia",
-     "note": "2016",
-     "poster": "/hlK0e0wAQ3VLuJcsfIYPvb4JVud.jpg"
     },
     {
      "id": "m354912",
@@ -1630,6 +1630,1006 @@
      "name": "Oppenheimer",
      "note": "2023",
      "poster": "/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg"
+    }
+   ]
+  },
+  {
+   "id": "biggest-movies-of-1980",
+   "src": "{\"type\":\"year\",\"year\":1980}",
+   "cat": "Movies by year",
+   "group": "1980s",
+   "short": "1980",
+   "title": "Biggest movies of 1980",
+   "items": [
+    {
+     "id": "m790",
+     "name": "The Fog",
+     "note": "1980",
+     "poster": "/12EeSboRofP3CI4SPmMFNNXCbtY.jpg"
+    },
+    {
+     "id": "m8689",
+     "name": "Cannibal Holocaust",
+     "note": "1980",
+     "poster": "/otxZzMh53TsN7yYFqSZ3rwH1yMd.jpg"
+    },
+    {
+     "id": "m4488",
+     "name": "Friday the 13th",
+     "note": "1980",
+     "poster": "/uGGpnWHOmWTARVN9wbC1nPxNgps.jpg"
+    },
+    {
+     "id": "m1891",
+     "name": "The Empire Strikes Back",
+     "note": "1980",
+     "poster": "/nNAeTmF4CtdSgMDplXTDPOpYzsX.jpg"
+    },
+    {
+     "id": "m694",
+     "name": "The Shining",
+     "note": "1980",
+     "poster": "/uAR0AWqhQL1hQa69UDEbb2rE5Wx.jpg"
+    },
+    {
+     "id": "m525",
+     "name": "The Blues Brothers",
+     "note": "1980",
+     "poster": "/b0hq1d2d7FIvRGNLewKLm79JNTK.jpg"
+    },
+    {
+     "id": "m813",
+     "name": "Airplane!",
+     "note": "1980",
+     "poster": "/7Q3efxd3AF1vQjlSxnlerSA7RzN.jpg"
+    },
+    {
+     "id": "m5689",
+     "name": "The Blue Lagoon",
+     "note": "1980",
+     "poster": "/hg57Zr63A96mpIQKHxOjHYqCVhI.jpg"
+    },
+    {
+     "id": "m11977",
+     "name": "Caddyshack",
+     "note": "1980",
+     "poster": "/lXnNz7zOXCsftMDVoU3VSo0Eioi.jpg"
+    },
+    {
+     "id": "m11033",
+     "name": "Dressed to Kill",
+     "note": "1980",
+     "poster": "/oy1m5dd44foNrxV8U9l6Walx82V.jpg"
+    },
+    {
+     "id": "m8393",
+     "name": "The Gods Must Be Crazy",
+     "note": "1980",
+     "poster": "/wntGWN2mpeS3QaUm1PTKAcTM9K7.jpg"
+    },
+    {
+     "id": "m1955",
+     "name": "The Elephant Man",
+     "note": "1980",
+     "poster": "/u0wpPYjuSt8DIe1Y3Vapnh8jcKE.jpg"
+    },
+    {
+     "id": "m1578",
+     "name": "Raging Bull",
+     "note": "1980",
+     "poster": "/1WV7WlTS8LI1L5NkCgjWT9GSW3O.jpg"
+    },
+    {
+     "id": "m8536",
+     "name": "Superman II",
+     "note": "1980",
+     "poster": "/3xk5cno9BHcnwc97XO9k21aI1Zi.jpg"
+    },
+    {
+     "id": "m166",
+     "name": "The Party",
+     "note": "1980",
+     "poster": "/usGV1Q7KWR0Uq4dOIppGZ0ba8kz.jpg"
+    }
+   ]
+  },
+  {
+   "id": "biggest-movies-of-1981",
+   "src": "{\"type\":\"year\",\"year\":1981}",
+   "cat": "Movies by year",
+   "group": "1980s",
+   "short": "1981",
+   "title": "Biggest movies of 1981",
+   "items": [
+    {
+     "id": "m9538",
+     "name": "Scanners",
+     "note": "1981",
+     "poster": "/VTqLdveNXxGsIAZL5I4RliTTt7.jpg"
+    },
+    {
+     "id": "m9589",
+     "name": "Christiane F.",
+     "note": "1981",
+     "poster": "/2uNlG5V0l3X4UjEtRnPUWOGCGK9.jpg"
+    },
+    {
+     "id": "m9725",
+     "name": "Friday the 13th Part 2",
+     "note": "1981",
+     "poster": "/92rGctBMTv4uaSlIBVnhz01kRWL.jpg"
+    },
+    {
+     "id": "m1103",
+     "name": "Escape from New York",
+     "note": "1981",
+     "poster": "/vH9llaphjAssRGi0k7e75tD40Ce.jpg"
+    },
+    {
+     "id": "m21484",
+     "name": "Possession",
+     "note": "1981",
+     "poster": "/A9bnRn05riOKWftvQlLKa2gl51n.jpg"
+    },
+    {
+     "id": "m85",
+     "name": "Raiders of the Lost Ark",
+     "note": "1981",
+     "poster": "/ceG9VzoRAVGwivFU403Wc3AHRys.jpg"
+    },
+    {
+     "id": "m699",
+     "name": "For Your Eyes Only",
+     "note": "1981",
+     "poster": "/xV4Nnr6DjjERlqNikqDQX8LUgua.jpg"
+    },
+    {
+     "id": "m10948",
+     "name": "The Fox and the Hound",
+     "note": "1981",
+     "poster": "/bbPEYD1z1DN13UJMr9sjhMh8DJx.jpg"
+    },
+    {
+     "id": "m36819",
+     "name": "Time Bandits",
+     "note": "1981",
+     "poster": "/4VZtpwdhHQSa4LUkvujyGAHb1hG.jpg"
+    },
+    {
+     "id": "m11644",
+     "name": "Blow Out",
+     "note": "1981",
+     "poster": "/uFzMscVLDrTaYd6KXOXlr6dly7w.jpg"
+    },
+    {
+     "id": "m814",
+     "name": "An American Werewolf in London",
+     "note": "1981",
+     "poster": "/hVEqUASJmCQaolkKFEySCHZ8uKG.jpg"
+    },
+    {
+     "id": "m387",
+     "name": "Das Boot",
+     "note": "1981",
+     "poster": "/u8FhQPncOAkwcei2OI9orPWhV6K.jpg"
+    },
+    {
+     "id": "m764",
+     "name": "The Evil Dead",
+     "note": "1981",
+     "poster": "/54C1qdaiSijIU5NeNb4WsPJdNkG.jpg"
+    },
+    {
+     "id": "m11281",
+     "name": "Halloween II",
+     "note": "1981",
+     "poster": "/3nX5HHGgOKaVMxXwMLT9DHO1Ne6.jpg"
+    },
+    {
+     "id": "m8810",
+     "name": "Mad Max 2",
+     "note": "1981",
+     "poster": "/l1KVEhkGDpWRzQ0VqIhZqDDuOim.jpg"
+    }
+   ]
+  },
+  {
+   "id": "biggest-movies-of-1982",
+   "src": "{\"type\":\"year\",\"year\":1982}",
+   "cat": "Movies by year",
+   "group": "1980s",
+   "short": "1982",
+   "title": "Biggest movies of 1982",
+   "items": [
+    {
+     "id": "m9387",
+     "name": "Conan the Barbarian",
+     "note": "1982",
+     "poster": "/qw2A587Ee61IwcSOLNFRhuOACZZ.jpg"
+    },
+    {
+     "id": "m1371",
+     "name": "Rocky III",
+     "note": "1982",
+     "poster": "/uqw16i2kmwVqkJHzjzbDU4xZ0Pl.jpg"
+    },
+    {
+     "id": "m609",
+     "name": "Poltergeist",
+     "note": "1982",
+     "poster": "/4eMN3GANH5GG4kXdHkrTZEUuQ9M.jpg"
+    },
+    {
+     "id": "m154",
+     "name": "Star Trek II: The Wrath of Khan",
+     "note": "1982",
+     "poster": "/uPyLsKl8Z0LOoxeaFXsY5MxhR5s.jpg"
+    },
+    {
+     "id": "m601",
+     "name": "E.T. the Extra-Terrestrial",
+     "note": "1982",
+     "poster": "/an0nD6uq6byfxXCfk6lQBzdL2J1.jpg"
+    },
+    {
+     "id": "m78",
+     "name": "Blade Runner",
+     "note": "1982",
+     "poster": "/63N9uy8nd9j7Eog2axPQ8lbr3Wj.jpg"
+    },
+    {
+     "id": "m1091",
+     "name": "The Thing",
+     "note": "1982",
+     "poster": "/tzGY49kseSE9QAKk47uuDGwnSCu.jpg"
+    },
+    {
+     "id": "m97",
+     "name": "Tron",
+     "note": "1982",
+     "poster": "/jigY9B6TKz4qlfikZcd18qtzTK4.jpg"
+    },
+    {
+     "id": "m12104",
+     "name": "Pink Floyd: The Wall",
+     "note": "1982",
+     "poster": "/aElHyIdF5jmctFGhlhhaPFsbBJC.jpg"
+    },
+    {
+     "id": "m9728",
+     "name": "Friday the 13th Part III",
+     "note": "1982",
+     "poster": "/9kukTSlgFgXnQGdpcHvHcpTDiUc.jpg"
+    },
+    {
+     "id": "m1368",
+     "name": "First Blood",
+     "note": "1982",
+     "poster": "/a9sa6ERZCpplbPEO7OMWE763CLD.jpg"
+    },
+    {
+     "id": "m783",
+     "name": "Gandhi",
+     "note": "1982",
+     "poster": "/rOXftt7SluxskrFrvU7qFJa5zeN.jpg"
+    },
+    {
+     "id": "m150",
+     "name": "48 Hrs.",
+     "note": "1982",
+     "poster": "/rvvjXHzEDBIvIVDBHNOwHS7hVPu.jpg"
+    },
+    {
+     "id": "m9576",
+     "name": "Tootsie",
+     "note": "1982",
+     "poster": "/ngyCzZwb9y5sMUCig5JQT4Y33Q.jpg"
+    },
+    {
+     "id": "m262",
+     "name": "The King of Comedy",
+     "note": "1982",
+     "poster": "/m24EbHxT9NGYEkOlu29YcLOgjgK.jpg"
+    }
+   ]
+  },
+  {
+   "id": "biggest-movies-of-1983",
+   "src": "{\"type\":\"year\",\"year\":1983}",
+   "cat": "Movies by year",
+   "group": "1980s",
+   "short": "1983",
+   "title": "Biggest movies of 1983",
+   "items": [
+    {
+     "id": "m837",
+     "name": "Videodrome",
+     "note": "1983",
+     "poster": "/qqqkiZSU9EBGZ1KiDmfn07S7qvv.jpg"
+    },
+    {
+     "id": "m227",
+     "name": "The Outsiders",
+     "note": "1983",
+     "poster": "/l9os0HcXY8BOkvUWAx4rvby3j6L.jpg"
+    },
+    {
+     "id": "m4543",
+     "name": "Monty Python's The Meaning of Life",
+     "note": "1983",
+     "poster": "/9yavZ9WgEZIpWi2EbVW8At9RPdo.jpg"
+    },
+    {
+     "id": "m535",
+     "name": "Flashdance",
+     "note": "1983",
+     "poster": "/ziiy6ORt8BlxWFXskBChBMInvDA.jpg"
+    },
+    {
+     "id": "m1892",
+     "name": "Return of the Jedi",
+     "note": "1983",
+     "poster": "/jQYlydvHm3kUix1f8prMucrplhm.jpg"
+    },
+    {
+     "id": "m860",
+     "name": "WarGames",
+     "note": "1983",
+     "poster": "/zZ1rN4LoPxKNfAp67Xl300WxVeD.jpg"
+    },
+    {
+     "id": "m700",
+     "name": "Octopussy",
+     "note": "1983",
+     "poster": "/yoosZitM9igSk3Sd0sBXIhKlAh1.jpg"
+    },
+    {
+     "id": "m1621",
+     "name": "Trading Places",
+     "note": "1983",
+     "poster": "/8mBuLCOcpWnmYtZc4aqtvDXslv6.jpg"
+    },
+    {
+     "id": "m9531",
+     "name": "Superman III",
+     "note": "1983",
+     "poster": "/c4oR6qgZW2s5foGkQi2Dd86KuAS.jpg"
+    },
+    {
+     "id": "m11153",
+     "name": "National Lampoon's Vacation",
+     "note": "1983",
+     "poster": "/q3DvoqY06yZnRp9faH6uge7n7VP.jpg"
+    },
+    {
+     "id": "m9346",
+     "name": "Risky Business",
+     "note": "1983",
+     "poster": "/82KOHShH9raGhkcAN3TztVjqjj3.jpg"
+    },
+    {
+     "id": "m36670",
+     "name": "Never Say Never Again",
+     "note": "1983",
+     "poster": "/zhoAL4o1STGgLbLxJ9r1ijfyHC9.jpg"
+    },
+    {
+     "id": "m11336",
+     "name": "The Dead Zone",
+     "note": "1983",
+     "poster": "/9yTVaeS8eIkOpbwIycVFm7EQrgF.jpg"
+    },
+    {
+     "id": "m111",
+     "name": "Scarface",
+     "note": "1983",
+     "poster": "/iQ5ztdjvteGeboxtmRdXEChJOHh.jpg"
+    },
+    {
+     "id": "m8769",
+     "name": "Christine",
+     "note": "1983",
+     "poster": "/mMtUJke2TtIoT6JB9hkvERmsSu8.jpg"
+    }
+   ]
+  },
+  {
+   "id": "biggest-movies-of-1984",
+   "src": "{\"type\":\"year\",\"year\":1984}",
+   "cat": "Movies by year",
+   "group": "1980s",
+   "short": "1984",
+   "title": "Biggest movies of 1984",
+   "items": [
+    {
+     "id": "m1788",
+     "name": "Footloose",
+     "note": "1984",
+     "poster": "/9JEDjBCXCx3eKTSkXwispf0UN3O.jpg"
+    },
+    {
+     "id": "m81",
+     "name": "Warriors of the Wind",
+     "note": "1984",
+     "poster": "/tcrkfB8SRPQCgwI88hQScua6nxh.jpg"
+    },
+    {
+     "id": "m9336",
+     "name": "Police Academy",
+     "note": "1984",
+     "poster": "/3PriqoVUQcPwcyvk0SJRiMTdBJK.jpg"
+    },
+    {
+     "id": "m34584",
+     "name": "The NeverEnding Story",
+     "note": "1984",
+     "poster": "/ddYCa91iDXfJCxaqSYzwi2fjfnl.jpg"
+    },
+    {
+     "id": "m87",
+     "name": "Indiana Jones and the Temple of Doom",
+     "note": "1984",
+     "poster": "/gpdVNUaa4LhRMLfJOPj1AZdhAZ3.jpg"
+    },
+    {
+     "id": "m311",
+     "name": "Once Upon a Time in America",
+     "note": "1984",
+     "poster": "/i0enkzsL5dPeneWnjl1fCWm6L7k.jpg"
+    },
+    {
+     "id": "m620",
+     "name": "Ghostbusters",
+     "note": "1984",
+     "poster": "/7E8nLijS9AwwUEPu2oFYOVKhdFA.jpg"
+    },
+    {
+     "id": "m927",
+     "name": "Gremlins",
+     "note": "1984",
+     "poster": "/6m0F7fsXjQvUbCZrPWcJNrjvIui.jpg"
+    },
+    {
+     "id": "m1885",
+     "name": "The Karate Kid",
+     "note": "1984",
+     "poster": "/1mp4ViklKvA0WXXsNvNx0RBuiit.jpg"
+    },
+    {
+     "id": "m655",
+     "name": "Paris, Texas",
+     "note": "1984",
+     "poster": "/sP27Qm4THyRZyHjHYMfIDtJP6YE.jpg"
+    },
+    {
+     "id": "m279",
+     "name": "Amadeus",
+     "note": "1984",
+     "poster": "/gQRfiyfGvr1az0quaYyMram3Aqt.jpg"
+    },
+    {
+     "id": "m218",
+     "name": "The Terminator",
+     "note": "1984",
+     "poster": "/qvktm0BHcnmDpul4Hz01GIazWPr.jpg"
+    },
+    {
+     "id": "m377",
+     "name": "A Nightmare on Elm Street",
+     "note": "1984",
+     "poster": "/wGTpGGRMZmyFCcrY2YoxVTIBlli.jpg"
+    },
+    {
+     "id": "m90",
+     "name": "Beverly Hills Cop",
+     "note": "1984",
+     "poster": "/eBJEvKkhQ0tUt1dBAcTEYW6kCle.jpg"
+    },
+    {
+     "id": "m841",
+     "name": "Dune",
+     "note": "1984",
+     "poster": "/4kJmUCE7mkVJjXa7A0g2rY4IGTm.jpg"
+    }
+   ]
+  },
+  {
+   "id": "biggest-movies-of-1985",
+   "src": "{\"type\":\"year\",\"year\":1985}",
+   "cat": "Movies by year",
+   "group": "1980s",
+   "short": "1985",
+   "title": "Biggest movies of 1985",
+   "items": [
+    {
+     "id": "m2108",
+     "name": "The Breakfast Club",
+     "note": "1985",
+     "poster": "/gp4zlj7wgbiofLMNsTPndMuO3PN.jpg"
+    },
+    {
+     "id": "m68",
+     "name": "Brazil",
+     "note": "1985",
+     "poster": "/2w09J0KUnVtJvqPYu8N63XjAyCR.jpg"
+    },
+    {
+     "id": "m10925",
+     "name": "The Return of the Living Dead",
+     "note": "1985",
+     "poster": "/oNsV9BychAe4Sk6xFKp558Rlpyz.jpg"
+    },
+    {
+     "id": "m1369",
+     "name": "Rambo: First Blood Part II",
+     "note": "1985",
+     "poster": "/fVwRtWqEPdsCH21BVDGqgkAQcff.jpg"
+    },
+    {
+     "id": "m707",
+     "name": "A View to a Kill",
+     "note": "1985",
+     "poster": "/arJF829RP9cYvh0NU70dC5TtXSa.jpg"
+    },
+    {
+     "id": "m9340",
+     "name": "The Goonies",
+     "note": "1985",
+     "poster": "/eBU7gCjTCj9n2LTxvCSIXXOvHkD.jpg"
+    },
+    {
+     "id": "m9355",
+     "name": "Mad Max Beyond Thunderdome",
+     "note": "1985",
+     "poster": "/jJlxcEVVUHnrUeEkQ0077VeHQpb.jpg"
+    },
+    {
+     "id": "m105",
+     "name": "Back to the Future",
+     "note": "1985",
+     "poster": "/vN5B5WgYscRGcQpVhHl6p9DDTP0.jpg"
+    },
+    {
+     "id": "m10999",
+     "name": "Commando",
+     "note": "1985",
+     "poster": "/ollPAAAgZ7euU8VisfqU3cuXhZ6.jpg"
+    },
+    {
+     "id": "m25237",
+     "name": "Come and See",
+     "note": "1985",
+     "poster": "/qNbMsKVzigERgJUbwf8pKyZogpb.jpg"
+    },
+    {
+     "id": "m403587",
+     "name": "Return",
+     "note": "1985",
+     "poster": "/54QOkHWUnn3gDZKfGojPiFqTHJD.jpg"
+    },
+    {
+     "id": "m10014",
+     "name": "A Nightmare on Elm Street Part 2: Freddy's Revenge",
+     "note": "1985",
+     "poster": "/53kxYw0G3o55yJ23K7s7KMaOyAM.jpg"
+    },
+    {
+     "id": "m1374",
+     "name": "Rocky IV",
+     "note": "1985",
+     "poster": "/2MHUit4H6OK5adcOjnCN6suCKOl.jpg"
+    },
+    {
+     "id": "m15196",
+     "name": "Clue",
+     "note": "1985",
+     "poster": "/aRxbYOYHS8T73nzR8hsLousoplR.jpg"
+    },
+    {
+     "id": "m873",
+     "name": "The Color Purple",
+     "note": "1985",
+     "poster": "/6bvxkcTAXyqxGRwo38mxw92D6Xr.jpg"
+    }
+   ]
+  },
+  {
+   "id": "biggest-movies-of-1986",
+   "src": "{\"type\":\"year\",\"year\":1986}",
+   "cat": "Movies by year",
+   "group": "1980s",
+   "short": "1986",
+   "title": "Biggest movies of 1986",
+   "items": [
+    {
+     "id": "m8009",
+     "name": "Highlander",
+     "note": "1986",
+     "poster": "/8Z8dptJEypuLoOQro1WugD855YE.jpg"
+    },
+    {
+     "id": "m744",
+     "name": "Top Gun",
+     "note": "1986",
+     "poster": "/xUuHj3CgmZQ9P2cMaqQs4J0d4Zc.jpg"
+    },
+    {
+     "id": "m9874",
+     "name": "Cobra",
+     "note": "1986",
+     "poster": "/rCN9c1NfxjfgMkTPFATOzUkNEyg.jpg"
+    },
+    {
+     "id": "m6978",
+     "name": "Big Trouble in Little China",
+     "note": "1986",
+     "poster": "/gI2Qs1yTTj3NcESJyttCkbmJ4k9.jpg"
+    },
+    {
+     "id": "m9377",
+     "name": "Ferris Bueller's Day Off",
+     "note": "1986",
+     "poster": "/9LTQNCvoLsKXP0LtaKAaYVtRaQL.jpg"
+    },
+    {
+     "id": "m8856",
+     "name": "The Karate Kid Part II",
+     "note": "1986",
+     "poster": "/k0OwgRR6PNu7h3SiqpCbRdZWNaG.jpg"
+    },
+    {
+     "id": "m13597",
+     "name": "Labyrinth",
+     "note": "1986",
+     "poster": "/pejayhTVBEL4w8YKSfrhOjjWVlH.jpg"
+    },
+    {
+     "id": "m679",
+     "name": "Aliens",
+     "note": "1986",
+     "poster": "/r1x5JGpyqZU8PYhbs4UcrO1Xb6x.jpg"
+    },
+    {
+     "id": "m10515",
+     "name": "Castle in the Sky",
+     "note": "1986",
+     "poster": "/41XxSsJc5OrulP0m7TrrUeO2hoz.jpg"
+    },
+    {
+     "id": "m235",
+     "name": "Stand by Me",
+     "note": "1986",
+     "poster": "/vz0w9BSehcqjDcJOjRaCk7fgJe7.jpg"
+    },
+    {
+     "id": "m9426",
+     "name": "The Fly",
+     "note": "1986",
+     "poster": "/8gZWMhJHRvaXdXsNhERtqNHYpH3.jpg"
+    },
+    {
+     "id": "m793",
+     "name": "Blue Velvet",
+     "note": "1986",
+     "poster": "/6v1zYh2FKOYVddY5pCQhd4PO9uX.jpg"
+    },
+    {
+     "id": "m192",
+     "name": "The Name of the Rose",
+     "note": "1986",
+     "poster": "/2BuVu0j6v2kNY2gGxtO3sDGyob2.jpg"
+    },
+    {
+     "id": "m9671",
+     "name": "Crocodile Dundee",
+     "note": "1986",
+     "poster": "/pduPduL1ub5kok3lPYT15ryC9L6.jpg"
+    },
+    {
+     "id": "m792",
+     "name": "Platoon",
+     "note": "1986",
+     "poster": "/m3mmFkPQKvPZq5exmh0bDuXlD9T.jpg"
+    }
+   ]
+  },
+  {
+   "id": "biggest-movies-of-1987",
+   "src": "{\"type\":\"year\",\"year\":1987}",
+   "cat": "Movies by year",
+   "group": "1980s",
+   "short": "1987",
+   "title": "Biggest movies of 1987",
+   "items": [
+    {
+     "id": "m941",
+     "name": "Lethal Weapon",
+     "note": "1987",
+     "poster": "/6gt44oqb4nE8vflPElffeGwsHVl.jpg"
+    },
+    {
+     "id": "m765",
+     "name": "Evil Dead II",
+     "note": "1987",
+     "poster": "/xfPOxLpHexVguBauZRPpYs8hueo.jpg"
+    },
+    {
+     "id": "m378",
+     "name": "Raising Arizona",
+     "note": "1987",
+     "poster": "/niKyjOqiB4XVl0BqgKTHIlHOCeF.jpg"
+    },
+    {
+     "id": "m96",
+     "name": "Beverly Hills Cop II",
+     "note": "1987",
+     "poster": "/egDakU8O5yUwpUJP9IMAUVtIDll.jpg"
+    },
+    {
+     "id": "m117",
+     "name": "The Untouchables",
+     "note": "1987",
+     "poster": "/tPq0R4jTO4Ey8ZspFaWK9wGA4Ls.jpg"
+    },
+    {
+     "id": "m106",
+     "name": "Predator",
+     "note": "1987",
+     "poster": "/k3mW4qfJo6SKqe6laRyNGnbB9n5.jpg"
+    },
+    {
+     "id": "m957",
+     "name": "Spaceballs",
+     "note": "1987",
+     "poster": "/kNbaxEsnCyWBTfANVPHayujBsxp.jpg"
+    },
+    {
+     "id": "m600",
+     "name": "Full Metal Jacket",
+     "note": "1987",
+     "poster": "/kMKyx1k8hWWscYFnPbnxxN4Eqo4.jpg"
+    },
+    {
+     "id": "m5548",
+     "name": "RoboCop",
+     "note": "1987",
+     "poster": "/hHtOgGb3NihlyRATHlKPaFApbrd.jpg"
+    },
+    {
+     "id": "m1547",
+     "name": "The Lost Boys",
+     "note": "1987",
+     "poster": "/nH1lvyQvfbL5GKScTtT6zkIvDEn.jpg"
+    },
+    {
+     "id": "m88",
+     "name": "Dirty Dancing",
+     "note": "1987",
+     "poster": "/9Jw6jys7q9gjzVX5zm1z0gC8gY9.jpg"
+    },
+    {
+     "id": "m9003",
+     "name": "Hellraiser",
+     "note": "1987",
+     "poster": "/3Z0oPHyLnk3Vx6ZMC1MiVwIrKhO.jpg"
+    },
+    {
+     "id": "m2493",
+     "name": "The Princess Bride",
+     "note": "1987",
+     "poster": "/2FC9L9MrjBoGHYjYZjdWQdopVYb.jpg"
+    },
+    {
+     "id": "m865",
+     "name": "The Running Man",
+     "note": "1987",
+     "poster": "/GTAUOhO4BN0peJVvxGEQydJvUO.jpg"
+    },
+    {
+     "id": "m801",
+     "name": "Good Morning, Vietnam",
+     "note": "1987",
+     "poster": "/sreISlFUn5TyR41QNjlfAdX5SEW.jpg"
+    }
+   ]
+  },
+  {
+   "id": "biggest-movies-of-1988",
+   "src": "{\"type\":\"year\",\"year\":1988}",
+   "cat": "Movies by year",
+   "group": "1980s",
+   "short": "1988",
+   "title": "Biggest movies of 1988",
+   "items": [
+    {
+     "id": "m4011",
+     "name": "Beetlejuice",
+     "note": "1988",
+     "poster": "/nnl6OWkyPpuMm595hmAxNW3rZFn.jpg"
+    },
+    {
+     "id": "m8392",
+     "name": "My Neighbor Totoro",
+     "note": "1988",
+     "poster": "/rtGDOeG9LzoerkDGZF9dnVeLppL.jpg"
+    },
+    {
+     "id": "m12477",
+     "name": "Grave of the Fireflies",
+     "note": "1988",
+     "poster": "/k9tv1rXZbOhH7eiCk378x61kNQ1.jpg"
+    },
+    {
+     "id": "m1370",
+     "name": "Rambo III",
+     "note": "1988",
+     "poster": "/1eSQvGuD25ezKaiaQsyDDG3e9iN.jpg"
+    },
+    {
+     "id": "m2280",
+     "name": "Big",
+     "note": "1988",
+     "poster": "/eWhCDJiwxvx3YXkAFRiHjimnF0j.jpg"
+    },
+    {
+     "id": "m856",
+     "name": "Who Framed Roger Rabbit",
+     "note": "1988",
+     "poster": "/lYfRc57Kx9VgLZ48iulu0HKnM15.jpg"
+    },
+    {
+     "id": "m9602",
+     "name": "Coming to America",
+     "note": "1988",
+     "poster": "/djRAvxyvvN2yqlJKDbT3uy4vOBw.jpg"
+    },
+    {
+     "id": "m562",
+     "name": "Die Hard",
+     "note": "1988",
+     "poster": "/7Bjd8kfmDSOzpmhySpEhkUyK2oH.jpg"
+    },
+    {
+     "id": "m149",
+     "name": "Akira",
+     "note": "1988",
+     "poster": "/neZ0ykEsPqxamsX6o5QNUFILQrz.jpg"
+    },
+    {
+     "id": "m8337",
+     "name": "They Live",
+     "note": "1988",
+     "poster": "/ngnybFTuopfbfmmEeX9jjBQQmF6.jpg"
+    },
+    {
+     "id": "m10585",
+     "name": "Child's Play",
+     "note": "1988",
+     "poster": "/wvpgvcWNkF2HLuTEMIM7K83MvZ.jpg"
+    },
+    {
+     "id": "m11216",
+     "name": "Cinema Paradiso",
+     "note": "1988",
+     "poster": "/9JhfVOveaY00o8njQu2Xrp4YWud.jpg"
+    },
+    {
+     "id": "m12144",
+     "name": "The Land Before Time",
+     "note": "1988",
+     "poster": "/7phV1ETZnQrLsEeuk4hNeceEl25.jpg"
+    },
+    {
+     "id": "m37136",
+     "name": "The Naked Gun: From the Files of Police Squad!",
+     "note": "1988",
+     "poster": "/zT0mhZqZQJE1gSY5Eg9qcGP4NYo.jpg"
+    },
+    {
+     "id": "m380",
+     "name": "Rain Man",
+     "note": "1988",
+     "poster": "/iTNHwO896WKkaoPtpMMS74d8VNi.jpg"
+    }
+   ]
+  },
+  {
+   "id": "biggest-movies-of-1989",
+   "src": "{\"type\":\"year\",\"year\":1989}",
+   "cat": "Movies by year",
+   "group": "1980s",
+   "short": "1989",
+   "title": "Biggest movies of 1989",
+   "items": [
+    {
+     "id": "m8913",
+     "name": "Pet Sematary",
+     "note": "1989",
+     "poster": "/8ZtH1V4rhrtP53ezlEWrCaMALXF.jpg"
+    },
+    {
+     "id": "m89",
+     "name": "Indiana Jones and the Last Crusade",
+     "note": "1989",
+     "poster": "/sizg1AU8f8JDZX4QIgE4pjUMBvx.jpg"
+    },
+    {
+     "id": "m207",
+     "name": "Dead Poets Society",
+     "note": "1989",
+     "poster": "/tNvKkSnnn4Z6RCBThyK1gfCSSvv.jpg"
+    },
+    {
+     "id": "m709",
+     "name": "Licence to Kill",
+     "note": "1989",
+     "poster": "/8nzJve63EXA79HGAyidZwivZrQ2.jpg"
+    },
+    {
+     "id": "m2978",
+     "name": "Ghostbusters II",
+     "note": "1989",
+     "poster": "/iUZPi31KDP0n5ycpycEsvl51BdV.jpg"
+    },
+    {
+     "id": "m268",
+     "name": "Batman",
+     "note": "1989",
+     "poster": "/cij4dd21v2Rk2YtUQbV5kW69WB2.jpg"
+    },
+    {
+     "id": "m9354",
+     "name": "Honey, I Shrunk the Kids",
+     "note": "1989",
+     "poster": "/omQOzahi2NIeiYznNxHFDvNbvo6.jpg"
+    },
+    {
+     "id": "m942",
+     "name": "Lethal Weapon 2",
+     "note": "1989",
+     "poster": "/1EEIUw0tkX7AJZ1ikZrtKZZKlC6.jpg"
+    },
+    {
+     "id": "m639",
+     "name": "When Harry Met Sally...",
+     "note": "1989",
+     "poster": "/rFOiFUhTMtDetqCGClC9PIgnC1P.jpg"
+    },
+    {
+     "id": "m16859",
+     "name": "Kiki's Delivery Service",
+     "note": "1989",
+     "poster": "/Aufa4YdZIv4AXpR9rznwVA5SEfd.jpg"
+    },
+    {
+     "id": "m2756",
+     "name": "The Abyss",
+     "note": "1989",
+     "poster": "/2dCit3XAtv9KWCJvRKdPkJ0FAkH.jpg"
+    },
+    {
+     "id": "m9494",
+     "name": "Look Who's Talking",
+     "note": "1989",
+     "poster": "/uVM0D7Q6U9H6xMSZmMdfwECih5h.jpg"
+    },
+    {
+     "id": "m10144",
+     "name": "The Little Mermaid",
+     "note": "1989",
+     "poster": "/plcZXvI310FkbwIptvd6rqk63LP.jpg"
+    },
+    {
+     "id": "m165",
+     "name": "Back to the Future Part II",
+     "note": "1989",
+     "poster": "/hQq8xZe5uLjFzSBt4LanNP7SQjl.jpg"
+    },
+    {
+     "id": "m5825",
+     "name": "National Lampoon's Christmas Vacation",
+     "note": "1989",
+     "poster": "/oat42hUw8XzKYUmfy0YLAxYd484.jpg"
     }
    ]
   },
@@ -2069,7 +3069,7 @@
      "id": "m13",
      "name": "Forrest Gump",
      "note": "1994",
-     "poster": "/Cw4hIUIAmSYfK9QfaUW5igp9La.jpg"
+     "poster": "/pplybKImR7LKzSVzRylK6Cl4dzm.jpg"
     },
     {
      "id": "m36955",
@@ -2793,7 +3793,7 @@
      "id": "m129",
      "name": "Spirited Away",
      "note": "2001",
-     "poster": "/jUo8cNmU400WtZiJss45HNXlQ2e.jpg"
+     "poster": "/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg"
     },
     {
      "id": "m1933",
@@ -3975,7 +4975,7 @@
      "id": "m68726",
      "name": "Pacific Rim",
      "note": "2013",
-     "poster": "/8wo4eN8dWKaKlxhSvBz19uvj8gA.jpg"
+     "poster": "/lC4ULSf5J4X9jnBOKcY3pwbAwmT.jpg"
     },
     {
      "id": "m138843",
@@ -4761,7 +5761,7 @@
      "id": "m13",
      "name": "Forrest Gump",
      "note": "1994",
-     "poster": "/Cw4hIUIAmSYfK9QfaUW5igp9La.jpg"
+     "poster": "/pplybKImR7LKzSVzRylK6Cl4dzm.jpg"
     },
     {
      "id": "m197",
