@@ -174,6 +174,8 @@
   .opt:hover{background:var(--panel)}
   .opt.on{background:var(--panel2);font-weight:600}
   .tallyrow{display:flex;flex-wrap:wrap;gap:4px 14px;color:var(--text);font-size:1rem;font-weight:600}
+  .notice{background:var(--panel);border-radius:12px;padding:12px 14px;margin:0 0 18px;box-shadow:inset 0 0 0 2px #FFC857;color:var(--muted)}
+  .notice strong{color:var(--text)}
   .tiebox{background:var(--panel);border-radius:14px;padding:16px 18px;margin:0 0 20px;box-shadow:inset 0 0 0 2px var(--purple)}
   .tbpair{display:flex;gap:10px;flex-wrap:wrap}
   .tbpick{flex:1;min-width:140px;display:flex;gap:10px;align-items:center;background:var(--panel2);border:0;border-radius:12px;padding:10px;text-align:left;font-weight:600}
@@ -216,7 +218,7 @@
     <div class="list-name" id="listName"></div>
   </header>
   <div id="app"></div>
-  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive.<span class="build">Build 2026-10-10.2</span></footer>
+  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive.<span class="build">Build 2026-10-10.3</span></footer>
 </main>
 
 <script>
@@ -442,6 +444,7 @@ function subscribe(){
   roomRef.on("value", snap => {
     room = snap.val();
     if (!room || !room.list || !room.players || !room.players[me.slot]) { leave("That room no longer exists."); return; }
+    watchPresence();
     if (room.round !== me.round) { me.round = room.round; me.own = {}; me.guess = {}; me.step = "own"; me.reveal = 0; me.tbPick = null; selected = null; save(); }
     sync(); render();
   });
@@ -457,7 +460,26 @@ function sync(){
   if (T && T.chooser === me.slot && T.guess && !T.pick && me.tbPick && me.tbPick.id === T.id) roomRef.child("tb").update({pick: me.tbPick.pick});
 }
 
-function leave(msg){
+// Presence: each player marks their seat online, and the database flips it to offline by itself if their connection drops
+// (closed tab, lost signal). Pressing "Leave room" additionally marks the seat as having left on purpose.
+let conRef = null;
+function watchPresence(){
+  if (conRef || !db || !roomRef) return;
+  const seat = roomRef.child("players/" + me.slot);
+  conRef = db.ref(".info/connected");
+  conRef.on("value", snap => {
+    if (snap.val() !== true) return;
+    seat.child("online").onDisconnect().set(false);
+    seat.update({online: true, left: null});
+  });
+}
+function leave(msg, onPurpose){
+  if (conRef) { conRef.off(); conRef = null; }
+  if (roomRef && onPurpose && me.slot) {
+    const seat = roomRef.child("players/" + me.slot);
+    seat.child("online").onDisconnect().cancel();
+    seat.update({online: false, left: true});
+  }
   if (roomRef) roomRef.off();
   roomRef = null; room = null; lobbyMode = null; lobbyCode = "";
   me = Object.assign(blank(), {name: me.name, color: me.color, emoji: me.emoji}); save();
@@ -534,7 +556,7 @@ const actions = {
   next:   () => { me.step = "guess"; selected = null; save(); render(); window.scrollTo(0,0); },
   back:   () => { me.step = "own"; selected = null; save(); render(); },
   lock:   () => { me.step = "locked"; save(); sync(); render(); },
-  leave:  () => leave(),
+  leave:  () => leave("", true),
   reveal: () => {
     if (Date.now() < revealLock) return;      // ignore stray or doubled taps
     revealLock = Date.now() + 500;
@@ -616,6 +638,14 @@ function render(){
   draw(); fillSelects();
   document.getElementById("listName").textContent = room && room.list ? "Now ranking: " + room.list.title : "";
 }
+// A banner when the opponent has left or dropped off.
+function goneView(opp){
+  if (!opp) return "";
+  const n = esc(opp.name);
+  if (opp.left) return `<div class="notice" role="status"><strong>${n} has left the room.</strong> You can leave too and start a new one.</div>`;
+  if (opp.online === false) return `<div class="notice" role="status"><strong>${n} has disconnected.</strong> If they reopen the game on the same device, they will drop back into this room.</div>`;
+  return "";
+}
 function draw(){
   if (!configured) { app.innerHTML = setupView(); return; }
   if (!me.code || !room) { app.innerHTML = lobbyView(); return; }
@@ -623,9 +653,9 @@ function draw(){
   const oppName = opp ? opp.name : "your opponent";
   if (mine.own && opp && opp.own && opp.guess && mine.guess) {
     if (resultsRound !== room.round) { resultsRound = room.round; pickId = null; pickOpen = false; revealLock = Date.now() + 800; justRevealed = null; }
-    app.innerHTML = statusView(opp, true) + resultsView(mine, opp); return;
+    app.innerHTML = statusView(opp, true) + goneView(opp) + resultsView(mine, opp); return;
   }
-  app.innerHTML = statusView(opp) + (me.step === "locked" ? waitingView(opp, oppName) : boardView(oppName));
+  app.innerHTML = statusView(opp) + goneView(opp) + (me.step === "locked" ? waitingView(opp, oppName) : boardView(oppName));
 }
 
 function setupView(){
@@ -676,7 +706,7 @@ function lobbyView(){
 
 function statusView(opp, done){
   let s = `Waiting for someone to join. <button class="link inv" data-act="invite">Copy invite link</button>`;
-  if (opp) s = done ? "Playing " + esc(opp.name) : esc(opp.name) + (opp.ready ? " has locked in" : " is still ranking");
+  if (opp) s = done ? "Playing " + esc(opp.name) : esc(opp.name) + (opp.ready ? " has locked in" : opp.left || opp.online === false ? " is away" : " is still ranking");
   const vs = opp ? `<span class="vs"><span class="pc-${me.slot}">${mark(me.slot)}${esc(me.name)}</span> vs <span class="pc-${otherSlot()}">${mark(otherSlot())}${esc(opp.name)}</span></span>` : "";
   if (opp && done) s = "";
   if (room.tiebreak) s = "Tiebreaker round" + (s ? ". " + s : "");
