@@ -218,7 +218,7 @@
     <div class="list-name" id="listName"></div>
   </header>
   <div id="app"></div>
-  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive.<span class="build">Build 2026-10-10.4</span></footer>
+  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive.<span class="build">Build 2026-10-10.5</span></footer>
 </main>
 
 <script>
@@ -483,13 +483,15 @@ document.addEventListener("visibilitychange", () => {
 window.addEventListener("pagehide", () => { const seat = mySeat(); if (seat) seat.update({online: false}); });
 window.addEventListener("pageshow", () => { const seat = mySeat(); if (seat) seat.update({online: true, away: false}); });
 function leave(msg, onPurpose){
-  if (conRef) { conRef.off(); conRef = null; }
-  if (roomRef && onPurpose && me.slot) {
-    const seat = roomRef.child("players/" + me.slot);
-    seat.child("online").onDisconnect().cancel();
-    seat.update({online: false, left: true});
-  }
+  // Stop listening to the room BEFORE writing the "left" flag. Otherwise our own write echoes back through the room
+  // listener, which re-registers presence and immediately marks this seat as online and not-left again.
+  const seat = roomRef && onPurpose && me.slot ? roomRef.child("players/" + me.slot) : null;
   if (roomRef) roomRef.off();
+  if (conRef) { conRef.off(); conRef = null; }
+  if (seat) {
+    seat.child("online").onDisconnect().cancel();
+    seat.update({online: false, left: true, away: false});
+  }
   roomRef = null; room = null; lobbyMode = null; lobbyCode = "";
   me = Object.assign(blank(), {name: me.name, color: me.color, emoji: me.emoji}); save();
   errMsg = msg || ""; render();
