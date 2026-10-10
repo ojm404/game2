@@ -108,6 +108,11 @@ const DEFS = [
   { type: "tv",         name: "American Horror Story" },
   { type: "tv",         name: "The Office", year: 2005 },          // year = first aired, to get the US show and not the UK one
   { type: "tvgenre",    name: "Sci-Fi & Fantasy", title: "Hit sci-fi TV shows" },
+  //   "cast" ranks a show's main characters (the ones in the most episodes). Optional count: 8 for a smaller list.
+  { type: "cast",       name: "Stargate SG-1" },
+  { type: "cast",       name: "Grey's Anatomy" },
+  { type: "cast",       name: "The Office", year: 2005 },
+  { type: "cast",       name: "Friends" },
   // seasons can be "all", one number (season: 5), or a few (seasons: [1, 2, 3]). Each season becomes its own list.
   { type: "episodes",   name: "Friends", seasons: "all" },
   { type: "episodes",   name: "Stargate SG-1", seasons: "all" },
@@ -115,6 +120,7 @@ const DEFS = [
 ];
 const MAX_ITEMS = 15;        // items per list
 const MAX_EPISODES = 27;    // long seasons are trimmed to their most-voted episodes
+const MAX_CAST = 12;        // characters per "main characters" list
 const MAX_TRACKS = 30;      // songs per album
 const MAX_ALBUMS = 20;      // albums per artist; use from / to on the entry to choose an era for bigger catalogues
 const MIN_ITEMS = 5;         // skip lists that come out shorter than this
@@ -151,13 +157,16 @@ async function studioFlags(id) {
   return {
     marvel: [...studios, ...words].some(n => n.includes("marvel")) || /deadpool/i.test(d.title),
     // Pixar films also list Disney as a studio, so anything with Pixar on it is kept.
-    disney: studios.some(n => n.includes("disney")) && !studios.some(n => n.includes("pixar"))
+    disney: studios.some(n => n.includes("disney")) && !studios.some(n => n.includes("pixar")),
+    franchise: d.belongs_to_collection ? d.belongs_to_collection.id : null
   };
 }
 
 // Takes candidate movies, keeps the best-known released features, returns them oldest first.
 // noDisney: true also leaves out Disney films, but keeps Pixar (used on lists where Disney would otherwise crowd everything out).
-async function pickMovies(candidates, { minVotes = MIN_VOTES, noDisney = false } = {}) {
+// oneFranchise: true keeps only the best-known film from any one franchise (TMDB collection).
+async function pickMovies(candidates, { minVotes = MIN_VOTES, noDisney = false, oneFranchise = false } = {}) {
+  const franchises = new Set();
   const seen = new Set();
   const pool = candidates
     .filter(m => m.release_date && m.release_date <= today && !m.video && m.vote_count >= minVotes)
@@ -167,9 +176,13 @@ async function pickMovies(candidates, { minVotes = MIN_VOTES, noDisney = false }
   const out = [];
   for (const m of pool) {
     if (out.length >= MAX_ITEMS) break;
-    if (EXCLUDE_MARVEL || noDisney) {
+    if (EXCLUDE_MARVEL || noDisney || oneFranchise) {
       const f = await studioFlags(m.id);
       if ((EXCLUDE_MARVEL && f.marvel) || (noDisney && f.disney)) continue;
+      if (oneFranchise && f.franchise) {
+        if (franchises.has(f.franchise)) continue;    // a bigger film from this franchise is already in
+        franchises.add(f.franchise);
+      }
     }
     out.push(m);
   }
@@ -217,18 +230,23 @@ async function findAlbum(artist, album) {
   const pool = plain.length ? plain : found;
   return pool.find(x => x.title.toLowerCase() === album.toLowerCase()) || pool[0] || null;
 }
+// Bonus material that is not really a song on the album: voice memos, commentary, demos, remixes and the like.
+// Only matches inside brackets or after a dash, e.g. "I Know Places (voice memo)", so normal titles are safe.
+const NOT_A_SONG = /(?:[(\[]|\s[\u2013\u2014-]\s)[^)\]]*\b(voice memos?|voice notes?|commentary|interview|track by track|demo|karaoke|instrumental|remix|acoustic|live)\b/i;
 // Song list for one album, using its earliest official release so later bonus tracks are left out.
 async function trackList(g, artistName) {
   const releases = [];
   for (let offset = 0; offset < 300; offset += 100) {
-    const r = await mb("/release", { "release-group": g.id, status: "official", limit: 100, offset });
+    const r = await mb("/release", { "release-group": g.id, status: "official", inc: "media", limit: 100, offset });
     releases.push(...(r.releases || []));
     if (offset + 100 >= (r["release-count"] || 0)) break;
   }
-  const first = releases.sort((a, b) => (a.date || "9999").localeCompare(b.date || "9999"))[0];
+  // Earliest release first; when several came out the same day (standard and deluxe), take the one with the fewest tracks.
+  const size = r => (r.media || []).reduce((n, m) => n + (m["track-count"] || 0), 0) || 999;
+  const first = releases.sort((a, b) => (a.date || "9999").localeCompare(b.date || "9999") || size(a) - size(b))[0];
   if (!first) throw new Error(`No official release found for "${g.title}"`);
   const full = await mb(`/release/${first.id}`, { inc: "recordings" });
-  const items = (full.media || []).flatMap(m => m.tracks || []).slice(0, MAX_TRACKS)
+  const items = (full.media || []).flatMap(m => m.tracks || []).filter(t => !NOT_A_SONG.test(t.title)).slice(0, MAX_TRACKS)
     .map((t, i) => ({ id: "k" + t.id, name: t.title, note: "Track " + (i + 1) }));
   return { cat: CATS.music, group: artistName, short: `${g.title} songs`, title: `${artistName}: ${g.title} songs`, items };
 }
@@ -274,8 +292,8 @@ const builders = {
   },
   async decade(def) {
     const range = { "primary_release_date.gte": `${def.decade}-01-01`, "primary_release_date.lte": `${def.decade + 9}-12-31` };
-    const pages = await Promise.all([1, 2, 3].map(page => tmdb("/discover/movie", { ...range, sort_by: "vote_count.desc", page })));
-    return { cat: CATS.year, group: `${def.decade}s`, short: "Whole decade", title: `Biggest movies of the ${def.decade}s`, items: await pickMovies(pages.flatMap(p => p.results)) };
+    const pages = await Promise.all([1, 2, 3, 4, 5].map(page => tmdb("/discover/movie", { ...range, sort_by: "vote_count.desc", page })));
+    return { cat: CATS.year, group: `${def.decade}s`, short: "Whole decade", title: `Biggest movies of the ${def.decade}s`, items: await pickMovies(pages.flatMap(p => p.results), { oneFranchise: true }) };
   },
   async year(def) {
     const pages = await Promise.all([1, 2].map(page => tmdb("/discover/movie", { primary_release_year: def.year, sort_by: "vote_count.desc", page })));
@@ -309,6 +327,20 @@ const builders = {
       .slice(0, 16)
       .map(s => ({ id: "s" + s.id, name: s.name, note: year(s.air_date), poster: s.poster_path || show.poster_path || null }));
     return { cat: CATS.tv, title: `${show.name} seasons`, items };
+  },
+  // A show's main characters, ranked list of the ones who appear in the most episodes. Tiles show the actor's photo.
+  async cast(def) {
+    const show = await findShow(def.name, def.year);
+    const credits = await tmdb(`/tv/${show.id}/aggregate_credits`);
+    const seen = new Set();
+    const items = (credits.cast || [])
+      .sort((a, b) => b.total_episode_count - a.total_episode_count)
+      .map(p => ({ p, character: ((p.roles || [])[0] || {}).character || "" }))
+      .filter(x => x.character && !/\b(self|voice|uncredited)\b/i.test(x.character))
+      .filter(x => !seen.has(x.character.toLowerCase()) && seen.add(x.character.toLowerCase()))
+      .slice(0, def.count || MAX_CAST)
+      .map(x => ({ id: "p" + x.p.id, name: x.character, note: x.p.name, poster: x.p.profile_path || null }));
+    return { cat: CATS.tv, group: show.name, short: "Main characters", title: `${show.name} main characters`, items };
   },
   async episodes(def) {
     const show = await tmdb(`/tv/${(await findShow(def.name, def.year)).id}`);
