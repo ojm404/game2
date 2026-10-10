@@ -1,4 +1,4 @@
-// Builds lists.json for OutRanked from TMDB (film and TV) and MusicBrainz (music).
+// Builds lists.json for OutRanked from TMDB (film and TV), MusicBrainz (music) and RAWG (video games).
 // Run locally:  TMDB_API_KEY=xxxx node build-lists.js   (Node 18+)
 // Works with either a TMDB v3 API key or a v4 read access token.
 
@@ -108,6 +108,81 @@ const DEFS = [
   { type: "tv",         name: "American Horror Story" },
   { type: "tv",         name: "The Office", year: 2005 },          // year = first aired, to get the US show and not the UK one
   { type: "tvgenre",    name: "Sci-Fi & Fantasy", title: "Hit sci-fi TV shows" },
+  // Video games (from RAWG, needs the RAWG_API_KEY secret).
+  //   "games" is a hand-picked list. A pick is "Name", or ["Name shown", "what to search for", release year].
+  //   "console" is the best-known games on one console. order: "-added" = most popular, "-metacritic" = best reviewed.
+  { type: "games", group: "Franchises", title: "The Legend of Zelda games", short: "The Legend of Zelda", picks: [
+    ["The Legend of Zelda", "The Legend of Zelda", 1986], ["Zelda II: The Adventure of Link", "Zelda II: The Adventure of Link", 1987],
+    ["A Link to the Past", "The Legend of Zelda: A Link to the Past", 1991], ["Link's Awakening", "The Legend of Zelda: Link's Awakening", 1993],
+    ["Ocarina of Time", "The Legend of Zelda: Ocarina of Time", 1998], ["Majora's Mask", "The Legend of Zelda: Majora's Mask", 2000],
+    ["Oracle of Seasons", "The Legend of Zelda: Oracle of Seasons", 2001], ["Oracle of Ages", "The Legend of Zelda: Oracle of Ages", 2001],
+    ["The Wind Waker", "The Legend of Zelda: The Wind Waker", 2002], ["Four Swords Adventures", "The Legend of Zelda: Four Swords Adventures", 2004],
+    ["The Minish Cap", "The Legend of Zelda: The Minish Cap", 2004], ["Twilight Princess", "The Legend of Zelda: Twilight Princess", 2006],
+    ["Phantom Hourglass", "The Legend of Zelda: Phantom Hourglass", 2007], ["Spirit Tracks", "The Legend of Zelda: Spirit Tracks", 2009],
+    ["Skyward Sword", "The Legend of Zelda: Skyward Sword", 2011], ["A Link Between Worlds", "The Legend of Zelda: A Link Between Worlds", 2013],
+    ["Tri Force Heroes", "The Legend of Zelda: Tri Force Heroes", 2015], ["Breath of the Wild", "The Legend of Zelda: Breath of the Wild", 2017],
+    ["Tears of the Kingdom", "The Legend of Zelda: Tears of the Kingdom", 2023], ["Echoes of Wisdom", "The Legend of Zelda: Echoes of Wisdom", 2024] ] },
+  { type: "games", group: "Franchises", title: "Final Fantasy numbered games", short: "Final Fantasy (numbered)", picks: [
+    ["Final Fantasy", "Final Fantasy", 1987], ["Final Fantasy II", "Final Fantasy II", 1988], ["Final Fantasy III", "Final Fantasy III", 1990],
+    ["Final Fantasy IV", "Final Fantasy IV", 1991], ["Final Fantasy V", "Final Fantasy V", 1992], ["Final Fantasy VI", "Final Fantasy VI", 1994],
+    ["Final Fantasy VII", "Final Fantasy VII", 1997], ["Final Fantasy VIII", "Final Fantasy VIII", 1999], ["Final Fantasy IX", "Final Fantasy IX", 2000],
+    ["Final Fantasy X", "Final Fantasy X", 2001], ["Final Fantasy XI", "Final Fantasy XI", 2002], ["Final Fantasy XII", "Final Fantasy XII", 2006],
+    ["Final Fantasy XIII", "Final Fantasy XIII", 2009], ["Final Fantasy XIV", "Final Fantasy XIV Online", 2013],
+    ["Final Fantasy XV", "Final Fantasy XV", 2016], ["Final Fantasy XVI", "Final Fantasy XVI", 2023] ] },
+  { type: "games", group: "Franchises", title: "Kingdom Hearts games", short: "Kingdom Hearts", picks: [
+    ["Kingdom Hearts", "Kingdom Hearts", 2002], ["Chain of Memories", "Kingdom Hearts: Chain of Memories", 2004],
+    ["Kingdom Hearts II", "Kingdom Hearts II", 2005], ["358/2 Days", "Kingdom Hearts 358/2 Days", 2009],
+    ["Birth by Sleep", "Kingdom Hearts Birth by Sleep", 2010], ["Re:coded", "Kingdom Hearts Re:coded", 2010],
+    ["Dream Drop Distance", "Kingdom Hearts 3D: Dream Drop Distance", 2012], ["Kingdom Hearts III", "Kingdom Hearts III", 2019],
+    ["Melody of Memory", "Kingdom Hearts: Melody of Memory", 2020] ] },
+  { type: "games", group: "Franchises", title: "Pokémon generations", short: "Pokémon generations", picks: [
+    ["Gen 1: Red, Blue & Yellow", "Pokémon Red", 1996], ["Gen 2: Gold, Silver & Crystal", "Pokémon Gold", 1999],
+    ["Gen 3: Ruby, Sapphire & Emerald", "Pokémon Ruby", 2002], ["Gen 4: Diamond, Pearl & Platinum", "Pokémon Diamond", 2006],
+    ["Gen 5: Black & White", "Pokémon Black", 2010], ["Gen 6: X & Y", "Pokémon X", 2013], ["Gen 7: Sun & Moon", "Pokémon Sun", 2016],
+    ["Gen 8: Sword & Shield", "Pokémon Sword", 2019], ["Gen 9: Scarlet & Violet", "Pokémon Scarlet", 2022] ] },
+  { type: "games", group: "Franchises", title: "Call of Duty games", short: "Call of Duty", picks: [
+    ["Call of Duty", "Call of Duty", 2003], ["Call of Duty 2", "Call of Duty 2", 2005], ["Call of Duty 3", "Call of Duty 3", 2006],
+    ["Call of Duty 4: Modern Warfare", "Call of Duty 4: Modern Warfare", 2007], ["World at War", "Call of Duty: World at War", 2008],
+    ["Modern Warfare 2 (2009)", "Call of Duty: Modern Warfare 2", 2009], ["Black Ops", "Call of Duty: Black Ops", 2010],
+    ["Modern Warfare 3 (2011)", "Call of Duty: Modern Warfare 3", 2011], ["Black Ops II", "Call of Duty: Black Ops II", 2012],
+    ["Ghosts", "Call of Duty: Ghosts", 2013], ["Advanced Warfare", "Call of Duty: Advanced Warfare", 2014],
+    ["Black Ops III", "Call of Duty: Black Ops III", 2015], ["Infinite Warfare", "Call of Duty: Infinite Warfare", 2016],
+    ["WWII", "Call of Duty: WWII", 2017], ["Black Ops 4", "Call of Duty: Black Ops 4", 2018],
+    ["Modern Warfare (2019)", "Call of Duty: Modern Warfare", 2019], ["Black Ops Cold War", "Call of Duty: Black Ops Cold War", 2020],
+    ["Vanguard", "Call of Duty: Vanguard", 2021], ["Modern Warfare II (2022)", "Call of Duty: Modern Warfare II", 2022],
+    ["Modern Warfare III (2023)", "Call of Duty: Modern Warfare III", 2023], ["Black Ops 6", "Call of Duty: Black Ops 6", 2024],
+    ["Black Ops 7", "Call of Duty: Black Ops 7", 2025] ] },
+  { type: "games", group: "Genres", title: "Cosy games", short: "Cosy games", picks: [
+    "Stardew Valley", "Animal Crossing: New Horizons", "A Short Hike", "Unpacking", "Spiritfarer", "Slime Rancher", "Cozy Grove",
+    "Dorfromantik", "Disney Dreamlight Valley", "My Time at Portia", "Coffee Talk", "PowerWash Simulator", "Ooblets",
+    "Dave the Diver", "Littlewood" ] },
+  { type: "games", group: "Genres", title: "First-person shooters", short: "First-person shooters", picks: [
+    ["DOOM (1993)", "DOOM", 1993], ["GoldenEye 007", "GoldenEye 007", 1997], ["Half-Life", "Half-Life", 1998],
+    ["Counter-Strike", "Counter-Strike", 2000], ["Halo: Combat Evolved", "Halo: Combat Evolved", 2001], ["Half-Life 2", "Half-Life 2", 2004],
+    ["Call of Duty 4: Modern Warfare", "Call of Duty 4: Modern Warfare", 2007], ["BioShock", "BioShock", 2007], ["Halo 3", "Halo 3", 2007],
+    ["Left 4 Dead 2", "Left 4 Dead 2", 2009], ["Borderlands 2", "Borderlands 2", 2012], ["Overwatch", "Overwatch", 2016],
+    ["DOOM (2016)", "DOOM", 2016], ["Titanfall 2", "Titanfall 2", 2016], ["Destiny 2", "Destiny 2", 2017] ] },
+  { type: "games", group: "Genres", title: "Two-player fighting games", short: "Two-player fighting games", picks: [
+    ["Street Fighter II", "Street Fighter II", 1991], ["Mortal Kombat II", "Mortal Kombat II", 1993], ["Killer Instinct", "Killer Instinct", 1994],
+    ["Tekken 3", "Tekken 3", 1997], ["Street Fighter III: 3rd Strike", "Street Fighter III: 3rd Strike", 1999],
+    ["Super Smash Bros. Melee", "Super Smash Bros. Melee", 2001], ["Soulcalibur II", "Soulcalibur II", 2002],
+    ["Street Fighter IV", "Street Fighter IV", 2008], ["Injustice 2", "Injustice 2", 2017], ["Tekken 7", "Tekken 7", 2015],
+    ["Dragon Ball FighterZ", "Dragon Ball FighterZ", 2018], ["Super Smash Bros. Ultimate", "Super Smash Bros. Ultimate", 2018],
+    ["Mortal Kombat 11", "Mortal Kombat 11", 2019], ["Guilty Gear -Strive-", "Guilty Gear -Strive-", 2021], ["Street Fighter 6", "Street Fighter 6", 2023] ] },
+  { type: "games", group: "Genres", title: "MMORPGs", short: "MMORPGs", picks: [
+    "Ultima Online", "EverQuest", "RuneScape", "EVE Online", "Lineage II", "World of Warcraft", "Guild Wars 2", "MapleStory",
+    "Star Wars: The Old Republic", "The Elder Scrolls Online", "Final Fantasy XIV Online", "Black Desert Online", "Lost Ark",
+    "New World", "Old School RuneScape" ] },
+  { type: "console", name: "Nintendo 64", title: "Best Nintendo 64 games" },
+  { type: "console", name: "SNES", title: "Best Super Nintendo games" },
+  { type: "console", name: "Nintendo Switch", title: "Best Nintendo Switch games", order: "-metacritic" },
+  { type: "games", group: "Awards", title: "The Game Awards: Game of the Year winners", short: "Game of the Year winners", picks: [
+    ["Dragon Age: Inquisition", "Dragon Age: Inquisition", 2014], ["The Witcher 3: Wild Hunt", "The Witcher 3: Wild Hunt", 2015],
+    ["Overwatch", "Overwatch", 2016], ["Breath of the Wild", "The Legend of Zelda: Breath of the Wild", 2017],
+    ["God of War", "God of War", 2018], ["Sekiro: Shadows Die Twice", "Sekiro: Shadows Die Twice", 2019],
+    ["The Last of Us Part II", "The Last of Us Part II", 2020], ["It Takes Two", "It Takes Two", 2021], ["Elden Ring", "Elden Ring", 2022],
+    ["Baldur's Gate 3", "Baldur's Gate 3", 2023], ["Astro Bot", "Astro Bot", 2024],
+    ["Clair Obscur: Expedition 33", "Clair Obscur: Expedition 33", 2025] ] },
   //   "cast" ranks a show's main characters (the ones in the most episodes). Optional count: 8 for a smaller list.
   { type: "cast",       name: "Stargate SG-1" },
   { type: "cast",       name: "Grey's Anatomy" },
@@ -195,6 +270,46 @@ async function findPerson(name) {
   return r.results[0];
 }
 
+// ---- RAWG (video games) ----
+const RAWG_KEY = process.env.RAWG_API_KEY;
+async function rawg(path, params = {}) {
+  if (!RAWG_KEY) throw new Error("the RAWG_API_KEY secret is not set");
+  const url = new URL("https://api.rawg.io/api" + path);
+  Object.entries({ ...params, key: RAWG_KEY }).forEach(([k, v]) => url.searchParams.set(k, v));
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`RAWG ${res.status} on ${path}`);
+  return res.json();
+}
+// RAWG's artwork is very large, so "img" asks its image server for a small crop and "img2" keeps the original as a fallback.
+function gameItem(g, name, note) {
+  const art = g.background_image || null;
+  return { id: "v" + g.id, name: name || g.name, note: note || year(g.released),
+    ...(art ? { img: art.replace("/media/games/", "/media/crop/600/400/games/").replace("/media/screenshots/", "/media/crop/600/400/screenshots/"), img2: art } : {}),
+    wide: true };
+}
+const plain = s => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, " ").trim();
+// Finds one game by name. With a year, only a game released within a year of it is accepted, so remakes are not picked by mistake.
+async function findGame(query, yr) {
+  const r = await rawg("/games", { search: query, search_precise: "true", page_size: 10 });
+  const res = r.results || [];
+  const near = res.filter(g => !yr || (g.released && Math.abs(Number(year(g.released)) - yr) <= 1));
+  return near.find(g => plain(g.name) === plain(query)) || near[0] || null;
+}
+let rawgPlatforms = null;
+async function findPlatform(name) {
+  if (!rawgPlatforms) {
+    rawgPlatforms = [];
+    for (const page of [1, 2]) {
+      const r = await rawg("/platforms", { page_size: 40, page });
+      rawgPlatforms.push(...(r.results || []));
+      if (!r.next) break;
+    }
+  }
+  const p = rawgPlatforms.find(x => plain(x.name) === plain(name));
+  if (!p) throw new Error(`No console called "${name}". Options: ${rawgPlatforms.map(x => x.name).join(", ")}`);
+  return p;
+}
+
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 async function mb(path, params = {}) {
   await sleep(1100);
@@ -263,7 +378,7 @@ async function isMarvelShow(id) {
   return names.some(n => n.includes("marvel"));
 }
 
-const CATS = { music: "Music", people: "Actors & directors", franchise: "Franchises", genre: "Genres", year: "Movies by year", tv: "TV" };
+const CATS = { games: "Games", music: "Music", people: "Actors & directors", franchise: "Franchises", genre: "Genres", year: "Movies by year", tv: "TV" };
 
 const builders = {
   async actor(def) {
@@ -305,6 +420,30 @@ const builders = {
     if (!g) throw new Error(`No genre called "${def.name}". Options: ${all.map(x => x.name).join(", ")}`);
     const pages = await Promise.all((def.noDisney ? [1, 2, 3, 4, 5, 6] : [1, 2, 3]).map(page => tmdb("/discover/movie", { with_genres: g.id, sort_by: "vote_count.desc", page })));
     return { cat: CATS.genre, title: def.title || `Biggest ${g.name.toLowerCase()} movies`, items: await pickMovies(pages.flatMap(p => p.results), { noDisney: !!def.noDisney }) };
+  },
+  // A hand-picked list of video games; artwork and years are looked up on RAWG.
+  async games(def) {
+    const items = [];
+    for (const pick of def.picks) {
+      const [name, query, yr] = [].concat(pick);
+      const g = await findGame(query || name, yr);
+      if (g) items.push(gameItem(g, name, yr ? String(yr) : undefined));
+      else { console.warn(`  no RAWG match for "${query || name}"${yr ? " (" + yr + ")" : ""}; added without artwork`); items.push({ id: "v" + slug(name), name, ...(yr ? { note: String(yr) } : {}), wide: true }); }
+    }
+    return { cat: CATS.games, ...(def.group ? { group: def.group, short: def.short || def.title } : {}), title: def.title, items };
+  },
+  // The best-known games on one console.
+  async console(def) {
+    const p = await findPlatform(def.name);
+    const pages = [];
+    for (const page of [1, 2]) pages.push(await rawg("/games", { platforms: p.id, ordering: def.order || "-added", page_size: 40, page }));
+    const seen = new Set();
+    const items = pages.flatMap(r => r.results || [])
+      .filter(g => g.released && g.released <= today && !seen.has(plain(g.name)) && seen.add(plain(g.name)))
+      .slice(0, MAX_ITEMS)
+      .sort((a, b) => a.released.localeCompare(b.released))
+      .map(g => gameItem(g));
+    return { cat: CATS.games, group: "Consoles", short: def.title || p.name, title: def.title || `Best ${p.name} games`, items };
   },
   // A hand-picked movie list. Titles are matched on TMDB by name and release year; the Marvel filter is not applied.
   async films(def) {
