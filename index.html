@@ -16,7 +16,7 @@
     --font:"Outfit",system-ui,-apple-system,"Segoe UI",sans-serif;
   }
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.5 var(--font)}
+  body{position:relative;min-height:100vh;margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.5 var(--font)}
   main{max-width:680px;margin:0 auto;padding:28px 16px 64px}
   header{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:22px}
   h1{font:700 clamp(1.6rem,6vw,2.1rem)/1.1 var(--font);margin:0;background:linear-gradient(90deg,var(--pink),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -176,6 +176,28 @@
   .tallyrow{display:flex;flex-wrap:wrap;gap:4px 14px;color:var(--text);font-size:1rem;font-weight:600}
   .notice{background:var(--panel);border-radius:12px;padding:12px 14px;margin:0 0 18px;box-shadow:inset 0 0 0 2px #FFC857;color:var(--muted)}
   .notice strong{color:var(--text)}
+  /* pop-ups */
+  #rulers{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+  #rulers i{position:absolute;left:0;width:1px;height:1px}
+  .mback{position:absolute;inset:0;background:rgba(10,5,22,.72);z-index:50}
+  .mbox{position:absolute;left:50%;transform:translateX(-50%);z-index:51;width:min(460px,calc(100% - 24px));background:var(--panel);border-radius:16px;padding:20px 20px 18px;box-shadow:0 0 0 2px var(--line),0 24px 60px rgba(0,0,0,.55)}
+  .mbox h2{font-size:1.5rem;margin:0 0 4px}
+  .mbox h2.win{color:var(--win)}
+  .mbox p{margin:0 0 10px;color:var(--muted)}
+  .mbox .x{position:absolute;top:10px;right:12px;background:none;border:0;color:var(--muted);font-size:.85rem;text-decoration:underline;font-weight:400;padding:4px}
+  .mbox .scoreline{display:grid;gap:4px;margin:10px 0 12px;color:var(--text)}
+  .mbox .scoreline span{display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
+  .mbox .scoreline b{min-width:2ch}
+  .mbox .session{background:var(--bg);border-radius:10px;padding:10px 12px;margin:0 0 12px;font-size:.9rem;color:var(--muted)}
+  .mbox .session strong{color:var(--text);display:block;margin-bottom:2px}
+  .mbox .actions{margin-top:12px}
+  .mbox .actions .btn{padding:10px 16px}
+  .chatlog{display:grid;gap:4px;margin:0 0 10px}
+  .chatlog div{background:var(--bg);border-radius:10px;padding:7px 11px;color:var(--text);box-shadow:inset 3px 0 0 var(--pc)}
+  .says{display:flex;flex-wrap:wrap;gap:6px}
+  .says button{background:var(--panel2);border:0;border-radius:999px;padding:7px 12px;font-size:.88rem;font-weight:500}
+  .says button:hover{background:var(--line)}
+  .sublabel{font-size:.78rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin:12px 0 6px}
   .tiebox{background:var(--panel);border-radius:14px;padding:16px 18px;margin:0 0 20px;box-shadow:inset 0 0 0 2px var(--purple)}
   .tbpair{display:flex;gap:10px;flex-wrap:wrap}
   .tbpick{flex:1;min-width:140px;display:flex;gap:10px;align-items:center;background:var(--panel2);border:0;border-radius:12px;padding:10px;text-align:left;font-weight:600}
@@ -218,7 +240,9 @@
     <div class="list-name" id="listName"></div>
   </header>
   <div id="app"></div>
-  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive. Game data and artwork from RAWG.<span class="build">Build 2026-10-10.6</span></footer>
+  <div id="rulers" aria-hidden="true"></div>
+  <div id="modal"></div>
+  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive. Game data and artwork from RAWG.<span class="build">Build 2026-10-11.2</span></footer>
 </main>
 
 <script>
@@ -276,12 +300,19 @@ const longTiers = () => roomTiers().some(t => t.length > 2);
 
 /* ============ GAME ============ */
 const app = document.getElementById("app");
+// Pop-up state lives up here because the very first draw of the page already consults it.
+const modalEl = document.getElementById("modal");
+let modal = null;                                   // which pop-up is showing, if any
+const seen = {round: null, gone: null, say: 0};     // what has already been announced, so pop-ups appear once
+let vis = null;                                     // the part of the page currently on screen
 const configured = !firebaseConfig.apiKey.startsWith("PASTE");
 const STORE = "tierBattleship";
 // What players can choose from on the Create and Join screens.
 const PALETTE = ["#FF5FA8", "#5CC8FF", "#B58CFF", "#FF8A4C", "#2DD4BF", "#E9DDFF"];
 const PALETTE_NAMES = ["Pink", "Blue", "Violet", "Orange", "Teal", "White"];
 const EMOJIS = ["\u{1F60D}", "\u{1F92C}", "\u{1F920}", "\u{1F63A}", "\u{1F921}", "\u{1F608}", "\u{1F984}", "\u{1F978}", "\u{1F47D}"];
+// Quick messages players can send each other at the end of a round.
+const SAY = ["Good game!", "Congrats!", "Better luck next time", "So close!", "You know me too well", "Rematch?"];
 const rand = arr => arr[Math.floor(Math.random() * arr.length)];
 const blank = () => ({name:"", code:null, slot:null, round:0, own:{}, guess:{}, step:"own", reveal:0, color: rand(PALETTE), emoji: rand(EMOJIS)});
 // Colour and emoji for a seat, checked against the lists above so nothing unexpected from the database reaches the page.
@@ -343,22 +374,55 @@ function scoreOf(g, a){
   const n = d => L().items.filter(x => dist(g[x.id], a[x.id]) === d).length;
   return n(0) * PTS_EXACT + n(1) * PTS_NEAR + perfectRows(g, a).length * BONUS;
 }
-function shareText(){
+// Everything about the current round's result, from this player's point of view.
+function outcome(){
   const mine = room.players[me.slot], opp = room.players[otherSlot()];
-  const a = scoreOf(mine.guess, opp.own), b = scoreOf(opp.guess, mine.own);
-  const who = (slot, p) => { const e = look(slot).emoji; return (e ? e + " " : "") + p.name; };
-  const exact = (g, real) => L().items.filter(x => g[x.id] === real[x.id]).length;
-  const me1 = who(me.slot, mine), them = who(otherSlot(), opp), n = L().items.length;
-  const T = room.tb, settled = a === b && T && T.pick && T.guess;
+  const my = tally(mine.guess, opp.own, keys()), their = tally(opp.guess, mine.own, keys());
+  const tie = my.score === their.score;
+  const T = room.tb, settled = !!(tie && T && T.pick && T.guess);
+  const tbWinner = settled ? (T.pick === T.guess ? T.guesser : T.chooser) : null;
+  const iWin = settled ? tbWinner === me.slot : my.score > their.score;
+  const oppWin = settled ? tbWinner !== me.slot : their.score > my.score;
+  return {mine, opp, my, their, tie, settled, iWin, oppWin};
+}
+const tallyText = t => `\u2705 ${t.exact}  \u{1F525} ${t.near}  \u2744\uFE0F ${t.cold}`;
+// Totals across every round played in this room. Each finished round is saved under room.history.
+function sessionStats(){
+  const rounds = Object.values(room.history || {}).filter(Boolean);
+  const blankSide = () => ({wins: 0, exact: 0, near: 0, cold: 0});
+  const st = {rounds: rounds.length, ties: 0, p1: blankSide(), p2: blankSide()};
+  rounds.forEach(h => {
+    ["p1", "p2"].forEach(sl => { const x = h[sl] || {}; st[sl].exact += x.e || 0; st[sl].near += x.n || 0; st[sl].cold += x.c || 0; });
+    const a = (h.p1 || {}).s || 0, b = (h.p2 || {}).s || 0;
+    const w = a > b ? "p1" : b > a ? "p2" : h.tbw || null;
+    if (w) st[w].wins++; else st.ties++;
+  });
+  return st;
+}
+const winsText = n => n + (n === 1 ? " win" : " wins");
+function shareText(){
+  const o = outcome(), a = o.my.score, b = o.their.score;
+  const who = slot => { const e = look(slot).emoji; return (e ? e + " " : "") + room.players[slot].name; };
+  const me1 = who(me.slot), them = who(otherSlot());
   let line;
   if (a > b) line = `${me1} beat ${them} ${a}-${b}`;
   else if (b > a) line = `${them} beat ${me1} ${b}-${a}`;
-  else if (settled) { const w = (T.pick === T.guess ? T.guesser : T.chooser) === me.slot ? mine : opp; line = `${me1} and ${them} tied ${a}-${b}, and ${w.name} won the tiebreaker`; }
+  else if (o.settled) line = `${me1} and ${them} tied ${a}-${b}, and ${(o.iWin ? o.mine : o.opp).name} won the tiebreaker`;
   else line = `${me1} and ${them} tied ${a}-${b}`;
+  const st = sessionStats();
+  let out;
+  if (st.rounds > 1) {
+    // Two or more rounds played: share the running totals only, not this round's score.
+    const mw = st[me.slot].wins, tw = st[otherSlot()].wins;
+    const head = mw === tw ? `${me1} and ${them} are level at ${mw}-${tw}` : mw > tw ? `${me1} leads ${them} ${mw}-${tw}` : `${them} leads ${me1} ${tw}-${mw}`;
+    const side = slot => `${who(slot)}: ${winsText(st[slot].wins)}, ${tallyText(st[slot])}`;
+    out = [`OutRanked: ${head} after ${st.rounds} rounds${st.ties ? ` (${st.ties} tied)` : ""}`, side(me.slot), side(otherSlot())];
+  } else {
+    out = [`OutRanked: ${L().title}`, line, `${me1}: ${tallyText(o.my)}`, `${them}: ${tallyText(o.their)}`];
+  }
   const url = pageUrl();
-  return [`OutRanked: ${L().title}`, line,
-    `Exact hits: ${mine.name} ${exact(mine.guess, opp.own)}, ${opp.name} ${exact(opp.guess, mine.own)} (out of ${n})`,
-    "Rank a list, then guess how your friend ranked it." + (url ? " Play: " + url : "")].join("\n");
+  out.push("Rank a list, then guess how your friend ranked it." + (url ? " Play: " + url : ""));
+  return out.join("\n");
 }
 
 
@@ -458,6 +522,14 @@ function sync(){
   if (me.step === "locked" && mine.ready && opp && opp.ready && !mine.own) mineRef.update({own:me.own, guess:me.guess});
   const T = room.tb;
   if (T && T.chooser === me.slot && T.guess && !T.pick && me.tbPick && me.tbPick.id === T.id) roomRef.child("tb").update({pick: me.tbPick.pick});
+  // Save each finished round once, so the room can keep running totals. Both players may write it; the data is identical.
+  const p1 = room.players.p1, p2 = room.players.p2;
+  if (p1 && p2 && p1.own && p1.guess && p2.own && p2.guess) {
+    const key = "r" + room.round, h = (room.history || {})[key];
+    const pack = t => ({s: t.score, e: t.exact, n: t.near, c: t.cold});
+    if (!h) roomRef.child("history/" + key).set({list: L().title, p1: pack(tally(p1.guess, p2.own, keys())), p2: pack(tally(p2.guess, p1.own, keys()))});
+    else if (!h.tbw && h.p1.s === h.p2.s && T && T.pick && T.guess) roomRef.child("history/" + key + "/tbw").set(T.pick === T.guess ? T.guesser : T.chooser);
+  }
 }
 
 // Presence: each player marks their seat online, and the database flips it to offline by itself if their connection drops
@@ -555,6 +627,17 @@ function choose(btn, key){
   btn.parentElement.querySelectorAll("button").forEach(b => { const on = b === btn; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on); });
 }
 const actions = {
+  say: btn => { const mine = room.players[me.slot]; roomRef.child("players/" + me.slot + "/say").set({m: +btn.dataset.i, r: room.round, n: ((mine.say && mine.say.n) || 0) + 1}); },
+  closeModal: () => { modal = null; renderModal(); },
+  openRound: () => { modal = {kind: "round"}; renderModal(); },
+  nextRound: () => {
+    modal = null; pickOpen = true; render();
+    const p = document.querySelector(".picker"); if (p && p.scrollIntoView) p.scrollIntoView({block: "center"});
+  },
+  modalTiebreak: () => { modal = null; actions.tiebreak(); renderModal(); },
+  endGame: () => roomRef.update({closed: {by: me.slot}}),
+  closedOk: () => { modal = null; leave(); },
+  goneLeave: () => { modal = null; leave("", true); },
   togglePick: () => { pickOpen = !pickOpen; fillSelects(); },
   pickList: btn => { pickId = btn.dataset.id; pickOpen = false; fillSelects(); },
   setColor: btn => choose(btn, "color"),
@@ -630,7 +713,7 @@ app.addEventListener("change", e => {
   if (e.target.matches("select.catpick")) { pickCat = e.target.value; pickGroup = null; pickId = null; fillSelects(); }
   if (e.target.matches("select.grouppick")) { pickGroup = e.target.value; pickId = null; fillSelects(); }
 });
-app.addEventListener("click", e => {
+function onClick(e){
   const chip = e.target.closest(".chip");
   if (chip) { selected = selected === chip.dataset.id ? null : chip.dataset.id; render(); return; }
   const act = e.target.closest("[data-act]");
@@ -641,12 +724,14 @@ app.addEventListener("click", e => {
     if (zone.dataset.tier) board[selected] = zone.dataset.tier; else delete board[selected];
     selected = null; save(); render();
   }
-});
+}
+app.addEventListener("click", onClick);
+if (modalEl && modalEl.addEventListener) modalEl.addEventListener("click", onClick);
 
 /* ---------- views ---------- */
 function render(){
   if (app.style) { app.style.setProperty("--p1c", look("p1").color); app.style.setProperty("--p2c", look("p2").color); }
-  draw(); fillSelects();
+  draw(); fillSelects(); updateModal(); renderModal();
   document.getElementById("listName").textContent = room && room.list ? "Now ranking: " + room.list.title : "";
 }
 // A banner when the opponent has left or dropped off.
@@ -876,6 +961,103 @@ function tally(g, a, shown){
   return {exact, near, cold: items.length - exact - near, perf, score: exact * PTS_EXACT + near * PTS_NEAR + perf * BONUS};
 }
 
+// ---- pop-ups ----
+// Where on the page the player is currently looking. Inside an embed the page cannot ask how far its host has scrolled,
+// so a column of invisible markers reports which ones are on screen and pop-ups are centred among those.
+(function watchView(){
+  const rulers = document.getElementById("rulers");
+  if (!rulers || typeof IntersectionObserver === "undefined") return;
+  const STEP = 80, on = new Set();
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => { const i = +en.target.dataset.i; if (en.isIntersecting) on.add(i); else on.delete(i); });
+    if (on.size) { const lo = Math.min(...on), hi = Math.max(...on); vis = {top: lo * STEP, height: (hi - lo + 1) * STEP}; }
+    placeModal();
+  });
+  for (let i = 0; i < 120; i++) { const m = document.createElement("i"); m.dataset.i = i; m.style.top = (i * STEP) + "px"; rulers.appendChild(m); io.observe(m); }
+})();
+function placeModal(){
+  const box = modalEl && modalEl.querySelector ? modalEl.querySelector(".mbox") : null;
+  if (!box) return;
+  const v = vis || {top: window.scrollY || 0, height: window.innerHeight || 600};
+  box.style.top = Math.max(12, v.top + Math.max(12, (v.height - box.offsetHeight) / 2)) + "px";
+}
+
+function updateModal(){
+  if (!room || !me.code) { modal = null; seen.round = null; seen.gone = null; seen.say = 0; return; }
+  if (room.closed) { modal = {kind: "closed"}; return; }
+  const mine = room.players[me.slot], opp = room.players[otherSlot()];
+  // Only a deliberate "Leave room" gets a pop-up. A dropped connection or a tab switch just shows the banner.
+  const gone = opp && opp.left ? "left" : "";
+  if (gone && seen.gone !== gone) { seen.gone = gone; modal = {kind: "gone", why: gone}; return; }
+  if (!gone) { seen.gone = null; if (modal && modal.kind === "gone") modal = null; }
+  if (modal && modal.kind === "gone") return;
+  const done = mine.own && mine.guess && opp && opp.own && opp.guess;
+  if (!done) { if (modal && (modal.kind === "round" || modal.kind === "say")) modal = null; return; }
+  const T = room.tb, key = room.round + (T && T.pick && T.guess ? ":tb" : "");
+  if (seen.round !== key) { seen.round = key; modal = {kind: "round"}; }
+  const n = opp.say && opp.say.r === room.round ? opp.say.n : 0;
+  if (n > seen.say) { seen.say = n; if (!modal) modal = {kind: "say"}; }
+}
+
+// This round's messages, one line per player who has sent one.
+function chatLog(){
+  const line = slot => { const p = room.players[slot], sy = p && p.say; return sy && sy.r === room.round && SAY[sy.m] ? `<div class="pc-${slot}">${mark(slot)}<strong>${esc(p.name)}:</strong> ${esc(SAY[sy.m])}</div>` : ""; };
+  const html = line("p1") + line("p2");
+  return html ? `<div class="chatlog">${html}</div>` : "";
+}
+function sessionHtml(){
+  const st = sessionStats();
+  if (st.rounds < 1) return "";
+  const side = slot => `${mark(slot)}${esc(room.players[slot].name)}: ${winsText(st[slot].wins)}, ${tallyText(st[slot])}`;
+  return `<div class="session"><strong>This room so far: ${st.rounds} ${st.rounds === 1 ? "round" : "rounds"}${st.ties ? `, ${st.ties} tied` : ""}</strong>
+    <div class="pc-${me.slot}">${side(me.slot)}</div><div class="pc-${otherSlot()}">${side(otherSlot())}</div></div>`;
+}
+function modalHtml(){
+  if (!modal) return "";
+  const opp = room.players[otherSlot()], on = opp ? esc(opp.name) : "Your opponent";
+  if (modal.kind === "closed") {
+    const by = room.closed.by === me.slot ? "You" : on;
+    return `<h2>Game over</h2><p>${by} ended the game and closed the room.</p>${sessionHtml()}
+      <div class="actions"><button class="btn" data-act="closedOk">Back to start</button></div>`;
+  }
+  if (modal.kind === "gone") {
+    return modal.why === "left"
+      ? `<h2>${on} left the room</h2><p>The game cannot continue without them. You can leave and start a new room, or stay to look over the board.</p>
+         <div class="actions"><button class="btn" data-act="goneLeave">Leave room</button><button class="btn ghost" data-act="closeModal">Stay here</button></div>`
+      : `<h2>${on} disconnected</h2><p>They may have closed the game or lost their connection. If they reopen it on the same device they will drop back into this room.</p>
+         <div class="actions"><button class="btn" data-act="closeModal">Keep waiting</button><button class="btn ghost" data-act="goneLeave">Leave room</button></div>`;
+  }
+  const says = `<p class="sublabel">Say something</p><div class="says">${SAY.map((t, i) => `<button data-act="say" data-i="${i}">${esc(t)}</button>`).join("")}</div>`;
+  if (modal.kind === "say") {
+    return `<button class="x" data-act="closeModal">Close</button><h2>New message</h2>${chatLog()}${says}`;
+  }
+  // end of round
+  const o = outcome();
+  const tbw = room.tiebreak || o.settled ? " the tiebreaker" : "";
+  const title = o.tie && !o.settled ? "It's a tie" : o.iWin ? "You win" + tbw : on + " wins" + tbw;
+  const row = (slot, t) => `<span class="pc-${slot}"><b>${t.score}</b>${mark(slot)}${esc(room.players[slot].name)}<span>${tallyText(t)}</span></span>`;
+  const next = o.tie && !o.settled && !room.tb
+    ? `<button class="btn" data-act="modalTiebreak">Play the tiebreaker</button>`
+    : o.tie && !o.settled ? `<button class="btn" data-act="closeModal">Go to the tiebreaker</button>`
+    : `<button class="btn" data-act="nextRound">Play another round</button>`;
+  return `<button class="x" data-act="closeModal">View the board</button>
+    <h2 class="${o.iWin ? "win" : ""}">${title}</h2>
+    <p>${esc(L().title)}</p>
+    <div class="scoreline">${row(me.slot, o.my)}${row(otherSlot(), o.their)}</div>
+    ${sessionHtml()}
+    ${chatLog()}${says}
+    <p class="sublabel">What next?</p>
+    <div class="actions">${next}<button class="btn ghost" data-act="share">Copy results</button><button class="btn ghost" data-act="endGame">End game</button></div>`;
+}
+function renderModal(){
+  if (!modalEl || !("innerHTML" in modalEl)) return;
+  const html = modal && room ? modalHtml() : "";
+  modalEl.innerHTML = html ? `<div class="mback"></div><div class="mbox pc-wrap" role="dialog" aria-modal="true">${html}</div>` : "";
+  if (modalEl.style) { modalEl.style.setProperty("--p1c", look("p1").color); modalEl.style.setProperty("--p2c", look("p2").color); }
+  placeModal();
+}
+if (typeof window !== "undefined" && window.addEventListener) window.addEventListener("scroll", placeModal, {passive: true});
+
 function resultsView(mine, opp){
   const all = keys(), mySlot = me.slot, oppSlot = otherSlot();
   const my = tally(mine.guess, opp.own, all), their = tally(opp.guess, mine.own, all);
@@ -892,6 +1074,8 @@ function resultsView(mine, opp){
   return `<p class="verdict${iWin ? " win" : ""}">${verdict}</p>
     <p class="hint">Highest score wins. A perfect row is worth ${BONUS} bonus points.</p>
     <div class="scores">${card(myName, my, iWin, mySlot)}${card(on, their, oppWin, oppSlot)}</div>
+    ${chatLog()}
+    <div class="actions" style="margin:0 0 20px"><button class="btn ghost" data-act="openRound">Round summary and chat</button></div>
     ${tie ? tbPanel(my.score) : ""}
     <h2>Your guess against ${on}'s real ranking</h2>
     ${legend}
