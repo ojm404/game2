@@ -4,6 +4,8 @@
 
 const fs = require("fs");
 // years(1990, 2019) makes one "biggest movies of the year" list for every year in that range.
+// decades(1980, 2010) makes one "biggest movies of the decade" list for the 1980s, 1990s, 2000s and 2010s.
+const decades = (from, to) => Array.from({ length: (to - from) / 10 + 1 }, (_, i) => ({ type: "decade", decade: from + i * 10 }));
 const years = (from, to) => Array.from({ length: to - from + 1 }, (_, i) => ({ type: "year", year: from + i }));
 
 /* ======== EDIT THIS: the face-off lists you want ======== */
@@ -27,6 +29,7 @@ const DEFS = [
   { type: "keyword",    name: "musical", title: "Biggest musical movies", noDisney: true },
   { type: "genre",      name: "Family", title: "Popular kids' movies", noDisney: true },
   { type: "keyword",    name: "biography", title: "Best biopics" },
+  ...decades(1980, 2010),     // listed before the years so "Whole decade" is the first option in each decade's submenu
   ...years(1980, 2019),
   //   "films" is a hand-picked movie list. Each pick is ["Title", release year]; posters are looked up on TMDB.
   { type: "films", cat: "Franchises", title: "Disney princess movies", picks: [
@@ -269,6 +272,11 @@ const builders = {
     if (!first) throw new Error("No collection found");
     return { cat: CATS.franchise, title: def.title || first.name.replace(/ Collection$/, "") + " films", items: await pickMovies(parts, { minVotes: 0 }) };
   },
+  async decade(def) {
+    const range = { "primary_release_date.gte": `${def.decade}-01-01`, "primary_release_date.lte": `${def.decade + 9}-12-31` };
+    const pages = await Promise.all([1, 2, 3].map(page => tmdb("/discover/movie", { ...range, sort_by: "vote_count.desc", page })));
+    return { cat: CATS.year, group: `${def.decade}s`, short: "Whole decade", title: `Biggest movies of the ${def.decade}s`, items: await pickMovies(pages.flatMap(p => p.results)) };
+  },
   async year(def) {
     const pages = await Promise.all([1, 2].map(page => tmdb("/discover/movie", { primary_release_year: def.year, sort_by: "vote_count.desc", page })));
     return { cat: CATS.year, group: `${Math.floor(def.year / 10) * 10}s`, short: String(def.year), title: `Biggest movies of ${def.year}`, items: await pickMovies(pages.flatMap(p => p.results)) };
@@ -443,7 +451,7 @@ const builders = {
   const lists = [];
   for (const def of DEFS) {
     const src = JSON.stringify(def);
-    const label = `${def.type} ${def.name || def.title || def.artist || def.year}`;
+    const label = `${def.type} ${def.name || def.title || def.artist || def.year || def.decade}`;
     const built = [];
     try {
       for (const list of [].concat(await builders[def.type](def))) {
