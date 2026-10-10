@@ -11179,28 +11179,12 @@
   },
   {
    "id": "best-nintendo-64-games",
-   "src": "{\"type\":\"console\",\"name\":\"Nintendo 64\",\"title\":\"Best Nintendo 64 games\"}",
+   "src": "{\"type\":\"console\",\"name\":\"Nintendo 64\",\"title\":\"Best Nintendo 64 games\",\"since\":1996,\"oneSeries\":true}",
    "cat": "Games",
    "group": "Consoles",
    "short": "Best Nintendo 64 games",
    "title": "Best Nintendo 64 games",
    "items": [
-    {
-     "id": "v21285",
-     "name": "HeXen: Beyond Heretic",
-     "note": "1995",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/0fa/0fa357fe0160e2b592a6fafff0e6683e.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/0fa/0fa357fe0160e2b592a6fafff0e6683e.jpg",
-     "wide": true
-    },
-    {
-     "id": "v54491",
-     "name": "Quake",
-     "note": "1996",
-     "img": "https://media.rawg.io/media/crop/600/400/games/3a8/3a82d7f5c90ab082fe475e28d58bee8b.jpg",
-     "img2": "https://media.rawg.io/media/games/3a8/3a82d7f5c90ab082fe475e28d58bee8b.jpg",
-     "wide": true
-    },
     {
      "id": "v54528",
      "name": "Super Mario 64",
@@ -11210,59 +11194,35 @@
      "wide": true
     },
     {
-     "id": "v14829",
-     "name": "Turok: Dinosaur Hunter",
+     "id": "v54435",
+     "name": "Mario Kart 64 (1996)",
+     "note": "1996",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/b19/b196fdca25e4df755f6fafd02df158d9.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/b19/b196fdca25e4df755f6fafd02df158d9.jpg",
+     "wide": true
+    },
+    {
+     "id": "v54520",
+     "name": "Star Fox 64 (1997)",
      "note": "1997",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/61f/61f183e3d12c7846ed6bd3c027a9fa47.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/61f/61f183e3d12c7846ed6bd3c027a9fa47.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/569/5694a091203e4d29c15a9b734f933e9c.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/569/5694a091203e4d29c15a9b734f933e9c.jpg",
      "wide": true
     },
     {
-     "id": "v54381",
-     "name": "Doom 64",
+     "id": "v54403",
+     "name": "GoldenEye 007 (1997)",
      "note": "1997",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/f7a/f7a19f45bbe8dfb2960ce167ad879d3e.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/f7a/f7a19f45bbe8dfb2960ce167ad879d3e.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/games/5a1/5a145fe3002fc988140f7f00edcb9715.jpg",
+     "img2": "https://media.rawg.io/media/games/5a1/5a145fe3002fc988140f7f00edcb9715.jpg",
      "wide": true
     },
     {
-     "id": "v54492",
-     "name": "Quake II",
+     "id": "v54379",
+     "name": "Diddy Kong Racing",
      "note": "1997",
-     "img": "https://media.rawg.io/media/crop/600/400/games/0c5/0c5fcdf04048200da14b90e0e6cfaf6b.jpg",
-     "img2": "https://media.rawg.io/media/games/0c5/0c5fcdf04048200da14b90e0e6cfaf6b.jpg",
-     "wide": true
-    },
-    {
-     "id": "v5159",
-     "name": "Resident Evil 2 (1998)",
-     "note": "1998",
-     "img": "https://media.rawg.io/media/crop/600/400/games/d64/d646810b629081cc12aec49ed9f49441.jpg",
-     "img2": "https://media.rawg.io/media/games/d64/d646810b629081cc12aec49ed9f49441.jpg",
-     "wide": true
-    },
-    {
-     "id": "v32716",
-     "name": "StarCraft",
-     "note": "1998",
-     "img": "https://media.rawg.io/media/crop/600/400/games/68a/68a77a21ec04083f3e6af62cdbed9c0a.jpg",
-     "img2": "https://media.rawg.io/media/games/68a/68a77a21ec04083f3e6af62cdbed9c0a.jpg",
-     "wide": true
-    },
-    {
-     "id": "v28532",
-     "name": "Banjo-Kazooie",
-     "note": "1998",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/f0d/f0da831778e57b58636ccaf20a7cc6e6.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/f0d/f0da831778e57b58636ccaf20a7cc6e6.jpg",
-     "wide": true
-    },
-    {
-     "id": "v10446",
-     "name": "Turok 2: Seeds of Evil",
-     "note": "1998",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/4cf/4cf1e2b4cd701605225fb443d5e84f77.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/4cf/4cf1e2b4cd701605225fb443d5e84f77.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/c06/c0604dd30811b9691c17f6c6398d9489.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/c06/c0604dd30811b9691c17f6c6398d9489.jpg",
      "wide": true
     },
     {
@@ -11274,69 +11234,93 @@
      "wide": true
     },
     {
-     "id": "v20466",
-     "name": "Worms Armageddon",
+     "id": "v53394",
+     "name": "Mario Party",
+     "note": "1998",
+     "img": "https://media.rawg.io/media/crop/600/400/games/576/576759570d5f9e67d4f1398e73a79bef.jpg",
+     "img2": "https://media.rawg.io/media/games/576/576759570d5f9e67d4f1398e73a79bef.jpg",
+     "wide": true
+    },
+    {
+     "id": "v54531",
+     "name": "Super Smash Bros. (1999)",
      "note": "1999",
-     "img": "https://media.rawg.io/media/crop/600/400/games/96a/96a48ac7487d9db9179d83170afcb16a.jpg",
-     "img2": "https://media.rawg.io/media/games/96a/96a48ac7487d9db9179d83170afcb16a.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/games/e56/e56d68182f04f90a31068da55ba91ee4.jpg",
+     "img2": "https://media.rawg.io/media/games/e56/e56d68182f04f90a31068da55ba91ee4.jpg",
      "wide": true
     },
     {
-     "id": "v25924",
-     "name": "The Legend of Zelda: Majora's Mask",
-     "note": "2000",
-     "img": "https://media.rawg.io/media/crop/600/400/games/b3c/b3c209cd49aae8a469a59b79b54dc599.jpg",
-     "img2": "https://media.rawg.io/media/games/b3c/b3c209cd49aae8a469a59b79b54dc599.jpg",
+     "id": "v23833",
+     "name": "Pokémon Snap",
+     "note": "1999",
+     "img": "https://media.rawg.io/media/crop/600/400/games/ec4/ec4be61f0f41cf1d138501330a1b54ee.jpg",
+     "img2": "https://media.rawg.io/media/games/ec4/ec4be61f0f41cf1d138501330a1b54ee.jpg",
      "wide": true
     },
     {
-     "id": "v28495",
-     "name": "Perfect Dark",
-     "note": "2000",
-     "img": "https://media.rawg.io/media/crop/600/400/games/f62/f62d090119e5ff05c59036480123fd83.jpg",
-     "img2": "https://media.rawg.io/media/games/f62/f62d090119e5ff05c59036480123fd83.jpg",
+     "id": "v54481",
+     "name": "Pokémon Stadium",
+     "note": "1999",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/67d/67da39fd51f95e3b591264a3641c8be0.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/67d/67da39fd51f95e3b591264a3641c8be0.jpg",
      "wide": true
     },
     {
-     "id": "v22900",
-     "name": "John Romero's Daikatana",
+     "id": "v54380",
+     "name": "Donkey Kong 64",
+     "note": "1999",
+     "img": "https://media.rawg.io/media/crop/600/400/games/458/4589f9727a1b8bcc0109e5a33a4ea944.jpg",
+     "img2": "https://media.rawg.io/media/games/458/4589f9727a1b8bcc0109e5a33a4ea944.jpg",
+     "wide": true
+    },
+    {
+     "id": "v54424",
+     "name": "Kirby 64: The Crystal Shards",
      "note": "2000",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/c1f/c1fd8b15793743563367688b3dd5faa6.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/c1f/c1fd8b15793743563367688b3dd5faa6.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/games/d45/d452cba755f2798e338d6b728a40c331.jpg",
+     "img2": "https://media.rawg.io/media/games/d45/d452cba755f2798e338d6b728a40c331.jpg",
+     "wide": true
+    },
+    {
+     "id": "v25178",
+     "name": "Paper Mario (2000)",
+     "note": "2000",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/062/0622bec29ae3ef0e8762a9c9f3e7b0f4.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/062/0622bec29ae3ef0e8762a9c9f3e7b0f4.jpg",
+     "wide": true
+    },
+    {
+     "id": "v54484",
+     "name": "Pokémon Stadium 2",
+     "note": "2000",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/a1a/a1a2d34e1a67aa0b499d817b79855289.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/a1a/a1a2d34e1a67aa0b499d817b79855289.jpg",
+     "wide": true
+    },
+    {
+     "id": "v54346",
+     "name": "Animal Crossing",
+     "note": "2001",
+     "img": "https://media.rawg.io/media/crop/600/400/games/9dc/9dc9fbd2c2054a3a9b7c33a906546bea.jpg",
+     "img2": "https://media.rawg.io/media/games/9dc/9dc9fbd2c2054a3a9b7c33a906546bea.jpg",
      "wide": true
     }
    ]
   },
   {
    "id": "best-super-nintendo-games",
-   "src": "{\"type\":\"console\",\"name\":\"SNES\",\"title\":\"Best Super Nintendo games\"}",
+   "src": "{\"type\":\"console\",\"name\":\"SNES\",\"title\":\"Best Super Nintendo games\",\"since\":1990,\"oneSeries\":true}",
    "cat": "Games",
    "group": "Consoles",
    "short": "Best Super Nintendo games",
    "title": "Best Super Nintendo games",
    "items": [
     {
-     "id": "v25080",
-     "name": "Super Mario Bros.",
-     "note": "1985",
-     "img": "https://media.rawg.io/media/crop/600/400/games/154/154fea9689109f26c49c6a2db6263ef9.jpg",
-     "img2": "https://media.rawg.io/media/games/154/154fea9689109f26c49c6a2db6263ef9.jpg",
-     "wide": true
-    },
-    {
-     "id": "v24030",
-     "name": "Super Mario Bros. 3",
-     "note": "1988",
-     "img": "https://media.rawg.io/media/crop/600/400/games/8f8/8f848239e24815506ff20eab31c6d6a9.jpg",
-     "img2": "https://media.rawg.io/media/games/8f8/8f848239e24815506ff20eab31c6d6a9.jpg",
-     "wide": true
-    },
-    {
-     "id": "v29391",
-     "name": "Eye of the Beholder",
+     "id": "v27168",
+     "name": "Dr. Mario",
      "note": "1990",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/a35/a357dd9b955fd12f9363c6d45fcd4f86.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/a35/a357dd9b955fd12f9363c6d45fcd4f86.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/05f/05f7d385e48f9f384cd4d496855029cd.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/05f/05f7d385e48f9f384cd4d496855029cd.jpg",
      "wide": true
     },
     {
@@ -11348,11 +11332,11 @@
      "wide": true
     },
     {
-     "id": "v29908",
-     "name": "Another World",
-     "note": "1991",
-     "img": "https://media.rawg.io/media/crop/600/400/games/b43/b43e17890809393784c90116434ee7f3.jpg",
-     "img2": "https://media.rawg.io/media/games/b43/b43e17890809393784c90116434ee7f3.jpg",
+     "id": "v24918",
+     "name": "F-Zero",
+     "note": "1990",
+     "img": "https://media.rawg.io/media/crop/600/400/games/c45/c45a1f2502a1e1c88c4e14875fceab72.jpg",
+     "img2": "https://media.rawg.io/media/games/c45/c45a1f2502a1e1c88c4e14875fceab72.jpg",
      "wide": true
     },
     {
@@ -11364,35 +11348,51 @@
      "wide": true
     },
     {
-     "id": "v4005",
-     "name": "Wolfenstein 3D",
-     "note": "1992",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/52b/52b958a7b263d4f264648b710e76a236.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/52b/52b958a7b263d4f264648b710e76a236.jpg",
-     "wide": true
-    },
-    {
-     "id": "v54285",
-     "name": "Mortal Kombat",
-     "note": "1992",
-     "img": "https://media.rawg.io/media/crop/600/400/games/e9a/e9a782a3f40f0e53ab64c7018251053e.jpg",
-     "img2": "https://media.rawg.io/media/games/e9a/e9a782a3f40f0e53ab64c7018251053e.jpg",
-     "wide": true
-    },
-    {
-     "id": "v1922",
-     "name": "FINAL FANTASY V",
-     "note": "1992",
-     "img": "https://media.rawg.io/media/crop/600/400/games/7b1/7b184215cc792ea2abf115f4e566b486.jpg",
-     "img2": "https://media.rawg.io/media/games/7b1/7b184215cc792ea2abf115f4e566b486.jpg",
-     "wide": true
-    },
-    {
-     "id": "v52884",
-     "name": "DOOM",
+     "id": "v52594",
+     "name": "Star Fox (1993)",
      "note": "1993",
-     "img": "https://media.rawg.io/media/crop/600/400/games/47b/47b50d880be8453bf9cda6e5c007bc26.jpg",
-     "img2": "https://media.rawg.io/media/games/47b/47b50d880be8453bf9cda6e5c007bc26.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/games/618/61863759abf17a7f94fa6ededb6f178b.jpg",
+     "img2": "https://media.rawg.io/media/games/618/61863759abf17a7f94fa6ededb6f178b.jpg",
+     "wide": true
+    },
+    {
+     "id": "v57518",
+     "name": "Super Mario All-Stars (1993)",
+     "note": "1993",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/4a1/4a1b357e73d20695ec71461cab5a5073.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/4a1/4a1b357e73d20695ec71461cab5a5073.jpg",
+     "wide": true
+    },
+    {
+     "id": "v57475",
+     "name": "Secret of Mana (1993)",
+     "note": "1993",
+     "img": "https://media.rawg.io/media/crop/600/400/games/187/187c4033702cc8e5ba106820a4c39a4b.jpg",
+     "img2": "https://media.rawg.io/media/games/187/187c4033702cc8e5ba106820a4c39a4b.jpg",
+     "wide": true
+    },
+    {
+     "id": "v24478",
+     "name": "Super Mario Kart",
+     "note": "1993",
+     "img": "https://media.rawg.io/media/crop/600/400/games/4da/4da63441cb94d7adb4d954871b65db30.jpg",
+     "img2": "https://media.rawg.io/media/games/4da/4da63441cb94d7adb4d954871b65db30.jpg",
+     "wide": true
+    },
+    {
+     "id": "v54097",
+     "name": "Teenage Mutant Ninja Turtles: Tournament Fighters",
+     "note": "1993",
+     "img": "https://media.rawg.io/media/crop/600/400/games/bee/bee5e50dfa4d68102df34d1546728f75.jpg",
+     "img2": "https://media.rawg.io/media/games/bee/bee5e50dfa4d68102df34d1546728f75.jpg",
+     "wide": true
+    },
+    {
+     "id": "v53714",
+     "name": "Battletoads & Double Dragon",
+     "note": "1993",
+     "img": "https://media.rawg.io/media/crop/600/400/games/5d9/5d964c81ef84a680319ae3860ebe8463.jpg",
+     "img2": "https://media.rawg.io/media/games/5d9/5d964c81ef84a680319ae3860ebe8463.jpg",
      "wide": true
     },
     {
@@ -11404,127 +11404,47 @@
      "wide": true
     },
     {
-     "id": "v1063",
-     "name": "FINAL FANTASY VI",
+     "id": "v24079",
+     "name": "EarthBound",
      "note": "1994",
-     "img": "https://media.rawg.io/media/crop/600/400/games/98c/98c87b286cd2a2ba942167df384a9bd3.jpg",
-     "img2": "https://media.rawg.io/media/games/98c/98c87b286cd2a2ba942167df384a9bd3.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/games/f0d/f0d85490daf02a671ed556ef2011eaab.jpg",
+     "img2": "https://media.rawg.io/media/games/f0d/f0d85490daf02a671ed556ef2011eaab.jpg",
      "wide": true
     },
     {
-     "id": "v25663",
-     "name": "Earthworm Jim",
+     "id": "v27571",
+     "name": "Donkey Kong Country",
      "note": "1994",
-     "img": "https://media.rawg.io/media/crop/600/400/games/360/360f00cbb4b4364b9af0e7ff8e397b65.jpg",
-     "img2": "https://media.rawg.io/media/games/360/360f00cbb4b4364b9af0e7ff8e397b65.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/6df/6df71f3ff0f6d6bbac306cb9adf935ee.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/6df/6df71f3ff0f6d6bbac306cb9adf935ee.jpg",
      "wide": true
     },
     {
-     "id": "v5383",
-     "name": "Worms",
-     "note": "1995",
-     "img": "https://media.rawg.io/media/crop/600/400/games/8fc/8fcc2ff5c7bcdb58199b1a4326817ceb.jpg",
-     "img2": "https://media.rawg.io/media/games/8fc/8fcc2ff5c7bcdb58199b1a4326817ceb.jpg",
+     "id": "v56949",
+     "name": "Boogerman: A Pick and Flick Adventure",
+     "note": "1996",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/2c5/2c5f76b7b7f79dccf9957b11cc350745.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/2c5/2c5f76b7b7f79dccf9957b11cc350745.jpg",
      "wide": true
     },
     {
-     "id": "v52800",
-     "name": "Chrono Trigger",
-     "note": "1995",
-     "img": "https://media.rawg.io/media/crop/600/400/games/ae4/ae404f4e0f504131199703c09111bb78.jpg",
-     "img2": "https://media.rawg.io/media/games/ae4/ae404f4e0f504131199703c09111bb78.jpg",
+     "id": "v25557",
+     "name": "Super Mario RPG: Legend of the Seven Stars",
+     "note": "1996",
+     "img": "https://media.rawg.io/media/crop/600/400/games/384/3848abcd66c93552e46647c3db985f30.jpg",
+     "img2": "https://media.rawg.io/media/games/384/3848abcd66c93552e46647c3db985f30.jpg",
      "wide": true
     }
    ]
   },
   {
    "id": "best-nintendo-switch-games",
-   "src": "{\"type\":\"console\",\"name\":\"Nintendo Switch\",\"title\":\"Best Nintendo Switch games\",\"order\":\"-metacritic\"}",
+   "src": "{\"type\":\"console\",\"name\":\"Nintendo Switch\",\"title\":\"Best Nintendo Switch games\",\"order\":\"-metacritic\",\"since\":2017,\"oneSeries\":true}",
    "cat": "Games",
    "group": "Consoles",
    "short": "Best Nintendo Switch games",
    "title": "Best Nintendo Switch games",
    "items": [
-    {
-     "id": "v25096",
-     "name": "The Legend of Zelda: A Link to the Past",
-     "note": "1991",
-     "img": "https://media.rawg.io/media/crop/600/400/games/087/08727beb32c364d30e8b2a1aa8595f8e.jpg",
-     "img2": "https://media.rawg.io/media/games/087/08727beb32c364d30e8b2a1aa8595f8e.jpg",
-     "wide": true
-    },
-    {
-     "id": "v54491",
-     "name": "Quake",
-     "note": "1996",
-     "img": "https://media.rawg.io/media/crop/600/400/games/3a8/3a82d7f5c90ab082fe475e28d58bee8b.jpg",
-     "img2": "https://media.rawg.io/media/games/3a8/3a82d7f5c90ab082fe475e28d58bee8b.jpg",
-     "wide": true
-    },
-    {
-     "id": "v25097",
-     "name": "The Legend of Zelda: Ocarina of Time (1998)",
-     "note": "1998",
-     "img": "https://media.rawg.io/media/crop/600/400/games/3a0/3a0c8e9ed3a711c542218831b893a0fa.jpg",
-     "img2": "https://media.rawg.io/media/games/3a0/3a0c8e9ed3a711c542218831b893a0fa.jpg",
-     "wide": true
-    },
-    {
-     "id": "v25924",
-     "name": "The Legend of Zelda: Majora's Mask",
-     "note": "2000",
-     "img": "https://media.rawg.io/media/crop/600/400/games/b3c/b3c209cd49aae8a469a59b79b54dc599.jpg",
-     "img2": "https://media.rawg.io/media/games/b3c/b3c209cd49aae8a469a59b79b54dc599.jpg",
-     "wide": true
-    },
-    {
-     "id": "v27024",
-     "name": "Super Mario Galaxy",
-     "note": "2007",
-     "img": "https://media.rawg.io/media/crop/600/400/games/936/936f0ffac0b3c9f5c8d185f610ed2631.jpg",
-     "img2": "https://media.rawg.io/media/games/936/936f0ffac0b3c9f5c8d185f610ed2631.jpg",
-     "wide": true
-    },
-    {
-     "id": "v4544",
-     "name": "Red Dead Redemption",
-     "note": "2010",
-     "img": "https://media.rawg.io/media/crop/600/400/games/686/686909717c3aa01518bc42ae2bf4259e.jpg",
-     "img2": "https://media.rawg.io/media/games/686/686909717c3aa01518bc42ae2bf4259e.jpg",
-     "wide": true
-    },
-    {
-     "id": "v27036",
-     "name": "Super Mario Galaxy 2",
-     "note": "2010",
-     "img": "https://media.rawg.io/media/crop/600/400/games/578/578ff52303d0e2563e28a4149f1485c2.jpeg",
-     "img2": "https://media.rawg.io/media/games/578/578ff52303d0e2563e28a4149f1485c2.jpeg",
-     "wide": true
-    },
-    {
-     "id": "v28623",
-     "name": "Batman: Arkham City",
-     "note": "2011",
-     "img": "https://media.rawg.io/media/crop/600/400/games/b5a/b5a1226bfd971284a735a4a0969086b3.jpg",
-     "img2": "https://media.rawg.io/media/games/b5a/b5a1226bfd971284a735a4a0969086b3.jpg",
-     "wide": true
-    },
-    {
-     "id": "v5679",
-     "name": "The Elder Scrolls V: Skyrim",
-     "note": "2011",
-     "img": "https://media.rawg.io/media/crop/600/400/games/7cf/7cfc9220b401b7a300e409e539c9afd5.jpg",
-     "img2": "https://media.rawg.io/media/games/7cf/7cfc9220b401b7a300e409e539c9afd5.jpg",
-     "wide": true
-    },
-    {
-     "id": "v4062",
-     "name": "BioShock Infinite",
-     "note": "2013",
-     "img": "https://media.rawg.io/media/crop/600/400/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg",
-     "img2": "https://media.rawg.io/media/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg",
-     "wide": true
-    },
     {
      "id": "v22511",
      "name": "The Legend of Zelda: Breath of the Wild",
@@ -11534,11 +11454,11 @@
      "wide": true
     },
     {
-     "id": "v10073",
-     "name": "Divinity: Original Sin 2",
+     "id": "v23165",
+     "name": "Mario Kart 8 Deluxe",
      "note": "2017",
-     "img": "https://media.rawg.io/media/crop/600/400/games/424/424facd40f4eb1f2794fe4b4bb28a277.jpg",
-     "img2": "https://media.rawg.io/media/games/424/424facd40f4eb1f2794fe4b4bb28a277.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/games/6f8/6f846e941c78cfbabe53cd67e55ced83.jpg",
+     "img2": "https://media.rawg.io/media/games/6f8/6f846e941c78cfbabe53cd67e55ced83.jpg",
      "wide": true
     },
     {
@@ -11550,19 +11470,91 @@
      "wide": true
     },
     {
-     "id": "v59199",
-     "name": "Divinity: Original Sin 2 - Definitive Edition",
+     "id": "v58829",
+     "name": "Super Smash Bros. Ultimate",
      "note": "2018",
-     "img": "https://media.rawg.io/media/crop/600/400/games/cd2/cd2a1a360839002bceadc5a8b3c7dbf7.jpg",
-     "img2": "https://media.rawg.io/media/games/cd2/cd2a1a360839002bceadc5a8b3c7dbf7.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/games/9f3/9f3c513b301d8d7250a64dd7e73c62df.jpg",
+     "img2": "https://media.rawg.io/media/games/9f3/9f3c513b301d8d7250a64dd7e73c62df.jpg",
      "wide": true
     },
     {
-     "id": "v327239",
-     "name": "The Legend of Zelda: Tears of the Kingdom",
+     "id": "v292840",
+     "name": "Super Mario Maker 2",
+     "note": "2019",
+     "img": "https://media.rawg.io/media/crop/600/400/games/25f/25f1b4a7b6ed811a5f6e34e43d6cc550.jpg",
+     "img2": "https://media.rawg.io/media/games/25f/25f1b4a7b6ed811a5f6e34e43d6cc550.jpg",
+     "wide": true
+    },
+    {
+     "id": "v246478",
+     "name": "Fire Emblem: Three Houses",
+     "note": "2019",
+     "img": "https://media.rawg.io/media/crop/600/400/games/530/53081dbd5003f990fa5312404ac3d71a.jpg",
+     "img2": "https://media.rawg.io/media/games/530/53081dbd5003f990fa5312404ac3d71a.jpg",
+     "wide": true
+    },
+    {
+     "id": "v292843",
+     "name": "Astral Chain",
+     "note": "2019",
+     "img": "https://media.rawg.io/media/crop/600/400/games/75b/75b91d05160c819fa6bbafe920548300.jpg",
+     "img2": "https://media.rawg.io/media/games/75b/75b91d05160c819fa6bbafe920548300.jpg",
+     "wide": true
+    },
+    {
+     "id": "v292842",
+     "name": "The Legend of Zelda: Link's Awakening (2019)",
+     "note": "2019",
+     "img": "https://media.rawg.io/media/crop/600/400/games/1bb/1bb38f1354db6596ccd6bdcb4a7f6cbc.jpg",
+     "img2": "https://media.rawg.io/media/games/1bb/1bb38f1354db6596ccd6bdcb4a7f6cbc.jpg",
+     "wide": true
+    },
+    {
+     "id": "v236697",
+     "name": "Luigi's Mansion 3",
+     "note": "2019",
+     "img": "https://media.rawg.io/media/crop/600/400/games/3d9/3d972802b9ee793098b73ecf676b687e.jpeg",
+     "img2": "https://media.rawg.io/media/games/3d9/3d972802b9ee793098b73ecf676b687e.jpeg",
+     "wide": true
+    },
+    {
+     "id": "v421698",
+     "name": "Animal Crossing: New Horizons",
+     "note": "2020",
+     "img": "https://media.rawg.io/media/crop/600/400/games/42f/42fe1abd4d7c11ca92d93a0fb0f8662b.jpg",
+     "img2": "https://media.rawg.io/media/games/42f/42fe1abd4d7c11ca92d93a0fb0f8662b.jpg",
+     "wide": true
+    },
+    {
+     "id": "v371831",
+     "name": "Xenoblade Chronicles: Definitive Edition",
+     "note": "2020",
+     "img": "https://media.rawg.io/media/crop/600/400/games/773/7739920af75d01f6a3b7e76a21d1633a.jpg",
+     "img2": "https://media.rawg.io/media/games/773/7739920af75d01f6a3b7e76a21d1633a.jpg",
+     "wide": true
+    },
+    {
+     "id": "v487916",
+     "name": "Super Mario 3D World + Bowser’s Fury",
+     "note": "2021",
+     "img": "https://media.rawg.io/media/crop/600/400/games/cd2/cd22f0dcf8f080086c60f77eed7a8a93.jpg",
+     "img2": "https://media.rawg.io/media/games/cd2/cd22f0dcf8f080086c60f77eed7a8a93.jpg",
+     "wide": true
+    },
+    {
+     "id": "v50737",
+     "name": "Bayonetta 3",
+     "note": "2022",
+     "img": "https://media.rawg.io/media/crop/600/400/games/c30/c30ac50cb13096f5402250bf666a321c.jpg",
+     "img2": "https://media.rawg.io/media/games/c30/c30ac50cb13096f5402250bf666a321c.jpg",
+     "wide": true
+    },
+    {
+     "id": "v335292",
+     "name": "Pikmin 4",
      "note": "2023",
-     "img": "https://media.rawg.io/media/crop/600/400/games/556/55684bfd048706f4266d331d70050b37.jpg",
-     "img2": "https://media.rawg.io/media/games/556/55684bfd048706f4266d331d70050b37.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/games/274/2740b879e28df2ac3cdbc929a553863d.jpg",
+     "img2": "https://media.rawg.io/media/games/274/2740b879e28df2ac3cdbc929a553863d.jpg",
      "wide": true
     }
    ]
@@ -11694,6 +11686,12 @@
      "poster": "/bh3HnGPQuditlNI1yVSCmIzs6xE.jpg"
     },
     {
+     "id": "p26086",
+     "name": "Daniel Jackson",
+     "note": "Michael Shanks",
+     "poster": "/4YkOrSUmfKljqTMwGIo50oviKe1.jpg"
+    },
+    {
      "id": "p26085",
      "name": "Jack O'Neill",
      "note": "Richard Dean Anderson",
@@ -11731,7 +11729,7 @@
     },
     {
      "id": "p385220",
-     "name": "Fireman Opening Station Door",
+     "name": "Sylvester Siler",
      "note": "Dan Shea",
      "poster": null
     },
@@ -11746,12 +11744,6 @@
      "name": "Jonas Quinn",
      "note": "Corin Nemec",
      "poster": "/vndALqWdbdM4IMMU6CTmOCMjzEA.jpg"
-    },
-    {
-     "id": "p34842",
-     "name": "Bra'tac",
-     "note": "Tony Amendola",
-     "poster": "/eGgQGEwO2vCqhFcmDfyyjctmWcl.jpg"
     }
    ]
   },
