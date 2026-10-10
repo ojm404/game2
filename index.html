@@ -218,7 +218,7 @@
     <div class="list-name" id="listName"></div>
   </header>
   <div id="app"></div>
-  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive.<span class="build">Build 2026-10-10.5</span></footer>
+  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive. Game data and artwork from RAWG.<span class="build">Build 2026-10-10.6</span></footer>
 </main>
 
 <script>
@@ -374,7 +374,7 @@ fetch(LISTS_URL).then(r => r.ok ? r.json() : null).then(d => {
 }).catch(() => {});
 
 // Lists are grouped into categories. build-lists.js sets "cat" on each list; older files are sorted by their title.
-const CAT_ORDER = ["Music", "Franchises", "Actors & directors", "Genres", "TV", "Movies by year"];
+const CAT_ORDER = ["Music", "Franchises", "Actors & directors", "Genres", "TV", "Movies by year", "Awards", "Games"];
 let pickCat = "Music";
 function catOf(l){
   if (l.cat) return l.cat;
@@ -728,10 +728,12 @@ function statusView(opp, done){
 
 // TMDB items carry a poster path; music items carry a full cover image address.
 const hasImg = a => !!(a.img || a.poster);
-const imgSrc = (a, base) => esc(a.img || base + a.poster);
+const imgSrc = (a, base) => esc(a.img || base + a.poster) + (a.img2 && a.img2 !== a.img ? `" data-alt="${esc(a.img2)}` : "");
 // Music items with no cover art get a same-sized square with a note, so rows stay even.
 const NOTE = '<span class="ph" aria-hidden="true">\u266A</span>';
 function noArt(img){
+  // Game artwork has a second, full-size address to try before giving up.
+  if (img.dataset.alt) { const u = img.dataset.alt; delete img.dataset.alt; img.src = u; return; }
   const music = img.classList.contains("sq") || img.closest(".tile.sq");
   if (!music) { img.remove(); return; }
   const s = document.createElement("span"); s.className = "ph"; s.setAttribute("aria-hidden", "true"); s.textContent = "\u266A";
