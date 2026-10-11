@@ -138,7 +138,7 @@ const DEFS = [
   { type: "tvgenre",    name: "Sci-Fi & Fantasy", title: "Hit sci-fi TV shows" },
   // Books (from Open Library, no key needed).
   //   "books" is a hand-picked list. A pick is ["Title", "Author"], or ["Name shown", "Author", "title to search for"]
-  //           when the tile should show a series name but use its first book's cover.
+  //           when the tile should show a series name but use its first book's cover. Add a year (a number) to show it on the tile.
   //   "authors" is a hand-picked list of writers, with their Open Library photo where there is one.
   { type: "books", group: "Popular", title: "BookTok favourites", picks: [
     ["It Ends with Us", "Colleen Hoover"], ["Verity", "Colleen Hoover"], ["The Seven Husbands of Evelyn Hugo", "Taylor Jenkins Reid"],
@@ -146,34 +146,56 @@ const DEFS = [
     ["The Love Hypothesis", "Ali Hazelwood"], ["They Both Die at the End", "Adam Silvera"], ["We Were Liars", "E. Lockhart"],
     ["The Invisible Life of Addie LaRue", "V. E. Schwab"], ["Icebreaker", "Hannah Grace"], ["Beach Read", "Emily Henry"],
     ["The Cruel Prince", "Holly Black"], ["Red, White & Royal Blue", "Casey McQuiston"], ["Six of Crows", "Leigh Bardugo"] ] },
-  { type: "books", group: "Genres", title: "Murder mysteries", picks: [
-    ["The Hound of the Baskervilles", "Arthur Conan Doyle"], ["The Maltese Falcon", "Dashiell Hammett"], ["Murder on the Orient Express", "Agatha Christie"],
-    ["And Then There Were None", "Agatha Christie"], ["The Big Sleep", "Raymond Chandler"], ["The Name of the Rose", "Umberto Eco"],
+  // Genre lists come in two eras so a round is either all classics or all recent books, not a mix.
+  { type: "books", group: "Genres", title: "Murder mysteries: classics", picks: [
+    ["The Murders in the Rue Morgue", "Edgar Allan Poe"], ["The Moonstone", "Wilkie Collins"], ["The Hound of the Baskervilles", "Arthur Conan Doyle"],
+    ["The Murder of Roger Ackroyd", "Agatha Christie"], ["The Maltese Falcon", "Dashiell Hammett"], ["Murder on the Orient Express", "Agatha Christie"],
+    ["Gaudy Night", "Dorothy L. Sayers"], ["Death on the Nile", "Agatha Christie"], ["And Then There Were None", "Agatha Christie"],
+    ["The Big Sleep", "Raymond Chandler"], ["The Daughter of Time", "Josephine Tey"], ["Cover Her Face", "P. D. James"],
+    ["The Name of the Rose", "Umberto Eco"] ] },
+  { type: "books", group: "Genres", title: "Murder mysteries: modern", picks: [
     ["The Girl with the Dragon Tattoo", "Stieg Larsson"], ["Still Life", "Louise Penny"], ["In the Woods", "Tana French"],
     ["Gone Girl", "Gillian Flynn"], ["The Cuckoo's Calling", "Robert Galbraith"], ["Big Little Lies", "Liane Moriarty"],
-    ["A Good Girl's Guide to Murder", "Holly Jackson"], ["The Silent Patient", "Alex Michaelides"], ["The Thursday Murder Club", "Richard Osman"] ] },
-  { type: "books", group: "Genres", title: "Sci-fi books and series", picks: [
-    ["Frankenstein", "Mary Shelley"], ["Foundation", "Isaac Asimov"], ["Fahrenheit 451", "Ray Bradbury"], ["Dune", "Frank Herbert"],
-    ["The Left Hand of Darkness", "Ursula K. Le Guin"], ["The Hitchhiker's Guide to the Galaxy", "Douglas Adams"], ["Kindred", "Octavia E. Butler"],
-    ["Neuromancer", "William Gibson"], ["Ender's Game", "Orson Scott Card"], ["Hyperion", "Dan Simmons"], ["Snow Crash", "Neal Stephenson"],
-    ["The Three-Body Problem", "Cixin Liu"], ["The Expanse", "James S. A. Corey", "Leviathan Wakes"], ["The Martian", "Andy Weir"],
-    ["Project Hail Mary", "Andy Weir"] ] },
-  { type: "books", group: "Genres", title: "Fantasy books and series", picks: [
+    ["The Woman in Cabin 10", "Ruth Ware"], ["Magpie Murders", "Anthony Horowitz"], ["One of Us Is Lying", "Karen M. McManus"],
+    ["A Good Girl's Guide to Murder", "Holly Jackson"], ["The Silent Patient", "Alex Michaelides"], ["The Guest List", "Lucy Foley"],
+    ["The Thursday Murder Club", "Richard Osman"], ["The Maid", "Nita Prose"], ["Everyone in My Family Has Killed Someone", "Benjamin Stevenson"] ] },
+  { type: "books", group: "Genres", title: "Sci-fi: classics", picks: [
+    ["Frankenstein", "Mary Shelley"], ["The War of the Worlds", "H. G. Wells"], ["Brave New World", "Aldous Huxley"],
+    ["Foundation", "Isaac Asimov"], ["Fahrenheit 451", "Ray Bradbury"], ["Dune", "Frank Herbert"],
+    ["Do Androids Dream of Electric Sheep?", "Philip K. Dick"], ["The Left Hand of Darkness", "Ursula K. Le Guin"],
+    ["Slaughterhouse-Five", "Kurt Vonnegut"], ["The Hitchhiker's Guide to the Galaxy", "Douglas Adams"], ["Kindred", "Octavia E. Butler"],
+    ["Neuromancer", "William Gibson"], ["Ender's Game", "Orson Scott Card"], ["Hyperion", "Dan Simmons"], ["Snow Crash", "Neal Stephenson"] ] },
+  { type: "books", group: "Genres", title: "Sci-fi: modern", picks: [
+    ["Old Man's War", "John Scalzi"], ["The Three-Body Problem", "Cixin Liu"], ["The Expanse", "James S. A. Corey", "Leviathan Wakes"],
+    ["Ready Player One", "Ernest Cline"], ["The Martian", "Andy Weir"], ["Ancillary Justice", "Ann Leckie"], ["Red Rising", "Pierce Brown"],
+    ["Station Eleven", "Emily St. John Mandel"], ["Annihilation", "Jeff VanderMeer"],
+    ["The Long Way to a Small, Angry Planet", "Becky Chambers"], ["Children of Time", "Adrian Tchaikovsky"], ["Dark Matter", "Blake Crouch"],
+    ["The Murderbot Diaries", "Martha Wells", "All Systems Red"], ["Klara and the Sun", "Kazuo Ishiguro"], ["Project Hail Mary", "Andy Weir"] ] },
+  { type: "books", group: "Genres", title: "Fantasy: classics", picks: [
     ["The Hobbit", "J. R. R. Tolkien"], ["The Chronicles of Narnia", "C. S. Lewis", "The Lion, the Witch and the Wardrobe"],
-    ["The Lord of the Rings", "J. R. R. Tolkien", "The Fellowship of the Ring"], ["Earthsea", "Ursula K. Le Guin", "A Wizard of Earthsea"],
-    ["Discworld", "Terry Pratchett", "The Colour of Magic"], ["The Wheel of Time", "Robert Jordan", "The Eye of the World"],
-    ["A Song of Ice and Fire", "George R. R. Martin", "A Game of Thrones"], ["Harry Potter", "J. K. Rowling", "Harry Potter and the Philosopher's Stone"],
-    ["American Gods", "Neil Gaiman"], ["Mistborn", "Brandon Sanderson", "Mistborn: The Final Empire"],
-    ["The Kingkiller Chronicle", "Patrick Rothfuss", "The Name of the Wind"], ["The Stormlight Archive", "Brandon Sanderson", "The Way of Kings"],
-    ["The Broken Earth", "N. K. Jemisin", "The Fifth Season"], ["A Court of Thorns and Roses", "Sarah J. Maas"],
-    ["The Empyrean", "Rebecca Yarros", "Fourth Wing"] ] },
-  { type: "books", group: "Genres", title: "Poetry books", picks: [   // one book per poet
+    ["The Lord of the Rings", "J. R. R. Tolkien", "The Fellowship of the Ring"], ["The Once and Future King", "T. H. White"],
+    ["Earthsea", "Ursula K. Le Guin", "A Wizard of Earthsea"], ["The Last Unicorn", "Peter S. Beagle"], ["The Princess Bride", "William Goldman"],
+    ["The Belgariad", "David Eddings", "Pawn of Prophecy"], ["Discworld", "Terry Pratchett", "The Colour of Magic"],
+    ["The Wheel of Time", "Robert Jordan", "The Eye of the World"], ["The Farseer Trilogy", "Robin Hobb", "Assassin's Apprentice"],
+    ["His Dark Materials", "Philip Pullman", "Northern Lights"], ["A Song of Ice and Fire", "George R. R. Martin", "A Game of Thrones"],
+    ["Harry Potter", "J. K. Rowling", "Harry Potter and the Philosopher's Stone"] ] },
+  { type: "books", group: "Genres", title: "Fantasy: modern", picks: [
+    ["American Gods", "Neil Gaiman"], ["Jonathan Strange & Mr Norrell", "Susanna Clarke"], ["Mistborn", "Brandon Sanderson", "Mistborn: The Final Empire"],
+    ["The Lies of Locke Lamora", "Scott Lynch"], ["The Kingkiller Chronicle", "Patrick Rothfuss", "The Name of the Wind"],
+    ["The Stormlight Archive", "Brandon Sanderson", "The Way of Kings"], ["The Night Circus", "Erin Morgenstern"],
+    ["Throne of Glass", "Sarah J. Maas"], ["Six of Crows", "Leigh Bardugo"], ["A Court of Thorns and Roses", "Sarah J. Maas"],
+    ["The Broken Earth", "N. K. Jemisin", "The Fifth Season"], ["The Poppy War", "R. F. Kuang"],
+    ["The Priory of the Orange Tree", "Samantha Shannon"], ["Legends & Lattes", "Travis Baldree"], ["The Empyrean", "Rebecca Yarros", "Fourth Wing"] ] },
+  { type: "books", group: "Genres", title: "Poetry: classics", picks: [   // one book per poet
     ["Paradise Lost", "John Milton"], ["Songs of Innocence and of Experience", "William Blake"], ["Leaves of Grass", "Walt Whitman"],
-    ["The Complete Poems of Emily Dickinson", "Emily Dickinson"], ["The Waste Land", "T. S. Eliot"],
-    ["Twenty Love Poems and a Song of Despair", "Pablo Neruda"], ["The Collected Poems of Langston Hughes", "Langston Hughes"],
-    ["Howl and Other Poems", "Allen Ginsberg"], ["Ariel", "Sylvia Plath"], ["Where the Sidewalk Ends", "Shel Silverstein"],
-    ["And Still I Rise", "Maya Angelou"], ["Citizen: An American Lyric", "Claudia Rankine"], ["Milk and Honey", "Rupi Kaur"],
-    ["Night Sky with Exit Wounds", "Ocean Vuong"], ["Devotions", "Mary Oliver"] ] },
+    ["The Complete Poems of Emily Dickinson", "Emily Dickinson"], ["North of Boston", "Robert Frost"], ["The Waste Land", "T. S. Eliot"],
+    ["The Tower", "W. B. Yeats"], ["Twenty Love Poems and a Song of Despair", "Pablo Neruda"], ["The Weary Blues", "Langston Hughes"],
+    ["Howl and Other Poems", "Allen Ginsberg"], ["Ariel", "Sylvia Plath"], ["And Still I Rise", "Maya Angelou"] ] },
+  { type: "books", group: "Genres", title: "Poetry: modern", picks: [     // one book per poet
+    ["Sailing Alone Around the Room", "Billy Collins"], ["Love & Misadventure", "Lang Leav"], ["Citizen: An American Lyric", "Claudia Rankine"],
+    ["Milk and Honey", "Rupi Kaur"], ["Night Sky with Exit Wounds", "Ocean Vuong"], ["The Princess Saves Herself in This One", "Amanda Lovelace"],
+    ["Love Her Wild", "Atticus"], ["Don't Call Us Dead", "Danez Smith"], ["Devotions", "Mary Oliver"], ["The Carrying", "Ada Limón"],
+    ["Call Us What We Carry", "Amanda Gorman"], ["Bless the Daughter Raised by a Voice in Her Head", "Warsan Shire"] ] },
   { type: "books", group: "Genres", title: "Graphic novels and series", picks: [
     ["Maus", "Art Spiegelman"], ["Watchmen", "Alan Moore"], ["Batman: The Dark Knight Returns", "Frank Miller"], ["V for Vendetta", "Alan Moore"],
     ["The Sandman", "Neil Gaiman", "The Sandman: Preludes & Nocturnes"], ["Bone", "Jeff Smith", "Bone: Out from Boneville"],
@@ -181,20 +203,23 @@ const DEFS = [
     ["Scott Pilgrim", "Bryan Lee O'Malley", "Scott Pilgrim's Precious Little Life"], ["Fun Home", "Alison Bechdel"],
     ["American Born Chinese", "Gene Luen Yang"], ["Smile", "Raina Telgemeier"], ["Saga", "Brian K. Vaughan", "Saga, Volume 1"],
     ["Nimona", "ND Stevenson"], ["Heartstopper", "Alice Oseman", "Heartstopper: Volume One"] ] },
-  { type: "books", group: "Romance", title: "Hockey and skating romances", picks: [
-    ["Pucked", "Helena Hunting"], ["The Deal", "Elle Kennedy"], ["Him", "Sarina Bowen"], ["From Lukov with Love", "Mariana Zapata"],
-    ["Check, Please!", "Ngozi Ukazu", "Check, Please! Book 1: #Hockey"], ["Heated Rivalry", "Rachel Reid"], ["Consider Me", "Becka Mack"],
-    ["Icebreaker", "Hannah Grace"], ["Mile High", "Liz Tomforde"], ["Pucking Around", "Emily Rath"], ["Behind the Net", "Stephanie Archer"],
-    ["Collide", "Bal Khabra"] ] },
+  // Recent hockey romances in the vein of Heated Rivalry. The number is the publication year shown on the tile.
+  { type: "books", group: "Romance", title: "Hockey romances", picks: [
+    ["Him", "Sarina Bowen", 2015], ["The Deal", "Elle Kennedy", 2015], ["Game Changer", "Rachel Reid", 2018], ["Heated Rivalry", "Rachel Reid", 2019],
+    ["Tough Guy", "Rachel Reid", 2020], ["Common Goal", "Rachel Reid", 2020], ["Role Model", "Rachel Reid", 2021], ["Season's Change", "Cait Nary", 2021],
+    ["The Long Game", "Rachel Reid", 2022], ["Icebreaker", "Hannah Grace", 2022], ["Mile High", "Liz Tomforde", 2022],
+    ["Pucking Around", "Emily Rath", 2023], ["Time to Shine", "Rachel Reid", 2023], ["Delay of Game", "Ari Baran", 2023],
+    ["Behind the Net", "Stephanie Archer", 2023], ["Collide", "Bal Khabra", 2024] ] },
   { type: "names", cat: "Books", group: "Romance", title: "Romance tropes", picks: [
     "Enemies to lovers", "Friends to lovers", "Fake dating", "Forced proximity", "Only one bed", "Grumpy and sunshine", "Second chance",
     "Slow burn", "Forbidden love", "Love triangle", "Marriage of convenience", "Brother's best friend", "Workplace romance",
     "Secret royal", "He falls first" ] },
   { type: "books", group: "Young adult", title: "YA standalone favourites", short: "Standalone favourites", picks: [
-    ["The Outsiders", "S. E. Hinton"], ["Speak", "Laurie Halse Anderson"], ["The Perks of Being a Wallflower", "Stephen Chbosky"],
+    ["The Perks of Being a Wallflower", "Stephen Chbosky"],
     ["Looking for Alaska", "John Green"], ["The Book Thief", "Markus Zusak"], ["Thirteen Reasons Why", "Jay Asher"],
     ["The Fault in Our Stars", "John Green"], ["Eleanor & Park", "Rainbow Rowell"], ["Fangirl", "Rainbow Rowell"],
     ["We Were Liars", "E. Lockhart"], ["I'll Give You the Sun", "Jandy Nelson"], ["Everything, Everything", "Nicola Yoon"],
+    ["The Sun Is Also a Star", "Nicola Yoon"], ["Radio Silence", "Alice Oseman"],
     ["The Hate U Give", "Angie Thomas"], ["They Both Die at the End", "Adam Silvera"], ["Turtles All the Way Down", "John Green"] ] },
   { type: "books", group: "Young adult", title: "YA series favourites", short: "Series favourites", picks: [
     ["His Dark Materials", "Philip Pullman", "Northern Lights"], ["Harry Potter", "J. K. Rowling", "Harry Potter and the Philosopher's Stone"],
@@ -300,9 +325,10 @@ const DEFS = [
   { type: "cast",       name: "Friends" },
   { type: "cast",       name: "Bridgerton" },
   //   photos: false leaves the actor photos off, for animated shows where the picture would be the voice actor.
-  { type: "cast",       name: "Avatar: The Last Airbender", year: 2005, photos: false },
-  { type: "cast",       name: "The Legend of Korra", photos: false },
-  { type: "names", cat: "TV", group: "Avatar: The Last Airbender", title: "Avatar universe bending abilities", short: "Bending abilities", picks: [
+  //   group / short put a list in a shared submenu under a different label, here one "Avatar universe" menu for both shows.
+  { type: "cast",       name: "Avatar: The Last Airbender", year: 2005, photos: false, group: "Avatar universe", short: "The Last Airbender characters" },
+  { type: "cast",       name: "The Legend of Korra", photos: false, group: "Avatar universe", short: "The Legend of Korra characters" },
+  { type: "names", cat: "TV", group: "Avatar universe", title: "Avatar universe bending abilities", short: "Bending abilities", picks: [
     "Waterbending", "Earthbending", "Firebending", "Airbending", "Metalbending", "Lightning generation", "Bloodbending", "Healing",
     "Lavabending", "Sandbending", "Plantbending", "Combustionbending", "Energybending", "Spirit projection", "Flight" ] },
   // seasons can be "all", one number (season: 5), or a few (seasons: [1, 2, 3]). Each season becomes its own list.
@@ -408,11 +434,15 @@ async function openLibrary(path, params = {}) {
   if (!res.ok) throw new Error(`Open Library ${res.status} on ${path}`);
   return res.json();
 }
-// Finds a book by title and author and returns the best-known version that has a cover.
+// Finds a book by title and author. Only accepts a result credited to that author, and prefers an exact title match,
+// so a different book that happens to share the title is never used. Returns null when nothing fits.
 async function findBook(title, author) {
-  const r = await openLibrary("/search.json", { title, author, limit: 10, fields: "key,title,author_name,cover_i,first_publish_year,edition_count" });
-  const docs = (r.docs || []).sort((a, b) => (b.edition_count || 0) - (a.edition_count || 0));
-  return docs.find(d => d.cover_i) || docs[0] || null;
+  const r = await openLibrary("/search.json", { title, author, limit: 20, fields: "key,title,author_name,cover_i,edition_count" });
+  const surname = plain(author).split(" ").pop();
+  const byAuthor = (r.docs || []).filter(d => (d.author_name || []).some(n => plain(n).split(" ").includes(surname)));
+  const exact = byAuthor.filter(d => plain(d.title) === plain(title));
+  const pool = (exact.length ? exact : byAuthor).sort((a, b) => (b.edition_count || 0) - (a.edition_count || 0));
+  return pool.find(d => d.cover_i) || pool[0] || null;
 }
 
 // ---- RAWG (video games) ----
@@ -576,11 +606,13 @@ const builders = {
   // A hand-picked list of books; covers and years are looked up on Open Library.
   async books(def) {
     const items = [];
-    for (const [name, author, searchTitle] of def.picks) {
+    for (const pick of def.picks) {
+      const [name, author] = pick, searchTitle = typeof pick[2] === "string" ? pick[2] : null, yr = pick.find(x => typeof x === "number");
       let d = null;
       try { d = await findBook(searchTitle || name, author); } catch (e) { console.warn(`  Open Library lookup failed for "${name}": ${e.message}`); }
-      if (!d) console.warn(`  no Open Library match for "${searchTitle || name}" by ${author}; added without a cover`);
-      items.push({ id: "b" + slug(name + " " + author), name, note: author + (d && d.first_publish_year ? ", " + d.first_publish_year : ""),
+      if (!d || !d.cover_i) console.warn(`  no Open Library cover for "${searchTitle || name}" by ${author}; added without one`);
+      // The tile shows the author, plus the year only when the pick states it: Open Library's own dates are often an old edition's.
+      items.push({ id: "b" + slug(name + " " + author), name, note: author + (yr ? ", " + yr : ""),
         ...(d && d.cover_i ? { img: `https://covers.openlibrary.org/b/id/${d.cover_i}-M.jpg` } : {}) });
     }
     return { cat: CATS.books, group: def.group || "Genres", short: def.short || def.title, title: def.title, items };
@@ -684,7 +716,7 @@ const builders = {
       .filter(x => !seen.has(x.character.toLowerCase()) && seen.add(x.character.toLowerCase()))
       .slice(0, def.count || MAX_CAST)
       .map(x => ({ id: "p" + x.p.id, name: x.character, note: x.p.name, poster: def.photos === false ? null : x.p.profile_path || null }));
-    return { cat: CATS.tv, group: show.name, short: "Main characters", title: `${show.name} main characters`, items };
+    return { cat: CATS.tv, group: def.group || show.name, short: def.short || "Main characters", title: `${show.name} main characters`, items };
   },
   // The main characters of one film (in billing order), or of a whole franchise when "collection" is given.
   // Across a franchise, a character scores for every film they are in, and more the higher they are billed.
