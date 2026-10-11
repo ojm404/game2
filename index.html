@@ -246,7 +246,7 @@
   <div id="app"></div>
   <div id="rulers" aria-hidden="true"></div>
   <div id="modal"></div>
-  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive. Game data and artwork from RAWG. Book data and covers from Open Library.<span class="build">Build 2026-10-12.4</span></footer>
+  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive. Game data and artwork from RAWG. Book data and covers from Open Library.<span class="build">Build 2026-10-13.1</span></footer>
 </main>
 
 <script>
@@ -309,6 +309,7 @@ const modalEl = document.getElementById("modal");
 let modal = null;                                   // which pop-up is showing, if any
 const seen = {round: null, gone: null, say: 0, next: null};     // what has already been announced, so pop-ups appear once
 let vis = null;                                     // the part of the page currently on screen
+let screenKey = null, tapped = false;               // which screen was last drawn, and whether the player has tapped anything yet
 let modalTop = null, modalFor = null;               // where the open pop-up was placed, and which pop-up that was
 const configured = !firebaseConfig.apiKey.startsWith("PASTE");
 const STORE = "tierBattleship";
@@ -452,7 +453,7 @@ fetch(LISTS_URL).then(r => r.ok ? r.json() : null).then(d => {
 }).catch(() => {});
 
 // Lists are grouped into categories. build-lists.js sets "cat" on each list; older files are sorted by their title.
-const CAT_ORDER = ["Movies", "TV", "Music", "Books", "Games", "Movies by year"];
+const CAT_ORDER = ["Movies", "TV", "Music", "Books", "Games", "Misc", "Movies by year"];
 let pickCat = "Music";
 function catOf(l){
   if (l.cat) return l.cat;
@@ -737,6 +738,7 @@ app.addEventListener("change", e => {
 });
 let clickLock = 0;      // taps are ignored until this time; set briefly after a copy so a stray second tap cannot press something else
 function onClick(e){
+  tapped = true;
   if (Date.now() < clickLock) return;
   const chip = e.target.closest(".chip");
   if (chip) { selected = selected === chip.dataset.id ? null : chip.dataset.id; render(); return; }
@@ -753,9 +755,35 @@ app.addEventListener("click", onClick);
 if (modalEl && modalEl.addEventListener) modalEl.addEventListener("click", onClick);
 
 /* ---------- views ---------- */
+// When the game is embedded, it tells the host page how tall it is so the host can size the frame to fit.
+// With the frame sized to its content there is nothing to scroll inside it: players just scroll the page as usual.
+(function reportHeight(){
+  if (typeof window === "undefined" || !window.parent || window.parent === window || !window.parent.postMessage) return;
+  let last = 0;
+  const send = () => {
+    const main = document.querySelector("main"), box = document.querySelector("#modal .mbox");
+    if (!main) return;
+    const content = main.offsetTop + main.offsetHeight;
+    const popup = box ? box.offsetTop + box.offsetHeight + 24 : 0;
+    const h = Math.ceil(Math.max(content, popup)) + 8;
+    if (h !== last) { last = h; try { window.parent.postMessage({type: "outranked:height", height: h}, "*"); } catch (e) {} }
+  };
+  if (typeof ResizeObserver !== "undefined") { try { new ResizeObserver(send).observe(document.querySelector("main")); } catch (e) {} }
+  window.addEventListener("load", send);
+  setInterval(send, 700);
+})();
+
+// After the player moves to a new screen (into a room, on to the prediction, into a new round), bring the top of the game
+// into view so they are not left looking at the bottom of the previous screen. Never on page load, only after a tap.
+function followScreen(){
+  const key = !me.code || !room ? "lobby:" + lobbyMode : room.round + ":" + me.step;
+  const changed = screenKey !== null && key !== screenKey;
+  screenKey = key;
+  if (changed && tapped && app.scrollIntoView) { try { app.scrollIntoView({block: "start", behavior: "smooth"}); } catch (e) {} }
+}
 function render(){
   if (app.style) { app.style.setProperty("--p1c", look("p1").color); app.style.setProperty("--p2c", look("p2").color); }
-  draw(); fillSelects(); updateModal(); renderModal();
+  draw(); fillSelects(); updateModal(); renderModal(); followScreen();
   document.getElementById("listName").textContent = room && room.list ? "Now ranking: " + room.list.title : "";
 }
 // A banner when the opponent has left or dropped off.
