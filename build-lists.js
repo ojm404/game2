@@ -324,6 +324,11 @@ const DEFS = [
   { type: "cast",       name: "The Office", year: 2005 },
   { type: "cast",       name: "Friends" },
   { type: "cast",       name: "Bridgerton" },
+  // Hand-picked, because each Simpsons voice actor plays many characters and TMDB credits them as one combined role.
+  { type: "names", cat: "TV", group: "The Simpsons", title: "The Simpsons main characters", short: "Main characters", picks: [
+    "Homer Simpson", "Marge Simpson", "Bart Simpson", "Lisa Simpson", "Maggie Simpson", "Grampa Simpson", "Ned Flanders", "Mr. Burns",
+    "Waylon Smithers", "Moe Szyslak", "Krusty the Clown", "Milhouse Van Houten", "Apu Nahasapeemapetilon", "Chief Wiggum",
+    "Principal Skinner", "Sideshow Bob", "Barney Gumble", "Nelson Muntz", "Ralph Wiggum", "Comic Book Guy" ] },
   //   photos: false leaves the actor photos off, for animated shows where the picture would be the voice actor.
   //   group / short put a list in a shared submenu under a different label, here one "Avatar universe" menu for both shows.
   { type: "cast",       name: "Avatar: The Last Airbender", year: 2005, photos: false, group: "Avatar universe", short: "The Last Airbender characters" },
