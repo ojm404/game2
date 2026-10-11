@@ -1,4 +1,4 @@
-// Builds lists.json for OutRanked from TMDB (film and TV), MusicBrainz (music) and RAWG (video games).
+// Builds lists.json for OutRanked from TMDB (film and TV), MusicBrainz (music), RAWG (video games) and Open Library (books).
 // Run locally:  TMDB_API_KEY=xxxx node build-lists.js   (Node 18+)
 // Works with either a TMDB v3 API key or a v4 read access token.
 
@@ -136,6 +136,88 @@ const DEFS = [
   { type: "tv",         name: "American Horror Story" },
   { type: "tv",         name: "The Office", year: 2005 },          // year = first aired, to get the US show and not the UK one
   { type: "tvgenre",    name: "Sci-Fi & Fantasy", title: "Hit sci-fi TV shows" },
+  // Books (from Open Library, no key needed).
+  //   "books" is a hand-picked list. A pick is ["Title", "Author"], or ["Name shown", "Author", "title to search for"]
+  //           when the tile should show a series name but use its first book's cover.
+  //   "authors" is a hand-picked list of writers, with their Open Library photo where there is one.
+  { type: "books", group: "Popular", title: "BookTok favourites", picks: [
+    ["It Ends with Us", "Colleen Hoover"], ["Verity", "Colleen Hoover"], ["The Seven Husbands of Evelyn Hugo", "Taylor Jenkins Reid"],
+    ["A Court of Thorns and Roses", "Sarah J. Maas"], ["Fourth Wing", "Rebecca Yarros"], ["The Song of Achilles", "Madeline Miller"],
+    ["The Love Hypothesis", "Ali Hazelwood"], ["They Both Die at the End", "Adam Silvera"], ["We Were Liars", "E. Lockhart"],
+    ["The Invisible Life of Addie LaRue", "V. E. Schwab"], ["Icebreaker", "Hannah Grace"], ["Beach Read", "Emily Henry"],
+    ["The Cruel Prince", "Holly Black"], ["Red, White & Royal Blue", "Casey McQuiston"], ["Six of Crows", "Leigh Bardugo"] ] },
+  { type: "books", group: "Genres", title: "Murder mysteries", picks: [
+    ["The Hound of the Baskervilles", "Arthur Conan Doyle"], ["The Maltese Falcon", "Dashiell Hammett"], ["Murder on the Orient Express", "Agatha Christie"],
+    ["And Then There Were None", "Agatha Christie"], ["The Big Sleep", "Raymond Chandler"], ["The Name of the Rose", "Umberto Eco"],
+    ["The Girl with the Dragon Tattoo", "Stieg Larsson"], ["Still Life", "Louise Penny"], ["In the Woods", "Tana French"],
+    ["Gone Girl", "Gillian Flynn"], ["The Cuckoo's Calling", "Robert Galbraith"], ["Big Little Lies", "Liane Moriarty"],
+    ["A Good Girl's Guide to Murder", "Holly Jackson"], ["The Silent Patient", "Alex Michaelides"], ["The Thursday Murder Club", "Richard Osman"] ] },
+  { type: "books", group: "Genres", title: "Sci-fi books and series", picks: [
+    ["Frankenstein", "Mary Shelley"], ["Foundation", "Isaac Asimov"], ["Fahrenheit 451", "Ray Bradbury"], ["Dune", "Frank Herbert"],
+    ["The Left Hand of Darkness", "Ursula K. Le Guin"], ["The Hitchhiker's Guide to the Galaxy", "Douglas Adams"], ["Kindred", "Octavia E. Butler"],
+    ["Neuromancer", "William Gibson"], ["Ender's Game", "Orson Scott Card"], ["Hyperion", "Dan Simmons"], ["Snow Crash", "Neal Stephenson"],
+    ["The Three-Body Problem", "Cixin Liu"], ["The Expanse", "James S. A. Corey", "Leviathan Wakes"], ["The Martian", "Andy Weir"],
+    ["Project Hail Mary", "Andy Weir"] ] },
+  { type: "books", group: "Genres", title: "Fantasy books and series", picks: [
+    ["The Hobbit", "J. R. R. Tolkien"], ["The Chronicles of Narnia", "C. S. Lewis", "The Lion, the Witch and the Wardrobe"],
+    ["The Lord of the Rings", "J. R. R. Tolkien", "The Fellowship of the Ring"], ["Earthsea", "Ursula K. Le Guin", "A Wizard of Earthsea"],
+    ["Discworld", "Terry Pratchett", "The Colour of Magic"], ["The Wheel of Time", "Robert Jordan", "The Eye of the World"],
+    ["A Song of Ice and Fire", "George R. R. Martin", "A Game of Thrones"], ["Harry Potter", "J. K. Rowling", "Harry Potter and the Philosopher's Stone"],
+    ["American Gods", "Neil Gaiman"], ["Mistborn", "Brandon Sanderson", "Mistborn: The Final Empire"],
+    ["The Kingkiller Chronicle", "Patrick Rothfuss", "The Name of the Wind"], ["The Stormlight Archive", "Brandon Sanderson", "The Way of Kings"],
+    ["The Broken Earth", "N. K. Jemisin", "The Fifth Season"], ["A Court of Thorns and Roses", "Sarah J. Maas"],
+    ["The Empyrean", "Rebecca Yarros", "Fourth Wing"] ] },
+  { type: "books", group: "Genres", title: "Poetry books", picks: [   // one book per poet
+    ["Paradise Lost", "John Milton"], ["Songs of Innocence and of Experience", "William Blake"], ["Leaves of Grass", "Walt Whitman"],
+    ["The Complete Poems of Emily Dickinson", "Emily Dickinson"], ["The Waste Land", "T. S. Eliot"],
+    ["Twenty Love Poems and a Song of Despair", "Pablo Neruda"], ["The Collected Poems of Langston Hughes", "Langston Hughes"],
+    ["Howl and Other Poems", "Allen Ginsberg"], ["Ariel", "Sylvia Plath"], ["Where the Sidewalk Ends", "Shel Silverstein"],
+    ["And Still I Rise", "Maya Angelou"], ["Citizen: An American Lyric", "Claudia Rankine"], ["Milk and Honey", "Rupi Kaur"],
+    ["Night Sky with Exit Wounds", "Ocean Vuong"], ["Devotions", "Mary Oliver"] ] },
+  { type: "books", group: "Genres", title: "Graphic novels and series", picks: [
+    ["Maus", "Art Spiegelman"], ["Watchmen", "Alan Moore"], ["Batman: The Dark Knight Returns", "Frank Miller"], ["V for Vendetta", "Alan Moore"],
+    ["The Sandman", "Neil Gaiman", "The Sandman: Preludes & Nocturnes"], ["Bone", "Jeff Smith", "Bone: Out from Boneville"],
+    ["Persepolis", "Marjane Satrapi"], ["Blankets", "Craig Thompson"], ["The Walking Dead", "Robert Kirkman", "The Walking Dead: Days Gone Bye"],
+    ["Scott Pilgrim", "Bryan Lee O'Malley", "Scott Pilgrim's Precious Little Life"], ["Fun Home", "Alison Bechdel"],
+    ["American Born Chinese", "Gene Luen Yang"], ["Smile", "Raina Telgemeier"], ["Saga", "Brian K. Vaughan", "Saga, Volume 1"],
+    ["Nimona", "ND Stevenson"], ["Heartstopper", "Alice Oseman", "Heartstopper: Volume One"] ] },
+  { type: "books", group: "Romance", title: "Hockey and skating romances", picks: [
+    ["Pucked", "Helena Hunting"], ["The Deal", "Elle Kennedy"], ["Him", "Sarina Bowen"], ["From Lukov with Love", "Mariana Zapata"],
+    ["Check, Please!", "Ngozi Ukazu", "Check, Please! Book 1: #Hockey"], ["Heated Rivalry", "Rachel Reid"], ["Consider Me", "Becka Mack"],
+    ["Icebreaker", "Hannah Grace"], ["Mile High", "Liz Tomforde"], ["Pucking Around", "Emily Rath"], ["Behind the Net", "Stephanie Archer"],
+    ["Collide", "Bal Khabra"] ] },
+  { type: "names", cat: "Books", group: "Romance", title: "Romance tropes", picks: [
+    "Enemies to lovers", "Friends to lovers", "Fake dating", "Forced proximity", "Only one bed", "Grumpy and sunshine", "Second chance",
+    "Slow burn", "Forbidden love", "Love triangle", "Marriage of convenience", "Brother's best friend", "Workplace romance",
+    "Secret royal", "He falls first" ] },
+  { type: "books", group: "Young adult", title: "YA standalone favourites", short: "Standalone favourites", picks: [
+    ["The Outsiders", "S. E. Hinton"], ["Speak", "Laurie Halse Anderson"], ["The Perks of Being a Wallflower", "Stephen Chbosky"],
+    ["Looking for Alaska", "John Green"], ["The Book Thief", "Markus Zusak"], ["Thirteen Reasons Why", "Jay Asher"],
+    ["The Fault in Our Stars", "John Green"], ["Eleanor & Park", "Rainbow Rowell"], ["Fangirl", "Rainbow Rowell"],
+    ["We Were Liars", "E. Lockhart"], ["I'll Give You the Sun", "Jandy Nelson"], ["Everything, Everything", "Nicola Yoon"],
+    ["The Hate U Give", "Angie Thomas"], ["They Both Die at the End", "Adam Silvera"], ["Turtles All the Way Down", "John Green"] ] },
+  { type: "books", group: "Young adult", title: "YA series favourites", short: "Series favourites", picks: [
+    ["His Dark Materials", "Philip Pullman", "Northern Lights"], ["Harry Potter", "J. K. Rowling", "Harry Potter and the Philosopher's Stone"],
+    ["Uglies", "Scott Westerfeld"], ["Percy Jackson", "Rick Riordan", "The Lightning Thief"], ["Twilight", "Stephenie Meyer"],
+    ["The Mortal Instruments", "Cassandra Clare", "City of Bones"], ["The Hunger Games", "Suzanne Collins"], ["The Maze Runner", "James Dashner"],
+    ["Divergent", "Veronica Roth"], ["The Lunar Chronicles", "Marissa Meyer", "Cinder"], ["The Selection", "Kiera Cass"],
+    ["Throne of Glass", "Sarah J. Maas"], ["Shadow and Bone", "Leigh Bardugo"], ["Red Queen", "Victoria Aveyard"],
+    ["An Ember in the Ashes", "Sabaa Tahir"] ] },
+  { type: "authors", title: "Most popular authors", picks: [
+    "Stephen King", "J. K. Rowling", "Agatha Christie", "James Patterson", "Colleen Hoover", "Dan Brown", "John Grisham", "Nora Roberts",
+    "Danielle Steel", "George R. R. Martin", "Brandon Sanderson", "Sarah J. Maas", "Neil Gaiman", "Haruki Murakami", "Roald Dahl" ] },
+  { type: "authors", title: "Top women authors", picks: [
+    "Jane Austen", "Mary Shelley", "Charlotte Brontë", "Virginia Woolf", "Agatha Christie", "Toni Morrison", "Maya Angelou",
+    "Ursula K. Le Guin", "Margaret Atwood", "Octavia E. Butler", "Donna Tartt", "J. K. Rowling", "Zadie Smith",
+    "Chimamanda Ngozi Adichie", "Sally Rooney" ] },
+  { type: "authors", title: "Top POC authors", picks: [
+    "James Baldwin", "Gabriel García Márquez", "Chinua Achebe", "Toni Morrison", "Maya Angelou", "Octavia E. Butler", "Haruki Murakami",
+    "Salman Rushdie", "Amy Tan", "Kazuo Ishiguro", "Jhumpa Lahiri", "Zadie Smith", "Colson Whitehead", "Chimamanda Ngozi Adichie",
+    "N. K. Jemisin" ] },
+  { type: "authors", title: "Top Canadian authors", picks: [
+    "L. M. Montgomery", "Robertson Davies", "Margaret Laurence", "Mordecai Richler", "Alice Munro", "Leonard Cohen", "Margaret Atwood",
+    "Michael Ondaatje", "Thomas King", "Douglas Coupland", "Yann Martel", "Miriam Toews", "Louise Penny", "Esi Edugyan",
+    "Emily St. John Mandel" ] },
   // Video games (from RAWG, needs the RAWG_API_KEY secret).
   //   "games" is a hand-picked list. A pick is "Name", or ["Name shown", "what to search for", release year].
   //   "console" is the best-known games on one console. order: "-added" = most popular, "-metacritic" = best reviewed.
@@ -316,6 +398,23 @@ async function findPerson(name) {
   return r.results[0];
 }
 
+// ---- Open Library (books) ----
+// No key needed. Open Library asks apps to identify themselves and not to hammer it, so there is a short pause per request.
+async function openLibrary(path, params = {}) {
+  await sleep(350);
+  const url = new URL("https://openlibrary.org" + path);
+  Object.entries(params).forEach(([k, v]) => url.searchParams.set(k, v));
+  const res = await fetch(url, { headers: { "User-Agent": MB_AGENT, Accept: "application/json" } });
+  if (!res.ok) throw new Error(`Open Library ${res.status} on ${path}`);
+  return res.json();
+}
+// Finds a book by title and author and returns the best-known version that has a cover.
+async function findBook(title, author) {
+  const r = await openLibrary("/search.json", { title, author, limit: 10, fields: "key,title,author_name,cover_i,first_publish_year,edition_count" });
+  const docs = (r.docs || []).sort((a, b) => (b.edition_count || 0) - (a.edition_count || 0));
+  return docs.find(d => d.cover_i) || docs[0] || null;
+}
+
 // ---- RAWG (video games) ----
 const RAWG_KEY = process.env.RAWG_API_KEY;
 async function rawg(path, params = {}) {
@@ -426,7 +525,7 @@ async function isMarvelShow(id) {
 
 // "Aang (voice)" -> "Aang"
 const cleanRole = s => s.replace(/\s*\((voice|uncredited)\)/gi, "").trim();
-const CATS = { games: "Games", music: "Music", people: "Actors & directors", franchise: "Franchises", genre: "Genres", year: "Movies by year", tv: "TV" };
+const CATS = { books: "Books", games: "Games", music: "Music", people: "Actors & directors", franchise: "Franchises", genre: "Genres", year: "Movies by year", tv: "TV" };
 
 const builders = {
   async actor(def) {
@@ -473,6 +572,36 @@ const builders = {
     const pages = await Promise.all((filtered ? [1, 2, 3, 4, 5, 6] : [1, 2, 3]).map(page => tmdb("/discover/movie", { with_genres: ids.join(","), sort_by: "vote_count.desc", page })));
     const opts = { noDisney: !!def.noDisney, oneFranchise: !!def.oneFranchise, noSequels: !!def.noSequels };
     return { cat: CATS.genre, title: def.title || `Biggest ${def.name.toLowerCase()} movies`, items: await pickMovies(pages.flatMap(p => p.results), opts) };
+  },
+  // A hand-picked list of books; covers and years are looked up on Open Library.
+  async books(def) {
+    const items = [];
+    for (const [name, author, searchTitle] of def.picks) {
+      let d = null;
+      try { d = await findBook(searchTitle || name, author); } catch (e) { console.warn(`  Open Library lookup failed for "${name}": ${e.message}`); }
+      if (!d) console.warn(`  no Open Library match for "${searchTitle || name}" by ${author}; added without a cover`);
+      items.push({ id: "b" + slug(name + " " + author), name, note: author + (d && d.first_publish_year ? ", " + d.first_publish_year : ""),
+        ...(d && d.cover_i ? { img: `https://covers.openlibrary.org/b/id/${d.cover_i}-M.jpg` } : {}) });
+    }
+    return { cat: CATS.books, group: def.group || "Genres", short: def.short || def.title, title: def.title, items };
+  },
+  // A hand-picked list of writers, with a photo where Open Library has one.
+  async authors(def) {
+    const items = [];
+    for (const name of def.picks) {
+      let img = null;
+      try {
+        const r = await openLibrary("/search/authors.json", { q: name, limit: 5 });
+        const a = (r.docs || []).sort((x, y) => (y.work_count || 0) - (x.work_count || 0))[0];
+        if (a) {
+          const url = `https://covers.openlibrary.org/a/olid/${a.key.replace(/^.*\//, "")}-M.jpg`;
+          const head = await fetch(url + "?default=false", { method: "HEAD", redirect: "manual" });
+          if (head.status < 400) img = url;
+        }
+      } catch (e) {}
+      items.push({ id: "w" + slug(name), name, ...(img ? { img } : {}) });
+    }
+    return { cat: CATS.books, group: def.group || "Authors", short: def.short || def.title, title: def.title, items };
   },
   // A hand-picked list of video games; artwork and years are looked up on RAWG.
   async games(def) {
@@ -734,6 +863,7 @@ const builders = {
 //   Movies         > Franchises, Genres, Actors, Directors, By year: 1980s (one per decade), Awards, Characters
 //   TV             > one submenu per show, plus Show rankings
 //   Music          > one submenu per artist, plus Top albums and Top artists
+//   Books          > Popular, Genres, Romance, Young adult, Authors
 //   Games          > Franchises, Genres, Consoles, Awards
 function place(list, def) {
   if (list.cat === CATS.franchise) return { ...list, cat: "Movies", group: "Franchises", short: list.title };
@@ -746,6 +876,7 @@ function place(list, def) {
 // Submenus appear in the order their first list appears in the file, so the finished lists are sorted into this order.
 const MENU_ORDER = {
   Movies: ["Franchises", "Genres", "Actors", "Directors", "By year", "Awards", "Characters"],
+  Books: ["Popular", "Genres", "Romance", "Young adult", "Authors"],
   Games: ["Franchises", "Genres", "Consoles", "Awards"]
 };
 function menuRank(list) {
