@@ -1,921 +1,1139 @@
-// Builds lists.json for OutRanked from TMDB (film and TV), MusicBrainz (music), RAWG (video games) and Open Library (books).
-// Run locally:  TMDB_API_KEY=xxxx node build-lists.js   (Node 18+)
-// Works with either a TMDB v3 API key or a v4 read access token.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OutRanked</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+<style>
+  /* ---- colours: change these to match your other games exactly ---- */
+  :root{
+    --bg:#1B1030; --panel:#2A1A47; --panel2:#35225A; --line:#4B347A;
+    --text:#F6EEFF; --muted:#B9A6D9; --pink:#FF5FA8; --purple:#A66BFF; --win:#4ADE80;
+    --font:"Outfit",system-ui,-apple-system,"Segoe UI",sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{position:relative;min-height:100vh;margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.5 var(--font)}
+  main{max-width:680px;margin:0 auto;padding:28px 16px 64px}
+  header{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:22px}
+  h1{font:700 clamp(1.6rem,6vw,2.1rem)/1.1 var(--font);margin:0;background:linear-gradient(90deg,var(--pink),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent}
+  h2{font:600 1.3rem/1.2 var(--font);margin:0 0 6px}
+  .list-name{color:var(--muted);font-size:.9rem;text-align:right}
+  .panel{background:var(--panel);border-radius:16px;padding:22px}
+  .hint{color:var(--muted);margin:0 0 14px;max-width:60ch}
+  label{display:block;font-weight:600;margin:14px 0 4px;font-size:.9rem}
+  input{font:inherit;padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--text);width:100%;max-width:280px}
+  input.code{text-transform:uppercase;letter-spacing:.3em;max-width:140px;font-weight:600}
+  button{font:600 1rem var(--font);cursor:pointer;color:var(--text)}
+  .btn{padding:11px 20px;border:0;border-radius:999px;background:linear-gradient(90deg,var(--pink),var(--purple));color:#1B1030}
+  .btn.ghost{background:transparent;color:var(--text);box-shadow:inset 0 0 0 1px var(--line)}
+  .btn:disabled{opacity:.35;cursor:not-allowed}
+  :focus-visible{outline:2px solid var(--pink);outline-offset:2px}
+  .joinrow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .or{margin:20px 0 0;color:var(--muted)}
+  .err{color:var(--pink);font-weight:600;min-height:1.5em;margin:10px 0 0}
+  .status{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin-bottom:18px;font-size:.92rem;color:var(--muted)}
+  .status .rc{font-weight:700;letter-spacing:.18em;background:var(--panel2);color:var(--text);padding:5px 12px;border-radius:999px}
+  .status button.link{background:none;border:0;padding:0;text-decoration:underline;font-weight:400;color:var(--muted);margin-left:auto}
+  /* board */
+  .grid{display:grid;gap:6px}
+  .row{display:flex;min-height:54px;background:var(--panel);border-radius:12px;overflow:hidden;cursor:pointer}
+  .tl{flex:0 0 46px;border:0;background:var(--panel2);color:var(--text);font-weight:700;font-size:1.15rem}
+  .row[data-tier="S"] .tl{background:var(--pink);color:#1B1030}
+  .row[data-tier="A"] .tl{background:var(--purple);color:#1B1030}
+  .cells,.pool{display:flex;flex-wrap:wrap;gap:6px;padding:8px;flex:1;align-content:flex-start}
+  .picking .row:hover{background:var(--panel2)}
+  .pool{margin-top:14px;border:1px dashed var(--line);border-radius:12px;min-height:56px;cursor:pointer}
+  .pool .empty{color:var(--muted);align-self:center;padding-left:4px}
+  .chip{border:0;border-radius:8px;background:var(--panel2);padding:6px 10px;font-size:.9rem;font-weight:500;text-align:left;line-height:1.2}
+  .pool .chip{background:var(--panel)}
+  .chip{display:flex;gap:8px;align-items:center}
+  .chip img{width:28px;height:42px;object-fit:cover;border-radius:4px;flex:none}
+  select{font:inherit;padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--text);width:100%;max-width:280px}
+  footer{margin-top:40px;color:var(--muted);font-size:.75rem}
+  .chip small{display:block;font-weight:400;color:var(--muted);font-size:.72rem}
+  .chip.tv{box-shadow:inset 0 0 0 1px var(--purple)}
+  .chip.sel{background:var(--pink);color:#1B1030}.chip.sel small{color:#4A1F3A}
+  .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;align-items:center}
+  /* results */
+  .verdict{font:700 clamp(1.8rem,7vw,2.4rem)/1.1 var(--font);margin:0 0 6px}
+  .verdict.win{color:var(--win)}
+  .scores{display:flex;gap:10px;margin:14px 0 22px}
+  .scores div{flex:1;border-radius:12px;padding:12px 14px;background:var(--panel);color:var(--muted);font-size:.9rem}
+  .scores b{font-size:2rem;line-height:1.1;display:block;color:var(--text)}
+  table{width:100%;border-collapse:collapse;background:var(--panel);border-radius:12px;overflow:hidden}
+  th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--bg)}
+  th{font-size:.8rem;color:var(--muted);font-weight:500}
+  td.t{font-weight:700;width:3.2em}
+  td.p{width:3em;text-align:center}
+  .peg{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;font-weight:600;font-size:.82rem;background:var(--panel2);color:var(--muted);animation:drop .35s both}
+  .peg.hit{background:var(--pink);color:#1B1030}
+  @keyframes drop{from{transform:scale(.4);opacity:0}}
+  @media (prefers-reduced-motion:reduce){.peg{animation:none}}
+  .grid.long .tl{flex-basis:96px;font-size:.82rem;line-height:1.15;padding:0 6px;overflow-wrap:anywhere;text-align:center}
+  .tiernames{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;max-width:420px}
+  .tiernames input{max-width:none;padding:8px 10px}
+  .row.perfect{box-shadow:inset 0 0 0 2px var(--win)}
+  .ptag{align-self:center;margin-left:auto;color:var(--win);font-weight:600;font-size:.82rem;padding-right:6px}
+  .scores .bonus{display:block;color:var(--win);font-weight:600}
+  .choice{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+  .btn.big{border-radius:14px;padding:18px 16px;text-align:left;font-size:1.1rem}
+  .btn.big small{display:block;font-weight:400;font-size:.82rem;margin-top:2px;opacity:.8}
+  @media (max-width:460px){.choice{grid-template-columns:1fr}}
+  .chip img.wide{width:50px;height:28px}
+  .chip img.sq{width:36px;height:36px}
+  .tile.sq{width:96px}
+  .tile.sq img{width:96px;height:96px}
+  .ph{display:grid;place-items:center;flex:none;width:36px;height:36px;border-radius:4px;background:linear-gradient(135deg,var(--pink),var(--purple));color:#1B1030;font-size:1.1rem}
+  .tile .ph{width:96px;height:96px;border-radius:8px;font-size:2.6rem}
+  .tile.hit .ph{box-shadow:0 0 0 3px var(--pink)}
+  .tile:not(.hit) .ph{filter:saturate(.55) brightness(.8)}
+  .status button.link.inv{margin-left:0}
+  .tile .back{display:grid;place-items:center;width:76px;height:114px;border-radius:8px;background:var(--panel2);box-shadow:inset 0 0 0 1px var(--line);color:var(--muted);font-weight:700;font-size:1.4rem}
+  .tile.sq .back{width:96px;height:96px}
+  .tile.wide .back{width:114px;height:64px}
+  .tile.flip{animation:flip .45s both}
+  @keyframes flip{from{transform:rotateY(90deg);opacity:0}}
+  .tile .badge.still{animation:none}
+  .scores b.bump{animation:bump .4s}
+  @keyframes bump{50%{transform:scale(1.25);color:var(--pink)}}
+  .scores b{transform-origin:left center}
+  .revealbar{margin:0 0 22px}
+  /* side-by-side lanes */
+  .row.reveal{align-items:stretch}
+  .lanes{flex:1;display:grid;grid-template-columns:1fr 1fr;min-width:0}
+  .lane{min-width:0;padding:6px 8px 8px}
+  .lane.real{border-left:1px solid var(--bg);background:rgba(255,255,255,.03)}
+  .lane .cells{padding:6px 0 0;gap:10px 8px}
+  .lanetag{display:block;font-size:.68rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+  .lanetag .ptag{float:right;text-transform:none;letter-spacing:0;padding:0;font-size:.72rem}
+  .lane .none{color:var(--line);font-size:.8rem}
+  .tile{width:60px}
+  .tile img,.tile .back{width:60px;height:90px}
+  .tile .noimg{width:60px;height:60px;font-size:.62rem;padding:3px;overflow:hidden}
+  .tile.sq{width:66px}
+  .tile.sq img,.tile.sq .back,.tile .ph{width:66px;height:66px}
+  .tile .ph{font-size:1.8rem}
+  .tile.wide{width:92px}
+  .tile.wide img,.tile.wide .back{width:92px;height:52px}
+  .tile figcaption{font-size:.62rem}
+  .tile .badge{min-width:22px;height:22px;line-height:22px;padding:0 6px;font-size:.7rem;top:-7px;right:-6px;max-width:70px}
+  .tile.plain img,.tile.plain .ph{filter:none}
+  .tile.miss .noimg{opacity:.65}
+  .tile.judged{animation:judge .5s}
+  @keyframes judge{40%{transform:scale(1.12)}}
+  @media (max-width:560px){
+    .lanes{grid-template-columns:1fr}
+    .lane.real{border-left:0;border-top:1px solid var(--bg)}
+  }
+  /* reveals are instant: no flip, pop or bump animations, so every browser shows the same thing */
+  .tile.flip,.tile.judged,.scores b.bump,.tile .badge,.peg{animation:none !important}
+  .row.reveal.fresh{box-shadow:inset 4px 0 0 var(--pink)}
+  .row.reveal.fresh.perfect{box-shadow:inset 4px 0 0 var(--pink),inset 0 0 0 2px var(--win)}
+  .revealbar{justify-content:space-between}
+  .skiplink{background:none;border:0;padding:6px 0;color:var(--muted);text-decoration:underline;font-weight:400;font-size:.88rem}
+  /* each player has a colour: host pink, guest blue */
+  .pc-p1{--pc:var(--p1c,#FF5FA8)}.pc-p2{--pc:var(--p2c,#5CC8FF)}
+  .em{margin-right:.35em}
+  .swatches{display:flex;flex-wrap:wrap;gap:8px}
+  .sw{width:36px;height:36px;border-radius:50%;border:0;background:var(--c);box-shadow:0 0 0 2px var(--panel)}
+  .sw.on{box-shadow:0 0 0 2px var(--panel),0 0 0 4px var(--text)}
+  .emo{width:40px;height:40px;border-radius:10px;border:0;background:var(--panel2);font-size:1.25rem;line-height:1;padding:0}
+  .emo.on{box-shadow:0 0 0 2px var(--text)}
+  .dot{display:inline-block;width:.6em;height:.6em;border-radius:50%;background:var(--pc);margin-right:.4em;vertical-align:.05em}
+  .vs .pc-p1,.vs .pc-p2{color:var(--pc)}
+  .scores div{border-top:4px solid var(--pc)}
+  .lane{box-shadow:inset 0 3px 0 var(--pc)}
+  .lane .lanetag{color:var(--pc)}
+  /* tile outlines replace the old badges */
+  .tile.hit img,.tile.hit .noimg,.tile.hit .ph{box-shadow:0 0 0 3px var(--win)}
+  .tile.near img,.tile.near .noimg,.tile.near .ph{box-shadow:0 0 0 3px #FFC857;filter:none;opacity:1}
+  .tile.miss img,.tile.miss .ph{filter:saturate(.4) brightness(.6)}
+  .tile.miss .noimg{opacity:.5}
+  .legend{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;color:var(--muted);font-size:.85rem;margin:0 0 12px}
+  .legend .key{display:inline-block;width:14px;height:14px;border-radius:4px;margin-right:-10px;background:var(--panel2)}
+  .legend .key.hit{box-shadow:0 0 0 2px var(--win)}.legend .key.near{box-shadow:0 0 0 2px #FFC857}.legend .key.miss{opacity:.5}
+  .heat{display:block;height:1.5em;line-height:1.5em;margin-top:3px;font-size:.8rem;text-align:center;white-space:nowrap}
+  .legend span{white-space:nowrap}
+  .copybox{background:var(--panel);border-radius:12px;padding:12px 14px;margin:12px 0}
+  .copybox p{margin:0 0 8px;color:var(--muted);font-size:.88rem}
+  .copybox textarea{width:100%;font:inherit;font-size:.9rem;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px;resize:vertical}
+  .picker{max-width:420px}
+  .ph-text{color:var(--muted)}
+  .pickbtn{width:100%;display:flex;justify-content:space-between;gap:10px;align-items:center;text-align:left;padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg);font-weight:500}
+  .pickpanel{margin-top:6px;border:1px solid var(--line);border-radius:10px;background:var(--bg);padding:4px;max-height:340px;overflow-y:auto}
+  .pickpanel details{margin:0}
+  .pickpanel summary{padding:9px 10px;font-weight:600;border-radius:8px}
+  .pickpanel details details{margin-left:14px}
+  .pickpanel details details summary{font-weight:500;color:var(--muted)}
+  .pickpanel details[open] > summary{color:var(--pink)}
+  .opt{display:block;width:calc(100% - 14px);margin-left:14px;text-align:left;background:none;border:0;border-radius:8px;padding:8px 10px;font-weight:400}
+  .opt:hover{background:var(--panel)}
+  .opt.on{background:var(--panel2);font-weight:600}
+  .tallyrow{display:flex;flex-wrap:wrap;gap:4px 14px;color:var(--text);font-size:1rem;font-weight:600}
+  .notice{background:var(--panel);border-radius:12px;padding:12px 14px;margin:0 0 18px;box-shadow:inset 0 0 0 2px #FFC857;color:var(--muted)}
+  .notice strong{color:var(--text)}
+  /* pop-ups */
+  #rulers{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+  #rulers i{position:absolute;left:0;width:1px;height:1px}
+  .mback{position:absolute;inset:0;background:rgba(10,5,22,.72);z-index:50}
+  .mbox{position:absolute;left:50%;transform:translateX(-50%);z-index:51;width:min(460px,calc(100% - 24px));background:var(--panel);border-radius:16px;padding:20px 20px 18px;box-shadow:0 0 0 2px var(--line),0 24px 60px rgba(0,0,0,.55)}
+  .mbox h2{font-size:1.5rem;margin:0 0 4px}
+  .mbox h2.win{color:var(--win)}
+  .mbox p{margin:0 0 10px;color:var(--muted)}
+  .mbox .x{position:absolute;top:10px;right:12px;background:none;border:0;color:var(--muted);font-size:.85rem;text-decoration:underline;font-weight:400;padding:4px}
+  .mbox .scoreline{display:grid;gap:4px;margin:10px 0 12px;color:var(--text)}
+  .mbox .scoreline span{display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
+  .mbox .scoreline b{min-width:2ch}
+  .mbox .session{background:var(--bg);border-radius:10px;padding:10px 12px;margin:0 0 12px;font-size:.9rem;color:var(--muted)}
+  .mbox .session strong{color:var(--text);display:block;margin-bottom:2px}
+  .mbox .actions{margin-top:12px}
+  .mbox .actions .btn{padding:10px 16px}
+  .chatlog{display:grid;gap:4px;margin:0 0 10px}
+  .chatlog div{background:var(--bg);border-radius:10px;padding:7px 11px;color:var(--text);box-shadow:inset 3px 0 0 var(--pc)}
+  .says{display:flex;flex-wrap:wrap;gap:6px}
+  .says button{background:var(--panel2);border:0;border-radius:999px;padding:7px 12px;font-size:.88rem;font-weight:500}
+  .says button:hover{background:var(--line)}
+  .sublabel{font-size:.78rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin:12px 0 6px}
+  .opt-tag{font-weight:400;font-size:.75rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px}
+  .presets{margin-top:8px}
+  .mbox .tiered{margin-top:4px}
+  .mbox .tiernames{max-width:none}
+  .tiebox{background:var(--panel);border-radius:14px;padding:16px 18px;margin:0 0 20px;box-shadow:inset 0 0 0 2px var(--purple)}
+  .tbpair{display:flex;gap:10px;flex-wrap:wrap}
+  .tbpick{flex:1;min-width:140px;display:flex;gap:10px;align-items:center;background:var(--panel2);border:0;border-radius:12px;padding:10px;text-align:left;font-weight:600}
+  .tbpick img{width:44px;height:66px;object-fit:cover;border-radius:6px;flex:none}
+  .tbpick img.sq{height:44px}.tbpick img.wide{width:72px;height:40px}
+  .tbpick small{display:block;font-weight:400;color:var(--pink);font-size:.78rem;margin-top:2px}
+  .tbpick.on{box-shadow:inset 0 0 0 2px var(--pink)}
+  .tbpick:disabled{cursor:default}
+  .tbpick:disabled:not(.on){opacity:.6}
+  .tiebox p{margin:0 0 12px;color:var(--muted)}
+  .build{display:block;margin-top:4px;opacity:.7}
+  .tile.wide{width:114px}
+  .tile.wide img{width:114px;height:64px}
+  [hidden]{display:none !important}
+  .vs{color:var(--text);font-weight:600}
+  .scores .who{display:block;color:var(--text);font-weight:600;font-size:1rem}
+  .scores .lead{box-shadow:inset 0 0 0 2px var(--win)}
+  .row.reveal{cursor:default;min-height:64px}
+  .row.reveal .tl{display:grid;place-items:center}
+  .row.reveal .cells{gap:10px;padding:10px}
+  .tile{position:relative;margin:0;width:76px}
+  .tile img,.tile .noimg{display:block;width:76px;height:114px;object-fit:cover;border-radius:8px;background:var(--panel2)}
+  .tile .noimg{display:grid;place-items:center;text-align:center;padding:6px;font-size:.78rem;font-weight:600;line-height:1.2;height:76px}
+  .tile.hit img,.tile.hit .noimg{box-shadow:0 0 0 3px var(--pink)}
+  .tile:not(.hit) img{filter:saturate(.55) brightness(.8)}
+  .tile .badge{position:absolute;top:-8px;right:-8px;display:block;min-width:28px;max-width:88px;height:28px;line-height:28px;padding:0 8px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-radius:999px;font-weight:700;font-size:.85rem;background:var(--bg);color:var(--text);box-shadow:0 0 0 2px var(--line);animation:drop .35s both}
+  .tile.hit .badge{background:var(--pink);color:#1B1030;box-shadow:none}
+  .tile figcaption{font-size:.68rem;color:var(--muted);line-height:1.2;margin-top:4px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+  .tile:has(.noimg) figcaption{display:none}
+  @media (prefers-reduced-motion:reduce){.tile .badge{animation:none}}
+  details{margin-top:18px}
+  summary{cursor:pointer;font-weight:600;padding:8px 0}
+  code{background:var(--bg);padding:1px 6px;border-radius:4px}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>OutRanked</h1>
+    <div class="list-name" id="listName"></div>
+  </header>
+  <div id="app"></div>
+  <div id="rulers" aria-hidden="true"></div>
+  <div id="modal"></div>
+  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive. Game data and artwork from RAWG. Book data and covers from Open Library.<span class="build">Build 2026-10-12.4</span></footer>
+</main>
 
-const fs = require("fs");
-// years(1990, 2019) makes one "biggest movies of the year" list for every year in that range.
-// decades(1980, 2010) makes one "biggest movies of the decade" list for the 1980s, 1990s, 2000s and 2010s.
-const decades = (from, to) => Array.from({ length: (to - from) / 10 + 1 }, (_, i) => ({ type: "decade", decade: from + i * 10 }));
-const years = (from, to) => Array.from({ length: to - from + 1 }, (_, i) => ({ type: "year", year: from + i }));
+<script>
+/* ============ 1. PASTE YOUR FIREBASE CONFIG HERE ============ */
+const firebaseConfig = {
+  apiKey: "AIzaSyAAxhEJfBKWUr92JnrPp5YEe5aqhbWSvdo",
+  authDomain: "outranked-4ec06.firebaseapp.com",
+  databaseURL: "https://outranked-4ec06-default-rtdb.firebaseio.com",
+  projectId: "outranked-4ec06",
+  appId: "1:957210594199:web:29092a794880ecad4b92d2"
+};
 
-/* ======== EDIT THIS: the face-off lists you want ======== */
-const DEFS = [
-  { type: "actor",      name: "Leonardo Dicaprio" },
-  { type: "actor",      name: "Nicolas Cage" },
-  { type: "actor",      name: "Bruce Willis" },
-  { type: "actor",      name: "Matt Damon" },
-  { type: "actor",      name: "Meryl Streep" },
-  { type: "director",   name: "James Cameron" },
-  { type: "director",   name: "Ridley Scott" },
-  { type: "director",   name: "Christopher Nolan" },
-  { type: "director",   name: "Steven Spielberg" },
-  { type: "director",   name: "Kevin Smith" },
-  { type: "director",   name: "Quentin Tarantino" },
-  { type: "collection", name: "Harry Potter" },
-  { type: "collection", name: "Mission: Impossible" },
-  { type: "collection", name: "The Fast and the Furious", title: "Fast & Furious films" },
-  { type: "films", cat: "Franchises", title: "Planet of the Apes films", picks: [
-    ["Planet of the Apes", 1968], ["Beneath the Planet of the Apes", 1970], ["Escape from the Planet of the Apes", 1971],
-    ["Conquest of the Planet of the Apes", 1972], ["Battle for the Planet of the Apes", 1973], ["Planet of the Apes", 2001],
-    ["Rise of the Planet of the Apes", 2011], ["Dawn of the Planet of the Apes", 2014], ["War for the Planet of the Apes", 2017],
-    ["Kingdom of the Planet of the Apes", 2024] ] },
-  // TMDB splits Star Trek into three collections, each too short on its own, so "names" merges them into one list.
-  { type: "collection", title: "Star Trek films", names: ["Star Trek: The Original Series Collection", "Star Trek: The Next Generation Collection", "Star Trek: Alternate Reality Collection"] },
-  { type: "genre",      name: "Science Fiction" },
-  { type: "genre",      name: "Horror", noSequels: true },       // noSequels keeps only the first film of any franchise
-  { type: "genre",      name: "Romance", title: "Biggest romance movies" },
-  { type: "genre",      name: "Romance", and: "Comedy", title: "Biggest rom-coms" },   // "and" = must be in both genres
-  { type: "keyword",    name: "period drama", title: "Period pieces" },
-  { type: "keyword",    name: "vampire", title: "Vampire movies", oneFranchise: true },
-  { type: "genre",      name: "Comedy", noDisney: true },      // noDisney leaves out Disney films but keeps Pixar
-  { type: "keyword",    name: "musical", title: "Biggest musical movies", noDisney: true },
-  { type: "genre",      name: "Family", title: "Popular kids' movies", noDisney: true },
-  // Biopics must carry both TMDB keywords, "biography" and "based on true story", which weeds out loosely tagged films.
-  { type: "keyword",    name: "biography", and: "based on true story", title: "Biopics (true stories)" },
-  //   "filmcast" ranks the main characters of one film (use the first film of a franchise).
-  //   With "collection", characters are ranked by how big their role is across every film in the franchise.
-  { type: "filmcast",   collection: "The Twilight Saga", title: "Twilight main characters" },
-  { type: "names", cat: "Movies", group: "Characters", title: "Vampire characters (film and TV)", picks: [
-    ["Count Dracula", "Dracula"], ["Count Orlok", "Nosferatu"], ["Lestat de Lioncourt", "Interview with the Vampire"],
-    ["Louis de Pointe du Lac", "Interview with the Vampire"], ["David", "The Lost Boys"], ["Spike", "Buffy the Vampire Slayer"],
-    ["Angel", "Buffy the Vampire Slayer"], ["Selene", "Underworld"], ["Edward Cullen", "Twilight"], ["Alice Cullen", "Twilight"],
-    ["Eric Northman", "True Blood"], ["Bill Compton", "True Blood"], ["Damon Salvatore", "The Vampire Diaries"],
-    ["Klaus Mikaelson", "The Vampire Diaries"], ["Eli", "Let the Right One In"], ["Nandor the Relentless", "What We Do in the Shadows"],
-    ["Nadja", "What We Do in the Shadows"], ["Mavis", "Hotel Transylvania"], ["Alucard", "Castlevania"], ["Count von Count", "Sesame Street"] ] },
-  ...decades(1980, 2010),     // listed before the years so "Whole decade" is the first option in each decade's submenu
-  ...years(1980, 2019),
-  //   "films" is a hand-picked movie list. Each pick is ["Title", release year]; posters are looked up on TMDB.
-  { type: "films", cat: "Franchises", title: "Disney princess movies", picks: [
-    ["Snow White and the Seven Dwarfs", 1937], ["Cinderella", 1950], ["Sleeping Beauty", 1959], ["The Little Mermaid", 1989],
-    ["Beauty and the Beast", 1991], ["Aladdin", 1992], ["Pocahontas", 1995], ["Mulan", 1998], ["The Princess and the Frog", 2009],
-    ["Tangled", 2010], ["Brave", 2012], ["Frozen", 2013], ["Moana", 2016], ["Raya and the Last Dragon", 2021] ] },
-  { type: "films", cat: "Awards", group: "Best Picture winners", short: "1990s", title: "Best Picture winners: 1990s", picks: [
-    ["Dances with Wolves", 1990], ["The Silence of the Lambs", 1991], ["Unforgiven", 1992], ["Schindler's List", 1993],
-    ["Forrest Gump", 1994], ["Braveheart", 1995], ["The English Patient", 1996], ["Titanic", 1997],
-    ["Shakespeare in Love", 1998], ["American Beauty", 1999] ] },
-  { type: "films", cat: "Awards", group: "Best Picture winners", short: "2000s", title: "Best Picture winners: 2000s", picks: [
-    ["Gladiator", 2000], ["A Beautiful Mind", 2001], ["Chicago", 2002], ["The Lord of the Rings: The Return of the King", 2003],
-    ["Million Dollar Baby", 2004], ["Crash", 2005], ["The Departed", 2006], ["No Country for Old Men", 2007],
-    ["Slumdog Millionaire", 2008], ["The Hurt Locker", 2008] ] },
-  { type: "films", cat: "Awards", group: "Best Picture winners", short: "2010s", title: "Best Picture winners: 2010s", picks: [
-    ["The King's Speech", 2010], ["The Artist", 2011], ["Argo", 2012], ["12 Years a Slave", 2013], ["Birdman", 2014],
-    ["Spotlight", 2015], ["Moonlight", 2016], ["The Shape of Water", 2017], ["Green Book", 2018], ["Parasite", 2019] ] },
-  // Music (from MusicBrainz, no key needed).
-  //   "albums" ranks an artist's studio albums. Add songs: true to also build a song list for every one of those albums.
-  //   "tracks" ranks the songs on the albums you name.
-  //   Optional on albums: from / to years, e.g. { type: "albums", name: "Bob Dylan", from: 1962, to: 1976 }
-  { type: "albums",     name: "Taylor Swift", songs: true },
-  { type: "albums",     name: "Sleater-Kinney" },
-  { type: "albums",     name: "Metallica" },
-  { type: "tracks",     artist: "Lorde", albums: ["Pure Heroine", "Melodrama", "Virgin"] },
-  //   "singles" ranks an artist's singles.
-  { type: "singles",    name: "Spice Girls" },
-  { type: "singles",    name: "One Direction" },
-  //   "names" is a hand-picked list of artists to rank. No lookups, so these tiles have no pictures.
-  { type: "names", title: "Top K-pop boy groups", short: "K-pop boy groups", picks: [
-    "BTS", "EXO", "SEVENTEEN", "Stray Kids", "TOMORROW X TOGETHER", "ENHYPEN", "NCT 127", "NCT DREAM", "ATEEZ",
-    "BIGBANG", "SHINee", "GOT7", "MONSTA X", "Super Junior", "TVXQ" ] },
-  { type: "names", title: "Top K-pop girl groups", short: "K-pop girl groups", picks: [
-    "BLACKPINK", "TWICE", "Girls' Generation", "Red Velvet", "NewJeans", "aespa", "IVE", "LE SSERAFIM", "ITZY",
-    "(G)I-DLE", "MAMAMOO", "2NE1", "Wonder Girls", "KARA", "BABYMONSTER" ] },
-  { type: "names", title: "Dream Academy contestants", short: "Dream Academy contestants", picks: [
-    ["Sophia", "KATSEYE"], ["Lara", "KATSEYE"], ["Yoonchae", "KATSEYE"], ["Megan", "KATSEYE"], ["Daniela", "KATSEYE"], ["Manon", "KATSEYE"],
-    "Emily", "Ezrela", "Marquise", "Samara", "Nayoung", "Ua", "Celeste", "Brooklyn", "Karlee", "Iliya", "Mei", "Hinari", "Adéla", "Lexie" ] },
-  { type: "names", group: "Taylor Swift", title: "Taylor Swift track 5 songs", short: "Track 5 songs", picks: [
-    ["Cold As You", "Taylor Swift"], ["White Horse", "Fearless"], ["Dear John", "Speak Now"], ["All Too Well", "Red"],
-    ["All You Had to Do Was Stay", "1989"], ["Delicate", "reputation"], ["The Archer", "Lover"], ["my tears ricochet", "folklore"],
-    ["tolerate it", "evermore"], ["You're On Your Own, Kid", "Midnights"], ["So Long, London", "The Tortured Poets Department"],
-    ["Eldest Daughter", "The Life of a Showgirl"] ] },
-  { type: "names", title: "Top pop solo women", short: "Pop solo women", picks: [
-    "Madonna", "Whitney Houston", "Mariah Carey", "Britney Spears", "Beyoncé", "Rihanna", "Lady Gaga", "Katy Perry",
-    "Adele", "Taylor Swift", "Ariana Grande", "Dua Lipa", "Billie Eilish", "Olivia Rodrigo", "Sabrina Carpenter" ] },
-  //   "curated" is a hand-picked list: MusicBrainz has no popularity data, so "top" lists are chosen here. Edit freely.
-  { type: "curated", title: "Top metal albums", short: "Metal", picks: [
-    ["Black Sabbath", "Paranoid"], ["Judas Priest", "British Steel"], ["Motörhead", "Ace of Spades"],
-    ["Iron Maiden", "The Number of the Beast"], ["Dio", "Holy Diver"], ["Metallica", "Master of Puppets"],
-    ["Slayer", "Reign in Blood"], ["Megadeth", "Rust in Peace"], ["Metallica", "Metallica"],
-    ["Pantera", "Vulgar Display of Power"], ["Tool", "Ænima"], ["Opeth", "Blackwater Park"],
-    ["System of a Down", "Toxicity"], ["Slipknot", "Iowa"], ["Mastodon", "Leviathan"] ] },
-  { type: "curated", title: "Top albums of the 1990s", short: "1990s", picks: [
-    ["Nirvana", "Nevermind"], ["Pearl Jam", "Ten"], ["Dr. Dre", "The Chronic"], ["R.E.M.", "Automatic for the People"],
-    ["The Smashing Pumpkins", "Siamese Dream"], ["Nas", "Illmatic"], ["Green Day", "Dookie"], ["Portishead", "Dummy"],
-    ["The Notorious B.I.G.", "Ready to Die"], ["Alanis Morissette", "Jagged Little Pill"],
-    ["Oasis", "(What's the Story) Morning Glory?"], ["Fugees", "The Score"], ["Beck", "Odelay"],
-    ["Radiohead", "OK Computer"], ["Lauryn Hill", "The Miseducation of Lauryn Hill"] ] },
-  { type: "curated", title: "Top albums of the 2000s", short: "2000s", picks: [
-    ["Radiohead", "Kid A"], ["OutKast", "Stankonia"], ["Eminem", "The Marshall Mathers LP"], ["Daft Punk", "Discovery"],
-    ["The Strokes", "Is This It"], ["Jay-Z", "The Blueprint"], ["Coldplay", "A Rush of Blood to the Head"],
-    ["The White Stripes", "Elephant"], ["Yeah Yeah Yeahs", "Fever to Tell"], ["Beyoncé", "Dangerously in Love"],
-    ["Kanye West", "The College Dropout"], ["Arcade Fire", "Funeral"], ["Green Day", "American Idiot"],
-    ["Amy Winehouse", "Back to Black"], ["LCD Soundsystem", "Sound of Silver"] ] },
-  { type: "curated", title: "Top albums of the 2010s", short: "2010s", picks: [
-    ["Kanye West", "My Beautiful Dark Twisted Fantasy"], ["Arcade Fire", "The Suburbs"], ["Adele", "21"],
-    ["Kendrick Lamar", "good kid, m.A.A.d city"], ["Daft Punk", "Random Access Memories"],
-    ["Vampire Weekend", "Modern Vampires of the City"], ["Taylor Swift", "1989"], ["Kendrick Lamar", "To Pimp a Butterfly"],
-    ["Tame Impala", "Currents"], ["Beyoncé", "Lemonade"], ["Frank Ocean", "Blonde"], ["Lorde", "Melodrama"],
-    ["SZA", "Ctrl"], ["Billie Eilish", "When We All Fall Asleep, Where Do We Go?"], ["Lana Del Rey", "Norman Fucking Rockwell!"] ] },
-  { type: "curated", title: "Canadian rock albums", short: "Canadian rock", picks: [
-    ["The Guess Who", "American Woman"], ["Neil Young", "Harvest"], ["Rush", "Moving Pictures"], ["Bryan Adams", "Reckless"],
-    ["Barenaked Ladies", "Gordon"], ["The Tragically Hip", "Fully Completely"], ["Alanis Morissette", "Jagged Little Pill"],
-    ["Our Lady Peace", "Clumsy"], ["Sum 41", "All Killer No Filler"], ["Nickelback", "Silver Side Up"],
-    ["Avril Lavigne", "Let Go"], ["Simple Plan", "No Pads, No Helmets...Just Balls"], ["Arcade Fire", "Funeral"],
-    ["Billy Talent", "Billy Talent II"], ["Metric", "Fantasies"] ] },
-  // TV, two ways to play: "tv" ranks a show's seasons, "episodes" ranks the episodes inside one season.
-  { type: "tv",         name: "Friends" },
-  { type: "tv",         name: "Stargate SG-1" },
-  { type: "tv",         name: "American Horror Story" },
-  { type: "tv",         name: "The Office", year: 2005 },          // year = first aired, to get the US show and not the UK one
-  { type: "tvgenre",    name: "Sci-Fi & Fantasy", title: "Hit sci-fi TV shows" },
-  // Books (from Open Library, no key needed).
-  //   "books" is a hand-picked list. A pick is ["Title", "Author"], or ["Name shown", "Author", "title to search for"]
-  //           when the tile should show a series name but use its first book's cover.
-  //   "authors" is a hand-picked list of writers, with their Open Library photo where there is one.
-  { type: "books", group: "Popular", title: "BookTok favourites", picks: [
-    ["It Ends with Us", "Colleen Hoover"], ["Verity", "Colleen Hoover"], ["The Seven Husbands of Evelyn Hugo", "Taylor Jenkins Reid"],
-    ["A Court of Thorns and Roses", "Sarah J. Maas"], ["Fourth Wing", "Rebecca Yarros"], ["The Song of Achilles", "Madeline Miller"],
-    ["The Love Hypothesis", "Ali Hazelwood"], ["They Both Die at the End", "Adam Silvera"], ["We Were Liars", "E. Lockhart"],
-    ["The Invisible Life of Addie LaRue", "V. E. Schwab"], ["Icebreaker", "Hannah Grace"], ["Beach Read", "Emily Henry"],
-    ["The Cruel Prince", "Holly Black"], ["Red, White & Royal Blue", "Casey McQuiston"], ["Six of Crows", "Leigh Bardugo"] ] },
-  { type: "books", group: "Genres", title: "Murder mysteries", picks: [
-    ["The Hound of the Baskervilles", "Arthur Conan Doyle"], ["The Maltese Falcon", "Dashiell Hammett"], ["Murder on the Orient Express", "Agatha Christie"],
-    ["And Then There Were None", "Agatha Christie"], ["The Big Sleep", "Raymond Chandler"], ["The Name of the Rose", "Umberto Eco"],
-    ["The Girl with the Dragon Tattoo", "Stieg Larsson"], ["Still Life", "Louise Penny"], ["In the Woods", "Tana French"],
-    ["Gone Girl", "Gillian Flynn"], ["The Cuckoo's Calling", "Robert Galbraith"], ["Big Little Lies", "Liane Moriarty"],
-    ["A Good Girl's Guide to Murder", "Holly Jackson"], ["The Silent Patient", "Alex Michaelides"], ["The Thursday Murder Club", "Richard Osman"] ] },
-  { type: "books", group: "Genres", title: "Sci-fi books and series", picks: [
-    ["Frankenstein", "Mary Shelley"], ["Foundation", "Isaac Asimov"], ["Fahrenheit 451", "Ray Bradbury"], ["Dune", "Frank Herbert"],
-    ["The Left Hand of Darkness", "Ursula K. Le Guin"], ["The Hitchhiker's Guide to the Galaxy", "Douglas Adams"], ["Kindred", "Octavia E. Butler"],
-    ["Neuromancer", "William Gibson"], ["Ender's Game", "Orson Scott Card"], ["Hyperion", "Dan Simmons"], ["Snow Crash", "Neal Stephenson"],
-    ["The Three-Body Problem", "Cixin Liu"], ["The Expanse", "James S. A. Corey", "Leviathan Wakes"], ["The Martian", "Andy Weir"],
-    ["Project Hail Mary", "Andy Weir"] ] },
-  { type: "books", group: "Genres", title: "Fantasy books and series", picks: [
-    ["The Hobbit", "J. R. R. Tolkien"], ["The Chronicles of Narnia", "C. S. Lewis", "The Lion, the Witch and the Wardrobe"],
-    ["The Lord of the Rings", "J. R. R. Tolkien", "The Fellowship of the Ring"], ["Earthsea", "Ursula K. Le Guin", "A Wizard of Earthsea"],
-    ["Discworld", "Terry Pratchett", "The Colour of Magic"], ["The Wheel of Time", "Robert Jordan", "The Eye of the World"],
-    ["A Song of Ice and Fire", "George R. R. Martin", "A Game of Thrones"], ["Harry Potter", "J. K. Rowling", "Harry Potter and the Philosopher's Stone"],
-    ["American Gods", "Neil Gaiman"], ["Mistborn", "Brandon Sanderson", "Mistborn: The Final Empire"],
-    ["The Kingkiller Chronicle", "Patrick Rothfuss", "The Name of the Wind"], ["The Stormlight Archive", "Brandon Sanderson", "The Way of Kings"],
-    ["The Broken Earth", "N. K. Jemisin", "The Fifth Season"], ["A Court of Thorns and Roses", "Sarah J. Maas"],
-    ["The Empyrean", "Rebecca Yarros", "Fourth Wing"] ] },
-  { type: "books", group: "Genres", title: "Poetry books", picks: [   // one book per poet
-    ["Paradise Lost", "John Milton"], ["Songs of Innocence and of Experience", "William Blake"], ["Leaves of Grass", "Walt Whitman"],
-    ["The Complete Poems of Emily Dickinson", "Emily Dickinson"], ["The Waste Land", "T. S. Eliot"],
-    ["Twenty Love Poems and a Song of Despair", "Pablo Neruda"], ["The Collected Poems of Langston Hughes", "Langston Hughes"],
-    ["Howl and Other Poems", "Allen Ginsberg"], ["Ariel", "Sylvia Plath"], ["Where the Sidewalk Ends", "Shel Silverstein"],
-    ["And Still I Rise", "Maya Angelou"], ["Citizen: An American Lyric", "Claudia Rankine"], ["Milk and Honey", "Rupi Kaur"],
-    ["Night Sky with Exit Wounds", "Ocean Vuong"], ["Devotions", "Mary Oliver"] ] },
-  { type: "books", group: "Genres", title: "Graphic novels and series", picks: [
-    ["Maus", "Art Spiegelman"], ["Watchmen", "Alan Moore"], ["Batman: The Dark Knight Returns", "Frank Miller"], ["V for Vendetta", "Alan Moore"],
-    ["The Sandman", "Neil Gaiman", "The Sandman: Preludes & Nocturnes"], ["Bone", "Jeff Smith", "Bone: Out from Boneville"],
-    ["Persepolis", "Marjane Satrapi"], ["Blankets", "Craig Thompson"], ["The Walking Dead", "Robert Kirkman", "The Walking Dead: Days Gone Bye"],
-    ["Scott Pilgrim", "Bryan Lee O'Malley", "Scott Pilgrim's Precious Little Life"], ["Fun Home", "Alison Bechdel"],
-    ["American Born Chinese", "Gene Luen Yang"], ["Smile", "Raina Telgemeier"], ["Saga", "Brian K. Vaughan", "Saga, Volume 1"],
-    ["Nimona", "ND Stevenson"], ["Heartstopper", "Alice Oseman", "Heartstopper: Volume One"] ] },
-  { type: "books", group: "Romance", title: "Hockey and skating romances", picks: [
-    ["Pucked", "Helena Hunting"], ["The Deal", "Elle Kennedy"], ["Him", "Sarina Bowen"], ["From Lukov with Love", "Mariana Zapata"],
-    ["Check, Please!", "Ngozi Ukazu", "Check, Please! Book 1: #Hockey"], ["Heated Rivalry", "Rachel Reid"], ["Consider Me", "Becka Mack"],
-    ["Icebreaker", "Hannah Grace"], ["Mile High", "Liz Tomforde"], ["Pucking Around", "Emily Rath"], ["Behind the Net", "Stephanie Archer"],
-    ["Collide", "Bal Khabra"] ] },
-  { type: "names", cat: "Books", group: "Romance", title: "Romance tropes", picks: [
-    "Enemies to lovers", "Friends to lovers", "Fake dating", "Forced proximity", "Only one bed", "Grumpy and sunshine", "Second chance",
-    "Slow burn", "Forbidden love", "Love triangle", "Marriage of convenience", "Brother's best friend", "Workplace romance",
-    "Secret royal", "He falls first" ] },
-  { type: "books", group: "Young adult", title: "YA standalone favourites", short: "Standalone favourites", picks: [
-    ["The Outsiders", "S. E. Hinton"], ["Speak", "Laurie Halse Anderson"], ["The Perks of Being a Wallflower", "Stephen Chbosky"],
-    ["Looking for Alaska", "John Green"], ["The Book Thief", "Markus Zusak"], ["Thirteen Reasons Why", "Jay Asher"],
-    ["The Fault in Our Stars", "John Green"], ["Eleanor & Park", "Rainbow Rowell"], ["Fangirl", "Rainbow Rowell"],
-    ["We Were Liars", "E. Lockhart"], ["I'll Give You the Sun", "Jandy Nelson"], ["Everything, Everything", "Nicola Yoon"],
-    ["The Hate U Give", "Angie Thomas"], ["They Both Die at the End", "Adam Silvera"], ["Turtles All the Way Down", "John Green"] ] },
-  { type: "books", group: "Young adult", title: "YA series favourites", short: "Series favourites", picks: [
-    ["His Dark Materials", "Philip Pullman", "Northern Lights"], ["Harry Potter", "J. K. Rowling", "Harry Potter and the Philosopher's Stone"],
-    ["Uglies", "Scott Westerfeld"], ["Percy Jackson", "Rick Riordan", "The Lightning Thief"], ["Twilight", "Stephenie Meyer"],
-    ["The Mortal Instruments", "Cassandra Clare", "City of Bones"], ["The Hunger Games", "Suzanne Collins"], ["The Maze Runner", "James Dashner"],
-    ["Divergent", "Veronica Roth"], ["The Lunar Chronicles", "Marissa Meyer", "Cinder"], ["The Selection", "Kiera Cass"],
-    ["Throne of Glass", "Sarah J. Maas"], ["Shadow and Bone", "Leigh Bardugo"], ["Red Queen", "Victoria Aveyard"],
-    ["An Ember in the Ashes", "Sabaa Tahir"] ] },
-  { type: "authors", title: "Most popular authors", picks: [
-    "Stephen King", "J. K. Rowling", "Agatha Christie", "James Patterson", "Colleen Hoover", "Dan Brown", "John Grisham", "Nora Roberts",
-    "Danielle Steel", "George R. R. Martin", "Brandon Sanderson", "Sarah J. Maas", "Neil Gaiman", "Haruki Murakami", "Roald Dahl" ] },
-  { type: "authors", title: "Top women authors", picks: [
-    "Jane Austen", "Mary Shelley", "Charlotte Brontë", "Virginia Woolf", "Agatha Christie", "Toni Morrison", "Maya Angelou",
-    "Ursula K. Le Guin", "Margaret Atwood", "Octavia E. Butler", "Donna Tartt", "J. K. Rowling", "Zadie Smith",
-    "Chimamanda Ngozi Adichie", "Sally Rooney" ] },
-  { type: "authors", title: "Top POC authors", picks: [
-    "James Baldwin", "Gabriel García Márquez", "Chinua Achebe", "Toni Morrison", "Maya Angelou", "Octavia E. Butler", "Haruki Murakami",
-    "Salman Rushdie", "Amy Tan", "Kazuo Ishiguro", "Jhumpa Lahiri", "Zadie Smith", "Colson Whitehead", "Chimamanda Ngozi Adichie",
-    "N. K. Jemisin" ] },
-  { type: "authors", title: "Top Canadian authors", picks: [
-    "L. M. Montgomery", "Robertson Davies", "Margaret Laurence", "Mordecai Richler", "Alice Munro", "Leonard Cohen", "Margaret Atwood",
-    "Michael Ondaatje", "Thomas King", "Douglas Coupland", "Yann Martel", "Miriam Toews", "Louise Penny", "Esi Edugyan",
-    "Emily St. John Mandel" ] },
-  // Video games (from RAWG, needs the RAWG_API_KEY secret).
-  //   "games" is a hand-picked list. A pick is "Name", or ["Name shown", "what to search for", release year].
-  //   "console" is the best-known games on one console. order: "-added" = most popular, "-metacritic" = best reviewed.
-  { type: "games", group: "Franchises", title: "The Legend of Zelda games", short: "The Legend of Zelda", picks: [
-    ["The Legend of Zelda", "The Legend of Zelda", 1986], ["Zelda II: The Adventure of Link", "Zelda II: The Adventure of Link", 1987],
-    ["A Link to the Past", "The Legend of Zelda: A Link to the Past", 1991], ["Link's Awakening", "The Legend of Zelda: Link's Awakening", 1993],
-    ["Ocarina of Time", "The Legend of Zelda: Ocarina of Time", 1998], ["Majora's Mask", "The Legend of Zelda: Majora's Mask", 2000],
-    ["Oracle of Seasons", "The Legend of Zelda: Oracle of Seasons", 2001], ["Oracle of Ages", "The Legend of Zelda: Oracle of Ages", 2001],
-    ["The Wind Waker", "The Legend of Zelda: The Wind Waker", 2002], ["Four Swords Adventures", "The Legend of Zelda: Four Swords Adventures", 2004],
-    ["The Minish Cap", "The Legend of Zelda: The Minish Cap", 2004], ["Twilight Princess", "The Legend of Zelda: Twilight Princess", 2006],
-    ["Phantom Hourglass", "The Legend of Zelda: Phantom Hourglass", 2007], ["Spirit Tracks", "The Legend of Zelda: Spirit Tracks", 2009],
-    ["Skyward Sword", "The Legend of Zelda: Skyward Sword", 2011], ["A Link Between Worlds", "The Legend of Zelda: A Link Between Worlds", 2013],
-    ["Tri Force Heroes", "The Legend of Zelda: Tri Force Heroes", 2015], ["Breath of the Wild", "The Legend of Zelda: Breath of the Wild", 2017],
-    ["Tears of the Kingdom", "The Legend of Zelda: Tears of the Kingdom", 2023], ["Echoes of Wisdom", "The Legend of Zelda: Echoes of Wisdom", 2024] ] },
-  { type: "games", group: "Franchises", title: "Final Fantasy numbered games", short: "Final Fantasy (numbered)", picks: [
-    ["Final Fantasy", "Final Fantasy", 1987], ["Final Fantasy II", "Final Fantasy II", 1988], ["Final Fantasy III", "Final Fantasy III", 1990],
-    ["Final Fantasy IV", "Final Fantasy IV", 1991], ["Final Fantasy V", "Final Fantasy V", 1992], ["Final Fantasy VI", "Final Fantasy VI", 1994],
-    ["Final Fantasy VII", "Final Fantasy VII", 1997], ["Final Fantasy VIII", "Final Fantasy VIII", 1999], ["Final Fantasy IX", "Final Fantasy IX", 2000],
-    ["Final Fantasy X", "Final Fantasy X", 2001], ["Final Fantasy XI", "Final Fantasy XI", 2002], ["Final Fantasy XII", "Final Fantasy XII", 2006],
-    ["Final Fantasy XIII", "Final Fantasy XIII", 2009], ["Final Fantasy XIV", "Final Fantasy XIV Online", 2013],
-    ["Final Fantasy XV", "Final Fantasy XV", 2016], ["Final Fantasy XVI", "Final Fantasy XVI", 2023] ] },
-  { type: "games", group: "Franchises", title: "Kingdom Hearts games", short: "Kingdom Hearts", picks: [
-    ["Kingdom Hearts", "Kingdom Hearts", 2002], ["Chain of Memories", "Kingdom Hearts: Chain of Memories", 2004],
-    ["Kingdom Hearts II", "Kingdom Hearts II", 2005], ["358/2 Days", "Kingdom Hearts 358/2 Days", 2009],
-    ["Birth by Sleep", "Kingdom Hearts Birth by Sleep", 2010], ["Re:coded", "Kingdom Hearts Re:coded", 2010],
-    ["Dream Drop Distance", "Kingdom Hearts 3D: Dream Drop Distance", 2012], ["Kingdom Hearts III", "Kingdom Hearts III", 2019],
-    ["Melody of Memory", "Kingdom Hearts: Melody of Memory", 2020] ] },
-  { type: "games", group: "Franchises", title: "Pokémon generations", short: "Pokémon generations", picks: [
-    ["Gen 1: Red, Blue & Yellow", "Pokémon Red", 1996], ["Gen 2: Gold, Silver & Crystal", "Pokémon Gold", 1999],
-    ["Gen 3: Ruby, Sapphire & Emerald", "Pokémon Ruby", 2002], ["Gen 4: Diamond, Pearl & Platinum", "Pokémon Diamond", 2006],
-    ["Gen 5: Black & White", "Pokémon Black", 2010], ["Gen 6: X & Y", "Pokémon X", 2013], ["Gen 7: Sun & Moon", "Pokémon Sun", 2016],
-    ["Gen 8: Sword & Shield", "Pokémon Sword", 2019], ["Gen 9: Scarlet & Violet", "Pokémon Scarlet", 2022] ] },
-  { type: "games", group: "Franchises", title: "Call of Duty games", short: "Call of Duty", picks: [
-    ["Call of Duty", "Call of Duty", 2003], ["Call of Duty 2", "Call of Duty 2", 2005], ["Call of Duty 3", "Call of Duty 3", 2006],
-    ["Call of Duty 4: Modern Warfare", "Call of Duty 4: Modern Warfare", 2007], ["World at War", "Call of Duty: World at War", 2008],
-    ["Modern Warfare 2 (2009)", "Call of Duty: Modern Warfare 2", 2009], ["Black Ops", "Call of Duty: Black Ops", 2010],
-    ["Modern Warfare 3 (2011)", "Call of Duty: Modern Warfare 3", 2011], ["Black Ops II", "Call of Duty: Black Ops II", 2012],
-    ["Ghosts", "Call of Duty: Ghosts", 2013], ["Advanced Warfare", "Call of Duty: Advanced Warfare", 2014],
-    ["Black Ops III", "Call of Duty: Black Ops III", 2015], ["Infinite Warfare", "Call of Duty: Infinite Warfare", 2016],
-    ["WWII", "Call of Duty: WWII", 2017], ["Black Ops 4", "Call of Duty: Black Ops 4", 2018],
-    ["Modern Warfare (2019)", "Call of Duty: Modern Warfare", 2019], ["Black Ops Cold War", "Call of Duty: Black Ops Cold War", 2020],
-    ["Vanguard", "Call of Duty: Vanguard", 2021], ["Modern Warfare II (2022)", "Call of Duty: Modern Warfare II", 2022],
-    ["Modern Warfare III (2023)", "Call of Duty: Modern Warfare III", 2023], ["Black Ops 6", "Call of Duty: Black Ops 6", 2024],
-    ["Black Ops 7", "Call of Duty: Black Ops 7", 2025] ] },
-  { type: "games", group: "Genres", title: "Cosy games", short: "Cosy games", picks: [
-    "Stardew Valley", "Animal Crossing: New Horizons", "A Short Hike", "Unpacking", "Spiritfarer", "Slime Rancher", "Cozy Grove",
-    "Dorfromantik", "Disney Dreamlight Valley", "My Time at Portia", "Coffee Talk", "PowerWash Simulator", "Ooblets",
-    "Dave the Diver", "Littlewood" ] },
-  { type: "games", group: "Genres", title: "First-person shooters", short: "First-person shooters", picks: [
-    ["DOOM (1993)", "DOOM", 1993], ["GoldenEye 007", "GoldenEye 007", 1997], ["Half-Life", "Half-Life", 1998],
-    ["Counter-Strike", "Counter-Strike", 2000], ["Halo: Combat Evolved", "Halo: Combat Evolved", 2001], ["Half-Life 2", "Half-Life 2", 2004],
-    ["Call of Duty 4: Modern Warfare", "Call of Duty 4: Modern Warfare", 2007], ["BioShock", "BioShock", 2007], ["Halo 3", "Halo 3", 2007],
-    ["Left 4 Dead 2", "Left 4 Dead 2", 2009], ["Borderlands 2", "Borderlands 2", 2012], ["Overwatch", "Overwatch", 2016],
-    ["DOOM (2016)", "DOOM", 2016], ["Titanfall 2", "Titanfall 2", 2016], ["Destiny 2", "Destiny 2", 2017] ] },
-  { type: "games", group: "Genres", title: "Two-player fighting games", short: "Two-player fighting games", picks: [
-    ["Street Fighter II", "Street Fighter II", 1991], ["Mortal Kombat II", "Mortal Kombat II", 1993], ["Killer Instinct", "Killer Instinct", 1994],
-    ["Tekken 3", "Tekken 3", 1997], ["Street Fighter III: 3rd Strike", "Street Fighter III: 3rd Strike", 1999],
-    ["Super Smash Bros. Melee", "Super Smash Bros. Melee", 2001], ["Soulcalibur II", "Soulcalibur II", 2002],
-    ["Street Fighter IV", "Street Fighter IV", 2008], ["Injustice 2", "Injustice 2", 2017], ["Tekken 7", "Tekken 7", 2015],
-    ["Dragon Ball FighterZ", "Dragon Ball FighterZ", 2018], ["Super Smash Bros. Ultimate", "Super Smash Bros. Ultimate", 2018],
-    ["Mortal Kombat 11", "Mortal Kombat 11", 2019], ["Guilty Gear -Strive-", "Guilty Gear -Strive-", 2021], ["Street Fighter 6", "Street Fighter 6", 2023] ] },
-  { type: "games", group: "Genres", title: "MMORPGs", short: "MMORPGs", picks: [
-    "Ultima Online", "EverQuest", "RuneScape", "EVE Online", "Lineage II", "World of Warcraft", "Guild Wars 2", "MapleStory",
-    "Star Wars: The Old Republic", "The Elder Scrolls Online", "Final Fantasy XIV Online", "Black Desert Online", "Lost Ark",
-    "New World", "Old School RuneScape" ] },
-  { type: "console", name: "Nintendo 64", title: "Best Nintendo 64 games", since: 1996, oneSeries: true },
-  { type: "console", name: "SNES", title: "Best Super Nintendo games", since: 1990, oneSeries: true },
-  { type: "console", name: "Nintendo Switch", title: "Best Nintendo Switch games", order: "-metacritic", since: 2017, oneSeries: true },
-  { type: "games", group: "Awards", title: "The Game Awards: Game of the Year winners", short: "Game of the Year winners", picks: [
-    ["Dragon Age: Inquisition", "Dragon Age: Inquisition", 2014], ["The Witcher 3: Wild Hunt", "The Witcher 3: Wild Hunt", 2015],
-    ["Overwatch", "Overwatch", 2016], ["Breath of the Wild", "The Legend of Zelda: Breath of the Wild", 2017],
-    ["God of War", "God of War", 2018], ["Sekiro: Shadows Die Twice", "Sekiro: Shadows Die Twice", 2019],
-    ["The Last of Us Part II", "The Last of Us Part II", 2020], ["It Takes Two", "It Takes Two", 2021], ["Elden Ring", "Elden Ring", 2022],
-    ["Baldur's Gate 3", "Baldur's Gate 3", 2023], ["Astro Bot", "Astro Bot", 2024],
-    ["Clair Obscur: Expedition 33", "Clair Obscur: Expedition 33", 2025] ] },
-  //   "cast" ranks a show's main characters (the ones in the most episodes). Optional count: 8 for a smaller list.
-  { type: "cast",       name: "Stargate SG-1" },
-  { type: "cast",       name: "Grey's Anatomy" },
-  { type: "cast",       name: "The Office", year: 2005 },
-  { type: "cast",       name: "Friends" },
-  { type: "cast",       name: "Bridgerton" },
-  //   photos: false leaves the actor photos off, for animated shows where the picture would be the voice actor.
-  //   group / short put a list in a shared submenu under a different label, here one "Avatar universe" menu for both shows.
-  { type: "cast",       name: "Avatar: The Last Airbender", year: 2005, photos: false, group: "Avatar universe", short: "The Last Airbender characters" },
-  { type: "cast",       name: "The Legend of Korra", photos: false, group: "Avatar universe", short: "The Legend of Korra characters" },
-  { type: "names", cat: "TV", group: "Avatar universe", title: "Avatar universe bending abilities", short: "Bending abilities", picks: [
-    "Waterbending", "Earthbending", "Firebending", "Airbending", "Metalbending", "Lightning generation", "Bloodbending", "Healing",
-    "Lavabending", "Sandbending", "Plantbending", "Combustionbending", "Energybending", "Spirit projection", "Flight" ] },
-  // seasons can be "all", one number (season: 5), or a few (seasons: [1, 2, 3]). Each season becomes its own list.
-  { type: "episodes",   name: "Friends", seasons: "all" },
-  { type: "episodes",   name: "Stargate SG-1", seasons: "all" },
-  { type: "episodes",   name: "The Office", year: 2005, seasons: "all" }
-];
-const MAX_ITEMS = 15;        // items per list
-const MAX_EPISODES = 27;    // long seasons are trimmed to their most-voted episodes
-const MAX_CAST = 12;        // characters per "main characters" list
-const MAX_TRACKS = 30;      // songs per album
-const MAX_ALBUMS = 20;      // albums per artist; use from / to on the entry to choose an era for bigger catalogues
-const MIN_ITEMS = 5;         // skip lists that come out shorter than this
-const MIN_VOTES = 300;       // drops obscure titles
-const EXCLUDE_MARVEL = true; // set false to allow Marvel films
-/* ========================================================= */
+/* ============ 2. THE LIST BEING RANKED (swap this for other topics) ============ */
+const BUILTIN = {
+  id: "taylor-swift-albums",
+  cat: "Music", group: "Taylor Swift", short: "Albums",
+  title: "Taylor Swift albums",
+  items: [
+    {id:"debut",       name:"Taylor Swift", note:"2006", sq:true},
+    {id:"fearless",    name:"Fearless", note:"2008", sq:true},
+    {id:"speaknow",    name:"Speak Now", note:"2010", sq:true},
+    {id:"red",         name:"Red", note:"2012", sq:true},
+    {id:"a1989",       name:"1989", note:"2014", sq:true},
+    {id:"reputation",  name:"reputation", note:"2017", sq:true},
+    {id:"lover",       name:"Lover", note:"2019", sq:true},
+    {id:"folklore",    name:"folklore", note:"2020", sq:true},
+    {id:"evermore",    name:"evermore", note:"2020", sq:true},
+    {id:"fearless_tv", name:"Fearless", note:"Taylor's Version, 2021", tv:true, sq:true},
+    {id:"red_tv",      name:"Red", note:"Taylor's Version, 2021", tv:true, sq:true},
+    {id:"midnights",   name:"Midnights", note:"2022", sq:true},
+    {id:"speaknow_tv", name:"Speak Now", note:"Taylor's Version, 2023", tv:true, sq:true},
+    {id:"a1989_tv",    name:"1989", note:"Taylor's Version, 2023", tv:true, sq:true},
+    {id:"ttpd",        name:"The Tortured Poets Department", note:"2024", sq:true},
+    {id:"showgirl",    name:"The Life of a Showgirl", note:"2025", sq:true}
+  ]
+};
+const TIERS = ["S","A","B","C","D","F"];
+const PTS_EXACT = 3, PTS_NEAR = 1, BONUS = 3; // points for an exact guess, a guess one tier off, and each perfectly predicted tier row
 
-// MusicBrainz asks every app to identify itself and to stay under one request per second.
-const MB_AGENT = "OutRanked/1.0 ( https://github.com/ojm404/game2 )";
+/* ============ 3. WHERE THE PRE-BUILT TMDB LISTS LIVE ============ */
+// Same folder as this page by default. If the page is hosted elsewhere, use the raw GitHub URL of lists.json.
+// The public web address of this game, e.g. "https://yoursite.com/outranked". Used for invite links and shared results.
+const SITE_URL = "https://outranked.games";
+const LISTS_URL = "https://raw.githubusercontent.com/ojm404/game2/main/lists.json";
+const POSTER = "https://image.tmdb.org/t/p/w92";
+const POSTER_L = "https://image.tmdb.org/t/p/w185";
+let lists = [BUILTIN], pickId = null;   // nothing is chosen until the player picks a list
+const L = () => room.list;
+// Tier names are set by whoever creates the room. Internally tiers are still positions, so scoring is unchanged.
+let tierNames = TIERS.slice();
+const roomTiers = () => (room && room.tiers) || TIERS;
+const keys = () => TIERS.slice(0, roomTiers().length);
+const tlabel = k => esc(roomTiers()[TIERS.indexOf(k)] || k);
+const longTiers = () => roomTiers().some(t => t.length > 2);
 
-const KEY = process.env.TMDB_API_KEY;
-if (!KEY) { console.error("Set the TMDB_API_KEY environment variable."); process.exit(1); }
-const isToken = KEY.length > 40;
-
-async function tmdb(path, params = {}) {
-  const url = new URL("https://api.themoviedb.org/3" + path);
-  Object.entries(params).forEach(([k, v]) => url.searchParams.set(k, v));
-  if (!isToken) url.searchParams.set("api_key", KEY);
-  const res = await fetch(url, isToken ? { headers: { Authorization: "Bearer " + KEY } } : {});
-  if (!res.ok) throw new Error(`TMDB ${res.status} on ${path}`);
-  return res.json();
+/* ============ GAME ============ */
+const app = document.getElementById("app");
+// Pop-up state lives up here because the very first draw of the page already consults it.
+const modalEl = document.getElementById("modal");
+let modal = null;                                   // which pop-up is showing, if any
+const seen = {round: null, gone: null, say: 0, next: null};     // what has already been announced, so pop-ups appear once
+let vis = null;                                     // the part of the page currently on screen
+let modalTop = null, modalFor = null;               // where the open pop-up was placed, and which pop-up that was
+const configured = !firebaseConfig.apiKey.startsWith("PASTE");
+const STORE = "tierBattleship";
+// What players can choose from on the Create and Join screens.
+const PALETTE = ["#FF5FA8", "#5CC8FF", "#B58CFF", "#FF8A4C", "#2DD4BF", "#E9DDFF"];
+const PALETTE_NAMES = ["Pink", "Blue", "Violet", "Orange", "Teal", "White"];
+const EMOJIS = ["\u{1F60D}", "\u{1F92C}", "\u{1F920}", "\u{1F63A}", "\u{1F921}", "\u{1F608}", "\u{1F984}", "\u{1F978}", "\u{1F47D}"];
+// Quick messages players can send each other at the end of a round.
+const SAY = ["Good game!", "Congrats!", "Better luck next time", "So close!", "You know me too well", "Rematch?"];
+const rand = arr => arr[Math.floor(Math.random() * arr.length)];
+const blank = () => ({name:"", code:null, slot:null, round:0, own:{}, guess:{}, step:"own", reveal:0, color: rand(PALETTE), emoji: rand(EMOJIS)});
+// Colour and emoji for a seat, checked against the lists above so nothing unexpected from the database reaches the page.
+function look(slot){
+  const p = room && room.players && room.players[slot] || {};
+  return { color: PALETTE.includes(p.color) ? p.color : (slot === "p1" ? PALETTE[0] : PALETTE[1]), emoji: EMOJIS.includes(p.emoji) ? p.emoji : "" };
 }
+const mark = slot => { const e = look(slot).emoji; return e ? `<span class="em">${e}</span>` : '<i class="dot"></i>'; };
+let me = blank();
+try { me = Object.assign(blank(), JSON.parse(localStorage.getItem(STORE)) || {}); } catch(e){}
+if (!EMOJIS.includes(me.emoji)) me.emoji = rand(EMOJIS);   // e.g. a saved choice that is no longer offered
+if (!PALETTE.includes(me.color)) me.color = rand(PALETTE);
+let room = null, roomRef = null, selected = null, errMsg = "", db = null, lobbyCode = "", lobbyMode = null;
+// The game's public address, used in invite links and copied results. When the game is embedded in a site builder
+// the page cannot always see its own address, so SITE_URL (set near the top of this script) is used when filled in.
+function pageUrl(){
+  if (SITE_URL) return SITE_URL;
+  try { if (window.top !== window.self) return window.top.location.href.split(/[?#]/)[0]; } catch (e) {}
+  if (location.origin && location.origin !== "null") return location.origin + location.pathname;
+  if (document.referrer) return document.referrer.split(/[?#]/)[0];
+  return "";
+}
+function urlParam(name){
+  for (const read of [() => window.top.location.search, () => location.search, () => new URL(document.referrer).search]) {
+    try { const v = new URLSearchParams(read()).get(name); if (v) return v; } catch (e) {}
+  }
+  return "";
+}
+// An invite link (?room=ABCD) opens straight on the Join screen with the code filled in.
+const invited = (urlParam("room") || "").toUpperCase().replace(/[^A-Z]/g, "").slice(0, 4);
+if (invited.length === 4 && !me.code) { lobbyMode = "join"; lobbyCode = invited; }
 
-const today = new Date().toISOString().slice(0, 10);
-const slug = s => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-const year = d => (d || "").slice(0, 4);
-const movieItem = m => ({ id: "m" + m.id, name: m.title, note: year(m.release_date), poster: m.poster_path || null });
-
-// Looks up one movie's studios and keywords to see whether it is a Marvel film or a Disney (but not Pixar) film.
-async function studioFlags(id) {
-  const d = await tmdb(`/movie/${id}`, { append_to_response: "keywords" });
-  const studios = (d.production_companies || []).map(x => x.name.toLowerCase());
-  const words = ((d.keywords && d.keywords.keywords) || []).map(x => x.name.toLowerCase());
-  return {
-    marvel: [...studios, ...words].some(n => n.includes("marvel")) || /deadpool/i.test(d.title),
-    // Pixar films also list Disney as a studio, so anything with Pixar on it is kept.
-    disney: studios.some(n => n.includes("disney")) && !studios.some(n => n.includes("pixar")),
-    franchise: d.belongs_to_collection ? d.belongs_to_collection.id : null
+// Copies text three ways, because embedded pages are often not allowed to use the modern clipboard:
+// 1) the classic copy command, 2) the modern clipboard, 3) a box with the text selected so it can be copied by hand.
+function copyText(text, btn){
+  const flash = msg => { if (!btn) return; const old = btn.dataset.label || btn.textContent; btn.dataset.label = old; btn.textContent = msg; setTimeout(() => { btn.textContent = old; }, 1800); };
+  const classic = () => {
+    const ta = document.createElement("textarea");
+    ta.value = text; ta.setAttribute("readonly", ""); // Placed right where the button is and focused without scrolling, so the page cannot jump under the player's finger.
+    const at = btn && btn.getBoundingClientRect ? btn.getBoundingClientRect() : {top: 0, left: 0};
+    ta.style.cssText = `position:fixed;top:${Math.max(0, at.top)}px;left:${Math.max(0, at.left)}px;width:1px;height:1px;opacity:0`;
+    document.body.appendChild(ta); ta.focus({preventScroll: true}); ta.select(); ta.setSelectionRange(0, text.length);
+    let ok = false; try { ok = document.execCommand("copy"); } catch (e) {}
+    ta.remove(); return ok;
   };
+  const byHand = () => {
+    document.querySelectorAll(".copybox").forEach(b => b.remove());
+    const box = document.createElement("div"); box.className = "copybox";
+    box.innerHTML = '<p>Copying is blocked here, so select the text below and copy it yourself.</p>';
+    const ta = document.createElement("textarea"); ta.value = text; ta.readOnly = true; ta.rows = Math.min(8, text.split("\n").length + 1);
+    box.appendChild(ta);
+    (btn && btn.closest(".actions, .status") || app).insertAdjacentElement("afterend", box);
+    ta.focus(); ta.select();
+  };
+  const fallback = () => { if (classic()) flash("Copied"); else byHand(); };
+  try { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(text).then(() => flash("Copied"), fallback); return; } } catch (e) {}
+  fallback();
 }
 
-// Takes candidate movies, keeps the best-known released features, returns them oldest first.
-// noDisney: true also leaves out Disney films, but keeps Pixar (used on lists where Disney would otherwise crowd everything out).
-// oneFranchise: true keeps only the best-known film from any one franchise (TMDB collection).
-// noSequels: true keeps a franchise film only if it is the first one released in its franchise.
-const firstFilmCache = new Map();
-async function firstFilmOf(collectionId) {
-  if (!firstFilmCache.has(collectionId)) {
-    const c = await tmdb(`/collection/${collectionId}`);
-    const dated = (c.parts || []).filter(p => p.release_date).sort((a, b) => a.release_date.localeCompare(b.release_date));
-    firstFilmCache.set(collectionId, dated.length ? dated[0].id : null);
+function scoreOf(g, a){
+  const n = d => L().items.filter(x => dist(g[x.id], a[x.id]) === d).length;
+  return n(0) * PTS_EXACT + n(1) * PTS_NEAR + perfectRows(g, a).length * BONUS;
+}
+// Everything about the current round's result, from this player's point of view.
+function outcome(){
+  const mine = room.players[me.slot], opp = room.players[otherSlot()];
+  const my = tally(mine.guess, opp.own, keys()), their = tally(opp.guess, mine.own, keys());
+  const tie = my.score === their.score;
+  const T = room.tb, settled = !!(tie && T && T.pick && T.guess);
+  const tbWinner = settled ? (T.pick === T.guess ? T.guesser : T.chooser) : null;
+  const iWin = settled ? tbWinner === me.slot : my.score > their.score;
+  const oppWin = settled ? tbWinner !== me.slot : their.score > my.score;
+  return {mine, opp, my, their, tie, settled, iWin, oppWin};
+}
+const tallyText = t => `\u2705 ${t.exact}  \u{1F525} ${t.near}  \u2744\uFE0F ${t.cold}`;
+// Totals across every round played in this room. Each finished round is saved under room.history.
+function sessionStats(){
+  const rounds = Object.values(room.history || {}).filter(Boolean);
+  const blankSide = () => ({wins: 0, exact: 0, near: 0, cold: 0});
+  const st = {rounds: rounds.length, ties: 0, p1: blankSide(), p2: blankSide()};
+  rounds.forEach(h => {
+    ["p1", "p2"].forEach(sl => { const x = h[sl] || {}; st[sl].exact += x.e || 0; st[sl].near += x.n || 0; st[sl].cold += x.c || 0; });
+    const a = (h.p1 || {}).s || 0, b = (h.p2 || {}).s || 0;
+    const w = a > b ? "p1" : b > a ? "p2" : h.tbw || null;
+    if (w) st[w].wins++; else st.ties++;
+  });
+  return st;
+}
+const winsText = n => n + (n === 1 ? " win" : " wins");
+function shareText(){
+  const mine = room.players[me.slot], opp = room.players[otherSlot()];
+  const who = slot => { const e = look(slot).emoji; return (e ? e + " " : "") + room.players[slot].name; };
+  const me1 = who(me.slot), them = who(otherSlot());
+  const done = !!(mine.own && mine.guess && opp && opp.own && opp.guess);   // does the current round have results?
+  const st = sessionStats(), final = !!room.closed, tag = final ? "OutRanked final results: " : "OutRanked: ";
+  const rounds = `${st.rounds} ${st.rounds === 1 ? "round" : "rounds"}`;
+  let out;
+  if (st.rounds > 1 || (st.rounds === 1 && !done)) {
+    // Two or more rounds played (or the game ended between rounds): share the running totals only.
+    const mw = st[me.slot].wins, tw = st[otherSlot()].wins;
+    const head = final
+      ? (mw === tw ? `${me1} and ${them} finished level at ${mw}-${tw} over ${rounds}` : mw > tw ? `${me1} beat ${them} ${mw}-${tw} over ${rounds}` : `${them} beat ${me1} ${tw}-${mw} over ${rounds}`)
+      : (mw === tw ? `${me1} and ${them} are level at ${mw}-${tw} after ${rounds}` : mw > tw ? `${me1} leads ${them} ${mw}-${tw} after ${rounds}` : `${them} leads ${me1} ${tw}-${mw} after ${rounds}`);
+    const side = slot => `${who(slot)}: ${winsText(st[slot].wins)}, ${tallyText(st[slot])}`;
+    out = [tag + head + (st.ties ? ` (${st.ties} tied)` : ""), side(me.slot), side(otherSlot())];
+  } else if (done) {
+    const o = outcome(), a = o.my.score, b = o.their.score;
+    let line;
+    if (a > b) line = `${me1} beat ${them} ${a}-${b}`;
+    else if (b > a) line = `${them} beat ${me1} ${b}-${a}`;
+    else if (o.settled) line = `${me1} and ${them} tied ${a}-${b}, and ${(o.iWin ? o.mine : o.opp).name} won the tiebreaker`;
+    else line = `${me1} and ${them} tied ${a}-${b}`;
+    out = [tag + L().title, line, `${me1}: ${tallyText(o.my)}`, `${them}: ${tallyText(o.their)}`];
+  } else {
+    out = [tag + `${me1} vs ${them}, no rounds finished`];
   }
-  return firstFilmCache.get(collectionId);
+  const url = pageUrl();
+  out.push("Rank a list, then guess how your friend ranked it." + (url ? " Play: " + url : ""));
+  return out.join("\n");
 }
-async function pickMovies(candidates, { minVotes = MIN_VOTES, noDisney = false, oneFranchise = false, noSequels = false } = {}) {
-  const franchises = new Set();
-  const seen = new Set();
-  const pool = candidates
-    .filter(m => m.release_date && m.release_date <= today && !m.video && m.vote_count >= minVotes)
-    .filter(m => !(m.genre_ids || []).includes(99))            // no documentaries
-    .filter(m => !seen.has(m.id) && seen.add(m.id))
-    .sort((a, b) => b.vote_count - a.vote_count);
-  const out = [];
-  for (const m of pool) {
-    if (out.length >= MAX_ITEMS) break;
-    if (EXCLUDE_MARVEL || noDisney || oneFranchise || noSequels) {
-      const f = await studioFlags(m.id);
-      if ((EXCLUDE_MARVEL && f.marvel) || (noDisney && f.disney)) continue;
-      if (noSequels && f.franchise && (await firstFilmOf(f.franchise)) !== m.id) continue;
-      if (oneFranchise && f.franchise) {
-        if (franchises.has(f.franchise)) continue;    // a bigger film from this franchise is already in
-        franchises.add(f.franchise);
-      }
-    }
-    out.push(m);
+
+
+const save = () => { try { localStorage.setItem(STORE, JSON.stringify(me)); } catch(e){} };
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fullName = a => a.name + (a.tv ? " (TV)" : "");
+const otherSlot = () => me.slot === "p1" ? "p2" : "p1";
+
+fetch(LISTS_URL).then(r => r.ok ? r.json() : null).then(d => {
+  if (d && Array.isArray(d.lists)) { // The built-in list steps aside once the build script supplies its own list with the same title.
+    const dupe = d.lists.some(l => (l.title || "").toLowerCase() === BUILTIN.title.toLowerCase());
+    lists = dupe ? d.lists : [BUILTIN, ...d.lists]; fillSelects(); }
+}).catch(() => {});
+
+// Lists are grouped into categories. build-lists.js sets "cat" on each list; older files are sorted by their title.
+const CAT_ORDER = ["Movies", "TV", "Music", "Books", "Games", "Movies by year"];
+let pickCat = "Music";
+function catOf(l){
+  if (l.cat) return l.cat;
+  const t = l.title || "";
+  if (/ (seasons|episodes)$/.test(t)) return "TV";
+  if (/^Biggest movies of/.test(t)) return "Movies by year";
+  if (/^Films directed by| movies$/.test(t)) return "Actors & directors";
+  if (/ films$/.test(t)) return "Franchises";
+  return "Other";
+}
+// Second level: in a category where lists belong to a show (TV), pick the show first, then seasons or one season's episodes.
+let pickGroup = null;
+function groupOf(l){
+  if (l.group) return l.group;
+  const y = /^Biggest movies of (\d{3})\d$/.exec(l.title || "");
+  if (y) return y[1] + "0s";
+  const m = /^(.*) season \d+ episodes$/.exec(l.title || "") || /^(.*) seasons$/.exec(l.title || "");
+  return m ? m[1] : null;
+}
+function shortOf(l){
+  const g = groupOf(l), t = l.title || "";
+  if (l.short) return l.short;
+  const yr = /^Biggest movies of (\d{4})$/.exec(t);
+  if (yr) return yr[1];
+  if (g && t.startsWith(g + " ")) { const rest = t.slice(g.length + 1); return rest.charAt(0).toUpperCase() + rest.slice(1); }
+  return t;
+}
+// One dropdown with submenus: category, then (where lists belong to a show, artist or decade) that group, then the list.
+let pickOpen = false;
+function pickerTree(){
+  const present = [...new Set(lists.map(catOf))];
+  const cats = [...CAT_ORDER.filter(c => present.includes(c)), ...present.filter(c => !CAT_ORDER.includes(c))];
+  return cats.map(c => {
+    const inCat = lists.filter(l => catOf(l) === c);
+    const other = c === "TV" ? "Show rankings" : "Other";
+    const g = l => groupOf(l) || other;
+    const groups = inCat.some(groupOf) ? [...new Set(inCat.map(g))].map(name => ({name, lists: inCat.filter(l => g(l) === name)})) : null;
+    return {name: c, groups, lists: inCat};
+  });
+}
+function fillSelects(){
+  const cur = lists.find(l => l.id === pickId) || null;
+  if (!cur) pickId = null;
+  const opt = (l, label) => `<button type="button" class="opt${l.id === pickId ? " on" : ""}" data-act="pickList" data-id="${esc(l.id)}">${esc(label)}</button>`;
+  const group = grp => grp.lists.length === 1 ? opt(grp.lists[0], grp.lists[0].title)
+    : `<details${grp.lists.includes(cur) ? " open" : ""}><summary>${esc(grp.name)}</summary>${grp.lists.map(l => opt(l, shortOf(l))).join("")}</details>`;
+  const panel = !pickOpen ? "" : `<div class="pickpanel">${pickerTree().map(c =>
+    `<details${c.lists.includes(cur) ? " open" : ""}><summary>${esc(c.name)}</summary>${c.groups ? c.groups.map(group).join("") : c.lists.map(l => opt(l, l.title)).join("")}</details>`).join("")}</div>`;
+  const html = `<button type="button" class="pickbtn" data-act="togglePick" aria-expanded="${pickOpen}"><span${cur ? "" : ' class="ph-text"'}>${cur ? esc(cur.title) : "Choose a category and list"}</span><span aria-hidden="true">${pickOpen ? "\u25B4" : "\u25BE"}</span></button>${panel}`;
+  document.querySelectorAll(".picker").forEach(p => { p.innerHTML = html; });
+}
+function chosenList(){
+  const l = lists.find(x => x.id === pickId);
+  if (!l) return null;
+  return JSON.parse(JSON.stringify({title: l.title, items: l.items}));
+}
+
+if (configured) {
+  firebase.initializeApp(firebaseConfig);
+  db = firebase.database();
+  if (me.code) subscribe();
+}
+render();
+
+function subscribe(){
+  roomRef = db.ref("rooms/" + me.code);
+  roomRef.on("value", snap => {
+    room = snap.val();
+    if (!room || !room.list || !room.players || !room.players[me.slot]) { leave("That room no longer exists."); return; }
+    watchPresence();
+    if (room.round !== me.round) { me.round = room.round; me.own = {}; me.guess = {}; me.step = "own"; me.reveal = 0; me.tbPick = null; selected = null; save(); }
+    sync(); render();
+  });
+}
+
+// Rankings stay on your own device until both players have locked in.
+function sync(){
+  const mine = room.players[me.slot], opp = room.players[otherSlot()];
+  const mineRef = roomRef.child("players/" + me.slot);
+  if (me.step === "locked" && !mine.ready) mineRef.update({ready:true});
+  if (me.step === "locked" && mine.ready && opp && opp.ready && !mine.own) mineRef.update({own:me.own, guess:me.guess});
+  const T = room.tb;
+  if (T && T.chooser === me.slot && T.guess && !T.pick && me.tbPick && me.tbPick.id === T.id) roomRef.child("tb").update({pick: me.tbPick.pick});
+  // Save each finished round once, so the room can keep running totals. Both players may write it; the data is identical.
+  const p1 = room.players.p1, p2 = room.players.p2;
+  if (p1 && p2 && p1.own && p1.guess && p2.own && p2.guess) {
+    const key = "r" + room.round, h = (room.history || {})[key];
+    const pack = t => ({s: t.score, e: t.exact, n: t.near, c: t.cold});
+    if (!h) roomRef.child("history/" + key).set({list: L().title, p1: pack(tally(p1.guess, p2.own, keys())), p2: pack(tally(p2.guess, p1.own, keys()))});
+    else if (!h.tbw && h.p1.s === h.p2.s && T && T.pick && T.guess) roomRef.child("history/" + key + "/tbw").set(T.pick === T.guess ? T.guesser : T.chooser);
   }
-  return out.sort((a, b) => a.release_date.localeCompare(b.release_date)).map(movieItem);
 }
 
-async function findPerson(name) {
-  const r = await tmdb("/search/person", { query: name });
-  if (!r.results.length) throw new Error("No person found for " + name);
-  return r.results[0];
+// Presence: each player marks their seat online, and the database flips it to offline by itself if their connection drops
+// (closed tab, lost signal). Pressing "Leave room" additionally marks the seat as having left on purpose.
+let conRef = null;
+function watchPresence(){
+  if (conRef || !db || !roomRef) return;
+  const seat = roomRef.child("players/" + me.slot);
+  conRef = db.ref(".info/connected");
+  conRef.on("value", snap => {
+    if (snap.val() !== true) return;
+    seat.child("online").onDisconnect().set(false);
+    seat.update({online: true, left: null, away: document.hidden === true});
+  });
 }
-
-// ---- Open Library (books) ----
-// No key needed. Open Library asks apps to identify themselves and not to hammer it, so there is a short pause per request.
-async function openLibrary(path, params = {}) {
-  await sleep(350);
-  const url = new URL("https://openlibrary.org" + path);
-  Object.entries(params).forEach(([k, v]) => url.searchParams.set(k, v));
-  const res = await fetch(url, { headers: { "User-Agent": MB_AGENT, Accept: "application/json" } });
-  if (!res.ok) throw new Error(`Open Library ${res.status} on ${path}`);
-  return res.json();
-}
-// Finds a book by title and author and returns the best-known version that has a cover.
-async function findBook(title, author) {
-  const r = await openLibrary("/search.json", { title, author, limit: 10, fields: "key,title,author_name,cover_i,first_publish_year,edition_count" });
-  const docs = (r.docs || []).sort((a, b) => (b.edition_count || 0) - (a.edition_count || 0));
-  return docs.find(d => d.cover_i) || docs[0] || null;
-}
-
-// ---- RAWG (video games) ----
-const RAWG_KEY = process.env.RAWG_API_KEY;
-async function rawg(path, params = {}) {
-  if (!RAWG_KEY) throw new Error("the RAWG_API_KEY secret is not set");
-  const url = new URL("https://api.rawg.io/api" + path);
-  Object.entries({ ...params, key: RAWG_KEY }).forEach(([k, v]) => url.searchParams.set(k, v));
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`RAWG ${res.status} on ${path}`);
-  return res.json();
-}
-// RAWG's artwork is very large, so "img" asks its image server for a small crop and "img2" keeps the original as a fallback.
-function gameItem(g, name, note) {
-  const art = g.background_image || null;
-  return { id: "v" + g.id, name: name || g.name, note: note || year(g.released),
-    ...(art ? { img: art.replace("/media/games/", "/media/crop/600/400/games/").replace("/media/screenshots/", "/media/crop/600/400/screenshots/"), img2: art } : {}),
-    wide: true };
-}
-const plain = s => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, " ").trim();
-// Finds one game by name. With a year, only a game released within a year of it is accepted, so remakes are not picked by mistake.
-async function findGame(query, yr) {
-  const r = await rawg("/games", { search: query, search_precise: "true", page_size: 10 });
-  const res = r.results || [];
-  const near = res.filter(g => !yr || (g.released && Math.abs(Number(year(g.released)) - yr) <= 1));
-  return near.find(g => plain(g.name) === plain(query)) || near[0] || null;
-}
-let rawgPlatforms = null;
-async function findPlatform(name) {
-  if (!rawgPlatforms) {
-    rawgPlatforms = [];
-    for (const page of [1, 2]) {
-      const r = await rawg("/platforms", { page_size: 40, page });
-      rawgPlatforms.push(...(r.results || []));
-      if (!r.next) break;
-    }
+// Faster signals than waiting for the connection to time out: tell the room the moment this player switches tab or app,
+// comes back, or closes the page.
+function mySeat(){ return roomRef && room && me.slot ? roomRef.child("players/" + me.slot) : null; }
+document.addEventListener("visibilitychange", () => {
+  const seat = mySeat(); if (!seat) return;
+  seat.update(document.hidden ? {away: true} : {away: false, online: true});
+});
+window.addEventListener("pagehide", () => { const seat = mySeat(); if (seat) seat.update({online: false}); });
+window.addEventListener("pageshow", () => { const seat = mySeat(); if (seat) seat.update({online: true, away: false}); });
+function leave(msg, onPurpose){
+  // Stop listening to the room BEFORE writing the "left" flag. Otherwise our own write echoes back through the room
+  // listener, which re-registers presence and immediately marks this seat as online and not-left again.
+  const seat = roomRef && onPurpose && me.slot ? roomRef.child("players/" + me.slot) : null;
+  if (roomRef) roomRef.off();
+  if (conRef) { conRef.off(); conRef = null; }
+  if (seat) {
+    seat.child("online").onDisconnect().cancel();
+    seat.update({online: false, left: true, away: false});
   }
-  const p = rawgPlatforms.find(x => plain(x.name) === plain(name));
-  if (!p) throw new Error(`No console called "${name}". Options: ${rawgPlatforms.map(x => x.name).join(", ")}`);
-  return p;
+  roomRef = null; room = null; lobbyMode = null; lobbyCode = "";
+  me = Object.assign(blank(), {name: me.name, color: me.color, emoji: me.emoji}); save();
+  errMsg = msg || ""; render();
 }
 
-const sleep = ms => new Promise(r => setTimeout(r, ms));
-async function mb(path, params = {}) {
-  await sleep(1100);
-  const url = new URL("https://musicbrainz.org/ws/2" + path);
-  Object.entries({ ...params, fmt: "json" }).forEach(([k, v]) => url.searchParams.set(k, v));
-  // MusicBrainz answers 503 or 429 when it is busy or thinks we are going too fast: wait and try again, up to five times.
-  for (let attempt = 1; ; attempt++) {
-    let res = null;
-    try { res = await fetch(url, { headers: { "User-Agent": MB_AGENT, Accept: "application/json" } }); } catch (e) {}
-    if (res && res.ok) return res.json();
-    const busy = !res || res.status === 503 || res.status === 429 || res.status >= 500;
-    if (!busy || attempt === 5) throw new Error(`MusicBrainz ${res ? res.status : "network error"} on ${path}`);
-    await sleep(attempt * 4000);
+function newCode(){
+  const abc = "ABCDEFGHJKMNPQRSTUVWXYZ"; let c = "";
+  for (let i = 0; i < 4; i++) c += abc[Math.floor(Math.random()*abc.length)];
+  return c;
+}
+
+async function createRoom(){
+  const name = readName(); if (!name) return;
+  const tiers = tierNames.map(t => t.trim().slice(0, 14)).filter(Boolean);
+  if (tiers.length < 2) { errMsg = "Name at least two tiers."; render(); return; }
+  if (!chosenList()) { errMsg = "Choose what you are ranking first."; pickOpen = true; render(); return; }
+  for (let tries = 0; tries < 5; tries++) {
+    const code = newCode();
+    const res = await db.ref("rooms/" + code).transaction(cur =>
+      cur === null ? {created: firebase.database.ServerValue.TIMESTAMP, round:1, list: chosenList(), tiers, players:{p1:{name, ready:false, color: me.color, emoji: me.emoji}}} : undefined);
+    if (res.committed) { enter(code, "p1", name); return; }
   }
-}
-async function findArtist(name) {
-  const r = await mb("/artist", { query: `artist:"${name}"`, limit: 5 });
-  if (!r.artists || !r.artists.length) throw new Error("No artist found for " + name);
-  return r.artists.find(a => a.name.toLowerCase() === name.toLowerCase()) || r.artists[0];
-}
-// Returns the cover image address if the Cover Art Archive has one for this album, otherwise null.
-async function coverUrl(releaseGroupId) {
-  const url = `https://coverartarchive.org/release-group/${releaseGroupId}/front-250`;
-  try { const res = await fetch(url, { method: "HEAD", redirect: "manual" }); return res.status < 400 ? url : null; }
-  catch (e) { return null; }
+  errMsg = "Could not create a room. Try again."; render();
 }
 
-// Finds an album (a MusicBrainz "release group") by artist and title.
-async function findAlbum(artist, album) {
-  const s = await mb("/release-group", { query: `releasegroup:"${album}" AND artist:"${artist}" AND primarytype:album`, limit: 10 });
-  const found = s["release-groups"] || [];
-  const plain = found.filter(x => !(x["secondary-types"] || []).length);
-  const pool = plain.length ? plain : found;
-  return pool.find(x => x.title.toLowerCase() === album.toLowerCase()) || pool[0] || null;
-}
-// Bonus material that is not really a song on the album: voice memos, commentary, demos, remixes and the like.
-// Only matches inside brackets or after a dash, e.g. "I Know Places (voice memo)", so normal titles are safe.
-const NOT_A_SONG = /(?:[(\[]|\s[\u2013\u2014-]\s)[^)\]]*\b(voice memos?|voice notes?|commentary|interview|track by track|demo|karaoke|instrumental|remix|acoustic|live)\b/i;
-// Song list for one album, using its earliest official release so later bonus tracks are left out.
-async function trackList(g, artistName) {
-  const releases = [];
-  for (let offset = 0; offset < 300; offset += 100) {
-    const r = await mb("/release", { "release-group": g.id, status: "official", inc: "media", limit: 100, offset });
-    releases.push(...(r.releases || []));
-    if (offset + 100 >= (r["release-count"] || 0)) break;
-  }
-  // Earliest release first; when several came out the same day (standard and deluxe), take the one with the fewest tracks.
-  const size = r => (r.media || []).reduce((n, m) => n + (m["track-count"] || 0), 0) || 999;
-  const first = releases.sort((a, b) => (a.date || "9999").localeCompare(b.date || "9999") || size(a) - size(b))[0];
-  if (!first) throw new Error(`No official release found for "${g.title}"`);
-  const full = await mb(`/release/${first.id}`, { inc: "recordings" });
-  const items = (full.media || []).flatMap(m => m.tracks || []).filter(t => !NOT_A_SONG.test(t.title)).slice(0, MAX_TRACKS)
-    .map((t, i) => ({ id: "k" + t.id, name: t.title, note: "Track " + (i + 1) }));
-  return { cat: CATS.music, group: artistName, short: `${g.title} songs`, title: `${artistName}: ${g.title} songs`, items };
+async function joinRoom(){
+  const name = readName(); if (!name) return;
+  const code = (document.getElementById("code").value || "").trim().toUpperCase();
+  if (code.length !== 4) { errMsg = "Enter the 4-letter room code."; render(); return; }
+  const res = await db.ref("rooms/" + code).transaction(cur => {
+    if (cur === null) return null;
+    if (cur.players && cur.players.p2) return;
+    // If the host already has this colour or emoji, take the next one along so the two players stay distinct.
+    const host = cur.players.p1 || {};
+    const next = (arr, mine, theirs) => mine === theirs ? arr[(arr.indexOf(mine) + 1) % arr.length] : mine;
+    cur.players.p2 = {name, ready:false, color: next(PALETTE, me.color, host.color), emoji: next(EMOJIS, me.emoji, host.emoji)};
+    return cur;
+  });
+  if (!res.snapshot.exists()) errMsg = "No room with code " + code + ". Check it with your opponent.";
+  else if (!res.committed) errMsg = "Room " + code + " already has two players.";
+  else { enter(code, "p2", name); return; }
+  render();
 }
 
-async function findShow(name, firstAired) {
-  const r = await tmdb("/search/tv", firstAired ? { query: name, first_air_date_year: firstAired } : { query: name });
-  if (!r.results.length) throw new Error("No show found for " + name);
-  return r.results.find(s => s.name.toLowerCase() === name.toLowerCase()) || r.results[0];
+function readName(){
+  const v = (document.getElementById("name").value || "").trim().slice(0, 20);
+  const c = document.getElementById("code");
+  lobbyCode = c ? c.value.trim().toUpperCase() : "";
+  me.name = v;
+  if (!v) { errMsg = "Enter your name first so your opponent knows who they are playing."; render(); }
+  return v;
+}
+function enter(code, slot, name){
+  me = Object.assign(blank(), {name, code, slot, color: me.color, emoji: me.emoji}); errMsg = ""; save(); subscribe();
 }
 
-async function isMarvelShow(id) {
-  const d = await tmdb(`/tv/${id}`, { append_to_response: "keywords" });
-  const names = [...(d.production_companies || []), ...((d.keywords && d.keywords.results) || [])].map(x => x.name.toLowerCase());
-  return names.some(n => n.includes("marvel"));
+const keepName = () => { const n = document.getElementById("name"); if (n) me.name = n.value.trim().slice(0, 20); };
+// Marks the tapped swatch without redrawing the screen, so anything typed in the form is kept.
+function choose(btn, key){
+  me[key] = btn.dataset.v; save();
+  btn.parentElement.querySelectorAll("button").forEach(b => { const on = b === btn; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on); });
 }
-
-// "Aang (voice)" -> "Aang"
-const cleanRole = s => s.replace(/\s*\((voice|uncredited)\)/gi, "").trim();
-const CATS = { books: "Books", games: "Games", music: "Music", people: "Actors & directors", franchise: "Franchises", genre: "Genres", year: "Movies by year", tv: "TV" };
-
-const builders = {
-  async actor(def) {
-    const p = await findPerson(def.name);
-    const c = await tmdb(`/person/${p.id}/movie_credits`);
-    const leads = c.cast.filter(m => m.order !== undefined && m.order < 8 && !/uncredited|voice|self/i.test(m.character || ""));
-    return { cat: CATS.people, title: `${p.name} movies`, items: await pickMovies(leads) };
+const actions = {
+  say: btn => { const mine = room.players[me.slot]; roomRef.child("players/" + me.slot + "/say").set({m: +btn.dataset.i, r: room.round, n: ((mine.say && mine.say.n) || 0) + 1}); },
+  closeModal: () => { modal = null; renderModal(); },
+  openRound: () => { modal = {kind: "round"}; renderModal(); },
+  // Another round: one player asks, the other agrees, then the winner picks the list.
+  nextRound: () => roomRef.child("next").set({by: me.slot}),
+  agreeNext: () => roomRef.child("next").update({ok: true}),
+  cancelNext: () => roomRef.child("next").set(null),
+  modalTiebreak: () => { modal = null; actions.tiebreak(); renderModal(); },
+  endGame: () => roomRef.update({closed: {by: me.slot}}),
+  closedOk: () => { modal = null; leave(); },
+  goneLeave: () => { modal = null; leave("", true); },
+  togglePick: () => { pickOpen = !pickOpen; fillSelects(); },
+  pickList: btn => { pickId = btn.dataset.id; pickOpen = false; fillSelects(); },
+  setColor: btn => choose(btn, "color"),
+  setEmoji: btn => choose(btn, "emoji"),
+  pickCreate: () => { lobbyMode = "create"; errMsg = ""; render(); },
+  pickJoin:   () => { lobbyMode = "join"; errMsg = ""; render(); },
+  home:       () => { keepName(); lobbyMode = null; errMsg = ""; render(); },
+  create: () => createRoom().catch(showErr),
+  join:   () => joinRoom().catch(showErr),
+  next:   () => { me.step = "guess"; selected = null; save(); render(); window.scrollTo(0,0); },
+  back:   () => { me.step = "own"; selected = null; save(); render(); },
+  lock:   () => { me.step = "locked"; save(); sync(); render(); },
+  leave:  () => leave("", true),
+  reveal: () => {
+    if (Date.now() < revealLock) return;      // ignore stray or doubled taps
+    revealLock = Date.now() + 500;
+    const steps = revealSteps(room.players[me.slot], room.players[otherSlot()]);
+    justRevealed = steps[me.reveal || 0] || null;
+    me.reveal = Math.min((me.reveal || 0) + 1, steps.length); save(); render();
   },
-  async director(def) {
-    const p = await findPerson(def.name);
-    const c = await tmdb(`/person/${p.id}/movie_credits`);
-    return { cat: CATS.people, title: `Films directed by ${p.name}`, items: await pickMovies(c.crew.filter(m => m.job === "Director")) };
+  revealAll: () => { if (Date.now() < revealLock) return; justRevealed = null; me.reveal = 99; save(); render(); },
+  // Sudden death: two picks the guest put in the same tier. The guest secretly chooses a favourite, the host guesses it.
+  tiebreak: () => {
+    let chooser = "p2", pair = samePair(room.players.p2.own);
+    if (!pair) { chooser = "p1"; pair = samePair(room.players.p1.own); }   // guest has no two picks sharing a tier
+    if (!pair) { actions.tiebreakRound(); return; }                         // nobody does: fall back to a short extra round
+    roomRef.child("tb").set({id: Date.now().toString(36), a: pair[0], b: pair[1], chooser, guesser: chooser === "p1" ? "p2" : "p1", picked: false});
   },
-  async collection(def) {
-    const parts = [];
-    let first = null;
-    for (const name of [].concat(def.names || def.name)) {
-      const r = await tmdb("/search/collection", { query: name });
-      if (!r.results.length) { console.warn(`  no collection found for "${name}"`); continue; }
-      const c = await tmdb(`/collection/${r.results[0].id}`);
-      first = first || c;
-      parts.push(...c.parts);
+  tbChoose: btn => {
+    const T = room.tb, id = btn.dataset.id;
+    if (!T || T.pick) return;
+    if (me.slot === T.chooser) {
+      if (me.tbPick && me.tbPick.id === T.id) return;
+      me.tbPick = {id: T.id, pick: id}; save();
+      roomRef.child("tb").update({picked: true}); render();
+    } else if (T.picked && !T.guess) {
+      roomRef.child("tb").update({guess: id});
     }
-    if (!first) throw new Error("No collection found");
-    return { cat: CATS.franchise, title: def.title || first.name.replace(/ Collection$/, "") + " films", items: await pickMovies(parts, { minVotes: 0 }) };
   },
-  async decade(def) {
-    const range = { "primary_release_date.gte": `${def.decade}-01-01`, "primary_release_date.lte": `${def.decade + 9}-12-31` };
-    const pages = await Promise.all([1, 2, 3, 4, 5].map(page => tmdb("/discover/movie", { ...range, sort_by: "vote_count.desc", page })));
-    return { cat: CATS.year, group: `${def.decade}s`, short: "Whole decade", title: `Biggest movies of the ${def.decade}s`, items: await pickMovies(pages.flatMap(p => p.results), { oneFranchise: true }) };
+  tiebreakRound: () => {
+    const u = {round: room.round + 1, list: tiebreakList(), tiebreak: true, tb: null, next: null};
+    ["p1","p2"].forEach(s => { u["players/"+s+"/ready"] = false; u["players/"+s+"/own"] = null; u["players/"+s+"/guess"] = null; });
+    roomRef.update(u);
   },
-  async year(def) {
-    const pages = await Promise.all([1, 2].map(page => tmdb("/discover/movie", { primary_release_year: def.year, sort_by: "vote_count.desc", page })));
-    return { cat: CATS.year, group: `${Math.floor(def.year / 10) * 10}s`, short: String(def.year), title: `Biggest movies of ${def.year}`, items: await pickMovies(pages.flatMap(p => p.results)) };
+  invite: btn => {
+    const url = pageUrl(), link = url ? url + (url.includes("?") ? "&" : "?") + "room=" + me.code : "";
+    copyText(["Join my OutRanked game" + (link ? ": " + link : ""), "Room code: " + me.code].join("\n"), btn);
   },
-  async genre(def) {
-    const all = (await tmdb("/genre/movie/list")).genres;
-    const ids = [def.name].concat(def.and || []).map(n => {
-      const g = all.find(x => x.name.toLowerCase() === n.toLowerCase());
-      if (!g) throw new Error(`No genre called "${n}". Options: ${all.map(x => x.name).join(", ")}`);
-      return g.id;
-    });
-    const filtered = def.noDisney || def.oneFranchise || def.noSequels;
-    const pages = await Promise.all((filtered ? [1, 2, 3, 4, 5, 6] : [1, 2, 3]).map(page => tmdb("/discover/movie", { with_genres: ids.join(","), sort_by: "vote_count.desc", page })));
-    const opts = { noDisney: !!def.noDisney, oneFranchise: !!def.oneFranchise, noSequels: !!def.noSequels };
-    return { cat: CATS.genre, title: def.title || `Biggest ${def.name.toLowerCase()} movies`, items: await pickMovies(pages.flatMap(p => p.results), opts) };
+  share:  btn => {
+    let text;
+    try { text = shareText(); }
+    catch (e) { console.error(e); btn.textContent = "Could not build results: " + e.message; return; }
+    copyText(text, btn);
+    clickLock = Date.now() + 700;
   },
-  // A hand-picked list of books; covers and years are looked up on Open Library.
-  async books(def) {
-    const items = [];
-    for (const [name, author, searchTitle] of def.picks) {
-      let d = null;
-      try { d = await findBook(searchTitle || name, author); } catch (e) { console.warn(`  Open Library lookup failed for "${name}": ${e.message}`); }
-      if (!d) console.warn(`  no Open Library match for "${searchTitle || name}" by ${author}; added without a cover`);
-      items.push({ id: "b" + slug(name + " " + author), name, note: author + (d && d.first_publish_year ? ", " + d.first_publish_year : ""),
-        ...(d && d.cover_i ? { img: `https://covers.openlibrary.org/b/id/${d.cover_i}-M.jpg` } : {}) });
+  copy:   () => { navigator.clipboard && navigator.clipboard.writeText(me.code); },
+  rematch: btn => {
+    if (!chosenList()) {      // open the menu and say why nothing happened
+      pickOpen = true; fillSelects();
+      if (btn) { btn.textContent = "Choose the next list first"; setTimeout(() => { btn.textContent = "Start round"; }, 2000); }
+      return;
     }
-    return { cat: CATS.books, group: def.group || "Genres", short: def.short || def.title, title: def.title, items };
-  },
-  // A hand-picked list of writers, with a photo where Open Library has one.
-  async authors(def) {
-    const items = [];
-    for (const name of def.picks) {
-      let img = null;
-      try {
-        const r = await openLibrary("/search/authors.json", { q: name, limit: 5 });
-        const a = (r.docs || []).sort((x, y) => (y.work_count || 0) - (x.work_count || 0))[0];
-        if (a) {
-          const url = `https://covers.openlibrary.org/a/olid/${a.key.replace(/^.*\//, "")}-M.jpg`;
-          const head = await fetch(url + "?default=false", { method: "HEAD", redirect: "manual" });
-          if (head.status < 400) img = url;
-        }
-      } catch (e) {}
-      items.push({ id: "w" + slug(name), name, ...(img ? { img } : {}) });
+    const tiers = tierNames.map(t => (t || "").trim().slice(0, 14)).filter(Boolean);
+    if (tiers.length < 2) {
+      if (btn) { btn.textContent = "Name at least two tiers"; setTimeout(() => { btn.textContent = "Start round"; }, 2000); }
+      return;
     }
-    return { cat: CATS.books, group: def.group || "Authors", short: def.short || def.title, title: def.title, items };
-  },
-  // A hand-picked list of video games; artwork and years are looked up on RAWG.
-  async games(def) {
-    const items = [];
-    for (const pick of def.picks) {
-      const [name, query, yr] = [].concat(pick);
-      const g = await findGame(query || name, yr);
-      if (g) items.push(gameItem(g, name, yr ? String(yr) : undefined));
-      else { console.warn(`  no RAWG match for "${query || name}"${yr ? " (" + yr + ")" : ""}; added without artwork`); items.push({ id: "v" + slug(name), name, ...(yr ? { note: String(yr) } : {}), wide: true }); }
-    }
-    return { cat: CATS.games, ...(def.group ? { group: def.group, short: def.short || def.title } : {}), title: def.title, items };
-  },
-  // The best-known games on one console.
-  //   since: the console's launch year. With it, only games that debuted on this console are kept: nothing first released
-  //          before the console existed, and nothing that also came out on another company's machines (ports).
-  //          Later re-releases on the same maker's newer consoles are fine.
-  //   oneSeries: true keeps only the top game from each series, so sequels on the same console drop out.
-  async console(def) {
-    const p = await findPlatform(def.name);
-    const family = new RegExp(def.family || "nintendo|wii|gamecube|game boy|nes", "i");
-    const candidates = [];
-    for (const page of [1, 2, 3, 4]) {
-      const r = await rawg("/games", { platforms: p.id, ordering: def.order || "-added", page_size: 40, page });
-      candidates.push(...(r.results || []));
-      if (!r.next) break;
-    }
-    const original = g => !def.since || (Number(year(g.released)) >= def.since &&
-      (g.platforms || []).every(x => x.platform.id === p.id || family.test(x.platform.name)));
-    const seenNames = new Set(), taken = new Set(), picked = [];
-    for (const g of candidates) {
-      if (picked.length >= MAX_ITEMS) break;
-      if (!g.released || g.released > today || seenNames.has(plain(g.name)) || taken.has(g.id) || !original(g)) continue;
-      seenNames.add(plain(g.name));
-      if (def.oneSeries) {
-        // Everything else in this game's series is now off the table.
-        for (const page of [1, 2, 3]) {
-          let s; try { s = await rawg(`/games/${g.id}/game-series`, { page_size: 40, page }); } catch (e) { break; }
-          (s.results || []).forEach(x => taken.add(x.id));
-          if (!s.next) break;
-        }
-      }
-      picked.push(g);
-    }
-    const items = picked.sort((a, b) => a.released.localeCompare(b.released)).map(g => gameItem(g));
-    return { cat: CATS.games, group: "Consoles", short: def.title || p.name, title: def.title || `Best ${p.name} games`, items };
-  },
-  // A hand-picked movie list. Titles are matched on TMDB by name and release year; the Marvel filter is not applied.
-  async films(def) {
-    const items = [];
-    for (const [title, yr] of def.picks) {
-      // Search by title, then prefer the best-known result released within a year of the given year.
-      const r = await tmdb("/search/movie", { query: title });
-      const close = r.results.filter(x => !yr || Math.abs(Number(year(x.release_date)) - yr) <= 1);
-      const exact = close.filter(x => x.title.toLowerCase() === title.toLowerCase());
-      const m = (exact.length ? exact : close).sort((x, y) => y.vote_count - x.vote_count)[0];
-      if (!m) { console.warn(`  no TMDB match for "${title}" (${yr || "any year"}); left out`); continue; }
-      items.push(movieItem(m));
-    }
-    return { cat: def.cat || CATS.franchise, ...(def.group ? { group: def.group, short: def.short || def.title } : {}), title: def.title, items };
-  },
-  async tv(def) {
-    const show = await tmdb(`/tv/${(await findShow(def.name, def.year)).id}`);
-    const items = show.seasons
-      .filter(s => s.season_number > 0 && s.air_date && s.air_date <= today)
-      .slice(0, 16)
-      .map(s => ({ id: "s" + s.id, name: s.name, note: year(s.air_date), poster: s.poster_path || show.poster_path || null }));
-    return { cat: CATS.tv, title: `${show.name} seasons`, items };
-  },
-  // A show's main characters, ranked list of the ones who appear in the most episodes. Tiles show the actor's photo.
-  async cast(def) {
-    const show = await findShow(def.name, def.year);
-    const credits = await tmdb(`/tv/${show.id}/aggregate_credits`);
-    const seen = new Set();
-    const items = (credits.cast || [])
-      .sort((a, b) => b.total_episode_count - a.total_episode_count)
-      // An actor can have several credits on one show; use the character they played in the most episodes.
-      .map(p => ({ p, character: ((p.roles || []).slice().sort((a, b) => (b.episode_count || 0) - (a.episode_count || 0))[0] || {}).character || "" }))
-      .map(x => ({ p: x.p, character: cleanRole(x.character) }))
-      .filter(x => x.character && !/^(self|additional voices?|various)\b/i.test(x.character))
-      .filter(x => !seen.has(x.character.toLowerCase()) && seen.add(x.character.toLowerCase()))
-      .slice(0, def.count || MAX_CAST)
-      .map(x => ({ id: "p" + x.p.id, name: x.character, note: x.p.name, poster: def.photos === false ? null : x.p.profile_path || null }));
-    return { cat: CATS.tv, group: def.group || show.name, short: def.short || "Main characters", title: `${show.name} main characters`, items };
-  },
-  // The main characters of one film (in billing order), or of a whole franchise when "collection" is given.
-  // Across a franchise, a character scores for every film they are in, and more the higher they are billed.
-  async filmcast(def) {
-    let films, fallbackTitle;
-    if (def.collection) {
-      const r = await tmdb("/search/collection", { query: def.collection });
-      if (!r.results.length) throw new Error("No collection found for " + def.collection);
-      const c = await tmdb(`/collection/${r.results[0].id}`);
-      films = (c.parts || []).filter(p => p.release_date && p.release_date <= today);
-      fallbackTitle = c.name.replace(/ Collection$/, "") + " main characters";
-    } else {
-      const r = await tmdb("/search/movie", def.year ? { query: def.name, primary_release_year: def.year } : { query: def.name });
-      const m = (r.results || []).sort((a, b) => b.vote_count - a.vote_count)[0];
-      if (!m) throw new Error("No film found for " + def.name);
-      films = [m]; fallbackTitle = `${m.title} main characters`;
-    }
-    const people = new Map();
-    for (const f of films) {
-      const c = await tmdb(`/movie/${f.id}/credits`);
-      (c.cast || []).slice(0, 30).forEach(p => {
-        const character = cleanRole(p.character || "");
-        if (!character) return;
-        const x = people.get(p.id) || { p, score: 0, names: {} };
-        x.score += Math.max(1, 30 - (p.order || 0));                 // top billing in a film is worth the most
-        x.names[character] = (x.names[character] || 0) + 1;
-        if (!x.p.profile_path && p.profile_path) x.p = p;
-        people.set(p.id, x);
-      });
-    }
-    const items = [...people.values()].sort((a, b) => b.score - a.score).slice(0, def.count || MAX_CAST)
-      .map(x => ({ id: "p" + x.p.id, name: Object.entries(x.names).sort((a, b) => b[1] - a[1])[0][0], note: x.p.name, poster: def.photos === false ? null : x.p.profile_path || null }));
-    const title = def.title || fallbackTitle;
-    return { cat: "Movies", group: def.group || "Characters", short: title, title, items };
-  },
-  async episodes(def) {
-    const show = await tmdb(`/tv/${(await findShow(def.name, def.year)).id}`);
-    const want = def.seasons === "all"
-      ? show.seasons.filter(s => s.season_number > 0 && s.air_date && s.air_date <= today).map(s => s.season_number)
-      : [].concat(def.seasons || def.season);
-    const out = [];
-    for (const n of want) {
-      const season = await tmdb(`/tv/${show.id}/season/${n}`);
-      const items = season.episodes
-        .filter(e => e.air_date && e.air_date <= today)
-        .sort((a, b) => b.vote_count - a.vote_count)
-        .slice(0, MAX_EPISODES)
-        .sort((a, b) => a.episode_number - b.episode_number)
-        .map(e => ({ id: "e" + e.id, name: e.name, note: "Episode " + e.episode_number, poster: e.still_path || null, wide: true }));
-      out.push({ cat: CATS.tv, title: `${show.name} season ${n} episodes`, items });
-    }
-    return out;
-  },
-  async albums(def) {
-    const artist = await findArtist(def.name);
-    const groups = [];
-    for (let offset = 0; offset < 500; offset += 100) {
-      const base = { artist: artist.id, type: "album", limit: 100, offset };
-      let r;
-      try { r = await mb("/release-group", { ...base, "release-group-status": "website-default" }); }
-      catch (e) { r = await mb("/release-group", base); }
-      groups.push(...(r["release-groups"] || []));
-      if (offset + 100 >= (r["release-group-count"] || 0)) break;
-    }
-    const seen = new Set();
-    let studio = groups
-      .filter(g => g["primary-type"] === "Album" && !(g["secondary-types"] || []).length)   // no live albums, compilations, soundtracks
-      .filter(g => g["first-release-date"] && g["first-release-date"] <= today)
-      .filter(g => (!def.from || year(g["first-release-date"]) >= String(def.from)) && (!def.to || year(g["first-release-date"]) <= String(def.to)))
-      .filter(g => !seen.has(g.title.toLowerCase()) && seen.add(g.title.toLowerCase()))
-      .sort((a, b) => a["first-release-date"].localeCompare(b["first-release-date"]));
-    if (studio.length > MAX_ALBUMS) {
-      console.warn(`${artist.name} has ${studio.length} studio albums; keeping the first ${MAX_ALBUMS}. Add from / to years to choose an era.`);
-      studio = studio.slice(0, MAX_ALBUMS);
-    }
-    const items = [];
-    for (const g of studio) items.push({ id: "a" + g.id, name: g.title, note: year(g["first-release-date"]), img: await coverUrl(g.id), sq: true });
-    const era = def.from || def.to ? ` (${def.from || ""}-${def.to || ""})` : "";
-    const out = [{ cat: CATS.music, group: artist.name, short: "Albums" + era, title: `${artist.name} albums${era}`, items }];
-    if (def.songs) for (const g of studio) {
-      try { out.push(await trackList(g, artist.name)); }
-      catch (e) { console.warn(`Skipped songs for ${g.title}: ${e.message}`); }
-    }
-    return out;
-  },
-  async tracks(def) {
-    const out = [];
-    for (const album of [].concat(def.albums || def.album)) {
-      const g = await findAlbum(def.artist, album);
-      if (!g) { console.warn(`Skipped ${def.artist} "${album}": album not found`); continue; }
-      const artistName = (g["artist-credit"] && g["artist-credit"][0] && g["artist-credit"][0].name) || def.artist;
-      try { out.push(await trackList(g, artistName)); }
-      catch (e) { console.warn(`Skipped ${def.artist} "${album}": ${e.message}`); }
-    }
-    return out;
-  },
-  // An artist's singles, oldest first.
-  async singles(def) {
-    const artist = await findArtist(def.name);
-    const groups = [];
-    for (let offset = 0; offset < 500; offset += 100) {
-      const base = { artist: artist.id, type: "single", limit: 100, offset };
-      let r;
-      try { r = await mb("/release-group", { ...base, "release-group-status": "website-default" }); }
-      catch (e) { r = await mb("/release-group", base); }
-      groups.push(...(r["release-groups"] || []));
-      if (offset + 100 >= (r["release-group-count"] || 0)) break;
-    }
-    const seen = new Set();
-    const singles = groups
-      .filter(g => g["primary-type"] === "Single" && !(g["secondary-types"] || []).length)
-      .filter(g => g["first-release-date"] && g["first-release-date"] <= today)
-      .filter(g => (!def.from || year(g["first-release-date"]) >= String(def.from)) && (!def.to || year(g["first-release-date"]) <= String(def.to)))
-      .filter(g => !seen.has(g.title.toLowerCase()) && seen.add(g.title.toLowerCase()))
-      .sort((a, b) => a["first-release-date"].localeCompare(b["first-release-date"]))
-      .slice(0, MAX_TRACKS);
-    const items = [];
-    for (const g of singles) items.push({ id: "g" + g.id, name: g.title, note: year(g["first-release-date"]), img: await coverUrl(g.id), sq: true });
-    return { cat: CATS.music, group: artist.name, short: "Singles", title: `${artist.name} singles`, items };
-  },
-  // A hand-picked list of names (artists, groups, anything) with no lookups and no pictures.
-  async names(def) {
-    // A pick is either "Name" or ["Name", "small note shown under it"].
-    const items = def.picks.map(p => { const [n, note] = [].concat(p); return { id: "n" + slug(n), name: n, ...(note ? { note } : {}), ...((def.cat || CATS.music) === CATS.music ? { sq: true } : {}) }; });
-    return { cat: def.cat || CATS.music, group: def.group || "Top artists", short: def.short || def.title, title: def.title, items };
-  },
-  // A hand-picked list of albums. Each pick is ["Artist", "Album"]; the year and cover are looked up.
-  async curated(def) {
-    const items = [];
-    for (const [artist, album] of def.picks) {
-      let g = null;
-      try { g = await findAlbum(artist, album); } catch (e) {}
-      if (!g) console.warn(`  no MusicBrainz match for ${artist} - ${album}; added without a cover`);
-      items.push({
-        id: "c" + slug(artist + " " + album), name: album,
-        note: artist + (g && g["first-release-date"] ? ", " + year(g["first-release-date"]) : ""),
-        img: g ? await coverUrl(g.id) : null, sq: true
-      });
-    }
-    return { cat: CATS.music, group: def.group || "Top albums", short: def.short || def.title, title: def.title, items };
-  },
-  // Movies tagged with a TMDB keyword, e.g. "musical", "time travel", "heist".
-  async keyword(def) {
-    const ids = [];
-    for (const name of [def.name].concat(def.and || [])) {
-      const r = await tmdb("/search/keyword", { query: name });
-      const k = r.results.find(x => x.name.toLowerCase() === name.toLowerCase()) || r.results[0];
-      if (!k) throw new Error(`No keyword called "${name}"`);
-      ids.push(k.id);
-    }
-    const filtered = def.noDisney || def.oneFranchise || def.noSequels;
-    const pages = await Promise.all((filtered ? [1, 2, 3, 4, 5, 6] : [1, 2, 3]).map(page => tmdb("/discover/movie", { with_keywords: ids.join(","), sort_by: "vote_count.desc", page })));
-    const opts = { noDisney: !!def.noDisney, oneFranchise: !!def.oneFranchise, noSequels: !!def.noSequels };
-    return { cat: CATS.genre, title: def.title || `Biggest ${def.name} movies`, items: await pickMovies(pages.flatMap(p => p.results), opts) };
-  },
-  // A list of TV shows (not seasons) from one TMDB TV genre.
-  async tvgenre(def) {
-    const all = (await tmdb("/genre/tv/list")).genres;
-    const g = all.find(x => x.name.toLowerCase() === def.name.toLowerCase());
-    if (!g) throw new Error(`No TV genre called "${def.name}". Options: ${all.map(x => x.name).join(", ")}`);
-    const pages = await Promise.all([1, 2].map(page => tmdb("/discover/tv", { with_genres: g.id, sort_by: "vote_count.desc", page })));
-    const out = [];
-    for (const s of pages.flatMap(p => p.results)) {
-      if (out.length >= MAX_ITEMS) break;
-      if (!s.first_air_date || s.first_air_date > today || out.some(x => x.id === s.id)) continue;
-      if (EXCLUDE_MARVEL && await isMarvelShow(s.id)) continue;
-      out.push(s);
-    }
-    const items = out.sort((a, b) => a.first_air_date.localeCompare(b.first_air_date))
-      .map(s => ({ id: "t" + s.id, name: s.name, note: year(s.first_air_date), poster: s.poster_path || null }));
-    return { cat: CATS.tv, title: def.title || `Biggest ${g.name} shows`, items };
+    const u = {round: room.round + 1, list: chosenList(), tiers, tiebreak: null, tb: null, next: null};
+    ["p1","p2"].forEach(s => { u["players/"+s+"/ready"] = false; u["players/"+s+"/own"] = null; u["players/"+s+"/guess"] = null; });
+    roomRef.update(u);
   }
 };
+function showErr(e){ errMsg = "Connection problem: " + e.message; render(); }
 
-// Where each list sits in the game's menu. The menu is: category, then submenu, then list.
-//   Movies         > Franchises, Genres, Actors, Directors, By year: 1980s (one per decade), Awards, Characters
-//   TV             > one submenu per show, plus Show rankings
-//   Music          > one submenu per artist, plus Top albums and Top artists
-//   Books          > Popular, Genres, Romance, Young adult, Authors
-//   Games          > Franchises, Genres, Consoles, Awards
-function place(list, def) {
-  if (list.cat === CATS.franchise) return { ...list, cat: "Movies", group: "Franchises", short: list.title };
-  if (list.cat === CATS.people) return { ...list, cat: "Movies", group: def.type === "director" ? "Directors" : "Actors", short: list.title };
-  if (list.cat === CATS.genre) return { ...list, cat: "Movies", group: "Genres", short: list.title };
-  if (list.cat === "Awards") return { ...list, cat: "Movies", group: "Awards", short: list.title };
-  if (list.cat === CATS.year) return { ...list, cat: "Movies", group: "By year: " + list.group };     // e.g. "By year: 1990s"
-  return list;
-}
-// Submenus appear in the order their first list appears in the file, so the finished lists are sorted into this order.
-const MENU_ORDER = {
-  Movies: ["Franchises", "Genres", "Actors", "Directors", "By year", "Awards", "Characters"],
-  Books: ["Popular", "Genres", "Romance", "Young adult", "Authors"],
-  Games: ["Franchises", "Genres", "Consoles", "Awards"]
-};
-function menuRank(list) {
-  const order = MENU_ORDER[list.cat];
-  if (!order) return 0;
-  const i = order.findIndex(g => (list.group || "") === g || (list.group || "").startsWith(g + ":"));
-  return i < 0 ? order.length : i;
-}
-
-(async () => {
-  // The previous lists.json is kept as a safety net: if a list fails to build this time (a busy server, a network blip),
-  // last run's version of it is carried over instead of the list disappearing from the game.
-  let previous = [];
-  try { previous = JSON.parse(fs.readFileSync("lists.json", "utf8")).lists || []; } catch (e) {}
-  const lists = [];
-  for (const def of DEFS) {
-    const src = JSON.stringify(def);
-    const label = `${def.type} ${def.name || def.title || def.artist || def.year || def.decade}`;
-    const built = [];
-    try {
-      for (const list of [].concat(await builders[def.type](def))) {
-        if (list.items.length < MIN_ITEMS) { console.warn(`Skipped "${list.title}": only ${list.items.length} items`); continue; }
-        built.push({ id: slug(list.title), src, ...place(list, def) });
-        console.log(`${list.title}: ${list.items.length} items`);
-      }
-    } catch (e) {
-      console.warn(`Failed ${label}: ${e.message}`);
-    }
-    for (const old of previous.filter(p => p.src === src && !built.some(n => n.id === p.id))) {
-      built.push(old);
-      console.warn(`Kept last run's "${old.title}" because it did not build this time`);
-    }
-    lists.push(...built);
+app.addEventListener("toggle", e => { if (e.target.matches && e.target.matches("details.theirs")) theirsOpen = e.target.open; }, true);
+const onInput = e => { if (e.target.matches && e.target.matches(".tierin")) tierNames[+e.target.dataset.i] = e.target.value; };
+app.addEventListener("input", onInput);
+if (modalEl && modalEl.addEventListener) modalEl.addEventListener("input", onInput);
+app.addEventListener("change", e => {
+  if (e.target.matches("select.listpick")) pickId = e.target.value;
+  if (e.target.matches("select.catpick")) { pickCat = e.target.value; pickGroup = null; pickId = null; fillSelects(); }
+  if (e.target.matches("select.grouppick")) { pickGroup = e.target.value; pickId = null; fillSelects(); }
+});
+let clickLock = 0;      // taps are ignored until this time; set briefly after a copy so a stray second tap cannot press something else
+function onClick(e){
+  if (Date.now() < clickLock) return;
+  const chip = e.target.closest(".chip");
+  if (chip) { selected = selected === chip.dataset.id ? null : chip.dataset.id; render(); return; }
+  const act = e.target.closest("[data-act]");
+  if (act) { actions[act.dataset.act](act); return; }
+  const zone = e.target.closest("[data-tier]");
+  if (zone && selected) {
+    const board = me[me.step];
+    if (zone.dataset.tier) board[selected] = zone.dataset.tier; else delete board[selected];
+    selected = null; save(); render();
   }
-  if (!lists.length) { console.error("No lists built; lists.json left unchanged."); process.exit(1); }
-  lists.forEach((l, i) => { l._i = i; });
-  lists.sort((a, b) => menuRank(a) - menuRank(b) || a._i - b._i);       // keeps the original order within each submenu
-  lists.forEach(l => { delete l._i; });
-  fs.writeFileSync("lists.json", JSON.stringify({ generated: today, lists }, null, 1));
-  console.log(`Wrote lists.json with ${lists.length} lists.`);
+}
+app.addEventListener("click", onClick);
+if (modalEl && modalEl.addEventListener) modalEl.addEventListener("click", onClick);
+
+/* ---------- views ---------- */
+function render(){
+  if (app.style) { app.style.setProperty("--p1c", look("p1").color); app.style.setProperty("--p2c", look("p2").color); }
+  draw(); fillSelects(); updateModal(); renderModal();
+  document.getElementById("listName").textContent = room && room.list ? "Now ranking: " + room.list.title : "";
+}
+// A banner when the opponent has left or dropped off.
+function goneView(opp){
+  if (!opp) return "";
+  const n = esc(opp.name);
+  if (opp.left) return `<div class="notice" role="status"><strong>${n} has left the room.</strong> You can leave too and start a new one.</div>`;
+  if (opp.online === false) return `<div class="notice" role="status"><strong>${n} has disconnected.</strong> If they reopen the game on the same device, they will drop back into this room.</div>`;
+  if (opp.away) return `<div class="notice" role="status"><strong>${n} has switched to another tab or app.</strong> The game carries on when they come back.</div>`;
+  return "";
+}
+function draw(){
+  if (!configured) { app.innerHTML = setupView(); return; }
+  if (!me.code || !room) { app.innerHTML = lobbyView(); return; }
+  const mine = room.players[me.slot], opp = room.players[otherSlot()];
+  const oppName = opp ? opp.name : "your opponent";
+  if (mine.own && opp && opp.own && opp.guess && mine.guess) {
+    if (resultsRound !== room.round) { resultsRound = room.round; pickId = null; pickOpen = false;
+      tierNames = roomTiers().concat(["", "", "", "", "", ""]).slice(0, 6);   /* next-round tier boxes start from the current names */ revealLock = Date.now() + 800; justRevealed = null; }
+    app.innerHTML = statusView(opp, true) + goneView(opp) + resultsView(mine, opp); return;
+  }
+  app.innerHTML = statusView(opp) + goneView(opp) + (me.step === "locked" ? waitingView(opp, oppName) : boardView(oppName));
+}
+
+function setupView(){
+  return `<div class="panel"><h2>Connect your Firebase database</h2>
+  <p class="hint">Open this file in a text editor and replace the <code>firebaseConfig</code> values near the top of the script with the ones from your Firebase project. Then reload.</p></div>`;
+}
+
+// The tier-name boxes, used when creating a room and again when the winner sets up the next round.
+// They start filled with S to F (or the current names, for a next round) and can simply be typed over.
+function tierEditor(){
+  return `<div class="tiered">
+    <label>Name your tiers <span class="opt-tag">optional</span></label>
+    <p class="hint" style="margin:0 0 8px;font-size:.85rem">Tiers are the rows you sort everything into, best at the top. Type over any name to change it.</p>
+    <div class="tiernames" role="group" aria-label="Tier names, best to worst">${tierNames.map((t, i) => `<input class="tierin" data-i="${i}" maxlength="14" value="${esc(t || "")}" placeholder="${TIERS[i]}" aria-label="Tier ${i + 1} name">`).join("")}</div>
+    <p class="hint" style="margin:6px 0 0;font-size:.82rem">Leave a box empty to play with fewer tiers.</p></div>`;
+}
+function lobbyView(){
+  const err = `<p class="err" role="alert">${esc(errMsg)}</p>`;
+  const nameField = `<label for="name">Your name</label>
+    <input id="name" maxlength="20" value="${esc(me.name)}" autocomplete="off" placeholder="Shown to your opponent">
+    <label id="collab">Your colour</label>
+    <div class="swatches" role="group" aria-labelledby="collab">${PALETTE.map((c, i) => `<button class="sw${me.color === c ? " on" : ""}" data-act="setColor" data-v="${c}" style="--c:${c}" aria-label="${PALETTE_NAMES[i]}" aria-pressed="${me.color === c}"></button>`).join("")}</div>
+    <label id="emolab">Your emoji</label>
+    <div class="swatches" role="group" aria-labelledby="emolab">${EMOJIS.map(e => `<button class="emo${me.emoji === e ? " on" : ""}" data-act="setEmoji" data-v="${e}" aria-pressed="${me.emoji === e}">${e}</button>`).join("")}</div>`;
+  const back = `<button class="btn ghost" data-act="home">Back</button>`;
+  if (lobbyMode === "create") return `<div class="panel">
+    <h2>Create a room</h2>
+    <p class="hint">Set up the game, then send the room code to your opponent.</p>
+    ${nameField}
+    <label id="picklab">What are you ranking?</label>
+    <div class="picker" role="group" aria-labelledby="picklab"></div>
+    ${tierEditor()}
+    <div class="actions">${back}<button class="btn" data-act="create">Create room</button></div>
+    ${err}
+  </div>`;
+  if (lobbyMode === "join") return `<div class="panel">
+    <h2>Join a room</h2>
+    <p class="hint">Enter your name and the 4-letter code your opponent sent you.</p>
+    ${nameField}
+    <label for="code">Room code</label>
+    <input id="code" class="code" maxlength="4" autocomplete="off" value="${esc(lobbyCode)}">
+    <div class="actions">${back}<button class="btn" data-act="join">Join room</button></div>
+    ${err}
+  </div>`;
+  return `<div class="panel">
+    <h2>A tier list ranking game for two</h2>
+    <p class="hint">Rank the list your way, then guess how your opponent ranked it. The best guesser wins.</p>
+    <div class="choice">
+      <button class="btn big" data-act="pickCreate">Create a room<small>Pick the list and invite someone</small></button>
+      <button class="btn ghost big" data-act="pickJoin">Join a room<small>I have a room code</small></button>
+    </div>
+    ${err}
+  </div>`;
+}
+
+function statusView(opp, done){
+  let s = `Waiting for someone to join. <button class="link inv" data-act="invite">Copy invite link</button>`;
+  if (opp) s = done ? "Playing " + esc(opp.name) : esc(opp.name) + (opp.ready ? " has locked in" : opp.left || opp.online === false || opp.away ? " is away" : " is still ranking");
+  const vs = opp ? `<span class="vs"><span class="pc-${me.slot}">${mark(me.slot)}${esc(me.name)}</span> vs <span class="pc-${otherSlot()}">${mark(otherSlot())}${esc(opp.name)}</span></span>` : "";
+  if (opp && done) s = "";
+  if (room.tiebreak) s = "Tiebreaker round" + (s ? ". " + s : "");
+  return `<div class="status"><span class="rc" title="Room code">${esc(me.code)}</span>${vs}<span>${s}</span>
+    <button class="link" data-act="leave">Leave room</button></div>`;
+}
+
+// TMDB items carry a poster path; music items carry a full cover image address.
+const hasImg = a => !!(a.img || a.poster);
+const imgSrc = (a, base) => esc(a.img || base + a.poster) + (a.img2 && a.img2 !== a.img ? `" data-alt="${esc(a.img2)}` : "");
+// Music items with no cover art get a same-sized square with a note, so rows stay even.
+const NOTE = '<span class="ph" aria-hidden="true">\u266A</span>';
+function noArt(img){
+  // Game artwork has a second, full-size address to try before giving up.
+  if (img.dataset.alt) { const u = img.dataset.alt; delete img.dataset.alt; img.src = u; return; }
+  const music = img.classList.contains("sq") || img.closest(".tile.sq");
+  if (!music) { img.remove(); return; }
+  const s = document.createElement("span"); s.className = "ph"; s.setAttribute("aria-hidden", "true"); s.textContent = "\u266A";
+  img.replaceWith(s);
+}
+function chipHtml(a){
+  return `<button class="chip${a.tv ? " tv" : ""}${selected === a.id ? " sel" : ""}" data-id="${a.id}" aria-pressed="${selected === a.id}">${hasImg(a) ? `<img class="${a.wide ? "wide" : a.sq ? "sq" : ""}" src="${imgSrc(a, POSTER)}" alt="" loading="lazy" onerror="noArt(this)">` : a.sq ? NOTE : ""}<span>${esc(a.name)}<small>${esc(a.note || "")}</small></span></button>`;
+}
+
+function boardView(oppName){
+  const own = me.step === "own", board = me[me.step];
+  const placed = L().items.filter(a => board[a.id]).length, all = placed === L().items.length;
+  const rows = keys().map(t => `<div class="row" data-tier="${t}">
+      <button class="tl" aria-label="Place the selected pick in ${tlabel(t)}">${tlabel(t)}</button>
+      <div class="cells">${L().items.filter(a => board[a.id] === t).map(chipHtml).join("")}</div></div>`).join("");
+  const loose = L().items.filter(a => !board[a.id]).map(chipHtml).join("");
+  return `<div class="board${selected ? " picking" : ""}">
+    <h2>${own ? "Rank them your way" : "Predict " + esc(oppName) + "'s ranking"}</h2>
+    <p class="hint">Tap one, then tap a tier. ${own
+      ? "This is your honest ranking. It stays hidden until you both lock in."
+      : "Put each one where you think " + esc(oppName) + " put it."}</p>
+    <div class="grid${longTiers() ? " long" : ""}">${rows}</div>
+    <div class="pool" data-tier="">${loose || '<span class="empty">All placed. Tap one to move it.</span>'}</div>
+    <div class="actions">
+      ${own ? "" : '<button class="btn ghost" data-act="back">Back to my ranking</button>'}
+      <button class="btn" data-act="${own ? "next" : "lock"}" ${all ? "" : "disabled"}>${own ? "Next: predict theirs" : "Lock in"}</button>
+      <span class="hint" style="align-self:center;margin:0">${placed} of ${L().items.length} placed</span>
+    </div></div>`;
+}
+
+function waitingView(opp, oppName){
+  return `<div class="panel"><h2>Locked in</h2>
+    <p class="hint">${opp ? "Results appear as soon as " + esc(oppName) + " locks in too." : "No one has joined yet. Send them the room code " + esc(me.code) + "."}</p></div>`;
+}
+
+const dist = (g, a) => Math.abs(TIERS.indexOf(g) - TIERS.indexOf(a));
+// A row is perfect when it has at least one pick in it and you guessed exactly that set for it: none missing, no extras.
+const perfectRows = (guess, actual) => keys().filter(t =>
+  L().items.some(a => actual[a.id] === t) && L().items.every(a => (guess[a.id] === t) === (actual[a.id] === t)));
+const total = (guess, actual) => L().items.reduce((s, a) => s + dist(guess[a.id], actual[a.id]), 0);
+
+// A tier board of the real ranking. Each tile carries a badge with the tier that was guessed for it.
+// Results are revealed one tier row at a time. me.reveal counts how many rows this player has turned over so far.
+let justRevealed = null, theirsOpen = false, revealLock = 0, resultsRound = null;
+// Two random picks that one player placed in the same tier, or null if every tier of theirs holds at most one.
+function samePair(own){
+  const groups = keys().map(t => L().items.filter(a => own[a.id] === t)).filter(g => g.length >= 2);
+  if (!groups.length) return null;
+  const g = groups[Math.floor(Math.random() * groups.length)].slice().sort(() => Math.random() - 0.5);
+  return [g[0].id, g[1].id];
+}
+function tbPanel(score){
+  const T = room.tb;
+  if (!T) return `<div class="tiebox"><p>${score} points each. Settle it with sudden death: one question, winner takes the game.</p>
+      <button class="btn" data-act="tiebreak">Play the tiebreaker</button></div>`;
+  const chooser = room.players[T.chooser], guesser = room.players[T.guesser];
+  const cn = esc(chooser.name), gn = esc(guesser.name), iChoose = me.slot === T.chooser;
+  const tier = tlabel(chooser.own[T.a]);
+  const myPick = iChoose && me.tbPick && me.tbPick.id === T.id ? me.tbPick.pick : null;
+  const settled = T.pick && T.guess;
+  const canTap = !settled && (iChoose ? !myPick : (T.picked && !T.guess));
+  const pick = id => {
+    const a = L().items.find(x => x.id === id), tags = [];
+    if (settled && T.pick === id) tags.push(`${cn}'s favourite`);
+    if (settled && T.guess === id) tags.push(`${gn}'s guess`);
+    if (!settled && myPick === id) tags.push("Your choice");
+    if (!settled && !iChoose && T.guess === id) tags.push("Your guess");
+    const on = tags.length ? " on" : "";
+    return `<button class="tbpick${on}" data-act="tbChoose" data-id="${a.id}" ${canTap ? "" : "disabled"}>
+      ${hasImg(a) ? `<img class="${a.wide ? "wide" : a.sq ? "sq" : ""}" src="${imgSrc(a, POSTER)}" alt="" onerror="noArt(this)">` : a.sq ? NOTE : ""}
+      <span>${esc(fullName(a))}${tags.length ? `<small>${tags.join(" and ")}</small>` : ""}</span></button>`;
+  };
+  let msg;
+  if (settled) msg = T.pick === T.guess ? `${gn} guessed right and takes the game.` : `${gn} guessed wrong, so ${cn} takes the game.`;
+  else if (iChoose) msg = myPick ? `Locked in. Waiting for ${gn} to guess.` : `Sudden death. You put both of these in ${tier}. Which do you actually prefer? ${gn} has to guess your answer.`;
+  else msg = !T.picked ? `Sudden death. ${cn} put both of these in ${tier} and is choosing a favourite. Then you guess which.`
+    : T.guess ? `Guess sent. Waiting for the answer.` : `${cn} has chosen. Which one does ${cn} prefer? Guess right and you win; guess wrong and you lose.`;
+  return `<div class="tiebox"><p>${msg}</p><div class="tbpair">${pick(T.a)}${pick(T.b)}</div></div>`;
+}
+// A short sudden-death round: five random picks from a different list.
+function tiebreakList(){
+  const current = (room.list.title || "").replace(/^Tiebreaker: /, "");
+  const pool = lists.filter(l => l.title !== current && l.items.length >= 5);
+  const l = pool.length ? pool[Math.floor(Math.random() * pool.length)] : lists[0];
+  const items = l.items.slice().sort(() => Math.random() - 0.5).slice(0, 5);
+  return JSON.parse(JSON.stringify({title: "Tiebreaker: " + l.title, items}));
+}
+function revealSteps(mine, opp){
+  return keys().filter(t => L().items.some(a => opp.own[a.id] === t || mine.own[a.id] === t));
+}
+
+// Hot and cold marker for one guess: a tick for exact, fire for one tier off, snowflake for further away.
+// The arrow says where the real answer is from the guess: up means it was really ranked higher.
+function heatMark(g, a){
+  const d = dist(g, a);
+  if (d === 0) return "\u2705";
+  return (d === 1 ? "\u{1F525}" : "\u2744\uFE0F") + (TIERS.indexOf(a) < TIERS.indexOf(g) ? "\u2B06\uFE0F" : "\u2B07\uFE0F");
+}
+
+// One results tile. state is "hit" (exact), "near" (one tier off) or "miss". marker is the emoji line under the picture.
+function tileHtml(a, state, tip, marker){
+  const shape = a.wide ? " wide" : a.sq ? " sq" : "", label = esc(fullName(a));
+  return `<figure class="tile ${state}${shape}" title="${label}: ${tip}">
+    ${hasImg(a) ? `<img src="${imgSrc(a, POSTER_L)}" alt="${label}" loading="lazy" onerror="noArt(this)">` : a.sq ? NOTE : `<div class="noimg">${label}</div>`}
+    <span class="heat">${marker}</span>
+    <figcaption>${label}</figcaption></figure>`;
+}
+
+// Side-by-side results. Each tier row has two lanes, one per player, in that player's colour:
+// left is what the guesser predicted for that tier (with a hot or cold marker), right is what the owner really put there
+// (carrying the guesser's emoji wherever the guess was exactly right).
+function revealBoard(guess, actual, gSlot, oSlot){
+  const gName = esc(room.players[gSlot].name), oName = esc(room.players[oSlot].name);
+  const peg = (look(gSlot).emoji || "") + "\u2705";
+  const perf = perfectRows(guess, actual);
+  const tile = real => a => {
+    const d = dist(guess[a.id], actual[a.id]);
+    const tip = d === 0 ? "exact match" : `${gName} guessed ${tlabel(guess[a.id])}, ${oName} ranked it ${tlabel(actual[a.id])}`;
+    const marker = real ? (d === 0 ? peg : "") : heatMark(guess[a.id], actual[a.id]);
+    return tileHtml(a, d === 0 ? "hit" : d === 1 ? "near" : "miss", tip, marker);
+  };
+  const rows = keys().map(t => {
+    const guessLane = L().items.filter(a => guess[a.id] === t).map(tile(false)).join("");
+    const realLane = L().items.filter(a => actual[a.id] === t).map(tile(true)).join("");
+    const p = perf.includes(t);
+    return `<div class="row reveal${p ? " perfect" : ""}" data-tier="${t}"><div class="tl">${tlabel(t)}</div>
+      <div class="lanes">
+        <div class="lane pc-${gSlot}"><span class="lanetag">${mark(gSlot)}${gName} guessed</span><div class="cells">${guessLane || '<span class="none">nothing</span>'}</div></div>
+        <div class="lane real pc-${oSlot}"><span class="lanetag">${mark(oSlot)}${oName} ranked${p ? ` <span class="ptag">Perfect row, +${BONUS}</span>` : ""}</span><div class="cells">${realLane || '<span class="none">nothing</span>'}</div></div>
+      </div></div>`;
+  }).join("");
+  return `<div class="grid${longTiers() ? " long" : ""}">${rows}</div>`;
+}
+
+// Score from the rows revealed so far (all rows once the reveal is finished).
+function tally(g, a, shown){
+  const items = L().items.filter(x => shown.includes(a[x.id]));
+  const count = d => items.filter(x => dist(g[x.id], a[x.id]) === d).length;
+  const exact = count(0), near = count(1), perf = perfectRows(g, a).filter(t => shown.includes(t)).length;
+  return {exact, near, cold: items.length - exact - near, perf, score: exact * PTS_EXACT + near * PTS_NEAR + perf * BONUS};
+}
+
+// ---- pop-ups ----
+// Where on the page the player is currently looking. Inside an embed the page cannot ask how far its host has scrolled,
+// so a column of invisible markers reports which ones are on screen and pop-ups are centred among those.
+(function watchView(){
+  const rulers = document.getElementById("rulers");
+  if (!rulers || typeof IntersectionObserver === "undefined") return;
+  const STEP = 80, on = new Set();
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => { const i = +en.target.dataset.i; if (en.isIntersecting) on.add(i); else on.delete(i); });
+    if (on.size) { const lo = Math.min(...on), hi = Math.max(...on); vis = {top: lo * STEP, height: (hi - lo + 1) * STEP}; }
+  });
+  for (let i = 0; i < 120; i++) { const m = document.createElement("i"); m.dataset.i = i; m.style.top = (i * STEP) + "px"; rulers.appendChild(m); io.observe(m); }
 })();
+// A pop-up is positioned once, in the part of the page on screen at the moment it opens, and then stays where it is.
+function placeModal(){
+  const box = modalEl && modalEl.querySelector ? modalEl.querySelector(".mbox") : null;
+  if (!box) { modalTop = null; modalFor = null; return; }
+  if (modalFor !== modal || modalTop === null) {
+    const v = vis || {top: window.scrollY || 0, height: window.innerHeight || 600};
+    modalTop = Math.max(12, v.top + Math.max(12, (v.height - box.offsetHeight) / 2));
+    modalFor = modal;
+  }
+  box.style.top = modalTop + "px";
+}
+
+function updateModal(){
+  if (!room || !me.code) { modal = null; seen.round = null; seen.gone = null; seen.say = 0; seen.next = null; return; }
+  if (room.closed) { modal = {kind: "closed"}; return; }
+  const mine = room.players[me.slot], opp = room.players[otherSlot()];
+  // Only a deliberate "Leave room" gets a pop-up. A dropped connection or a tab switch just shows the banner.
+  const gone = opp && opp.left ? "left" : "";
+  if (gone && seen.gone !== gone) { seen.gone = gone; modal = {kind: "gone", why: gone}; return; }
+  if (!gone) { seen.gone = null; if (modal && modal.kind === "gone") modal = null; }
+  if (modal && modal.kind === "gone") return;
+  const done = mine.own && mine.guess && opp && opp.own && opp.guess;
+  if (!done) { if (modal && (modal.kind === "round" || modal.kind === "say")) modal = null; return; }
+  const T = room.tb, key = room.round + (T && T.pick && T.guess ? ":tb" : "");
+  if (seen.round !== key) { seen.round = key; modal = {kind: "round"}; }
+  const nx = room.next ? room.next.by + (room.next.ok ? ":ok" : "") : null;
+  if (nx !== seen.next) { seen.next = nx; if (nx) modal = modal && modal.kind === "round" ? modal : {kind: "round"}; }
+  const n = opp.say && opp.say.r === room.round ? opp.say.n : 0;
+  if (n > seen.say) { seen.say = n; if (!modal) modal = {kind: "say"}; }
+}
+
+// This round's messages, one line per player who has sent one.
+function chatLog(){
+  const line = slot => { const p = room.players[slot], sy = p && p.say; return sy && sy.r === room.round && SAY[sy.m] ? `<div class="pc-${slot}">${mark(slot)}<strong>${esc(p.name)}:</strong> ${esc(SAY[sy.m])}</div>` : ""; };
+  const html = line("p1") + line("p2");
+  return html ? `<div class="chatlog">${html}</div>` : "";
+}
+function sessionHtml(){
+  const st = sessionStats();
+  if (st.rounds < 1) return "";
+  const side = slot => `${mark(slot)}${esc(room.players[slot].name)}: ${winsText(st[slot].wins)}, ${tallyText(st[slot])}`;
+  return `<div class="session"><strong>${room.closed ? "Final totals" : "This room so far"}: ${st.rounds} ${st.rounds === 1 ? "round" : "rounds"}${st.ties ? `, ${st.ties} tied` : ""}</strong>
+    <div class="pc-${me.slot}">${side(me.slot)}</div><div class="pc-${otherSlot()}">${side(otherSlot())}</div></div>`;
+}
+function modalHtml(){
+  if (!modal) return "";
+  const opp = room.players[otherSlot()], on = opp ? esc(opp.name) : "Your opponent";
+  if (modal.kind === "closed") {
+    const by = room.closed.by === me.slot ? "You" : on;
+    return `<h2>Final results</h2><p>${by} ended the game. This room is now closed.</p>${sessionHtml() || "<p>No rounds were finished.</p>"}
+      <div class="actions"><button class="btn" data-act="share">Copy results</button><button class="btn ghost" data-act="closedOk">Back to start</button></div>`;
+  }
+  if (modal.kind === "gone") {
+    return modal.why === "left"
+      ? `<h2>${on} left the room</h2><p>The game cannot continue without them. You can leave and start a new room, or stay to look over the board.</p>
+         <div class="actions"><button class="btn" data-act="goneLeave">Leave room</button><button class="btn ghost" data-act="closeModal">Stay here</button></div>`
+      : `<h2>${on} disconnected</h2><p>They may have closed the game or lost their connection. If they reopen it on the same device they will drop back into this room.</p>
+         <div class="actions"><button class="btn" data-act="closeModal">Keep waiting</button><button class="btn ghost" data-act="goneLeave">Leave room</button></div>`;
+  }
+  const says = `<p class="sublabel">Say something</p><div class="says">${SAY.map((t, i) => `<button data-act="say" data-i="${i}">${esc(t)}</button>`).join("")}</div>`;
+  if (modal.kind === "say") {
+    return `<button class="x" data-act="closeModal">Close</button><h2>New message</h2>${chatLog()}${says}`;
+  }
+  // end of round
+  const o = outcome();
+  const tbw = room.tiebreak || o.settled ? " the tiebreaker" : "";
+  const title = o.tie && !o.settled ? "It's a tie" : o.iWin ? "You win" + tbw : on + " wins" + tbw;
+  const row = (slot, t) => `<span class="pc-${slot}"><b>${t.score}</b>${mark(slot)}${esc(room.players[slot].name)}<span>${tallyText(t)}</span></span>`;
+  // "What next?" depends on where the another-round conversation has got to.
+  const nx = room.next, chooser = o.iWin ? me.slot : o.oppWin ? otherSlot() : "p1";
+  const extra = `<button class="btn ghost" data-act="share">Copy results</button><button class="btn ghost" data-act="endGame">End game</button>`;
+  let next;
+  if (o.tie && !o.settled) next = `<div class="actions">${room.tb ? `<button class="btn" data-act="closeModal">Go to the tiebreaker</button>` : `<button class="btn" data-act="modalTiebreak">Play the tiebreaker</button>`}${extra}</div>`;
+  else if (!nx) next = `<div class="actions"><button class="btn" data-act="nextRound">Play another round</button>${extra}</div>`;
+  else if (!nx.ok && nx.by === me.slot) next = `<p>You asked for another round. Waiting for ${on} to agree.</p><div class="actions"><button class="btn ghost" data-act="cancelNext">Cancel request</button>${extra}</div>`;
+  else if (!nx.ok) next = `<p><strong style="color:var(--text)">${on} wants another round.</strong></p><div class="actions"><button class="btn" data-act="agreeNext">Agree</button><button class="btn ghost" data-act="endGame">End game</button></div>`;
+  else if (chooser === me.slot) next = `<p><strong style="color:var(--text)">You won, so you choose the next list.</strong></p>
+      <div class="picker" role="group" aria-label="Next list"></div>
+      ${tierEditor()}
+      <div class="actions"><button class="btn" data-act="rematch">Start round</button><button class="btn ghost" data-act="endGame">End game</button></div>`;
+  else next = `<p>${on} won and is choosing the next list.</p><div class="actions"><button class="btn ghost" data-act="endGame">End game</button></div>`;
+  return `<button class="x" data-act="closeModal">View the board</button>
+    <h2 class="${o.iWin ? "win" : ""}">${title}</h2>
+    <p>${esc(L().title)}</p>
+    <div class="scoreline">${row(me.slot, o.my)}${row(otherSlot(), o.their)}</div>
+    ${sessionHtml()}
+    ${chatLog()}${says}
+    <p class="sublabel">What next?</p>
+    ${next}`;
+}
+function renderModal(){
+  if (!modalEl || !("innerHTML" in modalEl)) return;
+  const html = modal && room ? modalHtml() : "";
+  const typing = html && modalEl.contains && document.activeElement && document.activeElement.tagName === "INPUT" && modalEl.contains(document.activeElement);
+  if (typing) return;      // redrawing would knock the cursor out of the box; the next update catches up
+  modalEl.innerHTML = html ? `<div class="mback"></div><div class="mbox pc-wrap" role="dialog" aria-modal="true">${html}</div>` : "";
+  if (modalEl.style) { modalEl.style.setProperty("--p1c", look("p1").color); modalEl.style.setProperty("--p2c", look("p2").color); }
+  fillSelects();
+  placeModal();
+}
+
+function resultsView(mine, opp){
+  const all = keys(), mySlot = me.slot, oppSlot = otherSlot();
+  const my = tally(mine.guess, opp.own, all), their = tally(opp.guess, mine.own, all);
+  const on = esc(opp.name), myName = esc(mine.name);
+  const tie = my.score === their.score;
+  const T = room.tb, settled = !!(tie && T && T.pick && T.guess);
+  const tbWinner = settled ? (T.pick === T.guess ? T.guesser : T.chooser) : null;
+  const iWin = settled ? tbWinner === me.slot : my.score > their.score;
+  const oppWin = settled ? tbWinner !== me.slot : their.score > my.score;
+  const tb = room.tiebreak || settled ? " the tiebreaker" : "";
+  const verdict = tie && !settled ? "It's a tie" : iWin ? "You win" + tb : on + " wins" + tb;
+  const card = (name, t, lead, slot) => `<div class="pc-${slot}${lead ? " lead" : ""}"><span class="who">${mark(slot)}${name}</span><b>${t.score}</b><span class="tallyrow" aria-label="${t.exact} exact, ${t.near} one tier off, ${t.cold} further off"><span>\u2705 ${t.exact}</span><span>\u{1F525} ${t.near}</span><span>\u2744\uFE0F ${t.cold}</span></span>${t.perf ? `<span class="bonus">+${BONUS * t.perf} for ${t.perf} perfect ${t.perf === 1 ? "row" : "rows"}</span>` : ""}</div>`;
+  const legend = `<p class="legend"><span>\u2705 Exact, ${PTS_EXACT} points</span><span>\u{1F525} Hot: one tier off, ${PTS_NEAR} point</span><span>\u2744\uFE0F Cold: two or more off</span><span>\u2B06\uFE0F\u2B07\uFE0F The real answer is higher or lower</span></p>`;
+  return `<p class="verdict${iWin ? " win" : ""}">${verdict}</p>
+    <p class="hint">Highest score wins. A perfect row is worth ${BONUS} bonus points.</p>
+    <div class="scores">${card(myName, my, iWin, mySlot)}${card(on, their, oppWin, oppSlot)}</div>
+    ${chatLog()}
+    <div class="actions" style="margin:0 0 20px"><button class="btn ghost" data-act="openRound">Round summary and chat</button></div>
+    ${tie ? tbPanel(my.score) : ""}
+    <h2>Your guess against ${on}'s real ranking</h2>
+    ${legend}
+    ${revealBoard(mine.guess, opp.own, mySlot, oppSlot)}
+    <details class="theirs"${theirsOpen ? " open" : ""}><summary>See ${on}'s guess against your real ranking</summary>
+      ${legend}
+      ${revealBoard(opp.guess, mine.own, oppSlot, mySlot)}</details>
+    <div class="actions"><button class="btn" data-act="openRound">Open chat and next steps</button><button class="btn ghost" data-act="share">Copy results</button></div>`;
+}
+</script>
+</body>
+</html>
