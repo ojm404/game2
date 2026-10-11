@@ -518,14 +518,14 @@
     },
     {
      "id": "ad2e4838d-90e1-471c-bda0-fd816dabb2d4",
-     "name": "Fearless (Taylor’s Version)",
+     "name": "Fearless (Taylor’s version)",
      "note": "2021",
      "img": "https://coverartarchive.org/release-group/d2e4838d-90e1-471c-bda0-fd816dabb2d4/front-250",
      "sq": true
     },
     {
      "id": "a67727253-f1c0-4243-9270-f9f1401c3b8c",
-     "name": "Red (Taylor’s Version)",
+     "name": "Red (Taylor’s version)",
      "note": "2021",
      "img": "https://coverartarchive.org/release-group/67727253-f1c0-4243-9270-f9f1401c3b8c/front-250",
      "sq": true
@@ -539,14 +539,14 @@
     },
     {
      "id": "a0441b1b2-de57-4a9a-b007-1f6e159921d5",
-     "name": "Speak Now (Taylor’s Version)",
+     "name": "Speak Now (Taylor’s version)",
      "note": "2023",
      "img": "https://coverartarchive.org/release-group/0441b1b2-de57-4a9a-b007-1f6e159921d5/front-250",
      "sq": true
     },
     {
      "id": "a1c4770b3-b7a3-4d44-a7a9-8e2dbb74b85a",
-     "name": "1989 (Taylor’s Version)",
+     "name": "1989 (Taylor’s version)",
      "note": "2023",
      "img": "https://coverartarchive.org/release-group/1c4770b3-b7a3-4d44-a7a9-8e2dbb74b85a/front-250",
      "sq": true
@@ -1322,8 +1322,8 @@
    "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
    "group": "Taylor Swift",
-   "short": "Fearless (Taylor’s Version) songs",
-   "title": "Taylor Swift: Fearless (Taylor’s Version) songs",
+   "short": "Fearless (Taylor’s version) songs",
+   "title": "Taylor Swift: Fearless (Taylor’s version) songs",
    "items": [
     {
      "id": "k2e37f126-c1e3-4fbb-9751-7e997419b421",
@@ -1462,8 +1462,8 @@
    "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
    "group": "Taylor Swift",
-   "short": "Red (Taylor’s Version) songs",
-   "title": "Taylor Swift: Red (Taylor’s Version) songs",
+   "short": "Red (Taylor’s version) songs",
+   "title": "Taylor Swift: Red (Taylor’s version) songs",
    "items": [
     {
      "id": "k5befb065-42b1-4a9c-8a10-e811c5c57358",
@@ -1692,8 +1692,8 @@
    "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
    "group": "Taylor Swift",
-   "short": "Speak Now (Taylor’s Version) songs",
-   "title": "Taylor Swift: Speak Now (Taylor’s Version) songs",
+   "short": "Speak Now (Taylor’s version) songs",
+   "title": "Taylor Swift: Speak Now (Taylor’s version) songs",
    "items": [
     {
      "id": "k4768ab1e-70ff-4384-970a-5d85e875e38d",
@@ -1812,8 +1812,8 @@
    "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
    "group": "Taylor Swift",
-   "short": "1989 (Taylor’s Version) songs",
-   "title": "Taylor Swift: 1989 (Taylor’s Version) songs",
+   "short": "1989 (Taylor’s version) songs",
+   "title": "Taylor Swift: 1989 (Taylor’s version) songs",
    "items": [
     {
      "id": "kdc31f9ec-b8bc-4755-93c8-abebb4b87237",
@@ -4202,91 +4202,91 @@
     {
      "id": "bit-ends-with-us-colleen-hoover",
      "name": "It Ends with Us",
-     "note": "Colleen Hoover, 2012",
+     "note": "Colleen Hoover",
      "img": "https://covers.openlibrary.org/b/id/10473609-M.jpg"
     },
     {
      "id": "bverity-colleen-hoover",
      "name": "Verity",
-     "note": "Colleen Hoover, 2018",
+     "note": "Colleen Hoover",
      "img": "https://covers.openlibrary.org/b/id/8747160-M.jpg"
     },
     {
      "id": "bthe-seven-husbands-of-evelyn-hugo-taylor-jenkins-reid",
      "name": "The Seven Husbands of Evelyn Hugo",
-     "note": "Taylor Jenkins Reid, 2017",
+     "note": "Taylor Jenkins Reid",
      "img": "https://covers.openlibrary.org/b/id/8354226-M.jpg"
     },
     {
      "id": "ba-court-of-thorns-and-roses-sarah-j-maas",
      "name": "A Court of Thorns and Roses",
-     "note": "Sarah J. Maas, 2013",
+     "note": "Sarah J. Maas",
      "img": "https://covers.openlibrary.org/b/id/15254465-M.jpg"
     },
     {
      "id": "bfourth-wing-rebecca-yarros",
      "name": "Fourth Wing",
-     "note": "Rebecca Yarros, 2023",
+     "note": "Rebecca Yarros",
      "img": "https://covers.openlibrary.org/b/id/14407898-M.jpg"
     },
     {
      "id": "bthe-song-of-achilles-madeline-miller",
      "name": "The Song of Achilles",
-     "note": "Madeline Miller, 2011",
+     "note": "Madeline Miller",
      "img": "https://covers.openlibrary.org/b/id/7098465-M.jpg"
     },
     {
      "id": "bthe-love-hypothesis-ali-hazelwood",
      "name": "The Love Hypothesis",
-     "note": "Ali Hazelwood, 2021",
+     "note": "Ali Hazelwood",
      "img": "https://covers.openlibrary.org/b/id/10601402-M.jpg"
     },
     {
      "id": "bthey-both-die-at-the-end-adam-silvera",
      "name": "They Both Die at the End",
-     "note": "Adam Silvera, 2017",
+     "note": "Adam Silvera",
      "img": "https://covers.openlibrary.org/b/id/9280553-M.jpg"
     },
     {
      "id": "bwe-were-liars-e-lockhart",
      "name": "We Were Liars",
-     "note": "E. Lockhart, 2014",
+     "note": "E. Lockhart",
      "img": "https://covers.openlibrary.org/b/id/14425312-M.jpg"
     },
     {
      "id": "bthe-invisible-life-of-addie-larue-v-e-schwab",
      "name": "The Invisible Life of Addie LaRue",
-     "note": "V. E. Schwab, 2015",
+     "note": "V. E. Schwab",
      "img": "https://covers.openlibrary.org/b/id/10092261-M.jpg"
     },
     {
      "id": "bicebreaker-hannah-grace",
      "name": "Icebreaker",
-     "note": "Hannah Grace, 2020",
+     "note": "Hannah Grace",
      "img": "https://covers.openlibrary.org/b/id/13180728-M.jpg"
     },
     {
      "id": "bbeach-read-emily-henry",
      "name": "Beach Read",
-     "note": "Emily Henry, 2020",
+     "note": "Emily Henry",
      "img": "https://covers.openlibrary.org/b/id/9426296-M.jpg"
     },
     {
      "id": "bthe-cruel-prince-holly-black",
      "name": "The Cruel Prince",
-     "note": "Holly Black, 2018",
+     "note": "Holly Black",
      "img": "https://covers.openlibrary.org/b/id/8361789-M.jpg"
     },
     {
      "id": "bred-white-royal-blue-casey-mcquiston",
      "name": "Red, White & Royal Blue",
-     "note": "Casey McQuiston, 2019",
+     "note": "Casey McQuiston",
      "img": "https://covers.openlibrary.org/b/id/9171544-M.jpg"
     },
     {
      "id": "bsix-of-crows-leigh-bardugo",
      "name": "Six of Crows",
-     "note": "Leigh Bardugo, 2015",
+     "note": "Leigh Bardugo",
      "img": "https://covers.openlibrary.org/b/id/12667417-M.jpg"
     }
    ]
@@ -5360,11 +5360,101 @@
    ]
   },
   {
-   "id": "avatar-the-last-airbender-main-characters",
-   "src": "{\"type\":\"cast\",\"name\":\"Avatar: The Last Airbender\",\"year\":2005,\"photos\":false}",
+   "id": "the-simpsons-main-characters",
+   "src": "{\"type\":\"names\",\"cat\":\"TV\",\"group\":\"The Simpsons\",\"title\":\"The Simpsons main characters\",\"short\":\"Main characters\",\"picks\":[\"Homer Simpson\",\"Marge Simpson\",\"Bart Simpson\",\"Lisa Simpson\",\"Maggie Simpson\",\"Grampa Simpson\",\"Ned Flanders\",\"Mr. Burns\",\"Waylon Smithers\",\"Moe Szyslak\",\"Krusty the Clown\",\"Milhouse Van Houten\",\"Apu Nahasapeemapetilon\",\"Chief Wiggum\",\"Principal Skinner\",\"Sideshow Bob\",\"Barney Gumble\",\"Nelson Muntz\",\"Ralph Wiggum\",\"Comic Book Guy\"]}",
    "cat": "TV",
-   "group": "Avatar: The Last Airbender",
+   "group": "The Simpsons",
    "short": "Main characters",
+   "title": "The Simpsons main characters",
+   "items": [
+    {
+     "id": "nhomer-simpson",
+     "name": "Homer Simpson"
+    },
+    {
+     "id": "nmarge-simpson",
+     "name": "Marge Simpson"
+    },
+    {
+     "id": "nbart-simpson",
+     "name": "Bart Simpson"
+    },
+    {
+     "id": "nlisa-simpson",
+     "name": "Lisa Simpson"
+    },
+    {
+     "id": "nmaggie-simpson",
+     "name": "Maggie Simpson"
+    },
+    {
+     "id": "ngrampa-simpson",
+     "name": "Grampa Simpson"
+    },
+    {
+     "id": "nned-flanders",
+     "name": "Ned Flanders"
+    },
+    {
+     "id": "nmr-burns",
+     "name": "Mr. Burns"
+    },
+    {
+     "id": "nwaylon-smithers",
+     "name": "Waylon Smithers"
+    },
+    {
+     "id": "nmoe-szyslak",
+     "name": "Moe Szyslak"
+    },
+    {
+     "id": "nkrusty-the-clown",
+     "name": "Krusty the Clown"
+    },
+    {
+     "id": "nmilhouse-van-houten",
+     "name": "Milhouse Van Houten"
+    },
+    {
+     "id": "napu-nahasapeemapetilon",
+     "name": "Apu Nahasapeemapetilon"
+    },
+    {
+     "id": "nchief-wiggum",
+     "name": "Chief Wiggum"
+    },
+    {
+     "id": "nprincipal-skinner",
+     "name": "Principal Skinner"
+    },
+    {
+     "id": "nsideshow-bob",
+     "name": "Sideshow Bob"
+    },
+    {
+     "id": "nbarney-gumble",
+     "name": "Barney Gumble"
+    },
+    {
+     "id": "nnelson-muntz",
+     "name": "Nelson Muntz"
+    },
+    {
+     "id": "nralph-wiggum",
+     "name": "Ralph Wiggum"
+    },
+    {
+     "id": "ncomic-book-guy",
+     "name": "Comic Book Guy"
+    }
+   ]
+  },
+  {
+   "id": "avatar-the-last-airbender-main-characters",
+   "src": "{\"type\":\"cast\",\"name\":\"Avatar: The Last Airbender\",\"year\":2005,\"photos\":false,\"group\":\"Avatar universe\",\"short\":\"The Last Airbender characters\"}",
+   "cat": "TV",
+   "group": "Avatar universe",
+   "short": "The Last Airbender characters",
    "title": "Avatar: The Last Airbender main characters",
    "items": [
     {
@@ -5443,10 +5533,10 @@
   },
   {
    "id": "the-legend-of-korra-main-characters",
-   "src": "{\"type\":\"cast\",\"name\":\"The Legend of Korra\",\"photos\":false}",
+   "src": "{\"type\":\"cast\",\"name\":\"The Legend of Korra\",\"photos\":false,\"group\":\"Avatar universe\",\"short\":\"The Legend of Korra characters\"}",
    "cat": "TV",
-   "group": "The Legend of Korra",
-   "short": "Main characters",
+   "group": "Avatar universe",
+   "short": "The Legend of Korra characters",
    "title": "The Legend of Korra main characters",
    "items": [
     {
@@ -5525,9 +5615,9 @@
   },
   {
    "id": "avatar-universe-bending-abilities",
-   "src": "{\"type\":\"names\",\"cat\":\"TV\",\"group\":\"Avatar: The Last Airbender\",\"title\":\"Avatar universe bending abilities\",\"short\":\"Bending abilities\",\"picks\":[\"Waterbending\",\"Earthbending\",\"Firebending\",\"Airbending\",\"Metalbending\",\"Lightning generation\",\"Bloodbending\",\"Healing\",\"Lavabending\",\"Sandbending\",\"Plantbending\",\"Combustionbending\",\"Energybending\",\"Spirit projection\",\"Flight\"]}",
+   "src": "{\"type\":\"names\",\"cat\":\"TV\",\"group\":\"Avatar universe\",\"title\":\"Avatar universe bending abilities\",\"short\":\"Bending abilities\",\"picks\":[\"Waterbending\",\"Earthbending\",\"Firebending\",\"Airbending\",\"Metalbending\",\"Lightning generation\",\"Bloodbending\",\"Healing\",\"Lavabending\",\"Sandbending\",\"Plantbending\",\"Combustionbending\",\"Energybending\",\"Spirit projection\",\"Flight\"]}",
    "cat": "TV",
-   "group": "Avatar: The Last Airbender",
+   "group": "Avatar universe",
    "short": "Bending abilities",
    "title": "Avatar universe bending abilities",
    "items": [
@@ -11222,376 +11312,683 @@
    "short": "Biopics (true stories)"
   },
   {
-   "id": "murder-mysteries",
-   "src": "{\"type\":\"books\",\"group\":\"Genres\",\"title\":\"Murder mysteries\",\"picks\":[[\"The Hound of the Baskervilles\",\"Arthur Conan Doyle\"],[\"The Maltese Falcon\",\"Dashiell Hammett\"],[\"Murder on the Orient Express\",\"Agatha Christie\"],[\"And Then There Were None\",\"Agatha Christie\"],[\"The Big Sleep\",\"Raymond Chandler\"],[\"The Name of the Rose\",\"Umberto Eco\"],[\"The Girl with the Dragon Tattoo\",\"Stieg Larsson\"],[\"Still Life\",\"Louise Penny\"],[\"In the Woods\",\"Tana French\"],[\"Gone Girl\",\"Gillian Flynn\"],[\"The Cuckoo's Calling\",\"Robert Galbraith\"],[\"Big Little Lies\",\"Liane Moriarty\"],[\"A Good Girl's Guide to Murder\",\"Holly Jackson\"],[\"The Silent Patient\",\"Alex Michaelides\"],[\"The Thursday Murder Club\",\"Richard Osman\"]]}",
+   "id": "murder-mysteries-classics",
+   "src": "{\"type\":\"books\",\"group\":\"Genres\",\"title\":\"Murder mysteries: classics\",\"picks\":[[\"The Murders in the Rue Morgue\",\"Edgar Allan Poe\"],[\"The Moonstone\",\"Wilkie Collins\"],[\"The Hound of the Baskervilles\",\"Arthur Conan Doyle\"],[\"The Murder of Roger Ackroyd\",\"Agatha Christie\"],[\"The Maltese Falcon\",\"Dashiell Hammett\"],[\"Murder on the Orient Express\",\"Agatha Christie\"],[\"Gaudy Night\",\"Dorothy L. Sayers\"],[\"Death on the Nile\",\"Agatha Christie\"],[\"And Then There Were None\",\"Agatha Christie\"],[\"The Big Sleep\",\"Raymond Chandler\"],[\"The Daughter of Time\",\"Josephine Tey\"],[\"Cover Her Face\",\"P. D. James\"],[\"The Name of the Rose\",\"Umberto Eco\"]]}",
    "cat": "Books",
    "group": "Genres",
-   "short": "Murder mysteries",
-   "title": "Murder mysteries",
+   "short": "Murder mysteries: classics",
+   "title": "Murder mysteries: classics",
    "items": [
+    {
+     "id": "bthe-murders-in-the-rue-morgue-edgar-allan-poe",
+     "name": "The Murders in the Rue Morgue",
+     "note": "Edgar Allan Poe",
+     "img": "https://covers.openlibrary.org/b/id/11774455-M.jpg"
+    },
+    {
+     "id": "bthe-moonstone-wilkie-collins",
+     "name": "The Moonstone",
+     "note": "Wilkie Collins",
+     "img": "https://covers.openlibrary.org/b/id/8237041-M.jpg"
+    },
     {
      "id": "bthe-hound-of-the-baskervilles-arthur-conan-doyle",
      "name": "The Hound of the Baskervilles",
-     "note": "Arthur Conan Doyle, 1900",
+     "note": "Arthur Conan Doyle",
      "img": "https://covers.openlibrary.org/b/id/8063264-M.jpg"
+    },
+    {
+     "id": "bthe-murder-of-roger-ackroyd-agatha-christie",
+     "name": "The Murder of Roger Ackroyd",
+     "note": "Agatha Christie",
+     "img": "https://covers.openlibrary.org/b/id/13151356-M.jpg"
     },
     {
      "id": "bthe-maltese-falcon-dashiell-hammett",
      "name": "The Maltese Falcon",
-     "note": "Dashiell Hammett, 1929",
+     "note": "Dashiell Hammett",
      "img": "https://covers.openlibrary.org/b/id/998587-M.jpg"
     },
     {
      "id": "bmurder-on-the-orient-express-agatha-christie",
      "name": "Murder on the Orient Express",
-     "note": "Agatha Christie, 1933",
+     "note": "Agatha Christie",
      "img": "https://covers.openlibrary.org/b/id/11100465-M.jpg"
+    },
+    {
+     "id": "bgaudy-night-dorothy-l-sayers",
+     "name": "Gaudy Night",
+     "note": "Dorothy L. Sayers",
+     "img": "https://covers.openlibrary.org/b/id/5343404-M.jpg"
+    },
+    {
+     "id": "bdeath-on-the-nile-agatha-christie",
+     "name": "Death on the Nile",
+     "note": "Agatha Christie",
+     "img": "https://covers.openlibrary.org/b/id/14066646-M.jpg"
     },
     {
      "id": "band-then-there-were-none-agatha-christie",
      "name": "And Then There Were None",
-     "note": "Agatha Christie, 1939",
+     "note": "Agatha Christie",
      "img": "https://covers.openlibrary.org/b/id/11172296-M.jpg"
     },
     {
      "id": "bthe-big-sleep-raymond-chandler",
      "name": "The Big Sleep",
-     "note": "Raymond Chandler, 1939",
+     "note": "Raymond Chandler",
      "img": "https://covers.openlibrary.org/b/id/7268475-M.jpg"
+    },
+    {
+     "id": "bthe-daughter-of-time-josephine-tey",
+     "name": "The Daughter of Time",
+     "note": "Josephine Tey",
+     "img": "https://covers.openlibrary.org/b/id/6485299-M.jpg"
+    },
+    {
+     "id": "bcover-her-face-p-d-james",
+     "name": "Cover Her Face",
+     "note": "P. D. James",
+     "img": "https://covers.openlibrary.org/b/id/4992137-M.jpg"
     },
     {
      "id": "bthe-name-of-the-rose-umberto-eco",
      "name": "The Name of the Rose",
-     "note": "Umberto Eco, 1983",
+     "note": "Umberto Eco",
      "img": "https://covers.openlibrary.org/b/id/15023290-M.jpg"
-    },
+    }
+   ]
+  },
+  {
+   "id": "murder-mysteries-modern",
+   "src": "{\"type\":\"books\",\"group\":\"Genres\",\"title\":\"Murder mysteries: modern\",\"picks\":[[\"The Girl with the Dragon Tattoo\",\"Stieg Larsson\"],[\"Still Life\",\"Louise Penny\"],[\"In the Woods\",\"Tana French\"],[\"Gone Girl\",\"Gillian Flynn\"],[\"The Cuckoo's Calling\",\"Robert Galbraith\"],[\"Big Little Lies\",\"Liane Moriarty\"],[\"The Woman in Cabin 10\",\"Ruth Ware\"],[\"Magpie Murders\",\"Anthony Horowitz\"],[\"One of Us Is Lying\",\"Karen M. McManus\"],[\"A Good Girl's Guide to Murder\",\"Holly Jackson\"],[\"The Silent Patient\",\"Alex Michaelides\"],[\"The Guest List\",\"Lucy Foley\"],[\"The Thursday Murder Club\",\"Richard Osman\"],[\"The Maid\",\"Nita Prose\"],[\"Everyone in My Family Has Killed Someone\",\"Benjamin Stevenson\"]]}",
+   "cat": "Books",
+   "group": "Genres",
+   "short": "Murder mysteries: modern",
+   "title": "Murder mysteries: modern",
+   "items": [
     {
      "id": "bthe-girl-with-the-dragon-tattoo-stieg-larsson",
      "name": "The Girl with the Dragon Tattoo",
-     "note": "Stieg Larsson, 2011"
+     "note": "Stieg Larsson"
     },
     {
      "id": "bstill-life-louise-penny",
      "name": "Still Life",
-     "note": "Louise Penny, 2005",
+     "note": "Louise Penny",
      "img": "https://covers.openlibrary.org/b/id/1170673-M.jpg"
     },
     {
      "id": "bin-the-woods-tana-french",
      "name": "In the Woods",
-     "note": "Tana French, 2001",
+     "note": "Tana French",
      "img": "https://covers.openlibrary.org/b/id/1474730-M.jpg"
     },
     {
      "id": "bgone-girl-gillian-flynn",
      "name": "Gone Girl",
-     "note": "Gillian Flynn, 2011",
+     "note": "Gillian Flynn",
      "img": "https://covers.openlibrary.org/b/id/8368314-M.jpg"
     },
     {
      "id": "bthe-cuckoo-s-calling-robert-galbraith",
      "name": "The Cuckoo's Calling",
-     "note": "Robert Galbraith, 2013",
-     "img": "https://covers.openlibrary.org/b/id/7261207-M.jpg"
+     "note": "Robert Galbraith"
     },
     {
      "id": "bbig-little-lies-liane-moriarty",
      "name": "Big Little Lies",
-     "note": "Liane Moriarty, 2014",
+     "note": "Liane Moriarty",
      "img": "https://covers.openlibrary.org/b/id/7352410-M.jpg"
+    },
+    {
+     "id": "bthe-woman-in-cabin-10-ruth-ware",
+     "name": "The Woman in Cabin 10",
+     "note": "Ruth Ware",
+     "img": "https://covers.openlibrary.org/b/id/10439789-M.jpg"
+    },
+    {
+     "id": "bmagpie-murders-anthony-horowitz",
+     "name": "Magpie Murders",
+     "note": "Anthony Horowitz",
+     "img": "https://covers.openlibrary.org/b/id/8189045-M.jpg"
+    },
+    {
+     "id": "bone-of-us-is-lying-karen-m-mcmanus",
+     "name": "One of Us Is Lying",
+     "note": "Karen M. McManus",
+     "img": "https://covers.openlibrary.org/b/id/12503935-M.jpg"
     },
     {
      "id": "ba-good-girl-s-guide-to-murder-holly-jackson",
      "name": "A Good Girl's Guide to Murder",
-     "note": "Holly Jackson, 2019",
+     "note": "Holly Jackson",
      "img": "https://covers.openlibrary.org/b/id/13156188-M.jpg"
     },
     {
      "id": "bthe-silent-patient-alex-michaelides",
      "name": "The Silent Patient",
-     "note": "Alex Michaelides, 2018",
+     "note": "Alex Michaelides",
      "img": "https://covers.openlibrary.org/b/id/9407338-M.jpg"
+    },
+    {
+     "id": "bthe-guest-list-lucy-foley",
+     "name": "The Guest List",
+     "note": "Lucy Foley"
     },
     {
      "id": "bthe-thursday-murder-club-richard-osman",
      "name": "The Thursday Murder Club",
-     "note": "Richard Osman, 2020",
+     "note": "Richard Osman",
      "img": "https://covers.openlibrary.org/b/id/10201431-M.jpg"
+    },
+    {
+     "id": "bthe-maid-nita-prose",
+     "name": "The Maid",
+     "note": "Nita Prose",
+     "img": "https://covers.openlibrary.org/b/id/11199954-M.jpg"
+    },
+    {
+     "id": "beveryone-in-my-family-has-killed-someone-benjamin-stevenson",
+     "name": "Everyone in My Family Has Killed Someone",
+     "note": "Benjamin Stevenson",
+     "img": "https://covers.openlibrary.org/b/id/13260574-M.jpg"
     }
    ]
   },
   {
-   "id": "sci-fi-books-and-series",
-   "src": "{\"type\":\"books\",\"group\":\"Genres\",\"title\":\"Sci-fi books and series\",\"picks\":[[\"Frankenstein\",\"Mary Shelley\"],[\"Foundation\",\"Isaac Asimov\"],[\"Fahrenheit 451\",\"Ray Bradbury\"],[\"Dune\",\"Frank Herbert\"],[\"The Left Hand of Darkness\",\"Ursula K. Le Guin\"],[\"The Hitchhiker's Guide to the Galaxy\",\"Douglas Adams\"],[\"Kindred\",\"Octavia E. Butler\"],[\"Neuromancer\",\"William Gibson\"],[\"Ender's Game\",\"Orson Scott Card\"],[\"Hyperion\",\"Dan Simmons\"],[\"Snow Crash\",\"Neal Stephenson\"],[\"The Three-Body Problem\",\"Cixin Liu\"],[\"The Expanse\",\"James S. A. Corey\",\"Leviathan Wakes\"],[\"The Martian\",\"Andy Weir\"],[\"Project Hail Mary\",\"Andy Weir\"]]}",
+   "id": "sci-fi-classics",
+   "src": "{\"type\":\"books\",\"group\":\"Genres\",\"title\":\"Sci-fi: classics\",\"picks\":[[\"Frankenstein\",\"Mary Shelley\"],[\"The War of the Worlds\",\"H. G. Wells\"],[\"Brave New World\",\"Aldous Huxley\"],[\"Foundation\",\"Isaac Asimov\"],[\"Fahrenheit 451\",\"Ray Bradbury\"],[\"Dune\",\"Frank Herbert\"],[\"Do Androids Dream of Electric Sheep?\",\"Philip K. Dick\"],[\"The Left Hand of Darkness\",\"Ursula K. Le Guin\"],[\"Slaughterhouse-Five\",\"Kurt Vonnegut\"],[\"The Hitchhiker's Guide to the Galaxy\",\"Douglas Adams\"],[\"Kindred\",\"Octavia E. Butler\"],[\"Neuromancer\",\"William Gibson\"],[\"Ender's Game\",\"Orson Scott Card\"],[\"Hyperion\",\"Dan Simmons\"],[\"Snow Crash\",\"Neal Stephenson\"]]}",
    "cat": "Books",
    "group": "Genres",
-   "short": "Sci-fi books and series",
-   "title": "Sci-fi books and series",
+   "short": "Sci-fi: classics",
+   "title": "Sci-fi: classics",
    "items": [
     {
      "id": "bfrankenstein-mary-shelley",
      "name": "Frankenstein",
-     "note": "Mary Shelley, 1818",
-     "img": "https://covers.openlibrary.org/b/id/12356249-M.jpg"
+     "note": "Mary Shelley",
+     "img": "https://covers.openlibrary.org/b/id/15118068-M.jpg"
+    },
+    {
+     "id": "bthe-war-of-the-worlds-h-g-wells",
+     "name": "The War of the Worlds",
+     "note": "H. G. Wells",
+     "img": "https://covers.openlibrary.org/b/id/36314-M.jpg"
+    },
+    {
+     "id": "bbrave-new-world-aldous-huxley",
+     "name": "Brave New World",
+     "note": "Aldous Huxley",
+     "img": "https://covers.openlibrary.org/b/id/8231823-M.jpg"
     },
     {
      "id": "bfoundation-isaac-asimov",
      "name": "Foundation",
-     "note": "Isaac Asimov, 1951",
+     "note": "Isaac Asimov",
      "img": "https://covers.openlibrary.org/b/id/14612610-M.jpg"
     },
     {
      "id": "bfahrenheit-451-ray-bradbury",
      "name": "Fahrenheit 451",
-     "note": "Ray Bradbury, 1953",
+     "note": "Ray Bradbury",
      "img": "https://covers.openlibrary.org/b/id/12993656-M.jpg"
     },
     {
      "id": "bdune-frank-herbert",
      "name": "Dune",
-     "note": "Frank Herbert, 1965",
+     "note": "Frank Herbert",
      "img": "https://covers.openlibrary.org/b/id/11481354-M.jpg"
+    },
+    {
+     "id": "bdo-androids-dream-of-electric-sheep-philip-k-dick",
+     "name": "Do Androids Dream of Electric Sheep?",
+     "note": "Philip K. Dick",
+     "img": "https://covers.openlibrary.org/b/id/207515-M.jpg"
     },
     {
      "id": "bthe-left-hand-of-darkness-ursula-k-le-guin",
      "name": "The Left Hand of Darkness",
-     "note": "Ursula K. Le Guin, 1969",
+     "note": "Ursula K. Le Guin",
      "img": "https://covers.openlibrary.org/b/id/10618463-M.jpg"
+    },
+    {
+     "id": "bslaughterhouse-five-kurt-vonnegut",
+     "name": "Slaughterhouse-Five",
+     "note": "Kurt Vonnegut",
+     "img": "https://covers.openlibrary.org/b/id/12727001-M.jpg"
     },
     {
      "id": "bthe-hitchhiker-s-guide-to-the-galaxy-douglas-adams",
      "name": "The Hitchhiker's Guide to the Galaxy",
-     "note": "Douglas Adams, 1979",
+     "note": "Douglas Adams",
      "img": "https://covers.openlibrary.org/b/id/12986869-M.jpg"
     },
     {
      "id": "bkindred-octavia-e-butler",
      "name": "Kindred",
-     "note": "Octavia E. Butler, 1979",
+     "note": "Octavia E. Butler",
      "img": "https://covers.openlibrary.org/b/id/8745330-M.jpg"
     },
     {
      "id": "bneuromancer-william-gibson",
      "name": "Neuromancer",
-     "note": "William Gibson, 1984",
+     "note": "William Gibson",
      "img": "https://covers.openlibrary.org/b/id/283860-M.jpg"
     },
     {
      "id": "bender-s-game-orson-scott-card",
      "name": "Ender's Game",
-     "note": "Orson Scott Card, 1985",
+     "note": "Orson Scott Card",
      "img": "https://covers.openlibrary.org/b/id/12996033-M.jpg"
     },
     {
      "id": "bhyperion-dan-simmons",
      "name": "Hyperion",
-     "note": "Dan Simmons, 1990",
-     "img": "https://covers.openlibrary.org/b/id/484900-M.jpg"
+     "note": "Dan Simmons",
+     "img": "https://covers.openlibrary.org/b/id/380332-M.jpg"
     },
     {
      "id": "bsnow-crash-neal-stephenson",
      "name": "Snow Crash",
-     "note": "Neal Stephenson, 1992",
+     "note": "Neal Stephenson",
      "img": "https://covers.openlibrary.org/b/id/392508-M.jpg"
+    }
+   ]
+  },
+  {
+   "id": "sci-fi-modern",
+   "src": "{\"type\":\"books\",\"group\":\"Genres\",\"title\":\"Sci-fi: modern\",\"picks\":[[\"Old Man's War\",\"John Scalzi\"],[\"The Three-Body Problem\",\"Cixin Liu\"],[\"The Expanse\",\"James S. A. Corey\",\"Leviathan Wakes\"],[\"Ready Player One\",\"Ernest Cline\"],[\"The Martian\",\"Andy Weir\"],[\"Ancillary Justice\",\"Ann Leckie\"],[\"Red Rising\",\"Pierce Brown\"],[\"Station Eleven\",\"Emily St. John Mandel\"],[\"Annihilation\",\"Jeff VanderMeer\"],[\"The Long Way to a Small, Angry Planet\",\"Becky Chambers\"],[\"Children of Time\",\"Adrian Tchaikovsky\"],[\"Dark Matter\",\"Blake Crouch\"],[\"The Murderbot Diaries\",\"Martha Wells\",\"All Systems Red\"],[\"Klara and the Sun\",\"Kazuo Ishiguro\"],[\"Project Hail Mary\",\"Andy Weir\"]]}",
+   "cat": "Books",
+   "group": "Genres",
+   "short": "Sci-fi: modern",
+   "title": "Sci-fi: modern",
+   "items": [
+    {
+     "id": "bold-man-s-war-john-scalzi",
+     "name": "Old Man's War",
+     "note": "John Scalzi",
+     "img": "https://covers.openlibrary.org/b/id/524402-M.jpg"
     },
     {
      "id": "bthe-three-body-problem-cixin-liu",
      "name": "The Three-Body Problem",
-     "note": "Cixin Liu, 2008",
-     "img": "https://covers.openlibrary.org/b/id/10526598-M.jpg"
+     "note": "Cixin Liu"
     },
     {
      "id": "bthe-expanse-james-s-a-corey",
      "name": "The Expanse",
-     "note": "James S. A. Corey, 2009",
+     "note": "James S. A. Corey",
      "img": "https://covers.openlibrary.org/b/id/7314237-M.jpg"
+    },
+    {
+     "id": "bready-player-one-ernest-cline",
+     "name": "Ready Player One",
+     "note": "Ernest Cline",
+     "img": "https://covers.openlibrary.org/b/id/8737626-M.jpg"
     },
     {
      "id": "bthe-martian-andy-weir",
      "name": "The Martian",
-     "note": "Andy Weir, 2011",
+     "note": "Andy Weir",
      "img": "https://covers.openlibrary.org/b/id/11447888-M.jpg"
+    },
+    {
+     "id": "bancillary-justice-ann-leckie",
+     "name": "Ancillary Justice",
+     "note": "Ann Leckie",
+     "img": "https://covers.openlibrary.org/b/id/7355949-M.jpg"
+    },
+    {
+     "id": "bred-rising-pierce-brown",
+     "name": "Red Rising",
+     "note": "Pierce Brown",
+     "img": "https://covers.openlibrary.org/b/id/7316188-M.jpg"
+    },
+    {
+     "id": "bstation-eleven-emily-st-john-mandel",
+     "name": "Station Eleven",
+     "note": "Emily St. John Mandel",
+     "img": "https://covers.openlibrary.org/b/id/7369961-M.jpg"
+    },
+    {
+     "id": "bannihilation-jeff-vandermeer",
+     "name": "Annihilation",
+     "note": "Jeff VanderMeer",
+     "img": "https://covers.openlibrary.org/b/id/8408974-M.jpg"
+    },
+    {
+     "id": "bthe-long-way-to-a-small-angry-planet-becky-chambers",
+     "name": "The Long Way to a Small, Angry Planet",
+     "note": "Becky Chambers",
+     "img": "https://covers.openlibrary.org/b/id/8902659-M.jpg"
+    },
+    {
+     "id": "bchildren-of-time-adrian-tchaikovsky",
+     "name": "Children of Time",
+     "note": "Adrian Tchaikovsky",
+     "img": "https://covers.openlibrary.org/b/id/8264706-M.jpg"
+    },
+    {
+     "id": "bdark-matter-blake-crouch",
+     "name": "Dark Matter",
+     "note": "Blake Crouch",
+     "img": "https://covers.openlibrary.org/b/id/7436634-M.jpg"
+    },
+    {
+     "id": "bthe-murderbot-diaries-martha-wells",
+     "name": "The Murderbot Diaries",
+     "note": "Martha Wells",
+     "img": "https://covers.openlibrary.org/b/id/9157148-M.jpg"
+    },
+    {
+     "id": "bklara-and-the-sun-kazuo-ishiguro",
+     "name": "Klara and the Sun",
+     "note": "Kazuo Ishiguro",
+     "img": "https://covers.openlibrary.org/b/id/10648686-M.jpg"
     },
     {
      "id": "bproject-hail-mary-andy-weir",
      "name": "Project Hail Mary",
-     "note": "Andy Weir, 2021",
+     "note": "Andy Weir",
      "img": "https://covers.openlibrary.org/b/id/11200092-M.jpg"
     }
    ]
   },
   {
-   "id": "fantasy-books-and-series",
-   "src": "{\"type\":\"books\",\"group\":\"Genres\",\"title\":\"Fantasy books and series\",\"picks\":[[\"The Hobbit\",\"J. R. R. Tolkien\"],[\"The Chronicles of Narnia\",\"C. S. Lewis\",\"The Lion, the Witch and the Wardrobe\"],[\"The Lord of the Rings\",\"J. R. R. Tolkien\",\"The Fellowship of the Ring\"],[\"Earthsea\",\"Ursula K. Le Guin\",\"A Wizard of Earthsea\"],[\"Discworld\",\"Terry Pratchett\",\"The Colour of Magic\"],[\"The Wheel of Time\",\"Robert Jordan\",\"The Eye of the World\"],[\"A Song of Ice and Fire\",\"George R. R. Martin\",\"A Game of Thrones\"],[\"Harry Potter\",\"J. K. Rowling\",\"Harry Potter and the Philosopher's Stone\"],[\"American Gods\",\"Neil Gaiman\"],[\"Mistborn\",\"Brandon Sanderson\",\"Mistborn: The Final Empire\"],[\"The Kingkiller Chronicle\",\"Patrick Rothfuss\",\"The Name of the Wind\"],[\"The Stormlight Archive\",\"Brandon Sanderson\",\"The Way of Kings\"],[\"The Broken Earth\",\"N. K. Jemisin\",\"The Fifth Season\"],[\"A Court of Thorns and Roses\",\"Sarah J. Maas\"],[\"The Empyrean\",\"Rebecca Yarros\",\"Fourth Wing\"]]}",
+   "id": "fantasy-classics",
+   "src": "{\"type\":\"books\",\"group\":\"Genres\",\"title\":\"Fantasy: classics\",\"picks\":[[\"The Hobbit\",\"J. R. R. Tolkien\"],[\"The Chronicles of Narnia\",\"C. S. Lewis\",\"The Lion, the Witch and the Wardrobe\"],[\"The Lord of the Rings\",\"J. R. R. Tolkien\",\"The Fellowship of the Ring\"],[\"The Once and Future King\",\"T. H. White\"],[\"Earthsea\",\"Ursula K. Le Guin\",\"A Wizard of Earthsea\"],[\"The Last Unicorn\",\"Peter S. Beagle\"],[\"The Princess Bride\",\"William Goldman\"],[\"The Belgariad\",\"David Eddings\",\"Pawn of Prophecy\"],[\"Discworld\",\"Terry Pratchett\",\"The Colour of Magic\"],[\"The Wheel of Time\",\"Robert Jordan\",\"The Eye of the World\"],[\"The Farseer Trilogy\",\"Robin Hobb\",\"Assassin's Apprentice\"],[\"His Dark Materials\",\"Philip Pullman\",\"Northern Lights\"],[\"A Song of Ice and Fire\",\"George R. R. Martin\",\"A Game of Thrones\"],[\"Harry Potter\",\"J. K. Rowling\",\"Harry Potter and the Philosopher's Stone\"]]}",
    "cat": "Books",
    "group": "Genres",
-   "short": "Fantasy books and series",
-   "title": "Fantasy books and series",
+   "short": "Fantasy: classics",
+   "title": "Fantasy: classics",
    "items": [
     {
      "id": "bthe-hobbit-j-r-r-tolkien",
      "name": "The Hobbit",
-     "note": "J. R. R. Tolkien, 1937",
+     "note": "J. R. R. Tolkien",
      "img": "https://covers.openlibrary.org/b/id/14627509-M.jpg"
     },
     {
      "id": "bthe-chronicles-of-narnia-c-s-lewis",
      "name": "The Chronicles of Narnia",
-     "note": "C. S. Lewis, 1950",
+     "note": "C. S. Lewis",
      "img": "https://covers.openlibrary.org/b/id/8441376-M.jpg"
     },
     {
      "id": "bthe-lord-of-the-rings-j-r-r-tolkien",
      "name": "The Lord of the Rings",
-     "note": "J. R. R. Tolkien, 1954",
+     "note": "J. R. R. Tolkien",
      "img": "https://covers.openlibrary.org/b/id/14627060-M.jpg"
+    },
+    {
+     "id": "bthe-once-and-future-king-t-h-white",
+     "name": "The Once and Future King",
+     "note": "T. H. White",
+     "img": "https://covers.openlibrary.org/b/id/6630521-M.jpg"
     },
     {
      "id": "bearthsea-ursula-k-le-guin",
      "name": "Earthsea",
-     "note": "Ursula K. Le Guin, 1968",
+     "note": "Ursula K. Le Guin",
      "img": "https://covers.openlibrary.org/b/id/13617691-M.jpg"
+    },
+    {
+     "id": "bthe-last-unicorn-peter-s-beagle",
+     "name": "The Last Unicorn",
+     "note": "Peter S. Beagle",
+     "img": "https://covers.openlibrary.org/b/id/294651-M.jpg"
+    },
+    {
+     "id": "bthe-princess-bride-william-goldman",
+     "name": "The Princess Bride",
+     "note": "William Goldman",
+     "img": "https://covers.openlibrary.org/b/id/9284881-M.jpg"
+    },
+    {
+     "id": "bthe-belgariad-david-eddings",
+     "name": "The Belgariad",
+     "note": "David Eddings",
+     "img": "https://covers.openlibrary.org/b/id/1000455-M.jpg"
     },
     {
      "id": "bdiscworld-terry-pratchett",
      "name": "Discworld",
-     "note": "Terry Pratchett, 1983",
+     "note": "Terry Pratchett",
      "img": "https://covers.openlibrary.org/b/id/14647238-M.jpg"
     },
     {
      "id": "bthe-wheel-of-time-robert-jordan",
      "name": "The Wheel of Time",
-     "note": "Robert Jordan, 1990",
+     "note": "Robert Jordan",
      "img": "https://covers.openlibrary.org/b/id/980232-M.jpg"
+    },
+    {
+     "id": "bthe-farseer-trilogy-robin-hobb",
+     "name": "The Farseer Trilogy",
+     "note": "Robin Hobb",
+     "img": "https://covers.openlibrary.org/b/id/4915230-M.jpg"
+    },
+    {
+     "id": "bhis-dark-materials-philip-pullman",
+     "name": "His Dark Materials",
+     "note": "Philip Pullman",
+     "img": "https://covers.openlibrary.org/b/id/8747028-M.jpg"
     },
     {
      "id": "ba-song-of-ice-and-fire-george-r-r-martin",
      "name": "A Song of Ice and Fire",
-     "note": "George R. R. Martin, 1996",
+     "note": "George R. R. Martin",
      "img": "https://covers.openlibrary.org/b/id/9269962-M.jpg"
     },
     {
      "id": "bharry-potter-j-k-rowling",
      "name": "Harry Potter",
-     "note": "J. K. Rowling, 1997",
+     "note": "J. K. Rowling",
      "img": "https://covers.openlibrary.org/b/id/15155833-M.jpg"
-    },
+    }
+   ]
+  },
+  {
+   "id": "fantasy-modern",
+   "src": "{\"type\":\"books\",\"group\":\"Genres\",\"title\":\"Fantasy: modern\",\"picks\":[[\"American Gods\",\"Neil Gaiman\"],[\"Jonathan Strange & Mr Norrell\",\"Susanna Clarke\"],[\"Mistborn\",\"Brandon Sanderson\",\"Mistborn: The Final Empire\"],[\"The Lies of Locke Lamora\",\"Scott Lynch\"],[\"The Kingkiller Chronicle\",\"Patrick Rothfuss\",\"The Name of the Wind\"],[\"The Stormlight Archive\",\"Brandon Sanderson\",\"The Way of Kings\"],[\"The Night Circus\",\"Erin Morgenstern\"],[\"Throne of Glass\",\"Sarah J. Maas\"],[\"Six of Crows\",\"Leigh Bardugo\"],[\"A Court of Thorns and Roses\",\"Sarah J. Maas\"],[\"The Broken Earth\",\"N. K. Jemisin\",\"The Fifth Season\"],[\"The Poppy War\",\"R. F. Kuang\"],[\"The Priory of the Orange Tree\",\"Samantha Shannon\"],[\"Legends & Lattes\",\"Travis Baldree\"],[\"The Empyrean\",\"Rebecca Yarros\",\"Fourth Wing\"]]}",
+   "cat": "Books",
+   "group": "Genres",
+   "short": "Fantasy: modern",
+   "title": "Fantasy: modern",
+   "items": [
     {
      "id": "bamerican-gods-neil-gaiman",
      "name": "American Gods",
-     "note": "Neil Gaiman, 2001",
+     "note": "Neil Gaiman",
      "img": "https://covers.openlibrary.org/b/id/8494659-M.jpg"
+    },
+    {
+     "id": "bjonathan-strange-mr-norrell-susanna-clarke",
+     "name": "Jonathan Strange & Mr Norrell",
+     "note": "Susanna Clarke",
+     "img": "https://covers.openlibrary.org/b/id/525391-M.jpg"
     },
     {
      "id": "bmistborn-brandon-sanderson",
      "name": "Mistborn",
-     "note": "Brandon Sanderson, 2017"
+     "note": "Brandon Sanderson"
+    },
+    {
+     "id": "bthe-lies-of-locke-lamora-scott-lynch",
+     "name": "The Lies of Locke Lamora",
+     "note": "Scott Lynch",
+     "img": "https://covers.openlibrary.org/b/id/6307636-M.jpg"
     },
     {
      "id": "bthe-kingkiller-chronicle-patrick-rothfuss",
      "name": "The Kingkiller Chronicle",
-     "note": "Patrick Rothfuss, 2007",
+     "note": "Patrick Rothfuss",
      "img": "https://covers.openlibrary.org/b/id/11480483-M.jpg"
     },
     {
      "id": "bthe-stormlight-archive-brandon-sanderson",
      "name": "The Stormlight Archive",
-     "note": "Brandon Sanderson, 2010",
+     "note": "Brandon Sanderson",
      "img": "https://covers.openlibrary.org/b/id/14658316-M.jpg"
     },
     {
-     "id": "bthe-broken-earth-n-k-jemisin",
-     "name": "The Broken Earth",
-     "note": "N. K. Jemisin, 2015",
-     "img": "https://covers.openlibrary.org/b/id/8133598-M.jpg"
+     "id": "bthe-night-circus-erin-morgenstern",
+     "name": "The Night Circus",
+     "note": "Erin Morgenstern",
+     "img": "https://covers.openlibrary.org/b/id/8773134-M.jpg"
+    },
+    {
+     "id": "bthrone-of-glass-sarah-j-maas",
+     "name": "Throne of Glass",
+     "note": "Sarah J. Maas",
+     "img": "https://covers.openlibrary.org/b/id/13312488-M.jpg"
+    },
+    {
+     "id": "bsix-of-crows-leigh-bardugo",
+     "name": "Six of Crows",
+     "note": "Leigh Bardugo",
+     "img": "https://covers.openlibrary.org/b/id/12667417-M.jpg"
     },
     {
      "id": "ba-court-of-thorns-and-roses-sarah-j-maas",
      "name": "A Court of Thorns and Roses",
-     "note": "Sarah J. Maas, 2013",
+     "note": "Sarah J. Maas",
      "img": "https://covers.openlibrary.org/b/id/15254465-M.jpg"
+    },
+    {
+     "id": "bthe-broken-earth-n-k-jemisin",
+     "name": "The Broken Earth",
+     "note": "N. K. Jemisin",
+     "img": "https://covers.openlibrary.org/b/id/8133598-M.jpg"
+    },
+    {
+     "id": "bthe-poppy-war-r-f-kuang",
+     "name": "The Poppy War",
+     "note": "R. F. Kuang",
+     "img": "https://covers.openlibrary.org/b/id/8463552-M.jpg"
+    },
+    {
+     "id": "bthe-priory-of-the-orange-tree-samantha-shannon",
+     "name": "The Priory of the Orange Tree",
+     "note": "Samantha Shannon",
+     "img": "https://covers.openlibrary.org/b/id/8802446-M.jpg"
+    },
+    {
+     "id": "blegends-lattes-travis-baldree",
+     "name": "Legends & Lattes",
+     "note": "Travis Baldree",
+     "img": "https://covers.openlibrary.org/b/id/13028635-M.jpg"
     },
     {
      "id": "bthe-empyrean-rebecca-yarros",
      "name": "The Empyrean",
-     "note": "Rebecca Yarros, 2023",
+     "note": "Rebecca Yarros",
      "img": "https://covers.openlibrary.org/b/id/14407898-M.jpg"
     }
    ]
   },
   {
-   "id": "poetry-books",
-   "src": "{\"type\":\"books\",\"group\":\"Genres\",\"title\":\"Poetry books\",\"picks\":[[\"Paradise Lost\",\"John Milton\"],[\"Songs of Innocence and of Experience\",\"William Blake\"],[\"Leaves of Grass\",\"Walt Whitman\"],[\"The Complete Poems of Emily Dickinson\",\"Emily Dickinson\"],[\"The Waste Land\",\"T. S. Eliot\"],[\"Twenty Love Poems and a Song of Despair\",\"Pablo Neruda\"],[\"The Collected Poems of Langston Hughes\",\"Langston Hughes\"],[\"Howl and Other Poems\",\"Allen Ginsberg\"],[\"Ariel\",\"Sylvia Plath\"],[\"Where the Sidewalk Ends\",\"Shel Silverstein\"],[\"And Still I Rise\",\"Maya Angelou\"],[\"Citizen: An American Lyric\",\"Claudia Rankine\"],[\"Milk and Honey\",\"Rupi Kaur\"],[\"Night Sky with Exit Wounds\",\"Ocean Vuong\"],[\"Devotions\",\"Mary Oliver\"]]}",
+   "id": "poetry-classics",
+   "src": "{\"type\":\"books\",\"group\":\"Genres\",\"title\":\"Poetry: classics\",\"picks\":[[\"Paradise Lost\",\"John Milton\"],[\"Songs of Innocence and of Experience\",\"William Blake\"],[\"Leaves of Grass\",\"Walt Whitman\"],[\"The Complete Poems of Emily Dickinson\",\"Emily Dickinson\"],[\"North of Boston\",\"Robert Frost\"],[\"The Waste Land\",\"T. S. Eliot\"],[\"The Tower\",\"W. B. Yeats\"],[\"Twenty Love Poems and a Song of Despair\",\"Pablo Neruda\"],[\"The Weary Blues\",\"Langston Hughes\"],[\"Howl and Other Poems\",\"Allen Ginsberg\"],[\"Ariel\",\"Sylvia Plath\"],[\"And Still I Rise\",\"Maya Angelou\"]]}",
    "cat": "Books",
    "group": "Genres",
-   "short": "Poetry books",
-   "title": "Poetry books",
+   "short": "Poetry: classics",
+   "title": "Poetry: classics",
    "items": [
     {
      "id": "bparadise-lost-john-milton",
      "name": "Paradise Lost",
-     "note": "John Milton, 1667",
+     "note": "John Milton",
      "img": "https://covers.openlibrary.org/b/id/5992814-M.jpg"
     },
     {
      "id": "bsongs-of-innocence-and-of-experience-william-blake",
      "name": "Songs of Innocence and of Experience",
-     "note": "William Blake, 1794",
+     "note": "William Blake",
      "img": "https://covers.openlibrary.org/b/id/441955-M.jpg"
     },
     {
      "id": "bleaves-of-grass-walt-whitman",
      "name": "Leaves of Grass",
-     "note": "Walt Whitman, 1855",
+     "note": "Walt Whitman",
      "img": "https://covers.openlibrary.org/b/id/9000447-M.jpg"
     },
     {
      "id": "bthe-complete-poems-of-emily-dickinson-emily-dickinson",
      "name": "The Complete Poems of Emily Dickinson",
-     "note": "Emily Dickinson, 2013",
+     "note": "Emily Dickinson",
      "img": "https://covers.openlibrary.org/b/id/9236735-M.jpg"
+    },
+    {
+     "id": "bnorth-of-boston-robert-frost",
+     "name": "North of Boston",
+     "note": "Robert Frost",
+     "img": "https://covers.openlibrary.org/b/id/1761008-M.jpg"
     },
     {
      "id": "bthe-waste-land-t-s-eliot",
      "name": "The Waste Land",
-     "note": "T. S. Eliot, 1922",
+     "note": "T. S. Eliot",
      "img": "https://covers.openlibrary.org/b/id/115288-M.jpg"
+    },
+    {
+     "id": "bthe-tower-w-b-yeats",
+     "name": "The Tower",
+     "note": "W. B. Yeats",
+     "img": "https://covers.openlibrary.org/b/id/473591-M.jpg"
     },
     {
      "id": "btwenty-love-poems-and-a-song-of-despair-pablo-neruda",
      "name": "Twenty Love Poems and a Song of Despair",
-     "note": "Pablo Neruda, 2020",
+     "note": "Pablo Neruda",
      "img": "https://covers.openlibrary.org/b/id/13642179-M.jpg"
     },
     {
-     "id": "bthe-collected-poems-of-langston-hughes-langston-hughes",
-     "name": "The Collected Poems of Langston Hughes",
-     "note": "Langston Hughes, 2008",
-     "img": "https://covers.openlibrary.org/b/id/10515155-M.jpg"
+     "id": "bthe-weary-blues-langston-hughes",
+     "name": "The Weary Blues",
+     "note": "Langston Hughes",
+     "img": "https://covers.openlibrary.org/b/id/13536441-M.jpg"
     },
     {
      "id": "bhowl-and-other-poems-allen-ginsberg",
      "name": "Howl and Other Poems",
-     "note": "Allen Ginsberg, 1956",
+     "note": "Allen Ginsberg",
      "img": "https://covers.openlibrary.org/b/id/662901-M.jpg"
     },
     {
      "id": "bariel-sylvia-plath",
      "name": "Ariel",
-     "note": "Sylvia Plath, 1965",
+     "note": "Sylvia Plath",
      "img": "https://covers.openlibrary.org/b/id/33279-M.jpg"
-    },
-    {
-     "id": "bwhere-the-sidewalk-ends-shel-silverstein",
-     "name": "Where the Sidewalk Ends",
-     "note": "Shel Silverstein, 1974",
-     "img": "https://covers.openlibrary.org/b/id/2270510-M.jpg"
     },
     {
      "id": "band-still-i-rise-maya-angelou",
      "name": "And Still I Rise",
-     "note": "Maya Angelou, 1978",
+     "note": "Maya Angelou",
      "img": "https://covers.openlibrary.org/b/id/253674-M.jpg"
+    }
+   ]
+  },
+  {
+   "id": "poetry-modern",
+   "src": "{\"type\":\"books\",\"group\":\"Genres\",\"title\":\"Poetry: modern\",\"picks\":[[\"Sailing Alone Around the Room\",\"Billy Collins\"],[\"Love & Misadventure\",\"Lang Leav\"],[\"Citizen: An American Lyric\",\"Claudia Rankine\"],[\"Milk and Honey\",\"Rupi Kaur\"],[\"Night Sky with Exit Wounds\",\"Ocean Vuong\"],[\"The Princess Saves Herself in This One\",\"Amanda Lovelace\"],[\"Love Her Wild\",\"Atticus\"],[\"Don't Call Us Dead\",\"Danez Smith\"],[\"Devotions\",\"Mary Oliver\"],[\"The Carrying\",\"Ada Limón\"],[\"Call Us What We Carry\",\"Amanda Gorman\"],[\"Bless the Daughter Raised by a Voice in Her Head\",\"Warsan Shire\"]]}",
+   "cat": "Books",
+   "group": "Genres",
+   "short": "Poetry: modern",
+   "title": "Poetry: modern",
+   "items": [
+    {
+     "id": "bsailing-alone-around-the-room-billy-collins",
+     "name": "Sailing Alone Around the Room",
+     "note": "Billy Collins",
+     "img": "https://covers.openlibrary.org/b/id/227791-M.jpg"
+    },
+    {
+     "id": "blove-misadventure-lang-leav",
+     "name": "Love & Misadventure",
+     "note": "Lang Leav",
+     "img": "https://covers.openlibrary.org/b/id/10860485-M.jpg"
     },
     {
      "id": "bcitizen-an-american-lyric-claudia-rankine",
@@ -11601,20 +11998,56 @@
     {
      "id": "bmilk-and-honey-rupi-kaur",
      "name": "Milk and Honey",
-     "note": "Rupi Kaur, 2014",
+     "note": "Rupi Kaur",
      "img": "https://covers.openlibrary.org/b/id/8743595-M.jpg"
     },
     {
      "id": "bnight-sky-with-exit-wounds-ocean-vuong",
      "name": "Night Sky with Exit Wounds",
-     "note": "Ocean Vuong, 2016",
+     "note": "Ocean Vuong",
      "img": "https://covers.openlibrary.org/b/id/10312542-M.jpg"
+    },
+    {
+     "id": "bthe-princess-saves-herself-in-this-one-amanda-lovelace",
+     "name": "The Princess Saves Herself in This One",
+     "note": "Amanda Lovelace",
+     "img": "https://covers.openlibrary.org/b/id/10479516-M.jpg"
+    },
+    {
+     "id": "blove-her-wild-atticus",
+     "name": "Love Her Wild",
+     "note": "Atticus",
+     "img": "https://covers.openlibrary.org/b/id/10458359-M.jpg"
+    },
+    {
+     "id": "bdon-t-call-us-dead-danez-smith",
+     "name": "Don't Call Us Dead",
+     "note": "Danez Smith",
+     "img": "https://covers.openlibrary.org/b/id/8545246-M.jpg"
     },
     {
      "id": "bdevotions-mary-oliver",
      "name": "Devotions",
-     "note": "Mary Oliver, 2017",
+     "note": "Mary Oliver",
      "img": "https://covers.openlibrary.org/b/id/10326261-M.jpg"
+    },
+    {
+     "id": "bthe-carrying-ada-limon",
+     "name": "The Carrying",
+     "note": "Ada Limón",
+     "img": "https://covers.openlibrary.org/b/id/11551418-M.jpg"
+    },
+    {
+     "id": "bcall-us-what-we-carry-amanda-gorman",
+     "name": "Call Us What We Carry",
+     "note": "Amanda Gorman",
+     "img": "https://covers.openlibrary.org/b/id/14621704-M.jpg"
+    },
+    {
+     "id": "bbless-the-daughter-raised-by-a-voice-in-her-head-warsan-shire",
+     "name": "Bless the Daughter Raised by a Voice in Her Head",
+     "note": "Warsan Shire",
+     "img": "https://covers.openlibrary.org/b/id/12752608-M.jpg"
     }
    ]
   },
@@ -11629,13 +12062,13 @@
     {
      "id": "bmaus-art-spiegelman",
      "name": "Maus",
-     "note": "Art Spiegelman, 1986",
-     "img": "https://covers.openlibrary.org/b/id/10210168-M.jpg"
+     "note": "Art Spiegelman",
+     "img": "https://covers.openlibrary.org/b/id/6280337-M.jpg"
     },
     {
      "id": "bwatchmen-alan-moore",
      "name": "Watchmen",
-     "note": "Alan Moore, 1986",
+     "note": "Alan Moore",
      "img": "https://covers.openlibrary.org/b/id/7774899-M.jpg"
     },
     {
@@ -11646,7 +12079,7 @@
     {
      "id": "bv-for-vendetta-alan-moore",
      "name": "V for Vendetta",
-     "note": "Alan Moore, 1988",
+     "note": "Alan Moore",
      "img": "https://covers.openlibrary.org/b/id/12293384-M.jpg"
     },
     {
@@ -11662,13 +12095,13 @@
     {
      "id": "bpersepolis-marjane-satrapi",
      "name": "Persepolis",
-     "note": "Marjane Satrapi, 2000",
+     "note": "Marjane Satrapi",
      "img": "https://covers.openlibrary.org/b/id/12648921-M.jpg"
     },
     {
      "id": "bblankets-craig-thompson",
      "name": "Blankets",
-     "note": "Craig Thompson, 2003",
+     "note": "Craig Thompson",
      "img": "https://covers.openlibrary.org/b/id/940324-M.jpg"
     },
     {
@@ -11679,36 +12112,36 @@
     {
      "id": "bscott-pilgrim-bryan-lee-o-malley",
      "name": "Scott Pilgrim",
-     "note": "Bryan Lee O'Malley, 2004",
+     "note": "Bryan Lee O'Malley",
      "img": "https://covers.openlibrary.org/b/id/960258-M.jpg"
     },
     {
      "id": "bfun-home-alison-bechdel",
      "name": "Fun Home",
-     "note": "Alison Bechdel, 2000",
+     "note": "Alison Bechdel",
      "img": "https://covers.openlibrary.org/b/id/12366765-M.jpg"
     },
     {
      "id": "bamerican-born-chinese-gene-luen-yang",
      "name": "American Born Chinese",
-     "note": "Gene Luen Yang, 2006",
+     "note": "Gene Luen Yang",
      "img": "https://covers.openlibrary.org/b/id/10134498-M.jpg"
     },
     {
      "id": "bsmile-raina-telgemeier",
      "name": "Smile",
-     "note": "Raina Telgemeier, 2000",
+     "note": "Raina Telgemeier",
      "img": "https://covers.openlibrary.org/b/id/14198184-M.jpg"
     },
     {
      "id": "bsaga-brian-k-vaughan",
      "name": "Saga",
-     "note": "Brian K. Vaughan, 2024"
+     "note": "Brian K. Vaughan"
     },
     {
      "id": "bnimona-nd-stevenson",
      "name": "Nimona",
-     "note": "ND Stevenson, 2015",
+     "note": "ND Stevenson",
      "img": "https://covers.openlibrary.org/b/id/10541789-M.jpg"
     },
     {
@@ -12739,25 +13172,13 @@
    "short": "Meryl Streep movies"
   },
   {
-   "id": "hockey-and-skating-romances",
-   "src": "{\"type\":\"books\",\"group\":\"Romance\",\"title\":\"Hockey and skating romances\",\"picks\":[[\"Pucked\",\"Helena Hunting\"],[\"The Deal\",\"Elle Kennedy\"],[\"Him\",\"Sarina Bowen\"],[\"From Lukov with Love\",\"Mariana Zapata\"],[\"Check, Please!\",\"Ngozi Ukazu\",\"Check, Please! Book 1: #Hockey\"],[\"Heated Rivalry\",\"Rachel Reid\"],[\"Consider Me\",\"Becka Mack\"],[\"Icebreaker\",\"Hannah Grace\"],[\"Mile High\",\"Liz Tomforde\"],[\"Pucking Around\",\"Emily Rath\"],[\"Behind the Net\",\"Stephanie Archer\"],[\"Collide\",\"Bal Khabra\"]]}",
+   "id": "hockey-romances",
+   "src": "{\"type\":\"books\",\"group\":\"Romance\",\"title\":\"Hockey romances\",\"picks\":[[\"Him\",\"Sarina Bowen\",2015],[\"The Deal\",\"Elle Kennedy\",2015],[\"Game Changer\",\"Rachel Reid\",2018],[\"Heated Rivalry\",\"Rachel Reid\",2019],[\"Tough Guy\",\"Rachel Reid\",2020],[\"Common Goal\",\"Rachel Reid\",2020],[\"Role Model\",\"Rachel Reid\",2021],[\"Season's Change\",\"Cait Nary\",2021],[\"The Long Game\",\"Rachel Reid\",2022],[\"Icebreaker\",\"Hannah Grace\",2022],[\"Mile High\",\"Liz Tomforde\",2022],[\"Pucking Around\",\"Emily Rath\",2023],[\"Time to Shine\",\"Rachel Reid\",2023],[\"Delay of Game\",\"Ari Baran\",2023],[\"Behind the Net\",\"Stephanie Archer\",2023],[\"Collide\",\"Bal Khabra\",2024]]}",
    "cat": "Books",
    "group": "Romance",
-   "short": "Hockey and skating romances",
-   "title": "Hockey and skating romances",
+   "short": "Hockey romances",
+   "title": "Hockey romances",
    "items": [
-    {
-     "id": "bpucked-helena-hunting",
-     "name": "Pucked",
-     "note": "Helena Hunting, 2015",
-     "img": "https://covers.openlibrary.org/b/id/10315684-M.jpg"
-    },
-    {
-     "id": "bthe-deal-elle-kennedy",
-     "name": "The Deal",
-     "note": "Elle Kennedy, 2000",
-     "img": "https://covers.openlibrary.org/b/id/10201611-M.jpg"
-    },
     {
      "id": "bhim-sarina-bowen",
      "name": "Him",
@@ -12765,15 +13186,16 @@
      "img": "https://covers.openlibrary.org/b/id/10359534-M.jpg"
     },
     {
-     "id": "bfrom-lukov-with-love-mariana-zapata",
-     "name": "From Lukov with Love",
-     "note": "Mariana Zapata, 2018",
-     "img": "https://covers.openlibrary.org/b/id/10538876-M.jpg"
+     "id": "bthe-deal-elle-kennedy",
+     "name": "The Deal",
+     "note": "Elle Kennedy, 2015",
+     "img": "https://covers.openlibrary.org/b/id/10201611-M.jpg"
     },
     {
-     "id": "bcheck-please-ngozi-ukazu",
-     "name": "Check, Please!",
-     "note": "Ngozi Ukazu"
+     "id": "bgame-changer-rachel-reid",
+     "name": "Game Changer",
+     "note": "Rachel Reid, 2018",
+     "img": "https://covers.openlibrary.org/b/id/11050489-M.jpg"
     },
     {
      "id": "bheated-rivalry-rachel-reid",
@@ -12782,21 +13204,45 @@
      "img": "https://covers.openlibrary.org/b/id/15226452-M.jpg"
     },
     {
-     "id": "bconsider-me-becka-mack",
-     "name": "Consider Me",
-     "note": "Becka Mack, 2022",
-     "img": "https://covers.openlibrary.org/b/id/13007263-M.jpg"
+     "id": "btough-guy-rachel-reid",
+     "name": "Tough Guy",
+     "note": "Rachel Reid, 2020",
+     "img": "https://covers.openlibrary.org/b/id/15227109-M.jpg"
+    },
+    {
+     "id": "bcommon-goal-rachel-reid",
+     "name": "Common Goal",
+     "note": "Rachel Reid, 2020",
+     "img": "https://covers.openlibrary.org/b/id/10221572-M.jpg"
+    },
+    {
+     "id": "brole-model-rachel-reid",
+     "name": "Role Model",
+     "note": "Rachel Reid, 2021",
+     "img": "https://covers.openlibrary.org/b/id/11300616-M.jpg"
+    },
+    {
+     "id": "bseason-s-change-cait-nary",
+     "name": "Season's Change",
+     "note": "Cait Nary, 2021",
+     "img": "https://covers.openlibrary.org/b/id/14349375-M.jpg"
+    },
+    {
+     "id": "bthe-long-game-rachel-reid",
+     "name": "The Long Game",
+     "note": "Rachel Reid, 2022",
+     "img": "https://covers.openlibrary.org/b/id/13229174-M.jpg"
     },
     {
      "id": "bicebreaker-hannah-grace",
      "name": "Icebreaker",
-     "note": "Hannah Grace, 2020",
+     "note": "Hannah Grace, 2022",
      "img": "https://covers.openlibrary.org/b/id/13180728-M.jpg"
     },
     {
      "id": "bmile-high-liz-tomforde",
      "name": "Mile High",
-     "note": "Liz Tomforde, 2023",
+     "note": "Liz Tomforde, 2022",
      "img": "https://covers.openlibrary.org/b/id/14646460-M.jpg"
     },
     {
@@ -12806,9 +13252,20 @@
      "img": "https://covers.openlibrary.org/b/id/15112310-M.jpg"
     },
     {
+     "id": "btime-to-shine-rachel-reid",
+     "name": "Time to Shine",
+     "note": "Rachel Reid, 2023",
+     "img": "https://covers.openlibrary.org/b/id/13853777-M.jpg"
+    },
+    {
+     "id": "bdelay-of-game-ari-baran",
+     "name": "Delay of Game",
+     "note": "Ari Baran, 2023"
+    },
+    {
      "id": "bbehind-the-net-stephanie-archer",
      "name": "Behind the Net",
-     "note": "Stephanie Archer, 2024",
+     "note": "Stephanie Archer, 2023",
      "img": "https://covers.openlibrary.org/b/id/15129866-M.jpg"
     },
     {
@@ -13819,100 +14276,100 @@
   },
   {
    "id": "ya-standalone-favourites",
-   "src": "{\"type\":\"books\",\"group\":\"Young adult\",\"title\":\"YA standalone favourites\",\"short\":\"Standalone favourites\",\"picks\":[[\"The Outsiders\",\"S. E. Hinton\"],[\"Speak\",\"Laurie Halse Anderson\"],[\"The Perks of Being a Wallflower\",\"Stephen Chbosky\"],[\"Looking for Alaska\",\"John Green\"],[\"The Book Thief\",\"Markus Zusak\"],[\"Thirteen Reasons Why\",\"Jay Asher\"],[\"The Fault in Our Stars\",\"John Green\"],[\"Eleanor & Park\",\"Rainbow Rowell\"],[\"Fangirl\",\"Rainbow Rowell\"],[\"We Were Liars\",\"E. Lockhart\"],[\"I'll Give You the Sun\",\"Jandy Nelson\"],[\"Everything, Everything\",\"Nicola Yoon\"],[\"The Hate U Give\",\"Angie Thomas\"],[\"They Both Die at the End\",\"Adam Silvera\"],[\"Turtles All the Way Down\",\"John Green\"]]}",
+   "src": "{\"type\":\"books\",\"group\":\"Young adult\",\"title\":\"YA standalone favourites\",\"short\":\"Standalone favourites\",\"picks\":[[\"The Perks of Being a Wallflower\",\"Stephen Chbosky\"],[\"Looking for Alaska\",\"John Green\"],[\"The Book Thief\",\"Markus Zusak\"],[\"Thirteen Reasons Why\",\"Jay Asher\"],[\"The Fault in Our Stars\",\"John Green\"],[\"Eleanor & Park\",\"Rainbow Rowell\"],[\"Fangirl\",\"Rainbow Rowell\"],[\"We Were Liars\",\"E. Lockhart\"],[\"I'll Give You the Sun\",\"Jandy Nelson\"],[\"Everything, Everything\",\"Nicola Yoon\"],[\"The Sun Is Also a Star\",\"Nicola Yoon\"],[\"Radio Silence\",\"Alice Oseman\"],[\"The Hate U Give\",\"Angie Thomas\"],[\"They Both Die at the End\",\"Adam Silvera\"],[\"Turtles All the Way Down\",\"John Green\"]]}",
    "cat": "Books",
    "group": "Young adult",
    "short": "Standalone favourites",
    "title": "YA standalone favourites",
    "items": [
     {
-     "id": "bthe-outsiders-s-e-hinton",
-     "name": "The Outsiders",
-     "note": "S. E. Hinton, 1967",
-     "img": "https://covers.openlibrary.org/b/id/7263662-M.jpg"
-    },
-    {
-     "id": "bspeak-laurie-halse-anderson",
-     "name": "Speak",
-     "note": "Laurie Halse Anderson, 1999",
-     "img": "https://covers.openlibrary.org/b/id/10857543-M.jpg"
-    },
-    {
      "id": "bthe-perks-of-being-a-wallflower-stephen-chbosky",
      "name": "The Perks of Being a Wallflower",
-     "note": "Stephen Chbosky, 1999",
+     "note": "Stephen Chbosky",
      "img": "https://covers.openlibrary.org/b/id/14315052-M.jpg"
     },
     {
      "id": "blooking-for-alaska-john-green",
      "name": "Looking for Alaska",
-     "note": "John Green, 2005",
+     "note": "John Green",
      "img": "https://covers.openlibrary.org/b/id/12614602-M.jpg"
     },
     {
      "id": "bthe-book-thief-markus-zusak",
      "name": "The Book Thief",
-     "note": "Markus Zusak, 1998",
+     "note": "Markus Zusak",
      "img": "https://covers.openlibrary.org/b/id/8153054-M.jpg"
     },
     {
      "id": "bthirteen-reasons-why-jay-asher",
      "name": "Thirteen Reasons Why",
-     "note": "Jay Asher, 2007",
+     "note": "Jay Asher",
      "img": "https://covers.openlibrary.org/b/id/15162168-M.jpg"
     },
     {
      "id": "bthe-fault-in-our-stars-john-green",
      "name": "The Fault in Our Stars",
-     "note": "John Green, 2010",
+     "note": "John Green",
      "img": "https://covers.openlibrary.org/b/id/7418786-M.jpg"
     },
     {
      "id": "beleanor-park-rainbow-rowell",
      "name": "Eleanor & Park",
-     "note": "Rainbow Rowell, 2012",
+     "note": "Rainbow Rowell",
      "img": "https://covers.openlibrary.org/b/id/12917595-M.jpg"
     },
     {
      "id": "bfangirl-rainbow-rowell",
      "name": "Fangirl",
-     "note": "Rainbow Rowell, 2013",
+     "note": "Rainbow Rowell",
      "img": "https://covers.openlibrary.org/b/id/7316505-M.jpg"
     },
     {
      "id": "bwe-were-liars-e-lockhart",
      "name": "We Were Liars",
-     "note": "E. Lockhart, 2014",
+     "note": "E. Lockhart",
      "img": "https://covers.openlibrary.org/b/id/14425312-M.jpg"
     },
     {
      "id": "bi-ll-give-you-the-sun-jandy-nelson",
      "name": "I'll Give You the Sun",
-     "note": "Jandy Nelson, 2014",
+     "note": "Jandy Nelson",
      "img": "https://covers.openlibrary.org/b/id/12357184-M.jpg"
     },
     {
      "id": "beverything-everything-nicola-yoon",
      "name": "Everything, Everything",
-     "note": "Nicola Yoon, 2015",
+     "note": "Nicola Yoon",
      "img": "https://covers.openlibrary.org/b/id/8140499-M.jpg"
+    },
+    {
+     "id": "bthe-sun-is-also-a-star-nicola-yoon",
+     "name": "The Sun Is Also a Star",
+     "note": "Nicola Yoon",
+     "img": "https://covers.openlibrary.org/b/id/8352503-M.jpg"
+    },
+    {
+     "id": "bradio-silence-alice-oseman",
+     "name": "Radio Silence",
+     "note": "Alice Oseman",
+     "img": "https://covers.openlibrary.org/b/id/8797626-M.jpg"
     },
     {
      "id": "bthe-hate-u-give-angie-thomas",
      "name": "The Hate U Give",
-     "note": "Angie Thomas, 2017",
+     "note": "Angie Thomas",
      "img": "https://covers.openlibrary.org/b/id/11521588-M.jpg"
     },
     {
      "id": "bthey-both-die-at-the-end-adam-silvera",
      "name": "They Both Die at the End",
-     "note": "Adam Silvera, 2017",
+     "note": "Adam Silvera",
      "img": "https://covers.openlibrary.org/b/id/9280553-M.jpg"
     },
     {
      "id": "bturtles-all-the-way-down-john-green",
      "name": "Turtles All the Way Down",
-     "note": "John Green, 2017",
+     "note": "John Green",
      "img": "https://covers.openlibrary.org/b/id/8283871-M.jpg"
     }
    ]
@@ -13928,91 +14385,91 @@
     {
      "id": "bhis-dark-materials-philip-pullman",
      "name": "His Dark Materials",
-     "note": "Philip Pullman, 1995",
+     "note": "Philip Pullman",
      "img": "https://covers.openlibrary.org/b/id/8747028-M.jpg"
     },
     {
      "id": "bharry-potter-j-k-rowling",
      "name": "Harry Potter",
-     "note": "J. K. Rowling, 1997",
+     "note": "J. K. Rowling",
      "img": "https://covers.openlibrary.org/b/id/15155833-M.jpg"
     },
     {
      "id": "buglies-scott-westerfeld",
      "name": "Uglies",
-     "note": "Scott Westerfeld, 2005",
+     "note": "Scott Westerfeld",
      "img": "https://covers.openlibrary.org/b/id/438244-M.jpg"
     },
     {
      "id": "bpercy-jackson-rick-riordan",
      "name": "Percy Jackson",
-     "note": "Rick Riordan, 2005",
+     "note": "Rick Riordan",
      "img": "https://covers.openlibrary.org/b/id/7239831-M.jpg"
     },
     {
      "id": "btwilight-stephenie-meyer",
      "name": "Twilight",
-     "note": "Stephenie Meyer, 2005",
+     "note": "Stephenie Meyer",
      "img": "https://covers.openlibrary.org/b/id/12641977-M.jpg"
     },
     {
      "id": "bthe-mortal-instruments-cassandra-clare",
      "name": "The Mortal Instruments",
-     "note": "Cassandra Clare, 2007",
+     "note": "Cassandra Clare",
      "img": "https://covers.openlibrary.org/b/id/10121449-M.jpg"
     },
     {
      "id": "bthe-hunger-games-suzanne-collins",
      "name": "The Hunger Games",
-     "note": "Suzanne Collins, 2008",
+     "note": "Suzanne Collins",
      "img": "https://covers.openlibrary.org/b/id/12646537-M.jpg"
     },
     {
      "id": "bthe-maze-runner-james-dashner",
      "name": "The Maze Runner",
-     "note": "James Dashner, 2009",
+     "note": "James Dashner",
      "img": "https://covers.openlibrary.org/b/id/10464801-M.jpg"
     },
     {
      "id": "bdivergent-veronica-roth",
      "name": "Divergent",
-     "note": "Veronica Roth, 2010",
+     "note": "Veronica Roth",
      "img": "https://covers.openlibrary.org/b/id/13274634-M.jpg"
     },
     {
      "id": "bthe-lunar-chronicles-marissa-meyer",
      "name": "The Lunar Chronicles",
-     "note": "Marissa Meyer, 2011",
+     "note": "Marissa Meyer",
      "img": "https://covers.openlibrary.org/b/id/6998634-M.jpg"
     },
     {
      "id": "bthe-selection-kiera-cass",
      "name": "The Selection",
-     "note": "Kiera Cass, 2012",
+     "note": "Kiera Cass",
      "img": "https://covers.openlibrary.org/b/id/7101900-M.jpg"
     },
     {
      "id": "bthrone-of-glass-sarah-j-maas",
      "name": "Throne of Glass",
-     "note": "Sarah J. Maas, 2012",
+     "note": "Sarah J. Maas",
      "img": "https://covers.openlibrary.org/b/id/13312488-M.jpg"
     },
     {
      "id": "bshadow-and-bone-leigh-bardugo",
      "name": "Shadow and Bone",
-     "note": "Leigh Bardugo, 2012",
+     "note": "Leigh Bardugo",
      "img": "https://covers.openlibrary.org/b/id/13816048-M.jpg"
     },
     {
      "id": "bred-queen-victoria-aveyard",
      "name": "Red Queen",
-     "note": "Victoria Aveyard, 2015",
+     "note": "Victoria Aveyard",
      "img": "https://covers.openlibrary.org/b/id/7434883-M.jpg"
     },
     {
      "id": "ban-ember-in-the-ashes-sabaa-tahir",
      "name": "An Ember in the Ashes",
-     "note": "Sabaa Tahir, 2015",
+     "note": "Sabaa Tahir",
      "img": "https://covers.openlibrary.org/b/id/14559692-M.jpg"
     }
    ]
@@ -18628,8 +19085,7 @@
     },
     {
      "id": "wcharlotte-bronte",
-     "name": "Charlotte Brontë",
-     "img": "https://covers.openlibrary.org/a/olid/OL113362A-M.jpg"
+     "name": "Charlotte Brontë"
     },
     {
      "id": "wvirginia-woolf",
