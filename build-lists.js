@@ -24,6 +24,7 @@ const DEFS = [
   { type: "collection", name: "Harry Potter" },
   { type: "collection", name: "Mission: Impossible" },
   { type: "collection", name: "The Fast and the Furious", title: "Fast & Furious films" },
+  { type: "collection", name: "James Bond", title: "James Bond films", max: 30 },      // max raises the usual 15-film limit
   { type: "films", cat: "Franchises", title: "Planet of the Apes films", picks: [
     ["Planet of the Apes", 1968], ["Beneath the Planet of the Apes", 1970], ["Escape from the Planet of the Apes", 1971],
     ["Conquest of the Planet of the Apes", 1972], ["Battle for the Planet of the Apes", 1973], ["Planet of the Apes", 2001],
@@ -45,6 +46,13 @@ const DEFS = [
   //   "filmcast" ranks the main characters of one film (use the first film of a franchise).
   //   With "collection", characters are ranked by how big their role is across every film in the franchise.
   { type: "filmcast",   collection: "The Twilight Saga", title: "Twilight main characters" },
+  //   "people" is a hand-picked list of real people with their TMDB photos. A pick is "Name" or ["Name", "note"].
+  { type: "people", title: "Actors who played James Bond", picks: [
+    ["Sean Connery", "1962 to 1971, and 1983"], ["George Lazenby", "1969"], ["Roger Moore", "1973 to 1985"],
+    ["Timothy Dalton", "1987 to 1989"], ["Pierce Brosnan", "1995 to 2002"], ["Daniel Craig", "2006 to 2021"] ] },
+  { type: "people", title: "Actors who played Batman", picks: [
+    ["Adam West", "1966"], ["Michael Keaton", "1989 to 1992, and 2023"], ["Val Kilmer", "1995"], ["George Clooney", "1997"],
+    ["Christian Bale", "2005 to 2012"], ["Ben Affleck", "2016 to 2023"], ["Will Arnett", "The LEGO Batman Movie, 2017"], ["Robert Pattinson", "2022"] ] },
   { type: "names", cat: "Movies", group: "Characters", title: "Vampire characters (film and TV)", picks: [
     ["Count Dracula", "Dracula"], ["Count Orlok", "Nosferatu"], ["Lestat de Lioncourt", "Interview with the Vampire"],
     ["Louis de Pointe du Lac", "Interview with the Vampire"], ["David", "The Lost Boys"], ["Spike", "Buffy the Vampire Slayer"],
@@ -77,6 +85,7 @@ const DEFS = [
   { type: "albums",     name: "Taylor Swift", songs: true },
   { type: "albums",     name: "Sleater-Kinney" },
   { type: "albums",     name: "Metallica" },
+  { type: "albums",     name: "Linkin Park" },
   { type: "tracks",     artist: "Lorde", albums: ["Pure Heroine", "Melodrama", "Virgin"] },
   //   "singles" ranks an artist's singles.
   { type: "singles",    name: "Spice Girls" },
@@ -136,6 +145,31 @@ const DEFS = [
   { type: "tv",         name: "American Horror Story" },
   { type: "tv",         name: "The Office", year: 2005 },          // year = first aired, to get the US show and not the UK one
   { type: "tvgenre",    name: "Sci-Fi & Fantasy", title: "Hit sci-fi TV shows" },
+  // Misc: hand-picked name lists with no pictures.
+  { type: "names", cat: "Misc", group: "Food", title: "Popular pizza toppings", picks: [
+    "Pepperoni", "Mushrooms", "Extra cheese", "Italian sausage", "Bacon", "Onions", "Green peppers", "Black olives", "Pineapple", "Ham",
+    "Chicken", "Jalapeños", "Tomatoes", "Spinach", "Anchovies" ] },
+  // International chains only, each with a good number of Canadian locations.
+  { type: "names", cat: "Misc", group: "Food", title: "Fast-food burgers (available in Canada)", short: "Fast-food burgers in Canada", picks: [
+    ["Big Mac", "McDonald's"], ["Quarter Pounder with Cheese", "McDonald's"], ["McDouble", "McDonald's"], ["Whopper", "Burger King"],
+    ["Bacon King", "Burger King"], ["Dave's Single", "Wendy's"], ["Baconator", "Wendy's"], ["Jr. Bacon Cheeseburger", "Wendy's"],
+    ["Teen Burger", "A&W"], ["Mozza Burger", "A&W"], ["Papa Burger", "A&W"], ["Cheeseburger", "Five Guys"],
+    ["Bacon Cheeseburger", "Five Guys"], ["FlameThrower GrillBurger", "Dairy Queen"], ["Original Fatburger", "Fatburger"] ] },
+  { type: "names", cat: "Misc", group: "Perfumes", title: "Favourite niche perfumes", short: "Niche favourites", picks: [
+    ["Baccarat Rouge 540", "Maison Francis Kurkdjian"], ["Santal 33", "Le Labo"], ["Another 13", "Le Labo"], ["Aventus", "Creed"],
+    ["Delina", "Parfums de Marly"], ["Layton", "Parfums de Marly"], ["Gypsy Water", "Byredo"], ["Mojave Ghost", "Byredo"],
+    ["Portrait of a Lady", "Frédéric Malle"], ["Molecule 01", "Escentric Molecules"], ["Angels' Share", "Kilian"],
+    ["Erba Pura", "Xerjoff"], ["Philosykos", "Diptyque"], ["Lost Cherry", "Tom Ford"], ["Oud Wood", "Tom Ford"] ] },
+  { type: "names", cat: "Misc", group: "Perfumes", title: "Favourite designer perfumes", short: "Designer favourites", picks: [
+    ["No. 5", "Chanel"], ["Coco Mademoiselle", "Chanel"], ["Bleu de Chanel", "Chanel"], ["Sauvage", "Dior"], ["J'adore", "Dior"],
+    ["Miss Dior", "Dior"], ["Black Opium", "Yves Saint Laurent"], ["Libre", "Yves Saint Laurent"], ["La Vie Est Belle", "Lancôme"],
+    ["Light Blue", "Dolce & Gabbana"], ["Acqua di Giò", "Giorgio Armani"], ["Flowerbomb", "Viktor & Rolf"], ["Good Girl", "Carolina Herrera"],
+    ["Daisy", "Marc Jacobs"], ["Angel", "Mugler"] ] },
+  { type: "names", cat: "Misc", group: "Perfumes", title: "Favourite celebrity perfumes", short: "Celebrity favourites", picks: [
+    ["White Diamonds", "Elizabeth Taylor"], ["Glow", "Jennifer Lopez"], ["Curious", "Britney Spears"], ["Fantasy", "Britney Spears"],
+    ["Lovely", "Sarah Jessica Parker"], ["Heat", "Beyoncé"], ["Purr", "Katy Perry"], ["Someday", "Justin Bieber"],
+    ["Wonderstruck", "Taylor Swift"], ["Fame", "Lady Gaga"], ["Pink Friday", "Nicki Minaj"], ["Cloud", "Ariana Grande"],
+    ["Thank U, Next", "Ariana Grande"], ["Eilish", "Billie Eilish"], ["Fenty Eau de Parfum", "Rihanna"] ] },
   // Books (from Open Library, no key needed).
   //   "books" is a hand-picked list. A pick is ["Title", "Author"], or ["Name shown", "Author", "title to search for"]
   //           when the tile should show a series name but use its first book's cover. Add a year (a number) to show it on the tile.
@@ -270,6 +304,15 @@ const DEFS = [
     ["Birth by Sleep", "Kingdom Hearts Birth by Sleep", 2010], ["Re:coded", "Kingdom Hearts Re:coded", 2010],
     ["Dream Drop Distance", "Kingdom Hearts 3D: Dream Drop Distance", 2012], ["Kingdom Hearts III", "Kingdom Hearts III", 2019],
     ["Melody of Memory", "Kingdom Hearts: Melody of Memory", 2020] ] },
+  { type: "names", cat: "Games", group: "Pokémon starters", title: "Pokémon fire starters", short: "Fire starters", picks: [
+    ["Charmander", "Gen 1"], ["Cyndaquil", "Gen 2"], ["Torchic", "Gen 3"], ["Chimchar", "Gen 4"], ["Tepig", "Gen 5"], ["Fennekin", "Gen 6"],
+    ["Litten", "Gen 7"], ["Scorbunny", "Gen 8"], ["Fuecoco", "Gen 9"] ] },
+  { type: "names", cat: "Games", group: "Pokémon starters", title: "Pokémon water starters", short: "Water starters", picks: [
+    ["Squirtle", "Gen 1"], ["Totodile", "Gen 2"], ["Mudkip", "Gen 3"], ["Piplup", "Gen 4"], ["Oshawott", "Gen 5"], ["Froakie", "Gen 6"],
+    ["Popplio", "Gen 7"], ["Sobble", "Gen 8"], ["Quaxly", "Gen 9"] ] },
+  { type: "names", cat: "Games", group: "Pokémon starters", title: "Pokémon grass starters", short: "Grass starters", picks: [
+    ["Bulbasaur", "Gen 1"], ["Chikorita", "Gen 2"], ["Treecko", "Gen 3"], ["Turtwig", "Gen 4"], ["Snivy", "Gen 5"], ["Chespin", "Gen 6"],
+    ["Rowlet", "Gen 7"], ["Grookey", "Gen 8"], ["Sprigatito", "Gen 9"] ] },
   { type: "games", group: "Franchises", title: "Pokémon generations", short: "Pokémon generations", picks: [
     ["Gen 1: Red, Blue & Yellow", "Pokémon Red", 1996], ["Gen 2: Gold, Silver & Crystal", "Pokémon Gold", 1999],
     ["Gen 3: Ruby, Sapphire & Emerald", "Pokémon Ruby", 2002], ["Gen 4: Diamond, Pearl & Platinum", "Pokémon Diamond", 2006],
@@ -323,7 +366,9 @@ const DEFS = [
   { type: "cast",       name: "Grey's Anatomy" },
   { type: "cast",       name: "The Office", year: 2005 },
   { type: "cast",       name: "Friends" },
-  { type: "cast",       name: "Bridgerton" },
+  //   perSeason: 8 guarantees the eight top-billed characters of every season a place, so one-season leads are not lost.
+  //   exclude drops characters by name (Lady Whistledown is Penelope).
+  { type: "cast",       name: "Bridgerton", perSeason: 8, count: 18, exclude: ["Whistledown"] },
   // Hand-picked, because each Simpsons voice actor plays many characters and TMDB credits them as one combined role.
   { type: "names", cat: "TV", group: "The Simpsons", title: "The Simpsons main characters", short: "Main characters", picks: [
     "Homer Simpson", "Marge Simpson", "Bart Simpson", "Lisa Simpson", "Maggie Simpson", "Grampa Simpson", "Ned Flanders", "Mr. Burns",
@@ -398,7 +443,7 @@ async function firstFilmOf(collectionId) {
   }
   return firstFilmCache.get(collectionId);
 }
-async function pickMovies(candidates, { minVotes = MIN_VOTES, noDisney = false, oneFranchise = false, noSequels = false } = {}) {
+async function pickMovies(candidates, { minVotes = MIN_VOTES, noDisney = false, oneFranchise = false, noSequels = false, max = MAX_ITEMS } = {}) {
   const franchises = new Set();
   const seen = new Set();
   const pool = candidates
@@ -408,7 +453,7 @@ async function pickMovies(candidates, { minVotes = MIN_VOTES, noDisney = false, 
     .sort((a, b) => b.vote_count - a.vote_count);
   const out = [];
   for (const m of pool) {
-    if (out.length >= MAX_ITEMS) break;
+    if (out.length >= max) break;
     if (EXCLUDE_MARVEL || noDisney || oneFranchise || noSequels) {
       const f = await studioFlags(m.id);
       if ((EXCLUDE_MARVEL && f.marvel) || (noDisney && f.disney)) continue;
@@ -585,7 +630,7 @@ const builders = {
       parts.push(...c.parts);
     }
     if (!first) throw new Error("No collection found");
-    return { cat: CATS.franchise, title: def.title || first.name.replace(/ Collection$/, "") + " films", items: await pickMovies(parts, { minVotes: 0 }) };
+    return { cat: CATS.franchise, title: def.title || first.name.replace(/ Collection$/, "") + " films", items: await pickMovies(parts, { minVotes: 0, max: def.max || MAX_ITEMS }) };
   },
   async decade(def) {
     const range = { "primary_release_date.gte": `${def.decade}-01-01`, "primary_release_date.lte": `${def.decade + 9}-12-31` };
@@ -709,19 +754,45 @@ const builders = {
   },
   // A show's main characters, ranked list of the ones who appear in the most episodes. Tiles show the actor's photo.
   async cast(def) {
-    const show = await findShow(def.name, def.year);
+    const show = await tmdb(`/tv/${(await findShow(def.name, def.year)).id}`);
     const credits = await tmdb(`/tv/${show.id}/aggregate_credits`);
+    // The top-billed people of each season always get a place (perSeason), so a lead who was only in one season is kept.
+    const must = new Set();
+    if (def.perSeason) {
+      for (const s of (show.seasons || []).filter(s => s.season_number > 0 && s.air_date && s.air_date <= today)) {
+        try {
+          const c = await tmdb(`/tv/${show.id}/season/${s.season_number}/credits`);
+          (c.cast || []).slice().sort((a, b) => (a.order || 0) - (b.order || 0)).slice(0, def.perSeason).forEach(p => must.add(p.id));
+        } catch (e) {}
+      }
+    }
+    const banned = (def.exclude || []).map(x => x.toLowerCase());
     const seen = new Set();
-    const items = (credits.cast || [])
+    const everyone = (credits.cast || [])
       .sort((a, b) => b.total_episode_count - a.total_episode_count)
       // An actor can have several credits on one show; use the character they played in the most episodes.
-      .map(p => ({ p, character: ((p.roles || []).slice().sort((a, b) => (b.episode_count || 0) - (a.episode_count || 0))[0] || {}).character || "" }))
-      .map(x => ({ p: x.p, character: cleanRole(x.character) }))
+      .map(p => ({ p, character: cleanRole(((p.roles || []).slice().sort((a, b) => (b.episode_count || 0) - (a.episode_count || 0))[0] || {}).character || "") }))
       .filter(x => x.character && !/^(self|additional voices?|various)\b/i.test(x.character))
-      .filter(x => !seen.has(x.character.toLowerCase()) && seen.add(x.character.toLowerCase()))
-      .slice(0, def.count || MAX_CAST)
+      .filter(x => !banned.some(w => x.character.toLowerCase().includes(w)))
+      .filter(x => !seen.has(x.character.toLowerCase()) && seen.add(x.character.toLowerCase()));
+    const count = def.count || MAX_CAST;
+    const leads = everyone.filter(x => must.has(x.p.id)).slice(0, count);
+    const rest = everyone.filter(x => !must.has(x.p.id)).slice(0, Math.max(0, count - leads.length));
+    const items = [...leads, ...rest].sort((a, b) => b.p.total_episode_count - a.p.total_episode_count)
       .map(x => ({ id: "p" + x.p.id, name: x.character, note: x.p.name, poster: def.photos === false ? null : x.p.profile_path || null }));
     return { cat: CATS.tv, group: def.group || show.name, short: def.short || "Main characters", title: `${show.name} main characters`, items };
+  },
+  // A hand-picked list of real people, with their TMDB photos.
+  async people(def) {
+    const items = [];
+    for (const pick of def.picks) {
+      const [name, note] = [].concat(pick);
+      let p = null;
+      try { const r = await tmdb("/search/person", { query: name }); p = r.results.find(x => x.name.toLowerCase() === name.toLowerCase()) || r.results[0] || null; } catch (e) {}
+      if (!p) console.warn(`  no TMDB person found for "${name}"; added without a photo`);
+      items.push({ id: "h" + slug(name), name, ...(note ? { note } : {}), poster: (p && p.profile_path) || null });
+    }
+    return { cat: def.cat || "Movies", group: def.group || "Characters", short: def.short || def.title, title: def.title, items };
   },
   // The main characters of one film (in billing order), or of a whole franchise when "collection" is given.
   // Across a franchise, a character scores for every film they are in, and more the higher they are billed.
@@ -901,7 +972,8 @@ const builders = {
 //   TV             > one submenu per show, plus Show rankings
 //   Music          > one submenu per artist, plus Top albums and Top artists
 //   Books          > Popular, Genres, Romance, Young adult, Authors
-//   Games          > Franchises, Genres, Consoles, Awards
+//   Games          > Franchises, Pokémon starters, Genres, Consoles, Awards
+//   Misc           > Food, Perfumes
 function place(list, def) {
   if (list.cat === CATS.franchise) return { ...list, cat: "Movies", group: "Franchises", short: list.title };
   if (list.cat === CATS.people) return { ...list, cat: "Movies", group: def.type === "director" ? "Directors" : "Actors", short: list.title };
@@ -914,7 +986,8 @@ function place(list, def) {
 const MENU_ORDER = {
   Movies: ["Franchises", "Genres", "Actors", "Directors", "By year", "Awards", "Characters"],
   Books: ["Popular", "Genres", "Romance", "Young adult", "Authors"],
-  Games: ["Franchises", "Genres", "Consoles", "Awards"]
+  Games: ["Franchises", "Pokémon starters", "Genres", "Consoles", "Awards"],
+  Misc: ["Food", "Perfumes"]
 };
 function menuRank(list) {
   const order = MENU_ORDER[list.cat];
