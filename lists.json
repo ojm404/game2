@@ -19802,7 +19802,8 @@
     },
     {
      "id": "wmary-shelley",
-     "name": "Mary Shelley"
+     "name": "Mary Shelley",
+     "img": "https://covers.openlibrary.org/a/olid/OL25342A-M.jpg"
     },
     {
      "id": "wcharlotte-bronte",
@@ -19821,7 +19822,8 @@
     },
     {
      "id": "wtoni-morrison",
-     "name": "Toni Morrison"
+     "name": "Toni Morrison",
+     "img": "https://covers.openlibrary.org/a/olid/OL31120A-M.jpg"
     },
     {
      "id": "wmaya-angelou",
