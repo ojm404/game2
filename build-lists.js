@@ -26,6 +26,13 @@ const DEFS = [
   { type: "collection", name: "The Fast and the Furious", title: "Fast & Furious films" },
   //   menu sets exactly where a list appears: "Category > Submenu > Sub-submenu". short is its label there.
   { type: "collection", name: "James Bond", title: "James Bond films", max: 30, menu: "Movies > Franchises > James Bond", short: "Films" },      // max raises the usual 15-film limit
+  { type: "films", cat: "Franchises", title: "Studio Ghibli films", short: "Studio Ghibli", picks: [
+    ["Nausicaä of the Valley of the Wind", 1984], ["Castle in the Sky", 1986], ["My Neighbor Totoro", 1988], ["Grave of the Fireflies", 1988],
+    ["Kiki's Delivery Service", 1989], ["Only Yesterday", 1991], ["Porco Rosso", 1992], ["Ocean Waves", 1993], ["Pom Poko", 1994],
+    ["Whisper of the Heart", 1995], ["Princess Mononoke", 1997], ["My Neighbors the Yamadas", 1999], ["Spirited Away", 2001],
+    ["The Cat Returns", 2002], ["Howl's Moving Castle", 2004], ["Tales from Earthsea", 2006], ["Ponyo", 2008], ["Arrietty", 2010],
+    ["From Up on Poppy Hill", 2011], ["The Wind Rises", 2013], ["The Tale of the Princess Kaguya", 2013], ["When Marnie Was There", 2014],
+    ["Earwig and the Witch", 2020], ["The Boy and the Heron", 2023] ] },
   { type: "films", cat: "Franchises", title: "Planet of the Apes films", picks: [
     ["Planet of the Apes", 1968], ["Beneath the Planet of the Apes", 1970], ["Escape from the Planet of the Apes", 1971],
     ["Conquest of the Planet of the Apes", 1972], ["Battle for the Planet of the Apes", 1973], ["Planet of the Apes", 2001],
@@ -106,6 +113,25 @@ const DEFS = [
     ["All You Had to Do Was Stay", "1989"], ["Delicate", "reputation"], ["The Archer", "Lover"], ["my tears ricochet", "folklore"],
     ["tolerate it", "evermore"], ["You're On Your Own, Kid", "Midnights"], ["So Long, London", "The Tortured Poets Department"],
     ["Eldest Daughter", "The Life of a Showgirl"] ] },
+  // Biggest radio singles, hand-picked, with release year.
+  { type: "names", group: "Taylor Swift", title: "Taylor Swift top radio singles", short: "Top radio singles", picks: [
+    ["Love Story", "2008"], ["You Belong with Me", "2009"], ["We Are Never Ever Getting Back Together", "2012"], ["I Knew You Were Trouble", "2012"],
+    ["Shake It Off", "2014"], ["Blank Space", "2014"], ["Style", "2015"], ["Bad Blood", "2015"], ["Look What You Made Me Do", "2017"],
+    ["Delicate", "2018"], ["Lover", "2019"], ["Cardigan", "2020"], ["Anti-Hero", "2022"], ["Cruel Summer", "2023"], ["Fortnight", "2024"],
+    ["The Fate of Ophelia", "2025"] ] },
+  { type: "names", group: "Ariana Grande", title: "Ariana Grande top radio singles", short: "Top radio singles", picks: [
+    ["The Way", "2013"], ["Problem", "2014"], ["Break Free", "2014"], ["Love Me Harder", "2014"], ["Bang Bang", "2014"], ["Into You", "2016"],
+    ["Side to Side", "2016"], ["No Tears Left to Cry", "2018"], ["God Is a Woman", "2018"], ["Thank U, Next", "2018"], ["7 Rings", "2019"],
+    ["Break Up with Your Girlfriend, I'm Bored", "2019"], ["Rain on Me", "2020"], ["Positions", "2020"], ["Yes, And?", "2024"],
+    ["We Can't Be Friends", "2024"] ] },
+  { type: "names", group: "Billy Talent", title: "Billy Talent top radio singles", short: "Top radio singles", picks: [
+    ["Try Honesty", "2003"], ["River Below", "2004"], ["Nothing to Lose", "2004"], ["Devil in a Midnight Mass", "2006"], ["Red Flag", "2006"],
+    ["Fallen Leaves", "2006"], ["Surrender", "2007"], ["Rusted from the Rain", "2009"], ["Devil on My Shoulder", "2009"], ["Saint Veronika", "2010"],
+    ["Viking Death March", "2012"], ["Surprise Surprise", "2012"], ["Afraid of Heights", "2016"], ["Louder Than the DJ", "2016"] ] },
+  { type: "names", group: "Linkin Park", title: "Linkin Park top radio singles", short: "Top radio singles", picks: [
+    ["One Step Closer", "2000"], ["Crawling", "2001"], ["In the End", "2001"], ["Papercut", "2001"], ["Somewhere I Belong", "2003"],
+    ["Numb", "2003"], ["Breaking the Habit", "2004"], ["What I've Done", "2007"], ["Bleed It Out", "2007"], ["Shadow of the Day", "2007"],
+    ["New Divide", "2009"], ["The Catalyst", "2010"], ["Burn It Down", "2012"], ["Heavy", "2017"], ["The Emptiness Machine", "2024"] ] },
   { type: "names", title: "Top pop solo women", short: "Pop solo women", picks: [
     "Madonna", "Whitney Houston", "Mariah Carey", "Britney Spears", "Beyoncé", "Rihanna", "Lady Gaga", "Katy Perry",
     "Adele", "Taylor Swift", "Ariana Grande", "Dua Lipa", "Billie Eilish", "Olivia Rodrigo", "Sabrina Carpenter" ] },
@@ -146,6 +172,14 @@ const DEFS = [
   { type: "tv",         name: "American Horror Story" },
   { type: "tv",         name: "The Office", year: 2005 },          // year = first aired, to get the US show and not the UK one
   { type: "tvgenre",    name: "Sci-Fi & Fantasy", title: "Hit sci-fi TV shows" },
+  //   "shows" is a hand-picked list of TV shows with posters. A pick is ["Name shown", "Search name", first year].
+  { type: "shows", menu: "TV > Anime", title: "Magical girl anime", short: "Magical girl", picks: [
+    ["Creamy Mami", "Magical Angel Creamy Mami", 1983], ["Sailor Moon", "Sailor Moon", 1992], ["Magic Knight Rayearth", "Magic Knight Rayearth", 1994],
+    ["Wedding Peach", "Wedding Peach", 1995], ["Revolutionary Girl Utena", "Revolutionary Girl Utena", 1997], ["Cardcaptor Sakura", "Cardcaptor Sakura", 1998],
+    ["Ojamajo Doremi", "Magical DoReMi", 1999], ["Princess Tutu", "Princess Tutu", 2002], ["Tokyo Mew Mew", "Tokyo Mew Mew", 2002],
+    ["Pretty Cure", "Futari wa Pretty Cure", 2004], ["Magical Girl Lyrical Nanoha", "Magical Girl Lyrical Nanoha", 2004],
+    ["Shugo Chara!", "Shugo Chara!", 2007], ["Puella Magi Madoka Magica", "Puella Magi Madoka Magica", 2011],
+    ["Symphogear", "Symphogear", 2012], ["Little Witch Academia", "Little Witch Academia", 2017] ] },
   // Misc: hand-picked name lists with no pictures.
   { type: "names", cat: "Misc", group: "Food", title: "Popular pizza toppings", picks: [
     "Pepperoni", "Mushrooms", "Extra cheese", "Italian sausage", "Bacon", "Onions", "Green peppers", "Black olives", "Pineapple", "Ham",
@@ -167,10 +201,18 @@ const DEFS = [
     ["Chance Eau Tendre", "Chanel"], ["Daisy", "Marc Jacobs"], ["Flora Gorgeous Gardenia", "Gucci"], ["Born in Roma Donna", "Valentino"],
     ["La Vie Est Belle", "Lancôme"], ["Flowerbomb", "Viktor & Rolf"], ["Paradoxe", "Prada"], ["Goddess", "Burberry"],
     ["Good Girl", "Carolina Herrera"], ["My Way", "Giorgio Armani"], ["Black Orchid", "Tom Ford"] ] },
+  // Every Kayali eau de parfum, 2018 to 2026 (body sprays and hair mists of existing scents are left out).
   { type: "names", cat: "Misc", group: "Perfumes", title: "Kayali perfumes", short: "Kayali", picks: [
-    "Vanilla 28", "Yum Pistachio Gelato 33", "Vanilla Candy Rock Sugar 42", "Utopia Vanilla Coco 21", "Eden Juicy Apple 01",
-    "Déjà Vu White Flower 57", "Lovefest Burning Cherry 48", "Yum Boujee Marshmallow 81", "Maui in a Bottle Sweet Hibiscus 26",
-    "Invite Only Amber 23", "Elixir 11", "Sweet Diamond Pink Pepper 25", "Vanilla Royale Sugared Patchouli 64" ] },
+    ["Vanilla 28", "2018"], ["Musk 12", "2018"], ["Elixir 11", "2018"], ["Citrus 08", "2018"], ["Déjà Vu White Flower 57", "2020"],
+    ["Utopia Vanilla Coco 21", "2021"], ["Sweet Diamond Pink Pepper 25", "2021"], ["Invite Only Amber 23", "2021"], ["Eden Juicy Apple 01", "2021"],
+    ["Lovefest Burning Cherry 48", "2022"], ["Vanilla Royale Sugared Patchouli 64", "2022"], ["Yum Pistachio Gelato 33", "2023"],
+    ["Eden Sparkling Lychee 39", "2023"], ["The Wedding Silk Santal 36", "2023"], ["The Wedding Velvet Santal 35", "2023"],
+    ["Oudgasm Vanilla Oud 36", "2023"], ["Oudgasm Rose Oud 16", "2023"], ["Oudgasm Café Oud 19", "2023"], ["Oudgasm Tobacco Oud 04", "2023"],
+    ["Oudgasm Smoky Oud 07", "2024"], ["Vanilla Candy Rock Sugar 42", "2024"], ["Yum Boujee Marshmallow 81", "2024"],
+    ["Capri in a Bottle Lemon Sugar 14", "2024"], ["Maldives in a Bottle Ylang Coco 20", "2024"], ["Marrakesh in a Bottle Orange Blossom 24", "2024"],
+    ["Maui in a Bottle Sweet Banana 37", "2024"], ["Fleur Majesty Rose Royale 31", "2025"], ["Oudgasm Chocolate Oud 11", "2025"],
+    ["Oudgasm Milky Musk Oud 30", "2025"], ["Freedom Musk Santal 34", "2025"], ["Freedom Musk Matcha 45", "2025"], ["Freedom Musk Latte 41", "2025"],
+    ["Freedom Musk Bouquet 27", "2025"], ["Eden Plush Pear 23", "2026"], ["Eden Sweet Peach 35", "2026"], ["Boujee Kitty Caramel Milk 22", "2026"] ] },
   { type: "names", cat: "Misc", group: "Perfumes", title: "Favourite celebrity perfumes", short: "Celebrity favourites", picks: [
     ["White Diamonds", "Elizabeth Taylor"], ["Glow", "Jennifer Lopez"], ["Curious", "Britney Spears"], ["Fantasy", "Britney Spears"],
     ["Lovely", "Sarah Jessica Parker"], ["Heat", "Beyoncé"], ["Purr", "Katy Perry"], ["Someday", "Justin Bieber"],
@@ -798,6 +840,22 @@ const builders = {
     const items = [...leads, ...rest].sort((a, b) => b.p.total_episode_count - a.p.total_episode_count)
       .map(x => ({ id: "p" + x.p.id, name: x.character, note: x.p.name, poster: def.photos === false ? null : x.p.profile_path || null }));
     return { cat: CATS.tv, group: def.group || show.name, short: def.short || "Main characters", title: `${show.name} main characters`, items };
+  },
+  // A hand-picked list of TV shows, with posters from TMDB.
+  async shows(def) {
+    const items = [];
+    for (const pick of def.picks) {
+      const [name, query, yr] = [].concat(pick);
+      let res = [];
+      try {
+        res = (await tmdb("/search/tv", yr ? { query: query || name, first_air_date_year: yr } : { query: query || name })).results || [];
+        if (!res.length && yr) res = (await tmdb("/search/tv", { query: query || name })).results || [];
+      } catch (e) {}
+      const s = res.sort((a, b) => b.vote_count - a.vote_count)[0];
+      if (!s) console.warn(`  no TMDB show found for "${query || name}"; added without a poster`);
+      items.push({ id: "t" + (s ? s.id : slug(name)), name, note: yr ? String(yr) : s ? year(s.first_air_date) : "", poster: (s && s.poster_path) || null });
+    }
+    return { cat: CATS.tv, title: def.title, items };
   },
   // A hand-picked list of real people, with their TMDB photos.
   async people(def) {
