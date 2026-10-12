@@ -246,7 +246,7 @@
   <div id="app"></div>
   <div id="rulers" aria-hidden="true"></div>
   <div id="modal"></div>
-  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive. Game data and artwork from RAWG. Book data and covers from Open Library.<span class="build">Build 2026-10-13.1</span></footer>
+  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive. Game data and artwork from RAWG. Book data and covers from Open Library.<span class="build">Build 2026-10-13.2</span></footer>
 </main>
 
 <script>
@@ -483,25 +483,37 @@ function shortOf(l){
 }
 // One dropdown with submenus: category, then (where lists belong to a show, artist or decade) that group, then the list.
 let pickOpen = false;
+// The menu is a tree: category, then submenus. A list's group can name several levels, written "Franchises > Pokémon".
 function pickerTree(){
   const present = [...new Set(lists.map(catOf))];
   const cats = [...CAT_ORDER.filter(c => present.includes(c)), ...present.filter(c => !CAT_ORDER.includes(c))];
   return cats.map(c => {
     const inCat = lists.filter(l => catOf(l) === c);
     const other = c === "TV" ? "Show rankings" : "Other";
-    const g = l => groupOf(l) || other;
-    const groups = inCat.some(groupOf) ? [...new Set(inCat.map(g))].map(name => ({name, lists: inCat.filter(l => g(l) === name)})) : null;
-    return {name: c, groups, lists: inCat};
+    const grouped = inCat.some(groupOf);
+    const root = {name: c, children: [], all: inCat};
+    inCat.forEach(l => {
+      let node = root;
+      (grouped ? (groupOf(l) || other).split(" > ") : []).forEach(seg => {
+        let k = node.children.find(x => x.n && x.n.name === seg);
+        if (!k) { k = {n: {name: seg, children: [], all: []}}; node.children.push(k); }
+        node = k.n; node.all.push(l);
+      });
+      node.children.push({l});
+    });
+    return root;
   });
 }
 function fillSelects(){
   const cur = lists.find(l => l.id === pickId) || null;
   if (!cur) pickId = null;
   const opt = (l, label) => `<button type="button" class="opt${l.id === pickId ? " on" : ""}" data-act="pickList" data-id="${esc(l.id)}">${esc(label)}</button>`;
-  const group = grp => grp.lists.length === 1 ? opt(grp.lists[0], grp.lists[0].title)
-    : `<details${grp.lists.includes(cur) ? " open" : ""}><summary>${esc(grp.name)}</summary>${grp.lists.map(l => opt(l, shortOf(l))).join("")}</details>`;
+  // A submenu holding a single list is shown as that list directly, under its full title.
+  const branch = (node, top) => node.children.map(ch => ch.l ? opt(ch.l, top ? ch.l.title : shortOf(ch.l))
+    : ch.n.all.length === 1 ? opt(ch.n.all[0], ch.n.all[0].title)
+    : `<details${ch.n.all.includes(cur) ? " open" : ""}><summary>${esc(ch.n.name)}</summary>${branch(ch.n, false)}</details>`).join("");
   const panel = !pickOpen ? "" : `<div class="pickpanel">${pickerTree().map(c =>
-    `<details${c.lists.includes(cur) ? " open" : ""}><summary>${esc(c.name)}</summary>${c.groups ? c.groups.map(group).join("") : c.lists.map(l => opt(l, l.title)).join("")}</details>`).join("")}</div>`;
+    `<details${c.all.includes(cur) ? " open" : ""}><summary>${esc(c.name)}</summary>${branch(c, true)}</details>`).join("")}</div>`;
   const html = `<button type="button" class="pickbtn" data-act="togglePick" aria-expanded="${pickOpen}"><span${cur ? "" : ' class="ph-text"'}>${cur ? esc(cur.title) : "Choose a category and list"}</span><span aria-hidden="true">${pickOpen ? "\u25B4" : "\u25BE"}</span></button>${panel}`;
   document.querySelectorAll(".picker").forEach(p => { p.innerHTML = html; });
 }
