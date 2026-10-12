@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-11",
+ "generated": "2026-10-12",
  "lists": [
   {
    "id": "harry-potter-films",
@@ -4494,12 +4494,12 @@
    ]
   },
   {
-   "id": "fast-food-burgers-available-in-canada",
-   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Food\",\"title\":\"Fast-food burgers (available in Canada)\",\"short\":\"Fast-food burgers in Canada\",\"picks\":[[\"Big Mac\",\"McDonald's\"],[\"Quarter Pounder with Cheese\",\"McDonald's\"],[\"McDouble\",\"McDonald's\"],[\"Whopper\",\"Burger King\"],[\"Bacon King\",\"Burger King\"],[\"Dave's Single\",\"Wendy's\"],[\"Baconator\",\"Wendy's\"],[\"Jr. Bacon Cheeseburger\",\"Wendy's\"],[\"Teen Burger\",\"A&W\"],[\"Mozza Burger\",\"A&W\"],[\"Papa Burger\",\"A&W\"],[\"Cheeseburger\",\"Five Guys\"],[\"Bacon Cheeseburger\",\"Five Guys\"],[\"FlameThrower GrillBurger\",\"Dairy Queen\"],[\"Original Fatburger\",\"Fatburger\"]]}",
+   "id": "fast-food-burgers",
+   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Food\",\"title\":\"Fast-food burgers\",\"picks\":[[\"Big Mac\",\"McDonald's\"],[\"Quarter Pounder with Cheese\",\"McDonald's\"],[\"Whopper\",\"Burger King\"],[\"Bacon King\",\"Burger King\"],[\"Dave's Single\",\"Wendy's\"],[\"Baconator\",\"Wendy's\"],[\"Teen Burger\",\"A&W\"],[\"Mozza Burger\",\"A&W\"],[\"Cheeseburger\",\"Five Guys\"],[\"FlameThrower GrillBurger\",\"Dairy Queen\"],[\"Original Fatburger\",\"Fatburger\"],[\"Yumburger\",\"Jollibee\"]]}",
    "cat": "Misc",
    "group": "Food",
-   "short": "Fast-food burgers in Canada",
-   "title": "Fast-food burgers (available in Canada)",
+   "short": "Fast-food burgers",
+   "title": "Fast-food burgers",
    "items": [
     {
      "id": "nbig-mac",
@@ -4509,11 +4509,6 @@
     {
      "id": "nquarter-pounder-with-cheese",
      "name": "Quarter Pounder with Cheese",
-     "note": "McDonald's"
-    },
-    {
-     "id": "nmcdouble",
-     "name": "McDouble",
      "note": "McDonald's"
     },
     {
@@ -4537,11 +4532,6 @@
      "note": "Wendy's"
     },
     {
-     "id": "njr-bacon-cheeseburger",
-     "name": "Jr. Bacon Cheeseburger",
-     "note": "Wendy's"
-    },
-    {
      "id": "nteen-burger",
      "name": "Teen Burger",
      "note": "A&W"
@@ -4552,18 +4542,8 @@
      "note": "A&W"
     },
     {
-     "id": "npapa-burger",
-     "name": "Papa Burger",
-     "note": "A&W"
-    },
-    {
      "id": "ncheeseburger",
      "name": "Cheeseburger",
-     "note": "Five Guys"
-    },
-    {
-     "id": "nbacon-cheeseburger",
-     "name": "Bacon Cheeseburger",
      "note": "Five Guys"
     },
     {
@@ -4575,6 +4555,11 @@
      "id": "noriginal-fatburger",
      "name": "Original Fatburger",
      "note": "Fatburger"
+    },
+    {
+     "id": "nyumburger",
+     "name": "Yumburger",
+     "note": "Jollibee"
     }
    ]
   },
@@ -11736,31 +11721,16 @@
   },
   {
    "id": "favourite-niche-perfumes",
-   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Perfumes\",\"title\":\"Favourite niche perfumes\",\"short\":\"Niche favourites\",\"picks\":[[\"Baccarat Rouge 540\",\"Maison Francis Kurkdjian\"],[\"Santal 33\",\"Le Labo\"],[\"Another 13\",\"Le Labo\"],[\"Aventus\",\"Creed\"],[\"Delina\",\"Parfums de Marly\"],[\"Layton\",\"Parfums de Marly\"],[\"Gypsy Water\",\"Byredo\"],[\"Mojave Ghost\",\"Byredo\"],[\"Portrait of a Lady\",\"Frédéric Malle\"],[\"Molecule 01\",\"Escentric Molecules\"],[\"Angels' Share\",\"Kilian\"],[\"Erba Pura\",\"Xerjoff\"],[\"Philosykos\",\"Diptyque\"],[\"Lost Cherry\",\"Tom Ford\"],[\"Oud Wood\",\"Tom Ford\"]]}",
+   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Perfumes\",\"title\":\"Favourite niche perfumes\",\"short\":\"Niche favourites\",\"picks\":[[\"Warm Bulb\",\"Clue\"],[\"Delina\",\"Parfums de Marly\"],[\"Santal 33\",\"Le Labo\"],[\"Jazz\",\"Zernell Gillie\"],[\"Girl of the Year\",\"Thin Wild Mercury\"],[\"Tears\",\"Régime des Fleurs\"],[\"Pas de Chat\",\"Odette\"],[\"Delizia di Marshmallow\",\"Kyse\"],[\"Bee\",\"Zoologist\"],[\"Nosferatu\",\"Heretic\"],[\"Queening\",\"Mind Games\"],[\"Peach's Revenge\",\"Sarah Baker\"],[\"The Soft Lawn\",\"Imaginary Authors\"],[\"White Rice\",\"d'Annam\"],[\"Dear Polly\",\"Vilhelm Parfumerie\"]]}",
    "cat": "Misc",
    "group": "Perfumes",
    "short": "Niche favourites",
    "title": "Favourite niche perfumes",
    "items": [
     {
-     "id": "nbaccarat-rouge-540",
-     "name": "Baccarat Rouge 540",
-     "note": "Maison Francis Kurkdjian"
-    },
-    {
-     "id": "nsantal-33",
-     "name": "Santal 33",
-     "note": "Le Labo"
-    },
-    {
-     "id": "nanother-13",
-     "name": "Another 13",
-     "note": "Le Labo"
-    },
-    {
-     "id": "naventus",
-     "name": "Aventus",
-     "note": "Creed"
+     "id": "nwarm-bulb",
+     "name": "Warm Bulb",
+     "note": "Clue"
     },
     {
      "id": "ndelina",
@@ -11768,54 +11738,69 @@
      "note": "Parfums de Marly"
     },
     {
-     "id": "nlayton",
-     "name": "Layton",
-     "note": "Parfums de Marly"
+     "id": "nsantal-33",
+     "name": "Santal 33",
+     "note": "Le Labo"
     },
     {
-     "id": "ngypsy-water",
-     "name": "Gypsy Water",
-     "note": "Byredo"
+     "id": "njazz",
+     "name": "Jazz",
+     "note": "Zernell Gillie"
     },
     {
-     "id": "nmojave-ghost",
-     "name": "Mojave Ghost",
-     "note": "Byredo"
+     "id": "ngirl-of-the-year",
+     "name": "Girl of the Year",
+     "note": "Thin Wild Mercury"
     },
     {
-     "id": "nportrait-of-a-lady",
-     "name": "Portrait of a Lady",
-     "note": "Frédéric Malle"
+     "id": "ntears",
+     "name": "Tears",
+     "note": "Régime des Fleurs"
     },
     {
-     "id": "nmolecule-01",
-     "name": "Molecule 01",
-     "note": "Escentric Molecules"
+     "id": "npas-de-chat",
+     "name": "Pas de Chat",
+     "note": "Odette"
     },
     {
-     "id": "nangels-share",
-     "name": "Angels' Share",
-     "note": "Kilian"
+     "id": "ndelizia-di-marshmallow",
+     "name": "Delizia di Marshmallow",
+     "note": "Kyse"
     },
     {
-     "id": "nerba-pura",
-     "name": "Erba Pura",
-     "note": "Xerjoff"
+     "id": "nbee",
+     "name": "Bee",
+     "note": "Zoologist"
     },
     {
-     "id": "nphilosykos",
-     "name": "Philosykos",
-     "note": "Diptyque"
+     "id": "nnosferatu",
+     "name": "Nosferatu",
+     "note": "Heretic"
     },
     {
-     "id": "nlost-cherry",
-     "name": "Lost Cherry",
-     "note": "Tom Ford"
+     "id": "nqueening",
+     "name": "Queening",
+     "note": "Mind Games"
     },
     {
-     "id": "noud-wood",
-     "name": "Oud Wood",
-     "note": "Tom Ford"
+     "id": "npeach-s-revenge",
+     "name": "Peach's Revenge",
+     "note": "Sarah Baker"
+    },
+    {
+     "id": "nthe-soft-lawn",
+     "name": "The Soft Lawn",
+     "note": "Imaginary Authors"
+    },
+    {
+     "id": "nwhite-rice",
+     "name": "White Rice",
+     "note": "d'Annam"
+    },
+    {
+     "id": "ndear-polly",
+     "name": "Dear Polly",
+     "note": "Vilhelm Parfumerie"
     }
    ]
   },
@@ -19817,8 +19802,7 @@
     },
     {
      "id": "wmary-shelley",
-     "name": "Mary Shelley",
-     "img": "https://covers.openlibrary.org/a/olid/OL25342A-M.jpg"
+     "name": "Mary Shelley"
     },
     {
      "id": "wcharlotte-bronte",
@@ -19837,8 +19821,7 @@
     },
     {
      "id": "wtoni-morrison",
-     "name": "Toni Morrison",
-     "img": "https://covers.openlibrary.org/a/olid/OL31120A-M.jpg"
+     "name": "Toni Morrison"
     },
     {
      "id": "wmaya-angelou",
