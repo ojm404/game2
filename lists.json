@@ -360,6 +360,160 @@
    "short": "Films"
   },
   {
+   "id": "studio-ghibli-films",
+   "src": "{\"type\":\"films\",\"cat\":\"Franchises\",\"title\":\"Studio Ghibli films\",\"short\":\"Studio Ghibli\",\"picks\":[[\"Nausicaä of the Valley of the Wind\",1984],[\"Castle in the Sky\",1986],[\"My Neighbor Totoro\",1988],[\"Grave of the Fireflies\",1988],[\"Kiki's Delivery Service\",1989],[\"Only Yesterday\",1991],[\"Porco Rosso\",1992],[\"Ocean Waves\",1993],[\"Pom Poko\",1994],[\"Whisper of the Heart\",1995],[\"Princess Mononoke\",1997],[\"My Neighbors the Yamadas\",1999],[\"Spirited Away\",2001],[\"The Cat Returns\",2002],[\"Howl's Moving Castle\",2004],[\"Tales from Earthsea\",2006],[\"Ponyo\",2008],[\"Arrietty\",2010],[\"From Up on Poppy Hill\",2011],[\"The Wind Rises\",2013],[\"The Tale of the Princess Kaguya\",2013],[\"When Marnie Was There\",2014],[\"Earwig and the Witch\",2020],[\"The Boy and the Heron\",2023]]}",
+   "cat": "Movies",
+   "title": "Studio Ghibli films",
+   "items": [
+    {
+     "id": "m81",
+     "name": "Warriors of the Wind",
+     "note": "1984",
+     "poster": "/tcrkfB8SRPQCgwI88hQScua6nxh.jpg"
+    },
+    {
+     "id": "m10515",
+     "name": "Castle in the Sky",
+     "note": "1986",
+     "poster": "/41XxSsJc5OrulP0m7TrrUeO2hoz.jpg"
+    },
+    {
+     "id": "m8392",
+     "name": "My Neighbor Totoro",
+     "note": "1988",
+     "poster": "/rtGDOeG9LzoerkDGZF9dnVeLppL.jpg"
+    },
+    {
+     "id": "m12477",
+     "name": "Grave of the Fireflies",
+     "note": "1988",
+     "poster": "/k9tv1rXZbOhH7eiCk378x61kNQ1.jpg"
+    },
+    {
+     "id": "m16859",
+     "name": "Kiki's Delivery Service",
+     "note": "1989",
+     "poster": "/Aufa4YdZIv4AXpR9rznwVA5SEfd.jpg"
+    },
+    {
+     "id": "m15080",
+     "name": "Only Yesterday",
+     "note": "1991",
+     "poster": "/tOSnFE9e82iH3ZAzSTtuOkBsabJ.jpg"
+    },
+    {
+     "id": "m11621",
+     "name": "Porco Rosso",
+     "note": "1992",
+     "poster": "/8mIvSvnVBApfORL9N6S38Q7wD6A.jpg"
+    },
+    {
+     "id": "m21057",
+     "name": "Ocean Waves",
+     "note": "1993",
+     "poster": "/fSR1LLMIJZ6WcQEkM82yKy4F9vQ.jpg"
+    },
+    {
+     "id": "m15283",
+     "name": "Pom Poko",
+     "note": "1994",
+     "poster": "/gyoJmFf24MOUc4TTu97sd0cHIQF.jpg"
+    },
+    {
+     "id": "m37797",
+     "name": "Whisper of the Heart",
+     "note": "1995",
+     "poster": "/5FROLD8zpWFs9ja7aYho1uOMJHg.jpg"
+    },
+    {
+     "id": "m128",
+     "name": "Princess Mononoke",
+     "note": "1997",
+     "poster": "/cMYCDADoLKLbB83g4WnJegaZimC.jpg"
+    },
+    {
+     "id": "m16198",
+     "name": "My Neighbors the Yamadas",
+     "note": "1999",
+     "poster": "/nj0ijnOozQtu52r0ncut769G1FX.jpg"
+    },
+    {
+     "id": "m129",
+     "name": "Spirited Away",
+     "note": "2001",
+     "poster": "/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg"
+    },
+    {
+     "id": "m15370",
+     "name": "The Cat Returns",
+     "note": "2002",
+     "poster": "/pqyY7IEWkCWNZ7EuRStQaJITEta.jpg"
+    },
+    {
+     "id": "m4935",
+     "name": "Howl's Moving Castle",
+     "note": "2004",
+     "poster": "/13kOl2v0nD2OLbVSHnHk8GUFEhO.jpg"
+    },
+    {
+     "id": "m37933",
+     "name": "Tales from Earthsea",
+     "note": "2006",
+     "poster": "/y0VnJt4eRPMjA1hpJ8f1EFoVaSf.jpg"
+    },
+    {
+     "id": "m12429",
+     "name": "Ponyo",
+     "note": "2008",
+     "poster": "/yp8vEZflGynlEylxEesbYasc06i.jpg"
+    },
+    {
+     "id": "m51739",
+     "name": "Arrietty",
+     "note": "2010",
+     "poster": "/3lSRaSjDp2nkXMQkzzjpRi3035O.jpg"
+    },
+    {
+     "id": "m83389",
+     "name": "From Up on Poppy Hill",
+     "note": "2011",
+     "poster": "/rRLYX4RZIyloHSJwvZKAhphAjiB.jpg"
+    },
+    {
+     "id": "m149870",
+     "name": "The Wind Rises",
+     "note": "2013",
+     "poster": "/jfwSexzlIzaOgxP9A8bTA6t8YYb.jpg"
+    },
+    {
+     "id": "m149871",
+     "name": "The Tale of The Princess Kaguya",
+     "note": "2013",
+     "poster": "/cQidJuA546OSSXKWXoiCeINDxuj.jpg"
+    },
+    {
+     "id": "m242828",
+     "name": "When Marnie Was There",
+     "note": "2014",
+     "poster": "/vug1dvDI1tSa60Z8qjCuUE7ntkO.jpg"
+    },
+    {
+     "id": "m683127",
+     "name": "Earwig and the Witch",
+     "note": "2021",
+     "poster": "/9oK820JieICOcfUhI6mkpFrcA9m.jpg"
+    },
+    {
+     "id": "m508883",
+     "name": "The Boy and the Heron",
+     "note": "2023",
+     "poster": "/f4oZTcfGrVTXKTWg157AwikXqmP.jpg"
+    }
+   ],
+   "group": "Franchises",
+   "short": "Studio Ghibli films"
+  },
+  {
    "id": "planet-of-the-apes-films",
    "src": "{\"type\":\"films\",\"cat\":\"Franchises\",\"title\":\"Planet of the Apes films\",\"picks\":[[\"Planet of the Apes\",1968],[\"Beneath the Planet of the Apes\",1970],[\"Escape from the Planet of the Apes\",1971],[\"Conquest of the Planet of the Apes\",1972],[\"Battle for the Planet of the Apes\",1973],[\"Planet of the Apes\",2001],[\"Rise of the Planet of the Apes\",2011],[\"Dawn of the Planet of the Apes\",2014],[\"War for the Planet of the Apes\",2017],[\"Kingdom of the Planet of the Apes\",2024]]}",
    "cat": "Movies",
@@ -3428,6 +3582,412 @@
    ]
   },
   {
+   "id": "taylor-swift-top-radio-singles",
+   "src": "{\"type\":\"names\",\"group\":\"Taylor Swift\",\"title\":\"Taylor Swift top radio singles\",\"short\":\"Top radio singles\",\"picks\":[[\"Love Story\",\"2008\"],[\"You Belong with Me\",\"2009\"],[\"We Are Never Ever Getting Back Together\",\"2012\"],[\"I Knew You Were Trouble\",\"2012\"],[\"Shake It Off\",\"2014\"],[\"Blank Space\",\"2014\"],[\"Style\",\"2015\"],[\"Bad Blood\",\"2015\"],[\"Look What You Made Me Do\",\"2017\"],[\"Delicate\",\"2018\"],[\"Lover\",\"2019\"],[\"Cardigan\",\"2020\"],[\"Anti-Hero\",\"2022\"],[\"Cruel Summer\",\"2023\"],[\"Fortnight\",\"2024\"],[\"The Fate of Ophelia\",\"2025\"]]}",
+   "cat": "Music",
+   "group": "Taylor Swift",
+   "short": "Top radio singles",
+   "title": "Taylor Swift top radio singles",
+   "items": [
+    {
+     "id": "nlove-story",
+     "name": "Love Story",
+     "note": "2008",
+     "sq": true
+    },
+    {
+     "id": "nyou-belong-with-me",
+     "name": "You Belong with Me",
+     "note": "2009",
+     "sq": true
+    },
+    {
+     "id": "nwe-are-never-ever-getting-back-together",
+     "name": "We Are Never Ever Getting Back Together",
+     "note": "2012",
+     "sq": true
+    },
+    {
+     "id": "ni-knew-you-were-trouble",
+     "name": "I Knew You Were Trouble",
+     "note": "2012",
+     "sq": true
+    },
+    {
+     "id": "nshake-it-off",
+     "name": "Shake It Off",
+     "note": "2014",
+     "sq": true
+    },
+    {
+     "id": "nblank-space",
+     "name": "Blank Space",
+     "note": "2014",
+     "sq": true
+    },
+    {
+     "id": "nstyle",
+     "name": "Style",
+     "note": "2015",
+     "sq": true
+    },
+    {
+     "id": "nbad-blood",
+     "name": "Bad Blood",
+     "note": "2015",
+     "sq": true
+    },
+    {
+     "id": "nlook-what-you-made-me-do",
+     "name": "Look What You Made Me Do",
+     "note": "2017",
+     "sq": true
+    },
+    {
+     "id": "ndelicate",
+     "name": "Delicate",
+     "note": "2018",
+     "sq": true
+    },
+    {
+     "id": "nlover",
+     "name": "Lover",
+     "note": "2019",
+     "sq": true
+    },
+    {
+     "id": "ncardigan",
+     "name": "Cardigan",
+     "note": "2020",
+     "sq": true
+    },
+    {
+     "id": "nanti-hero",
+     "name": "Anti-Hero",
+     "note": "2022",
+     "sq": true
+    },
+    {
+     "id": "ncruel-summer",
+     "name": "Cruel Summer",
+     "note": "2023",
+     "sq": true
+    },
+    {
+     "id": "nfortnight",
+     "name": "Fortnight",
+     "note": "2024",
+     "sq": true
+    },
+    {
+     "id": "nthe-fate-of-ophelia",
+     "name": "The Fate of Ophelia",
+     "note": "2025",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "ariana-grande-top-radio-singles",
+   "src": "{\"type\":\"names\",\"group\":\"Ariana Grande\",\"title\":\"Ariana Grande top radio singles\",\"short\":\"Top radio singles\",\"picks\":[[\"The Way\",\"2013\"],[\"Problem\",\"2014\"],[\"Break Free\",\"2014\"],[\"Love Me Harder\",\"2014\"],[\"Bang Bang\",\"2014\"],[\"Into You\",\"2016\"],[\"Side to Side\",\"2016\"],[\"No Tears Left to Cry\",\"2018\"],[\"God Is a Woman\",\"2018\"],[\"Thank U, Next\",\"2018\"],[\"7 Rings\",\"2019\"],[\"Break Up with Your Girlfriend, I'm Bored\",\"2019\"],[\"Rain on Me\",\"2020\"],[\"Positions\",\"2020\"],[\"Yes, And?\",\"2024\"],[\"We Can't Be Friends\",\"2024\"]]}",
+   "cat": "Music",
+   "group": "Ariana Grande",
+   "short": "Top radio singles",
+   "title": "Ariana Grande top radio singles",
+   "items": [
+    {
+     "id": "nthe-way",
+     "name": "The Way",
+     "note": "2013",
+     "sq": true
+    },
+    {
+     "id": "nproblem",
+     "name": "Problem",
+     "note": "2014",
+     "sq": true
+    },
+    {
+     "id": "nbreak-free",
+     "name": "Break Free",
+     "note": "2014",
+     "sq": true
+    },
+    {
+     "id": "nlove-me-harder",
+     "name": "Love Me Harder",
+     "note": "2014",
+     "sq": true
+    },
+    {
+     "id": "nbang-bang",
+     "name": "Bang Bang",
+     "note": "2014",
+     "sq": true
+    },
+    {
+     "id": "ninto-you",
+     "name": "Into You",
+     "note": "2016",
+     "sq": true
+    },
+    {
+     "id": "nside-to-side",
+     "name": "Side to Side",
+     "note": "2016",
+     "sq": true
+    },
+    {
+     "id": "nno-tears-left-to-cry",
+     "name": "No Tears Left to Cry",
+     "note": "2018",
+     "sq": true
+    },
+    {
+     "id": "ngod-is-a-woman",
+     "name": "God Is a Woman",
+     "note": "2018",
+     "sq": true
+    },
+    {
+     "id": "nthank-u-next",
+     "name": "Thank U, Next",
+     "note": "2018",
+     "sq": true
+    },
+    {
+     "id": "n7-rings",
+     "name": "7 Rings",
+     "note": "2019",
+     "sq": true
+    },
+    {
+     "id": "nbreak-up-with-your-girlfriend-i-m-bored",
+     "name": "Break Up with Your Girlfriend, I'm Bored",
+     "note": "2019",
+     "sq": true
+    },
+    {
+     "id": "nrain-on-me",
+     "name": "Rain on Me",
+     "note": "2020",
+     "sq": true
+    },
+    {
+     "id": "npositions",
+     "name": "Positions",
+     "note": "2020",
+     "sq": true
+    },
+    {
+     "id": "nyes-and",
+     "name": "Yes, And?",
+     "note": "2024",
+     "sq": true
+    },
+    {
+     "id": "nwe-can-t-be-friends",
+     "name": "We Can't Be Friends",
+     "note": "2024",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "billy-talent-top-radio-singles",
+   "src": "{\"type\":\"names\",\"group\":\"Billy Talent\",\"title\":\"Billy Talent top radio singles\",\"short\":\"Top radio singles\",\"picks\":[[\"Try Honesty\",\"2003\"],[\"River Below\",\"2004\"],[\"Nothing to Lose\",\"2004\"],[\"Devil in a Midnight Mass\",\"2006\"],[\"Red Flag\",\"2006\"],[\"Fallen Leaves\",\"2006\"],[\"Surrender\",\"2007\"],[\"Rusted from the Rain\",\"2009\"],[\"Devil on My Shoulder\",\"2009\"],[\"Saint Veronika\",\"2010\"],[\"Viking Death March\",\"2012\"],[\"Surprise Surprise\",\"2012\"],[\"Afraid of Heights\",\"2016\"],[\"Louder Than the DJ\",\"2016\"]]}",
+   "cat": "Music",
+   "group": "Billy Talent",
+   "short": "Top radio singles",
+   "title": "Billy Talent top radio singles",
+   "items": [
+    {
+     "id": "ntry-honesty",
+     "name": "Try Honesty",
+     "note": "2003",
+     "sq": true
+    },
+    {
+     "id": "nriver-below",
+     "name": "River Below",
+     "note": "2004",
+     "sq": true
+    },
+    {
+     "id": "nnothing-to-lose",
+     "name": "Nothing to Lose",
+     "note": "2004",
+     "sq": true
+    },
+    {
+     "id": "ndevil-in-a-midnight-mass",
+     "name": "Devil in a Midnight Mass",
+     "note": "2006",
+     "sq": true
+    },
+    {
+     "id": "nred-flag",
+     "name": "Red Flag",
+     "note": "2006",
+     "sq": true
+    },
+    {
+     "id": "nfallen-leaves",
+     "name": "Fallen Leaves",
+     "note": "2006",
+     "sq": true
+    },
+    {
+     "id": "nsurrender",
+     "name": "Surrender",
+     "note": "2007",
+     "sq": true
+    },
+    {
+     "id": "nrusted-from-the-rain",
+     "name": "Rusted from the Rain",
+     "note": "2009",
+     "sq": true
+    },
+    {
+     "id": "ndevil-on-my-shoulder",
+     "name": "Devil on My Shoulder",
+     "note": "2009",
+     "sq": true
+    },
+    {
+     "id": "nsaint-veronika",
+     "name": "Saint Veronika",
+     "note": "2010",
+     "sq": true
+    },
+    {
+     "id": "nviking-death-march",
+     "name": "Viking Death March",
+     "note": "2012",
+     "sq": true
+    },
+    {
+     "id": "nsurprise-surprise",
+     "name": "Surprise Surprise",
+     "note": "2012",
+     "sq": true
+    },
+    {
+     "id": "nafraid-of-heights",
+     "name": "Afraid of Heights",
+     "note": "2016",
+     "sq": true
+    },
+    {
+     "id": "nlouder-than-the-dj",
+     "name": "Louder Than the DJ",
+     "note": "2016",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "linkin-park-top-radio-singles",
+   "src": "{\"type\":\"names\",\"group\":\"Linkin Park\",\"title\":\"Linkin Park top radio singles\",\"short\":\"Top radio singles\",\"picks\":[[\"One Step Closer\",\"2000\"],[\"Crawling\",\"2001\"],[\"In the End\",\"2001\"],[\"Papercut\",\"2001\"],[\"Somewhere I Belong\",\"2003\"],[\"Numb\",\"2003\"],[\"Breaking the Habit\",\"2004\"],[\"What I've Done\",\"2007\"],[\"Bleed It Out\",\"2007\"],[\"Shadow of the Day\",\"2007\"],[\"New Divide\",\"2009\"],[\"The Catalyst\",\"2010\"],[\"Burn It Down\",\"2012\"],[\"Heavy\",\"2017\"],[\"The Emptiness Machine\",\"2024\"]]}",
+   "cat": "Music",
+   "group": "Linkin Park",
+   "short": "Top radio singles",
+   "title": "Linkin Park top radio singles",
+   "items": [
+    {
+     "id": "none-step-closer",
+     "name": "One Step Closer",
+     "note": "2000",
+     "sq": true
+    },
+    {
+     "id": "ncrawling",
+     "name": "Crawling",
+     "note": "2001",
+     "sq": true
+    },
+    {
+     "id": "nin-the-end",
+     "name": "In the End",
+     "note": "2001",
+     "sq": true
+    },
+    {
+     "id": "npapercut",
+     "name": "Papercut",
+     "note": "2001",
+     "sq": true
+    },
+    {
+     "id": "nsomewhere-i-belong",
+     "name": "Somewhere I Belong",
+     "note": "2003",
+     "sq": true
+    },
+    {
+     "id": "nnumb",
+     "name": "Numb",
+     "note": "2003",
+     "sq": true
+    },
+    {
+     "id": "nbreaking-the-habit",
+     "name": "Breaking the Habit",
+     "note": "2004",
+     "sq": true
+    },
+    {
+     "id": "nwhat-i-ve-done",
+     "name": "What I've Done",
+     "note": "2007",
+     "sq": true
+    },
+    {
+     "id": "nbleed-it-out",
+     "name": "Bleed It Out",
+     "note": "2007",
+     "sq": true
+    },
+    {
+     "id": "nshadow-of-the-day",
+     "name": "Shadow of the Day",
+     "note": "2007",
+     "sq": true
+    },
+    {
+     "id": "nnew-divide",
+     "name": "New Divide",
+     "note": "2009",
+     "sq": true
+    },
+    {
+     "id": "nthe-catalyst",
+     "name": "The Catalyst",
+     "note": "2010",
+     "sq": true
+    },
+    {
+     "id": "nburn-it-down",
+     "name": "Burn It Down",
+     "note": "2012",
+     "sq": true
+    },
+    {
+     "id": "nheavy",
+     "name": "Heavy",
+     "note": "2017",
+     "sq": true
+    },
+    {
+     "id": "nthe-emptiness-machine",
+     "name": "The Emptiness Machine",
+     "note": "2024",
+     "sq": true
+    }
+   ]
+  },
+  {
    "id": "top-pop-solo-women",
    "src": "{\"type\":\"names\",\"title\":\"Top pop solo women\",\"short\":\"Pop solo women\",\"picks\":[\"Madonna\",\"Whitney Houston\",\"Mariah Carey\",\"Britney Spears\",\"Beyoncé\",\"Rihanna\",\"Lady Gaga\",\"Katy Perry\",\"Adele\",\"Taylor Swift\",\"Ariana Grande\",\"Dua Lipa\",\"Billie Eilish\",\"Olivia Rodrigo\",\"Sabrina Carpenter\"]}",
    "cat": "Music",
@@ -4468,6 +5028,106 @@
      "poster": "/9PFonBhy4cQy7Jz20NpMygczOkv.jpg"
     }
    ]
+  },
+  {
+   "id": "magical-girl-anime",
+   "src": "{\"type\":\"shows\",\"menu\":\"TV > Anime\",\"title\":\"Magical girl anime\",\"short\":\"Magical girl\",\"picks\":[[\"Creamy Mami\",\"Magical Angel Creamy Mami\",1983],[\"Sailor Moon\",\"Sailor Moon\",1992],[\"Magic Knight Rayearth\",\"Magic Knight Rayearth\",1994],[\"Wedding Peach\",\"Wedding Peach\",1995],[\"Revolutionary Girl Utena\",\"Revolutionary Girl Utena\",1997],[\"Cardcaptor Sakura\",\"Cardcaptor Sakura\",1998],[\"Ojamajo Doremi\",\"Magical DoReMi\",1999],[\"Princess Tutu\",\"Princess Tutu\",2002],[\"Tokyo Mew Mew\",\"Tokyo Mew Mew\",2002],[\"Pretty Cure\",\"Futari wa Pretty Cure\",2004],[\"Magical Girl Lyrical Nanoha\",\"Magical Girl Lyrical Nanoha\",2004],[\"Shugo Chara!\",\"Shugo Chara!\",2007],[\"Puella Magi Madoka Magica\",\"Puella Magi Madoka Magica\",2011],[\"Symphogear\",\"Symphogear\",2012],[\"Little Witch Academia\",\"Little Witch Academia\",2017]]}",
+   "cat": "TV",
+   "title": "Magical girl anime",
+   "items": [
+    {
+     "id": "t35529",
+     "name": "Creamy Mami",
+     "note": "1983",
+     "poster": "/c3AicDb9Rlq0zj8BhRZzjGEppek.jpg"
+    },
+    {
+     "id": "t3570",
+     "name": "Sailor Moon",
+     "note": "1992",
+     "poster": "/m0e8QxAM0n3XK9GPvkxzRB0YL4k.jpg"
+    },
+    {
+     "id": "t34158",
+     "name": "Magic Knight Rayearth",
+     "note": "1994",
+     "poster": "/pm3hODqtNDLqucDVvakky8FrhMx.jpg"
+    },
+    {
+     "id": "t46275",
+     "name": "Wedding Peach",
+     "note": "1995",
+     "poster": "/e304jgLE7y3Z7CPsxJoJm2ZW40s.jpg"
+    },
+    {
+     "id": "t1042",
+     "name": "Revolutionary Girl Utena",
+     "note": "1997",
+     "poster": "/riqymWBPqKmWpIvS3lVDYjZhwQ5.jpg"
+    },
+    {
+     "id": "t35790",
+     "name": "Cardcaptor Sakura",
+     "note": "1998",
+     "poster": "/dj0uI34MOkZMTE233tfRebs0YYx.jpg"
+    },
+    {
+     "id": "t20353",
+     "name": "Ojamajo Doremi",
+     "note": "1999",
+     "poster": "/iCINo8JNXswWelsEycO1frahHS1.jpg"
+    },
+    {
+     "id": "t34132",
+     "name": "Princess Tutu",
+     "note": "2002",
+     "poster": "/lXPCfdHq3GQxLqTBIQ9QtRZSftS.jpg"
+    },
+    {
+     "id": "t46345",
+     "name": "Tokyo Mew Mew",
+     "note": "2002",
+     "poster": "/vEBuze5ULPfMYfMX8BYuVa2moRs.jpg"
+    },
+    {
+     "id": "t37508",
+     "name": "Pretty Cure",
+     "note": "2004",
+     "poster": "/f98O7QVHpOlB8ySyN1vVq1ttHHe.jpg"
+    },
+    {
+     "id": "t19836",
+     "name": "Magical Girl Lyrical Nanoha",
+     "note": "2004",
+     "poster": "/yRAqx0q58cvU9saJhvwavYF6XgV.jpg"
+    },
+    {
+     "id": "t14451",
+     "name": "Shugo Chara!",
+     "note": "2007",
+     "poster": "/cP1oeOZCDv1KlQcaV7IpDAUpoFc.jpg"
+    },
+    {
+     "id": "t39218",
+     "name": "Puella Magi Madoka Magica",
+     "note": "2011",
+     "poster": "/9Leopb4OB9j9FkP5JNHRZZlPPdg.jpg"
+    },
+    {
+     "id": "t63322",
+     "name": "Symphogear",
+     "note": "2012",
+     "poster": "/g0jsgViN4aBybkgTmr4XgZHluxX.jpg"
+    },
+    {
+     "id": "t69293",
+     "name": "Little Witch Academia",
+     "note": "2017",
+     "poster": "/93Lz0LwbScZ5bmuqoIngLv1LKNb.jpg"
+    }
+   ],
+   "group": "Anime",
+   "short": "Magical girl"
   },
   {
    "id": "popular-pizza-toppings",
@@ -12324,77 +12984,92 @@
     {
      "id": "nwarm-bulb",
      "name": "Warm Bulb",
-     "note": "Clue"
+     "note": "Clue",
+     "img": "images/favourite-niche-perfumes/warm-bulb.jpeg"
     },
     {
      "id": "ndelina",
      "name": "Delina",
-     "note": "Parfums de Marly"
+     "note": "Parfums de Marly",
+     "img": "images/favourite-niche-perfumes/delina.jpeg"
     },
     {
      "id": "nsantal-33",
      "name": "Santal 33",
-     "note": "Le Labo"
+     "note": "Le Labo",
+     "img": "images/favourite-niche-perfumes/santal-33.jpeg"
     },
     {
      "id": "njazz",
      "name": "Jazz",
-     "note": "Zernell Gillie"
+     "note": "Zernell Gillie",
+     "img": "images/favourite-niche-perfumes/jazz.jpeg"
     },
     {
      "id": "ngirl-of-the-year",
      "name": "Girl of the Year",
-     "note": "Thin Wild Mercury"
+     "note": "Thin Wild Mercury",
+     "img": "images/favourite-niche-perfumes/girl-of-the-year.jpeg"
     },
     {
      "id": "ntears",
      "name": "Tears",
-     "note": "Régime des Fleurs"
+     "note": "Régime des Fleurs",
+     "img": "images/favourite-niche-perfumes/tears.jpeg"
     },
     {
      "id": "npas-de-chat",
      "name": "Pas de Chat",
-     "note": "Odette"
+     "note": "Odette",
+     "img": "images/favourite-niche-perfumes/pas-de-chat.jpeg"
     },
     {
      "id": "ndelizia-di-marshmallow",
      "name": "Delizia di Marshmallow",
-     "note": "Kyse"
+     "note": "Kyse",
+     "img": "images/favourite-niche-perfumes/delizia-di-marshmallow.jpeg"
     },
     {
      "id": "nbee",
      "name": "Bee",
-     "note": "Zoologist"
+     "note": "Zoologist",
+     "img": "images/favourite-niche-perfumes/bee.jpeg"
     },
     {
      "id": "nnosferatu",
      "name": "Nosferatu",
-     "note": "Heretic"
+     "note": "Heretic",
+     "img": "images/favourite-niche-perfumes/nosferatu.jpeg"
     },
     {
      "id": "nqueening",
      "name": "Queening",
-     "note": "Mind Games"
+     "note": "Mind Games",
+     "img": "images/favourite-niche-perfumes/queening.jpeg"
     },
     {
      "id": "npeach-s-revenge",
      "name": "Peach's Revenge",
-     "note": "Sarah Baker"
+     "note": "Sarah Baker",
+     "img": "images/favourite-niche-perfumes/peach-s-revenge.jpeg"
     },
     {
      "id": "nthe-soft-lawn",
      "name": "The Soft Lawn",
-     "note": "Imaginary Authors"
+     "note": "Imaginary Authors",
+     "img": "images/favourite-niche-perfumes/the-soft-lawn.jpeg"
     },
     {
      "id": "nwhite-rice",
      "name": "White Rice",
-     "note": "d'Annam"
+     "note": "d'Annam",
+     "img": "images/favourite-niche-perfumes/white-rice.jpeg"
     },
     {
      "id": "ndear-polly",
      "name": "Dear Polly",
-     "note": "Vilhelm Parfumerie"
+     "note": "Vilhelm Parfumerie",
+     "img": "images/favourite-niche-perfumes/dear-polly.jpeg"
     }
    ]
   },
@@ -12485,7 +13160,7 @@
   },
   {
    "id": "kayali-perfumes",
-   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Perfumes\",\"title\":\"Kayali perfumes\",\"short\":\"Kayali\",\"picks\":[\"Vanilla 28\",\"Yum Pistachio Gelato 33\",\"Vanilla Candy Rock Sugar 42\",\"Utopia Vanilla Coco 21\",\"Eden Juicy Apple 01\",\"Déjà Vu White Flower 57\",\"Lovefest Burning Cherry 48\",\"Yum Boujee Marshmallow 81\",\"Maui in a Bottle Sweet Hibiscus 26\",\"Invite Only Amber 23\",\"Elixir 11\",\"Sweet Diamond Pink Pepper 25\",\"Vanilla Royale Sugared Patchouli 64\"]}",
+   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Perfumes\",\"title\":\"Kayali perfumes\",\"short\":\"Kayali\",\"picks\":[[\"Vanilla 28\",\"2018\"],[\"Musk 12\",\"2018\"],[\"Elixir 11\",\"2018\"],[\"Citrus 08\",\"2018\"],[\"Déjà Vu White Flower 57\",\"2020\"],[\"Utopia Vanilla Coco 21\",\"2021\"],[\"Sweet Diamond Pink Pepper 25\",\"2021\"],[\"Invite Only Amber 23\",\"2021\"],[\"Eden Juicy Apple 01\",\"2021\"],[\"Lovefest Burning Cherry 48\",\"2022\"],[\"Vanilla Royale Sugared Patchouli 64\",\"2022\"],[\"Yum Pistachio Gelato 33\",\"2023\"],[\"Eden Sparkling Lychee 39\",\"2023\"],[\"The Wedding Silk Santal 36\",\"2023\"],[\"The Wedding Velvet Santal 35\",\"2023\"],[\"Oudgasm Vanilla Oud 36\",\"2023\"],[\"Oudgasm Rose Oud 16\",\"2023\"],[\"Oudgasm Café Oud 19\",\"2023\"],[\"Oudgasm Tobacco Oud 04\",\"2023\"],[\"Oudgasm Smoky Oud 07\",\"2024\"],[\"Vanilla Candy Rock Sugar 42\",\"2024\"],[\"Yum Boujee Marshmallow 81\",\"2024\"],[\"Capri in a Bottle Lemon Sugar 14\",\"2024\"],[\"Maldives in a Bottle Ylang Coco 20\",\"2024\"],[\"Marrakesh in a Bottle Orange Blossom 24\",\"2024\"],[\"Maui in a Bottle Sweet Banana 37\",\"2024\"],[\"Fleur Majesty Rose Royale 31\",\"2025\"],[\"Oudgasm Chocolate Oud 11\",\"2025\"],[\"Oudgasm Milky Musk Oud 30\",\"2025\"],[\"Freedom Musk Santal 34\",\"2025\"],[\"Freedom Musk Matcha 45\",\"2025\"],[\"Freedom Musk Latte 41\",\"2025\"],[\"Freedom Musk Bouquet 27\",\"2025\"],[\"Eden Plush Pear 23\",\"2026\"],[\"Eden Sweet Peach 35\",\"2026\"],[\"Boujee Kitty Caramel Milk 22\",\"2026\"]]}",
    "cat": "Misc",
    "group": "Perfumes",
    "short": "Kayali",
@@ -12493,55 +13168,183 @@
    "items": [
     {
      "id": "nvanilla-28",
-     "name": "Vanilla 28"
+     "name": "Vanilla 28",
+     "note": "2018"
     },
     {
-     "id": "nyum-pistachio-gelato-33",
-     "name": "Yum Pistachio Gelato 33"
-    },
-    {
-     "id": "nvanilla-candy-rock-sugar-42",
-     "name": "Vanilla Candy Rock Sugar 42"
-    },
-    {
-     "id": "nutopia-vanilla-coco-21",
-     "name": "Utopia Vanilla Coco 21"
-    },
-    {
-     "id": "neden-juicy-apple-01",
-     "name": "Eden Juicy Apple 01"
-    },
-    {
-     "id": "ndeja-vu-white-flower-57",
-     "name": "Déjà Vu White Flower 57"
-    },
-    {
-     "id": "nlovefest-burning-cherry-48",
-     "name": "Lovefest Burning Cherry 48"
-    },
-    {
-     "id": "nyum-boujee-marshmallow-81",
-     "name": "Yum Boujee Marshmallow 81"
-    },
-    {
-     "id": "nmaui-in-a-bottle-sweet-hibiscus-26",
-     "name": "Maui in a Bottle Sweet Hibiscus 26"
-    },
-    {
-     "id": "ninvite-only-amber-23",
-     "name": "Invite Only Amber 23"
+     "id": "nmusk-12",
+     "name": "Musk 12",
+     "note": "2018"
     },
     {
      "id": "nelixir-11",
-     "name": "Elixir 11"
+     "name": "Elixir 11",
+     "note": "2018"
+    },
+    {
+     "id": "ncitrus-08",
+     "name": "Citrus 08",
+     "note": "2018"
+    },
+    {
+     "id": "ndeja-vu-white-flower-57",
+     "name": "Déjà Vu White Flower 57",
+     "note": "2020"
+    },
+    {
+     "id": "nutopia-vanilla-coco-21",
+     "name": "Utopia Vanilla Coco 21",
+     "note": "2021"
     },
     {
      "id": "nsweet-diamond-pink-pepper-25",
-     "name": "Sweet Diamond Pink Pepper 25"
+     "name": "Sweet Diamond Pink Pepper 25",
+     "note": "2021"
+    },
+    {
+     "id": "ninvite-only-amber-23",
+     "name": "Invite Only Amber 23",
+     "note": "2021"
+    },
+    {
+     "id": "neden-juicy-apple-01",
+     "name": "Eden Juicy Apple 01",
+     "note": "2021"
+    },
+    {
+     "id": "nlovefest-burning-cherry-48",
+     "name": "Lovefest Burning Cherry 48",
+     "note": "2022"
     },
     {
      "id": "nvanilla-royale-sugared-patchouli-64",
-     "name": "Vanilla Royale Sugared Patchouli 64"
+     "name": "Vanilla Royale Sugared Patchouli 64",
+     "note": "2022"
+    },
+    {
+     "id": "nyum-pistachio-gelato-33",
+     "name": "Yum Pistachio Gelato 33",
+     "note": "2023"
+    },
+    {
+     "id": "neden-sparkling-lychee-39",
+     "name": "Eden Sparkling Lychee 39",
+     "note": "2023"
+    },
+    {
+     "id": "nthe-wedding-silk-santal-36",
+     "name": "The Wedding Silk Santal 36",
+     "note": "2023"
+    },
+    {
+     "id": "nthe-wedding-velvet-santal-35",
+     "name": "The Wedding Velvet Santal 35",
+     "note": "2023"
+    },
+    {
+     "id": "noudgasm-vanilla-oud-36",
+     "name": "Oudgasm Vanilla Oud 36",
+     "note": "2023"
+    },
+    {
+     "id": "noudgasm-rose-oud-16",
+     "name": "Oudgasm Rose Oud 16",
+     "note": "2023"
+    },
+    {
+     "id": "noudgasm-cafe-oud-19",
+     "name": "Oudgasm Café Oud 19",
+     "note": "2023"
+    },
+    {
+     "id": "noudgasm-tobacco-oud-04",
+     "name": "Oudgasm Tobacco Oud 04",
+     "note": "2023"
+    },
+    {
+     "id": "noudgasm-smoky-oud-07",
+     "name": "Oudgasm Smoky Oud 07",
+     "note": "2024"
+    },
+    {
+     "id": "nvanilla-candy-rock-sugar-42",
+     "name": "Vanilla Candy Rock Sugar 42",
+     "note": "2024"
+    },
+    {
+     "id": "nyum-boujee-marshmallow-81",
+     "name": "Yum Boujee Marshmallow 81",
+     "note": "2024"
+    },
+    {
+     "id": "ncapri-in-a-bottle-lemon-sugar-14",
+     "name": "Capri in a Bottle Lemon Sugar 14",
+     "note": "2024"
+    },
+    {
+     "id": "nmaldives-in-a-bottle-ylang-coco-20",
+     "name": "Maldives in a Bottle Ylang Coco 20",
+     "note": "2024"
+    },
+    {
+     "id": "nmarrakesh-in-a-bottle-orange-blossom-24",
+     "name": "Marrakesh in a Bottle Orange Blossom 24",
+     "note": "2024"
+    },
+    {
+     "id": "nmaui-in-a-bottle-sweet-banana-37",
+     "name": "Maui in a Bottle Sweet Banana 37",
+     "note": "2024"
+    },
+    {
+     "id": "nfleur-majesty-rose-royale-31",
+     "name": "Fleur Majesty Rose Royale 31",
+     "note": "2025"
+    },
+    {
+     "id": "noudgasm-chocolate-oud-11",
+     "name": "Oudgasm Chocolate Oud 11",
+     "note": "2025"
+    },
+    {
+     "id": "noudgasm-milky-musk-oud-30",
+     "name": "Oudgasm Milky Musk Oud 30",
+     "note": "2025"
+    },
+    {
+     "id": "nfreedom-musk-santal-34",
+     "name": "Freedom Musk Santal 34",
+     "note": "2025"
+    },
+    {
+     "id": "nfreedom-musk-matcha-45",
+     "name": "Freedom Musk Matcha 45",
+     "note": "2025"
+    },
+    {
+     "id": "nfreedom-musk-latte-41",
+     "name": "Freedom Musk Latte 41",
+     "note": "2025"
+    },
+    {
+     "id": "nfreedom-musk-bouquet-27",
+     "name": "Freedom Musk Bouquet 27",
+     "note": "2025"
+    },
+    {
+     "id": "neden-plush-pear-23",
+     "name": "Eden Plush Pear 23",
+     "note": "2026"
+    },
+    {
+     "id": "neden-sweet-peach-35",
+     "name": "Eden Sweet Peach 35",
+     "note": "2026"
+    },
+    {
+     "id": "nboujee-kitty-caramel-milk-22",
+     "name": "Boujee Kitty Caramel Milk 22",
+     "note": "2026"
     }
    ]
   },
