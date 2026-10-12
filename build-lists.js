@@ -24,7 +24,8 @@ const DEFS = [
   { type: "collection", name: "Harry Potter" },
   { type: "collection", name: "Mission: Impossible" },
   { type: "collection", name: "The Fast and the Furious", title: "Fast & Furious films" },
-  { type: "collection", name: "James Bond", title: "James Bond films", max: 30 },      // max raises the usual 15-film limit
+  //   menu sets exactly where a list appears: "Category > Submenu > Sub-submenu". short is its label there.
+  { type: "collection", name: "James Bond", title: "James Bond films", max: 30, menu: "Movies > Franchises > James Bond", short: "Films" },      // max raises the usual 15-film limit
   { type: "films", cat: "Franchises", title: "Planet of the Apes films", picks: [
     ["Planet of the Apes", 1968], ["Beneath the Planet of the Apes", 1970], ["Escape from the Planet of the Apes", 1971],
     ["Conquest of the Planet of the Apes", 1972], ["Battle for the Planet of the Apes", 1973], ["Planet of the Apes", 2001],
@@ -47,10 +48,10 @@ const DEFS = [
   //   With "collection", characters are ranked by how big their role is across every film in the franchise.
   { type: "filmcast",   collection: "The Twilight Saga", title: "Twilight main characters" },
   //   "people" is a hand-picked list of real people with their TMDB photos. A pick is "Name" or ["Name", "note"].
-  { type: "people", title: "Actors who played James Bond", picks: [
+  { type: "people", title: "Actors who played James Bond", menu: "Movies > Franchises > James Bond", short: "Actors who played Bond", picks: [
     ["Sean Connery", "1962 to 1971, and 1983"], ["George Lazenby", "1969"], ["Roger Moore", "1973 to 1985"],
     ["Timothy Dalton", "1987 to 1989"], ["Pierce Brosnan", "1995 to 2002"], ["Daniel Craig", "2006 to 2021"] ] },
-  { type: "people", title: "Actors who played Batman", picks: [
+  { type: "people", title: "Actors who played Batman", menu: "Movies > Characters", picks: [
     ["Adam West", "1966"], ["Michael Keaton", "1989 to 1992, and 2023"], ["Val Kilmer", "1995"], ["George Clooney", "1997"],
     ["Christian Bale", "2005 to 2012"], ["Ben Affleck", "2016 to 2023"], ["Will Arnett", "The LEGO Batman Movie, 2017"], ["Robert Pattinson", "2022"] ] },
   { type: "names", cat: "Movies", group: "Characters", title: "Vampire characters (film and TV)", picks: [
@@ -160,11 +161,16 @@ const DEFS = [
     ["Girl of the Year", "Thin Wild Mercury"], ["Tears", "Régime des Fleurs"], ["Pas de Chat", "Odette"], ["Delizia di Marshmallow", "Kyse"],
     ["Bee", "Zoologist"], ["Nosferatu", "Heretic"], ["Queening", "Mind Games"], ["Peach's Revenge", "Sarah Baker"],
     ["The Soft Lawn", "Imaginary Authors"], ["White Rice", "d'Annam"], ["Dear Polly", "Vilhelm Parfumerie"] ] },
+  // Current Sephora bestsellers for women, at most two per fashion house.
   { type: "names", cat: "Misc", group: "Perfumes", title: "Favourite designer perfumes", short: "Designer favourites", picks: [
-    ["No. 5", "Chanel"], ["Coco Mademoiselle", "Chanel"], ["Bleu de Chanel", "Chanel"], ["Sauvage", "Dior"], ["J'adore", "Dior"],
-    ["Miss Dior", "Dior"], ["Black Opium", "Yves Saint Laurent"], ["Libre", "Yves Saint Laurent"], ["La Vie Est Belle", "Lancôme"],
-    ["Light Blue", "Dolce & Gabbana"], ["Acqua di Giò", "Giorgio Armani"], ["Flowerbomb", "Viktor & Rolf"], ["Good Girl", "Carolina Herrera"],
-    ["Daisy", "Marc Jacobs"], ["Angel", "Mugler"] ] },
+    ["Libre", "Yves Saint Laurent"], ["Black Opium", "Yves Saint Laurent"], ["Miss Dior", "Dior"], ["J'adore", "Dior"],
+    ["Chance Eau Tendre", "Chanel"], ["Daisy", "Marc Jacobs"], ["Flora Gorgeous Gardenia", "Gucci"], ["Born in Roma Donna", "Valentino"],
+    ["La Vie Est Belle", "Lancôme"], ["Flowerbomb", "Viktor & Rolf"], ["Paradoxe", "Prada"], ["Goddess", "Burberry"],
+    ["Good Girl", "Carolina Herrera"], ["My Way", "Giorgio Armani"], ["Black Orchid", "Tom Ford"] ] },
+  { type: "names", cat: "Misc", group: "Perfumes", title: "Kayali perfumes", short: "Kayali", picks: [
+    "Vanilla 28", "Yum Pistachio Gelato 33", "Vanilla Candy Rock Sugar 42", "Utopia Vanilla Coco 21", "Eden Juicy Apple 01",
+    "Déjà Vu White Flower 57", "Lovefest Burning Cherry 48", "Yum Boujee Marshmallow 81", "Maui in a Bottle Sweet Hibiscus 26",
+    "Invite Only Amber 23", "Elixir 11", "Sweet Diamond Pink Pepper 25", "Vanilla Royale Sugared Patchouli 64" ] },
   { type: "names", cat: "Misc", group: "Perfumes", title: "Favourite celebrity perfumes", short: "Celebrity favourites", picks: [
     ["White Diamonds", "Elizabeth Taylor"], ["Glow", "Jennifer Lopez"], ["Curious", "Britney Spears"], ["Fantasy", "Britney Spears"],
     ["Lovely", "Sarah Jessica Parker"], ["Heat", "Beyoncé"], ["Purr", "Katy Perry"], ["Someday", "Justin Bieber"],
@@ -304,20 +310,20 @@ const DEFS = [
     ["Birth by Sleep", "Kingdom Hearts Birth by Sleep", 2010], ["Re:coded", "Kingdom Hearts Re:coded", 2010],
     ["Dream Drop Distance", "Kingdom Hearts 3D: Dream Drop Distance", 2012], ["Kingdom Hearts III", "Kingdom Hearts III", 2019],
     ["Melody of Memory", "Kingdom Hearts: Melody of Memory", 2020] ] },
-  { type: "names", cat: "Games", group: "Pokémon starters", title: "Pokémon fire starters", short: "Fire starters", picks: [
-    ["Charmander", "Gen 1"], ["Cyndaquil", "Gen 2"], ["Torchic", "Gen 3"], ["Chimchar", "Gen 4"], ["Tepig", "Gen 5"], ["Fennekin", "Gen 6"],
-    ["Litten", "Gen 7"], ["Scorbunny", "Gen 8"], ["Fuecoco", "Gen 9"] ] },
-  { type: "names", cat: "Games", group: "Pokémon starters", title: "Pokémon water starters", short: "Water starters", picks: [
-    ["Squirtle", "Gen 1"], ["Totodile", "Gen 2"], ["Mudkip", "Gen 3"], ["Piplup", "Gen 4"], ["Oshawott", "Gen 5"], ["Froakie", "Gen 6"],
-    ["Popplio", "Gen 7"], ["Sobble", "Gen 8"], ["Quaxly", "Gen 9"] ] },
-  { type: "names", cat: "Games", group: "Pokémon starters", title: "Pokémon grass starters", short: "Grass starters", picks: [
-    ["Bulbasaur", "Gen 1"], ["Chikorita", "Gen 2"], ["Treecko", "Gen 3"], ["Turtwig", "Gen 4"], ["Snivy", "Gen 5"], ["Chespin", "Gen 6"],
-    ["Rowlet", "Gen 7"], ["Grookey", "Gen 8"], ["Sprigatito", "Gen 9"] ] },
-  { type: "games", group: "Franchises", title: "Pokémon generations", short: "Pokémon generations", picks: [
+  { type: "games", menu: "Games > Franchises > Pokémon", title: "Pokémon generations", short: "Generations", picks: [
     ["Gen 1: Red, Blue & Yellow", "Pokémon Red", 1996], ["Gen 2: Gold, Silver & Crystal", "Pokémon Gold", 1999],
     ["Gen 3: Ruby, Sapphire & Emerald", "Pokémon Ruby", 2002], ["Gen 4: Diamond, Pearl & Platinum", "Pokémon Diamond", 2006],
     ["Gen 5: Black & White", "Pokémon Black", 2010], ["Gen 6: X & Y", "Pokémon X", 2013], ["Gen 7: Sun & Moon", "Pokémon Sun", 2016],
     ["Gen 8: Sword & Shield", "Pokémon Sword", 2019], ["Gen 9: Scarlet & Violet", "Pokémon Scarlet", 2022] ] },
+  { type: "names", menu: "Games > Franchises > Pokémon", title: "Pokémon fire starters", short: "Fire starters", picks: [
+    ["Charmander", "Gen 1"], ["Cyndaquil", "Gen 2"], ["Torchic", "Gen 3"], ["Chimchar", "Gen 4"], ["Tepig", "Gen 5"], ["Fennekin", "Gen 6"],
+    ["Litten", "Gen 7"], ["Scorbunny", "Gen 8"], ["Fuecoco", "Gen 9"] ] },
+  { type: "names", menu: "Games > Franchises > Pokémon", title: "Pokémon water starters", short: "Water starters", picks: [
+    ["Squirtle", "Gen 1"], ["Totodile", "Gen 2"], ["Mudkip", "Gen 3"], ["Piplup", "Gen 4"], ["Oshawott", "Gen 5"], ["Froakie", "Gen 6"],
+    ["Popplio", "Gen 7"], ["Sobble", "Gen 8"], ["Quaxly", "Gen 9"] ] },
+  { type: "names", menu: "Games > Franchises > Pokémon", title: "Pokémon grass starters", short: "Grass starters", picks: [
+    ["Bulbasaur", "Gen 1"], ["Chikorita", "Gen 2"], ["Treecko", "Gen 3"], ["Turtwig", "Gen 4"], ["Snivy", "Gen 5"], ["Chespin", "Gen 6"],
+    ["Rowlet", "Gen 7"], ["Grookey", "Gen 8"], ["Sprigatito", "Gen 9"] ] },
   { type: "games", group: "Franchises", title: "Call of Duty games", short: "Call of Duty", picks: [
     ["Call of Duty", "Call of Duty", 2003], ["Call of Duty 2", "Call of Duty 2", 2005], ["Call of Duty 3", "Call of Duty 3", 2006],
     ["Call of Duty 4: Modern Warfare", "Call of Duty 4: Modern Warfare", 2007], ["World at War", "Call of Duty: World at War", 2008],
@@ -368,6 +374,17 @@ const DEFS = [
   { type: "cast",       name: "Friends" },
   //   perSeason: 8 guarantees the eight top-billed characters of every season a place, so one-season leads are not lost.
   //   exclude drops characters by name (Lady Whistledown is Penelope).
+  // Whedonverse: Buffy and Angel share one submenu, with a best-of list across Joss Whedon's shows (Marvel titles left out).
+  { type: "tv",         name: "Buffy the Vampire Slayer", year: 1997, group: "Whedonverse", short: "Buffy seasons" },
+  { type: "cast",       name: "Buffy the Vampire Slayer", year: 1997, perSeason: 6, count: 14, group: "Whedonverse", short: "Buffy characters" },
+  { type: "tv",         name: "Angel", year: 1999, group: "Whedonverse", short: "Angel seasons" },
+  { type: "cast",       name: "Angel", year: 1999, perSeason: 6, count: 12, group: "Whedonverse", short: "Angel characters" },
+  { type: "people", cat: "TV", group: "Whedonverse", title: "Whedonverse best characters", short: "Best characters across the Whedonverse", picks: [
+    ["Buffy Summers", "Buffy the Vampire Slayer", "Sarah Michelle Gellar"], ["Willow Rosenberg", "Buffy the Vampire Slayer", "Alyson Hannigan"],
+    ["Spike", "Buffy the Vampire Slayer", "James Marsters"], ["Angel", "Angel", "David Boreanaz"], ["Cordelia Chase", "Angel", "Charisma Carpenter"],
+    ["Wesley Wyndam-Pryce", "Angel", "Alexis Denisof"], ["Malcolm Reynolds", "Firefly", "Nathan Fillion"], ["River Tam", "Firefly", "Summer Glau"],
+    ["Kaylee Frye", "Firefly", "Jewel Staite"], ["Echo", "Dollhouse", "Eliza Dushku"], ["Topher Brink", "Dollhouse", "Fran Kranz"],
+    ["Dr. Horrible", "Dr. Horrible's Sing-Along Blog", "Neil Patrick Harris"], ["Penny", "Dr. Horrible's Sing-Along Blog", "Felicia Day"] ] },
   { type: "cast",       name: "Bridgerton", perSeason: 8, count: 18, exclude: ["Whistledown"] },
   // Hand-picked, because each Simpsons voice actor plays many characters and TMDB credits them as one combined role.
   { type: "names", cat: "TV", group: "The Simpsons", title: "The Simpsons main characters", short: "Main characters", picks: [
@@ -750,7 +767,7 @@ const builders = {
       .filter(s => s.season_number > 0 && s.air_date && s.air_date <= today)
       .slice(0, 16)
       .map(s => ({ id: "s" + s.id, name: s.name, note: year(s.air_date), poster: s.poster_path || show.poster_path || null }));
-    return { cat: CATS.tv, title: `${show.name} seasons`, items };
+    return { cat: CATS.tv, ...(def.group ? { group: def.group, short: def.short || "Seasons" } : {}), title: `${show.name} seasons`, items };
   },
   // A show's main characters, ranked list of the ones who appear in the most episodes. Tiles show the actor's photo.
   async cast(def) {
@@ -786,9 +803,10 @@ const builders = {
   async people(def) {
     const items = [];
     for (const pick of def.picks) {
-      const [name, note] = [].concat(pick);
+      // A pick is "Name", ["Name", "note"], or ["Character", "note", "Actor"] to show a character with the actor's photo.
+      const [name, note, person] = [].concat(pick);
       let p = null;
-      try { const r = await tmdb("/search/person", { query: name }); p = r.results.find(x => x.name.toLowerCase() === name.toLowerCase()) || r.results[0] || null; } catch (e) {}
+      try { const r = await tmdb("/search/person", { query: person || name }); p = r.results.find(x => x.name.toLowerCase() === (person || name).toLowerCase()) || r.results[0] || null; } catch (e) {}
       if (!p) console.warn(`  no TMDB person found for "${name}"; added without a photo`);
       items.push({ id: "h" + slug(name), name, ...(note ? { note } : {}), poster: (p && p.profile_path) || null });
     }
@@ -873,7 +891,7 @@ const builders = {
     const era = def.from || def.to ? ` (${def.from || ""}-${def.to || ""})` : "";
     const out = [{ cat: CATS.music, group: artist.name, short: "Albums" + era, title: `${artist.name} albums${era}`, items }];
     if (def.songs) for (const g of studio) {
-      try { out.push(await trackList(g, artist.name)); }
+      try { const t = await trackList(g, artist.name); out.push({ ...t, group: `${artist.name} > Songs by album`, short: g.title }); }
       catch (e) { console.warn(`Skipped songs for ${g.title}: ${e.message}`); }
     }
     return out;
@@ -967,32 +985,51 @@ const builders = {
   }
 };
 
+// Your own pictures. Put an image file in the repo at images/<list name>/<item name>.jpg (or .png / .webp), with both names
+// written in lower case with dashes, e.g. images/favourite-niche-perfumes/warm-bulb.jpg. It replaces any picture the item had.
+// The build log lists the exact file name for every item that still has no picture.
+const IMAGE_TYPES = ["jpg", "jpeg", "png", "webp"];
+function addLocalImages(list) {
+  const missing = [];
+  for (const it of list.items) {
+    const base = `images/${slug(list.title)}/${slug(it.name)}`;
+    const found = IMAGE_TYPES.map(t => `${base}.${t}`).find(f => fs.existsSync(f));
+    if (found) { it.img = found; delete it.img2; delete it.poster; }
+    else if (!it.img && !it.poster) missing.push(`${base}.jpg`);
+  }
+  return missing;
+}
+
 // Where each list sits in the game's menu. The menu is: category, then submenu, then list.
-//   Movies         > Franchises, Genres, Actors, Directors, By year: 1980s (one per decade), Awards, Characters
+//   Movies         > Franchises (James Bond has its own submenu), Genres, Actors, Directors, By year > 1980s..., Awards, Characters
 //   TV             > one submenu per show, plus Show rankings
-//   Music          > one submenu per artist, plus Top albums and Top artists
+//   Music          > one submenu per artist (with Songs by album inside where there are many), plus Top albums and Top artists
 //   Books          > Popular, Genres, Romance, Young adult, Authors
-//   Games          > Franchises, Pokémon starters, Genres, Consoles, Awards
+//   Games          > Franchises (Pokémon has its own submenu), Genres, Consoles, Awards
 //   Misc           > Food, Perfumes
 function place(list, def) {
+  if (def.menu) {
+    const [cat, ...rest] = def.menu.split(" > ");
+    return { ...list, cat, group: rest.length ? rest.join(" > ") : undefined, short: list.short || def.short || list.title };
+  }
   if (list.cat === CATS.franchise) return { ...list, cat: "Movies", group: "Franchises", short: list.title };
   if (list.cat === CATS.people) return { ...list, cat: "Movies", group: def.type === "director" ? "Directors" : "Actors", short: list.title };
   if (list.cat === CATS.genre) return { ...list, cat: "Movies", group: "Genres", short: list.title };
   if (list.cat === "Awards") return { ...list, cat: "Movies", group: "Awards", short: list.title };
-  if (list.cat === CATS.year) return { ...list, cat: "Movies", group: "By year: " + list.group };     // e.g. "By year: 1990s"
+  if (list.cat === CATS.year) return { ...list, cat: "Movies", group: "By year > " + list.group };     // e.g. "By year > 1990s"
   return list;
 }
 // Submenus appear in the order their first list appears in the file, so the finished lists are sorted into this order.
 const MENU_ORDER = {
   Movies: ["Franchises", "Genres", "Actors", "Directors", "By year", "Awards", "Characters"],
   Books: ["Popular", "Genres", "Romance", "Young adult", "Authors"],
-  Games: ["Franchises", "Pokémon starters", "Genres", "Consoles", "Awards"],
+  Games: ["Franchises", "Genres", "Consoles", "Awards"],
   Misc: ["Food", "Perfumes"]
 };
 function menuRank(list) {
   const order = MENU_ORDER[list.cat];
   if (!order) return 0;
-  const i = order.findIndex(g => (list.group || "") === g || (list.group || "").startsWith(g + ":"));
+  const i = order.findIndex(g => (list.group || "") === g || (list.group || "").startsWith(g + " > "));
   return i < 0 ? order.length : i;
 }
 
@@ -1009,6 +1046,8 @@ function menuRank(list) {
     try {
       for (const list of [].concat(await builders[def.type](def))) {
         if (list.items.length < MIN_ITEMS) { console.warn(`Skipped "${list.title}": only ${list.items.length} items`); continue; }
+        const missing = addLocalImages(list);
+        if (missing.length) console.log(`  ${missing.length} without a picture. To add your own, upload:\n    ${missing.join("\n    ")}`);
         built.push({ id: slug(list.title), src, ...place(list, def) });
         console.log(`${list.title}: ${list.items.length} items`);
       }
