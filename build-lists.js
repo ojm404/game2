@@ -149,17 +149,17 @@ const DEFS = [
   { type: "names", cat: "Misc", group: "Food", title: "Popular pizza toppings", picks: [
     "Pepperoni", "Mushrooms", "Extra cheese", "Italian sausage", "Bacon", "Onions", "Green peppers", "Black olives", "Pineapple", "Ham",
     "Chicken", "Jalapeños", "Tomatoes", "Spinach", "Anchovies" ] },
-  // International chains only, each with a good number of Canadian locations.
-  { type: "names", cat: "Misc", group: "Food", title: "Fast-food burgers (available in Canada)", short: "Fast-food burgers in Canada", picks: [
-    ["Big Mac", "McDonald's"], ["Quarter Pounder with Cheese", "McDonald's"], ["McDouble", "McDonald's"], ["Whopper", "Burger King"],
-    ["Bacon King", "Burger King"], ["Dave's Single", "Wendy's"], ["Baconator", "Wendy's"], ["Jr. Bacon Cheeseburger", "Wendy's"],
-    ["Teen Burger", "A&W"], ["Mozza Burger", "A&W"], ["Papa Burger", "A&W"], ["Cheeseburger", "Five Guys"],
-    ["Bacon Cheeseburger", "Five Guys"], ["FlameThrower GrillBurger", "Dairy Queen"], ["Original Fatburger", "Fatburger"] ] },
+  // International chains only, each with a good number of Canadian locations. At most two burgers per chain.
+  { type: "names", cat: "Misc", group: "Food", title: "Fast-food burgers", picks: [
+    ["Big Mac", "McDonald's"], ["Quarter Pounder with Cheese", "McDonald's"], ["Whopper", "Burger King"], ["Bacon King", "Burger King"],
+    ["Dave's Single", "Wendy's"], ["Baconator", "Wendy's"], ["Teen Burger", "A&W"], ["Mozza Burger", "A&W"],
+    ["Cheeseburger", "Five Guys"], ["FlameThrower GrillBurger", "Dairy Queen"], ["Original Fatburger", "Fatburger"],
+    ["Yumburger", "Jollibee"] ] },
   { type: "names", cat: "Misc", group: "Perfumes", title: "Favourite niche perfumes", short: "Niche favourites", picks: [
-    ["Baccarat Rouge 540", "Maison Francis Kurkdjian"], ["Santal 33", "Le Labo"], ["Another 13", "Le Labo"], ["Aventus", "Creed"],
-    ["Delina", "Parfums de Marly"], ["Layton", "Parfums de Marly"], ["Gypsy Water", "Byredo"], ["Mojave Ghost", "Byredo"],
-    ["Portrait of a Lady", "Frédéric Malle"], ["Molecule 01", "Escentric Molecules"], ["Angels' Share", "Kilian"],
-    ["Erba Pura", "Xerjoff"], ["Philosykos", "Diptyque"], ["Lost Cherry", "Tom Ford"], ["Oud Wood", "Tom Ford"] ] },
+    ["Warm Bulb", "Clue"], ["Delina", "Parfums de Marly"], ["Santal 33", "Le Labo"], ["Jazz", "Zernell Gillie"],
+    ["Girl of the Year", "Thin Wild Mercury"], ["Tears", "Régime des Fleurs"], ["Pas de Chat", "Odette"], ["Delizia di Marshmallow", "Kyse"],
+    ["Bee", "Zoologist"], ["Nosferatu", "Heretic"], ["Queening", "Mind Games"], ["Peach's Revenge", "Sarah Baker"],
+    ["The Soft Lawn", "Imaginary Authors"], ["White Rice", "d'Annam"], ["Dear Polly", "Vilhelm Parfumerie"] ] },
   { type: "names", cat: "Misc", group: "Perfumes", title: "Favourite designer perfumes", short: "Designer favourites", picks: [
     ["No. 5", "Chanel"], ["Coco Mademoiselle", "Chanel"], ["Bleu de Chanel", "Chanel"], ["Sauvage", "Dior"], ["J'adore", "Dior"],
     ["Miss Dior", "Dior"], ["Black Opium", "Yves Saint Laurent"], ["Libre", "Yves Saint Laurent"], ["La Vie Est Belle", "Lancôme"],
