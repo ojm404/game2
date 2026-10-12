@@ -195,7 +195,7 @@
   },
   {
    "id": "james-bond-films",
-   "src": "{\"type\":\"collection\",\"name\":\"James Bond\",\"title\":\"James Bond films\",\"max\":30}",
+   "src": "{\"type\":\"collection\",\"name\":\"James Bond\",\"title\":\"James Bond films\",\"max\":30,\"menu\":\"Movies > Franchises > James Bond\",\"short\":\"Films\"}",
    "cat": "Movies",
    "title": "James Bond films",
    "items": [
@@ -356,8 +356,8 @@
      "poster": "/iUgygt3fscRoKWCV1d0C7FbM9TP.jpg"
     }
    ],
-   "group": "Franchises",
-   "short": "James Bond films"
+   "group": "Franchises > James Bond",
+   "short": "Films"
   },
   {
    "id": "planet-of-the-apes-films",
@@ -516,6 +516,52 @@
    ],
    "group": "Franchises",
    "short": "Star Trek films"
+  },
+  {
+   "id": "actors-who-played-james-bond",
+   "src": "{\"type\":\"people\",\"title\":\"Actors who played James Bond\",\"menu\":\"Movies > Franchises > James Bond\",\"short\":\"Actors who played Bond\",\"picks\":[[\"Sean Connery\",\"1962 to 1971, and 1983\"],[\"George Lazenby\",\"1969\"],[\"Roger Moore\",\"1973 to 1985\"],[\"Timothy Dalton\",\"1987 to 1989\"],[\"Pierce Brosnan\",\"1995 to 2002\"],[\"Daniel Craig\",\"2006 to 2021\"]]}",
+   "cat": "Movies",
+   "group": "Franchises > James Bond",
+   "short": "Actors who played Bond",
+   "title": "Actors who played James Bond",
+   "items": [
+    {
+     "id": "hsean-connery",
+     "name": "Sean Connery",
+     "note": "1962 to 1971, and 1983",
+     "poster": "/cd0zKpYJ6eSutkrZkLFxQCGjhnF.jpg"
+    },
+    {
+     "id": "hgeorge-lazenby",
+     "name": "George Lazenby",
+     "note": "1969",
+     "poster": "/c2Sb2SYKhvwoq0MYrwpNTVuw6xH.jpg"
+    },
+    {
+     "id": "hroger-moore",
+     "name": "Roger Moore",
+     "note": "1973 to 1985",
+     "poster": "/anMuX2HBIMvLUZm7A6yuKSqiJxP.jpg"
+    },
+    {
+     "id": "htimothy-dalton",
+     "name": "Timothy Dalton",
+     "note": "1987 to 1989",
+     "poster": "/rKYQd6ihqWiOaCHEDrvgV2VPtAo.jpg"
+    },
+    {
+     "id": "hpierce-brosnan",
+     "name": "Pierce Brosnan",
+     "note": "1995 to 2002",
+     "poster": "/dzXVwwJLPwiZeXOnf7YxorqVEEM.jpg"
+    },
+    {
+     "id": "hdaniel-craig",
+     "name": "Daniel Craig",
+     "note": "2006 to 2021",
+     "poster": "/iFerDZUmC5Fu26i4qI8xnUVEHc7.jpg"
+    }
+   ]
   },
   {
    "id": "disney-princess-movies",
@@ -737,8 +783,8 @@
    "id": "taylor-swift-taylor-swift-songs",
    "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
-   "group": "Taylor Swift",
-   "short": "Taylor Swift songs",
+   "group": "Taylor Swift > Songs by album",
+   "short": "Taylor Swift",
    "title": "Taylor Swift: Taylor Swift songs",
    "items": [
     {
@@ -802,8 +848,8 @@
    "id": "taylor-swift-fearless-songs",
    "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
-   "group": "Taylor Swift",
-   "short": "Fearless songs",
+   "group": "Taylor Swift > Songs by album",
+   "short": "Fearless",
    "title": "Taylor Swift: Fearless songs",
    "items": [
     {
@@ -877,8 +923,8 @@
    "id": "taylor-swift-speak-now-songs",
    "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
-   "group": "Taylor Swift",
-   "short": "Speak Now songs",
+   "group": "Taylor Swift > Songs by album",
+   "short": "Speak Now",
    "title": "Taylor Swift: Speak Now songs",
    "items": [
     {
@@ -957,8 +1003,8 @@
    "id": "taylor-swift-red-songs",
    "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
-   "group": "Taylor Swift",
-   "short": "Red songs",
+   "group": "Taylor Swift > Songs by album",
+   "short": "Red",
    "title": "Taylor Swift: Red songs",
    "items": [
     {
@@ -1047,8 +1093,8 @@
    "id": "taylor-swift-1989-songs",
    "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
-   "group": "Taylor Swift",
-   "short": "1989 songs",
+   "group": "Taylor Swift > Songs by album",
+   "short": "1989",
    "title": "Taylor Swift: 1989 songs",
    "items": [
     {
@@ -1122,8 +1168,8 @@
    "id": "taylor-swift-reputation-songs",
    "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
-   "group": "Taylor Swift",
-   "short": "reputation songs",
+   "group": "Taylor Swift > Songs by album",
+   "short": "reputation",
    "title": "Taylor Swift: reputation songs",
    "items": [
     {
@@ -1207,8 +1253,8 @@
    "id": "taylor-swift-lover-songs",
    "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
-   "group": "Taylor Swift",
-   "short": "Lover songs",
+   "group": "Taylor Swift > Songs by album",
+   "short": "Lover",
    "title": "Taylor Swift: Lover songs",
    "items": [
     {
@@ -1307,8 +1353,8 @@
    "id": "taylor-swift-folklore-songs",
    "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
-   "group": "Taylor Swift",
-   "short": "folklore songs",
+   "group": "Taylor Swift > Songs by album",
+   "short": "folklore",
    "title": "Taylor Swift: folklore songs",
    "items": [
     {
@@ -1402,8 +1448,8 @@
    "id": "taylor-swift-evermore-songs",
    "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
-   "group": "Taylor Swift",
-   "short": "evermore songs",
+   "group": "Taylor Swift > Songs by album",
+   "short": "evermore",
    "title": "Taylor Swift: evermore songs",
    "items": [
     {
@@ -1487,8 +1533,8 @@
    "id": "taylor-swift-fearless-taylor-s-version-songs",
    "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
-   "group": "Taylor Swift",
-   "short": "Fearless (Taylor’s version) songs",
+   "group": "Taylor Swift > Songs by album",
+   "short": "Fearless (Taylor’s version)",
    "title": "Taylor Swift: Fearless (Taylor’s version) songs",
    "items": [
     {
@@ -1627,8 +1673,8 @@
    "id": "taylor-swift-red-taylor-s-version-songs",
    "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
-   "group": "Taylor Swift",
-   "short": "Red (Taylor’s version) songs",
+   "group": "Taylor Swift > Songs by album",
+   "short": "Red (Taylor’s version)",
    "title": "Taylor Swift: Red (Taylor’s version) songs",
    "items": [
     {
@@ -1782,8 +1828,8 @@
    "id": "taylor-swift-midnights-songs",
    "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
-   "group": "Taylor Swift",
-   "short": "Midnights songs",
+   "group": "Taylor Swift > Songs by album",
+   "short": "Midnights",
    "title": "Taylor Swift: Midnights songs",
    "items": [
     {
@@ -1857,8 +1903,8 @@
    "id": "taylor-swift-speak-now-taylor-s-version-songs",
    "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
-   "group": "Taylor Swift",
-   "short": "Speak Now (Taylor’s version) songs",
+   "group": "Taylor Swift > Songs by album",
+   "short": "Speak Now (Taylor’s version)",
    "title": "Taylor Swift: Speak Now (Taylor’s version) songs",
    "items": [
     {
@@ -1977,8 +2023,8 @@
    "id": "taylor-swift-1989-taylor-s-version-songs",
    "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
-   "group": "Taylor Swift",
-   "short": "1989 (Taylor’s version) songs",
+   "group": "Taylor Swift > Songs by album",
+   "short": "1989 (Taylor’s version)",
    "title": "Taylor Swift: 1989 (Taylor’s version) songs",
    "items": [
     {
@@ -2092,8 +2138,8 @@
    "id": "taylor-swift-the-tortured-poets-department-songs",
    "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
-   "group": "Taylor Swift",
-   "short": "THE TORTURED POETS DEPARTMENT songs",
+   "group": "Taylor Swift > Songs by album",
+   "short": "THE TORTURED POETS DEPARTMENT",
    "title": "Taylor Swift: THE TORTURED POETS DEPARTMENT songs",
    "items": [
     {
@@ -2182,8 +2228,8 @@
    "id": "taylor-swift-the-life-of-a-showgirl-songs",
    "src": "{\"type\":\"albums\",\"name\":\"Taylor Swift\",\"songs\":true}",
    "cat": "Music",
-   "group": "Taylor Swift",
-   "short": "The Life of a Showgirl songs",
+   "group": "Taylor Swift > Songs by album",
+   "short": "The Life of a Showgirl",
    "title": "Taylor Swift: The Life of a Showgirl songs",
    "items": [
     {
@@ -5055,10 +5101,8 @@
   },
   {
    "id": "pokemon-generations",
-   "src": "{\"type\":\"games\",\"group\":\"Franchises\",\"title\":\"Pokémon generations\",\"short\":\"Pokémon generations\",\"picks\":[[\"Gen 1: Red, Blue & Yellow\",\"Pokémon Red\",1996],[\"Gen 2: Gold, Silver & Crystal\",\"Pokémon Gold\",1999],[\"Gen 3: Ruby, Sapphire & Emerald\",\"Pokémon Ruby\",2002],[\"Gen 4: Diamond, Pearl & Platinum\",\"Pokémon Diamond\",2006],[\"Gen 5: Black & White\",\"Pokémon Black\",2010],[\"Gen 6: X & Y\",\"Pokémon X\",2013],[\"Gen 7: Sun & Moon\",\"Pokémon Sun\",2016],[\"Gen 8: Sword & Shield\",\"Pokémon Sword\",2019],[\"Gen 9: Scarlet & Violet\",\"Pokémon Scarlet\",2022]]}",
+   "src": "{\"type\":\"games\",\"menu\":\"Games > Franchises > Pokémon\",\"title\":\"Pokémon generations\",\"short\":\"Generations\",\"picks\":[[\"Gen 1: Red, Blue & Yellow\",\"Pokémon Red\",1996],[\"Gen 2: Gold, Silver & Crystal\",\"Pokémon Gold\",1999],[\"Gen 3: Ruby, Sapphire & Emerald\",\"Pokémon Ruby\",2002],[\"Gen 4: Diamond, Pearl & Platinum\",\"Pokémon Diamond\",2006],[\"Gen 5: Black & White\",\"Pokémon Black\",2010],[\"Gen 6: X & Y\",\"Pokémon X\",2013],[\"Gen 7: Sun & Moon\",\"Pokémon Sun\",2016],[\"Gen 8: Sword & Shield\",\"Pokémon Sword\",2019],[\"Gen 9: Scarlet & Violet\",\"Pokémon Scarlet\",2022]]}",
    "cat": "Games",
-   "group": "Franchises",
-   "short": "Pokémon generations",
    "title": "Pokémon generations",
    "items": [
     {
@@ -5132,6 +5176,200 @@
      "img": "https://media.rawg.io/media/crop/600/400/games/5ab/5abb8e4af55eb8c867410c3a740355b9.jpg",
      "img2": "https://media.rawg.io/media/games/5ab/5abb8e4af55eb8c867410c3a740355b9.jpg",
      "wide": true
+    }
+   ],
+   "group": "Franchises > Pokémon",
+   "short": "Generations"
+  },
+  {
+   "id": "pokemon-fire-starters",
+   "src": "{\"type\":\"names\",\"menu\":\"Games > Franchises > Pokémon\",\"title\":\"Pokémon fire starters\",\"short\":\"Fire starters\",\"picks\":[[\"Charmander\",\"Gen 1\"],[\"Cyndaquil\",\"Gen 2\"],[\"Torchic\",\"Gen 3\"],[\"Chimchar\",\"Gen 4\"],[\"Tepig\",\"Gen 5\"],[\"Fennekin\",\"Gen 6\"],[\"Litten\",\"Gen 7\"],[\"Scorbunny\",\"Gen 8\"],[\"Fuecoco\",\"Gen 9\"]]}",
+   "cat": "Games",
+   "group": "Franchises > Pokémon",
+   "short": "Fire starters",
+   "title": "Pokémon fire starters",
+   "items": [
+    {
+     "id": "ncharmander",
+     "name": "Charmander",
+     "note": "Gen 1",
+     "sq": true
+    },
+    {
+     "id": "ncyndaquil",
+     "name": "Cyndaquil",
+     "note": "Gen 2",
+     "sq": true
+    },
+    {
+     "id": "ntorchic",
+     "name": "Torchic",
+     "note": "Gen 3",
+     "sq": true
+    },
+    {
+     "id": "nchimchar",
+     "name": "Chimchar",
+     "note": "Gen 4",
+     "sq": true
+    },
+    {
+     "id": "ntepig",
+     "name": "Tepig",
+     "note": "Gen 5",
+     "sq": true
+    },
+    {
+     "id": "nfennekin",
+     "name": "Fennekin",
+     "note": "Gen 6",
+     "sq": true
+    },
+    {
+     "id": "nlitten",
+     "name": "Litten",
+     "note": "Gen 7",
+     "sq": true
+    },
+    {
+     "id": "nscorbunny",
+     "name": "Scorbunny",
+     "note": "Gen 8",
+     "sq": true
+    },
+    {
+     "id": "nfuecoco",
+     "name": "Fuecoco",
+     "note": "Gen 9",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "pokemon-water-starters",
+   "src": "{\"type\":\"names\",\"menu\":\"Games > Franchises > Pokémon\",\"title\":\"Pokémon water starters\",\"short\":\"Water starters\",\"picks\":[[\"Squirtle\",\"Gen 1\"],[\"Totodile\",\"Gen 2\"],[\"Mudkip\",\"Gen 3\"],[\"Piplup\",\"Gen 4\"],[\"Oshawott\",\"Gen 5\"],[\"Froakie\",\"Gen 6\"],[\"Popplio\",\"Gen 7\"],[\"Sobble\",\"Gen 8\"],[\"Quaxly\",\"Gen 9\"]]}",
+   "cat": "Games",
+   "group": "Franchises > Pokémon",
+   "short": "Water starters",
+   "title": "Pokémon water starters",
+   "items": [
+    {
+     "id": "nsquirtle",
+     "name": "Squirtle",
+     "note": "Gen 1",
+     "sq": true
+    },
+    {
+     "id": "ntotodile",
+     "name": "Totodile",
+     "note": "Gen 2",
+     "sq": true
+    },
+    {
+     "id": "nmudkip",
+     "name": "Mudkip",
+     "note": "Gen 3",
+     "sq": true
+    },
+    {
+     "id": "npiplup",
+     "name": "Piplup",
+     "note": "Gen 4",
+     "sq": true
+    },
+    {
+     "id": "noshawott",
+     "name": "Oshawott",
+     "note": "Gen 5",
+     "sq": true
+    },
+    {
+     "id": "nfroakie",
+     "name": "Froakie",
+     "note": "Gen 6",
+     "sq": true
+    },
+    {
+     "id": "npopplio",
+     "name": "Popplio",
+     "note": "Gen 7",
+     "sq": true
+    },
+    {
+     "id": "nsobble",
+     "name": "Sobble",
+     "note": "Gen 8",
+     "sq": true
+    },
+    {
+     "id": "nquaxly",
+     "name": "Quaxly",
+     "note": "Gen 9",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "pokemon-grass-starters",
+   "src": "{\"type\":\"names\",\"menu\":\"Games > Franchises > Pokémon\",\"title\":\"Pokémon grass starters\",\"short\":\"Grass starters\",\"picks\":[[\"Bulbasaur\",\"Gen 1\"],[\"Chikorita\",\"Gen 2\"],[\"Treecko\",\"Gen 3\"],[\"Turtwig\",\"Gen 4\"],[\"Snivy\",\"Gen 5\"],[\"Chespin\",\"Gen 6\"],[\"Rowlet\",\"Gen 7\"],[\"Grookey\",\"Gen 8\"],[\"Sprigatito\",\"Gen 9\"]]}",
+   "cat": "Games",
+   "group": "Franchises > Pokémon",
+   "short": "Grass starters",
+   "title": "Pokémon grass starters",
+   "items": [
+    {
+     "id": "nbulbasaur",
+     "name": "Bulbasaur",
+     "note": "Gen 1",
+     "sq": true
+    },
+    {
+     "id": "nchikorita",
+     "name": "Chikorita",
+     "note": "Gen 2",
+     "sq": true
+    },
+    {
+     "id": "ntreecko",
+     "name": "Treecko",
+     "note": "Gen 3",
+     "sq": true
+    },
+    {
+     "id": "nturtwig",
+     "name": "Turtwig",
+     "note": "Gen 4",
+     "sq": true
+    },
+    {
+     "id": "nsnivy",
+     "name": "Snivy",
+     "note": "Gen 5",
+     "sq": true
+    },
+    {
+     "id": "nchespin",
+     "name": "Chespin",
+     "note": "Gen 6",
+     "sq": true
+    },
+    {
+     "id": "nrowlet",
+     "name": "Rowlet",
+     "note": "Gen 7",
+     "sq": true
+    },
+    {
+     "id": "ngrookey",
+     "name": "Grookey",
+     "note": "Gen 8",
+     "sq": true
+    },
+    {
+     "id": "nsprigatito",
+     "name": "Sprigatito",
+     "note": "Gen 9",
+     "sq": true
     }
    ]
   },
@@ -5650,6 +5888,362 @@
    ]
   },
   {
+   "id": "buffy-the-vampire-slayer-seasons",
+   "src": "{\"type\":\"tv\",\"name\":\"Buffy the Vampire Slayer\",\"year\":1997,\"group\":\"Whedonverse\",\"short\":\"Buffy seasons\"}",
+   "cat": "TV",
+   "group": "Whedonverse",
+   "short": "Buffy seasons",
+   "title": "Buffy the Vampire Slayer seasons",
+   "items": [
+    {
+     "id": "s59465",
+     "name": "Season 1",
+     "note": "1997",
+     "poster": "/hD6tN0K6DLk43QeX84fK1Lobwm5.jpg"
+    },
+    {
+     "id": "s59466",
+     "name": "Season 2",
+     "note": "1997",
+     "poster": "/dwIFtkWWDwtOzdH8u3KQfwwbaL5.jpg"
+    },
+    {
+     "id": "s59467",
+     "name": "Season 3",
+     "note": "1998",
+     "poster": "/9ZYpGwEVaWX5cyGjPOdN9xWqgaZ.jpg"
+    },
+    {
+     "id": "s59468",
+     "name": "Season 4",
+     "note": "1999",
+     "poster": "/mwLPMMazdcnsMJ4dfEZFw3SjK7q.jpg"
+    },
+    {
+     "id": "s59469",
+     "name": "Season 5",
+     "note": "2000",
+     "poster": "/kGpDRY64TgOYUh4YGcj574Ckvop.jpg"
+    },
+    {
+     "id": "s59470",
+     "name": "Season 6",
+     "note": "2001",
+     "poster": "/aAJLnT7nSD5JaZcyUElyp4dYpmq.jpg"
+    },
+    {
+     "id": "s59471",
+     "name": "Season 7",
+     "note": "2002",
+     "poster": "/lkJ4GivhY2IJRIeLPw8zavHNfCv.jpg"
+    }
+   ]
+  },
+  {
+   "id": "buffy-the-vampire-slayer-main-characters",
+   "src": "{\"type\":\"cast\",\"name\":\"Buffy the Vampire Slayer\",\"year\":1997,\"perSeason\":6,\"count\":14,\"group\":\"Whedonverse\",\"short\":\"Buffy characters\"}",
+   "cat": "TV",
+   "group": "Whedonverse",
+   "short": "Buffy characters",
+   "title": "Buffy the Vampire Slayer main characters",
+   "items": [
+    {
+     "id": "p11863",
+     "name": "Buffy Summers",
+     "note": "Sarah Michelle Gellar",
+     "poster": "/grlhyolOpwZAnpeFvuTC3SQAUij.jpg"
+    },
+    {
+     "id": "p71675",
+     "name": "Xander Harris",
+     "note": "Nicholas Brendon",
+     "poster": "/6O5sg97Fv07EzdWjpoq3lb8KnTM.jpg"
+    },
+    {
+     "id": "p21595",
+     "name": "Willow Rosenberg",
+     "note": "Alyson Hannigan",
+     "poster": "/bO16z8rAzZWdjCga8dcbJ2AFAh2.jpg"
+    },
+    {
+     "id": "p34257",
+     "name": "Rupert Giles",
+     "note": "Anthony Stewart Head",
+     "poster": "/eRfRWnoipu1Tx84fcuOEdfR87qb.jpg"
+    },
+    {
+     "id": "p47297",
+     "name": "Spike",
+     "note": "James Marsters",
+     "poster": "/oJnBB3g2IINnsLSr8B79bJ9ykkx.jpg"
+    },
+    {
+     "id": "p66745",
+     "name": "Anya",
+     "note": "Emma Caulfield",
+     "poster": "/tYQURD5pl4iGHjyA2yVwmmhaoPt.jpg"
+    },
+    {
+     "id": "p49961",
+     "name": "Dawn Summers",
+     "note": "Michelle Trachtenberg",
+     "poster": "/8eb8ts6E7gM5SgEFn8VcXfGc39r.jpg"
+    },
+    {
+     "id": "p126502",
+     "name": "Cordelia Chase",
+     "note": "Charisma Carpenter",
+     "poster": "/aCvU5Wb10EeWJRofeXNiM4yE6nL.jpg"
+    },
+    {
+     "id": "p25934",
+     "name": "Angel",
+     "note": "David Boreanaz",
+     "poster": "/rxbKFajA7zIv4sUJUpGNBWXS7jM.jpg"
+    },
+    {
+     "id": "p57419",
+     "name": "Joyce Summers",
+     "note": "Kristine Sutherland",
+     "poster": "/tYlPr78jZePpa3NDelqiAx2Ymt0.jpg"
+    },
+    {
+     "id": "p35468",
+     "name": "Tara Maclay",
+     "note": "Amber Benson",
+     "poster": "/vEBdN1BhSOG2pCZPpCb6dgj6Wer.jpg"
+    },
+    {
+     "id": "p13922",
+     "name": "Oz",
+     "note": "Seth Green",
+     "poster": "/l4No5Eu6j0U80hCIkaSn17AOWrj.jpg"
+    },
+    {
+     "id": "p46772",
+     "name": "Riley Finn",
+     "note": "Marc Blucas",
+     "poster": "/zQrZosMrd5pDWTaoOIHcbfeFOQS.jpg"
+    },
+    {
+     "id": "p35550",
+     "name": "Jonathan Levinson",
+     "note": "Danny Strong",
+     "poster": "/82C6hgzdpHUHizMfedNAP7DSGOj.jpg"
+    }
+   ]
+  },
+  {
+   "id": "angel-seasons",
+   "src": "{\"type\":\"tv\",\"name\":\"Angel\",\"year\":1999,\"group\":\"Whedonverse\",\"short\":\"Angel seasons\"}",
+   "cat": "TV",
+   "group": "Whedonverse",
+   "short": "Angel seasons",
+   "title": "Angel seasons",
+   "items": [
+    {
+     "id": "s7625",
+     "name": "Season 1",
+     "note": "1999",
+     "poster": "/dlI0cSeoeQfXNY0WqcRaWIriyMe.jpg"
+    },
+    {
+     "id": "s7623",
+     "name": "Season 2",
+     "note": "2000",
+     "poster": "/1vGTsFfAf0i23TRWwpcmeg5GxCF.jpg"
+    },
+    {
+     "id": "s7628",
+     "name": "Season 3",
+     "note": "2001",
+     "poster": "/y5COQHIM38bQETJK2m76jHItWwm.jpg"
+    },
+    {
+     "id": "s7627",
+     "name": "Season 4",
+     "note": "2002",
+     "poster": "/n2JCcxmkil64q1QhEzrmUPPkZu7.jpg"
+    },
+    {
+     "id": "s7626",
+     "name": "Season 5",
+     "note": "2003",
+     "poster": "/hQ62EF2i5ydtN0nzcyigHBjk0XL.jpg"
+    }
+   ]
+  },
+  {
+   "id": "angel-main-characters",
+   "src": "{\"type\":\"cast\",\"name\":\"Angel\",\"year\":1999,\"perSeason\":6,\"count\":12,\"group\":\"Whedonverse\",\"short\":\"Angel characters\"}",
+   "cat": "TV",
+   "group": "Whedonverse",
+   "short": "Angel characters",
+   "title": "Angel main characters",
+   "items": [
+    {
+     "id": "p25934",
+     "name": "Angel",
+     "note": "David Boreanaz",
+     "poster": "/rxbKFajA7zIv4sUJUpGNBWXS7jM.jpg"
+    },
+    {
+     "id": "p1214673",
+     "name": "Wesley Wyndam-Pryce",
+     "note": "Alexis Denisof",
+     "poster": "/luTHwbaLutoKYWJSpk2WyuPasvk.jpg"
+    },
+    {
+     "id": "p153939",
+     "name": "Charles Gunn",
+     "note": "J. August Richards",
+     "poster": "/6UdvucJpYJipyoTPlKLJU6u90CJ.jpg"
+    },
+    {
+     "id": "p126502",
+     "name": "Cordelia Chase",
+     "note": "Charisma Carpenter",
+     "poster": "/aCvU5Wb10EeWJRofeXNiM4yE6nL.jpg"
+    },
+    {
+     "id": "p159320",
+     "name": "Lorne",
+     "note": "Andy Hallett",
+     "poster": "/uAMKdyQhpVqLKbkUdw1HN6YwWkZ.jpg"
+    },
+    {
+     "id": "p81133",
+     "name": "Fred Burkle",
+     "note": "Amy Acker",
+     "poster": "/9lpLwfscOoG4jyYIH761SRnm09U.jpg"
+    },
+    {
+     "id": "p159485",
+     "name": "Lilah Morgan",
+     "note": "Stephanie Romanov",
+     "poster": "/v2HDZQrEkxmYdz6ntaAIainnbzY.jpg"
+    },
+    {
+     "id": "p52646",
+     "name": "Connor",
+     "note": "Vincent Kartheiser",
+     "poster": "/h6rT6R3Zys2acrOunX7Hep1XQIZ.jpg"
+    },
+    {
+     "id": "p47297",
+     "name": "Spike",
+     "note": "James Marsters",
+     "poster": "/oJnBB3g2IINnsLSr8B79bJ9ykkx.jpg"
+    },
+    {
+     "id": "p71198",
+     "name": "Lindsey McDonald",
+     "note": "Christian Kane",
+     "poster": "/jPUk9WXrdv1t30dZgcNxa8OxSu3.jpg"
+    },
+    {
+     "id": "p35551",
+     "name": "Darla",
+     "note": "Julie Benz",
+     "poster": "/avcCYkQjRM7qgE0MZ5VXcK3XcKz.jpg"
+    },
+    {
+     "id": "p123149",
+     "name": "Harmony Kendall",
+     "note": "Mercedes McNab",
+     "poster": "/hBlBN43bI0QvxIqS7aBavVOxdxi.jpg"
+    }
+   ]
+  },
+  {
+   "id": "whedonverse-best-characters",
+   "src": "{\"type\":\"people\",\"cat\":\"TV\",\"group\":\"Whedonverse\",\"title\":\"Whedonverse best characters\",\"short\":\"Best characters across the Whedonverse\",\"picks\":[[\"Buffy Summers\",\"Buffy the Vampire Slayer\",\"Sarah Michelle Gellar\"],[\"Willow Rosenberg\",\"Buffy the Vampire Slayer\",\"Alyson Hannigan\"],[\"Spike\",\"Buffy the Vampire Slayer\",\"James Marsters\"],[\"Angel\",\"Angel\",\"David Boreanaz\"],[\"Cordelia Chase\",\"Angel\",\"Charisma Carpenter\"],[\"Wesley Wyndam-Pryce\",\"Angel\",\"Alexis Denisof\"],[\"Malcolm Reynolds\",\"Firefly\",\"Nathan Fillion\"],[\"River Tam\",\"Firefly\",\"Summer Glau\"],[\"Kaylee Frye\",\"Firefly\",\"Jewel Staite\"],[\"Echo\",\"Dollhouse\",\"Eliza Dushku\"],[\"Topher Brink\",\"Dollhouse\",\"Fran Kranz\"],[\"Dr. Horrible\",\"Dr. Horrible's Sing-Along Blog\",\"Neil Patrick Harris\"],[\"Penny\",\"Dr. Horrible's Sing-Along Blog\",\"Felicia Day\"]]}",
+   "cat": "TV",
+   "group": "Whedonverse",
+   "short": "Best characters across the Whedonverse",
+   "title": "Whedonverse best characters",
+   "items": [
+    {
+     "id": "hbuffy-summers",
+     "name": "Buffy Summers",
+     "note": "Buffy the Vampire Slayer",
+     "poster": "/grlhyolOpwZAnpeFvuTC3SQAUij.jpg"
+    },
+    {
+     "id": "hwillow-rosenberg",
+     "name": "Willow Rosenberg",
+     "note": "Buffy the Vampire Slayer",
+     "poster": "/bO16z8rAzZWdjCga8dcbJ2AFAh2.jpg"
+    },
+    {
+     "id": "hspike",
+     "name": "Spike",
+     "note": "Buffy the Vampire Slayer",
+     "poster": "/oJnBB3g2IINnsLSr8B79bJ9ykkx.jpg"
+    },
+    {
+     "id": "hangel",
+     "name": "Angel",
+     "note": "Angel",
+     "poster": "/rxbKFajA7zIv4sUJUpGNBWXS7jM.jpg"
+    },
+    {
+     "id": "hcordelia-chase",
+     "name": "Cordelia Chase",
+     "note": "Angel",
+     "poster": "/aCvU5Wb10EeWJRofeXNiM4yE6nL.jpg"
+    },
+    {
+     "id": "hwesley-wyndam-pryce",
+     "name": "Wesley Wyndam-Pryce",
+     "note": "Angel",
+     "poster": "/luTHwbaLutoKYWJSpk2WyuPasvk.jpg"
+    },
+    {
+     "id": "hmalcolm-reynolds",
+     "name": "Malcolm Reynolds",
+     "note": "Firefly",
+     "poster": "/aW6vCxkUZtwb6iH2Wf88Uq0XNVv.jpg"
+    },
+    {
+     "id": "hriver-tam",
+     "name": "River Tam",
+     "note": "Firefly",
+     "poster": "/rDTxblyw0AwU5oSeksgP7GwMyrF.jpg"
+    },
+    {
+     "id": "hkaylee-frye",
+     "name": "Kaylee Frye",
+     "note": "Firefly",
+     "poster": "/ztxDIZvuPreUixO6ZPxwkCg2UlO.jpg"
+    },
+    {
+     "id": "hecho",
+     "name": "Echo",
+     "note": "Dollhouse",
+     "poster": "/lvu4Vo9GL7uOjtU59MDiy3QDPAZ.jpg"
+    },
+    {
+     "id": "htopher-brink",
+     "name": "Topher Brink",
+     "note": "Dollhouse",
+     "poster": "/hBg88mL38BxMpSjtMjSAz2NnDKg.jpg"
+    },
+    {
+     "id": "hdr-horrible",
+     "name": "Dr. Horrible",
+     "note": "Dr. Horrible's Sing-Along Blog",
+     "poster": "/r2twLWLwDpKJ7JyhWsD1YsL7rJV.jpg"
+    },
+    {
+     "id": "hpenny",
+     "name": "Penny",
+     "note": "Dr. Horrible's Sing-Along Blog",
+     "poster": "/wnggOc7HCXvjOGMbqxTftQbX6t5.jpg"
+    }
+   ]
+  },
+  {
    "id": "bridgerton-main-characters",
    "src": "{\"type\":\"cast\",\"name\":\"Bridgerton\",\"perSeason\":8,\"count\":18,\"exclude\":[\"Whistledown\"]}",
    "cat": "TV",
@@ -5737,7 +6331,7 @@
     },
     {
      "id": "p2301682",
-     "name": "Lady Francesca Stirling",
+     "name": "Francesca Bridgerton",
      "note": "Hannah Dodd",
      "poster": "/74dHuedzHpVqEr0fVvi1o10MQnq.jpg"
     },
@@ -11806,30 +12400,25 @@
   },
   {
    "id": "favourite-designer-perfumes",
-   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Perfumes\",\"title\":\"Favourite designer perfumes\",\"short\":\"Designer favourites\",\"picks\":[[\"No. 5\",\"Chanel\"],[\"Coco Mademoiselle\",\"Chanel\"],[\"Bleu de Chanel\",\"Chanel\"],[\"Sauvage\",\"Dior\"],[\"J'adore\",\"Dior\"],[\"Miss Dior\",\"Dior\"],[\"Black Opium\",\"Yves Saint Laurent\"],[\"Libre\",\"Yves Saint Laurent\"],[\"La Vie Est Belle\",\"Lancôme\"],[\"Light Blue\",\"Dolce & Gabbana\"],[\"Acqua di Giò\",\"Giorgio Armani\"],[\"Flowerbomb\",\"Viktor & Rolf\"],[\"Good Girl\",\"Carolina Herrera\"],[\"Daisy\",\"Marc Jacobs\"],[\"Angel\",\"Mugler\"]]}",
+   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Perfumes\",\"title\":\"Favourite designer perfumes\",\"short\":\"Designer favourites\",\"picks\":[[\"Libre\",\"Yves Saint Laurent\"],[\"Black Opium\",\"Yves Saint Laurent\"],[\"Miss Dior\",\"Dior\"],[\"J'adore\",\"Dior\"],[\"Chance Eau Tendre\",\"Chanel\"],[\"Daisy\",\"Marc Jacobs\"],[\"Flora Gorgeous Gardenia\",\"Gucci\"],[\"Born in Roma Donna\",\"Valentino\"],[\"La Vie Est Belle\",\"Lancôme\"],[\"Flowerbomb\",\"Viktor & Rolf\"],[\"Paradoxe\",\"Prada\"],[\"Goddess\",\"Burberry\"],[\"Good Girl\",\"Carolina Herrera\"],[\"My Way\",\"Giorgio Armani\"],[\"Black Orchid\",\"Tom Ford\"]]}",
    "cat": "Misc",
    "group": "Perfumes",
    "short": "Designer favourites",
    "title": "Favourite designer perfumes",
    "items": [
     {
-     "id": "nno-5",
-     "name": "No. 5",
-     "note": "Chanel"
+     "id": "nlibre",
+     "name": "Libre",
+     "note": "Yves Saint Laurent"
     },
     {
-     "id": "ncoco-mademoiselle",
-     "name": "Coco Mademoiselle",
-     "note": "Chanel"
+     "id": "nblack-opium",
+     "name": "Black Opium",
+     "note": "Yves Saint Laurent"
     },
     {
-     "id": "nbleu-de-chanel",
-     "name": "Bleu de Chanel",
-     "note": "Chanel"
-    },
-    {
-     "id": "nsauvage",
-     "name": "Sauvage",
+     "id": "nmiss-dior",
+     "name": "Miss Dior",
      "note": "Dior"
     },
     {
@@ -11838,44 +12427,9 @@
      "note": "Dior"
     },
     {
-     "id": "nmiss-dior",
-     "name": "Miss Dior",
-     "note": "Dior"
-    },
-    {
-     "id": "nblack-opium",
-     "name": "Black Opium",
-     "note": "Yves Saint Laurent"
-    },
-    {
-     "id": "nlibre",
-     "name": "Libre",
-     "note": "Yves Saint Laurent"
-    },
-    {
-     "id": "nla-vie-est-belle",
-     "name": "La Vie Est Belle",
-     "note": "Lancôme"
-    },
-    {
-     "id": "nlight-blue",
-     "name": "Light Blue",
-     "note": "Dolce & Gabbana"
-    },
-    {
-     "id": "nacqua-di-gio",
-     "name": "Acqua di Giò",
-     "note": "Giorgio Armani"
-    },
-    {
-     "id": "nflowerbomb",
-     "name": "Flowerbomb",
-     "note": "Viktor & Rolf"
-    },
-    {
-     "id": "ngood-girl",
-     "name": "Good Girl",
-     "note": "Carolina Herrera"
+     "id": "nchance-eau-tendre",
+     "name": "Chance Eau Tendre",
+     "note": "Chanel"
     },
     {
      "id": "ndaisy",
@@ -11883,9 +12437,111 @@
      "note": "Marc Jacobs"
     },
     {
-     "id": "nangel",
-     "name": "Angel",
-     "note": "Mugler"
+     "id": "nflora-gorgeous-gardenia",
+     "name": "Flora Gorgeous Gardenia",
+     "note": "Gucci"
+    },
+    {
+     "id": "nborn-in-roma-donna",
+     "name": "Born in Roma Donna",
+     "note": "Valentino"
+    },
+    {
+     "id": "nla-vie-est-belle",
+     "name": "La Vie Est Belle",
+     "note": "Lancôme"
+    },
+    {
+     "id": "nflowerbomb",
+     "name": "Flowerbomb",
+     "note": "Viktor & Rolf"
+    },
+    {
+     "id": "nparadoxe",
+     "name": "Paradoxe",
+     "note": "Prada"
+    },
+    {
+     "id": "ngoddess",
+     "name": "Goddess",
+     "note": "Burberry"
+    },
+    {
+     "id": "ngood-girl",
+     "name": "Good Girl",
+     "note": "Carolina Herrera"
+    },
+    {
+     "id": "nmy-way",
+     "name": "My Way",
+     "note": "Giorgio Armani"
+    },
+    {
+     "id": "nblack-orchid",
+     "name": "Black Orchid",
+     "note": "Tom Ford"
+    }
+   ]
+  },
+  {
+   "id": "kayali-perfumes",
+   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Perfumes\",\"title\":\"Kayali perfumes\",\"short\":\"Kayali\",\"picks\":[\"Vanilla 28\",\"Yum Pistachio Gelato 33\",\"Vanilla Candy Rock Sugar 42\",\"Utopia Vanilla Coco 21\",\"Eden Juicy Apple 01\",\"Déjà Vu White Flower 57\",\"Lovefest Burning Cherry 48\",\"Yum Boujee Marshmallow 81\",\"Maui in a Bottle Sweet Hibiscus 26\",\"Invite Only Amber 23\",\"Elixir 11\",\"Sweet Diamond Pink Pepper 25\",\"Vanilla Royale Sugared Patchouli 64\"]}",
+   "cat": "Misc",
+   "group": "Perfumes",
+   "short": "Kayali",
+   "title": "Kayali perfumes",
+   "items": [
+    {
+     "id": "nvanilla-28",
+     "name": "Vanilla 28"
+    },
+    {
+     "id": "nyum-pistachio-gelato-33",
+     "name": "Yum Pistachio Gelato 33"
+    },
+    {
+     "id": "nvanilla-candy-rock-sugar-42",
+     "name": "Vanilla Candy Rock Sugar 42"
+    },
+    {
+     "id": "nutopia-vanilla-coco-21",
+     "name": "Utopia Vanilla Coco 21"
+    },
+    {
+     "id": "neden-juicy-apple-01",
+     "name": "Eden Juicy Apple 01"
+    },
+    {
+     "id": "ndeja-vu-white-flower-57",
+     "name": "Déjà Vu White Flower 57"
+    },
+    {
+     "id": "nlovefest-burning-cherry-48",
+     "name": "Lovefest Burning Cherry 48"
+    },
+    {
+     "id": "nyum-boujee-marshmallow-81",
+     "name": "Yum Boujee Marshmallow 81"
+    },
+    {
+     "id": "nmaui-in-a-bottle-sweet-hibiscus-26",
+     "name": "Maui in a Bottle Sweet Hibiscus 26"
+    },
+    {
+     "id": "ninvite-only-amber-23",
+     "name": "Invite Only Amber 23"
+    },
+    {
+     "id": "nelixir-11",
+     "name": "Elixir 11"
+    },
+    {
+     "id": "nsweet-diamond-pink-pepper-25",
+     "name": "Sweet Diamond Pink Pepper 25"
+    },
+    {
+     "id": "nvanilla-royale-sugared-patchouli-64",
+     "name": "Vanilla Royale Sugared Patchouli 64"
     }
    ]
   },
@@ -12815,167 +13471,522 @@
    ]
   },
   {
-   "id": "pokemon-fire-starters",
-   "src": "{\"type\":\"names\",\"cat\":\"Games\",\"group\":\"Pokémon starters\",\"title\":\"Pokémon fire starters\",\"short\":\"Fire starters\",\"picks\":[[\"Charmander\",\"Gen 1\"],[\"Cyndaquil\",\"Gen 2\"],[\"Torchic\",\"Gen 3\"],[\"Chimchar\",\"Gen 4\"],[\"Tepig\",\"Gen 5\"],[\"Fennekin\",\"Gen 6\"],[\"Litten\",\"Gen 7\"],[\"Scorbunny\",\"Gen 8\"],[\"Fuecoco\",\"Gen 9\"]]}",
+   "id": "cosy-games",
+   "src": "{\"type\":\"games\",\"group\":\"Genres\",\"title\":\"Cosy games\",\"short\":\"Cosy games\",\"picks\":[\"Stardew Valley\",\"Animal Crossing: New Horizons\",\"A Short Hike\",\"Unpacking\",\"Spiritfarer\",\"Slime Rancher\",\"Cozy Grove\",\"Dorfromantik\",\"Disney Dreamlight Valley\",\"My Time at Portia\",\"Coffee Talk\",\"PowerWash Simulator\",\"Ooblets\",\"Dave the Diver\",\"Littlewood\"]}",
    "cat": "Games",
-   "group": "Pokémon starters",
-   "short": "Fire starters",
-   "title": "Pokémon fire starters",
+   "group": "Genres",
+   "short": "Cosy games",
+   "title": "Cosy games",
    "items": [
     {
-     "id": "ncharmander",
-     "name": "Charmander",
-     "note": "Gen 1"
+     "id": "v654",
+     "name": "Stardew Valley",
+     "note": "2016",
+     "img": "https://media.rawg.io/media/crop/600/400/games/713/713269608dc8f2f40f5a670a14b2de94.jpg",
+     "img2": "https://media.rawg.io/media/games/713/713269608dc8f2f40f5a670a14b2de94.jpg",
+     "wide": true
     },
     {
-     "id": "ncyndaquil",
-     "name": "Cyndaquil",
-     "note": "Gen 2"
+     "id": "v421698",
+     "name": "Animal Crossing: New Horizons",
+     "note": "2020",
+     "img": "https://media.rawg.io/media/crop/600/400/games/42f/42fe1abd4d7c11ca92d93a0fb0f8662b.jpg",
+     "img2": "https://media.rawg.io/media/games/42f/42fe1abd4d7c11ca92d93a0fb0f8662b.jpg",
+     "wide": true
     },
     {
-     "id": "ntorchic",
-     "name": "Torchic",
-     "note": "Gen 3"
+     "id": "v304247",
+     "name": "A Short Hike",
+     "note": "2019",
+     "img": "https://media.rawg.io/media/crop/600/400/games/c38/c38deeb8f331a78c89e64ad71a1db361.jpg",
+     "img2": "https://media.rawg.io/media/games/c38/c38deeb8f331a78c89e64ad71a1db361.jpg",
+     "wide": true
     },
     {
-     "id": "nchimchar",
-     "name": "Chimchar",
-     "note": "Gen 4"
+     "id": "v364942",
+     "name": "Unpacking",
+     "note": "2021",
+     "img": "https://media.rawg.io/media/crop/600/400/games/c11/c1118fbcfd846c631ecb7646f8efc780.jpg",
+     "img2": "https://media.rawg.io/media/games/c11/c1118fbcfd846c631ecb7646f8efc780.jpg",
+     "wide": true
     },
     {
-     "id": "ntepig",
-     "name": "Tepig",
-     "note": "Gen 5"
+     "id": "v326236",
+     "name": "Spiritfarer",
+     "note": "2020",
+     "img": "https://media.rawg.io/media/crop/600/400/games/727/727f889060e688bbdcba7b2a5d26a603.jpg",
+     "img2": "https://media.rawg.io/media/games/727/727f889060e688bbdcba7b2a5d26a603.jpg",
+     "wide": true
     },
     {
-     "id": "nfennekin",
-     "name": "Fennekin",
-     "note": "Gen 6"
+     "id": "v9736",
+     "name": "Slime Rancher",
+     "note": "2016",
+     "img": "https://media.rawg.io/media/crop/600/400/games/43f/43f4f3a50651f371c147ecce8ee841a9.jpg",
+     "img2": "https://media.rawg.io/media/games/43f/43f4f3a50651f371c147ecce8ee841a9.jpg",
+     "wide": true
     },
     {
-     "id": "nlitten",
-     "name": "Litten",
-     "note": "Gen 7"
+     "id": "v576532",
+     "name": "Cozy Grove",
+     "note": "2021",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/ea5/ea586b50b2cfe7ffa946488a91275dd1.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/ea5/ea586b50b2cfe7ffa946488a91275dd1.jpg",
+     "wide": true
     },
     {
-     "id": "nscorbunny",
-     "name": "Scorbunny",
-     "note": "Gen 8"
+     "id": "v568931",
+     "name": "Dorfromantik",
+     "note": "2022",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/b00/b00b7cc04dd09531b631ea4575696276.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/b00/b00b7cc04dd09531b631ea4575696276.jpg",
+     "wide": true
     },
     {
-     "id": "nfuecoco",
-     "name": "Fuecoco",
-     "note": "Gen 9"
+     "id": "v842395",
+     "name": "Disney Dreamlight Valley",
+     "note": "2023",
+     "img": "https://media.rawg.io/media/crop/600/400/games/2f7/2f77dc8fa62aa506e7a06887d3756c3f.jpg",
+     "img2": "https://media.rawg.io/media/games/2f7/2f77dc8fa62aa506e7a06887d3756c3f.jpg",
+     "wide": true
+    },
+    {
+     "id": "v44029",
+     "name": "My Time at Portia",
+     "note": "2019",
+     "img": "https://media.rawg.io/media/crop/600/400/games/176/1765390b699b432edc3a208d544c6ba0.jpg",
+     "img2": "https://media.rawg.io/media/games/176/1765390b699b432edc3a208d544c6ba0.jpg",
+     "wide": true
+    },
+    {
+     "id": "v59796",
+     "name": "Coffee Talk",
+     "note": "2020",
+     "img": "https://media.rawg.io/media/crop/600/400/games/4d9/4d90960bbb1c92966b8ec7a4f11864a7.jpg",
+     "img2": "https://media.rawg.io/media/games/4d9/4d90960bbb1c92966b8ec7a4f11864a7.jpg",
+     "wide": true
+    },
+    {
+     "id": "v581104",
+     "name": "PowerWash Simulator",
+     "note": "2022",
+     "img": "https://media.rawg.io/media/crop/600/400/games/659/65959a07c4e6dc7a9034993bbb3ba232.jpg",
+     "img2": "https://media.rawg.io/media/games/659/65959a07c4e6dc7a9034993bbb3ba232.jpg",
+     "wide": true
+    },
+    {
+     "id": "v28078",
+     "name": "Ooblets",
+     "note": "2022",
+     "img": "https://media.rawg.io/media/crop/600/400/games/88d/88d6f0c539aaa59f5d64333b312c1d3b.jpg",
+     "img2": "https://media.rawg.io/media/games/88d/88d6f0c539aaa59f5d64333b312c1d3b.jpg",
+     "wide": true
+    },
+    {
+     "id": "v871264",
+     "name": "Dave the Diver",
+     "note": "2023",
+     "img": "https://media.rawg.io/media/crop/600/400/games/1ee/1eec43616e3ff00a674124d746926b23.jpg",
+     "img2": "https://media.rawg.io/media/games/1ee/1eec43616e3ff00a674124d746926b23.jpg",
+     "wide": true
+    },
+    {
+     "id": "v288671",
+     "name": "Littlewood",
+     "note": "2020",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/d54/d54f13f25299c3c3a6ac7e966ff33daa.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/d54/d54f13f25299c3c3a6ac7e966ff33daa.jpg",
+     "wide": true
     }
    ]
   },
   {
-   "id": "pokemon-water-starters",
-   "src": "{\"type\":\"names\",\"cat\":\"Games\",\"group\":\"Pokémon starters\",\"title\":\"Pokémon water starters\",\"short\":\"Water starters\",\"picks\":[[\"Squirtle\",\"Gen 1\"],[\"Totodile\",\"Gen 2\"],[\"Mudkip\",\"Gen 3\"],[\"Piplup\",\"Gen 4\"],[\"Oshawott\",\"Gen 5\"],[\"Froakie\",\"Gen 6\"],[\"Popplio\",\"Gen 7\"],[\"Sobble\",\"Gen 8\"],[\"Quaxly\",\"Gen 9\"]]}",
+   "id": "first-person-shooters",
+   "src": "{\"type\":\"games\",\"group\":\"Genres\",\"title\":\"First-person shooters\",\"short\":\"First-person shooters\",\"picks\":[[\"DOOM (1993)\",\"DOOM\",1993],[\"GoldenEye 007\",\"GoldenEye 007\",1997],[\"Half-Life\",\"Half-Life\",1998],[\"Counter-Strike\",\"Counter-Strike\",2000],[\"Halo: Combat Evolved\",\"Halo: Combat Evolved\",2001],[\"Half-Life 2\",\"Half-Life 2\",2004],[\"Call of Duty 4: Modern Warfare\",\"Call of Duty 4: Modern Warfare\",2007],[\"BioShock\",\"BioShock\",2007],[\"Halo 3\",\"Halo 3\",2007],[\"Left 4 Dead 2\",\"Left 4 Dead 2\",2009],[\"Borderlands 2\",\"Borderlands 2\",2012],[\"Overwatch\",\"Overwatch\",2016],[\"DOOM (2016)\",\"DOOM\",2016],[\"Titanfall 2\",\"Titanfall 2\",2016],[\"Destiny 2\",\"Destiny 2\",2017]]}",
    "cat": "Games",
-   "group": "Pokémon starters",
-   "short": "Water starters",
-   "title": "Pokémon water starters",
+   "group": "Genres",
+   "short": "First-person shooters",
+   "title": "First-person shooters",
    "items": [
     {
-     "id": "nsquirtle",
-     "name": "Squirtle",
-     "note": "Gen 1"
+     "id": "v52884",
+     "name": "DOOM (1993)",
+     "note": "1993",
+     "img": "https://media.rawg.io/media/crop/600/400/games/47b/47b50d880be8453bf9cda6e5c007bc26.jpg",
+     "img2": "https://media.rawg.io/media/games/47b/47b50d880be8453bf9cda6e5c007bc26.jpg",
+     "wide": true
     },
     {
-     "id": "ntotodile",
-     "name": "Totodile",
-     "note": "Gen 2"
+     "id": "v54403",
+     "name": "GoldenEye 007",
+     "note": "1997",
+     "img": "https://media.rawg.io/media/crop/600/400/games/5a1/5a145fe3002fc988140f7f00edcb9715.jpg",
+     "img2": "https://media.rawg.io/media/games/5a1/5a145fe3002fc988140f7f00edcb9715.jpg",
+     "wide": true
     },
     {
-     "id": "nmudkip",
-     "name": "Mudkip",
-     "note": "Gen 3"
+     "id": "v18080",
+     "name": "Half-Life",
+     "note": "1998",
+     "img": "https://media.rawg.io/media/crop/600/400/games/6c5/6c55e22185876626881b76c11922b073.jpg",
+     "img2": "https://media.rawg.io/media/games/6c5/6c55e22185876626881b76c11922b073.jpg",
+     "wide": true
     },
     {
-     "id": "npiplup",
-     "name": "Piplup",
-     "note": "Gen 4"
+     "id": "v19301",
+     "name": "Counter-Strike",
+     "note": "2000",
+     "img": "https://media.rawg.io/media/crop/600/400/games/9c4/9c47f320eb73c9a02d462e12f6206b26.jpg",
+     "img2": "https://media.rawg.io/media/games/9c4/9c47f320eb73c9a02d462e12f6206b26.jpg",
+     "wide": true
     },
     {
-     "id": "noshawott",
-     "name": "Oshawott",
-     "note": "Gen 5"
+     "id": "v28448",
+     "name": "Halo: Combat Evolved",
+     "note": "2001",
+     "img": "https://media.rawg.io/media/crop/600/400/games/abf/abffd94ed6fe34027c720bee593c06d2.jpg",
+     "img2": "https://media.rawg.io/media/games/abf/abffd94ed6fe34027c720bee593c06d2.jpg",
+     "wide": true
     },
     {
-     "id": "nfroakie",
-     "name": "Froakie",
-     "note": "Gen 6"
+     "id": "v13537",
+     "name": "Half-Life 2",
+     "note": "2004",
+     "img": "https://media.rawg.io/media/crop/600/400/games/b8c/b8c243eaa0fbac8115e0cdccac3f91dc.jpg",
+     "img2": "https://media.rawg.io/media/games/b8c/b8c243eaa0fbac8115e0cdccac3f91dc.jpg",
+     "wide": true
     },
     {
-     "id": "npopplio",
-     "name": "Popplio",
-     "note": "Gen 7"
+     "id": "v4535",
+     "name": "Call of Duty 4: Modern Warfare",
+     "note": "2007",
+     "img": "https://media.rawg.io/media/crop/600/400/games/9fb/9fbaea2168caea1f806546dfdaaeb1da.jpg",
+     "img2": "https://media.rawg.io/media/games/9fb/9fbaea2168caea1f806546dfdaaeb1da.jpg",
+     "wide": true
     },
     {
-     "id": "nsobble",
-     "name": "Sobble",
-     "note": "Gen 8"
+     "id": "v4286",
+     "name": "BioShock",
+     "note": "2007",
+     "img": "https://media.rawg.io/media/crop/600/400/games/bc0/bc06a29ceac58652b684deefe7d56099.jpg",
+     "img2": "https://media.rawg.io/media/games/bc0/bc06a29ceac58652b684deefe7d56099.jpg",
+     "wide": true
     },
     {
-     "id": "nquaxly",
-     "name": "Quaxly",
-     "note": "Gen 9"
+     "id": "v28589",
+     "name": "Halo 3",
+     "note": "2007",
+     "img": "https://media.rawg.io/media/crop/600/400/games/982/982ff61d574fed5e416cb1867b40d9b0.jpg",
+     "img2": "https://media.rawg.io/media/games/982/982ff61d574fed5e416cb1867b40d9b0.jpg",
+     "wide": true
+    },
+    {
+     "id": "v12020",
+     "name": "Left 4 Dead 2",
+     "note": "2009",
+     "img": "https://media.rawg.io/media/crop/600/400/games/d58/d588947d4286e7b5e0e12e1bea7d9844.jpg",
+     "img2": "https://media.rawg.io/media/games/d58/d588947d4286e7b5e0e12e1bea7d9844.jpg",
+     "wide": true
+    },
+    {
+     "id": "v802",
+     "name": "Borderlands 2",
+     "note": "2012",
+     "img": "https://media.rawg.io/media/crop/600/400/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg",
+     "img2": "https://media.rawg.io/media/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg",
+     "wide": true
+    },
+    {
+     "id": "v22508",
+     "name": "Overwatch",
+     "note": "2016",
+     "img": "https://media.rawg.io/media/crop/600/400/games/4ea/4ea507ceebeabb43edbc09468f5aaac6.jpg",
+     "img2": "https://media.rawg.io/media/games/4ea/4ea507ceebeabb43edbc09468f5aaac6.jpg",
+     "wide": true
+    },
+    {
+     "id": "v2454",
+     "name": "DOOM (2016)",
+     "note": "2016",
+     "img": "https://media.rawg.io/media/crop/600/400/games/587/587588c64afbff80e6f444eb2e46f9da.jpg",
+     "img2": "https://media.rawg.io/media/games/587/587588c64afbff80e6f444eb2e46f9da.jpg",
+     "wide": true
+    },
+    {
+     "id": "v923",
+     "name": "Titanfall 2",
+     "note": "2016",
+     "img": "https://media.rawg.io/media/crop/600/400/games/569/56978b5a77f13aa2ec5d09ec81d01cad.jpg",
+     "img2": "https://media.rawg.io/media/games/569/56978b5a77f13aa2ec5d09ec81d01cad.jpg",
+     "wide": true
+    },
+    {
+     "id": "v32",
+     "name": "Destiny 2",
+     "note": "2017",
+     "img": "https://media.rawg.io/media/crop/600/400/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg",
+     "img2": "https://media.rawg.io/media/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg",
+     "wide": true
     }
    ]
   },
   {
-   "id": "pokemon-grass-starters",
-   "src": "{\"type\":\"names\",\"cat\":\"Games\",\"group\":\"Pokémon starters\",\"title\":\"Pokémon grass starters\",\"short\":\"Grass starters\",\"picks\":[[\"Bulbasaur\",\"Gen 1\"],[\"Chikorita\",\"Gen 2\"],[\"Treecko\",\"Gen 3\"],[\"Turtwig\",\"Gen 4\"],[\"Snivy\",\"Gen 5\"],[\"Chespin\",\"Gen 6\"],[\"Rowlet\",\"Gen 7\"],[\"Grookey\",\"Gen 8\"],[\"Sprigatito\",\"Gen 9\"]]}",
+   "id": "two-player-fighting-games",
+   "src": "{\"type\":\"games\",\"group\":\"Genres\",\"title\":\"Two-player fighting games\",\"short\":\"Two-player fighting games\",\"picks\":[[\"Street Fighter II\",\"Street Fighter II\",1991],[\"Mortal Kombat II\",\"Mortal Kombat II\",1993],[\"Killer Instinct\",\"Killer Instinct\",1994],[\"Tekken 3\",\"Tekken 3\",1997],[\"Street Fighter III: 3rd Strike\",\"Street Fighter III: 3rd Strike\",1999],[\"Super Smash Bros. Melee\",\"Super Smash Bros. Melee\",2001],[\"Soulcalibur II\",\"Soulcalibur II\",2002],[\"Street Fighter IV\",\"Street Fighter IV\",2008],[\"Injustice 2\",\"Injustice 2\",2017],[\"Tekken 7\",\"Tekken 7\",2015],[\"Dragon Ball FighterZ\",\"Dragon Ball FighterZ\",2018],[\"Super Smash Bros. Ultimate\",\"Super Smash Bros. Ultimate\",2018],[\"Mortal Kombat 11\",\"Mortal Kombat 11\",2019],[\"Guilty Gear -Strive-\",\"Guilty Gear -Strive-\",2021],[\"Street Fighter 6\",\"Street Fighter 6\",2023]]}",
    "cat": "Games",
-   "group": "Pokémon starters",
-   "short": "Grass starters",
-   "title": "Pokémon grass starters",
+   "group": "Genres",
+   "short": "Two-player fighting games",
+   "title": "Two-player fighting games",
    "items": [
     {
-     "id": "nbulbasaur",
-     "name": "Bulbasaur",
-     "note": "Gen 1"
+     "id": "v55132",
+     "name": "Street Fighter II",
+     "note": "1991",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/40b/40b529990743d2515760b1909eb61020.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/40b/40b529990743d2515760b1909eb61020.jpg",
+     "wide": true
     },
     {
-     "id": "nchikorita",
-     "name": "Chikorita",
-     "note": "Gen 2"
+     "id": "v29426",
+     "name": "Mortal Kombat II",
+     "note": "1993",
+     "img": "https://media.rawg.io/media/crop/600/400/games/0df/0dfe8852fa43d58cbdeb973765a9828d.jpg",
+     "img2": "https://media.rawg.io/media/games/0df/0dfe8852fa43d58cbdeb973765a9828d.jpg",
+     "wide": true
     },
     {
-     "id": "ntreecko",
-     "name": "Treecko",
-     "note": "Gen 3"
+     "id": "v55275",
+     "name": "Killer Instinct",
+     "note": "1994",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/b5a/b5a3a90006a391843dde7cb0b0c9c997.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/b5a/b5a3a90006a391843dde7cb0b0c9c997.jpg",
+     "wide": true
     },
     {
-     "id": "nturtwig",
-     "name": "Turtwig",
-     "note": "Gen 4"
+     "id": "v57842",
+     "name": "Tekken 3",
+     "note": "1997",
+     "img": "https://media.rawg.io/media/crop/600/400/games/4aa/4aa1440932f4a12d9d0ea70a5e2164f6.jpg",
+     "img2": "https://media.rawg.io/media/games/4aa/4aa1440932f4a12d9d0ea70a5e2164f6.jpg",
+     "wide": true
     },
     {
-     "id": "nsnivy",
-     "name": "Snivy",
-     "note": "Gen 5"
+     "id": "v54757",
+     "name": "Street Fighter III: 3rd Strike",
+     "note": "1999",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/873/873d3853f8c388aded7506bedfdb0c4a.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/873/873d3853f8c388aded7506bedfdb0c4a.jpg",
+     "wide": true
     },
     {
-     "id": "nchespin",
-     "name": "Chespin",
-     "note": "Gen 6"
+     "id": "v56222",
+     "name": "Super Smash Bros. Melee",
+     "note": "2001",
+     "img": "https://media.rawg.io/media/crop/600/400/games/b78/b780abf866cba1422d01bfa75612dd29.jpg",
+     "img2": "https://media.rawg.io/media/games/b78/b780abf866cba1422d01bfa75612dd29.jpg",
+     "wide": true
     },
     {
-     "id": "nrowlet",
-     "name": "Rowlet",
-     "note": "Gen 7"
+     "id": "v400295",
+     "name": "Soulcalibur II",
+     "note": "2002",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/570/570a6ed91febd5f3ffc889368e13a46e.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/570/570a6ed91febd5f3ffc889368e13a46e.jpg",
+     "wide": true
     },
     {
-     "id": "ngrookey",
-     "name": "Grookey",
-     "note": "Gen 8"
+     "id": "v121",
+     "name": "Street Fighter IV",
+     "note": "2008",
+     "img": "https://media.rawg.io/media/crop/600/400/games/0a2/0a2ee705109a6d8d94e28bef03f6d598.jpg",
+     "img2": "https://media.rawg.io/media/games/0a2/0a2ee705109a6d8d94e28bef03f6d598.jpg",
+     "wide": true
     },
     {
-     "id": "nsprigatito",
-     "name": "Sprigatito",
-     "note": "Gen 9"
+     "id": "v38",
+     "name": "Injustice 2",
+     "note": "2017",
+     "img": "https://media.rawg.io/media/crop/600/400/games/e42/e428e70c97064037326d7863a43a0454.jpg",
+     "img2": "https://media.rawg.io/media/games/e42/e428e70c97064037326d7863a43a0454.jpg",
+     "wide": true
+    },
+    {
+     "id": "v36",
+     "name": "Tekken 7",
+     "note": "2015",
+     "img": "https://media.rawg.io/media/crop/600/400/games/62b/62b035add7205737540d66e082b85930.jpg",
+     "img2": "https://media.rawg.io/media/games/62b/62b035add7205737540d66e082b85930.jpg",
+     "wide": true
+    },
+    {
+     "id": "v49225",
+     "name": "Dragon Ball FighterZ",
+     "note": "2018",
+     "img": "https://media.rawg.io/media/crop/600/400/games/96b/96b9420bbd4bd1b79bf2a67f7779733a.jpg",
+     "img2": "https://media.rawg.io/media/games/96b/96b9420bbd4bd1b79bf2a67f7779733a.jpg",
+     "wide": true
+    },
+    {
+     "id": "v58829",
+     "name": "Super Smash Bros. Ultimate",
+     "note": "2018",
+     "img": "https://media.rawg.io/media/crop/600/400/games/9f3/9f3c513b301d8d7250a64dd7e73c62df.jpg",
+     "img2": "https://media.rawg.io/media/games/9f3/9f3c513b301d8d7250a64dd7e73c62df.jpg",
+     "wide": true
+    },
+    {
+     "id": "v274480",
+     "name": "Mortal Kombat 11",
+     "note": "2019",
+     "img": "https://media.rawg.io/media/crop/600/400/games/eb5/eb514db62d397c64288160d5bd8fd67a.jpg",
+     "img2": "https://media.rawg.io/media/games/eb5/eb514db62d397c64288160d5bd8fd67a.jpg",
+     "wide": true
+    },
+    {
+     "id": "v374507",
+     "name": "Guilty Gear -Strive-",
+     "note": "2021",
+     "img": "https://media.rawg.io/media/crop/600/400/games/dfe/dfe14d30ed6fccd9db4ae79d3be51d54.jpg",
+     "img2": "https://media.rawg.io/media/games/dfe/dfe14d30ed6fccd9db4ae79d3be51d54.jpg",
+     "wide": true
+    },
+    {
+     "id": "v742771",
+     "name": "Street Fighter 6",
+     "note": "2023",
+     "img": "https://media.rawg.io/media/crop/600/400/games/ce2/ce2463db40cec363f360c29ddcc56884.jpg",
+     "img2": "https://media.rawg.io/media/games/ce2/ce2463db40cec363f360c29ddcc56884.jpg",
+     "wide": true
+    }
+   ]
+  },
+  {
+   "id": "mmorpgs",
+   "src": "{\"type\":\"games\",\"group\":\"Genres\",\"title\":\"MMORPGs\",\"short\":\"MMORPGs\",\"picks\":[\"Ultima Online\",\"EverQuest\",\"RuneScape\",\"EVE Online\",\"Lineage II\",\"World of Warcraft\",\"Guild Wars 2\",\"MapleStory\",\"Star Wars: The Old Republic\",\"The Elder Scrolls Online\",\"Final Fantasy XIV Online\",\"Black Desert Online\",\"Lost Ark\",\"New World\",\"Old School RuneScape\"]}",
+   "cat": "Games",
+   "group": "Genres",
+   "short": "MMORPGs",
+   "title": "MMORPGs",
+   "items": [
+    {
+     "id": "v30988",
+     "name": "Ultima Online",
+     "note": "1997",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/007/007fbea8c99b1fdf6c1dbb4d26503993.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/007/007fbea8c99b1fdf6c1dbb4d26503993.jpg",
+     "wide": true
+    },
+    {
+     "id": "v542578",
+     "name": "EverQuest",
+     "note": "1999",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/63b/63bf623ad3eb7f7d726132563bcfdc08.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/63b/63bf623ad3eb7f7d726132563bcfdc08.jpg",
+     "wide": true
+    },
+    {
+     "id": "v40746",
+     "name": "RuneScape",
+     "note": "2001",
+     "img": "https://media.rawg.io/media/crop/600/400/games/007/0073b6418763a47eb023fba88cb22e7c.jpg",
+     "img2": "https://media.rawg.io/media/games/007/0073b6418763a47eb023fba88cb22e7c.jpg",
+     "wide": true
+    },
+    {
+     "id": "v13498",
+     "name": "EVE Online",
+     "note": "2003",
+     "img": "https://media.rawg.io/media/crop/600/400/games/82b/82be203e68d737762846203811165933.jpg",
+     "img2": "https://media.rawg.io/media/games/82b/82be203e68d737762846203811165933.jpg",
+     "wide": true
+    },
+    {
+     "id": "v34852",
+     "name": "Lineage II",
+     "note": "2003",
+     "img": "https://media.rawg.io/media/crop/600/400/games/df4/df440e729bf260bc825738fcc4c78a00.jpg",
+     "img2": "https://media.rawg.io/media/games/df4/df440e729bf260bc825738fcc4c78a00.jpg",
+     "wide": true
+    },
+    {
+     "id": "v23599",
+     "name": "World of Warcraft",
+     "note": "2004",
+     "img": "https://media.rawg.io/media/crop/600/400/games/0d9/0d930ea604ee240c5af30c58f73ddf48.jpg",
+     "img2": "https://media.rawg.io/media/games/0d9/0d930ea604ee240c5af30c58f73ddf48.jpg",
+     "wide": true
+    },
+    {
+     "id": "v29746",
+     "name": "Guild Wars 2",
+     "note": "2012",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/420/4205650e0fd16a5ba7bf4f8524fac1f1.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/420/4205650e0fd16a5ba7bf4f8524fac1f1.jpg",
+     "wide": true
+    },
+    {
+     "id": "v11260",
+     "name": "MapleStory",
+     "note": "2012",
+     "img": "https://media.rawg.io/media/crop/600/400/games/ec5/ec52542078d1d019befc0514d588f5d6.jpg",
+     "img2": "https://media.rawg.io/media/games/ec5/ec52542078d1d019befc0514d588f5d6.jpg",
+     "wide": true
+    },
+    {
+     "id": "v38965",
+     "name": "Star Wars: The Old Republic",
+     "note": "2011",
+     "img": "https://media.rawg.io/media/crop/600/400/games/baa/baac774072d6319a166a453b8b3506df.jpg",
+     "img2": "https://media.rawg.io/media/games/baa/baac774072d6319a166a453b8b3506df.jpg",
+     "wide": true
+    },
+    {
+     "id": "v41458",
+     "name": "The Elder Scrolls Online",
+     "note": "2014",
+     "img": "https://media.rawg.io/media/crop/600/400/games/1af/1af8786543bcd0ec61a509604902a41f.jpg",
+     "img2": "https://media.rawg.io/media/games/1af/1af8786543bcd0ec61a509604902a41f.jpg",
+     "wide": true
+    },
+    {
+     "id": "v39530",
+     "name": "Final Fantasy XIV Online",
+     "note": "2010",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/8f7/8f73b974f60a58362532440e9183188c.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/8f7/8f73b974f60a58362532440e9183188c.jpg",
+     "wide": true
+    },
+    {
+     "id": "v22571",
+     "name": "Black Desert Online",
+     "note": "2014",
+     "img": "https://media.rawg.io/media/crop/600/400/games/651/651ae84f2d5e36206aad90976a453329.jpg",
+     "img2": "https://media.rawg.io/media/games/651/651ae84f2d5e36206aad90976a453329.jpg",
+     "wide": true
+    },
+    {
+     "id": "v372576",
+     "name": "Lost Ark",
+     "note": "2022",
+     "img": "https://media.rawg.io/media/crop/600/400/games/d9e/d9e868382c48ec98c9b23b8fbe6a2045.jpg",
+     "img2": "https://media.rawg.io/media/games/d9e/d9e868382c48ec98c9b23b8fbe6a2045.jpg",
+     "wide": true
+    },
+    {
+     "id": "v398414",
+     "name": "New World",
+     "note": "2021",
+     "img": "https://media.rawg.io/media/crop/600/400/games/4ad/4ad7dc0f8a01abea9855309e91e933fc.jpg",
+     "img2": "https://media.rawg.io/media/games/4ad/4ad7dc0f8a01abea9855309e91e933fc.jpg",
+     "wide": true
+    },
+    {
+     "id": "v219972",
+     "name": "Old School RuneScape",
+     "note": "2018",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/aca/aca80d402fcf64ea31d63cafe14cc6d2.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/aca/aca80d402fcf64ea31d63cafe14cc6d2.jpg",
+     "wide": true
     }
    ]
   },
@@ -13655,359 +14666,295 @@
    ]
   },
   {
-   "id": "cosy-games",
-   "src": "{\"type\":\"games\",\"group\":\"Genres\",\"title\":\"Cosy games\",\"short\":\"Cosy games\",\"picks\":[\"Stardew Valley\",\"Animal Crossing: New Horizons\",\"A Short Hike\",\"Unpacking\",\"Spiritfarer\",\"Slime Rancher\",\"Cozy Grove\",\"Dorfromantik\",\"Disney Dreamlight Valley\",\"My Time at Portia\",\"Coffee Talk\",\"PowerWash Simulator\",\"Ooblets\",\"Dave the Diver\",\"Littlewood\"]}",
+   "id": "best-nintendo-64-games",
+   "src": "{\"type\":\"console\",\"name\":\"Nintendo 64\",\"title\":\"Best Nintendo 64 games\",\"since\":1996,\"oneSeries\":true}",
    "cat": "Games",
-   "group": "Genres",
-   "short": "Cosy games",
-   "title": "Cosy games",
+   "group": "Consoles",
+   "short": "Best Nintendo 64 games",
+   "title": "Best Nintendo 64 games",
    "items": [
     {
-     "id": "v654",
-     "name": "Stardew Valley",
-     "note": "2016",
-     "img": "https://media.rawg.io/media/crop/600/400/games/713/713269608dc8f2f40f5a670a14b2de94.jpg",
-     "img2": "https://media.rawg.io/media/games/713/713269608dc8f2f40f5a670a14b2de94.jpg",
+     "id": "v54528",
+     "name": "Super Mario 64",
+     "note": "1996",
+     "img": "https://media.rawg.io/media/crop/600/400/games/1d5/1d565b99cad46c44b534d9803e27bd49.jpg",
+     "img2": "https://media.rawg.io/media/games/1d5/1d565b99cad46c44b534d9803e27bd49.jpg",
      "wide": true
     },
     {
-     "id": "v421698",
-     "name": "Animal Crossing: New Horizons",
-     "note": "2020",
-     "img": "https://media.rawg.io/media/crop/600/400/games/42f/42fe1abd4d7c11ca92d93a0fb0f8662b.jpg",
-     "img2": "https://media.rawg.io/media/games/42f/42fe1abd4d7c11ca92d93a0fb0f8662b.jpg",
+     "id": "v54435",
+     "name": "Mario Kart 64 (1996)",
+     "note": "1996",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/b19/b196fdca25e4df755f6fafd02df158d9.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/b19/b196fdca25e4df755f6fafd02df158d9.jpg",
      "wide": true
     },
     {
-     "id": "v304247",
-     "name": "A Short Hike",
-     "note": "2019",
-     "img": "https://media.rawg.io/media/crop/600/400/games/c38/c38deeb8f331a78c89e64ad71a1db361.jpg",
-     "img2": "https://media.rawg.io/media/games/c38/c38deeb8f331a78c89e64ad71a1db361.jpg",
-     "wide": true
-    },
-    {
-     "id": "v364942",
-     "name": "Unpacking",
-     "note": "2021",
-     "img": "https://media.rawg.io/media/crop/600/400/games/c11/c1118fbcfd846c631ecb7646f8efc780.jpg",
-     "img2": "https://media.rawg.io/media/games/c11/c1118fbcfd846c631ecb7646f8efc780.jpg",
-     "wide": true
-    },
-    {
-     "id": "v326236",
-     "name": "Spiritfarer",
-     "note": "2020",
-     "img": "https://media.rawg.io/media/crop/600/400/games/727/727f889060e688bbdcba7b2a5d26a603.jpg",
-     "img2": "https://media.rawg.io/media/games/727/727f889060e688bbdcba7b2a5d26a603.jpg",
-     "wide": true
-    },
-    {
-     "id": "v9736",
-     "name": "Slime Rancher",
-     "note": "2016",
-     "img": "https://media.rawg.io/media/crop/600/400/games/43f/43f4f3a50651f371c147ecce8ee841a9.jpg",
-     "img2": "https://media.rawg.io/media/games/43f/43f4f3a50651f371c147ecce8ee841a9.jpg",
-     "wide": true
-    },
-    {
-     "id": "v576532",
-     "name": "Cozy Grove",
-     "note": "2021",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/ea5/ea586b50b2cfe7ffa946488a91275dd1.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/ea5/ea586b50b2cfe7ffa946488a91275dd1.jpg",
-     "wide": true
-    },
-    {
-     "id": "v568931",
-     "name": "Dorfromantik",
-     "note": "2022",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/b00/b00b7cc04dd09531b631ea4575696276.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/b00/b00b7cc04dd09531b631ea4575696276.jpg",
-     "wide": true
-    },
-    {
-     "id": "v842395",
-     "name": "Disney Dreamlight Valley",
-     "note": "2023",
-     "img": "https://media.rawg.io/media/crop/600/400/games/2f7/2f77dc8fa62aa506e7a06887d3756c3f.jpg",
-     "img2": "https://media.rawg.io/media/games/2f7/2f77dc8fa62aa506e7a06887d3756c3f.jpg",
-     "wide": true
-    },
-    {
-     "id": "v44029",
-     "name": "My Time at Portia",
-     "note": "2019",
-     "img": "https://media.rawg.io/media/crop/600/400/games/176/1765390b699b432edc3a208d544c6ba0.jpg",
-     "img2": "https://media.rawg.io/media/games/176/1765390b699b432edc3a208d544c6ba0.jpg",
-     "wide": true
-    },
-    {
-     "id": "v59796",
-     "name": "Coffee Talk",
-     "note": "2020",
-     "img": "https://media.rawg.io/media/crop/600/400/games/4d9/4d90960bbb1c92966b8ec7a4f11864a7.jpg",
-     "img2": "https://media.rawg.io/media/games/4d9/4d90960bbb1c92966b8ec7a4f11864a7.jpg",
-     "wide": true
-    },
-    {
-     "id": "v581104",
-     "name": "PowerWash Simulator",
-     "note": "2022",
-     "img": "https://media.rawg.io/media/crop/600/400/games/659/65959a07c4e6dc7a9034993bbb3ba232.jpg",
-     "img2": "https://media.rawg.io/media/games/659/65959a07c4e6dc7a9034993bbb3ba232.jpg",
-     "wide": true
-    },
-    {
-     "id": "v28078",
-     "name": "Ooblets",
-     "note": "2022",
-     "img": "https://media.rawg.io/media/crop/600/400/games/88d/88d6f0c539aaa59f5d64333b312c1d3b.jpg",
-     "img2": "https://media.rawg.io/media/games/88d/88d6f0c539aaa59f5d64333b312c1d3b.jpg",
-     "wide": true
-    },
-    {
-     "id": "v871264",
-     "name": "Dave the Diver",
-     "note": "2023",
-     "img": "https://media.rawg.io/media/crop/600/400/games/1ee/1eec43616e3ff00a674124d746926b23.jpg",
-     "img2": "https://media.rawg.io/media/games/1ee/1eec43616e3ff00a674124d746926b23.jpg",
-     "wide": true
-    },
-    {
-     "id": "v288671",
-     "name": "Littlewood",
-     "note": "2020",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/d54/d54f13f25299c3c3a6ac7e966ff33daa.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/d54/d54f13f25299c3c3a6ac7e966ff33daa.jpg",
-     "wide": true
-    }
-   ]
-  },
-  {
-   "id": "first-person-shooters",
-   "src": "{\"type\":\"games\",\"group\":\"Genres\",\"title\":\"First-person shooters\",\"short\":\"First-person shooters\",\"picks\":[[\"DOOM (1993)\",\"DOOM\",1993],[\"GoldenEye 007\",\"GoldenEye 007\",1997],[\"Half-Life\",\"Half-Life\",1998],[\"Counter-Strike\",\"Counter-Strike\",2000],[\"Halo: Combat Evolved\",\"Halo: Combat Evolved\",2001],[\"Half-Life 2\",\"Half-Life 2\",2004],[\"Call of Duty 4: Modern Warfare\",\"Call of Duty 4: Modern Warfare\",2007],[\"BioShock\",\"BioShock\",2007],[\"Halo 3\",\"Halo 3\",2007],[\"Left 4 Dead 2\",\"Left 4 Dead 2\",2009],[\"Borderlands 2\",\"Borderlands 2\",2012],[\"Overwatch\",\"Overwatch\",2016],[\"DOOM (2016)\",\"DOOM\",2016],[\"Titanfall 2\",\"Titanfall 2\",2016],[\"Destiny 2\",\"Destiny 2\",2017]]}",
-   "cat": "Games",
-   "group": "Genres",
-   "short": "First-person shooters",
-   "title": "First-person shooters",
-   "items": [
-    {
-     "id": "v52884",
-     "name": "DOOM (1993)",
-     "note": "1993",
-     "img": "https://media.rawg.io/media/crop/600/400/games/47b/47b50d880be8453bf9cda6e5c007bc26.jpg",
-     "img2": "https://media.rawg.io/media/games/47b/47b50d880be8453bf9cda6e5c007bc26.jpg",
+     "id": "v54520",
+     "name": "Star Fox 64 (1997)",
+     "note": "1997",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/569/5694a091203e4d29c15a9b734f933e9c.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/569/5694a091203e4d29c15a9b734f933e9c.jpg",
      "wide": true
     },
     {
      "id": "v54403",
-     "name": "GoldenEye 007",
+     "name": "GoldenEye 007 (1997)",
      "note": "1997",
      "img": "https://media.rawg.io/media/crop/600/400/games/5a1/5a145fe3002fc988140f7f00edcb9715.jpg",
      "img2": "https://media.rawg.io/media/games/5a1/5a145fe3002fc988140f7f00edcb9715.jpg",
      "wide": true
     },
     {
-     "id": "v18080",
-     "name": "Half-Life",
+     "id": "v54379",
+     "name": "Diddy Kong Racing",
+     "note": "1997",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/c06/c0604dd30811b9691c17f6c6398d9489.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/c06/c0604dd30811b9691c17f6c6398d9489.jpg",
+     "wide": true
+    },
+    {
+     "id": "v25097",
+     "name": "The Legend of Zelda: Ocarina of Time (1998)",
      "note": "1998",
-     "img": "https://media.rawg.io/media/crop/600/400/games/6c5/6c55e22185876626881b76c11922b073.jpg",
-     "img2": "https://media.rawg.io/media/games/6c5/6c55e22185876626881b76c11922b073.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/games/3a0/3a0c8e9ed3a711c542218831b893a0fa.jpg",
+     "img2": "https://media.rawg.io/media/games/3a0/3a0c8e9ed3a711c542218831b893a0fa.jpg",
      "wide": true
     },
     {
-     "id": "v19301",
-     "name": "Counter-Strike",
+     "id": "v53394",
+     "name": "Mario Party",
+     "note": "1998",
+     "img": "https://media.rawg.io/media/crop/600/400/games/576/576759570d5f9e67d4f1398e73a79bef.jpg",
+     "img2": "https://media.rawg.io/media/games/576/576759570d5f9e67d4f1398e73a79bef.jpg",
+     "wide": true
+    },
+    {
+     "id": "v54531",
+     "name": "Super Smash Bros. (1999)",
+     "note": "1999",
+     "img": "https://media.rawg.io/media/crop/600/400/games/e56/e56d68182f04f90a31068da55ba91ee4.jpg",
+     "img2": "https://media.rawg.io/media/games/e56/e56d68182f04f90a31068da55ba91ee4.jpg",
+     "wide": true
+    },
+    {
+     "id": "v23833",
+     "name": "Pokémon Snap",
+     "note": "1999",
+     "img": "https://media.rawg.io/media/crop/600/400/games/ec4/ec4be61f0f41cf1d138501330a1b54ee.jpg",
+     "img2": "https://media.rawg.io/media/games/ec4/ec4be61f0f41cf1d138501330a1b54ee.jpg",
+     "wide": true
+    },
+    {
+     "id": "v54481",
+     "name": "Pokémon Stadium",
+     "note": "1999",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/67d/67da39fd51f95e3b591264a3641c8be0.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/67d/67da39fd51f95e3b591264a3641c8be0.jpg",
+     "wide": true
+    },
+    {
+     "id": "v54380",
+     "name": "Donkey Kong 64",
+     "note": "1999",
+     "img": "https://media.rawg.io/media/crop/600/400/games/458/4589f9727a1b8bcc0109e5a33a4ea944.jpg",
+     "img2": "https://media.rawg.io/media/games/458/4589f9727a1b8bcc0109e5a33a4ea944.jpg",
+     "wide": true
+    },
+    {
+     "id": "v54424",
+     "name": "Kirby 64: The Crystal Shards",
      "note": "2000",
-     "img": "https://media.rawg.io/media/crop/600/400/games/9c4/9c47f320eb73c9a02d462e12f6206b26.jpg",
-     "img2": "https://media.rawg.io/media/games/9c4/9c47f320eb73c9a02d462e12f6206b26.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/games/d45/d452cba755f2798e338d6b728a40c331.jpg",
+     "img2": "https://media.rawg.io/media/games/d45/d452cba755f2798e338d6b728a40c331.jpg",
      "wide": true
     },
     {
-     "id": "v28448",
-     "name": "Halo: Combat Evolved",
+     "id": "v25178",
+     "name": "Paper Mario (2000)",
+     "note": "2000",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/062/0622bec29ae3ef0e8762a9c9f3e7b0f4.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/062/0622bec29ae3ef0e8762a9c9f3e7b0f4.jpg",
+     "wide": true
+    },
+    {
+     "id": "v54484",
+     "name": "Pokémon Stadium 2",
+     "note": "2000",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/a1a/a1a2d34e1a67aa0b499d817b79855289.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/a1a/a1a2d34e1a67aa0b499d817b79855289.jpg",
+     "wide": true
+    },
+    {
+     "id": "v54346",
+     "name": "Animal Crossing",
      "note": "2001",
-     "img": "https://media.rawg.io/media/crop/600/400/games/abf/abffd94ed6fe34027c720bee593c06d2.jpg",
-     "img2": "https://media.rawg.io/media/games/abf/abffd94ed6fe34027c720bee593c06d2.jpg",
-     "wide": true
-    },
-    {
-     "id": "v13537",
-     "name": "Half-Life 2",
-     "note": "2004",
-     "img": "https://media.rawg.io/media/crop/600/400/games/b8c/b8c243eaa0fbac8115e0cdccac3f91dc.jpg",
-     "img2": "https://media.rawg.io/media/games/b8c/b8c243eaa0fbac8115e0cdccac3f91dc.jpg",
-     "wide": true
-    },
-    {
-     "id": "v4535",
-     "name": "Call of Duty 4: Modern Warfare",
-     "note": "2007",
-     "img": "https://media.rawg.io/media/crop/600/400/games/9fb/9fbaea2168caea1f806546dfdaaeb1da.jpg",
-     "img2": "https://media.rawg.io/media/games/9fb/9fbaea2168caea1f806546dfdaaeb1da.jpg",
-     "wide": true
-    },
-    {
-     "id": "v4286",
-     "name": "BioShock",
-     "note": "2007",
-     "img": "https://media.rawg.io/media/crop/600/400/games/bc0/bc06a29ceac58652b684deefe7d56099.jpg",
-     "img2": "https://media.rawg.io/media/games/bc0/bc06a29ceac58652b684deefe7d56099.jpg",
-     "wide": true
-    },
-    {
-     "id": "v28589",
-     "name": "Halo 3",
-     "note": "2007",
-     "img": "https://media.rawg.io/media/crop/600/400/games/982/982ff61d574fed5e416cb1867b40d9b0.jpg",
-     "img2": "https://media.rawg.io/media/games/982/982ff61d574fed5e416cb1867b40d9b0.jpg",
-     "wide": true
-    },
-    {
-     "id": "v12020",
-     "name": "Left 4 Dead 2",
-     "note": "2009",
-     "img": "https://media.rawg.io/media/crop/600/400/games/d58/d588947d4286e7b5e0e12e1bea7d9844.jpg",
-     "img2": "https://media.rawg.io/media/games/d58/d588947d4286e7b5e0e12e1bea7d9844.jpg",
-     "wide": true
-    },
-    {
-     "id": "v802",
-     "name": "Borderlands 2",
-     "note": "2012",
-     "img": "https://media.rawg.io/media/crop/600/400/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg",
-     "img2": "https://media.rawg.io/media/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg",
-     "wide": true
-    },
-    {
-     "id": "v22508",
-     "name": "Overwatch",
-     "note": "2016",
-     "img": "https://media.rawg.io/media/crop/600/400/games/4ea/4ea507ceebeabb43edbc09468f5aaac6.jpg",
-     "img2": "https://media.rawg.io/media/games/4ea/4ea507ceebeabb43edbc09468f5aaac6.jpg",
-     "wide": true
-    },
-    {
-     "id": "v2454",
-     "name": "DOOM (2016)",
-     "note": "2016",
-     "img": "https://media.rawg.io/media/crop/600/400/games/587/587588c64afbff80e6f444eb2e46f9da.jpg",
-     "img2": "https://media.rawg.io/media/games/587/587588c64afbff80e6f444eb2e46f9da.jpg",
-     "wide": true
-    },
-    {
-     "id": "v923",
-     "name": "Titanfall 2",
-     "note": "2016",
-     "img": "https://media.rawg.io/media/crop/600/400/games/569/56978b5a77f13aa2ec5d09ec81d01cad.jpg",
-     "img2": "https://media.rawg.io/media/games/569/56978b5a77f13aa2ec5d09ec81d01cad.jpg",
-     "wide": true
-    },
-    {
-     "id": "v32",
-     "name": "Destiny 2",
-     "note": "2017",
-     "img": "https://media.rawg.io/media/crop/600/400/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg",
-     "img2": "https://media.rawg.io/media/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/games/9dc/9dc9fbd2c2054a3a9b7c33a906546bea.jpg",
+     "img2": "https://media.rawg.io/media/games/9dc/9dc9fbd2c2054a3a9b7c33a906546bea.jpg",
      "wide": true
     }
    ]
   },
   {
-   "id": "two-player-fighting-games",
-   "src": "{\"type\":\"games\",\"group\":\"Genres\",\"title\":\"Two-player fighting games\",\"short\":\"Two-player fighting games\",\"picks\":[[\"Street Fighter II\",\"Street Fighter II\",1991],[\"Mortal Kombat II\",\"Mortal Kombat II\",1993],[\"Killer Instinct\",\"Killer Instinct\",1994],[\"Tekken 3\",\"Tekken 3\",1997],[\"Street Fighter III: 3rd Strike\",\"Street Fighter III: 3rd Strike\",1999],[\"Super Smash Bros. Melee\",\"Super Smash Bros. Melee\",2001],[\"Soulcalibur II\",\"Soulcalibur II\",2002],[\"Street Fighter IV\",\"Street Fighter IV\",2008],[\"Injustice 2\",\"Injustice 2\",2017],[\"Tekken 7\",\"Tekken 7\",2015],[\"Dragon Ball FighterZ\",\"Dragon Ball FighterZ\",2018],[\"Super Smash Bros. Ultimate\",\"Super Smash Bros. Ultimate\",2018],[\"Mortal Kombat 11\",\"Mortal Kombat 11\",2019],[\"Guilty Gear -Strive-\",\"Guilty Gear -Strive-\",2021],[\"Street Fighter 6\",\"Street Fighter 6\",2023]]}",
+   "id": "best-super-nintendo-games",
+   "src": "{\"type\":\"console\",\"name\":\"SNES\",\"title\":\"Best Super Nintendo games\",\"since\":1990,\"oneSeries\":true}",
    "cat": "Games",
-   "group": "Genres",
-   "short": "Two-player fighting games",
-   "title": "Two-player fighting games",
+   "group": "Consoles",
+   "short": "Best Super Nintendo games",
+   "title": "Best Super Nintendo games",
    "items": [
     {
-     "id": "v55132",
-     "name": "Street Fighter II",
+     "id": "v27168",
+     "name": "Dr. Mario",
+     "note": "1990",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/05f/05f7d385e48f9f384cd4d496855029cd.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/05f/05f7d385e48f9f384cd4d496855029cd.jpg",
+     "wide": true
+    },
+    {
+     "id": "v24899",
+     "name": "Super Mario World",
+     "note": "1990",
+     "img": "https://media.rawg.io/media/crop/600/400/games/3bb/3bb2c8d774c3a83eb2c17d0d3d51f020.jpg",
+     "img2": "https://media.rawg.io/media/games/3bb/3bb2c8d774c3a83eb2c17d0d3d51f020.jpg",
+     "wide": true
+    },
+    {
+     "id": "v24918",
+     "name": "F-Zero",
+     "note": "1990",
+     "img": "https://media.rawg.io/media/crop/600/400/games/c45/c45a1f2502a1e1c88c4e14875fceab72.jpg",
+     "img2": "https://media.rawg.io/media/games/c45/c45a1f2502a1e1c88c4e14875fceab72.jpg",
+     "wide": true
+    },
+    {
+     "id": "v25096",
+     "name": "The Legend of Zelda: A Link to the Past",
      "note": "1991",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/40b/40b529990743d2515760b1909eb61020.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/40b/40b529990743d2515760b1909eb61020.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/games/087/08727beb32c364d30e8b2a1aa8595f8e.jpg",
+     "img2": "https://media.rawg.io/media/games/087/08727beb32c364d30e8b2a1aa8595f8e.jpg",
      "wide": true
     },
     {
-     "id": "v29426",
-     "name": "Mortal Kombat II",
+     "id": "v52594",
+     "name": "Star Fox (1993)",
      "note": "1993",
-     "img": "https://media.rawg.io/media/crop/600/400/games/0df/0dfe8852fa43d58cbdeb973765a9828d.jpg",
-     "img2": "https://media.rawg.io/media/games/0df/0dfe8852fa43d58cbdeb973765a9828d.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/games/618/61863759abf17a7f94fa6ededb6f178b.jpg",
+     "img2": "https://media.rawg.io/media/games/618/61863759abf17a7f94fa6ededb6f178b.jpg",
      "wide": true
     },
     {
-     "id": "v55275",
-     "name": "Killer Instinct",
+     "id": "v57518",
+     "name": "Super Mario All-Stars (1993)",
+     "note": "1993",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/4a1/4a1b357e73d20695ec71461cab5a5073.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/4a1/4a1b357e73d20695ec71461cab5a5073.jpg",
+     "wide": true
+    },
+    {
+     "id": "v57475",
+     "name": "Secret of Mana (1993)",
+     "note": "1993",
+     "img": "https://media.rawg.io/media/crop/600/400/games/187/187c4033702cc8e5ba106820a4c39a4b.jpg",
+     "img2": "https://media.rawg.io/media/games/187/187c4033702cc8e5ba106820a4c39a4b.jpg",
+     "wide": true
+    },
+    {
+     "id": "v24478",
+     "name": "Super Mario Kart",
+     "note": "1993",
+     "img": "https://media.rawg.io/media/crop/600/400/games/4da/4da63441cb94d7adb4d954871b65db30.jpg",
+     "img2": "https://media.rawg.io/media/games/4da/4da63441cb94d7adb4d954871b65db30.jpg",
+     "wide": true
+    },
+    {
+     "id": "v54097",
+     "name": "Teenage Mutant Ninja Turtles: Tournament Fighters",
+     "note": "1993",
+     "img": "https://media.rawg.io/media/crop/600/400/games/bee/bee5e50dfa4d68102df34d1546728f75.jpg",
+     "img2": "https://media.rawg.io/media/games/bee/bee5e50dfa4d68102df34d1546728f75.jpg",
+     "wide": true
+    },
+    {
+     "id": "v53714",
+     "name": "Battletoads & Double Dragon",
+     "note": "1993",
+     "img": "https://media.rawg.io/media/crop/600/400/games/5d9/5d964c81ef84a680319ae3860ebe8463.jpg",
+     "img2": "https://media.rawg.io/media/games/5d9/5d964c81ef84a680319ae3860ebe8463.jpg",
+     "wide": true
+    },
+    {
+     "id": "v27022",
+     "name": "Super Metroid",
      "note": "1994",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/b5a/b5a3a90006a391843dde7cb0b0c9c997.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/b5a/b5a3a90006a391843dde7cb0b0c9c997.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/games/fc9/fc9bb16db9714d3731823fb0bf706533.jpg",
+     "img2": "https://media.rawg.io/media/games/fc9/fc9bb16db9714d3731823fb0bf706533.jpg",
      "wide": true
     },
     {
-     "id": "v57842",
-     "name": "Tekken 3",
-     "note": "1997",
-     "img": "https://media.rawg.io/media/crop/600/400/games/4aa/4aa1440932f4a12d9d0ea70a5e2164f6.jpg",
-     "img2": "https://media.rawg.io/media/games/4aa/4aa1440932f4a12d9d0ea70a5e2164f6.jpg",
+     "id": "v24079",
+     "name": "EarthBound",
+     "note": "1994",
+     "img": "https://media.rawg.io/media/crop/600/400/games/f0d/f0d85490daf02a671ed556ef2011eaab.jpg",
+     "img2": "https://media.rawg.io/media/games/f0d/f0d85490daf02a671ed556ef2011eaab.jpg",
      "wide": true
     },
     {
-     "id": "v54757",
-     "name": "Street Fighter III: 3rd Strike",
-     "note": "1999",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/873/873d3853f8c388aded7506bedfdb0c4a.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/873/873d3853f8c388aded7506bedfdb0c4a.jpg",
+     "id": "v27571",
+     "name": "Donkey Kong Country",
+     "note": "1994",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/6df/6df71f3ff0f6d6bbac306cb9adf935ee.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/6df/6df71f3ff0f6d6bbac306cb9adf935ee.jpg",
      "wide": true
     },
     {
-     "id": "v56222",
-     "name": "Super Smash Bros. Melee",
-     "note": "2001",
-     "img": "https://media.rawg.io/media/crop/600/400/games/b78/b780abf866cba1422d01bfa75612dd29.jpg",
-     "img2": "https://media.rawg.io/media/games/b78/b780abf866cba1422d01bfa75612dd29.jpg",
+     "id": "v56949",
+     "name": "Boogerman: A Pick and Flick Adventure",
+     "note": "1996",
+     "img": "https://media.rawg.io/media/crop/600/400/screenshots/2c5/2c5f76b7b7f79dccf9957b11cc350745.jpg",
+     "img2": "https://media.rawg.io/media/screenshots/2c5/2c5f76b7b7f79dccf9957b11cc350745.jpg",
      "wide": true
     },
     {
-     "id": "v400295",
-     "name": "Soulcalibur II",
-     "note": "2002",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/570/570a6ed91febd5f3ffc889368e13a46e.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/570/570a6ed91febd5f3ffc889368e13a46e.jpg",
+     "id": "v25557",
+     "name": "Super Mario RPG: Legend of the Seven Stars",
+     "note": "1996",
+     "img": "https://media.rawg.io/media/crop/600/400/games/384/3848abcd66c93552e46647c3db985f30.jpg",
+     "img2": "https://media.rawg.io/media/games/384/3848abcd66c93552e46647c3db985f30.jpg",
      "wide": true
-    },
+    }
+   ]
+  },
+  {
+   "id": "best-nintendo-switch-games",
+   "src": "{\"type\":\"console\",\"name\":\"Nintendo Switch\",\"title\":\"Best Nintendo Switch games\",\"order\":\"-metacritic\",\"since\":2017,\"oneSeries\":true}",
+   "cat": "Games",
+   "group": "Consoles",
+   "short": "Best Nintendo Switch games",
+   "title": "Best Nintendo Switch games",
+   "items": [
     {
-     "id": "v121",
-     "name": "Street Fighter IV",
-     "note": "2008",
-     "img": "https://media.rawg.io/media/crop/600/400/games/0a2/0a2ee705109a6d8d94e28bef03f6d598.jpg",
-     "img2": "https://media.rawg.io/media/games/0a2/0a2ee705109a6d8d94e28bef03f6d598.jpg",
-     "wide": true
-    },
-    {
-     "id": "v38",
-     "name": "Injustice 2",
+     "id": "v22511",
+     "name": "The Legend of Zelda: Breath of the Wild",
      "note": "2017",
-     "img": "https://media.rawg.io/media/crop/600/400/games/e42/e428e70c97064037326d7863a43a0454.jpg",
-     "img2": "https://media.rawg.io/media/games/e42/e428e70c97064037326d7863a43a0454.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/games/cc1/cc196a5ad763955d6532cdba236f730c.jpg",
+     "img2": "https://media.rawg.io/media/games/cc1/cc196a5ad763955d6532cdba236f730c.jpg",
      "wide": true
     },
     {
-     "id": "v36",
-     "name": "Tekken 7",
-     "note": "2015",
-     "img": "https://media.rawg.io/media/crop/600/400/games/62b/62b035add7205737540d66e082b85930.jpg",
-     "img2": "https://media.rawg.io/media/games/62b/62b035add7205737540d66e082b85930.jpg",
+     "id": "v23165",
+     "name": "Mario Kart 8 Deluxe",
+     "note": "2017",
+     "img": "https://media.rawg.io/media/crop/600/400/games/6f8/6f846e941c78cfbabe53cd67e55ced83.jpg",
+     "img2": "https://media.rawg.io/media/games/6f8/6f846e941c78cfbabe53cd67e55ced83.jpg",
      "wide": true
     },
     {
-     "id": "v49225",
-     "name": "Dragon Ball FighterZ",
-     "note": "2018",
-     "img": "https://media.rawg.io/media/crop/600/400/games/96b/96b9420bbd4bd1b79bf2a67f7779733a.jpg",
-     "img2": "https://media.rawg.io/media/games/96b/96b9420bbd4bd1b79bf2a67f7779733a.jpg",
+     "id": "v28026",
+     "name": "Super Mario Odyssey",
+     "note": "2017",
+     "img": "https://media.rawg.io/media/crop/600/400/games/267/267bd0dbc496f52692487d07d014c061.jpg",
+     "img2": "https://media.rawg.io/media/games/267/267bd0dbc496f52692487d07d014c061.jpg",
      "wide": true
     },
     {
@@ -14019,157 +14966,83 @@
      "wide": true
     },
     {
-     "id": "v274480",
-     "name": "Mortal Kombat 11",
+     "id": "v292840",
+     "name": "Super Mario Maker 2",
      "note": "2019",
-     "img": "https://media.rawg.io/media/crop/600/400/games/eb5/eb514db62d397c64288160d5bd8fd67a.jpg",
-     "img2": "https://media.rawg.io/media/games/eb5/eb514db62d397c64288160d5bd8fd67a.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/games/25f/25f1b4a7b6ed811a5f6e34e43d6cc550.jpg",
+     "img2": "https://media.rawg.io/media/games/25f/25f1b4a7b6ed811a5f6e34e43d6cc550.jpg",
      "wide": true
     },
     {
-     "id": "v374507",
-     "name": "Guilty Gear -Strive-",
+     "id": "v246478",
+     "name": "Fire Emblem: Three Houses",
+     "note": "2019",
+     "img": "https://media.rawg.io/media/crop/600/400/games/530/53081dbd5003f990fa5312404ac3d71a.jpg",
+     "img2": "https://media.rawg.io/media/games/530/53081dbd5003f990fa5312404ac3d71a.jpg",
+     "wide": true
+    },
+    {
+     "id": "v292843",
+     "name": "Astral Chain",
+     "note": "2019",
+     "img": "https://media.rawg.io/media/crop/600/400/games/75b/75b91d05160c819fa6bbafe920548300.jpg",
+     "img2": "https://media.rawg.io/media/games/75b/75b91d05160c819fa6bbafe920548300.jpg",
+     "wide": true
+    },
+    {
+     "id": "v292842",
+     "name": "The Legend of Zelda: Link's Awakening (2019)",
+     "note": "2019",
+     "img": "https://media.rawg.io/media/crop/600/400/games/1bb/1bb38f1354db6596ccd6bdcb4a7f6cbc.jpg",
+     "img2": "https://media.rawg.io/media/games/1bb/1bb38f1354db6596ccd6bdcb4a7f6cbc.jpg",
+     "wide": true
+    },
+    {
+     "id": "v236697",
+     "name": "Luigi's Mansion 3",
+     "note": "2019",
+     "img": "https://media.rawg.io/media/crop/600/400/games/3d9/3d972802b9ee793098b73ecf676b687e.jpeg",
+     "img2": "https://media.rawg.io/media/games/3d9/3d972802b9ee793098b73ecf676b687e.jpeg",
+     "wide": true
+    },
+    {
+     "id": "v421698",
+     "name": "Animal Crossing: New Horizons",
+     "note": "2020",
+     "img": "https://media.rawg.io/media/crop/600/400/games/42f/42fe1abd4d7c11ca92d93a0fb0f8662b.jpg",
+     "img2": "https://media.rawg.io/media/games/42f/42fe1abd4d7c11ca92d93a0fb0f8662b.jpg",
+     "wide": true
+    },
+    {
+     "id": "v371831",
+     "name": "Xenoblade Chronicles: Definitive Edition",
+     "note": "2020",
+     "img": "https://media.rawg.io/media/crop/600/400/games/773/7739920af75d01f6a3b7e76a21d1633a.jpg",
+     "img2": "https://media.rawg.io/media/games/773/7739920af75d01f6a3b7e76a21d1633a.jpg",
+     "wide": true
+    },
+    {
+     "id": "v487916",
+     "name": "Super Mario 3D World + Bowser’s Fury",
      "note": "2021",
-     "img": "https://media.rawg.io/media/crop/600/400/games/dfe/dfe14d30ed6fccd9db4ae79d3be51d54.jpg",
-     "img2": "https://media.rawg.io/media/games/dfe/dfe14d30ed6fccd9db4ae79d3be51d54.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/games/cd2/cd22f0dcf8f080086c60f77eed7a8a93.jpg",
+     "img2": "https://media.rawg.io/media/games/cd2/cd22f0dcf8f080086c60f77eed7a8a93.jpg",
      "wide": true
     },
     {
-     "id": "v742771",
-     "name": "Street Fighter 6",
-     "note": "2023",
-     "img": "https://media.rawg.io/media/crop/600/400/games/ce2/ce2463db40cec363f360c29ddcc56884.jpg",
-     "img2": "https://media.rawg.io/media/games/ce2/ce2463db40cec363f360c29ddcc56884.jpg",
-     "wide": true
-    }
-   ]
-  },
-  {
-   "id": "mmorpgs",
-   "src": "{\"type\":\"games\",\"group\":\"Genres\",\"title\":\"MMORPGs\",\"short\":\"MMORPGs\",\"picks\":[\"Ultima Online\",\"EverQuest\",\"RuneScape\",\"EVE Online\",\"Lineage II\",\"World of Warcraft\",\"Guild Wars 2\",\"MapleStory\",\"Star Wars: The Old Republic\",\"The Elder Scrolls Online\",\"Final Fantasy XIV Online\",\"Black Desert Online\",\"Lost Ark\",\"New World\",\"Old School RuneScape\"]}",
-   "cat": "Games",
-   "group": "Genres",
-   "short": "MMORPGs",
-   "title": "MMORPGs",
-   "items": [
-    {
-     "id": "v30988",
-     "name": "Ultima Online",
-     "note": "1997",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/007/007fbea8c99b1fdf6c1dbb4d26503993.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/007/007fbea8c99b1fdf6c1dbb4d26503993.jpg",
-     "wide": true
-    },
-    {
-     "id": "v542578",
-     "name": "EverQuest",
-     "note": "1999",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/63b/63bf623ad3eb7f7d726132563bcfdc08.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/63b/63bf623ad3eb7f7d726132563bcfdc08.jpg",
-     "wide": true
-    },
-    {
-     "id": "v40746",
-     "name": "RuneScape",
-     "note": "2001",
-     "img": "https://media.rawg.io/media/crop/600/400/games/007/0073b6418763a47eb023fba88cb22e7c.jpg",
-     "img2": "https://media.rawg.io/media/games/007/0073b6418763a47eb023fba88cb22e7c.jpg",
-     "wide": true
-    },
-    {
-     "id": "v13498",
-     "name": "EVE Online",
-     "note": "2003",
-     "img": "https://media.rawg.io/media/crop/600/400/games/82b/82be203e68d737762846203811165933.jpg",
-     "img2": "https://media.rawg.io/media/games/82b/82be203e68d737762846203811165933.jpg",
-     "wide": true
-    },
-    {
-     "id": "v34852",
-     "name": "Lineage II",
-     "note": "2003",
-     "img": "https://media.rawg.io/media/crop/600/400/games/df4/df440e729bf260bc825738fcc4c78a00.jpg",
-     "img2": "https://media.rawg.io/media/games/df4/df440e729bf260bc825738fcc4c78a00.jpg",
-     "wide": true
-    },
-    {
-     "id": "v23599",
-     "name": "World of Warcraft",
-     "note": "2004",
-     "img": "https://media.rawg.io/media/crop/600/400/games/0d9/0d930ea604ee240c5af30c58f73ddf48.jpg",
-     "img2": "https://media.rawg.io/media/games/0d9/0d930ea604ee240c5af30c58f73ddf48.jpg",
-     "wide": true
-    },
-    {
-     "id": "v29746",
-     "name": "Guild Wars 2",
-     "note": "2012",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/420/4205650e0fd16a5ba7bf4f8524fac1f1.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/420/4205650e0fd16a5ba7bf4f8524fac1f1.jpg",
-     "wide": true
-    },
-    {
-     "id": "v11260",
-     "name": "MapleStory",
-     "note": "2012",
-     "img": "https://media.rawg.io/media/crop/600/400/games/ec5/ec52542078d1d019befc0514d588f5d6.jpg",
-     "img2": "https://media.rawg.io/media/games/ec5/ec52542078d1d019befc0514d588f5d6.jpg",
-     "wide": true
-    },
-    {
-     "id": "v38965",
-     "name": "Star Wars: The Old Republic",
-     "note": "2011",
-     "img": "https://media.rawg.io/media/crop/600/400/games/baa/baac774072d6319a166a453b8b3506df.jpg",
-     "img2": "https://media.rawg.io/media/games/baa/baac774072d6319a166a453b8b3506df.jpg",
-     "wide": true
-    },
-    {
-     "id": "v41458",
-     "name": "The Elder Scrolls Online",
-     "note": "2014",
-     "img": "https://media.rawg.io/media/crop/600/400/games/1af/1af8786543bcd0ec61a509604902a41f.jpg",
-     "img2": "https://media.rawg.io/media/games/1af/1af8786543bcd0ec61a509604902a41f.jpg",
-     "wide": true
-    },
-    {
-     "id": "v39530",
-     "name": "Final Fantasy XIV Online",
-     "note": "2010",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/8f7/8f73b974f60a58362532440e9183188c.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/8f7/8f73b974f60a58362532440e9183188c.jpg",
-     "wide": true
-    },
-    {
-     "id": "v22571",
-     "name": "Black Desert Online",
-     "note": "2014",
-     "img": "https://media.rawg.io/media/crop/600/400/games/651/651ae84f2d5e36206aad90976a453329.jpg",
-     "img2": "https://media.rawg.io/media/games/651/651ae84f2d5e36206aad90976a453329.jpg",
-     "wide": true
-    },
-    {
-     "id": "v372576",
-     "name": "Lost Ark",
+     "id": "v50737",
+     "name": "Bayonetta 3",
      "note": "2022",
-     "img": "https://media.rawg.io/media/crop/600/400/games/d9e/d9e868382c48ec98c9b23b8fbe6a2045.jpg",
-     "img2": "https://media.rawg.io/media/games/d9e/d9e868382c48ec98c9b23b8fbe6a2045.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/games/c30/c30ac50cb13096f5402250bf666a321c.jpg",
+     "img2": "https://media.rawg.io/media/games/c30/c30ac50cb13096f5402250bf666a321c.jpg",
      "wide": true
     },
     {
-     "id": "v398414",
-     "name": "New World",
-     "note": "2021",
-     "img": "https://media.rawg.io/media/crop/600/400/games/4ad/4ad7dc0f8a01abea9855309e91e933fc.jpg",
-     "img2": "https://media.rawg.io/media/games/4ad/4ad7dc0f8a01abea9855309e91e933fc.jpg",
-     "wide": true
-    },
-    {
-     "id": "v219972",
-     "name": "Old School RuneScape",
-     "note": "2018",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/aca/aca80d402fcf64ea31d63cafe14cc6d2.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/aca/aca80d402fcf64ea31d63cafe14cc6d2.jpg",
+     "id": "v335292",
+     "name": "Pikmin 4",
+     "note": "2023",
+     "img": "https://media.rawg.io/media/crop/600/400/games/274/2740b879e28df2ac3cdbc929a553863d.jpg",
+     "img2": "https://media.rawg.io/media/games/274/2740b879e28df2ac3cdbc929a553863d.jpg",
      "wide": true
     }
    ]
@@ -14921,383 +15794,107 @@
    ]
   },
   {
-   "id": "best-nintendo-64-games",
-   "src": "{\"type\":\"console\",\"name\":\"Nintendo 64\",\"title\":\"Best Nintendo 64 games\",\"since\":1996,\"oneSeries\":true}",
+   "id": "the-game-awards-game-of-the-year-winners",
+   "src": "{\"type\":\"games\",\"group\":\"Awards\",\"title\":\"The Game Awards: Game of the Year winners\",\"short\":\"Game of the Year winners\",\"picks\":[[\"Dragon Age: Inquisition\",\"Dragon Age: Inquisition\",2014],[\"The Witcher 3: Wild Hunt\",\"The Witcher 3: Wild Hunt\",2015],[\"Overwatch\",\"Overwatch\",2016],[\"Breath of the Wild\",\"The Legend of Zelda: Breath of the Wild\",2017],[\"God of War\",\"God of War\",2018],[\"Sekiro: Shadows Die Twice\",\"Sekiro: Shadows Die Twice\",2019],[\"The Last of Us Part II\",\"The Last of Us Part II\",2020],[\"It Takes Two\",\"It Takes Two\",2021],[\"Elden Ring\",\"Elden Ring\",2022],[\"Baldur's Gate 3\",\"Baldur's Gate 3\",2023],[\"Astro Bot\",\"Astro Bot\",2024],[\"Clair Obscur: Expedition 33\",\"Clair Obscur: Expedition 33\",2025]]}",
    "cat": "Games",
-   "group": "Consoles",
-   "short": "Best Nintendo 64 games",
-   "title": "Best Nintendo 64 games",
+   "group": "Awards",
+   "short": "Game of the Year winners",
+   "title": "The Game Awards: Game of the Year winners",
    "items": [
     {
-     "id": "v54528",
-     "name": "Super Mario 64",
-     "note": "1996",
-     "img": "https://media.rawg.io/media/crop/600/400/games/1d5/1d565b99cad46c44b534d9803e27bd49.jpg",
-     "img2": "https://media.rawg.io/media/games/1d5/1d565b99cad46c44b534d9803e27bd49.jpg",
+     "id": "v28559",
+     "name": "Dragon Age: Inquisition",
+     "note": "2014",
+     "img": "https://media.rawg.io/media/crop/600/400/games/260/26023c855f1769a93411d6a7ea084632.jpeg",
+     "img2": "https://media.rawg.io/media/games/260/26023c855f1769a93411d6a7ea084632.jpeg",
      "wide": true
     },
     {
-     "id": "v54435",
-     "name": "Mario Kart 64 (1996)",
-     "note": "1996",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/b19/b196fdca25e4df755f6fafd02df158d9.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/b19/b196fdca25e4df755f6fafd02df158d9.jpg",
+     "id": "v3328",
+     "name": "The Witcher 3: Wild Hunt",
+     "note": "2015",
+     "img": "https://media.rawg.io/media/crop/600/400/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg",
+     "img2": "https://media.rawg.io/media/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg",
      "wide": true
     },
     {
-     "id": "v54520",
-     "name": "Star Fox 64 (1997)",
-     "note": "1997",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/569/5694a091203e4d29c15a9b734f933e9c.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/569/5694a091203e4d29c15a9b734f933e9c.jpg",
+     "id": "v22508",
+     "name": "Overwatch",
+     "note": "2016",
+     "img": "https://media.rawg.io/media/crop/600/400/games/4ea/4ea507ceebeabb43edbc09468f5aaac6.jpg",
+     "img2": "https://media.rawg.io/media/games/4ea/4ea507ceebeabb43edbc09468f5aaac6.jpg",
      "wide": true
     },
-    {
-     "id": "v54403",
-     "name": "GoldenEye 007 (1997)",
-     "note": "1997",
-     "img": "https://media.rawg.io/media/crop/600/400/games/5a1/5a145fe3002fc988140f7f00edcb9715.jpg",
-     "img2": "https://media.rawg.io/media/games/5a1/5a145fe3002fc988140f7f00edcb9715.jpg",
-     "wide": true
-    },
-    {
-     "id": "v54379",
-     "name": "Diddy Kong Racing",
-     "note": "1997",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/c06/c0604dd30811b9691c17f6c6398d9489.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/c06/c0604dd30811b9691c17f6c6398d9489.jpg",
-     "wide": true
-    },
-    {
-     "id": "v25097",
-     "name": "The Legend of Zelda: Ocarina of Time (1998)",
-     "note": "1998",
-     "img": "https://media.rawg.io/media/crop/600/400/games/3a0/3a0c8e9ed3a711c542218831b893a0fa.jpg",
-     "img2": "https://media.rawg.io/media/games/3a0/3a0c8e9ed3a711c542218831b893a0fa.jpg",
-     "wide": true
-    },
-    {
-     "id": "v53394",
-     "name": "Mario Party",
-     "note": "1998",
-     "img": "https://media.rawg.io/media/crop/600/400/games/576/576759570d5f9e67d4f1398e73a79bef.jpg",
-     "img2": "https://media.rawg.io/media/games/576/576759570d5f9e67d4f1398e73a79bef.jpg",
-     "wide": true
-    },
-    {
-     "id": "v54531",
-     "name": "Super Smash Bros. (1999)",
-     "note": "1999",
-     "img": "https://media.rawg.io/media/crop/600/400/games/e56/e56d68182f04f90a31068da55ba91ee4.jpg",
-     "img2": "https://media.rawg.io/media/games/e56/e56d68182f04f90a31068da55ba91ee4.jpg",
-     "wide": true
-    },
-    {
-     "id": "v23833",
-     "name": "Pokémon Snap",
-     "note": "1999",
-     "img": "https://media.rawg.io/media/crop/600/400/games/ec4/ec4be61f0f41cf1d138501330a1b54ee.jpg",
-     "img2": "https://media.rawg.io/media/games/ec4/ec4be61f0f41cf1d138501330a1b54ee.jpg",
-     "wide": true
-    },
-    {
-     "id": "v54481",
-     "name": "Pokémon Stadium",
-     "note": "1999",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/67d/67da39fd51f95e3b591264a3641c8be0.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/67d/67da39fd51f95e3b591264a3641c8be0.jpg",
-     "wide": true
-    },
-    {
-     "id": "v54380",
-     "name": "Donkey Kong 64",
-     "note": "1999",
-     "img": "https://media.rawg.io/media/crop/600/400/games/458/4589f9727a1b8bcc0109e5a33a4ea944.jpg",
-     "img2": "https://media.rawg.io/media/games/458/4589f9727a1b8bcc0109e5a33a4ea944.jpg",
-     "wide": true
-    },
-    {
-     "id": "v54424",
-     "name": "Kirby 64: The Crystal Shards",
-     "note": "2000",
-     "img": "https://media.rawg.io/media/crop/600/400/games/d45/d452cba755f2798e338d6b728a40c331.jpg",
-     "img2": "https://media.rawg.io/media/games/d45/d452cba755f2798e338d6b728a40c331.jpg",
-     "wide": true
-    },
-    {
-     "id": "v25178",
-     "name": "Paper Mario (2000)",
-     "note": "2000",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/062/0622bec29ae3ef0e8762a9c9f3e7b0f4.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/062/0622bec29ae3ef0e8762a9c9f3e7b0f4.jpg",
-     "wide": true
-    },
-    {
-     "id": "v54484",
-     "name": "Pokémon Stadium 2",
-     "note": "2000",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/a1a/a1a2d34e1a67aa0b499d817b79855289.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/a1a/a1a2d34e1a67aa0b499d817b79855289.jpg",
-     "wide": true
-    },
-    {
-     "id": "v54346",
-     "name": "Animal Crossing",
-     "note": "2001",
-     "img": "https://media.rawg.io/media/crop/600/400/games/9dc/9dc9fbd2c2054a3a9b7c33a906546bea.jpg",
-     "img2": "https://media.rawg.io/media/games/9dc/9dc9fbd2c2054a3a9b7c33a906546bea.jpg",
-     "wide": true
-    }
-   ]
-  },
-  {
-   "id": "best-super-nintendo-games",
-   "src": "{\"type\":\"console\",\"name\":\"SNES\",\"title\":\"Best Super Nintendo games\",\"since\":1990,\"oneSeries\":true}",
-   "cat": "Games",
-   "group": "Consoles",
-   "short": "Best Super Nintendo games",
-   "title": "Best Super Nintendo games",
-   "items": [
-    {
-     "id": "v27168",
-     "name": "Dr. Mario",
-     "note": "1990",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/05f/05f7d385e48f9f384cd4d496855029cd.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/05f/05f7d385e48f9f384cd4d496855029cd.jpg",
-     "wide": true
-    },
-    {
-     "id": "v24899",
-     "name": "Super Mario World",
-     "note": "1990",
-     "img": "https://media.rawg.io/media/crop/600/400/games/3bb/3bb2c8d774c3a83eb2c17d0d3d51f020.jpg",
-     "img2": "https://media.rawg.io/media/games/3bb/3bb2c8d774c3a83eb2c17d0d3d51f020.jpg",
-     "wide": true
-    },
-    {
-     "id": "v24918",
-     "name": "F-Zero",
-     "note": "1990",
-     "img": "https://media.rawg.io/media/crop/600/400/games/c45/c45a1f2502a1e1c88c4e14875fceab72.jpg",
-     "img2": "https://media.rawg.io/media/games/c45/c45a1f2502a1e1c88c4e14875fceab72.jpg",
-     "wide": true
-    },
-    {
-     "id": "v25096",
-     "name": "The Legend of Zelda: A Link to the Past",
-     "note": "1991",
-     "img": "https://media.rawg.io/media/crop/600/400/games/087/08727beb32c364d30e8b2a1aa8595f8e.jpg",
-     "img2": "https://media.rawg.io/media/games/087/08727beb32c364d30e8b2a1aa8595f8e.jpg",
-     "wide": true
-    },
-    {
-     "id": "v52594",
-     "name": "Star Fox (1993)",
-     "note": "1993",
-     "img": "https://media.rawg.io/media/crop/600/400/games/618/61863759abf17a7f94fa6ededb6f178b.jpg",
-     "img2": "https://media.rawg.io/media/games/618/61863759abf17a7f94fa6ededb6f178b.jpg",
-     "wide": true
-    },
-    {
-     "id": "v57518",
-     "name": "Super Mario All-Stars (1993)",
-     "note": "1993",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/4a1/4a1b357e73d20695ec71461cab5a5073.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/4a1/4a1b357e73d20695ec71461cab5a5073.jpg",
-     "wide": true
-    },
-    {
-     "id": "v57475",
-     "name": "Secret of Mana (1993)",
-     "note": "1993",
-     "img": "https://media.rawg.io/media/crop/600/400/games/187/187c4033702cc8e5ba106820a4c39a4b.jpg",
-     "img2": "https://media.rawg.io/media/games/187/187c4033702cc8e5ba106820a4c39a4b.jpg",
-     "wide": true
-    },
-    {
-     "id": "v24478",
-     "name": "Super Mario Kart",
-     "note": "1993",
-     "img": "https://media.rawg.io/media/crop/600/400/games/4da/4da63441cb94d7adb4d954871b65db30.jpg",
-     "img2": "https://media.rawg.io/media/games/4da/4da63441cb94d7adb4d954871b65db30.jpg",
-     "wide": true
-    },
-    {
-     "id": "v54097",
-     "name": "Teenage Mutant Ninja Turtles: Tournament Fighters",
-     "note": "1993",
-     "img": "https://media.rawg.io/media/crop/600/400/games/bee/bee5e50dfa4d68102df34d1546728f75.jpg",
-     "img2": "https://media.rawg.io/media/games/bee/bee5e50dfa4d68102df34d1546728f75.jpg",
-     "wide": true
-    },
-    {
-     "id": "v53714",
-     "name": "Battletoads & Double Dragon",
-     "note": "1993",
-     "img": "https://media.rawg.io/media/crop/600/400/games/5d9/5d964c81ef84a680319ae3860ebe8463.jpg",
-     "img2": "https://media.rawg.io/media/games/5d9/5d964c81ef84a680319ae3860ebe8463.jpg",
-     "wide": true
-    },
-    {
-     "id": "v27022",
-     "name": "Super Metroid",
-     "note": "1994",
-     "img": "https://media.rawg.io/media/crop/600/400/games/fc9/fc9bb16db9714d3731823fb0bf706533.jpg",
-     "img2": "https://media.rawg.io/media/games/fc9/fc9bb16db9714d3731823fb0bf706533.jpg",
-     "wide": true
-    },
-    {
-     "id": "v24079",
-     "name": "EarthBound",
-     "note": "1994",
-     "img": "https://media.rawg.io/media/crop/600/400/games/f0d/f0d85490daf02a671ed556ef2011eaab.jpg",
-     "img2": "https://media.rawg.io/media/games/f0d/f0d85490daf02a671ed556ef2011eaab.jpg",
-     "wide": true
-    },
-    {
-     "id": "v27571",
-     "name": "Donkey Kong Country",
-     "note": "1994",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/6df/6df71f3ff0f6d6bbac306cb9adf935ee.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/6df/6df71f3ff0f6d6bbac306cb9adf935ee.jpg",
-     "wide": true
-    },
-    {
-     "id": "v56949",
-     "name": "Boogerman: A Pick and Flick Adventure",
-     "note": "1996",
-     "img": "https://media.rawg.io/media/crop/600/400/screenshots/2c5/2c5f76b7b7f79dccf9957b11cc350745.jpg",
-     "img2": "https://media.rawg.io/media/screenshots/2c5/2c5f76b7b7f79dccf9957b11cc350745.jpg",
-     "wide": true
-    },
-    {
-     "id": "v25557",
-     "name": "Super Mario RPG: Legend of the Seven Stars",
-     "note": "1996",
-     "img": "https://media.rawg.io/media/crop/600/400/games/384/3848abcd66c93552e46647c3db985f30.jpg",
-     "img2": "https://media.rawg.io/media/games/384/3848abcd66c93552e46647c3db985f30.jpg",
-     "wide": true
-    }
-   ]
-  },
-  {
-   "id": "best-nintendo-switch-games",
-   "src": "{\"type\":\"console\",\"name\":\"Nintendo Switch\",\"title\":\"Best Nintendo Switch games\",\"order\":\"-metacritic\",\"since\":2017,\"oneSeries\":true}",
-   "cat": "Games",
-   "group": "Consoles",
-   "short": "Best Nintendo Switch games",
-   "title": "Best Nintendo Switch games",
-   "items": [
     {
      "id": "v22511",
-     "name": "The Legend of Zelda: Breath of the Wild",
+     "name": "Breath of the Wild",
      "note": "2017",
      "img": "https://media.rawg.io/media/crop/600/400/games/cc1/cc196a5ad763955d6532cdba236f730c.jpg",
      "img2": "https://media.rawg.io/media/games/cc1/cc196a5ad763955d6532cdba236f730c.jpg",
      "wide": true
     },
     {
-     "id": "v23165",
-     "name": "Mario Kart 8 Deluxe",
-     "note": "2017",
-     "img": "https://media.rawg.io/media/crop/600/400/games/6f8/6f846e941c78cfbabe53cd67e55ced83.jpg",
-     "img2": "https://media.rawg.io/media/games/6f8/6f846e941c78cfbabe53cd67e55ced83.jpg",
-     "wide": true
-    },
-    {
-     "id": "v28026",
-     "name": "Super Mario Odyssey",
-     "note": "2017",
-     "img": "https://media.rawg.io/media/crop/600/400/games/267/267bd0dbc496f52692487d07d014c061.jpg",
-     "img2": "https://media.rawg.io/media/games/267/267bd0dbc496f52692487d07d014c061.jpg",
-     "wide": true
-    },
-    {
-     "id": "v58829",
-     "name": "Super Smash Bros. Ultimate",
+     "id": "v58175",
+     "name": "God of War",
      "note": "2018",
-     "img": "https://media.rawg.io/media/crop/600/400/games/9f3/9f3c513b301d8d7250a64dd7e73c62df.jpg",
-     "img2": "https://media.rawg.io/media/games/9f3/9f3c513b301d8d7250a64dd7e73c62df.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/games/4be/4be6a6ad0364751a96229c56bf69be59.jpg",
+     "img2": "https://media.rawg.io/media/games/4be/4be6a6ad0364751a96229c56bf69be59.jpg",
      "wide": true
     },
     {
-     "id": "v292840",
-     "name": "Super Mario Maker 2",
+     "id": "v50734",
+     "name": "Sekiro: Shadows Die Twice",
      "note": "2019",
-     "img": "https://media.rawg.io/media/crop/600/400/games/25f/25f1b4a7b6ed811a5f6e34e43d6cc550.jpg",
-     "img2": "https://media.rawg.io/media/games/25f/25f1b4a7b6ed811a5f6e34e43d6cc550.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/games/67f/67f62d1f062a6164f57575e0604ee9f6.jpg",
+     "img2": "https://media.rawg.io/media/games/67f/67f62d1f062a6164f57575e0604ee9f6.jpg",
      "wide": true
     },
     {
-     "id": "v246478",
-     "name": "Fire Emblem: Three Houses",
-     "note": "2019",
-     "img": "https://media.rawg.io/media/crop/600/400/games/530/53081dbd5003f990fa5312404ac3d71a.jpg",
-     "img2": "https://media.rawg.io/media/games/530/53081dbd5003f990fa5312404ac3d71a.jpg",
-     "wide": true
-    },
-    {
-     "id": "v292843",
-     "name": "Astral Chain",
-     "note": "2019",
-     "img": "https://media.rawg.io/media/crop/600/400/games/75b/75b91d05160c819fa6bbafe920548300.jpg",
-     "img2": "https://media.rawg.io/media/games/75b/75b91d05160c819fa6bbafe920548300.jpg",
-     "wide": true
-    },
-    {
-     "id": "v292842",
-     "name": "The Legend of Zelda: Link's Awakening (2019)",
-     "note": "2019",
-     "img": "https://media.rawg.io/media/crop/600/400/games/1bb/1bb38f1354db6596ccd6bdcb4a7f6cbc.jpg",
-     "img2": "https://media.rawg.io/media/games/1bb/1bb38f1354db6596ccd6bdcb4a7f6cbc.jpg",
-     "wide": true
-    },
-    {
-     "id": "v236697",
-     "name": "Luigi's Mansion 3",
-     "note": "2019",
-     "img": "https://media.rawg.io/media/crop/600/400/games/3d9/3d972802b9ee793098b73ecf676b687e.jpeg",
-     "img2": "https://media.rawg.io/media/games/3d9/3d972802b9ee793098b73ecf676b687e.jpeg",
-     "wide": true
-    },
-    {
-     "id": "v421698",
-     "name": "Animal Crossing: New Horizons",
+     "id": "v51325",
+     "name": "The Last of Us Part II",
      "note": "2020",
-     "img": "https://media.rawg.io/media/crop/600/400/games/42f/42fe1abd4d7c11ca92d93a0fb0f8662b.jpg",
-     "img2": "https://media.rawg.io/media/games/42f/42fe1abd4d7c11ca92d93a0fb0f8662b.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/games/909/909974d1c7863c2027241e265fe7011f.jpg",
+     "img2": "https://media.rawg.io/media/games/909/909974d1c7863c2027241e265fe7011f.jpg",
      "wide": true
     },
     {
-     "id": "v371831",
-     "name": "Xenoblade Chronicles: Definitive Edition",
-     "note": "2020",
-     "img": "https://media.rawg.io/media/crop/600/400/games/773/7739920af75d01f6a3b7e76a21d1633a.jpg",
-     "img2": "https://media.rawg.io/media/games/773/7739920af75d01f6a3b7e76a21d1633a.jpg",
-     "wide": true
-    },
-    {
-     "id": "v487916",
-     "name": "Super Mario 3D World + Bowser’s Fury",
+     "id": "v455597",
+     "name": "It Takes Two",
      "note": "2021",
-     "img": "https://media.rawg.io/media/crop/600/400/games/cd2/cd22f0dcf8f080086c60f77eed7a8a93.jpg",
-     "img2": "https://media.rawg.io/media/games/cd2/cd22f0dcf8f080086c60f77eed7a8a93.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/games/d47/d479582ed0a46496ad34f65c7099d7e5.jpg",
+     "img2": "https://media.rawg.io/media/games/d47/d479582ed0a46496ad34f65c7099d7e5.jpg",
      "wide": true
     },
     {
-     "id": "v50737",
-     "name": "Bayonetta 3",
+     "id": "v326243",
+     "name": "Elden Ring",
      "note": "2022",
-     "img": "https://media.rawg.io/media/crop/600/400/games/c30/c30ac50cb13096f5402250bf666a321c.jpg",
-     "img2": "https://media.rawg.io/media/games/c30/c30ac50cb13096f5402250bf666a321c.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/games/b29/b294fdd866dcdb643e7bab370a552855.jpg",
+     "img2": "https://media.rawg.io/media/games/b29/b294fdd866dcdb643e7bab370a552855.jpg",
      "wide": true
     },
     {
-     "id": "v335292",
-     "name": "Pikmin 4",
+     "id": "v324997",
+     "name": "Baldur's Gate 3",
      "note": "2023",
-     "img": "https://media.rawg.io/media/crop/600/400/games/274/2740b879e28df2ac3cdbc929a553863d.jpg",
-     "img2": "https://media.rawg.io/media/games/274/2740b879e28df2ac3cdbc929a553863d.jpg",
+     "img": "https://media.rawg.io/media/crop/600/400/games/699/69907ecf13f172e9e144069769c3be73.jpg",
+     "img2": "https://media.rawg.io/media/games/699/69907ecf13f172e9e144069769c3be73.jpg",
+     "wide": true
+    },
+    {
+     "id": "v982817",
+     "name": "Astro Bot",
+     "note": "2024",
+     "img": "https://media.rawg.io/media/crop/600/400/games/b19/b19cdd6be95ffffd63fdd2d1fbac057a.jpg",
+     "img2": "https://media.rawg.io/media/games/b19/b19cdd6be95ffffd63fdd2d1fbac057a.jpg",
+     "wide": true
+    },
+    {
+     "id": "v983210",
+     "name": "Clair Obscur: Expedition 33",
+     "note": "2025",
+     "img": "https://media.rawg.io/media/crop/600/400/games/466/4667f17fdee9ebbcea2049e54f8e2b96.jpg",
+     "img2": "https://media.rawg.io/media/games/466/4667f17fdee9ebbcea2049e54f8e2b96.jpg",
      "wide": true
     }
    ]
@@ -15306,7 +15903,7 @@
    "id": "biggest-movies-of-the-1980s",
    "src": "{\"type\":\"decade\",\"decade\":1980}",
    "cat": "Movies",
-   "group": "By year: 1980s",
+   "group": "By year > 1980s",
    "short": "Whole decade",
    "title": "Biggest movies of the 1980s",
    "items": [
@@ -15406,7 +16003,7 @@
    "id": "biggest-movies-of-the-1990s",
    "src": "{\"type\":\"decade\",\"decade\":1990}",
    "cat": "Movies",
-   "group": "By year: 1990s",
+   "group": "By year > 1990s",
    "short": "Whole decade",
    "title": "Biggest movies of the 1990s",
    "items": [
@@ -15506,7 +16103,7 @@
    "id": "biggest-movies-of-the-2000s",
    "src": "{\"type\":\"decade\",\"decade\":2000}",
    "cat": "Movies",
-   "group": "By year: 2000s",
+   "group": "By year > 2000s",
    "short": "Whole decade",
    "title": "Biggest movies of the 2000s",
    "items": [
@@ -15606,7 +16203,7 @@
    "id": "biggest-movies-of-the-2010s",
    "src": "{\"type\":\"decade\",\"decade\":2010}",
    "cat": "Movies",
-   "group": "By year: 2010s",
+   "group": "By year > 2010s",
    "short": "Whole decade",
    "title": "Biggest movies of the 2010s",
    "items": [
@@ -15706,7 +16303,7 @@
    "id": "biggest-movies-of-1980",
    "src": "{\"type\":\"year\",\"year\":1980}",
    "cat": "Movies",
-   "group": "By year: 1980s",
+   "group": "By year > 1980s",
    "short": "1980",
    "title": "Biggest movies of 1980",
    "items": [
@@ -15806,7 +16403,7 @@
    "id": "biggest-movies-of-1981",
    "src": "{\"type\":\"year\",\"year\":1981}",
    "cat": "Movies",
-   "group": "By year: 1980s",
+   "group": "By year > 1980s",
    "short": "1981",
    "title": "Biggest movies of 1981",
    "items": [
@@ -15906,7 +16503,7 @@
    "id": "biggest-movies-of-1982",
    "src": "{\"type\":\"year\",\"year\":1982}",
    "cat": "Movies",
-   "group": "By year: 1980s",
+   "group": "By year > 1980s",
    "short": "1982",
    "title": "Biggest movies of 1982",
    "items": [
@@ -16006,7 +16603,7 @@
    "id": "biggest-movies-of-1983",
    "src": "{\"type\":\"year\",\"year\":1983}",
    "cat": "Movies",
-   "group": "By year: 1980s",
+   "group": "By year > 1980s",
    "short": "1983",
    "title": "Biggest movies of 1983",
    "items": [
@@ -16106,7 +16703,7 @@
    "id": "biggest-movies-of-1984",
    "src": "{\"type\":\"year\",\"year\":1984}",
    "cat": "Movies",
-   "group": "By year: 1980s",
+   "group": "By year > 1980s",
    "short": "1984",
    "title": "Biggest movies of 1984",
    "items": [
@@ -16206,7 +16803,7 @@
    "id": "biggest-movies-of-1985",
    "src": "{\"type\":\"year\",\"year\":1985}",
    "cat": "Movies",
-   "group": "By year: 1980s",
+   "group": "By year > 1980s",
    "short": "1985",
    "title": "Biggest movies of 1985",
    "items": [
@@ -16306,7 +16903,7 @@
    "id": "biggest-movies-of-1986",
    "src": "{\"type\":\"year\",\"year\":1986}",
    "cat": "Movies",
-   "group": "By year: 1980s",
+   "group": "By year > 1980s",
    "short": "1986",
    "title": "Biggest movies of 1986",
    "items": [
@@ -16406,7 +17003,7 @@
    "id": "biggest-movies-of-1987",
    "src": "{\"type\":\"year\",\"year\":1987}",
    "cat": "Movies",
-   "group": "By year: 1980s",
+   "group": "By year > 1980s",
    "short": "1987",
    "title": "Biggest movies of 1987",
    "items": [
@@ -16506,7 +17103,7 @@
    "id": "biggest-movies-of-1988",
    "src": "{\"type\":\"year\",\"year\":1988}",
    "cat": "Movies",
-   "group": "By year: 1980s",
+   "group": "By year > 1980s",
    "short": "1988",
    "title": "Biggest movies of 1988",
    "items": [
@@ -16606,7 +17203,7 @@
    "id": "biggest-movies-of-1989",
    "src": "{\"type\":\"year\",\"year\":1989}",
    "cat": "Movies",
-   "group": "By year: 1980s",
+   "group": "By year > 1980s",
    "short": "1989",
    "title": "Biggest movies of 1989",
    "items": [
@@ -16706,7 +17303,7 @@
    "id": "biggest-movies-of-1990",
    "src": "{\"type\":\"year\",\"year\":1990}",
    "cat": "Movies",
-   "group": "By year: 1990s",
+   "group": "By year > 1990s",
    "short": "1990",
    "title": "Biggest movies of 1990",
    "items": [
@@ -16806,7 +17403,7 @@
    "id": "biggest-movies-of-1991",
    "src": "{\"type\":\"year\",\"year\":1991}",
    "cat": "Movies",
-   "group": "By year: 1990s",
+   "group": "By year > 1990s",
    "short": "1991",
    "title": "Biggest movies of 1991",
    "items": [
@@ -16906,7 +17503,7 @@
    "id": "biggest-movies-of-1992",
    "src": "{\"type\":\"year\",\"year\":1992}",
    "cat": "Movies",
-   "group": "By year: 1990s",
+   "group": "By year > 1990s",
    "short": "1992",
    "title": "Biggest movies of 1992",
    "items": [
@@ -17006,7 +17603,7 @@
    "id": "biggest-movies-of-1993",
    "src": "{\"type\":\"year\",\"year\":1993}",
    "cat": "Movies",
-   "group": "By year: 1990s",
+   "group": "By year > 1990s",
    "short": "1993",
    "title": "Biggest movies of 1993",
    "items": [
@@ -17106,7 +17703,7 @@
    "id": "biggest-movies-of-1994",
    "src": "{\"type\":\"year\",\"year\":1994}",
    "cat": "Movies",
-   "group": "By year: 1990s",
+   "group": "By year > 1990s",
    "short": "1994",
    "title": "Biggest movies of 1994",
    "items": [
@@ -17206,7 +17803,7 @@
    "id": "biggest-movies-of-1995",
    "src": "{\"type\":\"year\",\"year\":1995}",
    "cat": "Movies",
-   "group": "By year: 1990s",
+   "group": "By year > 1990s",
    "short": "1995",
    "title": "Biggest movies of 1995",
    "items": [
@@ -17306,7 +17903,7 @@
    "id": "biggest-movies-of-1996",
    "src": "{\"type\":\"year\",\"year\":1996}",
    "cat": "Movies",
-   "group": "By year: 1990s",
+   "group": "By year > 1990s",
    "short": "1996",
    "title": "Biggest movies of 1996",
    "items": [
@@ -17406,7 +18003,7 @@
    "id": "biggest-movies-of-1997",
    "src": "{\"type\":\"year\",\"year\":1997}",
    "cat": "Movies",
-   "group": "By year: 1990s",
+   "group": "By year > 1990s",
    "short": "1997",
    "title": "Biggest movies of 1997",
    "items": [
@@ -17506,7 +18103,7 @@
    "id": "biggest-movies-of-1998",
    "src": "{\"type\":\"year\",\"year\":1998}",
    "cat": "Movies",
-   "group": "By year: 1990s",
+   "group": "By year > 1990s",
    "short": "1998",
    "title": "Biggest movies of 1998",
    "items": [
@@ -17606,7 +18203,7 @@
    "id": "biggest-movies-of-1999",
    "src": "{\"type\":\"year\",\"year\":1999}",
    "cat": "Movies",
-   "group": "By year: 1990s",
+   "group": "By year > 1990s",
    "short": "1999",
    "title": "Biggest movies of 1999",
    "items": [
@@ -17706,7 +18303,7 @@
    "id": "biggest-movies-of-2000",
    "src": "{\"type\":\"year\",\"year\":2000}",
    "cat": "Movies",
-   "group": "By year: 2000s",
+   "group": "By year > 2000s",
    "short": "2000",
    "title": "Biggest movies of 2000",
    "items": [
@@ -17806,7 +18403,7 @@
    "id": "biggest-movies-of-2001",
    "src": "{\"type\":\"year\",\"year\":2001}",
    "cat": "Movies",
-   "group": "By year: 2000s",
+   "group": "By year > 2000s",
    "short": "2001",
    "title": "Biggest movies of 2001",
    "items": [
@@ -17906,7 +18503,7 @@
    "id": "biggest-movies-of-2002",
    "src": "{\"type\":\"year\",\"year\":2002}",
    "cat": "Movies",
-   "group": "By year: 2000s",
+   "group": "By year > 2000s",
    "short": "2002",
    "title": "Biggest movies of 2002",
    "items": [
@@ -18006,7 +18603,7 @@
    "id": "biggest-movies-of-2003",
    "src": "{\"type\":\"year\",\"year\":2003}",
    "cat": "Movies",
-   "group": "By year: 2000s",
+   "group": "By year > 2000s",
    "short": "2003",
    "title": "Biggest movies of 2003",
    "items": [
@@ -18106,7 +18703,7 @@
    "id": "biggest-movies-of-2004",
    "src": "{\"type\":\"year\",\"year\":2004}",
    "cat": "Movies",
-   "group": "By year: 2000s",
+   "group": "By year > 2000s",
    "short": "2004",
    "title": "Biggest movies of 2004",
    "items": [
@@ -18206,7 +18803,7 @@
    "id": "biggest-movies-of-2005",
    "src": "{\"type\":\"year\",\"year\":2005}",
    "cat": "Movies",
-   "group": "By year: 2000s",
+   "group": "By year > 2000s",
    "short": "2005",
    "title": "Biggest movies of 2005",
    "items": [
@@ -18306,7 +18903,7 @@
    "id": "biggest-movies-of-2006",
    "src": "{\"type\":\"year\",\"year\":2006}",
    "cat": "Movies",
-   "group": "By year: 2000s",
+   "group": "By year > 2000s",
    "short": "2006",
    "title": "Biggest movies of 2006",
    "items": [
@@ -18406,7 +19003,7 @@
    "id": "biggest-movies-of-2007",
    "src": "{\"type\":\"year\",\"year\":2007}",
    "cat": "Movies",
-   "group": "By year: 2000s",
+   "group": "By year > 2000s",
    "short": "2007",
    "title": "Biggest movies of 2007",
    "items": [
@@ -18506,7 +19103,7 @@
    "id": "biggest-movies-of-2008",
    "src": "{\"type\":\"year\",\"year\":2008}",
    "cat": "Movies",
-   "group": "By year: 2000s",
+   "group": "By year > 2000s",
    "short": "2008",
    "title": "Biggest movies of 2008",
    "items": [
@@ -18606,7 +19203,7 @@
    "id": "biggest-movies-of-2009",
    "src": "{\"type\":\"year\",\"year\":2009}",
    "cat": "Movies",
-   "group": "By year: 2000s",
+   "group": "By year > 2000s",
    "short": "2009",
    "title": "Biggest movies of 2009",
    "items": [
@@ -18706,7 +19303,7 @@
    "id": "biggest-movies-of-2010",
    "src": "{\"type\":\"year\",\"year\":2010}",
    "cat": "Movies",
-   "group": "By year: 2010s",
+   "group": "By year > 2010s",
    "short": "2010",
    "title": "Biggest movies of 2010",
    "items": [
@@ -18806,7 +19403,7 @@
    "id": "biggest-movies-of-2011",
    "src": "{\"type\":\"year\",\"year\":2011}",
    "cat": "Movies",
-   "group": "By year: 2010s",
+   "group": "By year > 2010s",
    "short": "2011",
    "title": "Biggest movies of 2011",
    "items": [
@@ -18906,7 +19503,7 @@
    "id": "biggest-movies-of-2012",
    "src": "{\"type\":\"year\",\"year\":2012}",
    "cat": "Movies",
-   "group": "By year: 2010s",
+   "group": "By year > 2010s",
    "short": "2012",
    "title": "Biggest movies of 2012",
    "items": [
@@ -19006,7 +19603,7 @@
    "id": "biggest-movies-of-2013",
    "src": "{\"type\":\"year\",\"year\":2013}",
    "cat": "Movies",
-   "group": "By year: 2010s",
+   "group": "By year > 2010s",
    "short": "2013",
    "title": "Biggest movies of 2013",
    "items": [
@@ -19106,7 +19703,7 @@
    "id": "biggest-movies-of-2014",
    "src": "{\"type\":\"year\",\"year\":2014}",
    "cat": "Movies",
-   "group": "By year: 2010s",
+   "group": "By year > 2010s",
    "short": "2014",
    "title": "Biggest movies of 2014",
    "items": [
@@ -19206,7 +19803,7 @@
    "id": "biggest-movies-of-2015",
    "src": "{\"type\":\"year\",\"year\":2015}",
    "cat": "Movies",
-   "group": "By year: 2010s",
+   "group": "By year > 2010s",
    "short": "2015",
    "title": "Biggest movies of 2015",
    "items": [
@@ -19306,7 +19903,7 @@
    "id": "biggest-movies-of-2016",
    "src": "{\"type\":\"year\",\"year\":2016}",
    "cat": "Movies",
-   "group": "By year: 2010s",
+   "group": "By year > 2010s",
    "short": "2016",
    "title": "Biggest movies of 2016",
    "items": [
@@ -19406,7 +20003,7 @@
    "id": "biggest-movies-of-2017",
    "src": "{\"type\":\"year\",\"year\":2017}",
    "cat": "Movies",
-   "group": "By year: 2010s",
+   "group": "By year > 2010s",
    "short": "2017",
    "title": "Biggest movies of 2017",
    "items": [
@@ -19506,7 +20103,7 @@
    "id": "biggest-movies-of-2018",
    "src": "{\"type\":\"year\",\"year\":2018}",
    "cat": "Movies",
-   "group": "By year: 2010s",
+   "group": "By year > 2010s",
    "short": "2018",
    "title": "Biggest movies of 2018",
    "items": [
@@ -19606,7 +20203,7 @@
    "id": "biggest-movies-of-2019",
    "src": "{\"type\":\"year\",\"year\":2019}",
    "cat": "Movies",
-   "group": "By year: 2010s",
+   "group": "By year > 2010s",
    "short": "2019",
    "title": "Biggest movies of 2019",
    "items": [
@@ -20040,112 +20637,6 @@
    ]
   },
   {
-   "id": "the-game-awards-game-of-the-year-winners",
-   "src": "{\"type\":\"games\",\"group\":\"Awards\",\"title\":\"The Game Awards: Game of the Year winners\",\"short\":\"Game of the Year winners\",\"picks\":[[\"Dragon Age: Inquisition\",\"Dragon Age: Inquisition\",2014],[\"The Witcher 3: Wild Hunt\",\"The Witcher 3: Wild Hunt\",2015],[\"Overwatch\",\"Overwatch\",2016],[\"Breath of the Wild\",\"The Legend of Zelda: Breath of the Wild\",2017],[\"God of War\",\"God of War\",2018],[\"Sekiro: Shadows Die Twice\",\"Sekiro: Shadows Die Twice\",2019],[\"The Last of Us Part II\",\"The Last of Us Part II\",2020],[\"It Takes Two\",\"It Takes Two\",2021],[\"Elden Ring\",\"Elden Ring\",2022],[\"Baldur's Gate 3\",\"Baldur's Gate 3\",2023],[\"Astro Bot\",\"Astro Bot\",2024],[\"Clair Obscur: Expedition 33\",\"Clair Obscur: Expedition 33\",2025]]}",
-   "cat": "Games",
-   "group": "Awards",
-   "short": "Game of the Year winners",
-   "title": "The Game Awards: Game of the Year winners",
-   "items": [
-    {
-     "id": "v28559",
-     "name": "Dragon Age: Inquisition",
-     "note": "2014",
-     "img": "https://media.rawg.io/media/crop/600/400/games/260/26023c855f1769a93411d6a7ea084632.jpeg",
-     "img2": "https://media.rawg.io/media/games/260/26023c855f1769a93411d6a7ea084632.jpeg",
-     "wide": true
-    },
-    {
-     "id": "v3328",
-     "name": "The Witcher 3: Wild Hunt",
-     "note": "2015",
-     "img": "https://media.rawg.io/media/crop/600/400/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg",
-     "img2": "https://media.rawg.io/media/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg",
-     "wide": true
-    },
-    {
-     "id": "v22508",
-     "name": "Overwatch",
-     "note": "2016",
-     "img": "https://media.rawg.io/media/crop/600/400/games/4ea/4ea507ceebeabb43edbc09468f5aaac6.jpg",
-     "img2": "https://media.rawg.io/media/games/4ea/4ea507ceebeabb43edbc09468f5aaac6.jpg",
-     "wide": true
-    },
-    {
-     "id": "v22511",
-     "name": "Breath of the Wild",
-     "note": "2017",
-     "img": "https://media.rawg.io/media/crop/600/400/games/cc1/cc196a5ad763955d6532cdba236f730c.jpg",
-     "img2": "https://media.rawg.io/media/games/cc1/cc196a5ad763955d6532cdba236f730c.jpg",
-     "wide": true
-    },
-    {
-     "id": "v58175",
-     "name": "God of War",
-     "note": "2018",
-     "img": "https://media.rawg.io/media/crop/600/400/games/4be/4be6a6ad0364751a96229c56bf69be59.jpg",
-     "img2": "https://media.rawg.io/media/games/4be/4be6a6ad0364751a96229c56bf69be59.jpg",
-     "wide": true
-    },
-    {
-     "id": "v50734",
-     "name": "Sekiro: Shadows Die Twice",
-     "note": "2019",
-     "img": "https://media.rawg.io/media/crop/600/400/games/67f/67f62d1f062a6164f57575e0604ee9f6.jpg",
-     "img2": "https://media.rawg.io/media/games/67f/67f62d1f062a6164f57575e0604ee9f6.jpg",
-     "wide": true
-    },
-    {
-     "id": "v51325",
-     "name": "The Last of Us Part II",
-     "note": "2020",
-     "img": "https://media.rawg.io/media/crop/600/400/games/909/909974d1c7863c2027241e265fe7011f.jpg",
-     "img2": "https://media.rawg.io/media/games/909/909974d1c7863c2027241e265fe7011f.jpg",
-     "wide": true
-    },
-    {
-     "id": "v455597",
-     "name": "It Takes Two",
-     "note": "2021",
-     "img": "https://media.rawg.io/media/crop/600/400/games/d47/d479582ed0a46496ad34f65c7099d7e5.jpg",
-     "img2": "https://media.rawg.io/media/games/d47/d479582ed0a46496ad34f65c7099d7e5.jpg",
-     "wide": true
-    },
-    {
-     "id": "v326243",
-     "name": "Elden Ring",
-     "note": "2022",
-     "img": "https://media.rawg.io/media/crop/600/400/games/b29/b294fdd866dcdb643e7bab370a552855.jpg",
-     "img2": "https://media.rawg.io/media/games/b29/b294fdd866dcdb643e7bab370a552855.jpg",
-     "wide": true
-    },
-    {
-     "id": "v324997",
-     "name": "Baldur's Gate 3",
-     "note": "2023",
-     "img": "https://media.rawg.io/media/crop/600/400/games/699/69907ecf13f172e9e144069769c3be73.jpg",
-     "img2": "https://media.rawg.io/media/games/699/69907ecf13f172e9e144069769c3be73.jpg",
-     "wide": true
-    },
-    {
-     "id": "v982817",
-     "name": "Astro Bot",
-     "note": "2024",
-     "img": "https://media.rawg.io/media/crop/600/400/games/b19/b19cdd6be95ffffd63fdd2d1fbac057a.jpg",
-     "img2": "https://media.rawg.io/media/games/b19/b19cdd6be95ffffd63fdd2d1fbac057a.jpg",
-     "wide": true
-    },
-    {
-     "id": "v983210",
-     "name": "Clair Obscur: Expedition 33",
-     "note": "2025",
-     "img": "https://media.rawg.io/media/crop/600/400/games/466/4667f17fdee9ebbcea2049e54f8e2b96.jpg",
-     "img2": "https://media.rawg.io/media/games/466/4667f17fdee9ebbcea2049e54f8e2b96.jpg",
-     "wide": true
-    }
-   ]
-  },
-  {
    "id": "best-picture-winners-1990s",
    "src": "{\"type\":\"films\",\"cat\":\"Awards\",\"group\":\"Best Picture winners\",\"short\":\"1990s\",\"title\":\"Best Picture winners: 1990s\",\"picks\":[[\"Dances with Wolves\",1990],[\"The Silence of the Lambs\",1991],[\"Unforgiven\",1992],[\"Schindler's List\",1993],[\"Forrest Gump\",1994],[\"Braveheart\",1995],[\"The English Patient\",1996],[\"Titanic\",1997],[\"Shakespeare in Love\",1998],[\"American Beauty\",1999]]}",
    "cat": "Movies",
@@ -20438,54 +20929,8 @@
    ]
   },
   {
-   "id": "actors-who-played-james-bond",
-   "src": "{\"type\":\"people\",\"title\":\"Actors who played James Bond\",\"picks\":[[\"Sean Connery\",\"1962 to 1971, and 1983\"],[\"George Lazenby\",\"1969\"],[\"Roger Moore\",\"1973 to 1985\"],[\"Timothy Dalton\",\"1987 to 1989\"],[\"Pierce Brosnan\",\"1995 to 2002\"],[\"Daniel Craig\",\"2006 to 2021\"]]}",
-   "cat": "Movies",
-   "group": "Characters",
-   "short": "Actors who played James Bond",
-   "title": "Actors who played James Bond",
-   "items": [
-    {
-     "id": "hsean-connery",
-     "name": "Sean Connery",
-     "note": "1962 to 1971, and 1983",
-     "poster": "/cd0zKpYJ6eSutkrZkLFxQCGjhnF.jpg"
-    },
-    {
-     "id": "hgeorge-lazenby",
-     "name": "George Lazenby",
-     "note": "1969",
-     "poster": "/c2Sb2SYKhvwoq0MYrwpNTVuw6xH.jpg"
-    },
-    {
-     "id": "hroger-moore",
-     "name": "Roger Moore",
-     "note": "1973 to 1985",
-     "poster": "/anMuX2HBIMvLUZm7A6yuKSqiJxP.jpg"
-    },
-    {
-     "id": "htimothy-dalton",
-     "name": "Timothy Dalton",
-     "note": "1987 to 1989",
-     "poster": "/rKYQd6ihqWiOaCHEDrvgV2VPtAo.jpg"
-    },
-    {
-     "id": "hpierce-brosnan",
-     "name": "Pierce Brosnan",
-     "note": "1995 to 2002",
-     "poster": "/dzXVwwJLPwiZeXOnf7YxorqVEEM.jpg"
-    },
-    {
-     "id": "hdaniel-craig",
-     "name": "Daniel Craig",
-     "note": "2006 to 2021",
-     "poster": "/iFerDZUmC5Fu26i4qI8xnUVEHc7.jpg"
-    }
-   ]
-  },
-  {
    "id": "actors-who-played-batman",
-   "src": "{\"type\":\"people\",\"title\":\"Actors who played Batman\",\"picks\":[[\"Adam West\",\"1966\"],[\"Michael Keaton\",\"1989 to 1992, and 2023\"],[\"Val Kilmer\",\"1995\"],[\"George Clooney\",\"1997\"],[\"Christian Bale\",\"2005 to 2012\"],[\"Ben Affleck\",\"2016 to 2023\"],[\"Will Arnett\",\"The LEGO Batman Movie, 2017\"],[\"Robert Pattinson\",\"2022\"]]}",
+   "src": "{\"type\":\"people\",\"title\":\"Actors who played Batman\",\"menu\":\"Movies > Characters\",\"picks\":[[\"Adam West\",\"1966\"],[\"Michael Keaton\",\"1989 to 1992, and 2023\"],[\"Val Kilmer\",\"1995\"],[\"George Clooney\",\"1997\"],[\"Christian Bale\",\"2005 to 2012\"],[\"Ben Affleck\",\"2016 to 2023\"],[\"Will Arnett\",\"The LEGO Batman Movie, 2017\"],[\"Robert Pattinson\",\"2022\"]]}",
    "cat": "Movies",
    "group": "Characters",
    "short": "Actors who played Batman",
