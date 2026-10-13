@@ -62,7 +62,15 @@ const DEFS = [
   { type: "keyword",    name: "biography", and: "based on true story", title: "Biopics (true stories)" },
   //   "filmcast" ranks the main characters of one film (use the first film of a franchise).
   //   With "collection", characters are ranked by how big their role is across every film in the franchise.
-  { type: "filmcast",   collection: "The Twilight Saga", title: "Twilight main characters" },
+  // Hand-picked: the automatic franchise lookup matched a different "Twilight". Actor shown under each name, with their photo.
+  { type: "people", menu: "Movies > Characters", title: "Twilight main characters", picks: [
+    ["Bella Swan", "Kristen Stewart", "Kristen Stewart"], ["Edward Cullen", "Robert Pattinson", "Robert Pattinson"],
+    ["Jacob Black", "Taylor Lautner", "Taylor Lautner"], ["Charlie Swan", "Billy Burke", "Billy Burke"],
+    ["Alice Cullen", "Ashley Greene", "Ashley Greene"], ["Jasper Hale", "Jackson Rathbone", "Jackson Rathbone"],
+    ["Rosalie Hale", "Nikki Reed", "Nikki Reed"], ["Emmett Cullen", "Kellan Lutz", "Kellan Lutz"],
+    ["Carlisle Cullen", "Peter Facinelli", "Peter Facinelli"], ["Esme Cullen", "Elizabeth Reaser", "Elizabeth Reaser"],
+    ["Victoria", "Rachelle Lefevre / Bryce Dallas Howard", "Rachelle Lefevre"], ["Aro", "Michael Sheen", "Michael Sheen"],
+    ["Jessica Stanley", "Anna Kendrick", "Anna Kendrick"], ["Renesmee Cullen", "Mackenzie Foy", "Mackenzie Foy"] ] },
   //   "people" is a hand-picked list of real people with their TMDB photos. A pick is "Name" or ["Name", "note"].
   { type: "people", title: "Actors who played James Bond", menu: "Movies > Franchises > James Bond", short: "Actors who played Bond", picks: [
     ["Sean Connery", "1962 to 1971, and 1983"], ["George Lazenby", "1969"], ["Roger Moore", "1973 to 1985"],
