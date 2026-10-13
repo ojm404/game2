@@ -15,6 +15,7 @@ const DEFS = [
   { type: "actor",      name: "Bruce Willis" },
   { type: "actor",      name: "Matt Damon" },
   { type: "actor",      name: "Meryl Streep" },
+  { type: "actor",      name: "Anne Hathaway", billing: 5 },      // billing: 5 = only films where she is in the top five billed
   { type: "director",   name: "James Cameron" },
   { type: "director",   name: "Ridley Scott" },
   { type: "director",   name: "Christopher Nolan" },
@@ -33,6 +34,14 @@ const DEFS = [
     ["The Cat Returns", 2002], ["Howl's Moving Castle", 2004], ["Tales from Earthsea", 2006], ["Ponyo", 2008], ["Arrietty", 2010],
     ["From Up on Poppy Hill", 2011], ["The Wind Rises", 2013], ["The Tale of the Princess Kaguya", 2013], ["When Marnie Was There", 2014],
     ["Earwig and the Witch", 2020], ["The Boy and the Heron", 2023] ] },
+  // Only the second film of each series.
+  { type: "films", cat: "Franchises", title: "Sequels and part 2s", short: "Sequels and part 2s", picks: [
+    ["The Godfather Part II", 1974], ["The Empire Strikes Back", 1980], ["Mad Max 2", 1981], ["Indiana Jones and the Temple of Doom", 1984],
+    ["Aliens", 1986], ["Back to the Future Part II", 1989], ["Terminator 2: Judgment Day", 1991], ["Toy Story 2", 1999],
+    ["Harry Potter and the Chamber of Secrets", 2002], ["The Lord of the Rings: The Two Towers", 2002], ["Shrek 2", 2004],
+    ["Kill Bill: Vol. 2", 2004], ["Before Sunset", 2004], ["The Dark Knight", 2008], ["The Twilight Saga: New Moon", 2009],
+    ["The Hunger Games: Catching Fire", 2013], ["Paddington 2", 2017], ["Blade Runner 2049", 2017], ["Top Gun: Maverick", 2022],
+    ["Dune: Part Two", 2024], ["Inside Out 2", 2024], ["Wicked: For Good", 2025] ] },
   { type: "films", cat: "Franchises", title: "Planet of the Apes films", picks: [
     ["Planet of the Apes", 1968], ["Beneath the Planet of the Apes", 1970], ["Escape from the Planet of the Apes", 1971],
     ["Conquest of the Planet of the Apes", 1972], ["Battle for the Planet of the Apes", 1973], ["Planet of the Apes", 2001],
@@ -113,25 +122,36 @@ const DEFS = [
     ["All You Had to Do Was Stay", "1989"], ["Delicate", "reputation"], ["The Archer", "Lover"], ["my tears ricochet", "folklore"],
     ["tolerate it", "evermore"], ["You're On Your Own, Kid", "Midnights"], ["So Long, London", "The Tortured Poets Department"],
     ["Eldest Daughter", "The Life of a Showgirl"] ] },
-  // Biggest radio singles, hand-picked, with release year.
-  { type: "names", group: "Taylor Swift", title: "Taylor Swift top radio singles", short: "Top radio singles", picks: [
-    ["Love Story", "2008"], ["You Belong with Me", "2009"], ["We Are Never Ever Getting Back Together", "2012"], ["I Knew You Were Trouble", "2012"],
-    ["Shake It Off", "2014"], ["Blank Space", "2014"], ["Style", "2015"], ["Bad Blood", "2015"], ["Look What You Made Me Do", "2017"],
-    ["Delicate", "2018"], ["Lover", "2019"], ["Cardigan", "2020"], ["Anti-Hero", "2022"], ["Cruel Summer", "2023"], ["Fortnight", "2024"],
-    ["The Fate of Ophelia", "2025"] ] },
-  { type: "names", group: "Ariana Grande", title: "Ariana Grande top radio singles", short: "Top radio singles", picks: [
-    ["The Way", "2013"], ["Problem", "2014"], ["Break Free", "2014"], ["Love Me Harder", "2014"], ["Bang Bang", "2014"], ["Into You", "2016"],
-    ["Side to Side", "2016"], ["No Tears Left to Cry", "2018"], ["God Is a Woman", "2018"], ["Thank U, Next", "2018"], ["7 Rings", "2019"],
-    ["Break Up with Your Girlfriend, I'm Bored", "2019"], ["Rain on Me", "2020"], ["Positions", "2020"], ["Yes, And?", "2024"],
-    ["We Can't Be Friends", "2024"] ] },
-  { type: "names", group: "Billy Talent", title: "Billy Talent top radio singles", short: "Top radio singles", picks: [
-    ["Try Honesty", "2003"], ["River Below", "2004"], ["Nothing to Lose", "2004"], ["Devil in a Midnight Mass", "2006"], ["Red Flag", "2006"],
-    ["Fallen Leaves", "2006"], ["Surrender", "2007"], ["Rusted from the Rain", "2009"], ["Devil on My Shoulder", "2009"], ["Saint Veronika", "2010"],
-    ["Viking Death March", "2012"], ["Surprise Surprise", "2012"], ["Afraid of Heights", "2016"], ["Louder Than the DJ", "2016"] ] },
-  { type: "names", group: "Linkin Park", title: "Linkin Park top radio singles", short: "Top radio singles", picks: [
-    ["One Step Closer", "2000"], ["Crawling", "2001"], ["In the End", "2001"], ["Papercut", "2001"], ["Somewhere I Belong", "2003"],
-    ["Numb", "2003"], ["Breaking the Habit", "2004"], ["What I've Done", "2007"], ["Bleed It Out", "2007"], ["Shadow of the Day", "2007"],
-    ["New Divide", "2009"], ["The Catalyst", "2010"], ["Burn It Down", "2012"], ["Heavy", "2017"], ["The Emptiness Machine", "2024"] ] },
+  // Singles that were radio hits or got their own music video, hand-picked, oldest first, with release year.
+  { type: "names", group: "Taylor Swift", title: "Taylor Swift singles and videos", short: "Singles and videos", picks: [
+    ["Tim McGraw", "2006"], ["Teardrops on My Guitar", "2007"], ["Our Song", "2007"], ["Picture to Burn", "2008"], ["Love Story", "2008"],
+    ["White Horse", "2008"], ["You Belong with Me", "2009"], ["Fifteen", "2009"], ["Mine", "2010"], ["Back to December", "2010"],
+    ["Mean", "2011"], ["The Story of Us", "2011"], ["Ours", "2011"], ["We Are Never Ever Getting Back Together", "2012"],
+    ["I Knew You Were Trouble", "2012"], ["22", "2013"], ["Everything Has Changed", "2013"], ["Shake It Off", "2014"], ["Blank Space", "2014"],
+    ["Style", "2015"], ["Bad Blood", "2015"], ["Wildest Dreams", "2015"], ["Out of the Woods", "2016"], ["Look What You Made Me Do", "2017"],
+    ["...Ready for It?", "2017"], ["End Game", "2018"], ["Delicate", "2018"], ["ME!", "2019"], ["You Need to Calm Down", "2019"], ["Lover", "2019"],
+    ["The Man", "2020"], ["Cardigan", "2020"], ["Willow", "2020"], ["Anti-Hero", "2022"], ["Bejeweled", "2022"], ["Lavender Haze", "2023"],
+    ["Cruel Summer", "2023"], ["Fortnight", "2024"], ["The Fate of Ophelia", "2025"] ] },
+  { type: "names", group: "Ariana Grande", title: "Ariana Grande singles and videos", short: "Singles and videos", picks: [
+    ["The Way", "2013"], ["Baby I", "2013"], ["Right There", "2013"], ["Problem", "2014"], ["Break Free", "2014"], ["Bang Bang", "2014"],
+    ["Love Me Harder", "2014"], ["Santa Tell Me", "2014"], ["One Last Time", "2015"], ["Focus", "2015"], ["Dangerous Woman", "2016"],
+    ["Into You", "2016"], ["Side to Side", "2016"], ["No Tears Left to Cry", "2018"], ["God Is a Woman", "2018"], ["Breathin", "2018"],
+    ["Thank U, Next", "2018"], ["7 Rings", "2019"], ["Break Up with Your Girlfriend, I'm Bored", "2019"], ["Boyfriend", "2019"],
+    ["Rain on Me", "2020"], ["Stuck with U", "2020"], ["Positions", "2020"], ["34+35", "2020"], ["POV", "2021"], ["Yes, And?", "2024"],
+    ["We Can't Be Friends", "2024"], ["The Boy Is Mine", "2024"] ] },
+  { type: "names", group: "Billy Talent", title: "Billy Talent singles and videos", short: "Singles and videos", picks: [
+    ["Try Honesty", "2003"], ["The Ex", "2004"], ["River Below", "2004"], ["This Is How It Goes", "2004"], ["Nothing to Lose", "2004"],
+    ["Devil in a Midnight Mass", "2006"], ["Red Flag", "2006"], ["Fallen Leaves", "2006"], ["Surrender", "2007"], ["Rusted from the Rain", "2009"],
+    ["Devil on My Shoulder", "2009"], ["Saint Veronika", "2010"], ["Diamond on a Landmine", "2010"], ["Viking Death March", "2012"],
+    ["Surprise Surprise", "2012"], ["Stand Up and Run", "2012"], ["Afraid of Heights", "2016"], ["Louder Than the DJ", "2016"], ["Big Red Gun", "2016"],
+    ["Forgiveness I + II", "2020"], ["I Beg to Differ (This Will Get Better)", "2022"] ] },
+  { type: "names", group: "Linkin Park", title: "Linkin Park singles and videos", short: "Singles and videos", picks: [
+    ["One Step Closer", "2000"], ["Crawling", "2001"], ["Papercut", "2001"], ["In the End", "2001"], ["Pts.OF.Athrty", "2002"],
+    ["Somewhere I Belong", "2003"], ["Faint", "2003"], ["Numb", "2003"], ["Breaking the Habit", "2004"], ["From the Inside", "2004"],
+    ["What I've Done", "2007"], ["Bleed It Out", "2007"], ["Shadow of the Day", "2007"], ["Leave Out All the Rest", "2008"], ["New Divide", "2009"],
+    ["The Catalyst", "2010"], ["Waiting for the End", "2010"], ["Iridescent", "2011"], ["Burn It Down", "2012"], ["Lost in the Echo", "2012"],
+    ["Castle of Glass", "2013"], ["Final Masquerade", "2014"], ["Heavy", "2017"], ["Talking to Myself", "2017"], ["One More Light", "2017"],
+    ["Lost", "2023"], ["The Emptiness Machine", "2024"], ["Heavy Is the Crown", "2024"], ["Over Each Other", "2024"], ["Two Faced", "2025"] ] },
   { type: "names", title: "Top pop solo women", short: "Pop solo women", picks: [
     "Madonna", "Whitney Houston", "Mariah Carey", "Britney Spears", "Beyoncé", "Rihanna", "Lady Gaga", "Katy Perry",
     "Adele", "Taylor Swift", "Ariana Grande", "Dua Lipa", "Billie Eilish", "Olivia Rodrigo", "Sabrina Carpenter" ] },
@@ -172,6 +192,8 @@ const DEFS = [
   { type: "tv",         name: "American Horror Story" },
   { type: "tv",         name: "The Office", year: 2005 },          // year = first aired, to get the US show and not the UK one
   { type: "tvgenre",    name: "Sci-Fi & Fantasy", title: "Hit sci-fi TV shows" },
+  //   lang limits a TV genre list to shows first made in that language ("ja" = Japanese).
+  { type: "tvgenre",    name: "Animation", lang: "ja", menu: "TV > Anime", title: "Top anime series", short: "Top anime series" },
   //   "shows" is a hand-picked list of TV shows with posters. A pick is ["Name shown", "Search name", first year].
   { type: "shows", menu: "TV > Anime", title: "Magical girl anime", short: "Magical girl", picks: [
     ["Creamy Mami", "Magical Angel Creamy Mami", 1983], ["Sailor Moon", "Sailor Moon", 1992], ["Magic Knight Rayearth", "Magic Knight Rayearth", 1994],
@@ -185,6 +207,8 @@ const DEFS = [
     "Pepperoni", "Mushrooms", "Extra cheese", "Italian sausage", "Bacon", "Onions", "Green peppers", "Black olives", "Pineapple", "Ham",
     "Chicken", "Jalapeños", "Tomatoes", "Spinach", "Anchovies" ] },
   // International chains only, each with a good number of Canadian locations. At most two burgers per chain.
+  { type: "names", cat: "Misc", group: "Food", title: "Pizza chains", picks: [
+    "Pizza Hut", "Domino's", "Little Caesars", "Papa John's", "Boston Pizza", "Blaze Pizza", "Pizza Pizza", "Pizza Nova" ] },
   { type: "names", cat: "Misc", group: "Food", title: "Fast-food burgers", picks: [
     ["Big Mac", "McDonald's"], ["Quarter Pounder with Cheese", "McDonald's"], ["Whopper", "Burger King"], ["Bacon King", "Burger King"],
     ["Dave's Single", "Wendy's"], ["Baconator", "Wendy's"], ["Teen Burger", "A&W"], ["Mozza Burger", "A&W"],
@@ -286,13 +310,13 @@ const DEFS = [
     ["American Born Chinese", "Gene Luen Yang"], ["Smile", "Raina Telgemeier"], ["Saga", "Brian K. Vaughan", "Saga, Volume 1"],
     ["Nimona", "ND Stevenson"], ["Heartstopper", "Alice Oseman", "Heartstopper: Volume One"] ] },
   // Recent hockey romances in the vein of Heated Rivalry. The number is the publication year shown on the tile.
-  { type: "books", group: "Romance", title: "Hockey romances", picks: [
+  { type: "books", group: "Genres > Romance", title: "Hockey romances", short: "Hockey romances", picks: [
     ["Him", "Sarina Bowen", 2015], ["The Deal", "Elle Kennedy", 2015], ["Game Changer", "Rachel Reid", 2018], ["Heated Rivalry", "Rachel Reid", 2019],
     ["Tough Guy", "Rachel Reid", 2020], ["Common Goal", "Rachel Reid", 2020], ["Role Model", "Rachel Reid", 2021], ["Season's Change", "Cait Nary", 2021],
     ["The Long Game", "Rachel Reid", 2022], ["Icebreaker", "Hannah Grace", 2022], ["Mile High", "Liz Tomforde", 2022],
     ["Pucking Around", "Emily Rath", 2023], ["Time to Shine", "Rachel Reid", 2023], ["Delay of Game", "Ari Baran", 2023],
     ["Behind the Net", "Stephanie Archer", 2023], ["Collide", "Bal Khabra", 2024] ] },
-  { type: "names", cat: "Books", group: "Romance", title: "Romance tropes", picks: [
+  { type: "names", cat: "Books", group: "Genres > Romance", title: "Romance tropes", short: "Romance tropes", picks: [
     "Enemies to lovers", "Friends to lovers", "Fake dating", "Forced proximity", "Only one bed", "Grumpy and sunshine", "Second chance",
     "Slow burn", "Forbidden love", "Love triangle", "Marriage of convenience", "Brother's best friend", "Workplace romance",
     "Secret royal", "He falls first" ] },
@@ -670,7 +694,7 @@ const builders = {
   async actor(def) {
     const p = await findPerson(def.name);
     const c = await tmdb(`/person/${p.id}/movie_credits`);
-    const leads = c.cast.filter(m => m.order !== undefined && m.order < 8 && !/uncredited|voice|self/i.test(m.character || ""));
+    const leads = c.cast.filter(m => m.order !== undefined && m.order < (def.billing || 8) && !/uncredited|voice|self/i.test(m.character || ""));
     return { cat: CATS.people, title: `${p.name} movies`, items: await pickMovies(leads) };
   },
   async director(def) {
@@ -918,7 +942,7 @@ const builders = {
         .slice(0, MAX_EPISODES)
         .sort((a, b) => a.episode_number - b.episode_number)
         .map(e => ({ id: "e" + e.id, name: e.name, note: "Episode " + e.episode_number, poster: e.still_path || null, wide: true }));
-      out.push({ cat: CATS.tv, title: `${show.name} season ${n} episodes`, items });
+      out.push({ cat: CATS.tv, group: `${def.group || show.name} > Episodes by season`, short: `Season ${n}`, title: `${show.name} season ${n} episodes`, items });
     }
     return out;
   },
@@ -1029,7 +1053,7 @@ const builders = {
     const all = (await tmdb("/genre/tv/list")).genres;
     const g = all.find(x => x.name.toLowerCase() === def.name.toLowerCase());
     if (!g) throw new Error(`No TV genre called "${def.name}". Options: ${all.map(x => x.name).join(", ")}`);
-    const pages = await Promise.all([1, 2].map(page => tmdb("/discover/tv", { with_genres: g.id, sort_by: "vote_count.desc", page })));
+    const pages = await Promise.all([1, 2].map(page => tmdb("/discover/tv", { with_genres: g.id, sort_by: "vote_count.desc", page, ...(def.lang ? { with_original_language: def.lang } : {}) })));
     const out = [];
     for (const s of pages.flatMap(p => p.results)) {
       if (out.length >= MAX_ITEMS) break;
@@ -1060,9 +1084,9 @@ function addLocalImages(list) {
 
 // Where each list sits in the game's menu. The menu is: category, then submenu, then list.
 //   Movies         > Franchises (James Bond has its own submenu), Genres, Actors, Directors, By year > 1980s..., Awards, Characters
-//   TV             > one submenu per show, plus Show rankings
+//   TV             > one submenu per show or universe (Episodes by season inside), Anime, plus Show rankings
 //   Music          > one submenu per artist (with Songs by album inside where there are many), plus Top albums and Top artists
-//   Books          > Popular, Genres, Romance, Young adult, Authors
+//   Books          > Popular, Genres (Romance has its own submenu), Young adult, Authors
 //   Games          > Franchises (Pokémon has its own submenu), Genres, Consoles, Awards
 //   Misc           > Food, Perfumes
 function place(list, def) {
@@ -1080,10 +1104,15 @@ function place(list, def) {
 // Submenus appear in the order their first list appears in the file, so the finished lists are sorted into this order.
 const MENU_ORDER = {
   Movies: ["Franchises", "Genres", "Actors", "Directors", "By year", "Awards", "Characters"],
-  Books: ["Popular", "Genres", "Romance", "Young adult", "Authors"],
+  Books: ["Popular", "Genres", "Young adult", "Authors"],
   Games: ["Franchises", "Genres", "Consoles", "Awards"],
   Misc: ["Food", "Perfumes"]
 };
+const KIND_ORDER = { tv: 0, albums: 0, episodes: 1, singles: 1, cast: 2, filmcast: 2, names: 3, people: 3, tracks: 4 };
+function kindRank(list) {
+  if (/ > (Songs by album|Episodes by season)$/.test(list.group || "")) return list.group.endsWith("Episodes by season") ? 1 : 4;
+  return list.t in KIND_ORDER ? KIND_ORDER[list.t] : 3;
+}
 function menuRank(list) {
   const order = MENU_ORDER[list.cat];
   if (!order) return 0;
@@ -1106,7 +1135,7 @@ function menuRank(list) {
         if (list.items.length < MIN_ITEMS) { console.warn(`Skipped "${list.title}": only ${list.items.length} items`); continue; }
         const missing = addLocalImages(list);
         if (missing.length) console.log(`  ${missing.length} without a picture. To add your own, upload:\n    ${missing.join("\n    ")}`);
-        built.push({ id: slug(list.title), src, ...place(list, def) });
+        built.push({ id: slug(list.title), src, t: def.type, ...place(list, def) });
         console.log(`${list.title}: ${list.items.length} items`);
       }
     } catch (e) {
@@ -1119,9 +1148,17 @@ function menuRank(list) {
     lists.push(...built);
   }
   if (!lists.length) { console.error("No lists built; lists.json left unchanged."); process.exit(1); }
-  lists.forEach((l, i) => { l._i = i; });
-  lists.sort((a, b) => menuRank(a) - menuRank(b) || a._i - b._i);       // keeps the original order within each submenu
-  lists.forEach(l => { delete l._i; });
+  // Submenus keep the order they first appear in. Inside each one, lists are grouped by kind: a show's seasons, then its
+  // episodes, then its characters, then general lists; an artist's albums, then singles, then other lists, then songs by album.
+  const firstSeen = new Map();
+  lists.forEach((l, i) => {
+    l._i = i;
+    const key = l.cat + "|" + (l.group || "").split(" > ")[0];
+    if (!firstSeen.has(key)) firstSeen.set(key, i);
+    l._g = firstSeen.get(key);
+  });
+  lists.sort((a, b) => menuRank(a) - menuRank(b) || a._g - b._g || kindRank(a) - kindRank(b) || a._i - b._i);
+  lists.forEach(l => { delete l._i; delete l._g; });
   fs.writeFileSync("lists.json", JSON.stringify({ generated: today, lists }, null, 1));
   console.log(`Wrote lists.json with ${lists.length} lists.`);
 })();
