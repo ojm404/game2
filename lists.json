@@ -3869,7 +3869,7 @@
      "id": "g7f9cf461-b7c9-4442-8aa6-501e2291656d",
      "name": "You & I",
      "note": "2014",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/7f9cf461-b7c9-4442-8aa6-501e2291656d/front-250",
      "sq": true
     },
     {
@@ -5003,7 +5003,7 @@
      "id": "ctaylor-swift-1989",
      "name": "1989",
      "note": "Taylor Swift, 2014",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/4d9ec1c2-58ec-48a4-aa0a-916718adead0/front-250",
      "sq": true
     },
     {
@@ -17548,7 +17548,8 @@
    "items": [
     {
      "id": "wstephen-king",
-     "name": "Stephen King"
+     "name": "Stephen King",
+     "img": "https://covers.openlibrary.org/a/olid/OL19981A-M.jpg"
     },
     {
      "id": "wj-k-rowling",
@@ -17567,7 +17568,8 @@
     },
     {
      "id": "wcolleen-hoover",
-     "name": "Colleen Hoover"
+     "name": "Colleen Hoover",
+     "img": "https://covers.openlibrary.org/a/olid/OL7315784A-M.jpg"
     },
     {
      "id": "wdan-brown",
@@ -17576,7 +17578,8 @@
     },
     {
      "id": "wjohn-grisham",
-     "name": "John Grisham"
+     "name": "John Grisham",
+     "img": "https://covers.openlibrary.org/a/olid/OL39329A-M.jpg"
     },
     {
      "id": "wnora-roberts",
@@ -17595,7 +17598,8 @@
     },
     {
      "id": "wbrandon-sanderson",
-     "name": "Brandon Sanderson"
+     "name": "Brandon Sanderson",
+     "img": "https://covers.openlibrary.org/a/olid/OL1394865A-M.jpg"
     },
     {
      "id": "wsarah-j-maas",
@@ -22640,84 +22644,96 @@
   },
   {
    "id": "twilight-main-characters",
-   "src": "{\"type\":\"filmcast\",\"collection\":\"The Twilight Saga\",\"title\":\"Twilight main characters\"}",
-   "t": "filmcast",
+   "src": "{\"type\":\"people\",\"menu\":\"Movies > Characters\",\"title\":\"Twilight main characters\",\"picks\":[[\"Bella Swan\",\"Kristen Stewart\",\"Kristen Stewart\"],[\"Edward Cullen\",\"Robert Pattinson\",\"Robert Pattinson\"],[\"Jacob Black\",\"Taylor Lautner\",\"Taylor Lautner\"],[\"Charlie Swan\",\"Billy Burke\",\"Billy Burke\"],[\"Alice Cullen\",\"Ashley Greene\",\"Ashley Greene\"],[\"Jasper Hale\",\"Jackson Rathbone\",\"Jackson Rathbone\"],[\"Rosalie Hale\",\"Nikki Reed\",\"Nikki Reed\"],[\"Emmett Cullen\",\"Kellan Lutz\",\"Kellan Lutz\"],[\"Carlisle Cullen\",\"Peter Facinelli\",\"Peter Facinelli\"],[\"Esme Cullen\",\"Elizabeth Reaser\",\"Elizabeth Reaser\"],[\"Victoria\",\"Rachelle Lefevre / Bryce Dallas Howard\",\"Rachelle Lefevre\"],[\"Aro\",\"Michael Sheen\",\"Michael Sheen\"],[\"Jessica Stanley\",\"Anna Kendrick\",\"Anna Kendrick\"],[\"Renesmee Cullen\",\"Mackenzie Foy\",\"Mackenzie Foy\"]]}",
+   "t": "people",
    "cat": "Movies",
    "group": "Characters",
    "short": "Twilight main characters",
    "title": "Twilight main characters",
    "items": [
     {
-     "id": "p89409",
-     "name": "Chan Lok-kwun",
-     "note": "Raymond Lam Fung",
-     "poster": "/lNISOqYpD3XplofEtrX7Y1E1f46.jpg"
+     "id": "hbella-swan",
+     "name": "Bella Swan",
+     "note": "Kristen Stewart",
+     "poster": "/xldswdQ1VnpcOf2wZMPguZ3avgO.jpg"
     },
     {
-     "id": "p78875",
-     "name": "Cyclone",
-     "note": "Louis Koo",
-     "poster": "/yQuDBTzm7xWlJICNvl20OmcJP80.jpg"
+     "id": "hedward-cullen",
+     "name": "Edward Cullen",
+     "note": "Robert Pattinson",
+     "poster": "/3qZ09UE7lN6AtorfXFRYpEtSY93.jpg"
     },
     {
-     "id": "p62410",
-     "name": "Mr. Big",
-     "note": "Sammo Hung",
-     "poster": "/AsB9uRDQWdIbFGnkICEl8I2gDWn.jpg"
+     "id": "hjacob-black",
+     "name": "Jacob Black",
+     "note": "Taylor Lautner",
+     "poster": "/xyRXoKM7UQdijwmjpiCcLGPzcc7.jpg"
     },
     {
-     "id": "p64496",
-     "name": "Chau",
-     "note": "Richie Jen",
-     "poster": "/A4oidg4FY6or9TNHi2yz1TO7xeH.jpg"
+     "id": "hcharlie-swan",
+     "name": "Charlie Swan",
+     "note": "Billy Burke",
+     "poster": "/AoyN5a1TNRa4OCeylcXusQM1bD4.jpg"
     },
     {
-     "id": "p2217481",
-     "name": "Shin",
-     "note": "Terrance Lau Chun-Him",
-     "poster": "/3ZWjXWNGz7OVc02qZskFiUt0qVk.jpg"
+     "id": "halice-cullen",
+     "name": "Alice Cullen",
+     "note": "Ashley Greene",
+     "poster": "/7crsfr0klw5iaYvZ3n9ps6RCIhp.jpg"
     },
     {
-     "id": "p70108",
-     "name": "Tiger",
-     "note": "Kenny Wong Tak-Ban",
-     "poster": "/fSSna59ChOc0OA8ju2xRf8jxOvT.jpg"
+     "id": "hjasper-hale",
+     "name": "Jasper Hale",
+     "note": "Jackson Rathbone",
+     "poster": "/bTf1lKi9JpIryUgd2L5PWZaF8kZ.jpg"
     },
     {
-     "id": "p100585",
-     "name": "King",
-     "note": "Philip Ng Wan-Lung",
-     "poster": "/dUvw7dvUyfAiXhyzGWNV0Gd5ycN.jpg"
+     "id": "hrosalie-hale",
+     "name": "Rosalie Hale",
+     "note": "Nikki Reed",
+     "poster": "/xNIXLZ9giqTdvjkBUGq1bJqPe5D.jpg"
     },
     {
-     "id": "p1674432",
-     "name": "Twelfth Master",
-     "note": "Tony Wu Tsz-Tung",
-     "poster": "/bWYyRg8eFxrOdsgzuC1guPtrLoO.jpg"
+     "id": "hemmett-cullen",
+     "name": "Emmett Cullen",
+     "note": "Kellan Lutz",
+     "poster": "/pLzdFABlU6oS2BvlHlAN990woY1.jpg"
     },
     {
-     "id": "p1455929",
-     "name": "AV",
-     "note": "German Cheung Man-Kit",
-     "poster": "/yq29KpKUQUyyTYaz8JRxyoBKn5O.jpg"
+     "id": "hcarlisle-cullen",
+     "name": "Carlisle Cullen",
+     "note": "Peter Facinelli",
+     "poster": "/mmha3A5INmromiCsN8FBSLScVpZ.jpg"
     },
     {
-     "id": "p21908",
-     "name": "Jim",
-     "note": "Aaron Kwok Fu-Shing",
-     "poster": "/zlMfNJwmAyuBdD9bPHLC4fk3SkR.jpg"
+     "id": "hesme-cullen",
+     "name": "Esme Cullen",
+     "note": "Elizabeth Reaser",
+     "poster": "/gYzfVDwWI6A955MEtX1ZqfZIuN2.jpg"
     },
     {
-     "id": "p1638505",
-     "name": "Fanny",
-     "note": "Fish Liew Chi-Yu",
-     "poster": "/5DdEQnAqSscHFbn3hlu0mna7Fwu.jpg"
+     "id": "hvictoria",
+     "name": "Victoria",
+     "note": "Rachelle Lefevre / Bryce Dallas Howard",
+     "poster": "/5ETzDBwbCZ9xYLMmD5c39snVsoQ.jpg"
     },
     {
-     "id": "p2684219",
-     "name": "Woman Beater",
-     "note": "Tommy Chu Pak-Hong",
-     "poster": "/bC97NfPQM2KM9BfuteOaHP7xLxu.jpg"
+     "id": "haro",
+     "name": "Aro",
+     "note": "Michael Sheen",
+     "poster": "/nGxIcIcfJjdPN3k8zFabtA1gRqL.jpg"
+    },
+    {
+     "id": "hjessica-stanley",
+     "name": "Jessica Stanley",
+     "note": "Anna Kendrick",
+     "poster": "/i2HIJQcBsUQ3o9HwEeDwou45D60.jpg"
+    },
+    {
+     "id": "hrenesmee-cullen",
+     "name": "Renesmee Cullen",
+     "note": "Mackenzie Foy",
+     "poster": "/wzH60SrqWp2XMkBfLgdBhx5EJ82.jpg"
     }
    ]
   },
