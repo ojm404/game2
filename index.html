@@ -246,7 +246,7 @@
   <div id="app"></div>
   <div id="rulers" aria-hidden="true"></div>
   <div id="modal"></div>
-  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive. Game data and artwork from RAWG. Book data and covers from Open Library.<span class="build">Build 2026-10-13.2</span></footer>
+  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive. Game data and artwork from RAWG. Book data and covers from Open Library.<span class="build">Build 2026-10-13.3</span></footer>
 </main>
 
 <script>
@@ -501,7 +501,27 @@ function pickerTree(){
       });
       node.children.push({l});
     });
+    tidy(root);
     return root;
+  });
+}
+// Alphabetical where it helps: the artist and show submenus in Music and TV, and the lists in Movies > Actors / Directors.
+// Collections like "Top albums" stay at the end. A leading "The" is ignored, so The Simpsons files under S.
+const ALPHA_SUBMENUS = ["Music", "TV"], ALPHA_LISTS = ["Actors", "Directors"];
+const KEEP_LAST = ["Anime", "Show rankings", "Top albums", "Top artists", "Other"];
+const sortName = t => t.replace(/^(the|films directed by)\s+/i, "").toLowerCase();
+function tidy(root){
+  if (ALPHA_SUBMENUS.includes(root.name)) {
+    const last = n => KEEP_LAST.indexOf(n);
+    root.children.sort((a, b) => {
+      if (!a.n || !b.n) return 0;
+      const la = last(a.n.name), lb = last(b.n.name);
+      if (la >= 0 || lb >= 0) return (la < 0 ? -1 : la) - (lb < 0 ? -1 : lb);
+      return sortName(a.n.name).localeCompare(sortName(b.n.name));
+    });
+  }
+  root.children.forEach(ch => {
+    if (ch.n && ALPHA_LISTS.includes(ch.n.name)) ch.n.children.sort((a, b) => a.l && b.l ? sortName(a.l.title).localeCompare(sortName(b.l.title)) : 0);
   });
 }
 function fillSelects(){
