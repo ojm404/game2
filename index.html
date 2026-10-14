@@ -246,7 +246,7 @@
   <div id="app"></div>
   <div id="rulers" aria-hidden="true"></div>
   <div id="modal"></div>
-  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive. Game data and artwork from RAWG. Book data and covers from Open Library.<span class="build">Build 2026-10-13.3</span></footer>
+  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive. Game data and artwork from RAWG. Book data and covers from Open Library.<span class="build">Build 2026-10-13.4</span></footer>
 </main>
 
 <script>
@@ -823,8 +823,8 @@ function goneView(opp){
   if (!opp) return "";
   const n = esc(opp.name);
   if (opp.left) return `<div class="notice" role="status"><strong>${n} has left the room.</strong> You can leave too and start a new one.</div>`;
-  if (opp.online === false) return `<div class="notice" role="status"><strong>${n} has disconnected.</strong> If they reopen the game on the same device, they will drop back into this room.</div>`;
-  if (opp.away) return `<div class="notice" role="status"><strong>${n} has switched to another tab or app.</strong> The game carries on when they come back.</div>`;
+  // Switched tab, locked phone or a dropped connection: they have not left, so it is only temporary.
+  if (opp.online === false || opp.away) return `<div class="notice" role="status"><strong>${n} is temporarily disconnected.</strong> They haven't left the room, so the game carries on as soon as they're back.</div>`;
   return "";
 }
 function draw(){
@@ -895,7 +895,7 @@ function lobbyView(){
 
 function statusView(opp, done){
   let s = `Waiting for someone to join. <button class="link inv" data-act="invite">Copy invite link</button>`;
-  if (opp) s = done ? "Playing " + esc(opp.name) : esc(opp.name) + (opp.ready ? " has locked in" : opp.left || opp.online === false || opp.away ? " is away" : " is still ranking");
+  if (opp) s = done ? "Playing " + esc(opp.name) : esc(opp.name) + (opp.ready ? " has locked in" : opp.left ? " has left" : opp.online === false || opp.away ? " is temporarily disconnected" : " is still ranking");
   const vs = opp ? `<span class="vs"><span class="pc-${me.slot}">${mark(me.slot)}${esc(me.name)}</span> vs <span class="pc-${otherSlot()}">${mark(otherSlot())}${esc(opp.name)}</span></span>` : "";
   if (opp && done) s = "";
   if (room.tiebreak) s = "Tiebreaker round" + (s ? ". " + s : "");
