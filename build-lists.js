@@ -250,6 +250,11 @@ const DEFS = [
     ["Lovely", "Sarah Jessica Parker"], ["Heat", "Beyoncé"], ["Purr", "Katy Perry"], ["Someday", "Justin Bieber"],
     ["Wonderstruck", "Taylor Swift"], ["Fame", "Lady Gaga"], ["Pink Friday", "Nicki Minaj"], ["Cloud", "Ariana Grande"],
     ["Thank U, Next", "Ariana Grande"], ["Eilish", "Billie Eilish"], ["Fenty Eau de Parfum", "Rihanna"] ] },
+  { type: "names", cat: "Misc", group: "Astrology", title: "Zodiac signs", picks: [
+    ["Aries", "\u2648 Mar 21 to Apr 19"], ["Taurus", "\u2649 Apr 20 to May 20"], ["Gemini", "\u264A May 21 to Jun 20"],
+    ["Cancer", "\u264B Jun 21 to Jul 22"], ["Leo", "\u264C Jul 23 to Aug 22"], ["Virgo", "\u264D Aug 23 to Sep 22"],
+    ["Libra", "\u264E Sep 23 to Oct 22"], ["Scorpio", "\u264F Oct 23 to Nov 21"], ["Sagittarius", "\u2650 Nov 22 to Dec 21"],
+    ["Capricorn", "\u2651 Dec 22 to Jan 19"], ["Aquarius", "\u2652 Jan 20 to Feb 18"], ["Pisces", "\u2653 Feb 19 to Mar 20"] ] },
   // Books (from Open Library, no key needed).
   //   "books" is a hand-picked list. A pick is ["Title", "Author"], or ["Name shown", "Author", "title to search for"]
   //           when the tile should show a series name but use its first book's cover. Add a year (a number) to show it on the tile.
@@ -1114,7 +1119,7 @@ const MENU_ORDER = {
   Movies: ["Franchises", "Genres", "Actors", "Directors", "By year", "Awards", "Characters"],
   Books: ["Popular", "Genres", "Young adult", "Authors"],
   Games: ["Franchises", "Genres", "Consoles", "Awards"],
-  Misc: ["Food", "Perfumes"]
+  Misc: ["Food", "Perfumes", "Astrology"]
 };
 const KIND_ORDER = { tv: 0, albums: 0, episodes: 1, singles: 1, cast: 2, filmcast: 2, names: 3, people: 3, tracks: 4 };
 function kindRank(list) {
