@@ -2,13 +2,14 @@
    Loaded after the main script in index.html and uses its helpers (room, me, tally, keys, boardView, look, mark, ...).
 
    A round: "it" ranks the list honestly while everyone else guesses that ranking.
-   Guessers score their own points (3 exact, 1 one tier off, 3 per perfect row) and the best guesser gets a bonus.
-   "It" scores the group's average, so being easy to read pays. Everyone is "it" once; most points wins.
+   Each guesser scores 1 to 10 for how close they were (an exact tier counts in full, one tier off counts half),
+   and the closest guesser gets +2. "It" scores the guessers' average, so being easy to read pays.
+   Everyone is "it" once; most points wins.
    Before the first round, each player picks a list for the next player's turn. Every round then uses the same number of
    items (the size of the shortest list picked), chosen at random, so nobody's turn is worth more than anyone else's.
    Fewer than 3 players left ends the game. The room stays open afterwards for another game. */
 
-const PARTY_MIN = 3, PARTY_MAX = 8, BEST_BONUS = 2;
+const PARTY_MIN = 3, PARTY_MAX = 8, BEST_BONUS = 2, PARTY_ITEMS = 12;   // PARTY_ITEMS: most items in any one round
 const SEATS = ["p1", "p2", "p3", "p4", "p5", "p6", "p7", "p8"];
 
 // ---- who is who ----
@@ -51,12 +52,16 @@ const baseTiers = () => room.baseTiers || room.tiers || TIERS;
 const sayCount = () => active().filter(s => s !== me.slot).reduce((t, s) => { const sy = P(s).say; return t + (sy && sy.r === room.round ? sy.n : 0); }, 0);
 
 // ---- scores ----
+// Points out of 10: the share of the list a guesser got close, with an exact tier counting in full and one tier off counting half.
+const closeness = t => (t.exact + 0.5 * t.near) / Math.max(1, t.exact + t.near + t.cold);
+const tenPoint = t => Math.max(1, Math.round(closeness(t) * 10));
 function roundScores(){
   const own = P(room.it).own, res = {};
-  guessers().forEach(s => { res[s] = tally(P(s).guess, own, keys()); });
-  const base = Object.values(res).map(t => t.score);
-  const top = base.length ? Math.max(...base) : 0;
-  const best = top > 0 ? Object.keys(res).filter(s => res[s].score === top) : [];
+  guessers().forEach(s => { const t = tally(P(s).guess, own, keys()); res[s] = {...t, score: tenPoint(t)}; });
+  const pct = s => closeness(res[s]), all = Object.keys(res);
+  const top = all.length ? Math.max(...all.map(pct)) : 0;
+  const best = top > 0 ? all.filter(s => pct(s) === top) : [];
+  const base = all.map(s => res[s].score);
   const itScore = base.length ? Math.round(base.reduce((a, b) => a + b, 0) / base.length) : 0;
   return {res, best, itScore};
 }
@@ -118,7 +123,7 @@ function partySync(){
 function beginPlay(needed, picks){
   const all = {...picks};
   needed.forEach(t => { if (!all[t]) all[t] = {by: null, list: randomList()}; });      // a picker left without choosing
-  const size = Math.min(...needed.map(t => all[t].list.items.length));
+  const size = Math.min(PARTY_ITEMS, ...needed.map(t => all[t].list.items.length));
   const i = (room.order || []).findIndex(t => needed.includes(t)), it = room.order[i];
   const u = {picking: false, picks: all, size, round: room.round + 1, turn: i, it, sit: null, list: trimList(all[it].list, size), tiers: all[it].tiers || baseTiers()};
   seatsIn().forEach(s => { u["players/" + s + "/ready"] = false; u["players/" + s + "/own"] = null; u["players/" + s + "/guess"] = null; });
@@ -128,7 +133,7 @@ function partyAdvance(){
   const i = nextItIndex();
   if (i < 0) { roomRef.update({closed: {done: true}}); return; }
   const it = room.order[i], pick = (room.picks || {})[it];
-  const u = {round: room.round + 1, turn: i, it, sit: null, list: trimList(pick ? pick.list : randomList(), room.size || 10), tiers: (pick && pick.tiers) || baseTiers()};
+  const u = {round: room.round + 1, turn: i, it, sit: null, list: trimList(pick ? pick.list : randomList(), room.size || PARTY_ITEMS), tiers: (pick && pick.tiers) || baseTiers()};
   seatsIn().forEach(s => { u["players/" + s + "/ready"] = false; u["players/" + s + "/own"] = null; u["players/" + s + "/guess"] = null; });
   roomRef.update(u);
 }
@@ -168,7 +173,8 @@ function partyPicking(){
   }
   const t = targetOf(me.slot), mine = Object.values(room.picks || {}).find(x => x.by === me.slot);
   const sizes = Object.values(room.picks || {}).map(x => x.list.items.length), smallest = sizes.length ? Math.min(...sizes) : null;
-  const sizeNote = `<p class="hint" style="font-size:.85rem">Every round uses the same number of items, so the shortest list anyone picks sets the size for the whole game${smallest ? ` (${smallest} so far)` : ""}. Longer lists are cut down to a random selection.</p>`;
+  const size = smallest ? Math.min(PARTY_ITEMS, smallest) : PARTY_ITEMS;
+  const sizeNote = `<p class="hint" style="font-size:.85rem">Every round uses the same number of items: ${PARTY_ITEMS} at most, or fewer if someone picks a shorter list${smallest ? ` (${size} so far)` : ""}. Longer lists are cut down to a random selection.</p>`;
   if (mine || !t || !P(t) || P(t).left) {
     const still = (room.order || []).map(pickerOf).filter((s, i, a) => a.indexOf(s) === i)
       .filter(s => P(s) && !P(s).left && !Object.values(room.picks || {}).some(x => x.by === s));
@@ -216,7 +222,7 @@ function partyResults(){
     <p class="hint">${esc(L().title)}. Under each one: the emoji of everyone who placed it exactly.</p>
     ${partyBoard()}
     <h2 style="margin-top:20px">Leaderboard</h2>${leaderboard(true)}
-    <p class="hint">${pname(room.it)} scored ${sc.itScore}, the group's average.${sc.best.length ? ` Best guess: ${sc.best.map(pname).join(" and ")} (+${BEST_BONUS} bonus).` : ""}</p>
+    <p class="hint">Guessers score 1 to 10 for how close they got, and the closest gets +${BEST_BONUS}. ${pname(room.it)} scored ${sc.itScore}, the guessers' average.${sc.best.length ? ` Closest: ${sc.best.map(pname).join(" and ")}.` : ""}</p>
     <div class="actions"><button class="btn" data-act="openRound">${isFinal() ? "Final results and chat" : "Round summary and next steps"}</button></div>`;
 }
 function partyDraw(){
@@ -273,7 +279,7 @@ function partyModalHtml(){
     : `<p>Waiting for ${tag(room.host)}${room.it !== room.host ? ` or ${tag(room.it)}` : ""} to start the next round.</p>`;
   return `${close}
     <h2>Round ${(room.turn || 0) + 1} results</h2>
-    <p>${tag(room.it)} was it and scored ${sc.itScore}.${sc.best.length ? ` Best guess: ${sc.best.map(tag).join(" and ")}.` : ""}</p>
+    <p>${tag(room.it)} was it and scored ${sc.itScore} (the guessers' average).${sc.best.length ? ` Closest guess: ${sc.best.map(tag).join(" and ")}, +${BEST_BONUS}.` : ""}</p>
     ${leaderboard(true)}
     <p class="sublabel">Next up</p>
     <p>${tag(nextIt)} is it, ranking ${esc(((room.picks || {})[nextIt] || {list: {title: "a random list"}}).list.title)}${((room.picks || {})[nextIt] || {}).tiers ? ` with tiers ${esc(room.picks[nextIt].tiers.join(", "))}` : ""}.</p>
