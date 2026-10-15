@@ -202,6 +202,23 @@
   .presets{margin-top:8px}
   .mbox .tiered{margin-top:4px}
   .mbox .tiernames{max-width:none}
+  .modes{display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:420px}
+  .mode{text-align:left;border:0;border-radius:12px;padding:10px 12px;background:var(--panel2);font-weight:600}
+  .mode small{display:block;font-weight:400;color:var(--muted);font-size:.78rem;margin-top:2px}
+  .mode.on{box-shadow:inset 0 0 0 2px var(--pink)}
+  /* party */
+  .plist{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px}
+  .pchip{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border-radius:999px;padding:5px 11px;font-size:.88rem;box-shadow:inset 0 0 0 1px var(--pc)}
+  .pchip .st{color:var(--muted);font-size:.78rem}
+  .pchip.gone{opacity:.45;box-shadow:none}
+  .pchip.it{background:var(--panel2);box-shadow:inset 0 0 0 2px var(--pc)}
+  .lb{width:100%;border-collapse:collapse;margin:6px 0 12px;font-size:.92rem}
+  .lb td{padding:6px 8px;border-bottom:1px solid var(--bg)}
+  .lb td.n{width:2em;color:var(--muted)}
+  .lb td.pt{text-align:right;font-weight:700;white-space:nowrap}
+  .lb td.pt small{font-weight:400;color:var(--muted);margin-left:6px}
+  .lb tr.me td{color:var(--text);background:rgba(255,255,255,.04)}
+  .tile .who{display:block;min-height:1.4em;font-size:.82rem;text-align:center;margin-top:3px;line-height:1.3;word-break:break-all}
   .tiebox{background:var(--panel);border-radius:14px;padding:16px 18px;margin:0 0 20px;box-shadow:inset 0 0 0 2px var(--purple)}
   .tbpair{display:flex;gap:10px;flex-wrap:wrap}
   .tbpick{flex:1;min-width:140px;display:flex;gap:10px;align-items:center;background:var(--panel2);border:0;border-radius:12px;padding:10px;text-align:left;font-weight:600}
@@ -246,7 +263,7 @@
   <div id="app"></div>
   <div id="rulers" aria-hidden="true"></div>
   <div id="modal"></div>
-  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive. Game data and artwork from RAWG. Book data and covers from Open Library.<span class="build">Build 2026-10-13.4</span></footer>
+  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive. Game data and artwork from RAWG. Book data and covers from Open Library.<span class="build">Build 2026-10-14.1</span></footer>
 </main>
 
 <script>
@@ -314,8 +331,8 @@ let modalTop = null, modalFor = null;               // where the open pop-up was
 const configured = !firebaseConfig.apiKey.startsWith("PASTE");
 const STORE = "tierBattleship";
 // What players can choose from on the Create and Join screens.
-const PALETTE = ["#FF5FA8", "#5CC8FF", "#B58CFF", "#FF8A4C", "#2DD4BF", "#E9DDFF"];
-const PALETTE_NAMES = ["Pink", "Blue", "Violet", "Orange", "Teal", "White"];
+const PALETTE = ["#FF5FA8", "#5CC8FF", "#B58CFF", "#FF8A4C", "#2DD4BF", "#E9DDFF", "#FB7185", "#818CF8"];
+const PALETTE_NAMES = ["Pink", "Blue", "Violet", "Orange", "Teal", "White", "Rose", "Indigo"];
 const EMOJIS = ["\u{1F60D}", "\u{1F92C}", "\u{1F920}", "\u{1F63A}", "\u{1F921}", "\u{1F608}", "\u{1F984}", "\u{1F978}", "\u{1F47D}"];
 // Quick messages players can send each other at the end of a round.
 const SAY = ["Good game!", "Congrats!", "Better luck next time", "So close!", "You know me too well", "Rematch?"];
@@ -331,7 +348,7 @@ let me = blank();
 try { me = Object.assign(blank(), JSON.parse(localStorage.getItem(STORE)) || {}); } catch(e){}
 if (!EMOJIS.includes(me.emoji)) me.emoji = rand(EMOJIS);   // e.g. a saved choice that is no longer offered
 if (!PALETTE.includes(me.color)) me.color = rand(PALETTE);
-let room = null, roomRef = null, selected = null, errMsg = "", db = null, lobbyCode = "", lobbyMode = null;
+let room = null, roomRef = null, selected = null, errMsg = "", db = null, lobbyCode = "", lobbyMode = null, lobbyGameMode = "duel";
 // The game's public address, used in invite links and copied results. When the game is embedded in a site builder
 // the page cannot always see its own address, so SITE_URL (set near the top of this script) is used when filled in.
 function pageUrl(){
@@ -409,6 +426,7 @@ function sessionStats(){
 }
 const winsText = n => n + (n === 1 ? " win" : " wins");
 function shareText(){
+  if (room.mode === "party") return partyShareText();
   const mine = room.players[me.slot], opp = room.players[otherSlot()];
   const who = slot => { const e = look(slot).emoji; return (e ? e + " " : "") + room.players[slot].name; };
   const me1 = who(me.slot), them = who(otherSlot());
@@ -563,6 +581,7 @@ function subscribe(){
 
 // Rankings stay on your own device until both players have locked in.
 function sync(){
+  if (room.mode === "party") { if (typeof partySync === "function") partySync(); return; }
   const mine = room.players[me.slot], opp = room.players[otherSlot()];
   const mineRef = roomRef.child("players/" + me.slot);
   if (me.step === "locked" && !mine.ready) mineRef.update({ready:true});
@@ -630,7 +649,9 @@ async function createRoom(){
   for (let tries = 0; tries < 5; tries++) {
     const code = newCode();
     const res = await db.ref("rooms/" + code).transaction(cur =>
-      cur === null ? {created: firebase.database.ServerValue.TIMESTAMP, round:1, list: chosenList(), tiers, players:{p1:{name, ready:false, color: me.color, emoji: me.emoji}}} : undefined);
+      cur === null ? {created: firebase.database.ServerValue.TIMESTAMP, round:1, list: chosenList(), tiers,
+        ...(lobbyGameMode === "party" ? {mode: "party", host: "p1", started: false} : {}),
+        players:{p1:{name, ready:false, color: me.color, emoji: me.emoji}}} : undefined);
     if (res.committed) { enter(code, "p1", name); return; }
   }
   errMsg = "Could not create a room. Try again."; render();
@@ -640,8 +661,20 @@ async function joinRoom(){
   const name = readName(); if (!name) return;
   const code = (document.getElementById("code").value || "").trim().toUpperCase();
   if (code.length !== 4) { errMsg = "Enter the 4-letter room code."; render(); return; }
+  let seat = "p2";
   const res = await db.ref("rooms/" + code).transaction(cur => {
     if (cur === null) return null;
+    if (cur.mode === "party") {
+      // Party rooms take up to 8 before the game starts. Emojis (and colours, while any are free) stay unique.
+      if (cur.started) return;
+      const free = SEATS.find(s => !cur.players[s]);
+      if (!free) return;
+      const taken = Object.values(cur.players);
+      const pick = (arr, mine, key) => taken.some(p => p[key] === mine) ? (arr.find(x => !taken.some(p => p[key] === x)) || mine) : mine;
+      cur.players[free] = {name, ready:false, color: pick(PALETTE, me.color, "color"), emoji: pick(EMOJIS, me.emoji, "emoji")};
+      seat = free;
+      return cur;
+    }
     if (cur.players && cur.players.p2) return;
     // If the host already has this colour or emoji, take the next one along so the two players stay distinct.
     const host = cur.players.p1 || {};
@@ -649,9 +682,10 @@ async function joinRoom(){
     cur.players.p2 = {name, ready:false, color: next(PALETTE, me.color, host.color), emoji: next(EMOJIS, me.emoji, host.emoji)};
     return cur;
   });
+  const got = res.snapshot.val();
   if (!res.snapshot.exists()) errMsg = "No room with code " + code + ". Check it with your opponent.";
-  else if (!res.committed) errMsg = "Room " + code + " already has two players.";
-  else { enter(code, "p2", name); return; }
+  else if (!res.committed) errMsg = got && got.mode === "party" ? (got.started ? "That party game has already started." : "That party room is full.") : "Room " + code + " already has two players.";
+  else { enter(code, seat, name); return; }
   render();
 }
 
@@ -688,6 +722,7 @@ const actions = {
   togglePick: () => { pickOpen = !pickOpen; fillSelects(); },
   pickList: btn => { pickId = btn.dataset.id; pickOpen = false; fillSelects(); },
   setColor: btn => choose(btn, "color"),
+  setGameMode: btn => { lobbyGameMode = btn.dataset.v; btn.parentElement.querySelectorAll("button").forEach(b => { const on = b === btn; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on); }); },
   setEmoji: btn => choose(btn, "emoji"),
   pickCreate: () => { lobbyMode = "create"; errMsg = ""; render(); },
   pickJoin:   () => { lobbyMode = "join"; errMsg = ""; render(); },
@@ -830,6 +865,7 @@ function goneView(opp){
 function draw(){
   if (!configured) { app.innerHTML = setupView(); return; }
   if (!me.code || !room) { app.innerHTML = lobbyView(); return; }
+  if (room.mode === "party") { app.innerHTML = typeof partyDraw === "function" ? partyDraw() : ""; return; }
   const mine = room.players[me.slot], opp = room.players[otherSlot()];
   const oppName = opp ? opp.name : "your opponent";
   if (mine.own && opp && opp.own && opp.guess && mine.guess) {
@@ -865,7 +901,12 @@ function lobbyView(){
   const back = `<button class="btn ghost" data-act="home">Back</button>`;
   if (lobbyMode === "create") return `<div class="panel">
     <h2>Create a room</h2>
-    <p class="hint">Set up the game, then send the room code to your opponent.</p>
+    <p class="hint">Set up the game, then send the room code to the other players.</p>
+    <label id="modelab">Game type</label>
+    <div class="swatches modes" role="group" aria-labelledby="modelab">
+      <button class="mode${lobbyGameMode === "duel" ? " on" : ""}" data-act="setGameMode" data-v="duel" aria-pressed="${lobbyGameMode === "duel"}">Duel<small>2 players guess each other</small></button>
+      <button class="mode${lobbyGameMode === "party" ? " on" : ""}" data-act="setGameMode" data-v="party" aria-pressed="${lobbyGameMode === "party"}">Party<small>3 to 8 players take turns being "it"</small></button>
+    </div>
     ${nameField}
     <label id="picklab">What are you ranking?</label>
     <div class="picker" role="group" aria-labelledby="picklab"></div>
@@ -875,7 +916,7 @@ function lobbyView(){
   </div>`;
   if (lobbyMode === "join") return `<div class="panel">
     <h2>Join a room</h2>
-    <p class="hint">Enter your name and the 4-letter code your opponent sent you.</p>
+    <p class="hint">Enter your name and the 4-letter room code you were sent.</p>
     ${nameField}
     <label for="code">Room code</label>
     <input id="code" class="code" maxlength="4" autocomplete="off" value="${esc(lobbyCode)}">
@@ -883,8 +924,8 @@ function lobbyView(){
     ${err}
   </div>`;
   return `<div class="panel">
-    <h2>A tier list ranking game for two</h2>
-    <p class="hint">Rank the list your way, then guess how your opponent ranked it. The best guesser wins.</p>
+    <h2>A tier list ranking game</h2>
+    <p class="hint">Rank the list your way, then guess how your friends ranked it. The best guesser wins. Play head to head, or as a party of up to 8.</p>
     <div class="choice">
       <button class="btn big" data-act="pickCreate">Create a room<small>Pick the list and invite someone</small></button>
       <button class="btn ghost big" data-act="pickJoin">Join a room<small>I have a room code</small></button>
@@ -921,7 +962,7 @@ function chipHtml(a){
 }
 
 function boardView(oppName){
-  const own = me.step === "own", board = me[me.step];
+  const own = me.step === "own", board = me[me.step], pm = room && room.mode === "party";
   const placed = L().items.filter(a => board[a.id]).length, all = placed === L().items.length;
   const rows = keys().map(t => `<div class="row" data-tier="${t}">
       <button class="tl" aria-label="Place the selected pick in ${tlabel(t)}">${tlabel(t)}</button>
@@ -930,13 +971,13 @@ function boardView(oppName){
   return `<div class="board${selected ? " picking" : ""}">
     <h2>${own ? "Rank them your way" : "Predict " + esc(oppName) + "'s ranking"}</h2>
     <p class="hint">Tap one, then tap a tier. ${own
-      ? "This is your honest ranking. It stays hidden until you both lock in."
+      ? (pm ? "You're it this round. Rank honestly: everyone else is trying to read you, and you score when they do." : "This is your honest ranking. It stays hidden until you both lock in.")
       : "Put each one where you think " + esc(oppName) + " put it."}</p>
     <div class="grid${longTiers() ? " long" : ""}">${rows}</div>
     <div class="pool" data-tier="">${loose || '<span class="empty">All placed. Tap one to move it.</span>'}</div>
     <div class="actions">
-      ${own ? "" : '<button class="btn ghost" data-act="back">Back to my ranking</button>'}
-      <button class="btn" data-act="${own ? "next" : "lock"}" ${all ? "" : "disabled"}>${own ? "Next: predict theirs" : "Lock in"}</button>
+      ${own || pm ? "" : '<button class="btn ghost" data-act="back">Back to my ranking</button>'}
+      <button class="btn" data-act="${own && !pm ? "next" : "lock"}" ${all ? "" : "disabled"}>${own && !pm ? "Next: predict theirs" : "Lock in"}</button>
       <span class="hint" style="align-self:center;margin:0">${placed} of ${L().items.length} placed</span>
     </div></div>`;
 }
@@ -1080,6 +1121,7 @@ function placeModal(){
 
 function updateModal(){
   if (!room || !me.code) { modal = null; seen.round = null; seen.gone = null; seen.say = 0; seen.next = null; return; }
+  if (room.mode === "party") { if (typeof partyUpdateModal === "function") partyUpdateModal(); return; }
   if (room.closed) { modal = {kind: "closed"}; return; }
   const mine = room.players[me.slot], opp = room.players[otherSlot()];
   // Only a deliberate "Leave room" gets a pop-up. A dropped connection or a tab switch just shows the banner.
@@ -1100,7 +1142,7 @@ function updateModal(){
 // This round's messages, one line per player who has sent one.
 function chatLog(){
   const line = slot => { const p = room.players[slot], sy = p && p.say; return sy && sy.r === room.round && SAY[sy.m] ? `<div class="pc-${slot}">${mark(slot)}<strong>${esc(p.name)}:</strong> ${esc(SAY[sy.m])}</div>` : ""; };
-  const html = line("p1") + line("p2");
+  const html = Object.keys(room.players || {}).sort().map(line).join("");
   return html ? `<div class="chatlog">${html}</div>` : "";
 }
 function sessionHtml(){
@@ -1112,6 +1154,7 @@ function sessionHtml(){
 }
 function modalHtml(){
   if (!modal) return "";
+  if (room.mode === "party") return typeof partyModalHtml === "function" ? partyModalHtml() : "";
   const opp = room.players[otherSlot()], on = opp ? esc(opp.name) : "Your opponent";
   if (modal.kind === "closed") {
     const by = room.closed.by === me.slot ? "You" : on;
@@ -1195,5 +1238,7 @@ function resultsView(mine, opp){
     <div class="actions"><button class="btn" data-act="openRound">Open chat and next steps</button><button class="btn ghost" data-act="share">Copy results</button></div>`;
 }
 </script>
+<!-- Party mode (3 to 8 players). Must load after the main script above. -->
+<script src="party.js"></script>
 </body>
 </html>
