@@ -263,7 +263,7 @@
   <div id="app"></div>
   <div id="rulers" aria-hidden="true"></div>
   <div id="modal"></div>
-  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive. Game data and artwork from RAWG. Book data and covers from Open Library.<span class="build">Build 2026-10-14.1</span></footer>
+  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive. Game data and artwork from RAWG. Book data and covers from Open Library.<span class="build">Build 2026-10-15.2</span></footer>
 </main>
 
 <script>
@@ -645,11 +645,12 @@ async function createRoom(){
   const name = readName(); if (!name) return;
   const tiers = tierNames.map(t => t.trim().slice(0, 14)).filter(Boolean);
   if (tiers.length < 2) { errMsg = "Name at least two tiers."; render(); return; }
-  if (!chosenList()) { errMsg = "Choose what you are ranking first."; pickOpen = true; render(); return; }
+  const party = lobbyGameMode === "party";
+  if (!party && !chosenList()) { errMsg = "Choose what you are ranking first."; pickOpen = true; render(); return; }
   for (let tries = 0; tries < 5; tries++) {
     const code = newCode();
     const res = await db.ref("rooms/" + code).transaction(cur =>
-      cur === null ? {created: firebase.database.ServerValue.TIMESTAMP, round:1, list: chosenList(), tiers,
+      cur === null ? {created: firebase.database.ServerValue.TIMESTAMP, round:1, list: party ? {title: "Party lobby"} : chosenList(), tiers,
         ...(lobbyGameMode === "party" ? {mode: "party", host: "p1", started: false} : {}),
         players:{p1:{name, ready:false, color: me.color, emoji: me.emoji}}} : undefined);
     if (res.committed) { enter(code, "p1", name); return; }
@@ -722,7 +723,12 @@ const actions = {
   togglePick: () => { pickOpen = !pickOpen; fillSelects(); },
   pickList: btn => { pickId = btn.dataset.id; pickOpen = false; fillSelects(); },
   setColor: btn => choose(btn, "color"),
-  setGameMode: btn => { lobbyGameMode = btn.dataset.v; btn.parentElement.querySelectorAll("button").forEach(b => { const on = b === btn; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on); }); },
+  setGameMode: btn => {
+    lobbyGameMode = btn.dataset.v;
+    btn.parentElement.querySelectorAll("button").forEach(b => { const on = b === btn; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on); });
+    document.querySelectorAll(".duelonly").forEach(x => { x.hidden = lobbyGameMode === "party"; });
+    document.querySelectorAll(".partyonly").forEach(x => { x.hidden = lobbyGameMode !== "party"; });
+  },
   setEmoji: btn => choose(btn, "emoji"),
   pickCreate: () => { lobbyMode = "create"; errMsg = ""; render(); },
   pickJoin:   () => { lobbyMode = "join"; errMsg = ""; render(); },
@@ -848,10 +854,29 @@ function followScreen(){
   screenKey = key;
   if (changed && tapped && app.scrollIntoView) { try { app.scrollIntoView({block: "start", behavior: "smooth"}); } catch (e) {} }
 }
+// Every tap redraws the screen. Re-creating each <img> makes phones reload and repaint it, which flickers (worst with
+// Open Library, whose covers redirect). So loaded pictures are set aside before a redraw and put back in place after it.
+function keepImages(el){
+  const kept = new Map();
+  if (!el || !el.querySelectorAll) return kept;
+  el.querySelectorAll("img").forEach(img => {
+    const k = img.getAttribute("src");
+    if (k && img.complete && img.naturalWidth) { if (!kept.has(k)) kept.set(k, []); kept.get(k).push(img); }
+  });
+  return kept;
+}
+function restoreImages(el, kept){
+  if (!kept.size || !el || !el.querySelectorAll) return;
+  el.querySelectorAll("img").forEach(img => {
+    const old = (kept.get(img.getAttribute("src")) || []).shift();
+    if (old) { old.className = img.className; old.alt = img.alt; img.replaceWith(old); }
+  });
+}
 function render(){
   if (app.style) { app.style.setProperty("--p1c", look("p1").color); app.style.setProperty("--p2c", look("p2").color); }
-  draw(); fillSelects(); updateModal(); renderModal(); followScreen();
-  document.getElementById("listName").textContent = room && room.list ? "Now ranking: " + room.list.title : "";
+  const kept = keepImages(app);
+  draw(); restoreImages(app, kept); fillSelects(); updateModal(); renderModal(); followScreen();
+  document.getElementById("listName").textContent = room && room.list && room.list.items ? "Now ranking: " + room.list.title : "";
 }
 // A banner when the opponent has left or dropped off.
 function goneView(opp){
@@ -908,8 +933,9 @@ function lobbyView(){
       <button class="mode${lobbyGameMode === "party" ? " on" : ""}" data-act="setGameMode" data-v="party" aria-pressed="${lobbyGameMode === "party"}">Party<small>3 to 8 players take turns being "it"</small></button>
     </div>
     ${nameField}
-    <label id="picklab">What are you ranking?</label>
-    <div class="picker" role="group" aria-labelledby="picklab"></div>
+    <div class="duelonly"${lobbyGameMode === "party" ? " hidden" : ""}><label id="picklab">What are you ranking?</label>
+    <div class="picker" role="group" aria-labelledby="picklab"></div></div>
+    <p class="hint partyonly"${lobbyGameMode === "party" ? "" : " hidden"} style="margin-top:12px">Once the game starts, each player picks a list for someone else's turn.</p>
     ${tierEditor()}
     <div class="actions">${back}<button class="btn" data-act="create">Create room</button></div>
     ${err}
@@ -1204,7 +1230,9 @@ function renderModal(){
   const html = modal && room ? modalHtml() : "";
   const typing = html && modalEl.contains && document.activeElement && document.activeElement.tagName === "INPUT" && modalEl.contains(document.activeElement);
   if (typing) return;      // redrawing would knock the cursor out of the box; the next update catches up
+  const kept = keepImages(modalEl);
   modalEl.innerHTML = html ? `<div class="mback"></div><div class="mbox pc-wrap" role="dialog" aria-modal="true">${html}</div>` : "";
+  restoreImages(modalEl, kept);
   if (modalEl.style) { modalEl.style.setProperty("--p1c", look("p1").color); modalEl.style.setProperty("--p2c", look("p2").color); }
   fillSelects();
   placeModal();
