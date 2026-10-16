@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-13",
+ "generated": "2026-10-16",
  "lists": [
   {
    "id": "harry-potter-films",
@@ -166,7 +166,7 @@
      "id": "m168259",
      "name": "Furious 7",
      "note": "2015",
-     "poster": "/ktofZ9Htrjiy0P6LEowsDaxd3Ri.jpg"
+     "poster": "/wurKlC3VKUgcfsn0K51MJYEleS2.jpg"
     },
     {
      "id": "m337339",
@@ -219,7 +219,7 @@
      "id": "m658",
      "name": "Goldfinger",
      "note": "1964",
-     "poster": "/3zqmjujYSkgLSrdvvZ9VnDfaDRV.jpg"
+     "poster": "/aKNFzaqQgPzsGXnsMc4kJH5hFIV.jpg"
     },
     {
      "id": "m660",
@@ -3014,7 +3014,7 @@
      "id": "a474906cf-88cc-414e-9b50-e8112dd44431",
      "name": "The Center Won’t Hold",
      "note": "2019",
-     "img": "https://coverartarchive.org/release-group/474906cf-88cc-414e-9b50-e8112dd44431/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -3035,7 +3035,7 @@
      "id": "aebfca4fe-da13-4edc-818a-1facf255d0fc",
      "name": "Little Rope",
      "note": "2024",
-     "img": "https://coverartarchive.org/release-group/ebfca4fe-da13-4edc-818a-1facf255d0fc/front-250",
+     "img": null,
      "sq": true
     }
    ]
@@ -3820,7 +3820,7 @@
      "id": "g06822cd3-5c22-4ff3-a5ca-e866622fc5a0",
      "name": "More Than This",
      "note": "2012",
-     "img": "https://coverartarchive.org/release-group/06822cd3-5c22-4ff3-a5ca-e866622fc5a0/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -12245,7 +12245,7 @@
      "id": "hbuffy-summers",
      "name": "Buffy Summers",
      "note": "Buffy the Vampire Slayer",
-     "poster": "/grlhyolOpwZAnpeFvuTC3SQAUij.jpg"
+     "poster": "/xKe52w4tpv61ohz9iz75wNdzcwZ.jpg"
     },
     {
      "id": "hwillow-rosenberg",
@@ -13041,7 +13041,7 @@
      "id": "m296096",
      "name": "Me Before You",
      "note": "2016",
-     "poster": "/Ia3dzj5LnCj1ZBdlVeJrbKJQxG.jpg"
+     "poster": "/oo2Q3T8juOYFh2G1YJ3oSMAfUyq.jpg"
     },
     {
      "id": "m313369",
@@ -14354,8 +14354,7 @@
     {
      "id": "bin-the-woods-tana-french",
      "name": "In the Woods",
-     "note": "Tana French",
-     "img": "https://covers.openlibrary.org/b/id/1474730-M.jpg"
+     "note": "Tana French"
     },
     {
      "id": "bgone-girl-gillian-flynn",
@@ -16374,7 +16373,7 @@
      "id": "m257211",
      "name": "The Intern",
      "note": "2015",
-     "poster": "/slAaLd8ar2JW8RFrfyIjEQR49OT.jpg"
+     "poster": "/bTQ46fupPbjBfFBHuzfD3hxxL0Q.jpg"
     },
     {
      "id": "m241259",
@@ -16397,6 +16396,77 @@
    ],
    "group": "Actors",
    "short": "Anne Hathaway movies"
+  },
+  {
+   "id": "zodiac-signs",
+   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Astrology\",\"title\":\"Zodiac signs\",\"picks\":[[\"Aries\",\"♈ Mar 21 to Apr 19\"],[\"Taurus\",\"♉ Apr 20 to May 20\"],[\"Gemini\",\"♊ May 21 to Jun 20\"],[\"Cancer\",\"♋ Jun 21 to Jul 22\"],[\"Leo\",\"♌ Jul 23 to Aug 22\"],[\"Virgo\",\"♍ Aug 23 to Sep 22\"],[\"Libra\",\"♎ Sep 23 to Oct 22\"],[\"Scorpio\",\"♏ Oct 23 to Nov 21\"],[\"Sagittarius\",\"♐ Nov 22 to Dec 21\"],[\"Capricorn\",\"♑ Dec 22 to Jan 19\"],[\"Aquarius\",\"♒ Jan 20 to Feb 18\"],[\"Pisces\",\"♓ Feb 19 to Mar 20\"]]}",
+   "t": "names",
+   "cat": "Misc",
+   "group": "Astrology",
+   "short": "Zodiac signs",
+   "title": "Zodiac signs",
+   "items": [
+    {
+     "id": "naries",
+     "name": "Aries",
+     "note": "♈ Mar 21 to Apr 19"
+    },
+    {
+     "id": "ntaurus",
+     "name": "Taurus",
+     "note": "♉ Apr 20 to May 20"
+    },
+    {
+     "id": "ngemini",
+     "name": "Gemini",
+     "note": "♊ May 21 to Jun 20"
+    },
+    {
+     "id": "ncancer",
+     "name": "Cancer",
+     "note": "♋ Jun 21 to Jul 22"
+    },
+    {
+     "id": "nleo",
+     "name": "Leo",
+     "note": "♌ Jul 23 to Aug 22"
+    },
+    {
+     "id": "nvirgo",
+     "name": "Virgo",
+     "note": "♍ Aug 23 to Sep 22"
+    },
+    {
+     "id": "nlibra",
+     "name": "Libra",
+     "note": "♎ Sep 23 to Oct 22"
+    },
+    {
+     "id": "nscorpio",
+     "name": "Scorpio",
+     "note": "♏ Oct 23 to Nov 21"
+    },
+    {
+     "id": "nsagittarius",
+     "name": "Sagittarius",
+     "note": "♐ Nov 22 to Dec 21"
+    },
+    {
+     "id": "ncapricorn",
+     "name": "Capricorn",
+     "note": "♑ Dec 22 to Jan 19"
+    },
+    {
+     "id": "naquarius",
+     "name": "Aquarius",
+     "note": "♒ Jan 20 to Feb 18"
+    },
+    {
+     "id": "npisces",
+     "name": "Pisces",
+     "note": "♓ Feb 19 to Mar 20"
+    }
+   ]
   },
   {
    "id": "ya-standalone-favourites",
@@ -19472,7 +19542,7 @@
      "id": "m1375",
      "name": "Rocky V",
      "note": "1990",
-     "poster": "/tevHaVxtrMTaUi8f3YjLWYSSY8A.jpg"
+     "poster": "/qCARerjCFZOEeLiVdomhwRYlDSn.jpg"
     },
     {
      "id": "m169",
@@ -21955,7 +22025,7 @@
      "id": "m168259",
      "name": "Furious 7",
      "note": "2015",
-     "poster": "/ktofZ9Htrjiy0P6LEowsDaxd3Ri.jpg"
+     "poster": "/wurKlC3VKUgcfsn0K51MJYEleS2.jpg"
     },
     {
      "id": "m76341",
