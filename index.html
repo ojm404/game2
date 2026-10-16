@@ -263,7 +263,7 @@
   <div id="app"></div>
   <div id="rulers" aria-hidden="true"></div>
   <div id="modal"></div>
-  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive. Game data and artwork from RAWG. Book data and covers from Open Library.<span class="build">Build 2026-10-15.3</span></footer>
+  <footer>This product uses the TMDB API but is not endorsed or certified by TMDB. Music data from MusicBrainz, cover art from the Cover Art Archive. Game data and artwork from RAWG. Book data and covers from Open Library.<span class="build">Build 2026-10-15.4</span></footer>
 </main>
 
 <script>
@@ -643,7 +643,8 @@ function newCode(){
 
 async function createRoom(){
   const name = readName(); if (!name) return;
-  const tiers = tierNames.map(t => t.trim().slice(0, 14)).filter(Boolean);
+  // Party rooms start with the standard S to F; each player names the tiers for the list they pick later.
+  const tiers = lobbyGameMode === "party" ? TIERS.slice() : tierNames.map(t => t.trim().slice(0, 14)).filter(Boolean);
   if (tiers.length < 2) { errMsg = "Name at least two tiers."; render(); return; }
   const party = lobbyGameMode === "party";
   if (!party && !chosenList()) { errMsg = "Choose what you are ranking first."; pickOpen = true; render(); return; }
@@ -935,8 +936,8 @@ function lobbyView(){
     ${nameField}
     <div class="duelonly"${lobbyGameMode === "party" ? " hidden" : ""}><label id="picklab">What are you ranking?</label>
     <div class="picker" role="group" aria-labelledby="picklab"></div></div>
-    <p class="hint partyonly"${lobbyGameMode === "party" ? "" : " hidden"} style="margin-top:12px">Once the game starts, each player picks a list for someone else's turn.</p>
-    ${tierEditor()}
+    <p class="hint partyonly"${lobbyGameMode === "party" ? "" : " hidden"} style="margin-top:12px">Once the game starts, each player picks a list and its tier names for someone else's turn.</p>
+    <div class="duelonly"${lobbyGameMode === "party" ? " hidden" : ""}>${tierEditor()}</div>
     <div class="actions">${back}<button class="btn" data-act="create">Create room</button></div>
     ${err}
   </div>`;
