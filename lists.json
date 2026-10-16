@@ -365,14 +365,14 @@
   },
   {
    "id": "studio-ghibli-films",
-   "src": "{\"type\":\"films\",\"cat\":\"Franchises\",\"title\":\"Studio Ghibli films\",\"short\":\"Studio Ghibli\",\"picks\":[[\"Nausicaä of the Valley of the Wind\",1984],[\"Castle in the Sky\",1986],[\"My Neighbor Totoro\",1988],[\"Grave of the Fireflies\",1988],[\"Kiki's Delivery Service\",1989],[\"Only Yesterday\",1991],[\"Porco Rosso\",1992],[\"Ocean Waves\",1993],[\"Pom Poko\",1994],[\"Whisper of the Heart\",1995],[\"Princess Mononoke\",1997],[\"My Neighbors the Yamadas\",1999],[\"Spirited Away\",2001],[\"The Cat Returns\",2002],[\"Howl's Moving Castle\",2004],[\"Tales from Earthsea\",2006],[\"Ponyo\",2008],[\"Arrietty\",2010],[\"From Up on Poppy Hill\",2011],[\"The Wind Rises\",2013],[\"The Tale of the Princess Kaguya\",2013],[\"When Marnie Was There\",2014],[\"Earwig and the Witch\",2020],[\"The Boy and the Heron\",2023]]}",
+   "src": "{\"type\":\"films\",\"cat\":\"Franchises\",\"title\":\"Studio Ghibli films\",\"short\":\"Studio Ghibli\",\"picks\":[[\"Nausicaä of the Valley of the Wind\",1984,81],[\"Castle in the Sky\",1986],[\"My Neighbor Totoro\",1988],[\"Grave of the Fireflies\",1988],[\"Kiki's Delivery Service\",1989],[\"Only Yesterday\",1991],[\"Porco Rosso\",1992],[\"Ocean Waves\",1993],[\"Pom Poko\",1994],[\"Whisper of the Heart\",1995],[\"Princess Mononoke\",1997],[\"My Neighbors the Yamadas\",1999],[\"Spirited Away\",2001],[\"The Cat Returns\",2002],[\"Howl's Moving Castle\",2004],[\"Tales from Earthsea\",2006],[\"Ponyo\",2008],[\"Arrietty\",2010],[\"From Up on Poppy Hill\",2011],[\"The Wind Rises\",2013],[\"The Tale of the Princess Kaguya\",2013],[\"When Marnie Was There\",2014],[\"Earwig and the Witch\",2020],[\"The Boy and the Heron\",2023]]}",
    "t": "films",
    "cat": "Movies",
    "title": "Studio Ghibli films",
    "items": [
     {
      "id": "m81",
-     "name": "Warriors of the Wind",
+     "name": "Nausicaä of the Valley of the Wind",
      "note": "1984",
      "poster": "/tcrkfB8SRPQCgwI88hQScua6nxh.jpg"
     },
@@ -492,7 +492,7 @@
     },
     {
      "id": "m149871",
-     "name": "The Tale of The Princess Kaguya",
+     "name": "The Tale of the Princess Kaguya",
      "note": "2013",
      "poster": "/cQidJuA546OSSXKWXoiCeINDxuj.jpg"
     },
@@ -3014,7 +3014,7 @@
      "id": "a474906cf-88cc-414e-9b50-e8112dd44431",
      "name": "The Center Won’t Hold",
      "note": "2019",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/474906cf-88cc-414e-9b50-e8112dd44431/front-250",
      "sq": true
     },
     {
@@ -3035,7 +3035,7 @@
      "id": "aebfca4fe-da13-4edc-818a-1facf255d0fc",
      "name": "Little Rope",
      "note": "2024",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/ebfca4fe-da13-4edc-818a-1facf255d0fc/front-250",
      "sq": true
     }
    ]
@@ -3074,7 +3074,7 @@
      "id": "a67553e23-8dad-3792-b6f2-8fedd5650ff3",
      "name": "…And Justice for All",
      "note": "1988",
-     "img": "https://coverartarchive.org/release-group/67553e23-8dad-3792-b6f2-8fedd5650ff3/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -3389,6 +3389,537 @@
      "id": "ntwo-faced",
      "name": "Two Faced",
      "note": "2025",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "michael-jackson-albums",
+   "src": "{\"type\":\"albums\",\"name\":\"Michael Jackson\"}",
+   "t": "albums",
+   "cat": "Music",
+   "group": "Michael Jackson",
+   "short": "Albums",
+   "title": "Michael Jackson albums",
+   "items": [
+    {
+     "id": "a97e0014d-a267-33a0-a868-bb4e2552918a",
+     "name": "Got to Be There",
+     "note": "1972",
+     "img": "https://coverartarchive.org/release-group/97e0014d-a267-33a0-a868-bb4e2552918a/front-250",
+     "sq": true
+    },
+    {
+     "id": "a51343255-0ad3-3635-9aa2-548ba939b23e",
+     "name": "Ben",
+     "note": "1972",
+     "img": "https://coverartarchive.org/release-group/51343255-0ad3-3635-9aa2-548ba939b23e/front-250",
+     "sq": true
+    },
+    {
+     "id": "a06b064b9-01e7-32d8-b585-86404584e795",
+     "name": "Music & Me",
+     "note": "1973",
+     "img": "https://coverartarchive.org/release-group/06b064b9-01e7-32d8-b585-86404584e795/front-250",
+     "sq": true
+    },
+    {
+     "id": "a50b9d7de-9124-33c0-83a3-76722bf346e5",
+     "name": "Forever, Michael",
+     "note": "1975",
+     "img": "https://coverartarchive.org/release-group/50b9d7de-9124-33c0-83a3-76722bf346e5/front-250",
+     "sq": true
+    },
+    {
+     "id": "aee749c63-5699-38e0-b565-7e84414648d9",
+     "name": "Off the Wall",
+     "note": "1979",
+     "img": "https://coverartarchive.org/release-group/ee749c63-5699-38e0-b565-7e84414648d9/front-250",
+     "sq": true
+    },
+    {
+     "id": "af32fab67-77dd-3937-addc-9062e28e4c37",
+     "name": "Thriller",
+     "note": "1982",
+     "img": "https://coverartarchive.org/release-group/f32fab67-77dd-3937-addc-9062e28e4c37/front-250",
+     "sq": true
+    },
+    {
+     "id": "aa5711a77-42d1-3f4c-830c-e27a96f0800f",
+     "name": "Bad",
+     "note": "1987",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "ad6b52521-0dfa-390f-970f-790174c22752",
+     "name": "Dangerous",
+     "note": "1991",
+     "img": "https://coverartarchive.org/release-group/d6b52521-0dfa-390f-970f-790174c22752/front-250",
+     "sq": true
+    },
+    {
+     "id": "a2324e560-e8ba-302d-a43d-2ea5ec9c83f7",
+     "name": "HIStory: Past, Present and Future, Book I",
+     "note": "1995",
+     "img": "https://coverartarchive.org/release-group/2324e560-e8ba-302d-a43d-2ea5ec9c83f7/front-250",
+     "sq": true
+    },
+    {
+     "id": "ac24c5313-da47-3155-8277-a6a1a4237966",
+     "name": "Invincible",
+     "note": "2001",
+     "img": "https://coverartarchive.org/release-group/c24c5313-da47-3155-8277-a6a1a4237966/front-250",
+     "sq": true
+    },
+    {
+     "id": "a0656d7fa-0ed7-4d3f-887e-ed728697c5ad",
+     "name": "Michael",
+     "note": "2010",
+     "img": "https://coverartarchive.org/release-group/0656d7fa-0ed7-4d3f-887e-ed728697c5ad/front-250",
+     "sq": true
+    },
+    {
+     "id": "ac78abbe0-82a4-4868-9344-401ec34f5b69",
+     "name": "Xscape",
+     "note": "2014",
+     "img": "https://coverartarchive.org/release-group/c78abbe0-82a4-4868-9344-401ec34f5b69/front-250",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "michael-jackson-singles",
+   "src": "{\"type\":\"names\",\"group\":\"Michael Jackson\",\"title\":\"Michael Jackson singles\",\"short\":\"Singles\",\"picks\":[[\"Got to Be There\",\"1971\"],[\"Rockin' Robin\",\"1972\"],[\"Ben\",\"1972\"],[\"Don't Stop 'Til You Get Enough\",\"1979\"],[\"Rock with You\",\"1979\"],[\"Off the Wall\",\"1980\"],[\"She's Out of My Life\",\"1980\"],[\"The Girl Is Mine\",\"1982\"],[\"Billie Jean\",\"1983\"],[\"Beat It\",\"1983\"],[\"Wanna Be Startin' Somethin'\",\"1983\"],[\"Human Nature\",\"1983\"],[\"Thriller\",\"1983\"],[\"I Just Can't Stop Loving You\",\"1987\"],[\"Bad\",\"1987\"],[\"The Way You Make Me Feel\",\"1987\"],[\"Man in the Mirror\",\"1988\"],[\"Dirty Diana\",\"1988\"],[\"Smooth Criminal\",\"1988\"],[\"Leave Me Alone\",\"1989\"],[\"Black or White\",\"1991\"],[\"Remember the Time\",\"1992\"],[\"In the Closet\",\"1992\"],[\"Jam\",\"1992\"],[\"Heal the World\",\"1992\"],[\"Scream\",\"1995\"],[\"You Are Not Alone\",\"1995\"],[\"Earth Song\",\"1995\"],[\"They Don't Care About Us\",\"1996\"],[\"You Rock My World\",\"2001\"]]}",
+   "t": "names",
+   "cat": "Music",
+   "group": "Michael Jackson",
+   "short": "Singles",
+   "title": "Michael Jackson singles",
+   "items": [
+    {
+     "id": "ngot-to-be-there",
+     "name": "Got to Be There",
+     "note": "1971",
+     "sq": true
+    },
+    {
+     "id": "nrockin-robin",
+     "name": "Rockin' Robin",
+     "note": "1972",
+     "sq": true
+    },
+    {
+     "id": "nben",
+     "name": "Ben",
+     "note": "1972",
+     "sq": true
+    },
+    {
+     "id": "ndon-t-stop-til-you-get-enough",
+     "name": "Don't Stop 'Til You Get Enough",
+     "note": "1979",
+     "sq": true
+    },
+    {
+     "id": "nrock-with-you",
+     "name": "Rock with You",
+     "note": "1979",
+     "sq": true
+    },
+    {
+     "id": "noff-the-wall",
+     "name": "Off the Wall",
+     "note": "1980",
+     "sq": true
+    },
+    {
+     "id": "nshe-s-out-of-my-life",
+     "name": "She's Out of My Life",
+     "note": "1980",
+     "sq": true
+    },
+    {
+     "id": "nthe-girl-is-mine",
+     "name": "The Girl Is Mine",
+     "note": "1982",
+     "sq": true
+    },
+    {
+     "id": "nbillie-jean",
+     "name": "Billie Jean",
+     "note": "1983",
+     "sq": true
+    },
+    {
+     "id": "nbeat-it",
+     "name": "Beat It",
+     "note": "1983",
+     "sq": true
+    },
+    {
+     "id": "nwanna-be-startin-somethin",
+     "name": "Wanna Be Startin' Somethin'",
+     "note": "1983",
+     "sq": true
+    },
+    {
+     "id": "nhuman-nature",
+     "name": "Human Nature",
+     "note": "1983",
+     "sq": true
+    },
+    {
+     "id": "nthriller",
+     "name": "Thriller",
+     "note": "1983",
+     "sq": true
+    },
+    {
+     "id": "ni-just-can-t-stop-loving-you",
+     "name": "I Just Can't Stop Loving You",
+     "note": "1987",
+     "sq": true
+    },
+    {
+     "id": "nbad",
+     "name": "Bad",
+     "note": "1987",
+     "sq": true
+    },
+    {
+     "id": "nthe-way-you-make-me-feel",
+     "name": "The Way You Make Me Feel",
+     "note": "1987",
+     "sq": true
+    },
+    {
+     "id": "nman-in-the-mirror",
+     "name": "Man in the Mirror",
+     "note": "1988",
+     "sq": true
+    },
+    {
+     "id": "ndirty-diana",
+     "name": "Dirty Diana",
+     "note": "1988",
+     "sq": true
+    },
+    {
+     "id": "nsmooth-criminal",
+     "name": "Smooth Criminal",
+     "note": "1988",
+     "sq": true
+    },
+    {
+     "id": "nleave-me-alone",
+     "name": "Leave Me Alone",
+     "note": "1989",
+     "sq": true
+    },
+    {
+     "id": "nblack-or-white",
+     "name": "Black or White",
+     "note": "1991",
+     "sq": true
+    },
+    {
+     "id": "nremember-the-time",
+     "name": "Remember the Time",
+     "note": "1992",
+     "sq": true
+    },
+    {
+     "id": "nin-the-closet",
+     "name": "In the Closet",
+     "note": "1992",
+     "sq": true
+    },
+    {
+     "id": "njam",
+     "name": "Jam",
+     "note": "1992",
+     "sq": true
+    },
+    {
+     "id": "nheal-the-world",
+     "name": "Heal the World",
+     "note": "1992",
+     "sq": true
+    },
+    {
+     "id": "nscream",
+     "name": "Scream",
+     "note": "1995",
+     "sq": true
+    },
+    {
+     "id": "nyou-are-not-alone",
+     "name": "You Are Not Alone",
+     "note": "1995",
+     "sq": true
+    },
+    {
+     "id": "nearth-song",
+     "name": "Earth Song",
+     "note": "1995",
+     "sq": true
+    },
+    {
+     "id": "nthey-don-t-care-about-us",
+     "name": "They Don't Care About Us",
+     "note": "1996",
+     "sq": true
+    },
+    {
+     "id": "nyou-rock-my-world",
+     "name": "You Rock My World",
+     "note": "2001",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "black-sabbath-albums",
+   "src": "{\"type\":\"albums\",\"name\":\"Black Sabbath\"}",
+   "t": "albums",
+   "cat": "Music",
+   "group": "Black Sabbath",
+   "short": "Albums",
+   "title": "Black Sabbath albums",
+   "items": [
+    {
+     "id": "a826c9743-a3f0-3479-bf06-8df2e140ef1d",
+     "name": "Black Sabbath",
+     "note": "1970",
+     "img": "https://coverartarchive.org/release-group/826c9743-a3f0-3479-bf06-8df2e140ef1d/front-250",
+     "sq": true
+    },
+    {
+     "id": "acc053745-c447-3566-8f27-bed5438c9133",
+     "name": "Paranoid",
+     "note": "1970",
+     "img": "https://coverartarchive.org/release-group/cc053745-c447-3566-8f27-bed5438c9133/front-250",
+     "sq": true
+    },
+    {
+     "id": "ae51e9779-2edc-3b39-959c-299fdb5ed940",
+     "name": "Master of Reality",
+     "note": "1971",
+     "img": "https://coverartarchive.org/release-group/e51e9779-2edc-3b39-959c-299fdb5ed940/front-250",
+     "sq": true
+    },
+    {
+     "id": "a8c292627-3459-3852-8ebc-226c12db175d",
+     "name": "Vol 4",
+     "note": "1972",
+     "img": "https://coverartarchive.org/release-group/8c292627-3459-3852-8ebc-226c12db175d/front-250",
+     "sq": true
+    },
+    {
+     "id": "add9bd473-0232-3a12-b51e-742de1aca5ca",
+     "name": "Sabbath Bloody Sabbath",
+     "note": "1973",
+     "img": "https://coverartarchive.org/release-group/dd9bd473-0232-3a12-b51e-742de1aca5ca/front-250",
+     "sq": true
+    },
+    {
+     "id": "a8ef6fc58-d87a-46cf-ab9d-077291784ada",
+     "name": "Sabotage",
+     "note": "1975",
+     "img": "https://coverartarchive.org/release-group/8ef6fc58-d87a-46cf-ab9d-077291784ada/front-250",
+     "sq": true
+    },
+    {
+     "id": "ade117377-2f09-3502-8959-e1eca1b583a8",
+     "name": "Technical Ecstasy",
+     "note": "1976",
+     "img": "https://coverartarchive.org/release-group/de117377-2f09-3502-8959-e1eca1b583a8/front-250",
+     "sq": true
+    },
+    {
+     "id": "aeb8c8e6c-b554-31d3-bae0-1c4ea64336d0",
+     "name": "Never Say Die!",
+     "note": "1978",
+     "img": "https://coverartarchive.org/release-group/eb8c8e6c-b554-31d3-bae0-1c4ea64336d0/front-250",
+     "sq": true
+    },
+    {
+     "id": "a43ac82b5-eceb-3909-a153-3c00ea9c7b9a",
+     "name": "Heaven and Hell",
+     "note": "1980",
+     "img": "https://coverartarchive.org/release-group/43ac82b5-eceb-3909-a153-3c00ea9c7b9a/front-250",
+     "sq": true
+    },
+    {
+     "id": "a35cb9c0a-3cce-3efd-ac19-014f4811620d",
+     "name": "Mob Rules",
+     "note": "1981",
+     "img": "https://coverartarchive.org/release-group/35cb9c0a-3cce-3efd-ac19-014f4811620d/front-250",
+     "sq": true
+    },
+    {
+     "id": "ade7de788-0f31-338a-9d82-8a09108e429f",
+     "name": "Born Again",
+     "note": "1983",
+     "img": "https://coverartarchive.org/release-group/de7de788-0f31-338a-9d82-8a09108e429f/front-250",
+     "sq": true
+    },
+    {
+     "id": "a9ff01b54-79d5-343b-9a52-242e5627d652",
+     "name": "Seventh Star",
+     "note": "1986",
+     "img": "https://coverartarchive.org/release-group/9ff01b54-79d5-343b-9a52-242e5627d652/front-250",
+     "sq": true
+    },
+    {
+     "id": "afb123ba6-4a78-3ed3-bee3-cf939fac6411",
+     "name": "The Eternal Idol",
+     "note": "1987",
+     "img": "https://coverartarchive.org/release-group/fb123ba6-4a78-3ed3-bee3-cf939fac6411/front-250",
+     "sq": true
+    },
+    {
+     "id": "a230fa643-0fdf-34a4-b6e4-3cf8563dcf11",
+     "name": "Headless Cross",
+     "note": "1989",
+     "img": "https://coverartarchive.org/release-group/230fa643-0fdf-34a4-b6e4-3cf8563dcf11/front-250",
+     "sq": true
+    },
+    {
+     "id": "a00f64d57-aeaf-3925-ac5e-072fdcb7c3f6",
+     "name": "TYR",
+     "note": "1990",
+     "img": "https://coverartarchive.org/release-group/00f64d57-aeaf-3925-ac5e-072fdcb7c3f6/front-250",
+     "sq": true
+    },
+    {
+     "id": "a0db80cc3-becc-3ee7-8abe-de42d368ca54",
+     "name": "Dehumanizer",
+     "note": "1992",
+     "img": "https://coverartarchive.org/release-group/0db80cc3-becc-3ee7-8abe-de42d368ca54/front-250",
+     "sq": true
+    },
+    {
+     "id": "a0a321887-9d3d-3600-90d1-67540a409177",
+     "name": "Cross Purposes",
+     "note": "1994",
+     "img": "https://coverartarchive.org/release-group/0a321887-9d3d-3600-90d1-67540a409177/front-250",
+     "sq": true
+    },
+    {
+     "id": "adcb2536b-a011-33d3-b364-a4e724e5a7a8",
+     "name": "Forbidden",
+     "note": "1995",
+     "img": "https://coverartarchive.org/release-group/dcb2536b-a011-33d3-b364-a4e724e5a7a8/front-250",
+     "sq": true
+    },
+    {
+     "id": "a5cbae3a0-6d55-497b-97b3-6c30a3264313",
+     "name": "13",
+     "note": "2013",
+     "img": "https://coverartarchive.org/release-group/5cbae3a0-6d55-497b-97b3-6c30a3264313/front-250",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "black-sabbath-singles",
+   "src": "{\"type\":\"names\",\"group\":\"Black Sabbath\",\"title\":\"Black Sabbath singles\",\"short\":\"Singles\",\"picks\":[[\"Evil Woman\",\"1970\"],[\"Paranoid\",\"1970\"],[\"Iron Man\",\"1971\"],[\"Tomorrow's Dream\",\"1972\"],[\"Sabbath Bloody Sabbath\",\"1973\"],[\"Am I Going Insane (Radio)\",\"1976\"],[\"Never Say Die\",\"1978\"],[\"Hard Road\",\"1978\"],[\"Neon Knights\",\"1980\"],[\"Die Young\",\"1980\"],[\"The Mob Rules\",\"1981\"],[\"Turn Up the Night\",\"1982\"],[\"Trashed\",\"1983\"],[\"Headless Cross\",\"1989\"],[\"God Is Dead?\",\"2013\"]]}",
+   "t": "names",
+   "cat": "Music",
+   "group": "Black Sabbath",
+   "short": "Singles",
+   "title": "Black Sabbath singles",
+   "items": [
+    {
+     "id": "nevil-woman",
+     "name": "Evil Woman",
+     "note": "1970",
+     "sq": true
+    },
+    {
+     "id": "nparanoid",
+     "name": "Paranoid",
+     "note": "1970",
+     "sq": true
+    },
+    {
+     "id": "niron-man",
+     "name": "Iron Man",
+     "note": "1971",
+     "sq": true
+    },
+    {
+     "id": "ntomorrow-s-dream",
+     "name": "Tomorrow's Dream",
+     "note": "1972",
+     "sq": true
+    },
+    {
+     "id": "nsabbath-bloody-sabbath",
+     "name": "Sabbath Bloody Sabbath",
+     "note": "1973",
+     "sq": true
+    },
+    {
+     "id": "nam-i-going-insane-radio",
+     "name": "Am I Going Insane (Radio)",
+     "note": "1976",
+     "sq": true
+    },
+    {
+     "id": "nnever-say-die",
+     "name": "Never Say Die",
+     "note": "1978",
+     "sq": true
+    },
+    {
+     "id": "nhard-road",
+     "name": "Hard Road",
+     "note": "1978",
+     "sq": true
+    },
+    {
+     "id": "nneon-knights",
+     "name": "Neon Knights",
+     "note": "1980",
+     "sq": true
+    },
+    {
+     "id": "ndie-young",
+     "name": "Die Young",
+     "note": "1980",
+     "sq": true
+    },
+    {
+     "id": "nthe-mob-rules",
+     "name": "The Mob Rules",
+     "note": "1981",
+     "sq": true
+    },
+    {
+     "id": "nturn-up-the-night",
+     "name": "Turn Up the Night",
+     "note": "1982",
+     "sq": true
+    },
+    {
+     "id": "ntrashed",
+     "name": "Trashed",
+     "note": "1983",
+     "sq": true
+    },
+    {
+     "id": "nheadless-cross",
+     "name": "Headless Cross",
+     "note": "1989",
+     "sq": true
+    },
+    {
+     "id": "ngod-is-dead",
+     "name": "God Is Dead?",
+     "note": "2013",
      "sq": true
     }
    ]
@@ -3820,7 +4351,7 @@
      "id": "g06822cd3-5c22-4ff3-a5ca-e866622fc5a0",
      "name": "More Than This",
      "note": "2012",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/06822cd3-5c22-4ff3-a5ca-e866622fc5a0/front-250",
      "sq": true
     },
     {
@@ -4194,6 +4725,178 @@
     {
      "id": "nlexie",
      "name": "Lexie",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "top-pop-boy-groups",
+   "src": "{\"type\":\"names\",\"title\":\"Top pop boy groups\",\"short\":\"Pop boy groups\",\"picks\":[\"The Osmonds\",\"The Jackson 5\",\"Menudo\",\"New Edition\",\"New Kids on the Block\",\"Boyz II Men\",\"Take That\",\"Boyzone\",\"Backstreet Boys\",\"*NSYNC\",\"98 Degrees\",\"Westlife\",\"Jonas Brothers\",\"One Direction\",\"The Wanted\"]}",
+   "t": "names",
+   "cat": "Music",
+   "group": "Top artists",
+   "short": "Pop boy groups",
+   "title": "Top pop boy groups",
+   "items": [
+    {
+     "id": "nthe-osmonds",
+     "name": "The Osmonds",
+     "sq": true
+    },
+    {
+     "id": "nthe-jackson-5",
+     "name": "The Jackson 5",
+     "sq": true
+    },
+    {
+     "id": "nmenudo",
+     "name": "Menudo",
+     "sq": true
+    },
+    {
+     "id": "nnew-edition",
+     "name": "New Edition",
+     "sq": true
+    },
+    {
+     "id": "nnew-kids-on-the-block",
+     "name": "New Kids on the Block",
+     "sq": true
+    },
+    {
+     "id": "nboyz-ii-men",
+     "name": "Boyz II Men",
+     "sq": true
+    },
+    {
+     "id": "ntake-that",
+     "name": "Take That",
+     "sq": true
+    },
+    {
+     "id": "nboyzone",
+     "name": "Boyzone",
+     "sq": true
+    },
+    {
+     "id": "nbackstreet-boys",
+     "name": "Backstreet Boys",
+     "sq": true
+    },
+    {
+     "id": "nnsync",
+     "name": "*NSYNC",
+     "sq": true
+    },
+    {
+     "id": "n98-degrees",
+     "name": "98 Degrees",
+     "sq": true
+    },
+    {
+     "id": "nwestlife",
+     "name": "Westlife",
+     "sq": true
+    },
+    {
+     "id": "njonas-brothers",
+     "name": "Jonas Brothers",
+     "sq": true
+    },
+    {
+     "id": "none-direction",
+     "name": "One Direction",
+     "sq": true
+    },
+    {
+     "id": "nthe-wanted",
+     "name": "The Wanted",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "top-pop-girl-groups",
+   "src": "{\"type\":\"names\",\"title\":\"Top pop girl groups\",\"short\":\"Pop girl groups\",\"picks\":[\"The Supremes\",\"The Ronettes\",\"Bananarama\",\"The Go-Go's\",\"The Bangles\",\"En Vogue\",\"TLC\",\"Spice Girls\",\"All Saints\",\"Destiny's Child\",\"Sugababes\",\"Girls Aloud\",\"The Pussycat Dolls\",\"Fifth Harmony\",\"Little Mix\"]}",
+   "t": "names",
+   "cat": "Music",
+   "group": "Top artists",
+   "short": "Pop girl groups",
+   "title": "Top pop girl groups",
+   "items": [
+    {
+     "id": "nthe-supremes",
+     "name": "The Supremes",
+     "sq": true
+    },
+    {
+     "id": "nthe-ronettes",
+     "name": "The Ronettes",
+     "sq": true
+    },
+    {
+     "id": "nbananarama",
+     "name": "Bananarama",
+     "sq": true
+    },
+    {
+     "id": "nthe-go-go-s",
+     "name": "The Go-Go's",
+     "sq": true
+    },
+    {
+     "id": "nthe-bangles",
+     "name": "The Bangles",
+     "sq": true
+    },
+    {
+     "id": "nen-vogue",
+     "name": "En Vogue",
+     "sq": true
+    },
+    {
+     "id": "ntlc",
+     "name": "TLC",
+     "sq": true
+    },
+    {
+     "id": "nspice-girls",
+     "name": "Spice Girls",
+     "sq": true
+    },
+    {
+     "id": "nall-saints",
+     "name": "All Saints",
+     "sq": true
+    },
+    {
+     "id": "ndestiny-s-child",
+     "name": "Destiny's Child",
+     "sq": true
+    },
+    {
+     "id": "nsugababes",
+     "name": "Sugababes",
+     "sq": true
+    },
+    {
+     "id": "ngirls-aloud",
+     "name": "Girls Aloud",
+     "sq": true
+    },
+    {
+     "id": "nthe-pussycat-dolls",
+     "name": "The Pussycat Dolls",
+     "sq": true
+    },
+    {
+     "id": "nfifth-harmony",
+     "name": "Fifth Harmony",
+     "sq": true
+    },
+    {
+     "id": "nlittle-mix",
+     "name": "Little Mix",
      "sq": true
     }
    ]
@@ -4717,6 +5420,470 @@
    ]
   },
   {
+   "id": "top-r-b-albums",
+   "src": "{\"type\":\"curated\",\"title\":\"Top R&B albums\",\"short\":\"R&B\",\"picks\":[[\"Marvin Gaye\",\"What's Going On\"],[\"Stevie Wonder\",\"Songs in the Key of Life\"],[\"Janet Jackson\",\"Rhythm Nation 1814\"],[\"Mary J. Blige\",\"My Life\"],[\"TLC\",\"CrazySexyCool\"],[\"Erykah Badu\",\"Baduizm\"],[\"Brandy\",\"Never Say Never\"],[\"Lauryn Hill\",\"The Miseducation of Lauryn Hill\"],[\"D'Angelo\",\"Voodoo\"],[\"Aaliyah\",\"Aaliyah\"],[\"Alicia Keys\",\"Songs in A Minor\"],[\"Usher\",\"Confessions\"],[\"Frank Ocean\",\"Channel Orange\"],[\"Beyoncé\",\"Lemonade\"],[\"SZA\",\"Ctrl\"]]}",
+   "t": "curated",
+   "cat": "Music",
+   "group": "Top albums",
+   "short": "R&B",
+   "title": "Top R&B albums",
+   "items": [
+    {
+     "id": "cmarvin-gaye-what-s-going-on",
+     "name": "What's Going On",
+     "note": "Marvin Gaye, 1971",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "cstevie-wonder-songs-in-the-key-of-life",
+     "name": "Songs in the Key of Life",
+     "note": "Stevie Wonder, 1976",
+     "img": "https://coverartarchive.org/release-group/ea88b09b-fd34-33cf-a3e5-25a3a2fb4c6f/front-250",
+     "sq": true
+    },
+    {
+     "id": "cjanet-jackson-rhythm-nation-1814",
+     "name": "Rhythm Nation 1814",
+     "note": "Janet Jackson, 1989",
+     "img": "https://coverartarchive.org/release-group/20aaac17-e4e8-373c-99cc-211321b82832/front-250",
+     "sq": true
+    },
+    {
+     "id": "cmary-j-blige-my-life",
+     "name": "My Life",
+     "note": "Mary J. Blige, 1994",
+     "img": "https://coverartarchive.org/release-group/49acb129-7958-3132-988c-bb85955b1c3c/front-250",
+     "sq": true
+    },
+    {
+     "id": "ctlc-crazysexycool",
+     "name": "CrazySexyCool",
+     "note": "TLC, 1994",
+     "img": "https://coverartarchive.org/release-group/3d886c06-a4c7-3431-be87-2b2940f07acd/front-250",
+     "sq": true
+    },
+    {
+     "id": "cerykah-badu-baduizm",
+     "name": "Baduizm",
+     "note": "Erykah Badu, 1997",
+     "img": "https://coverartarchive.org/release-group/45536412-c62c-34fc-9524-0bac1d2542c1/front-250",
+     "sq": true
+    },
+    {
+     "id": "cbrandy-never-say-never",
+     "name": "Never Say Never",
+     "note": "Brandy, 1998",
+     "img": "https://coverartarchive.org/release-group/60dc638c-2fb0-3d82-89c2-eb4c1ca2fd0f/front-250",
+     "sq": true
+    },
+    {
+     "id": "clauryn-hill-the-miseducation-of-lauryn-hill",
+     "name": "The Miseducation of Lauryn Hill",
+     "note": "Lauryn Hill, 1998",
+     "img": "https://coverartarchive.org/release-group/8691d12c-abd8-385c-b1eb-d841190124f7/front-250",
+     "sq": true
+    },
+    {
+     "id": "cd-angelo-voodoo",
+     "name": "Voodoo",
+     "note": "D'Angelo, 2000",
+     "img": "https://coverartarchive.org/release-group/9605c075-c64c-366b-ad7f-ec98523fc162/front-250",
+     "sq": true
+    },
+    {
+     "id": "caaliyah-aaliyah",
+     "name": "Aaliyah",
+     "note": "Aaliyah, 2001",
+     "img": "https://coverartarchive.org/release-group/3a86f3a6-2fa7-34b7-8ffc-6714cbbd46ac/front-250",
+     "sq": true
+    },
+    {
+     "id": "calicia-keys-songs-in-a-minor",
+     "name": "Songs in A Minor",
+     "note": "Alicia Keys, 2001",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "cusher-confessions",
+     "name": "Confessions",
+     "note": "Usher, 2004",
+     "img": "https://coverartarchive.org/release-group/0ee013ee-5f59-35d5-b6b8-26a0cb3e4372/front-250",
+     "sq": true
+    },
+    {
+     "id": "cfrank-ocean-channel-orange",
+     "name": "Channel Orange",
+     "note": "Frank Ocean, 2012",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "cbeyonce-lemonade",
+     "name": "Lemonade",
+     "note": "Beyoncé, 2016",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "csza-ctrl",
+     "name": "Ctrl",
+     "note": "SZA, 2017",
+     "img": null,
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "top-rap-albums",
+   "src": "{\"type\":\"curated\",\"title\":\"Top rap albums\",\"short\":\"Rap\",\"picks\":[[\"Run-D.M.C.\",\"Raising Hell\"],[\"Public Enemy\",\"It Takes a Nation of Millions to Hold Us Back\"],[\"N.W.A\",\"Straight Outta Compton\"],[\"A Tribe Called Quest\",\"The Low End Theory\"],[\"Dr. Dre\",\"The Chronic\"],[\"Wu-Tang Clan\",\"Enter the Wu-Tang (36 Chambers)\"],[\"Nas\",\"Illmatic\"],[\"The Notorious B.I.G.\",\"Ready to Die\"],[\"2Pac\",\"All Eyez on Me\"],[\"Missy Elliott\",\"Supa Dupa Fly\"],[\"OutKast\",\"Aquemini\"],[\"Eminem\",\"The Marshall Mathers LP\"],[\"Jay-Z\",\"The Blueprint\"],[\"Kanye West\",\"My Beautiful Dark Twisted Fantasy\"],[\"Kendrick Lamar\",\"good kid, m.A.A.d city\"]]}",
+   "t": "curated",
+   "cat": "Music",
+   "group": "Top albums",
+   "short": "Rap",
+   "title": "Top rap albums",
+   "items": [
+    {
+     "id": "crun-d-m-c-raising-hell",
+     "name": "Raising Hell",
+     "note": "Run-D.M.C., 1986",
+     "img": "https://coverartarchive.org/release-group/a209c0a5-e9b2-37ff-a76d-df5bc405a0e8/front-250",
+     "sq": true
+    },
+    {
+     "id": "cpublic-enemy-it-takes-a-nation-of-millions-to-hold-us-back",
+     "name": "It Takes a Nation of Millions to Hold Us Back",
+     "note": "Public Enemy, 1988",
+     "img": "https://coverartarchive.org/release-group/01921d99-9d15-3fce-8734-46e58327cfb7/front-250",
+     "sq": true
+    },
+    {
+     "id": "cn-w-a-straight-outta-compton",
+     "name": "Straight Outta Compton",
+     "note": "N.W.A, 1988",
+     "img": "https://coverartarchive.org/release-group/fed1608d-80b7-38d2-aeb8-c6357f0d4c23/front-250",
+     "sq": true
+    },
+    {
+     "id": "ca-tribe-called-quest-the-low-end-theory",
+     "name": "The Low End Theory",
+     "note": "A Tribe Called Quest, 1991",
+     "img": "https://coverartarchive.org/release-group/c3733436-fcba-3c08-b082-d548df5c5139/front-250",
+     "sq": true
+    },
+    {
+     "id": "cdr-dre-the-chronic",
+     "name": "The Chronic",
+     "note": "Dr. Dre, 1992",
+     "img": "https://coverartarchive.org/release-group/ad444843-7160-33d7-b0c9-fc99f2c14a99/front-250",
+     "sq": true
+    },
+    {
+     "id": "cwu-tang-clan-enter-the-wu-tang-36-chambers",
+     "name": "Enter the Wu-Tang (36 Chambers)",
+     "note": "Wu-Tang Clan, 1993",
+     "img": "https://coverartarchive.org/release-group/610fb60f-900a-3c42-ac7d-f6b6aa8035f9/front-250",
+     "sq": true
+    },
+    {
+     "id": "cnas-illmatic",
+     "name": "Illmatic",
+     "note": "Nas, 1994",
+     "img": "https://coverartarchive.org/release-group/28298e2c-4d70-3eed-a0f5-a3280c662b3d/front-250",
+     "sq": true
+    },
+    {
+     "id": "cthe-notorious-b-i-g-ready-to-die",
+     "name": "Ready to Die",
+     "note": "The Notorious B.I.G., 1994",
+     "img": "https://coverartarchive.org/release-group/5afcfeac-118a-35e6-af0d-35ec9003354d/front-250",
+     "sq": true
+    },
+    {
+     "id": "c2pac-all-eyez-on-me",
+     "name": "All Eyez on Me",
+     "note": "2Pac, 1996",
+     "img": "https://coverartarchive.org/release-group/e2621417-9236-36b4-9f9e-376c416dc4b0/front-250",
+     "sq": true
+    },
+    {
+     "id": "cmissy-elliott-supa-dupa-fly",
+     "name": "Supa Dupa Fly",
+     "note": "Missy Elliott",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "coutkast-aquemini",
+     "name": "Aquemini",
+     "note": "OutKast, 1998",
+     "img": "https://coverartarchive.org/release-group/eb655897-6cc5-3fc1-b9ed-5008eb80c682/front-250",
+     "sq": true
+    },
+    {
+     "id": "ceminem-the-marshall-mathers-lp",
+     "name": "The Marshall Mathers LP",
+     "note": "Eminem, 2000",
+     "img": "https://coverartarchive.org/release-group/b0fa91c8-0996-38f1-ab84-797f58d7c4eb/front-250",
+     "sq": true
+    },
+    {
+     "id": "cjay-z-the-blueprint",
+     "name": "The Blueprint",
+     "note": "Jay-Z, 2001",
+     "img": "https://coverartarchive.org/release-group/11ae8c9c-27c1-3308-9761-edb87c8f54ea/front-250",
+     "sq": true
+    },
+    {
+     "id": "ckanye-west-my-beautiful-dark-twisted-fantasy",
+     "name": "My Beautiful Dark Twisted Fantasy",
+     "note": "Kanye West, 2010",
+     "img": "https://coverartarchive.org/release-group/5d6e21e1-deb5-428e-bb42-c2a567f3619b/front-250",
+     "sq": true
+    },
+    {
+     "id": "ckendrick-lamar-good-kid-m-a-a-d-city",
+     "name": "good kid, m.A.A.d city",
+     "note": "Kendrick Lamar, 2012",
+     "img": "https://coverartarchive.org/release-group/499c19c8-0dab-4824-884b-6191d145e95b/front-250",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "top-pop-albums",
+   "src": "{\"type\":\"curated\",\"title\":\"Top pop albums\",\"short\":\"Pop\",\"picks\":[[\"Michael Jackson\",\"Thriller\"],[\"Janet Jackson\",\"Control\"],[\"Madonna\",\"Like a Prayer\"],[\"Spice Girls\",\"Spice\"],[\"Britney Spears\",\"...Baby One More Time\"],[\"Backstreet Boys\",\"Millennium\"],[\"Kelly Clarkson\",\"Breakaway\"],[\"Lady Gaga\",\"The Fame\"],[\"Katy Perry\",\"Teenage Dream\"],[\"Adele\",\"21\"],[\"Taylor Swift\",\"1989\"],[\"Ariana Grande\",\"Thank U, Next\"],[\"Dua Lipa\",\"Future Nostalgia\"],[\"Olivia Rodrigo\",\"Sour\"],[\"Sabrina Carpenter\",\"Short n' Sweet\"]]}",
+   "t": "curated",
+   "cat": "Music",
+   "group": "Top albums",
+   "short": "Pop",
+   "title": "Top pop albums",
+   "items": [
+    {
+     "id": "cmichael-jackson-thriller",
+     "name": "Thriller",
+     "note": "Michael Jackson, 1982",
+     "img": "https://coverartarchive.org/release-group/f32fab67-77dd-3937-addc-9062e28e4c37/front-250",
+     "sq": true
+    },
+    {
+     "id": "cjanet-jackson-control",
+     "name": "Control",
+     "note": "Janet Jackson, 1986",
+     "img": "https://coverartarchive.org/release-group/b23d3137-df51-3047-a6a5-b5efbde50f22/front-250",
+     "sq": true
+    },
+    {
+     "id": "cmadonna-like-a-prayer",
+     "name": "Like a Prayer",
+     "note": "Madonna, 1989",
+     "img": "https://coverartarchive.org/release-group/1f75a8df-176c-3d23-8f1f-b0c8935682ec/front-250",
+     "sq": true
+    },
+    {
+     "id": "cspice-girls-spice",
+     "name": "Spice",
+     "note": "Spice Girls, 1996",
+     "img": "https://coverartarchive.org/release-group/4180845c-8700-3fda-af8f-0b9f3a932009/front-250",
+     "sq": true
+    },
+    {
+     "id": "cbritney-spears-baby-one-more-time",
+     "name": "...Baby One More Time",
+     "note": "Britney Spears, 1999",
+     "img": "https://coverartarchive.org/release-group/faeb8741-2ca0-3ca6-8a1a-70bab1e67c82/front-250",
+     "sq": true
+    },
+    {
+     "id": "cbackstreet-boys-millennium",
+     "name": "Millennium",
+     "note": "Backstreet Boys, 1999",
+     "img": "https://coverartarchive.org/release-group/a8fb6ac6-a659-320f-8736-87b52ad65e3a/front-250",
+     "sq": true
+    },
+    {
+     "id": "ckelly-clarkson-breakaway",
+     "name": "Breakaway",
+     "note": "Kelly Clarkson, 2003",
+     "img": "https://coverartarchive.org/release-group/0d0ddce6-a611-3dc0-923c-60ac3da72ad8/front-250",
+     "sq": true
+    },
+    {
+     "id": "clady-gaga-the-fame",
+     "name": "The Fame",
+     "note": "Lady Gaga, 2008",
+     "img": "https://coverartarchive.org/release-group/e5495719-b3ad-3eea-a533-fb70af43c23d/front-250",
+     "sq": true
+    },
+    {
+     "id": "ckaty-perry-teenage-dream",
+     "name": "Teenage Dream",
+     "note": "Katy Perry, 2010",
+     "img": "https://coverartarchive.org/release-group/e6f683c9-fc85-412c-a352-d6e411fc2603/front-250",
+     "sq": true
+    },
+    {
+     "id": "cadele-21",
+     "name": "21",
+     "note": "Adele, 2011",
+     "img": "https://coverartarchive.org/release-group/e4174758-d333-4a8e-a31f-dd0edd51518e/front-250",
+     "sq": true
+    },
+    {
+     "id": "ctaylor-swift-1989",
+     "name": "1989",
+     "note": "Taylor Swift, 2014",
+     "img": "https://coverartarchive.org/release-group/4d9ec1c2-58ec-48a4-aa0a-916718adead0/front-250",
+     "sq": true
+    },
+    {
+     "id": "cariana-grande-thank-u-next",
+     "name": "Thank U, Next",
+     "note": "Ariana Grande, 2019",
+     "img": "https://coverartarchive.org/release-group/485d3241-ef02-49a4-88df-a03eaa86d9cd/front-250",
+     "sq": true
+    },
+    {
+     "id": "cdua-lipa-future-nostalgia",
+     "name": "Future Nostalgia",
+     "note": "Dua Lipa, 2020",
+     "img": "https://coverartarchive.org/release-group/aa366795-92d7-4d67-91fa-6741f82a4858/front-250",
+     "sq": true
+    },
+    {
+     "id": "colivia-rodrigo-sour",
+     "name": "Sour",
+     "note": "Olivia Rodrigo, 2021",
+     "img": "https://coverartarchive.org/release-group/2ae2e504-7116-4b4f-b632-9748bb18ccd2/front-250",
+     "sq": true
+    },
+    {
+     "id": "csabrina-carpenter-short-n-sweet",
+     "name": "Short n' Sweet",
+     "note": "Sabrina Carpenter, 2024",
+     "img": "https://coverartarchive.org/release-group/c8bea388-c195-4177-bf9b-7469f6e695a1/front-250",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "top-rock-albums",
+   "src": "{\"type\":\"curated\",\"title\":\"Top rock albums\",\"short\":\"Rock\",\"picks\":[[\"The Beatles\",\"Sgt. Pepper's Lonely Hearts Club Band\"],[\"The Who\",\"Who's Next\"],[\"Led Zeppelin\",\"Led Zeppelin IV\"],[\"The Rolling Stones\",\"Exile on Main St.\"],[\"Pink Floyd\",\"The Dark Side of the Moon\"],[\"Queen\",\"A Night at the Opera\"],[\"Bruce Springsteen\",\"Born to Run\"],[\"Fleetwood Mac\",\"Rumours\"],[\"AC/DC\",\"Back in Black\"],[\"U2\",\"The Joshua Tree\"],[\"Guns N' Roses\",\"Appetite for Destruction\"],[\"Nirvana\",\"Nevermind\"],[\"Radiohead\",\"OK Computer\"],[\"Foo Fighters\",\"The Colour and the Shape\"],[\"Green Day\",\"American Idiot\"]]}",
+   "t": "curated",
+   "cat": "Music",
+   "group": "Top albums",
+   "short": "Rock",
+   "title": "Top rock albums",
+   "items": [
+    {
+     "id": "cthe-beatles-sgt-pepper-s-lonely-hearts-club-band",
+     "name": "Sgt. Pepper's Lonely Hearts Club Band",
+     "note": "The Beatles, 1967",
+     "img": "https://coverartarchive.org/release-group/9f7a4c28-8fa2-3113-929c-c47a9f7982c3/front-250",
+     "sq": true
+    },
+    {
+     "id": "cthe-who-who-s-next",
+     "name": "Who's Next",
+     "note": "The Who, 2023",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "cled-zeppelin-led-zeppelin-iv",
+     "name": "Led Zeppelin IV",
+     "note": "Led Zeppelin, 1971",
+     "img": "https://coverartarchive.org/release-group/2e61da88-39e9-3473-81d2-c964cb394952/front-250",
+     "sq": true
+    },
+    {
+     "id": "cthe-rolling-stones-exile-on-main-st",
+     "name": "Exile on Main St.",
+     "note": "The Rolling Stones, 1972",
+     "img": "https://coverartarchive.org/release-group/4838a3c9-fd2b-30a5-83eb-e32545b5d7fc/front-250",
+     "sq": true
+    },
+    {
+     "id": "cpink-floyd-the-dark-side-of-the-moon",
+     "name": "The Dark Side of the Moon",
+     "note": "Pink Floyd, 1973",
+     "img": "https://coverartarchive.org/release-group/f5093c06-23e3-404f-aeaa-40f72885ee3a/front-250",
+     "sq": true
+    },
+    {
+     "id": "cqueen-a-night-at-the-opera",
+     "name": "A Night at the Opera",
+     "note": "Queen, 1975",
+     "img": "https://coverartarchive.org/release-group/6b47c9a0-b9e1-3df9-a5e8-50a6ce0dbdbd/front-250",
+     "sq": true
+    },
+    {
+     "id": "cbruce-springsteen-born-to-run",
+     "name": "Born to Run",
+     "note": "Bruce Springsteen, 1975",
+     "img": "https://coverartarchive.org/release-group/39b22944-7503-3937-8bba-09b17281cc6a/front-250",
+     "sq": true
+    },
+    {
+     "id": "cfleetwood-mac-rumours",
+     "name": "Rumours",
+     "note": "Fleetwood Mac, 1977",
+     "img": "https://coverartarchive.org/release-group/416bb5e5-c7d1-3977-8fd7-7c9daf6c2be6/front-250",
+     "sq": true
+    },
+    {
+     "id": "cac-dc-back-in-black",
+     "name": "Back in Black",
+     "note": "AC/DC, 1980",
+     "img": "https://coverartarchive.org/release-group/d3bc1a64-7561-3787-b680-0003aa50f8f1/front-250",
+     "sq": true
+    },
+    {
+     "id": "cu2-the-joshua-tree",
+     "name": "The Joshua Tree",
+     "note": "U2, 1987",
+     "img": "https://coverartarchive.org/release-group/6f3e9fa6-be7a-3de8-a2b2-2072ece8a54d/front-250",
+     "sq": true
+    },
+    {
+     "id": "cguns-n-roses-appetite-for-destruction",
+     "name": "Appetite for Destruction",
+     "note": "Guns N' Roses, 1987",
+     "img": "https://coverartarchive.org/release-group/a0b94d0a-210b-4b15-bd1d-93be2196c14a/front-250",
+     "sq": true
+    },
+    {
+     "id": "cnirvana-nevermind",
+     "name": "Nevermind",
+     "note": "Nirvana, 1991",
+     "img": "https://coverartarchive.org/release-group/1b022e01-4da6-387b-8658-8678046e4cef/front-250",
+     "sq": true
+    },
+    {
+     "id": "cradiohead-ok-computer",
+     "name": "OK Computer",
+     "note": "Radiohead, 1997",
+     "img": "https://coverartarchive.org/release-group/b1392450-e666-3926-a536-22c65f834433/front-250",
+     "sq": true
+    },
+    {
+     "id": "cfoo-fighters-the-colour-and-the-shape",
+     "name": "The Colour and the Shape",
+     "note": "Foo Fighters, 1997",
+     "img": "https://coverartarchive.org/release-group/7822977a-984d-358d-823f-426139c0eaba/front-250",
+     "sq": true
+    },
+    {
+     "id": "cgreen-day-american-idiot",
+     "name": "American Idiot",
+     "note": "Green Day, 2004",
+     "img": "https://coverartarchive.org/release-group/de9bf827-a9b0-348b-a7c9-556c03c3fb07/front-250",
+     "sq": true
+    }
+   ]
+  },
+  {
    "id": "top-albums-of-the-1990s",
    "src": "{\"type\":\"curated\",\"title\":\"Top albums of the 1990s\",\"short\":\"1990s\",\"picks\":[[\"Nirvana\",\"Nevermind\"],[\"Pearl Jam\",\"Ten\"],[\"Dr. Dre\",\"The Chronic\"],[\"R.E.M.\",\"Automatic for the People\"],[\"The Smashing Pumpkins\",\"Siamese Dream\"],[\"Nas\",\"Illmatic\"],[\"Green Day\",\"Dookie\"],[\"Portishead\",\"Dummy\"],[\"The Notorious B.I.G.\",\"Ready to Die\"],[\"Alanis Morissette\",\"Jagged Little Pill\"],[\"Oasis\",\"(What's the Story) Morning Glory?\"],[\"Fugees\",\"The Score\"],[\"Beck\",\"Odelay\"],[\"Radiohead\",\"OK Computer\"],[\"Lauryn Hill\",\"The Miseducation of Lauryn Hill\"]]}",
    "t": "curated",
@@ -4736,7 +5903,7 @@
      "id": "cpearl-jam-ten",
      "name": "Ten",
      "note": "Pearl Jam, 1991",
-     "img": "https://coverartarchive.org/release-group/cea5d18a-1924-3cda-bebc-38933834b25d/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -4820,7 +5987,7 @@
      "id": "cradiohead-ok-computer",
      "name": "OK Computer",
      "note": "Radiohead, 1997",
-     "img": "https://coverartarchive.org/release-group/b1392450-e666-3926-a536-22c65f834433/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -4929,7 +6096,7 @@
      "id": "cgreen-day-american-idiot",
      "name": "American Idiot",
      "note": "Green Day, 2004",
-     "img": "https://coverartarchive.org/release-group/de9bf827-a9b0-348b-a7c9-556c03c3fb07/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -5569,34 +6736,16 @@
   },
   {
    "id": "top-anime-series",
-   "src": "{\"type\":\"tvgenre\",\"name\":\"Animation\",\"lang\":\"ja\",\"menu\":\"TV > Anime\",\"title\":\"Top anime series\",\"short\":\"Top anime series\"}",
+   "src": "{\"type\":\"tvgenre\",\"name\":\"Animation\",\"lang\":\"ja\",\"perFranchise\":1,\"menu\":\"TV > Anime\",\"title\":\"Top anime series\",\"short\":\"Top anime series\"}",
    "t": "tvgenre",
    "cat": "TV",
    "title": "Top anime series",
    "items": [
     {
-     "id": "t12609",
-     "name": "Dragon Ball",
-     "note": "1986",
-     "poster": "/onCLyCOgszTIyyVs2XKYSkKPOPG.jpg"
-    },
-    {
-     "id": "t12971",
-     "name": "Dragon Ball Z",
-     "note": "1989",
-     "poster": "/oQ5CnVj3TRifXl2bIOri6H6rfNe.jpg"
-    },
-    {
      "id": "t37854",
      "name": "One Piece",
      "note": "1999",
      "poster": "/dB4EDhre2dsC2kxYDavyKWqLQwi.jpg"
-    },
-    {
-     "id": "t46260",
-     "name": "Naruto",
-     "note": "2002",
-     "poster": "/xppeysfvDKVx775MFuH8Z9BlpMk.jpg"
     },
     {
      "id": "t13916",
@@ -5647,6 +6796,12 @@
      "poster": "/phuYuzqWW9ru8EA3HVjE9W2Rr3M.jpg"
     },
     {
+     "id": "t70881",
+     "name": "Boruto: Naruto Next Generations",
+     "note": "2017",
+     "poster": "/e0B6i48kxdRkMcK4tR4YNfXGWOc.jpg"
+    },
+    {
      "id": "t80020",
      "name": "Super Dragon Ball Heroes",
      "note": "2018",
@@ -5663,6 +6818,18 @@
      "name": "JUJUTSU KAISEN",
      "note": "2020",
      "poster": "/6qQzMJG27XOJsyAEEIisoJB45j2.jpg"
+    },
+    {
+     "id": "t120089",
+     "name": "SPY x FAMILY",
+     "note": "2022",
+     "poster": "/7NAvPYPAu7MeHwP8E9sn81PqsRh.jpg"
+    },
+    {
+     "id": "t114410",
+     "name": "Chainsaw Man",
+     "note": "2022",
+     "poster": "/npdB6eFzizki0WaZ1OvKcJrWe97.jpg"
     }
    ],
    "group": "Anime",
@@ -5768,6 +6935,410 @@
    ],
    "group": "Anime",
    "short": "Magical girl"
+  },
+  {
+   "id": "slice-of-life-anime",
+   "src": "{\"type\":\"shows\",\"menu\":\"TV > Anime\",\"title\":\"Slice of life anime\",\"short\":\"Slice of life\",\"picks\":[[\"Azumanga Daioh\",\"Azumanga Daioh\",2002],[\"Aria the Animation\",\"Aria the Animation\",2005],[\"Lucky Star\",\"Lucky Star\",2007],[\"Natsume's Book of Friends\",\"Natsume's Book of Friends\",2008],[\"K-On!\",\"K-On!\",2009],[\"Nichijou\",\"Nichijou\",2011],[\"Usagi Drop\",\"Bunny Drop\",2011],[\"Hyouka\",\"Hyouka\",2012],[\"Silver Spoon\",\"Silver Spoon\",2013],[\"Non Non Biyori\",\"Non Non Biyori\",2013],[\"Barakamon\",\"Barakamon\",2014],[\"Shirobako\",\"Shirobako\",2014],[\"March Comes in Like a Lion\",\"March Comes in Like a Lion\",2016],[\"Laid-Back Camp\",\"Laid-Back Camp\",2018],[\"Bocchi the Rock!\",\"Bocchi the Rock!\",2022]]}",
+   "t": "shows",
+   "cat": "TV",
+   "title": "Slice of life anime",
+   "items": [
+    {
+     "id": "t12143",
+     "name": "Azumanga Daioh",
+     "note": "2002",
+     "poster": "/j6uCwt9EvK4a2jiFdFMGfNEGdq6.jpg"
+    },
+    {
+     "id": "t53787",
+     "name": "Aria the Animation",
+     "note": "2005",
+     "poster": "/1XgXgWmsX1Un8eBHPjcBYpoae6M.jpg"
+    },
+    {
+     "id": "t42500",
+     "name": "Lucky Star",
+     "note": "2007",
+     "poster": "/s51vTFtS1kB227bj9PF9FYalMCv.jpg"
+    },
+    {
+     "id": "t69500",
+     "name": "Natsume's Book of Friends",
+     "note": "2008",
+     "poster": "/6iIoK9LEM92hBEZD3aVQVCWeaRC.jpg"
+    },
+    {
+     "id": "t42253",
+     "name": "K-On!",
+     "note": "2009",
+     "poster": "/70hf2538UAf7mzzNgvqTlWq6PDf.jpg"
+    },
+    {
+     "id": "t44684",
+     "name": "Nichijou",
+     "note": "2011",
+     "poster": "/tseISx2XcDj1fqqqlBq58yOKmpm.jpg"
+    },
+    {
+     "id": "t45213",
+     "name": "Usagi Drop",
+     "note": "2011",
+     "poster": "/nMeOuxeY1Djly3xIFoam2H5tU0Q.jpg"
+    },
+    {
+     "id": "t65329",
+     "name": "Hyouka",
+     "note": "2012",
+     "poster": "/qoAig2n9LkukqnizytaBtOSwif7.jpg"
+    },
+    {
+     "id": "t58237",
+     "name": "Silver Spoon",
+     "note": "2013",
+     "poster": "/4HiHpVy0OVk5nFl28pjU8gBDA7A.jpg"
+    },
+    {
+     "id": "t66875",
+     "name": "Non Non Biyori",
+     "note": "2013",
+     "poster": "/uEFfrd2xBV2XEGkbNtMrHgLXFM1.jpg"
+    },
+    {
+     "id": "t67048",
+     "name": "Barakamon",
+     "note": "2014",
+     "poster": "/5biiZSKFkIFRxv6Ny6H6XwzyuKE.jpg"
+    },
+    {
+     "id": "t64492",
+     "name": "Shirobako",
+     "note": "2014",
+     "poster": "/pGcyyvixbsJpgMngSCULFvbnpBK.jpg"
+    },
+    {
+     "id": "t65336",
+     "name": "March Comes in Like a Lion",
+     "note": "2016",
+     "poster": "/sokReNdjEwG2TkdUzJcVnD6sChT.jpg"
+    },
+    {
+     "id": "t76075",
+     "name": "Laid-Back Camp",
+     "note": "2018",
+     "poster": "/1c5xBDBQQwa1bvX5fibAeymReGg.jpg"
+    },
+    {
+     "id": "t119100",
+     "name": "Bocchi the Rock!",
+     "note": "2022",
+     "poster": "/Af4tZ3eKjKWXG4vfiQ8R1NJomAP.jpg"
+    }
+   ],
+   "group": "Anime",
+   "short": "Slice of life"
+  },
+  {
+   "id": "horror-anime",
+   "src": "{\"type\":\"shows\",\"menu\":\"TV > Anime\",\"title\":\"Horror anime\",\"short\":\"Horror\",\"picks\":[[\"Hellsing\",\"Hellsing\",2001],[\"Elfen Lied\",\"Elfen Lied\",2004],[\"Hell Girl\",\"Hell Girl\",2005],[\"Higurashi: When They Cry\",\"Higurashi: When They Cry\",2006],[\"Mononoke\",\"Mononoke\",2007],[\"Shiki\",\"Shiki\",2010],[\"Another\",\"Another\",2012],[\"Yamishibai\",\"Yamishibai: Japanese Ghost Stories\",2013],[\"Parasyte -the maxim-\",\"Parasyte -the maxim-\",2014],[\"Tokyo Ghoul\",\"Tokyo Ghoul\",2014],[\"Devilman Crybaby\",\"Devilman Crybaby\",2018],[\"Junji Ito Collection\",\"Junji Ito Collection\",2018],[\"The Promised Neverland\",\"The Promised Neverland\",2019],[\"Mieruko-chan\",\"Mieruko-chan\",2021],[\"Chainsaw Man\",\"Chainsaw Man\",2022]]}",
+   "t": "shows",
+   "cat": "TV",
+   "title": "Horror anime",
+   "items": [
+    {
+     "id": "t16830",
+     "name": "Hellsing",
+     "note": "2001",
+     "poster": "/p2xedgWeqcVtv7K4MsMjIfsaV2g.jpg"
+    },
+    {
+     "id": "t42671",
+     "name": "Elfen Lied",
+     "note": "2004",
+     "poster": "/mYakikF9MYpiRRQKnXQD6ubRHwr.jpg"
+    },
+    {
+     "id": "t8974",
+     "name": "Hell Girl",
+     "note": "2005",
+     "poster": "/l50Wjrt2m362DjsKZVTpU2sp5L5.jpg"
+    },
+    {
+     "id": "t25760",
+     "name": "Higurashi: When They Cry",
+     "note": "2006",
+     "poster": "/m71gbHge6qp1kbWGJD5PsSWZpzI.jpg"
+    },
+    {
+     "id": "t16660",
+     "name": "Mononoke",
+     "note": "2007",
+     "poster": "/r3S04UDFVaDRC6fOSjLfvrDhpvd.jpg"
+    },
+    {
+     "id": "t36581",
+     "name": "Shiki",
+     "note": "2010",
+     "poster": "/zsWbTnNwNjqWvgZ9gqTcK9WLoWy.jpg"
+    },
+    {
+     "id": "t42589",
+     "name": "Another",
+     "note": "2012",
+     "poster": "/h3YyESKtOy7Rrv7zymyF9kfpz7T.jpg"
+    },
+    {
+     "id": "t56559",
+     "name": "Yamishibai",
+     "note": "2013",
+     "poster": "/oPFlM3EomXf3HRGYeRBGICIE76.jpg"
+    },
+    {
+     "id": "t61459",
+     "name": "Parasyte -the maxim-",
+     "note": "2014",
+     "poster": "/cXBfjZSdJelu2r0wKD7qCxS71kb.jpg"
+    },
+    {
+     "id": "t61374",
+     "name": "Tokyo Ghoul",
+     "note": "2014",
+     "poster": "/1m4RlC9BTCbyY549TOdVQ5NRPcR.jpg"
+    },
+    {
+     "id": "t75208",
+     "name": "Devilman Crybaby",
+     "note": "2018",
+     "poster": "/2pQ9xfgDa3L3QpoXfkNhISby2R4.jpg"
+    },
+    {
+     "id": "t75775",
+     "name": "Junji Ito Collection",
+     "note": "2018",
+     "poster": "/umIn2MeNsJAvzb8ztRrv2nhfJ28.jpg"
+    },
+    {
+     "id": "t83097",
+     "name": "The Promised Neverland",
+     "note": "2019",
+     "poster": "/oBgRCpAbtMpk1v8wfdsIph7lPQE.jpg"
+    },
+    {
+     "id": "t121078",
+     "name": "Mieruko-chan",
+     "note": "2021",
+     "poster": "/jWyIZj7yGbhvVRRxfy4ZDyfIIAB.jpg"
+    },
+    {
+     "id": "t114410",
+     "name": "Chainsaw Man",
+     "note": "2022",
+     "poster": "/npdB6eFzizki0WaZ1OvKcJrWe97.jpg"
+    }
+   ],
+   "group": "Anime",
+   "short": "Horror"
+  },
+  {
+   "id": "romance-anime",
+   "src": "{\"type\":\"shows\",\"menu\":\"TV > Anime\",\"title\":\"Romance anime\",\"short\":\"Romance\",\"picks\":[[\"Ouran High School Host Club\",\"Ouran High School Host Club\",2006],[\"Nana\",\"Nana\",2006],[\"Lovely Complex\",\"Lovely Complex\",2007],[\"Clannad\",\"Clannad\",2007],[\"Toradora!\",\"Toradora!\",2008],[\"Kimi ni Todoke\",\"Kimi ni Todoke: From Me to You\",2009],[\"Maid Sama!\",\"Maid Sama!\",2010],[\"Your Lie in April\",\"Your Lie in April\",2014],[\"My Love Story!!\",\"My Love Story!!\",2015],[\"Wotakoi\",\"Wotakoi: Love Is Hard for Otaku\",2018],[\"Rascal Does Not Dream of Bunny Girl Senpai\",\"Rascal Does Not Dream of Bunny Girl Senpai\",2018],[\"Fruits Basket\",\"Fruits Basket\",2019],[\"Kaguya-sama: Love Is War\",\"Kaguya-sama: Love Is War\",2019],[\"Horimiya\",\"Horimiya\",2021],[\"Skip and Loafer\",\"Skip and Loafer\",2023]]}",
+   "t": "shows",
+   "cat": "TV",
+   "title": "Romance anime",
+   "items": [
+    {
+     "id": "t1043",
+     "name": "Ouran High School Host Club",
+     "note": "2006",
+     "poster": "/5B8DAu0cfmzwZNny2B6NYNkDrTS.jpg"
+    },
+    {
+     "id": "t56568",
+     "name": "Nana",
+     "note": "2006",
+     "poster": "/egEROVWFVUupRhK03Bj5IVGAEGu.jpg"
+    },
+    {
+     "id": "t27167",
+     "name": "Lovely Complex",
+     "note": "2007",
+     "poster": "/8CnQKoCB0H9SYwm9nxiE4C6x7si.jpg"
+    },
+    {
+     "id": "t24835",
+     "name": "Clannad",
+     "note": "2007",
+     "poster": "/jPBMYp4ddXkGJDSxxmaKBjzv2r3.jpg"
+    },
+    {
+     "id": "t42916",
+     "name": "Toradora!",
+     "note": "2008",
+     "poster": "/2Z52nZaAQt1P7XJtu8fNlMXgdps.jpg"
+    },
+    {
+     "id": "t68854",
+     "name": "Kimi ni Todoke",
+     "note": "2009",
+     "poster": "/lLUAZzJc6vfyE2TeY56AGGb3E5K.jpg"
+    },
+    {
+     "id": "t65648",
+     "name": "Maid Sama!",
+     "note": "2010",
+     "poster": "/igkn0M1bgMeATz59LShvVxZNdVd.jpg"
+    },
+    {
+     "id": "t61663",
+     "name": "Your Lie in April",
+     "note": "2014",
+     "poster": "/92P9cD5uOzLVgx0QDTnwkXffjEG.jpg"
+    },
+    {
+     "id": "t62565",
+     "name": "My Love Story!!",
+     "note": "2015",
+     "poster": "/oKvrM8WVOGcSSwIKFfsAxIuk6Nx.jpg"
+    },
+    {
+     "id": "t78457",
+     "name": "Wotakoi",
+     "note": "2018",
+     "poster": "/fpDesSzDRMFGIJbcuC2WVCveC2P.jpg"
+    },
+    {
+     "id": "t82739",
+     "name": "Rascal Does Not Dream of Bunny Girl Senpai",
+     "note": "2018",
+     "poster": "/fbqDG7GjodvaNecgv1q8kfSNPl5.jpg"
+    },
+    {
+     "id": "t85991",
+     "name": "Fruits Basket",
+     "note": "2019",
+     "poster": "/9TGNcvMm91QXmnnCCYYqnYK0bK7.jpg"
+    },
+    {
+     "id": "t83121",
+     "name": "Kaguya-sama: Love Is War",
+     "note": "2019",
+     "poster": "/5khbC6AuNgnvnoDbjIMKCOhEtIc.jpg"
+    },
+    {
+     "id": "t110070",
+     "name": "Horimiya",
+     "note": "2021",
+     "poster": "/iSOKGl5KIeOCAtigUDCfFZe2cOi.jpg"
+    },
+    {
+     "id": "t139130",
+     "name": "Skip and Loafer",
+     "note": "2023",
+     "poster": "/xHVy0gnLNpkNAdtd3DHsUVYYEDN.jpg"
+    }
+   ],
+   "group": "Anime",
+   "short": "Romance"
+  },
+  {
+   "id": "mecha-anime",
+   "src": "{\"type\":\"shows\",\"menu\":\"TV > Anime\",\"title\":\"Mecha anime\",\"short\":\"Mecha\",\"picks\":[[\"Mobile Suit Gundam\",\"Mobile Suit Gundam\",1979],[\"Macross\",\"The Super Dimension Fortress Macross\",1982],[\"Neon Genesis Evangelion\",\"Neon Genesis Evangelion\",1995],[\"The Vision of Escaflowne\",\"The Vision of Escaflowne\",1996],[\"Martian Successor Nadesico\",\"Martian Successor Nadesico\",1996],[\"The Big O\",\"The Big O\",1999],[\"RahXephon\",\"RahXephon\",2002],[\"Full Metal Panic!\",\"Full Metal Panic!\",2002],[\"Eureka Seven\",\"Eureka Seven\",2005],[\"Code Geass\",\"Code Geass: Lelouch of the Rebellion\",2006],[\"Gurren Lagann\",\"Gurren Lagann\",2007],[\"Knights of Sidonia\",\"Knights of Sidonia\",2014],[\"Aldnoah.Zero\",\"Aldnoah.Zero\",2014],[\"Darling in the Franxx\",\"Darling in the Franxx\",2018],[\"86 Eighty-Six\",\"86 Eighty-Six\",2021]]}",
+   "t": "shows",
+   "cat": "TV",
+   "title": "Mecha anime",
+   "items": [
+    {
+     "id": "t21731",
+     "name": "Mobile Suit Gundam",
+     "note": "1979",
+     "poster": "/BMqben5yxK5bBdHALi9jfyp517.jpg"
+    },
+    {
+     "id": "t21734",
+     "name": "Macross",
+     "note": "1982",
+     "poster": "/15JJd47Wy6enQS3roKSdK1ouce7.jpg"
+    },
+    {
+     "id": "t890",
+     "name": "Neon Genesis Evangelion",
+     "note": "1995",
+     "poster": "/y2ah9t0navXyIvoHg1uIbIHO3tt.jpg"
+    },
+    {
+     "id": "t8779",
+     "name": "The Vision of Escaflowne",
+     "note": "1996",
+     "poster": "/6uX0Q7Sn9JYWbHqQ5ZRJoJKcTmp.jpg"
+    },
+    {
+     "id": "t35544",
+     "name": "Martian Successor Nadesico",
+     "note": "1996",
+     "poster": "/iKd4q8iY1mcCCJ0GYBh9uJdlpUn.jpg"
+    },
+    {
+     "id": "t18241",
+     "name": "The Big O",
+     "note": "1999",
+     "poster": "/AsL5J7k9diSxQcxwNEYJSKqtRCS.jpg"
+    },
+    {
+     "id": "t13375",
+     "name": "RahXephon",
+     "note": "2002",
+     "poster": "/sQhAs3I1nqZusc5y7s0KiaFmju3.jpg"
+    },
+    {
+     "id": "t39379",
+     "name": "Full Metal Panic!",
+     "note": "2002",
+     "poster": "/qzmXRhInMCWVQzvd1k7tWbgKMgm.jpg"
+    },
+    {
+     "id": "t889",
+     "name": "Eureka Seven",
+     "note": "2005",
+     "poster": "/1FRY2GvHGV5GX12td2lbFqFCfxt.jpg"
+    },
+    {
+     "id": "t31724",
+     "name": "Code Geass",
+     "note": "2006",
+     "poster": "/3mGPTXdavSQzikuLG4m9Bp6Ucye.jpg"
+    },
+    {
+     "id": "t21729",
+     "name": "Gurren Lagann",
+     "note": "2007",
+     "poster": "/sG0Z0yWJmzr7UW6183cmz5DAjqm.jpg"
+    },
+    {
+     "id": "t60831",
+     "name": "Knights of Sidonia",
+     "note": "2014",
+     "poster": "/tGTx2Ec25bWjtanJe7D5vUmQUkA.jpg"
+    },
+    {
+     "id": "t61259",
+     "name": "Aldnoah.Zero",
+     "note": "2014",
+     "poster": "/x7DCN1z9fFOjHw5hMiAlnTcC1Gv.jpg"
+    },
+    {
+     "id": "t76121",
+     "name": "Darling in the Franxx",
+     "note": "2018",
+     "poster": "/m6R8gI3brohD6izeVCXFmuGeV2m.jpg"
+    },
+    {
+     "id": "t100565",
+     "name": "86 Eighty-Six",
+     "note": "2021",
+     "poster": "/1RAD6bMQayJPoO8ry4vJy3GwCYt.jpg"
+    }
+   ],
+   "group": "Anime",
+   "short": "Mecha"
   },
   {
    "id": "popular-pizza-toppings",
@@ -14354,7 +15925,8 @@
     {
      "id": "bin-the-woods-tana-french",
      "name": "In the Woods",
-     "note": "Tana French"
+     "note": "Tana French",
+     "img": "https://covers.openlibrary.org/b/id/1474730-M.jpg"
     },
     {
      "id": "bgone-girl-gillian-flynn",
