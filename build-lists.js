@@ -28,7 +28,7 @@ const DEFS = [
   //   menu sets exactly where a list appears: "Category > Submenu > Sub-submenu". short is its label there.
   { type: "collection", name: "James Bond", title: "James Bond films", max: 30, menu: "Movies > Franchises > James Bond", short: "Films" },      // max raises the usual 15-film limit
   { type: "films", cat: "Franchises", title: "Studio Ghibli films", short: "Studio Ghibli", picks: [
-    ["Nausicaä of the Valley of the Wind", 1984], ["Castle in the Sky", 1986], ["My Neighbor Totoro", 1988], ["Grave of the Fireflies", 1988],
+    ["Nausicaä of the Valley of the Wind", 1984, 81], ["Castle in the Sky", 1986], ["My Neighbor Totoro", 1988], ["Grave of the Fireflies", 1988],
     ["Kiki's Delivery Service", 1989], ["Only Yesterday", 1991], ["Porco Rosso", 1992], ["Ocean Waves", 1993], ["Pom Poko", 1994],
     ["Whisper of the Heart", 1995], ["Princess Mononoke", 1997], ["My Neighbors the Yamadas", 1999], ["Spirited Away", 2001],
     ["The Cat Returns", 2002], ["Howl's Moving Castle", 2004], ["Tales from Earthsea", 2006], ["Ponyo", 2008], ["Arrietty", 2010],
@@ -111,6 +111,8 @@ const DEFS = [
   { type: "albums",     name: "Sleater-Kinney" },
   { type: "albums",     name: "Metallica" },
   { type: "albums",     name: "Linkin Park" },
+  { type: "albums",     name: "Michael Jackson" },
+  { type: "albums",     name: "Black Sabbath" },
   { type: "tracks",     artist: "Lorde", albums: ["Pure Heroine", "Melodrama", "Virgin"] },
   //   "singles" ranks an artist's singles.
   { type: "singles",    name: "Spice Girls" },
@@ -160,6 +162,24 @@ const DEFS = [
     ["The Catalyst", "2010"], ["Waiting for the End", "2010"], ["Iridescent", "2011"], ["Burn It Down", "2012"], ["Lost in the Echo", "2012"],
     ["Castle of Glass", "2013"], ["Final Masquerade", "2014"], ["Heavy", "2017"], ["Talking to Myself", "2017"], ["One More Light", "2017"],
     ["Lost", "2023"], ["The Emptiness Machine", "2024"], ["Heavy Is the Crown", "2024"], ["Over Each Other", "2024"], ["Two Faced", "2025"] ] },
+  { type: "names", group: "Michael Jackson", title: "Michael Jackson singles", short: "Singles", picks: [
+    ["Got to Be There", "1971"], ["Rockin' Robin", "1972"], ["Ben", "1972"], ["Don't Stop 'Til You Get Enough", "1979"], ["Rock with You", "1979"],
+    ["Off the Wall", "1980"], ["She's Out of My Life", "1980"], ["The Girl Is Mine", "1982"], ["Billie Jean", "1983"], ["Beat It", "1983"],
+    ["Wanna Be Startin' Somethin'", "1983"], ["Human Nature", "1983"], ["Thriller", "1983"], ["I Just Can't Stop Loving You", "1987"],
+    ["Bad", "1987"], ["The Way You Make Me Feel", "1987"], ["Man in the Mirror", "1988"], ["Dirty Diana", "1988"], ["Smooth Criminal", "1988"],
+    ["Leave Me Alone", "1989"], ["Black or White", "1991"], ["Remember the Time", "1992"], ["In the Closet", "1992"], ["Jam", "1992"],
+    ["Heal the World", "1992"], ["Scream", "1995"], ["You Are Not Alone", "1995"], ["Earth Song", "1995"], ["They Don't Care About Us", "1996"],
+    ["You Rock My World", "2001"] ] },
+  { type: "names", group: "Black Sabbath", title: "Black Sabbath singles", short: "Singles", picks: [
+    ["Evil Woman", "1970"], ["Paranoid", "1970"], ["Iron Man", "1971"], ["Tomorrow's Dream", "1972"], ["Sabbath Bloody Sabbath", "1973"],
+    ["Am I Going Insane (Radio)", "1976"], ["Never Say Die", "1978"], ["Hard Road", "1978"], ["Neon Knights", "1980"], ["Die Young", "1980"],
+    ["The Mob Rules", "1981"], ["Turn Up the Night", "1982"], ["Trashed", "1983"], ["Headless Cross", "1989"], ["God Is Dead?", "2013"] ] },
+  { type: "names", title: "Top pop boy groups", short: "Pop boy groups", picks: [
+    "The Osmonds", "The Jackson 5", "Menudo", "New Edition", "New Kids on the Block", "Boyz II Men", "Take That", "Boyzone",
+    "Backstreet Boys", "*NSYNC", "98 Degrees", "Westlife", "Jonas Brothers", "One Direction", "The Wanted" ] },
+  { type: "names", title: "Top pop girl groups", short: "Pop girl groups", picks: [
+    "The Supremes", "The Ronettes", "Bananarama", "The Go-Go's", "The Bangles", "En Vogue", "TLC", "Spice Girls", "All Saints",
+    "Destiny's Child", "Sugababes", "Girls Aloud", "The Pussycat Dolls", "Fifth Harmony", "Little Mix" ] },
   { type: "names", title: "Top pop solo women", short: "Pop solo women", picks: [
     "Madonna", "Whitney Houston", "Mariah Carey", "Britney Spears", "Beyoncé", "Rihanna", "Lady Gaga", "Katy Perry",
     "Adele", "Taylor Swift", "Ariana Grande", "Dua Lipa", "Billie Eilish", "Olivia Rodrigo", "Sabrina Carpenter" ] },
@@ -170,6 +190,28 @@ const DEFS = [
     ["Slayer", "Reign in Blood"], ["Megadeth", "Rust in Peace"], ["Metallica", "Metallica"],
     ["Pantera", "Vulgar Display of Power"], ["Tool", "Ænima"], ["Opeth", "Blackwater Park"],
     ["System of a Down", "Toxicity"], ["Slipknot", "Iowa"], ["Mastodon", "Leviathan"] ] },
+  { type: "curated", title: "Top R&B albums", short: "R&B", picks: [
+    ["Marvin Gaye", "What's Going On"], ["Stevie Wonder", "Songs in the Key of Life"], ["Janet Jackson", "Rhythm Nation 1814"],
+    ["Mary J. Blige", "My Life"], ["TLC", "CrazySexyCool"], ["Erykah Badu", "Baduizm"], ["Brandy", "Never Say Never"],
+    ["Lauryn Hill", "The Miseducation of Lauryn Hill"], ["D'Angelo", "Voodoo"], ["Aaliyah", "Aaliyah"], ["Alicia Keys", "Songs in A Minor"],
+    ["Usher", "Confessions"], ["Frank Ocean", "Channel Orange"], ["Beyoncé", "Lemonade"], ["SZA", "Ctrl"] ] },
+  { type: "curated", title: "Top rap albums", short: "Rap", picks: [
+    ["Run-D.M.C.", "Raising Hell"], ["Public Enemy", "It Takes a Nation of Millions to Hold Us Back"], ["N.W.A", "Straight Outta Compton"],
+    ["A Tribe Called Quest", "The Low End Theory"], ["Dr. Dre", "The Chronic"], ["Wu-Tang Clan", "Enter the Wu-Tang (36 Chambers)"],
+    ["Nas", "Illmatic"], ["The Notorious B.I.G.", "Ready to Die"], ["2Pac", "All Eyez on Me"], ["Missy Elliott", "Supa Dupa Fly"],
+    ["OutKast", "Aquemini"], ["Eminem", "The Marshall Mathers LP"], ["Jay-Z", "The Blueprint"],
+    ["Kanye West", "My Beautiful Dark Twisted Fantasy"], ["Kendrick Lamar", "good kid, m.A.A.d city"] ] },
+  { type: "curated", title: "Top pop albums", short: "Pop", picks: [
+    ["Michael Jackson", "Thriller"], ["Janet Jackson", "Control"], ["Madonna", "Like a Prayer"], ["Spice Girls", "Spice"],
+    ["Britney Spears", "...Baby One More Time"], ["Backstreet Boys", "Millennium"], ["Kelly Clarkson", "Breakaway"], ["Lady Gaga", "The Fame"],
+    ["Katy Perry", "Teenage Dream"], ["Adele", "21"], ["Taylor Swift", "1989"], ["Ariana Grande", "Thank U, Next"],
+    ["Dua Lipa", "Future Nostalgia"], ["Olivia Rodrigo", "Sour"], ["Sabrina Carpenter", "Short n' Sweet"] ] },
+  { type: "curated", title: "Top rock albums", short: "Rock", picks: [
+    ["The Beatles", "Sgt. Pepper's Lonely Hearts Club Band"], ["The Who", "Who's Next"], ["Led Zeppelin", "Led Zeppelin IV"],
+    ["The Rolling Stones", "Exile on Main St."], ["Pink Floyd", "The Dark Side of the Moon"], ["Queen", "A Night at the Opera"],
+    ["Bruce Springsteen", "Born to Run"], ["Fleetwood Mac", "Rumours"], ["AC/DC", "Back in Black"], ["U2", "The Joshua Tree"],
+    ["Guns N' Roses", "Appetite for Destruction"], ["Nirvana", "Nevermind"], ["Radiohead", "OK Computer"],
+    ["Foo Fighters", "The Colour and the Shape"], ["Green Day", "American Idiot"] ] },
   { type: "curated", title: "Top albums of the 1990s", short: "1990s", picks: [
     ["Nirvana", "Nevermind"], ["Pearl Jam", "Ten"], ["Dr. Dre", "The Chronic"], ["R.E.M.", "Automatic for the People"],
     ["The Smashing Pumpkins", "Siamese Dream"], ["Nas", "Illmatic"], ["Green Day", "Dookie"], ["Portishead", "Dummy"],
@@ -201,7 +243,7 @@ const DEFS = [
   { type: "tv",         name: "The Office", year: 2005 },          // year = first aired, to get the US show and not the UK one
   { type: "tvgenre",    name: "Sci-Fi & Fantasy", title: "Hit sci-fi TV shows" },
   //   lang limits a TV genre list to shows first made in that language ("ja" = Japanese).
-  { type: "tvgenre",    name: "Animation", lang: "ja", menu: "TV > Anime", title: "Top anime series", short: "Top anime series" },
+  { type: "tvgenre",    name: "Animation", lang: "ja", perFranchise: 1, menu: "TV > Anime", title: "Top anime series", short: "Top anime series" },
   //   "shows" is a hand-picked list of TV shows with posters. A pick is ["Name shown", "Search name", first year].
   { type: "shows", menu: "TV > Anime", title: "Magical girl anime", short: "Magical girl", picks: [
     ["Creamy Mami", "Magical Angel Creamy Mami", 1983], ["Sailor Moon", "Sailor Moon", 1992], ["Magic Knight Rayearth", "Magic Knight Rayearth", 1994],
@@ -210,6 +252,32 @@ const DEFS = [
     ["Pretty Cure", "Futari wa Pretty Cure", 2004], ["Magical Girl Lyrical Nanoha", "Magical Girl Lyrical Nanoha", 2004],
     ["Shugo Chara!", "Shugo Chara!", 2007], ["Puella Magi Madoka Magica", "Puella Magi Madoka Magica", 2011],
     ["Symphogear", "Symphogear", 2012], ["Little Witch Academia", "Little Witch Academia", 2017] ] },
+  { type: "shows", menu: "TV > Anime", title: "Slice of life anime", short: "Slice of life", picks: [
+    ["Azumanga Daioh", "Azumanga Daioh", 2002], ["Aria the Animation", "Aria the Animation", 2005], ["Lucky Star", "Lucky Star", 2007],
+    ["Natsume's Book of Friends", "Natsume's Book of Friends", 2008], ["K-On!", "K-On!", 2009], ["Nichijou", "Nichijou", 2011],
+    ["Usagi Drop", "Bunny Drop", 2011], ["Hyouka", "Hyouka", 2012], ["Silver Spoon", "Silver Spoon", 2013], ["Non Non Biyori", "Non Non Biyori", 2013],
+    ["Barakamon", "Barakamon", 2014], ["Shirobako", "Shirobako", 2014], ["March Comes in Like a Lion", "March Comes in Like a Lion", 2016],
+    ["Laid-Back Camp", "Laid-Back Camp", 2018], ["Bocchi the Rock!", "Bocchi the Rock!", 2022] ] },
+  { type: "shows", menu: "TV > Anime", title: "Horror anime", short: "Horror", picks: [
+    ["Hellsing", "Hellsing", 2001], ["Elfen Lied", "Elfen Lied", 2004], ["Hell Girl", "Hell Girl", 2005], ["Higurashi: When They Cry", "Higurashi: When They Cry", 2006],
+    ["Mononoke", "Mononoke", 2007], ["Shiki", "Shiki", 2010], ["Another", "Another", 2012], ["Yamishibai", "Yamishibai: Japanese Ghost Stories", 2013],
+    ["Parasyte -the maxim-", "Parasyte -the maxim-", 2014], ["Tokyo Ghoul", "Tokyo Ghoul", 2014], ["Devilman Crybaby", "Devilman Crybaby", 2018],
+    ["Junji Ito Collection", "Junji Ito Collection", 2018], ["The Promised Neverland", "The Promised Neverland", 2019],
+    ["Mieruko-chan", "Mieruko-chan", 2021], ["Chainsaw Man", "Chainsaw Man", 2022] ] },
+  { type: "shows", menu: "TV > Anime", title: "Romance anime", short: "Romance", picks: [
+    ["Ouran High School Host Club", "Ouran High School Host Club", 2006], ["Nana", "Nana", 2006], ["Lovely Complex", "Lovely Complex", 2007],
+    ["Clannad", "Clannad", 2007], ["Toradora!", "Toradora!", 2008], ["Kimi ni Todoke", "Kimi ni Todoke: From Me to You", 2009],
+    ["Maid Sama!", "Maid Sama!", 2010], ["Your Lie in April", "Your Lie in April", 2014], ["My Love Story!!", "My Love Story!!", 2015],
+    ["Wotakoi", "Wotakoi: Love Is Hard for Otaku", 2018], ["Rascal Does Not Dream of Bunny Girl Senpai", "Rascal Does Not Dream of Bunny Girl Senpai", 2018],
+    ["Fruits Basket", "Fruits Basket", 2019], ["Kaguya-sama: Love Is War", "Kaguya-sama: Love Is War", 2019], ["Horimiya", "Horimiya", 2021],
+    ["Skip and Loafer", "Skip and Loafer", 2023] ] },
+  { type: "shows", menu: "TV > Anime", title: "Mecha anime", short: "Mecha", picks: [
+    ["Mobile Suit Gundam", "Mobile Suit Gundam", 1979], ["Macross", "The Super Dimension Fortress Macross", 1982],
+    ["Neon Genesis Evangelion", "Neon Genesis Evangelion", 1995], ["The Vision of Escaflowne", "The Vision of Escaflowne", 1996],
+    ["Martian Successor Nadesico", "Martian Successor Nadesico", 1996], ["The Big O", "The Big O", 1999], ["RahXephon", "RahXephon", 2002],
+    ["Full Metal Panic!", "Full Metal Panic!", 2002], ["Eureka Seven", "Eureka Seven", 2005], ["Code Geass", "Code Geass: Lelouch of the Rebellion", 2006],
+    ["Gurren Lagann", "Gurren Lagann", 2007], ["Knights of Sidonia", "Knights of Sidonia", 2014], ["Aldnoah.Zero", "Aldnoah.Zero", 2014],
+    ["Darling in the Franxx", "Darling in the Franxx", 2018], ["86 Eighty-Six", "86 Eighty-Six", 2021] ] },
   // Misc: hand-picked name lists with no pictures.
   { type: "names", cat: "Misc", group: "Food", title: "Popular pizza toppings", picks: [
     "Pepperoni", "Mushrooms", "Extra cheese", "Italian sausage", "Bacon", "Onions", "Green peppers", "Black olives", "Pineapple", "Ham",
@@ -829,14 +897,20 @@ const builders = {
   // A hand-picked movie list. Titles are matched on TMDB by name and release year; the Marvel filter is not applied.
   async films(def) {
     const items = [];
-    for (const [title, yr] of def.picks) {
-      // Search by title, then prefer the best-known result released within a year of the given year.
-      const r = await tmdb("/search/movie", { query: title });
-      const close = r.results.filter(x => !yr || Math.abs(Number(year(x.release_date)) - yr) <= 1);
-      const exact = close.filter(x => x.title.toLowerCase() === title.toLowerCase());
-      const m = (exact.length ? exact : close).sort((x, y) => y.vote_count - x.vote_count)[0];
+    // A pick is ["Title", year], or ["Title", year, TMDB id] to point at one exact film when the search finds the wrong one.
+    // The tile always shows the title written here, not TMDB's, so alternate release titles never appear.
+    for (const [title, yr, id] of def.picks) {
+      let m = null;
+      if (id) { try { m = await tmdb(`/movie/${id}`); } catch (e) {} }
+      if (!m) {
+        // Search by title, then prefer the best-known result released within a year of the given year.
+        const r = await tmdb("/search/movie", { query: title });
+        const close = r.results.filter(x => !yr || Math.abs(Number(year(x.release_date)) - yr) <= 1);
+        const exact = close.filter(x => x.title.toLowerCase() === title.toLowerCase());
+        m = (exact.length ? exact : close).sort((x, y) => y.vote_count - x.vote_count)[0];
+      }
       if (!m) { console.warn(`  no TMDB match for "${title}" (${yr || "any year"}); left out`); continue; }
-      items.push(movieItem(m));
+      items.push({ ...movieItem(m), name: title });
     }
     return { cat: def.cat || CATS.franchise, ...(def.group ? { group: def.group, short: def.short || def.title } : {}), title: def.title, items };
   },
@@ -1066,11 +1140,19 @@ const builders = {
     const all = (await tmdb("/genre/tv/list")).genres;
     const g = all.find(x => x.name.toLowerCase() === def.name.toLowerCase());
     if (!g) throw new Error(`No TV genre called "${def.name}". Options: ${all.map(x => x.name).join(", ")}`);
-    const pages = await Promise.all([1, 2].map(page => tmdb("/discover/tv", { with_genres: g.id, sort_by: "vote_count.desc", page, ...(def.lang ? { with_original_language: def.lang } : {}) })));
+    const pages = await Promise.all((def.perFranchise ? [1, 2, 3, 4] : [1, 2]).map(page => tmdb("/discover/tv", { with_genres: g.id, sort_by: "vote_count.desc", page, ...(def.lang ? { with_original_language: def.lang } : {}) })));
+    // perFranchise caps how many shows from one franchise get in. Shows count as one franchise when one name starts
+    // with the other (Naruto, Naruto Shippuden) or their first two words match (Dragon Ball Z, Dragon Ball Super).
+    const fkey = s => plain(s.name).replace(/^the /, "");
+    const sameFranchise = (a, b) => {
+      const x = fkey(a), y = fkey(b), two = k => k.split(" ").slice(0, 2).join(" ");
+      return x === y || x.startsWith(y + " ") || y.startsWith(x + " ") || (x.includes(" ") && y.includes(" ") && two(x) === two(y));
+    };
     const out = [];
     for (const s of pages.flatMap(p => p.results)) {
       if (out.length >= MAX_ITEMS) break;
       if (!s.first_air_date || s.first_air_date > today || out.some(x => x.id === s.id)) continue;
+      if (def.perFranchise && out.filter(x => sameFranchise(x, s)).length >= def.perFranchise) continue;
       if (EXCLUDE_MARVEL && await isMarvelShow(s.id)) continue;
       out.push(s);
     }
