@@ -662,6 +662,119 @@
    "short": "Sequels and part 2s"
   },
   {
+   "id": "movie-remakes",
+   "src": "{\"type\":\"films\",\"cat\":\"Franchises\",\"title\":\"Movie remakes\",\"short\":\"Remakes\",\"picks\":[[\"The Magnificent Seven\",1960],[\"The Thing\",1982],[\"Scarface\",1983],[\"The Fly\",1986],[\"Little Shop of Horrors\",1986],[\"Cape Fear\",1991],[\"Scent of a Woman\",1992],[\"Ocean's Eleven\",2001],[\"The Ring\",2002],[\"Insomnia\",2002],[\"The Italian Job\",2003],[\"The Departed\",2006],[\"True Grit\",2010],[\"The Girl with the Dragon Tattoo\",2011],[\"A Star Is Born\",2018],[\"West Side Story\",2021],[\"Nosferatu\",2024]]}",
+   "t": "films",
+   "cat": "Movies",
+   "title": "Movie remakes",
+   "items": [
+    {
+     "id": "m966",
+     "name": "The Magnificent Seven",
+     "note": "1960",
+     "poster": "/e5ToxOyJwuZD4VOfI0qEn5uIjeJ.jpg"
+    },
+    {
+     "id": "m1091",
+     "name": "The Thing",
+     "note": "1982",
+     "poster": "/tzGY49kseSE9QAKk47uuDGwnSCu.jpg"
+    },
+    {
+     "id": "m111",
+     "name": "Scarface",
+     "note": "1983",
+     "poster": "/iQ5ztdjvteGeboxtmRdXEChJOHh.jpg"
+    },
+    {
+     "id": "m9426",
+     "name": "The Fly",
+     "note": "1986",
+     "poster": "/8gZWMhJHRvaXdXsNhERtqNHYpH3.jpg"
+    },
+    {
+     "id": "m10776",
+     "name": "Little Shop of Horrors",
+     "note": "1986",
+     "poster": "/bEst4APKwQCZrwtoPZYcyTOxMfR.jpg"
+    },
+    {
+     "id": "m1598",
+     "name": "Cape Fear",
+     "note": "1991",
+     "poster": "/meJZAAuVcjic2ipvbOPz5UlE4P9.jpg"
+    },
+    {
+     "id": "m9475",
+     "name": "Scent of a Woman",
+     "note": "1992",
+     "poster": "/4adI7IaveWb7EidYXfLb3MK3CgO.jpg"
+    },
+    {
+     "id": "m161",
+     "name": "Ocean's Eleven",
+     "note": "2001",
+     "poster": "/hQQCdZrsHtZyR6NbKH2YyCqd2fR.jpg"
+    },
+    {
+     "id": "m565",
+     "name": "The Ring",
+     "note": "2002",
+     "poster": "/AeRpUynJKDpJveklBJipOYrVxCS.jpg"
+    },
+    {
+     "id": "m320",
+     "name": "Insomnia",
+     "note": "2002",
+     "poster": "/riVXh3EimGO0y5dgQxEWPRy5Itg.jpg"
+    },
+    {
+     "id": "m9654",
+     "name": "The Italian Job",
+     "note": "2003",
+     "poster": "/eSkjK4kctyrWpFhxl35GPvSs6tI.jpg"
+    },
+    {
+     "id": "m1422",
+     "name": "The Departed",
+     "note": "2006",
+     "poster": "/nT97ifVT2J1yMQmeq20Qblg61T.jpg"
+    },
+    {
+     "id": "m44264",
+     "name": "True Grit",
+     "note": "2010",
+     "poster": "/tCrB8pcjadZjsDk7rleGJaIv78k.jpg"
+    },
+    {
+     "id": "m65754",
+     "name": "The Girl with the Dragon Tattoo",
+     "note": "2011",
+     "poster": "/8bokS83zGdhaXgN9tjidUKmAftW.jpg"
+    },
+    {
+     "id": "m332562",
+     "name": "A Star Is Born",
+     "note": "2018",
+     "poster": "/wrFpXMNBRj2PBiN4Z5kix51XaIZ.jpg"
+    },
+    {
+     "id": "m511809",
+     "name": "West Side Story",
+     "note": "2021",
+     "poster": "/yfz3IUoYYSY32tkb97HlUBGFsnh.jpg"
+    },
+    {
+     "id": "m426063",
+     "name": "Nosferatu",
+     "note": "2024",
+     "poster": "/d0B8xDdqBZlzlPEzES8lu5LlNQn.jpg"
+    }
+   ],
+   "group": "Franchises",
+   "short": "Movie remakes"
+  },
+  {
    "id": "planet-of-the-apes-films",
    "src": "{\"type\":\"films\",\"cat\":\"Franchises\",\"title\":\"Planet of the Apes films\",\"picks\":[[\"Planet of the Apes\",1968],[\"Beneath the Planet of the Apes\",1970],[\"Escape from the Planet of the Apes\",1971],[\"Conquest of the Planet of the Apes\",1972],[\"Battle for the Planet of the Apes\",1973],[\"Planet of the Apes\",2001],[\"Rise of the Planet of the Apes\",2011],[\"Dawn of the Planet of the Apes\",2014],[\"War for the Planet of the Apes\",2017],[\"Kingdom of the Planet of the Apes\",2024]]}",
    "t": "films",
@@ -1025,7 +1138,7 @@
      "id": "af1d08326-c23b-4b43-be3b-20b33ab10bf6",
      "name": "folklore",
      "note": "2020",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/f1d08326-c23b-4b43-be3b-20b33ab10bf6/front-250",
      "sq": true
     },
     {
@@ -1053,7 +1166,7 @@
      "id": "a0dcc84fb-c592-46e9-ba92-a52bb44dd553",
      "name": "Midnights",
      "note": "2022",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/0dcc84fb-c592-46e9-ba92-a52bb44dd553/front-250",
      "sq": true
     },
     {
@@ -2965,7 +3078,7 @@
      "id": "a3da3cb84-2196-34bf-a67b-f9e4ee22ae76",
      "name": "Call the Doctor",
      "note": "1996",
-     "img": "https://coverartarchive.org/release-group/3da3cb84-2196-34bf-a67b-f9e4ee22ae76/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -2986,7 +3099,7 @@
      "id": "a1e6a0fd9-8c91-3ee7-941a-4af11765f25d",
      "name": "All Hands on the Bad One",
      "note": "2000",
-     "img": "https://coverartarchive.org/release-group/1e6a0fd9-8c91-3ee7-941a-4af11765f25d/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -3000,7 +3113,7 @@
      "id": "ab7d0d3f5-8980-32c6-995d-db6f8226f1ca",
      "name": "The Woods",
      "note": "2005",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/b7d0d3f5-8980-32c6-995d-db6f8226f1ca/front-250",
      "sq": true
     },
     {
@@ -3925,6 +4038,211 @@
    ]
   },
   {
+   "id": "gorillaz-albums",
+   "src": "{\"type\":\"albums\",\"name\":\"Gorillaz\"}",
+   "t": "albums",
+   "cat": "Music",
+   "group": "Gorillaz",
+   "short": "Albums",
+   "title": "Gorillaz albums",
+   "items": [
+    {
+     "id": "ab0405d2a-5720-340a-bb56-4e135d031cc2",
+     "name": "Gorillaz",
+     "note": "2001",
+     "img": "https://coverartarchive.org/release-group/b0405d2a-5720-340a-bb56-4e135d031cc2/front-250",
+     "sq": true
+    },
+    {
+     "id": "af959a46a-a136-3134-9412-6572b23fad95",
+     "name": "Demon Days",
+     "note": "2005",
+     "img": "https://coverartarchive.org/release-group/f959a46a-a136-3134-9412-6572b23fad95/front-250",
+     "sq": true
+    },
+    {
+     "id": "a5a676824-18cd-4f7f-89f0-df21623e2042",
+     "name": "Plastic Beach",
+     "note": "2010",
+     "img": "https://coverartarchive.org/release-group/5a676824-18cd-4f7f-89f0-df21623e2042/front-250",
+     "sq": true
+    },
+    {
+     "id": "ad7dcf004-6ff8-491b-bd17-01eef10ebb72",
+     "name": "The Fall",
+     "note": "2010",
+     "img": "https://coverartarchive.org/release-group/d7dcf004-6ff8-491b-bd17-01eef10ebb72/front-250",
+     "sq": true
+    },
+    {
+     "id": "a066f840f-e357-436f-bb0a-47ad7cfcd84a",
+     "name": "Humanz",
+     "note": "2017",
+     "img": "https://coverartarchive.org/release-group/066f840f-e357-436f-bb0a-47ad7cfcd84a/front-250",
+     "sq": true
+    },
+    {
+     "id": "a593abbcc-0803-47ae-b0fc-e1f5666e9bbc",
+     "name": "The Now Now",
+     "note": "2018",
+     "img": "https://coverartarchive.org/release-group/593abbcc-0803-47ae-b0fc-e1f5666e9bbc/front-250",
+     "sq": true
+    },
+    {
+     "id": "abd8866c2-3d48-4c4e-97d8-442ec2792b40",
+     "name": "Song Machine, Season One: Strange Timez",
+     "note": "2020",
+     "img": "https://coverartarchive.org/release-group/bd8866c2-3d48-4c4e-97d8-442ec2792b40/front-250",
+     "sq": true
+    },
+    {
+     "id": "a160bc106-a0d1-456e-b704-6f91b05dfa04",
+     "name": "Cracker Island",
+     "note": "2023",
+     "img": "https://coverartarchive.org/release-group/160bc106-a0d1-456e-b704-6f91b05dfa04/front-250",
+     "sq": true
+    },
+    {
+     "id": "ab82f59df-2659-4c23-a3b6-9eb2518b4327",
+     "name": "The Mountain",
+     "note": "2026",
+     "img": "https://coverartarchive.org/release-group/b82f59df-2659-4c23-a3b6-9eb2518b4327/front-250",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "gorillaz-singles",
+   "src": "{\"type\":\"names\",\"group\":\"Gorillaz\",\"title\":\"Gorillaz singles\",\"short\":\"Singles\",\"picks\":[[\"Clint Eastwood\",\"2001\"],[\"19-2000\",\"2001\"],[\"Rock the House\",\"2001\"],[\"Tomorrow Comes Today\",\"2002\"],[\"Feel Good Inc.\",\"2005\"],[\"Dare\",\"2005\"],[\"Dirty Harry\",\"2005\"],[\"Kids with Guns\",\"2006\"],[\"El Mañana\",\"2006\"],[\"Stylo\",\"2010\"],[\"Superfast Jellyfish\",\"2010\"],[\"On Melancholy Hill\",\"2010\"],[\"Doncamatic\",\"2010\"],[\"Saturnz Barz\",\"2017\"],[\"Andromeda\",\"2017\"],[\"Humility\",\"2018\"],[\"Tranz\",\"2018\"],[\"Momentary Bliss\",\"2020\"],[\"New Gold\",\"2022\"],[\"Silent Running\",\"2023\"]]}",
+   "t": "names",
+   "cat": "Music",
+   "group": "Gorillaz",
+   "short": "Singles",
+   "title": "Gorillaz singles",
+   "items": [
+    {
+     "id": "nclint-eastwood",
+     "name": "Clint Eastwood",
+     "note": "2001",
+     "sq": true
+    },
+    {
+     "id": "n19-2000",
+     "name": "19-2000",
+     "note": "2001",
+     "sq": true
+    },
+    {
+     "id": "nrock-the-house",
+     "name": "Rock the House",
+     "note": "2001",
+     "sq": true
+    },
+    {
+     "id": "ntomorrow-comes-today",
+     "name": "Tomorrow Comes Today",
+     "note": "2002",
+     "sq": true
+    },
+    {
+     "id": "nfeel-good-inc",
+     "name": "Feel Good Inc.",
+     "note": "2005",
+     "sq": true
+    },
+    {
+     "id": "ndare",
+     "name": "Dare",
+     "note": "2005",
+     "sq": true
+    },
+    {
+     "id": "ndirty-harry",
+     "name": "Dirty Harry",
+     "note": "2005",
+     "sq": true
+    },
+    {
+     "id": "nkids-with-guns",
+     "name": "Kids with Guns",
+     "note": "2006",
+     "sq": true
+    },
+    {
+     "id": "nel-manana",
+     "name": "El Mañana",
+     "note": "2006",
+     "sq": true
+    },
+    {
+     "id": "nstylo",
+     "name": "Stylo",
+     "note": "2010",
+     "sq": true
+    },
+    {
+     "id": "nsuperfast-jellyfish",
+     "name": "Superfast Jellyfish",
+     "note": "2010",
+     "sq": true
+    },
+    {
+     "id": "non-melancholy-hill",
+     "name": "On Melancholy Hill",
+     "note": "2010",
+     "sq": true
+    },
+    {
+     "id": "ndoncamatic",
+     "name": "Doncamatic",
+     "note": "2010",
+     "sq": true
+    },
+    {
+     "id": "nsaturnz-barz",
+     "name": "Saturnz Barz",
+     "note": "2017",
+     "sq": true
+    },
+    {
+     "id": "nandromeda",
+     "name": "Andromeda",
+     "note": "2017",
+     "sq": true
+    },
+    {
+     "id": "nhumility",
+     "name": "Humility",
+     "note": "2018",
+     "sq": true
+    },
+    {
+     "id": "ntranz",
+     "name": "Tranz",
+     "note": "2018",
+     "sq": true
+    },
+    {
+     "id": "nmomentary-bliss",
+     "name": "Momentary Bliss",
+     "note": "2020",
+     "sq": true
+    },
+    {
+     "id": "nnew-gold",
+     "name": "New Gold",
+     "note": "2022",
+     "sq": true
+    },
+    {
+     "id": "nsilent-running",
+     "name": "Silent Running",
+     "note": "2023",
+     "sq": true
+    }
+   ]
+  },
+  {
    "id": "lorde-pure-heroine-songs",
    "src": "{\"type\":\"tracks\",\"artist\":\"Lorde\",\"albums\":[\"Pure Heroine\",\"Melodrama\",\"Virgin\"]}",
    "t": "tracks",
@@ -4193,7 +4511,7 @@
      "id": "g8c66ffff-4f95-3d9b-9286-574123e6063d",
      "name": "Goodbye",
      "note": "1998",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/8c66ffff-4f95-3d9b-9286-574123e6063d/front-250",
      "sq": true
     },
     {
@@ -5304,6 +5622,330 @@
    ]
   },
   {
+   "id": "grammy-album-of-the-year-1980s",
+   "src": "{\"type\":\"curated\",\"group\":\"Grammy Album of the Year\",\"title\":\"Grammy Album of the Year: 1980s\",\"short\":\"1980s ceremonies\",\"picks\":[[\"Billy Joel\",\"52nd Street\"],[\"Christopher Cross\",\"Christopher Cross\"],[\"John Lennon\",\"Double Fantasy\"],[\"Toto\",\"Toto IV\"],[\"Michael Jackson\",\"Thriller\"],[\"Lionel Richie\",\"Can't Slow Down\"],[\"Phil Collins\",\"No Jacket Required\"],[\"Paul Simon\",\"Graceland\"],[\"U2\",\"The Joshua Tree\"],[\"George Michael\",\"Faith\"]]}",
+   "t": "curated",
+   "cat": "Music",
+   "group": "Grammy Album of the Year",
+   "short": "1980s ceremonies",
+   "title": "Grammy Album of the Year: 1980s",
+   "items": [
+    {
+     "id": "cbilly-joel-52nd-street",
+     "name": "52nd Street",
+     "note": "Billy Joel, 1978",
+     "img": "https://coverartarchive.org/release-group/54e6b4a1-7a6a-3ead-b032-0912cfd49a1e/front-250",
+     "sq": true
+    },
+    {
+     "id": "cchristopher-cross-christopher-cross",
+     "name": "Christopher Cross",
+     "note": "Christopher Cross, 1979",
+     "img": "https://coverartarchive.org/release-group/f74eeaf0-6415-378e-a4bf-79ca3937b9e3/front-250",
+     "sq": true
+    },
+    {
+     "id": "cjohn-lennon-double-fantasy",
+     "name": "Double Fantasy",
+     "note": "John Lennon, 1980",
+     "img": "https://coverartarchive.org/release-group/790ec782-7344-366c-af67-4a427bcaf991/front-250",
+     "sq": true
+    },
+    {
+     "id": "ctoto-toto-iv",
+     "name": "Toto IV",
+     "note": "Toto, 1982",
+     "img": "https://coverartarchive.org/release-group/0d70d25f-a64a-3eed-8b26-13fe068a4519/front-250",
+     "sq": true
+    },
+    {
+     "id": "cmichael-jackson-thriller",
+     "name": "Thriller",
+     "note": "Michael Jackson, 1982",
+     "img": "https://coverartarchive.org/release-group/f32fab67-77dd-3937-addc-9062e28e4c37/front-250",
+     "sq": true
+    },
+    {
+     "id": "clionel-richie-can-t-slow-down",
+     "name": "Can't Slow Down",
+     "note": "Lionel Richie, 1983",
+     "img": "https://coverartarchive.org/release-group/cccdb1a1-333d-30e1-9486-81b8113e608a/front-250",
+     "sq": true
+    },
+    {
+     "id": "cphil-collins-no-jacket-required",
+     "name": "No Jacket Required",
+     "note": "Phil Collins, 1985",
+     "img": "https://coverartarchive.org/release-group/86b4651b-a6ea-3ac2-ba99-dcac079938d2/front-250",
+     "sq": true
+    },
+    {
+     "id": "cpaul-simon-graceland",
+     "name": "Graceland",
+     "note": "Paul Simon, 1986",
+     "img": "https://coverartarchive.org/release-group/19847822-1430-3380-9cf1-bc45545b34ac/front-250",
+     "sq": true
+    },
+    {
+     "id": "cu2-the-joshua-tree",
+     "name": "The Joshua Tree",
+     "note": "U2, 1987",
+     "img": "https://coverartarchive.org/release-group/6f3e9fa6-be7a-3de8-a2b2-2072ece8a54d/front-250",
+     "sq": true
+    },
+    {
+     "id": "cgeorge-michael-faith",
+     "name": "Faith",
+     "note": "George Michael, 1987",
+     "img": "https://coverartarchive.org/release-group/4e61585f-f341-3174-85cf-afad8df46fbe/front-250",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "grammy-album-of-the-year-1990s",
+   "src": "{\"type\":\"curated\",\"group\":\"Grammy Album of the Year\",\"title\":\"Grammy Album of the Year: 1990s\",\"short\":\"1990s ceremonies\",\"picks\":[[\"Bonnie Raitt\",\"Nick of Time\"],[\"Quincy Jones\",\"Back on the Block\"],[\"Natalie Cole\",\"Unforgettable... with Love\"],[\"Eric Clapton\",\"Unplugged\"],[\"Whitney Houston\",\"The Bodyguard\"],[\"Tony Bennett\",\"MTV Unplugged\"],[\"Alanis Morissette\",\"Jagged Little Pill\"],[\"Celine Dion\",\"Falling into You\"],[\"Bob Dylan\",\"Time Out of Mind\"],[\"Lauryn Hill\",\"The Miseducation of Lauryn Hill\"]]}",
+   "t": "curated",
+   "cat": "Music",
+   "group": "Grammy Album of the Year",
+   "short": "1990s ceremonies",
+   "title": "Grammy Album of the Year: 1990s",
+   "items": [
+    {
+     "id": "cbonnie-raitt-nick-of-time",
+     "name": "Nick of Time",
+     "note": "Bonnie Raitt, 1989",
+     "img": "https://coverartarchive.org/release-group/182a8072-0513-3aa2-b812-9f7a9692731a/front-250",
+     "sq": true
+    },
+    {
+     "id": "cquincy-jones-back-on-the-block",
+     "name": "Back on the Block",
+     "note": "Quincy Jones, 1989",
+     "img": "https://coverartarchive.org/release-group/1ad5316f-a6b7-31d0-ba33-a5bc767ae3dd/front-250",
+     "sq": true
+    },
+    {
+     "id": "cnatalie-cole-unforgettable-with-love",
+     "name": "Unforgettable... with Love",
+     "note": "Natalie Cole, 1991",
+     "img": "https://coverartarchive.org/release-group/26e9dbcc-d124-38cd-a9ae-5db7f8ab2a73/front-250",
+     "sq": true
+    },
+    {
+     "id": "ceric-clapton-unplugged",
+     "name": "Unplugged",
+     "note": "Eric Clapton, 1992",
+     "img": "https://coverartarchive.org/release-group/4b6b13bd-4c11-418d-8462-d169bc44352c/front-250",
+     "sq": true
+    },
+    {
+     "id": "cwhitney-houston-the-bodyguard",
+     "name": "The Bodyguard",
+     "note": "Whitney Houston, 1992",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "ctony-bennett-mtv-unplugged",
+     "name": "MTV Unplugged",
+     "note": "Tony Bennett, 1994",
+     "img": "https://coverartarchive.org/release-group/58e075a7-d43e-34d7-a944-8b9fb0b46e68/front-250",
+     "sq": true
+    },
+    {
+     "id": "calanis-morissette-jagged-little-pill",
+     "name": "Jagged Little Pill",
+     "note": "Alanis Morissette, 1995",
+     "img": "https://coverartarchive.org/release-group/ee3d18ed-d6a8-37c7-a964-41bbdb6d59f1/front-250",
+     "sq": true
+    },
+    {
+     "id": "cceline-dion-falling-into-you",
+     "name": "Falling into You",
+     "note": "Celine Dion, 1996",
+     "img": "https://coverartarchive.org/release-group/7c89982d-e6a6-3811-828d-5462a69f0ddf/front-250",
+     "sq": true
+    },
+    {
+     "id": "cbob-dylan-time-out-of-mind",
+     "name": "Time Out of Mind",
+     "note": "Bob Dylan, 1997",
+     "img": "https://coverartarchive.org/release-group/dad1dada-1fda-3186-beb7-3bc80e90f9e0/front-250",
+     "sq": true
+    },
+    {
+     "id": "clauryn-hill-the-miseducation-of-lauryn-hill",
+     "name": "The Miseducation of Lauryn Hill",
+     "note": "Lauryn Hill, 1998",
+     "img": "https://coverartarchive.org/release-group/8691d12c-abd8-385c-b1eb-d841190124f7/front-250",
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "grammy-album-of-the-year-2000s",
+   "src": "{\"type\":\"curated\",\"group\":\"Grammy Album of the Year\",\"title\":\"Grammy Album of the Year: 2000s\",\"short\":\"2000s ceremonies\",\"picks\":[[\"Santana\",\"Supernatural\"],[\"Steely Dan\",\"Two Against Nature\"],[\"Various Artists\",\"O Brother, Where Art Thou?\"],[\"Norah Jones\",\"Come Away with Me\"],[\"OutKast\",\"Speakerboxxx/The Love Below\"],[\"Ray Charles\",\"Genius Loves Company\"],[\"U2\",\"How to Dismantle an Atomic Bomb\"],[\"Dixie Chicks\",\"Taking the Long Way\"],[\"Herbie Hancock\",\"River: The Joni Letters\"],[\"Robert Plant & Alison Krauss\",\"Raising Sand\"]]}",
+   "t": "curated",
+   "cat": "Music",
+   "group": "Grammy Album of the Year",
+   "short": "2000s ceremonies",
+   "title": "Grammy Album of the Year: 2000s",
+   "items": [
+    {
+     "id": "csantana-supernatural",
+     "name": "Supernatural",
+     "note": "Santana, 1999",
+     "img": "https://coverartarchive.org/release-group/70e23797-9da2-33bb-be6f-a85e7b581b69/front-250",
+     "sq": true
+    },
+    {
+     "id": "csteely-dan-two-against-nature",
+     "name": "Two Against Nature",
+     "note": "Steely Dan, 2000",
+     "img": "https://coverartarchive.org/release-group/d8b5fa5e-0bbd-3764-829c-7f340648ce59/front-250",
+     "sq": true
+    },
+    {
+     "id": "cvarious-artists-o-brother-where-art-thou",
+     "name": "O Brother, Where Art Thou?",
+     "note": "Various Artists, 2001",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "cnorah-jones-come-away-with-me",
+     "name": "Come Away with Me",
+     "note": "Norah Jones, 2002",
+     "img": "https://coverartarchive.org/release-group/6ccac9d2-22ed-33de-bd5d-f2aadcacf7f8/front-250",
+     "sq": true
+    },
+    {
+     "id": "coutkast-speakerboxxx-the-love-below",
+     "name": "Speakerboxxx/The Love Below",
+     "note": "OutKast",
+     "img": null,
+     "sq": true
+    },
+    {
+     "id": "cray-charles-genius-loves-company",
+     "name": "Genius Loves Company",
+     "note": "Ray Charles, 2004",
+     "img": "https://coverartarchive.org/release-group/775273bc-8a5b-3de7-8eb5-6c1ab4de8b68/front-250",
+     "sq": true
+    },
+    {
+     "id": "cu2-how-to-dismantle-an-atomic-bomb",
+     "name": "How to Dismantle an Atomic Bomb",
+     "note": "U2, 2004",
+     "img": "https://coverartarchive.org/release-group/3ab33753-c16f-3e44-ae67-2fba4fd0e823/front-250",
+     "sq": true
+    },
+    {
+     "id": "cdixie-chicks-taking-the-long-way",
+     "name": "Taking the Long Way",
+     "note": "Dixie Chicks, 2006",
+     "img": "https://coverartarchive.org/release-group/49359749-f558-3566-b72b-00c1b5a2e328/front-250",
+     "sq": true
+    },
+    {
+     "id": "cherbie-hancock-river-the-joni-letters",
+     "name": "River: The Joni Letters",
+     "note": "Herbie Hancock, 2007",
+     "img": "https://coverartarchive.org/release-group/056a9f39-b5a6-338f-946f-4cc4e22ce1e7/front-250",
+     "sq": true
+    },
+    {
+     "id": "crobert-plant-alison-krauss-raising-sand",
+     "name": "Raising Sand",
+     "note": "Robert Plant & Alison Krauss",
+     "img": null,
+     "sq": true
+    }
+   ]
+  },
+  {
+   "id": "grammy-album-of-the-year-2010s",
+   "src": "{\"type\":\"curated\",\"group\":\"Grammy Album of the Year\",\"title\":\"Grammy Album of the Year: 2010s\",\"short\":\"2010s ceremonies\",\"picks\":[[\"Taylor Swift\",\"Fearless\"],[\"Arcade Fire\",\"The Suburbs\"],[\"Adele\",\"21\"],[\"Mumford & Sons\",\"Babel\"],[\"Daft Punk\",\"Random Access Memories\"],[\"Beck\",\"Morning Phase\"],[\"Taylor Swift\",\"1989\"],[\"Adele\",\"25\"],[\"Bruno Mars\",\"24K Magic\"],[\"Kacey Musgraves\",\"Golden Hour\"]]}",
+   "t": "curated",
+   "cat": "Music",
+   "group": "Grammy Album of the Year",
+   "short": "2010s ceremonies",
+   "title": "Grammy Album of the Year: 2010s",
+   "items": [
+    {
+     "id": "ctaylor-swift-fearless",
+     "name": "Fearless",
+     "note": "Taylor Swift, 2008",
+     "img": "https://coverartarchive.org/release-group/63eba062-847c-3b73-8b0f-6baf27bba6fa/front-250",
+     "sq": true
+    },
+    {
+     "id": "carcade-fire-the-suburbs",
+     "name": "The Suburbs",
+     "note": "Arcade Fire, 2010",
+     "img": "https://coverartarchive.org/release-group/bf306022-c851-449d-a619-7864caddf5c7/front-250",
+     "sq": true
+    },
+    {
+     "id": "cadele-21",
+     "name": "21",
+     "note": "Adele, 2011",
+     "img": "https://coverartarchive.org/release-group/e4174758-d333-4a8e-a31f-dd0edd51518e/front-250",
+     "sq": true
+    },
+    {
+     "id": "cmumford-sons-babel",
+     "name": "Babel",
+     "note": "Mumford & Sons, 2012",
+     "img": "https://coverartarchive.org/release-group/9bc0a481-57e5-4d16-bb9c-049a974cc2b2/front-250",
+     "sq": true
+    },
+    {
+     "id": "cdaft-punk-random-access-memories",
+     "name": "Random Access Memories",
+     "note": "Daft Punk, 2013",
+     "img": "https://coverartarchive.org/release-group/aa997ea0-2936-40bd-884d-3af8a0e064dc/front-250",
+     "sq": true
+    },
+    {
+     "id": "cbeck-morning-phase",
+     "name": "Morning Phase",
+     "note": "Beck, 2014",
+     "img": "https://coverartarchive.org/release-group/bc4e1c5e-1fea-468d-b0ac-78b1c7f415f4/front-250",
+     "sq": true
+    },
+    {
+     "id": "ctaylor-swift-1989",
+     "name": "1989",
+     "note": "Taylor Swift, 2014",
+     "img": "https://coverartarchive.org/release-group/4d9ec1c2-58ec-48a4-aa0a-916718adead0/front-250",
+     "sq": true
+    },
+    {
+     "id": "cadele-25",
+     "name": "25",
+     "note": "Adele, 2015",
+     "img": "https://coverartarchive.org/release-group/5537624c-3d2f-4f5c-8099-df916082c85c/front-250",
+     "sq": true
+    },
+    {
+     "id": "cbruno-mars-24k-magic",
+     "name": "24K Magic",
+     "note": "Bruno Mars, 2016",
+     "img": "https://coverartarchive.org/release-group/80ea43b7-2c32-4a79-9fb0-8ff1761ebe09/front-250",
+     "sq": true
+    },
+    {
+     "id": "ckacey-musgraves-golden-hour",
+     "name": "Golden Hour",
+     "note": "Kacey Musgraves, 2018",
+     "img": "https://coverartarchive.org/release-group/56713bde-f9de-4097-bbe3-41d9d7af32c4/front-250",
+     "sq": true
+    }
+   ]
+  },
+  {
    "id": "top-metal-albums",
    "src": "{\"type\":\"curated\",\"title\":\"Top metal albums\",\"short\":\"Metal\",\"picks\":[[\"Black Sabbath\",\"Paranoid\"],[\"Judas Priest\",\"British Steel\"],[\"Motörhead\",\"Ace of Spades\"],[\"Iron Maiden\",\"The Number of the Beast\"],[\"Dio\",\"Holy Diver\"],[\"Metallica\",\"Master of Puppets\"],[\"Slayer\",\"Reign in Blood\"],[\"Megadeth\",\"Rust in Peace\"],[\"Metallica\",\"Metallica\"],[\"Pantera\",\"Vulgar Display of Power\"],[\"Tool\",\"Ænima\"],[\"Opeth\",\"Blackwater Park\"],[\"System of a Down\",\"Toxicity\"],[\"Slipknot\",\"Iowa\"],[\"Mastodon\",\"Leviathan\"]]}",
    "t": "curated",
@@ -5453,7 +6095,7 @@
      "id": "cmary-j-blige-my-life",
      "name": "My Life",
      "note": "Mary J. Blige, 1994",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/49acb129-7958-3132-988c-bb85955b1c3c/front-250",
      "sq": true
     },
     {
@@ -5590,7 +6232,7 @@
      "id": "cnas-illmatic",
      "name": "Illmatic",
      "note": "Nas, 1994",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/28298e2c-4d70-3eed-a0f5-a3280c662b3d/front-250",
      "sq": true
     },
     {
@@ -5734,7 +6376,7 @@
      "id": "ctaylor-swift-1989",
      "name": "1989",
      "note": "Taylor Swift, 2014",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/4d9ec1c2-58ec-48a4-aa0a-916718adead0/front-250",
      "sq": true
     },
     {
@@ -5903,14 +6545,14 @@
      "id": "cpearl-jam-ten",
      "name": "Ten",
      "note": "Pearl Jam, 1991",
-     "img": "https://coverartarchive.org/release-group/cea5d18a-1924-3cda-bebc-38933834b25d/front-250",
+     "img": null,
      "sq": true
     },
     {
      "id": "cdr-dre-the-chronic",
      "name": "The Chronic",
      "note": "Dr. Dre, 1992",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/ad444843-7160-33d7-b0c9-fc99f2c14a99/front-250",
      "sq": true
     },
     {
@@ -6937,6 +7579,334 @@
    "short": "Magical girl"
   },
   {
+   "id": "one-piece-main-characters",
+   "src": "{\"type\":\"names\",\"cat\":\"TV\",\"menu\":\"TV > Anime > Characters\",\"title\":\"One Piece main characters\",\"short\":\"One Piece\",\"picks\":[\"Monkey D. Luffy\",\"Roronoa Zoro\",\"Nami\",\"Usopp\",\"Sanji\",\"Tony Tony Chopper\",\"Nico Robin\",\"Franky\",\"Brook\",\"Jinbe\",\"Nefertari Vivi\",\"Portgas D. Ace\",\"Sabo\",\"Shanks\",\"Trafalgar Law\"]}",
+   "t": "names",
+   "cat": "TV",
+   "group": "Anime > Characters",
+   "short": "One Piece",
+   "title": "One Piece main characters",
+   "items": [
+    {
+     "id": "nmonkey-d-luffy",
+     "name": "Monkey D. Luffy"
+    },
+    {
+     "id": "nroronoa-zoro",
+     "name": "Roronoa Zoro"
+    },
+    {
+     "id": "nnami",
+     "name": "Nami"
+    },
+    {
+     "id": "nusopp",
+     "name": "Usopp"
+    },
+    {
+     "id": "nsanji",
+     "name": "Sanji"
+    },
+    {
+     "id": "ntony-tony-chopper",
+     "name": "Tony Tony Chopper"
+    },
+    {
+     "id": "nnico-robin",
+     "name": "Nico Robin"
+    },
+    {
+     "id": "nfranky",
+     "name": "Franky"
+    },
+    {
+     "id": "nbrook",
+     "name": "Brook"
+    },
+    {
+     "id": "njinbe",
+     "name": "Jinbe"
+    },
+    {
+     "id": "nnefertari-vivi",
+     "name": "Nefertari Vivi"
+    },
+    {
+     "id": "nportgas-d-ace",
+     "name": "Portgas D. Ace"
+    },
+    {
+     "id": "nsabo",
+     "name": "Sabo"
+    },
+    {
+     "id": "nshanks",
+     "name": "Shanks"
+    },
+    {
+     "id": "ntrafalgar-law",
+     "name": "Trafalgar Law"
+    }
+   ]
+  },
+  {
+   "id": "sailor-moon-characters",
+   "src": "{\"type\":\"names\",\"cat\":\"TV\",\"menu\":\"TV > Anime > Characters\",\"title\":\"Sailor Moon characters\",\"short\":\"Sailor Moon\",\"picks\":[[\"Sailor Moon\",\"Usagi Tsukino\"],[\"Sailor Mercury\",\"Ami Mizuno\"],[\"Sailor Mars\",\"Rei Hino\"],[\"Sailor Jupiter\",\"Makoto Kino\"],[\"Sailor Venus\",\"Minako Aino\"],[\"Tuxedo Mask\",\"Mamoru Chiba\"],[\"Sailor Chibi Moon\",\"Chibiusa\"],[\"Sailor Pluto\",\"Setsuna Meioh\"],[\"Sailor Uranus\",\"Haruka Tenoh\"],[\"Sailor Neptune\",\"Michiru Kaioh\"],[\"Sailor Saturn\",\"Hotaru Tomoe\"],[\"Luna\",\"Usagi's cat\"],[\"Artemis\",\"Minako's cat\"],[\"Queen Beryl\",\"Dark Kingdom\"]]}",
+   "t": "names",
+   "cat": "TV",
+   "group": "Anime > Characters",
+   "short": "Sailor Moon",
+   "title": "Sailor Moon characters",
+   "items": [
+    {
+     "id": "nsailor-moon",
+     "name": "Sailor Moon",
+     "note": "Usagi Tsukino"
+    },
+    {
+     "id": "nsailor-mercury",
+     "name": "Sailor Mercury",
+     "note": "Ami Mizuno"
+    },
+    {
+     "id": "nsailor-mars",
+     "name": "Sailor Mars",
+     "note": "Rei Hino"
+    },
+    {
+     "id": "nsailor-jupiter",
+     "name": "Sailor Jupiter",
+     "note": "Makoto Kino"
+    },
+    {
+     "id": "nsailor-venus",
+     "name": "Sailor Venus",
+     "note": "Minako Aino"
+    },
+    {
+     "id": "ntuxedo-mask",
+     "name": "Tuxedo Mask",
+     "note": "Mamoru Chiba"
+    },
+    {
+     "id": "nsailor-chibi-moon",
+     "name": "Sailor Chibi Moon",
+     "note": "Chibiusa"
+    },
+    {
+     "id": "nsailor-pluto",
+     "name": "Sailor Pluto",
+     "note": "Setsuna Meioh"
+    },
+    {
+     "id": "nsailor-uranus",
+     "name": "Sailor Uranus",
+     "note": "Haruka Tenoh"
+    },
+    {
+     "id": "nsailor-neptune",
+     "name": "Sailor Neptune",
+     "note": "Michiru Kaioh"
+    },
+    {
+     "id": "nsailor-saturn",
+     "name": "Sailor Saturn",
+     "note": "Hotaru Tomoe"
+    },
+    {
+     "id": "nluna",
+     "name": "Luna",
+     "note": "Usagi's cat"
+    },
+    {
+     "id": "nartemis",
+     "name": "Artemis",
+     "note": "Minako's cat"
+    },
+    {
+     "id": "nqueen-beryl",
+     "name": "Queen Beryl",
+     "note": "Dark Kingdom"
+    }
+   ]
+  },
+  {
+   "id": "dragon-ball-z-characters",
+   "src": "{\"type\":\"names\",\"cat\":\"TV\",\"menu\":\"TV > Anime > Characters\",\"title\":\"Dragon Ball Z characters\",\"short\":\"Dragon Ball Z\",\"picks\":[\"Goku\",\"Vegeta\",\"Gohan\",\"Piccolo\",\"Krillin\",\"Future Trunks\",\"Goten\",\"Bulma\",\"Chi-Chi\",\"Master Roshi\",\"Yamcha\",\"Tien\",\"Android 18\",\"Frieza\",\"Cell\",\"Majin Buu\"]}",
+   "t": "names",
+   "cat": "TV",
+   "group": "Anime > Characters",
+   "short": "Dragon Ball Z",
+   "title": "Dragon Ball Z characters",
+   "items": [
+    {
+     "id": "ngoku",
+     "name": "Goku"
+    },
+    {
+     "id": "nvegeta",
+     "name": "Vegeta"
+    },
+    {
+     "id": "ngohan",
+     "name": "Gohan"
+    },
+    {
+     "id": "npiccolo",
+     "name": "Piccolo"
+    },
+    {
+     "id": "nkrillin",
+     "name": "Krillin"
+    },
+    {
+     "id": "nfuture-trunks",
+     "name": "Future Trunks"
+    },
+    {
+     "id": "ngoten",
+     "name": "Goten"
+    },
+    {
+     "id": "nbulma",
+     "name": "Bulma"
+    },
+    {
+     "id": "nchi-chi",
+     "name": "Chi-Chi"
+    },
+    {
+     "id": "nmaster-roshi",
+     "name": "Master Roshi"
+    },
+    {
+     "id": "nyamcha",
+     "name": "Yamcha"
+    },
+    {
+     "id": "ntien",
+     "name": "Tien"
+    },
+    {
+     "id": "nandroid-18",
+     "name": "Android 18"
+    },
+    {
+     "id": "nfrieza",
+     "name": "Frieza"
+    },
+    {
+     "id": "ncell",
+     "name": "Cell"
+    },
+    {
+     "id": "nmajin-buu",
+     "name": "Majin Buu"
+    }
+   ]
+  },
+  {
+   "id": "anime-villains",
+   "src": "{\"type\":\"names\",\"cat\":\"TV\",\"menu\":\"TV > Anime > Characters\",\"title\":\"Anime villains\",\"short\":\"Villains (two per series at most)\",\"picks\":[[\"Frieza\",\"Dragon Ball Z\"],[\"Cell\",\"Dragon Ball Z\"],[\"Orochimaru\",\"Naruto\"],[\"Madara Uchiha\",\"Naruto\"],[\"Sosuke Aizen\",\"Bleach\"],[\"Dio Brando\",\"JoJo's Bizarre Adventure\"],[\"Hisoka\",\"Hunter x Hunter\"],[\"Meruem\",\"Hunter x Hunter\"],[\"Johan Liebert\",\"Monster\"],[\"Griffith\",\"Berserk\"],[\"Father\",\"Fullmetal Alchemist: Brotherhood\"],[\"Light Yagami\",\"Death Note\"],[\"Shogo Makishima\",\"Psycho-Pass\"],[\"Donquixote Doflamingo\",\"One Piece\"],[\"Muzan Kibutsuji\",\"Demon Slayer\"],[\"Ryomen Sukuna\",\"Jujutsu Kaisen\"],[\"All For One\",\"My Hero Academia\"],[\"Queen Beryl\",\"Sailor Moon\"]]}",
+   "t": "names",
+   "cat": "TV",
+   "group": "Anime > Characters",
+   "short": "Villains (two per series at most)",
+   "title": "Anime villains",
+   "items": [
+    {
+     "id": "nfrieza",
+     "name": "Frieza",
+     "note": "Dragon Ball Z"
+    },
+    {
+     "id": "ncell",
+     "name": "Cell",
+     "note": "Dragon Ball Z"
+    },
+    {
+     "id": "norochimaru",
+     "name": "Orochimaru",
+     "note": "Naruto"
+    },
+    {
+     "id": "nmadara-uchiha",
+     "name": "Madara Uchiha",
+     "note": "Naruto"
+    },
+    {
+     "id": "nsosuke-aizen",
+     "name": "Sosuke Aizen",
+     "note": "Bleach"
+    },
+    {
+     "id": "ndio-brando",
+     "name": "Dio Brando",
+     "note": "JoJo's Bizarre Adventure"
+    },
+    {
+     "id": "nhisoka",
+     "name": "Hisoka",
+     "note": "Hunter x Hunter"
+    },
+    {
+     "id": "nmeruem",
+     "name": "Meruem",
+     "note": "Hunter x Hunter"
+    },
+    {
+     "id": "njohan-liebert",
+     "name": "Johan Liebert",
+     "note": "Monster"
+    },
+    {
+     "id": "ngriffith",
+     "name": "Griffith",
+     "note": "Berserk"
+    },
+    {
+     "id": "nfather",
+     "name": "Father",
+     "note": "Fullmetal Alchemist: Brotherhood"
+    },
+    {
+     "id": "nlight-yagami",
+     "name": "Light Yagami",
+     "note": "Death Note"
+    },
+    {
+     "id": "nshogo-makishima",
+     "name": "Shogo Makishima",
+     "note": "Psycho-Pass"
+    },
+    {
+     "id": "ndonquixote-doflamingo",
+     "name": "Donquixote Doflamingo",
+     "note": "One Piece"
+    },
+    {
+     "id": "nmuzan-kibutsuji",
+     "name": "Muzan Kibutsuji",
+     "note": "Demon Slayer"
+    },
+    {
+     "id": "nryomen-sukuna",
+     "name": "Ryomen Sukuna",
+     "note": "Jujutsu Kaisen"
+    },
+    {
+     "id": "nall-for-one",
+     "name": "All For One",
+     "note": "My Hero Academia"
+    },
+    {
+     "id": "nqueen-beryl",
+     "name": "Queen Beryl",
+     "note": "Sailor Moon"
+    }
+   ]
+  },
+  {
    "id": "slice-of-life-anime",
    "src": "{\"type\":\"shows\",\"menu\":\"TV > Anime\",\"title\":\"Slice of life anime\",\"short\":\"Slice of life\",\"picks\":[[\"Azumanga Daioh\",\"Azumanga Daioh\",2002],[\"Aria the Animation\",\"Aria the Animation\",2005],[\"Lucky Star\",\"Lucky Star\",2007],[\"Natsume's Book of Friends\",\"Natsume's Book of Friends\",2008],[\"K-On!\",\"K-On!\",2009],[\"Nichijou\",\"Nichijou\",2011],[\"Usagi Drop\",\"Bunny Drop\",2011],[\"Hyouka\",\"Hyouka\",2012],[\"Silver Spoon\",\"Silver Spoon\",2013],[\"Non Non Biyori\",\"Non Non Biyori\",2013],[\"Barakamon\",\"Barakamon\",2014],[\"Shirobako\",\"Shirobako\",2014],[\"March Comes in Like a Lion\",\"March Comes in Like a Lion\",2016],[\"Laid-Back Camp\",\"Laid-Back Camp\",2018],[\"Bocchi the Rock!\",\"Bocchi the Rock!\",2022]]}",
    "t": "shows",
@@ -7522,6 +8492,198 @@
      "id": "nyumburger",
      "name": "Yumburger",
      "note": "Jollibee"
+    }
+   ]
+  },
+  {
+   "id": "sushi-types",
+   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Food\",\"title\":\"Sushi types\",\"picks\":[[\"Nigiri\",\"fish over pressed rice\"],[\"Sashimi\",\"sliced fish, no rice\"],[\"Maki\",\"seaweed on the outside\"],[\"Uramaki\",\"rice on the outside\"],[\"Temaki\",\"hand roll\"],[\"Gunkan\",\"seaweed-wrapped 'battleship'\"],[\"Chirashi\",\"fish scattered over rice\"],[\"Inari\",\"rice in fried tofu\"],[\"Oshizushi\",\"pressed box sushi\"],[\"Tamago\",\"sweet omelette\"],[\"Unagi\",\"grilled eel\"],[\"California roll\",\"crab, avocado, cucumber\"],[\"Spicy tuna roll\",\"tuna with spicy mayo\"],[\"Dragon roll\",\"topped with eel and avocado\"],[\"Rainbow roll\",\"topped with assorted fish\"],[\"Philadelphia roll\",\"salmon and cream cheese\"]]}",
+   "t": "names",
+   "cat": "Misc",
+   "group": "Food",
+   "short": "Sushi types",
+   "title": "Sushi types",
+   "items": [
+    {
+     "id": "nnigiri",
+     "name": "Nigiri",
+     "note": "fish over pressed rice"
+    },
+    {
+     "id": "nsashimi",
+     "name": "Sashimi",
+     "note": "sliced fish, no rice"
+    },
+    {
+     "id": "nmaki",
+     "name": "Maki",
+     "note": "seaweed on the outside"
+    },
+    {
+     "id": "nuramaki",
+     "name": "Uramaki",
+     "note": "rice on the outside"
+    },
+    {
+     "id": "ntemaki",
+     "name": "Temaki",
+     "note": "hand roll"
+    },
+    {
+     "id": "ngunkan",
+     "name": "Gunkan",
+     "note": "seaweed-wrapped 'battleship'"
+    },
+    {
+     "id": "nchirashi",
+     "name": "Chirashi",
+     "note": "fish scattered over rice"
+    },
+    {
+     "id": "ninari",
+     "name": "Inari",
+     "note": "rice in fried tofu"
+    },
+    {
+     "id": "noshizushi",
+     "name": "Oshizushi",
+     "note": "pressed box sushi"
+    },
+    {
+     "id": "ntamago",
+     "name": "Tamago",
+     "note": "sweet omelette"
+    },
+    {
+     "id": "nunagi",
+     "name": "Unagi",
+     "note": "grilled eel"
+    },
+    {
+     "id": "ncalifornia-roll",
+     "name": "California roll",
+     "note": "crab, avocado, cucumber"
+    },
+    {
+     "id": "nspicy-tuna-roll",
+     "name": "Spicy tuna roll",
+     "note": "tuna with spicy mayo"
+    },
+    {
+     "id": "ndragon-roll",
+     "name": "Dragon roll",
+     "note": "topped with eel and avocado"
+    },
+    {
+     "id": "nrainbow-roll",
+     "name": "Rainbow roll",
+     "note": "topped with assorted fish"
+    },
+    {
+     "id": "nphiladelphia-roll",
+     "name": "Philadelphia roll",
+     "note": "salmon and cream cheese"
+    }
+   ]
+  },
+  {
+   "id": "world-capitals",
+   "src": "{\"type\":\"names\",\"cat\":\"Geography\",\"group\":\"Capitals\",\"title\":\"World capitals\",\"picks\":[[\"Tokyo\",\"Japan\"],[\"Seoul\",\"South Korea\"],[\"Beijing\",\"China\"],[\"Bangkok\",\"Thailand\"],[\"New Delhi\",\"India\"],[\"Canberra\",\"Australia\"],[\"Paris\",\"France\"],[\"London\",\"United Kingdom\"],[\"Rome\",\"Italy\"],[\"Madrid\",\"Spain\"],[\"Berlin\",\"Germany\"],[\"Athens\",\"Greece\"],[\"Ottawa\",\"Canada\"],[\"Washington, D.C.\",\"United States\"],[\"Mexico City\",\"Mexico\"],[\"Buenos Aires\",\"Argentina\"],[\"Cairo\",\"Egypt\"],[\"Nairobi\",\"Kenya\"]]}",
+   "t": "names",
+   "cat": "Geography",
+   "group": "Capitals",
+   "short": "World capitals",
+   "title": "World capitals",
+   "items": [
+    {
+     "id": "ntokyo",
+     "name": "Tokyo",
+     "note": "Japan"
+    },
+    {
+     "id": "nseoul",
+     "name": "Seoul",
+     "note": "South Korea"
+    },
+    {
+     "id": "nbeijing",
+     "name": "Beijing",
+     "note": "China"
+    },
+    {
+     "id": "nbangkok",
+     "name": "Bangkok",
+     "note": "Thailand"
+    },
+    {
+     "id": "nnew-delhi",
+     "name": "New Delhi",
+     "note": "India"
+    },
+    {
+     "id": "ncanberra",
+     "name": "Canberra",
+     "note": "Australia"
+    },
+    {
+     "id": "nparis",
+     "name": "Paris",
+     "note": "France"
+    },
+    {
+     "id": "nlondon",
+     "name": "London",
+     "note": "United Kingdom"
+    },
+    {
+     "id": "nrome",
+     "name": "Rome",
+     "note": "Italy"
+    },
+    {
+     "id": "nmadrid",
+     "name": "Madrid",
+     "note": "Spain"
+    },
+    {
+     "id": "nberlin",
+     "name": "Berlin",
+     "note": "Germany"
+    },
+    {
+     "id": "nathens",
+     "name": "Athens",
+     "note": "Greece"
+    },
+    {
+     "id": "nottawa",
+     "name": "Ottawa",
+     "note": "Canada"
+    },
+    {
+     "id": "nwashington-d-c",
+     "name": "Washington, D.C.",
+     "note": "United States"
+    },
+    {
+     "id": "nmexico-city",
+     "name": "Mexico City",
+     "note": "Mexico"
+    },
+    {
+     "id": "nbuenos-aires",
+     "name": "Buenos Aires",
+     "note": "Argentina"
+    },
+    {
+     "id": "ncairo",
+     "name": "Cairo",
+     "note": "Egypt"
+    },
+    {
+     "id": "nnairobi",
+     "name": "Nairobi",
+     "note": "Kenya"
     }
    ]
   },
@@ -13981,7 +15143,7 @@
     },
     {
      "id": "p2301682",
-     "name": "Lady Francesca Stirling",
+     "name": "Francesca Bridgerton",
      "note": "Hannah Dodd",
      "poster": "/74dHuedzHpVqEr0fVvi1o10MQnq.jpg"
     },
@@ -15350,466 +16512,487 @@
    "short": "Biopics (true stories)"
   },
   {
-   "id": "favourite-niche-perfumes",
-   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Perfumes\",\"title\":\"Favourite niche perfumes\",\"short\":\"Niche favourites\",\"picks\":[[\"Warm Bulb\",\"Clue\"],[\"Delina\",\"Parfums de Marly\"],[\"Santal 33\",\"Le Labo\"],[\"Jazz\",\"Zernell Gillie\"],[\"Girl of the Year\",\"Thin Wild Mercury\"],[\"Tears\",\"Régime des Fleurs\"],[\"Pas de Chat\",\"Odette\"],[\"Delizia di Marshmallow\",\"Kyse\"],[\"Bee\",\"Zoologist\"],[\"Nosferatu\",\"Heretic\"],[\"Queening\",\"Mind Games\"],[\"Peach's Revenge\",\"Sarah Baker\"],[\"The Soft Lawn\",\"Imaginary Authors\"],[\"White Rice\",\"d'Annam\"],[\"Dear Polly\",\"Vilhelm Parfumerie\"]]}",
+   "id": "ontario-breweries",
+   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Drinks\",\"title\":\"Ontario breweries\",\"picks\":[[\"Steam Whistle\",\"Toronto\"],[\"Mill Street\",\"Toronto\"],[\"Amsterdam Brewery\",\"Toronto\"],[\"Great Lakes Brewery\",\"Toronto\"],[\"Bellwoods Brewery\",\"Toronto\"],[\"Henderson Brewing\",\"Toronto\"],[\"Left Field Brewery\",\"Toronto\"],[\"Collective Arts\",\"Hamilton\"],[\"Nickel Brook\",\"Burlington\"],[\"Bench Brewing\",\"Beamsville\"],[\"Sleeman\",\"Guelph\"],[\"Waterloo Brewing\",\"Kitchener\"],[\"Side Launch\",\"Collingwood\"],[\"Flying Monkeys\",\"Barrie\"],[\"Muskoka Brewery\",\"Bracebridge\"],[\"Sawdust City\",\"Gravenhurst\"],[\"Beau's\",\"Vankleek Hill\"]]}",
    "t": "names",
    "cat": "Misc",
-   "group": "Perfumes",
-   "short": "Niche favourites",
-   "title": "Favourite niche perfumes",
+   "group": "Drinks",
+   "short": "Ontario breweries",
+   "title": "Ontario breweries",
    "items": [
     {
-     "id": "nwarm-bulb",
-     "name": "Warm Bulb",
-     "note": "Clue",
-     "img": "images/favourite-niche-perfumes/warm-bulb.jpeg"
+     "id": "nsteam-whistle",
+     "name": "Steam Whistle",
+     "note": "Toronto"
     },
     {
-     "id": "ndelina",
-     "name": "Delina",
-     "note": "Parfums de Marly",
-     "img": "images/favourite-niche-perfumes/delina.jpeg"
+     "id": "nmill-street",
+     "name": "Mill Street",
+     "note": "Toronto"
     },
     {
-     "id": "nsantal-33",
-     "name": "Santal 33",
-     "note": "Le Labo",
-     "img": "images/favourite-niche-perfumes/santal-33.jpeg"
+     "id": "namsterdam-brewery",
+     "name": "Amsterdam Brewery",
+     "note": "Toronto"
     },
     {
-     "id": "njazz",
-     "name": "Jazz",
-     "note": "Zernell Gillie",
-     "img": "images/favourite-niche-perfumes/jazz.jpeg"
+     "id": "ngreat-lakes-brewery",
+     "name": "Great Lakes Brewery",
+     "note": "Toronto"
     },
     {
-     "id": "ngirl-of-the-year",
-     "name": "Girl of the Year",
-     "note": "Thin Wild Mercury",
-     "img": "images/favourite-niche-perfumes/girl-of-the-year.jpeg"
+     "id": "nbellwoods-brewery",
+     "name": "Bellwoods Brewery",
+     "note": "Toronto"
     },
     {
-     "id": "ntears",
-     "name": "Tears",
-     "note": "Régime des Fleurs",
-     "img": "images/favourite-niche-perfumes/tears.jpeg"
+     "id": "nhenderson-brewing",
+     "name": "Henderson Brewing",
+     "note": "Toronto"
     },
     {
-     "id": "npas-de-chat",
-     "name": "Pas de Chat",
-     "note": "Odette",
-     "img": "images/favourite-niche-perfumes/pas-de-chat.jpeg"
+     "id": "nleft-field-brewery",
+     "name": "Left Field Brewery",
+     "note": "Toronto"
     },
     {
-     "id": "ndelizia-di-marshmallow",
-     "name": "Delizia di Marshmallow",
-     "note": "Kyse",
-     "img": "images/favourite-niche-perfumes/delizia-di-marshmallow.jpeg"
+     "id": "ncollective-arts",
+     "name": "Collective Arts",
+     "note": "Hamilton"
     },
     {
-     "id": "nbee",
-     "name": "Bee",
-     "note": "Zoologist",
-     "img": "images/favourite-niche-perfumes/bee.jpeg"
+     "id": "nnickel-brook",
+     "name": "Nickel Brook",
+     "note": "Burlington"
     },
     {
-     "id": "nnosferatu",
-     "name": "Nosferatu",
-     "note": "Heretic",
-     "img": "images/favourite-niche-perfumes/nosferatu.jpeg"
+     "id": "nbench-brewing",
+     "name": "Bench Brewing",
+     "note": "Beamsville"
     },
     {
-     "id": "nqueening",
-     "name": "Queening",
-     "note": "Mind Games",
-     "img": "images/favourite-niche-perfumes/queening.jpeg"
+     "id": "nsleeman",
+     "name": "Sleeman",
+     "note": "Guelph"
     },
     {
-     "id": "npeach-s-revenge",
-     "name": "Peach's Revenge",
-     "note": "Sarah Baker",
-     "img": "images/favourite-niche-perfumes/peach-s-revenge.jpeg"
+     "id": "nwaterloo-brewing",
+     "name": "Waterloo Brewing",
+     "note": "Kitchener"
     },
     {
-     "id": "nthe-soft-lawn",
-     "name": "The Soft Lawn",
-     "note": "Imaginary Authors",
-     "img": "images/favourite-niche-perfumes/the-soft-lawn.jpeg"
+     "id": "nside-launch",
+     "name": "Side Launch",
+     "note": "Collingwood"
     },
     {
-     "id": "nwhite-rice",
-     "name": "White Rice",
-     "note": "d'Annam",
-     "img": "images/favourite-niche-perfumes/white-rice.jpeg"
+     "id": "nflying-monkeys",
+     "name": "Flying Monkeys",
+     "note": "Barrie"
     },
     {
-     "id": "ndear-polly",
-     "name": "Dear Polly",
-     "note": "Vilhelm Parfumerie",
-     "img": "images/favourite-niche-perfumes/dear-polly.jpeg"
+     "id": "nmuskoka-brewery",
+     "name": "Muskoka Brewery",
+     "note": "Bracebridge"
+    },
+    {
+     "id": "nsawdust-city",
+     "name": "Sawdust City",
+     "note": "Gravenhurst"
+    },
+    {
+     "id": "nbeau-s",
+     "name": "Beau's",
+     "note": "Vankleek Hill"
     }
    ]
   },
   {
-   "id": "favourite-designer-perfumes",
-   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Perfumes\",\"title\":\"Favourite designer perfumes\",\"short\":\"Designer favourites\",\"picks\":[[\"Libre\",\"Yves Saint Laurent\"],[\"Black Opium\",\"Yves Saint Laurent\"],[\"Miss Dior\",\"Dior\"],[\"J'adore\",\"Dior\"],[\"Chance Eau Tendre\",\"Chanel\"],[\"Daisy\",\"Marc Jacobs\"],[\"Flora Gorgeous Gardenia\",\"Gucci\"],[\"Born in Roma Donna\",\"Valentino\"],[\"La Vie Est Belle\",\"Lancôme\"],[\"Flowerbomb\",\"Viktor & Rolf\"],[\"Paradoxe\",\"Prada\"],[\"Goddess\",\"Burberry\"],[\"Good Girl\",\"Carolina Herrera\"],[\"My Way\",\"Giorgio Armani\"],[\"Black Orchid\",\"Tom Ford\"]]}",
+   "id": "north-american-cities",
+   "src": "{\"type\":\"names\",\"cat\":\"Geography\",\"group\":\"Cities\",\"title\":\"North American cities\",\"short\":\"North America\",\"picks\":[[\"New York City\",\"New York\"],[\"Los Angeles\",\"California\"],[\"San Francisco\",\"California\"],[\"Las Vegas\",\"Nevada\"],[\"Chicago\",\"Illinois\"],[\"New Orleans\",\"Louisiana\"],[\"Miami\",\"Florida\"],[\"Boston\",\"Massachusetts\"],[\"Seattle\",\"Washington\"],[\"Nashville\",\"Tennessee\"],[\"Honolulu\",\"Hawaii\"],[\"Toronto\",\"Ontario\"],[\"Vancouver\",\"British Columbia\"],[\"Montreal\",\"Quebec\"],[\"Quebec City\",\"Quebec\"],[\"Mexico City\",\"Mexico\"],[\"Cancún\",\"Mexico\"]]}",
    "t": "names",
-   "cat": "Misc",
-   "group": "Perfumes",
-   "short": "Designer favourites",
-   "title": "Favourite designer perfumes",
+   "cat": "Geography",
+   "group": "Cities",
+   "short": "North America",
+   "title": "North American cities",
    "items": [
     {
-     "id": "nlibre",
-     "name": "Libre",
-     "note": "Yves Saint Laurent"
+     "id": "nnew-york-city",
+     "name": "New York City",
+     "note": "New York"
     },
     {
-     "id": "nblack-opium",
-     "name": "Black Opium",
-     "note": "Yves Saint Laurent"
+     "id": "nlos-angeles",
+     "name": "Los Angeles",
+     "note": "California"
     },
     {
-     "id": "nmiss-dior",
-     "name": "Miss Dior",
-     "note": "Dior"
+     "id": "nsan-francisco",
+     "name": "San Francisco",
+     "note": "California"
     },
     {
-     "id": "nj-adore",
-     "name": "J'adore",
-     "note": "Dior"
+     "id": "nlas-vegas",
+     "name": "Las Vegas",
+     "note": "Nevada"
     },
     {
-     "id": "nchance-eau-tendre",
-     "name": "Chance Eau Tendre",
-     "note": "Chanel"
+     "id": "nchicago",
+     "name": "Chicago",
+     "note": "Illinois"
     },
     {
-     "id": "ndaisy",
-     "name": "Daisy",
-     "note": "Marc Jacobs"
+     "id": "nnew-orleans",
+     "name": "New Orleans",
+     "note": "Louisiana"
     },
     {
-     "id": "nflora-gorgeous-gardenia",
-     "name": "Flora Gorgeous Gardenia",
-     "note": "Gucci"
+     "id": "nmiami",
+     "name": "Miami",
+     "note": "Florida"
     },
     {
-     "id": "nborn-in-roma-donna",
-     "name": "Born in Roma Donna",
-     "note": "Valentino"
+     "id": "nboston",
+     "name": "Boston",
+     "note": "Massachusetts"
     },
     {
-     "id": "nla-vie-est-belle",
-     "name": "La Vie Est Belle",
-     "note": "Lancôme"
+     "id": "nseattle",
+     "name": "Seattle",
+     "note": "Washington"
     },
     {
-     "id": "nflowerbomb",
-     "name": "Flowerbomb",
-     "note": "Viktor & Rolf"
+     "id": "nnashville",
+     "name": "Nashville",
+     "note": "Tennessee"
     },
     {
-     "id": "nparadoxe",
-     "name": "Paradoxe",
-     "note": "Prada"
+     "id": "nhonolulu",
+     "name": "Honolulu",
+     "note": "Hawaii"
     },
     {
-     "id": "ngoddess",
-     "name": "Goddess",
-     "note": "Burberry"
+     "id": "ntoronto",
+     "name": "Toronto",
+     "note": "Ontario"
     },
     {
-     "id": "ngood-girl",
-     "name": "Good Girl",
-     "note": "Carolina Herrera"
+     "id": "nvancouver",
+     "name": "Vancouver",
+     "note": "British Columbia"
     },
     {
-     "id": "nmy-way",
-     "name": "My Way",
-     "note": "Giorgio Armani"
+     "id": "nmontreal",
+     "name": "Montreal",
+     "note": "Quebec"
     },
     {
-     "id": "nblack-orchid",
-     "name": "Black Orchid",
-     "note": "Tom Ford"
+     "id": "nquebec-city",
+     "name": "Quebec City",
+     "note": "Quebec"
+    },
+    {
+     "id": "nmexico-city",
+     "name": "Mexico City",
+     "note": "Mexico"
+    },
+    {
+     "id": "ncancun",
+     "name": "Cancún",
+     "note": "Mexico"
     }
    ]
   },
   {
-   "id": "kayali-perfumes",
-   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Perfumes\",\"title\":\"Kayali perfumes\",\"short\":\"Kayali\",\"picks\":[[\"Vanilla 28\",\"2018\"],[\"Musk 12\",\"2018\"],[\"Elixir 11\",\"2018\"],[\"Citrus 08\",\"2018\"],[\"Déjà Vu White Flower 57\",\"2020\"],[\"Utopia Vanilla Coco 21\",\"2021\"],[\"Sweet Diamond Pink Pepper 25\",\"2021\"],[\"Invite Only Amber 23\",\"2021\"],[\"Eden Juicy Apple 01\",\"2021\"],[\"Lovefest Burning Cherry 48\",\"2022\"],[\"Vanilla Royale Sugared Patchouli 64\",\"2022\"],[\"Yum Pistachio Gelato 33\",\"2023\"],[\"Eden Sparkling Lychee 39\",\"2023\"],[\"The Wedding Silk Santal 36\",\"2023\"],[\"The Wedding Velvet Santal 35\",\"2023\"],[\"Oudgasm Vanilla Oud 36\",\"2023\"],[\"Oudgasm Rose Oud 16\",\"2023\"],[\"Oudgasm Café Oud 19\",\"2023\"],[\"Oudgasm Tobacco Oud 04\",\"2023\"],[\"Oudgasm Smoky Oud 07\",\"2024\"],[\"Vanilla Candy Rock Sugar 42\",\"2024\"],[\"Yum Boujee Marshmallow 81\",\"2024\"],[\"Capri in a Bottle Lemon Sugar 14\",\"2024\"],[\"Maldives in a Bottle Ylang Coco 20\",\"2024\"],[\"Marrakesh in a Bottle Orange Blossom 24\",\"2024\"],[\"Maui in a Bottle Sweet Banana 37\",\"2024\"],[\"Fleur Majesty Rose Royale 31\",\"2025\"],[\"Oudgasm Chocolate Oud 11\",\"2025\"],[\"Oudgasm Milky Musk Oud 30\",\"2025\"],[\"Freedom Musk Santal 34\",\"2025\"],[\"Freedom Musk Matcha 45\",\"2025\"],[\"Freedom Musk Latte 41\",\"2025\"],[\"Freedom Musk Bouquet 27\",\"2025\"],[\"Eden Plush Pear 23\",\"2026\"],[\"Eden Sweet Peach 35\",\"2026\"],[\"Boujee Kitty Caramel Milk 22\",\"2026\"]]}",
+   "id": "european-cities",
+   "src": "{\"type\":\"names\",\"cat\":\"Geography\",\"group\":\"Cities\",\"title\":\"European cities\",\"short\":\"Europe\",\"picks\":[[\"Paris\",\"France\"],[\"London\",\"England\"],[\"Rome\",\"Italy\"],[\"Venice\",\"Italy\"],[\"Florence\",\"Italy\"],[\"Barcelona\",\"Spain\"],[\"Lisbon\",\"Portugal\"],[\"Amsterdam\",\"Netherlands\"],[\"Berlin\",\"Germany\"],[\"Prague\",\"Czechia\"],[\"Vienna\",\"Austria\"],[\"Budapest\",\"Hungary\"],[\"Dublin\",\"Ireland\"],[\"Edinburgh\",\"Scotland\"],[\"Copenhagen\",\"Denmark\"],[\"Santorini\",\"Greece\"],[\"Dubrovnik\",\"Croatia\"],[\"Istanbul\",\"Turkey\"]]}",
    "t": "names",
-   "cat": "Misc",
-   "group": "Perfumes",
-   "short": "Kayali",
-   "title": "Kayali perfumes",
+   "cat": "Geography",
+   "group": "Cities",
+   "short": "Europe",
+   "title": "European cities",
    "items": [
     {
-     "id": "nvanilla-28",
-     "name": "Vanilla 28",
-     "note": "2018"
+     "id": "nparis",
+     "name": "Paris",
+     "note": "France"
     },
     {
-     "id": "nmusk-12",
-     "name": "Musk 12",
-     "note": "2018"
+     "id": "nlondon",
+     "name": "London",
+     "note": "England"
     },
     {
-     "id": "nelixir-11",
-     "name": "Elixir 11",
-     "note": "2018"
+     "id": "nrome",
+     "name": "Rome",
+     "note": "Italy"
     },
     {
-     "id": "ncitrus-08",
-     "name": "Citrus 08",
-     "note": "2018"
+     "id": "nvenice",
+     "name": "Venice",
+     "note": "Italy"
     },
     {
-     "id": "ndeja-vu-white-flower-57",
-     "name": "Déjà Vu White Flower 57",
-     "note": "2020"
+     "id": "nflorence",
+     "name": "Florence",
+     "note": "Italy"
     },
     {
-     "id": "nutopia-vanilla-coco-21",
-     "name": "Utopia Vanilla Coco 21",
-     "note": "2021"
+     "id": "nbarcelona",
+     "name": "Barcelona",
+     "note": "Spain"
     },
     {
-     "id": "nsweet-diamond-pink-pepper-25",
-     "name": "Sweet Diamond Pink Pepper 25",
-     "note": "2021"
+     "id": "nlisbon",
+     "name": "Lisbon",
+     "note": "Portugal"
     },
     {
-     "id": "ninvite-only-amber-23",
-     "name": "Invite Only Amber 23",
-     "note": "2021"
+     "id": "namsterdam",
+     "name": "Amsterdam",
+     "note": "Netherlands"
     },
     {
-     "id": "neden-juicy-apple-01",
-     "name": "Eden Juicy Apple 01",
-     "note": "2021"
+     "id": "nberlin",
+     "name": "Berlin",
+     "note": "Germany"
     },
     {
-     "id": "nlovefest-burning-cherry-48",
-     "name": "Lovefest Burning Cherry 48",
-     "note": "2022"
+     "id": "nprague",
+     "name": "Prague",
+     "note": "Czechia"
     },
     {
-     "id": "nvanilla-royale-sugared-patchouli-64",
-     "name": "Vanilla Royale Sugared Patchouli 64",
-     "note": "2022"
+     "id": "nvienna",
+     "name": "Vienna",
+     "note": "Austria"
     },
     {
-     "id": "nyum-pistachio-gelato-33",
-     "name": "Yum Pistachio Gelato 33",
-     "note": "2023"
+     "id": "nbudapest",
+     "name": "Budapest",
+     "note": "Hungary"
     },
     {
-     "id": "neden-sparkling-lychee-39",
-     "name": "Eden Sparkling Lychee 39",
-     "note": "2023"
+     "id": "ndublin",
+     "name": "Dublin",
+     "note": "Ireland"
     },
     {
-     "id": "nthe-wedding-silk-santal-36",
-     "name": "The Wedding Silk Santal 36",
-     "note": "2023"
+     "id": "nedinburgh",
+     "name": "Edinburgh",
+     "note": "Scotland"
     },
     {
-     "id": "nthe-wedding-velvet-santal-35",
-     "name": "The Wedding Velvet Santal 35",
-     "note": "2023"
+     "id": "ncopenhagen",
+     "name": "Copenhagen",
+     "note": "Denmark"
     },
     {
-     "id": "noudgasm-vanilla-oud-36",
-     "name": "Oudgasm Vanilla Oud 36",
-     "note": "2023"
+     "id": "nsantorini",
+     "name": "Santorini",
+     "note": "Greece"
     },
     {
-     "id": "noudgasm-rose-oud-16",
-     "name": "Oudgasm Rose Oud 16",
-     "note": "2023"
+     "id": "ndubrovnik",
+     "name": "Dubrovnik",
+     "note": "Croatia"
     },
     {
-     "id": "noudgasm-cafe-oud-19",
-     "name": "Oudgasm Café Oud 19",
-     "note": "2023"
-    },
-    {
-     "id": "noudgasm-tobacco-oud-04",
-     "name": "Oudgasm Tobacco Oud 04",
-     "note": "2023"
-    },
-    {
-     "id": "noudgasm-smoky-oud-07",
-     "name": "Oudgasm Smoky Oud 07",
-     "note": "2024"
-    },
-    {
-     "id": "nvanilla-candy-rock-sugar-42",
-     "name": "Vanilla Candy Rock Sugar 42",
-     "note": "2024"
-    },
-    {
-     "id": "nyum-boujee-marshmallow-81",
-     "name": "Yum Boujee Marshmallow 81",
-     "note": "2024"
-    },
-    {
-     "id": "ncapri-in-a-bottle-lemon-sugar-14",
-     "name": "Capri in a Bottle Lemon Sugar 14",
-     "note": "2024"
-    },
-    {
-     "id": "nmaldives-in-a-bottle-ylang-coco-20",
-     "name": "Maldives in a Bottle Ylang Coco 20",
-     "note": "2024"
-    },
-    {
-     "id": "nmarrakesh-in-a-bottle-orange-blossom-24",
-     "name": "Marrakesh in a Bottle Orange Blossom 24",
-     "note": "2024"
-    },
-    {
-     "id": "nmaui-in-a-bottle-sweet-banana-37",
-     "name": "Maui in a Bottle Sweet Banana 37",
-     "note": "2024"
-    },
-    {
-     "id": "nfleur-majesty-rose-royale-31",
-     "name": "Fleur Majesty Rose Royale 31",
-     "note": "2025"
-    },
-    {
-     "id": "noudgasm-chocolate-oud-11",
-     "name": "Oudgasm Chocolate Oud 11",
-     "note": "2025"
-    },
-    {
-     "id": "noudgasm-milky-musk-oud-30",
-     "name": "Oudgasm Milky Musk Oud 30",
-     "note": "2025"
-    },
-    {
-     "id": "nfreedom-musk-santal-34",
-     "name": "Freedom Musk Santal 34",
-     "note": "2025"
-    },
-    {
-     "id": "nfreedom-musk-matcha-45",
-     "name": "Freedom Musk Matcha 45",
-     "note": "2025"
-    },
-    {
-     "id": "nfreedom-musk-latte-41",
-     "name": "Freedom Musk Latte 41",
-     "note": "2025"
-    },
-    {
-     "id": "nfreedom-musk-bouquet-27",
-     "name": "Freedom Musk Bouquet 27",
-     "note": "2025"
-    },
-    {
-     "id": "neden-plush-pear-23",
-     "name": "Eden Plush Pear 23",
-     "note": "2026"
-    },
-    {
-     "id": "neden-sweet-peach-35",
-     "name": "Eden Sweet Peach 35",
-     "note": "2026"
-    },
-    {
-     "id": "nboujee-kitty-caramel-milk-22",
-     "name": "Boujee Kitty Caramel Milk 22",
-     "note": "2026"
+     "id": "nistanbul",
+     "name": "Istanbul",
+     "note": "Turkey"
     }
    ]
   },
   {
-   "id": "favourite-celebrity-perfumes",
-   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Perfumes\",\"title\":\"Favourite celebrity perfumes\",\"short\":\"Celebrity favourites\",\"picks\":[[\"White Diamonds\",\"Elizabeth Taylor\"],[\"Glow\",\"Jennifer Lopez\"],[\"Curious\",\"Britney Spears\"],[\"Fantasy\",\"Britney Spears\"],[\"Lovely\",\"Sarah Jessica Parker\"],[\"Heat\",\"Beyoncé\"],[\"Purr\",\"Katy Perry\"],[\"Someday\",\"Justin Bieber\"],[\"Wonderstruck\",\"Taylor Swift\"],[\"Fame\",\"Lady Gaga\"],[\"Pink Friday\",\"Nicki Minaj\"],[\"Cloud\",\"Ariana Grande\"],[\"Thank U, Next\",\"Ariana Grande\"],[\"Eilish\",\"Billie Eilish\"],[\"Fenty Eau de Parfum\",\"Rihanna\"]]}",
+   "id": "asian-cities",
+   "src": "{\"type\":\"names\",\"cat\":\"Geography\",\"group\":\"Cities\",\"title\":\"Asian cities\",\"short\":\"Asia\",\"picks\":[[\"Tokyo\",\"Japan\"],[\"Kyoto\",\"Japan\"],[\"Osaka\",\"Japan\"],[\"Seoul\",\"South Korea\"],[\"Busan\",\"South Korea\"],[\"Beijing\",\"China\"],[\"Shanghai\",\"China\"],[\"Hong Kong\",\"China\"],[\"Taipei\",\"Taiwan\"],[\"Bangkok\",\"Thailand\"],[\"Singapore\",\"Singapore\"],[\"Kuala Lumpur\",\"Malaysia\"],[\"Bali\",\"Indonesia\"],[\"Hanoi\",\"Vietnam\"],[\"Ho Chi Minh City\",\"Vietnam\"],[\"Manila\",\"Philippines\"],[\"Mumbai\",\"India\"],[\"Dubai\",\"United Arab Emirates\"]]}",
    "t": "names",
-   "cat": "Misc",
-   "group": "Perfumes",
-   "short": "Celebrity favourites",
-   "title": "Favourite celebrity perfumes",
+   "cat": "Geography",
+   "group": "Cities",
+   "short": "Asia",
+   "title": "Asian cities",
    "items": [
     {
-     "id": "nwhite-diamonds",
-     "name": "White Diamonds",
-     "note": "Elizabeth Taylor"
+     "id": "ntokyo",
+     "name": "Tokyo",
+     "note": "Japan"
     },
     {
-     "id": "nglow",
-     "name": "Glow",
-     "note": "Jennifer Lopez"
+     "id": "nkyoto",
+     "name": "Kyoto",
+     "note": "Japan"
     },
     {
-     "id": "ncurious",
-     "name": "Curious",
-     "note": "Britney Spears"
+     "id": "nosaka",
+     "name": "Osaka",
+     "note": "Japan"
     },
     {
-     "id": "nfantasy",
-     "name": "Fantasy",
-     "note": "Britney Spears"
+     "id": "nseoul",
+     "name": "Seoul",
+     "note": "South Korea"
     },
     {
-     "id": "nlovely",
-     "name": "Lovely",
-     "note": "Sarah Jessica Parker"
+     "id": "nbusan",
+     "name": "Busan",
+     "note": "South Korea"
     },
     {
-     "id": "nheat",
-     "name": "Heat",
-     "note": "Beyoncé"
+     "id": "nbeijing",
+     "name": "Beijing",
+     "note": "China"
     },
     {
-     "id": "npurr",
-     "name": "Purr",
-     "note": "Katy Perry"
+     "id": "nshanghai",
+     "name": "Shanghai",
+     "note": "China"
     },
     {
-     "id": "nsomeday",
-     "name": "Someday",
-     "note": "Justin Bieber"
+     "id": "nhong-kong",
+     "name": "Hong Kong",
+     "note": "China"
     },
     {
-     "id": "nwonderstruck",
-     "name": "Wonderstruck",
-     "note": "Taylor Swift"
+     "id": "ntaipei",
+     "name": "Taipei",
+     "note": "Taiwan"
     },
     {
-     "id": "nfame",
-     "name": "Fame",
-     "note": "Lady Gaga"
+     "id": "nbangkok",
+     "name": "Bangkok",
+     "note": "Thailand"
     },
     {
-     "id": "npink-friday",
-     "name": "Pink Friday",
-     "note": "Nicki Minaj"
+     "id": "nsingapore",
+     "name": "Singapore",
+     "note": "Singapore"
     },
     {
-     "id": "ncloud",
-     "name": "Cloud",
-     "note": "Ariana Grande"
+     "id": "nkuala-lumpur",
+     "name": "Kuala Lumpur",
+     "note": "Malaysia"
     },
     {
-     "id": "nthank-u-next",
-     "name": "Thank U, Next",
-     "note": "Ariana Grande"
+     "id": "nbali",
+     "name": "Bali",
+     "note": "Indonesia"
     },
     {
-     "id": "neilish",
-     "name": "Eilish",
-     "note": "Billie Eilish"
+     "id": "nhanoi",
+     "name": "Hanoi",
+     "note": "Vietnam"
     },
     {
-     "id": "nfenty-eau-de-parfum",
-     "name": "Fenty Eau de Parfum",
-     "note": "Rihanna"
+     "id": "nho-chi-minh-city",
+     "name": "Ho Chi Minh City",
+     "note": "Vietnam"
+    },
+    {
+     "id": "nmanila",
+     "name": "Manila",
+     "note": "Philippines"
+    },
+    {
+     "id": "nmumbai",
+     "name": "Mumbai",
+     "note": "India"
+    },
+    {
+     "id": "ndubai",
+     "name": "Dubai",
+     "note": "United Arab Emirates"
+    }
+   ]
+  },
+  {
+   "id": "african-cities",
+   "src": "{\"type\":\"names\",\"cat\":\"Geography\",\"group\":\"Cities\",\"title\":\"African cities\",\"short\":\"Africa\",\"picks\":[[\"Cairo\",\"Egypt\"],[\"Luxor\",\"Egypt\"],[\"Marrakesh\",\"Morocco\"],[\"Casablanca\",\"Morocco\"],[\"Tunis\",\"Tunisia\"],[\"Dakar\",\"Senegal\"],[\"Accra\",\"Ghana\"],[\"Lagos\",\"Nigeria\"],[\"Addis Ababa\",\"Ethiopia\"],[\"Nairobi\",\"Kenya\"],[\"Zanzibar\",\"Tanzania\"],[\"Kigali\",\"Rwanda\"],[\"Victoria Falls\",\"Zimbabwe\"],[\"Johannesburg\",\"South Africa\"],[\"Durban\",\"South Africa\"],[\"Cape Town\",\"South Africa\"]]}",
+   "t": "names",
+   "cat": "Geography",
+   "group": "Cities",
+   "short": "Africa",
+   "title": "African cities",
+   "items": [
+    {
+     "id": "ncairo",
+     "name": "Cairo",
+     "note": "Egypt"
+    },
+    {
+     "id": "nluxor",
+     "name": "Luxor",
+     "note": "Egypt"
+    },
+    {
+     "id": "nmarrakesh",
+     "name": "Marrakesh",
+     "note": "Morocco"
+    },
+    {
+     "id": "ncasablanca",
+     "name": "Casablanca",
+     "note": "Morocco"
+    },
+    {
+     "id": "ntunis",
+     "name": "Tunis",
+     "note": "Tunisia"
+    },
+    {
+     "id": "ndakar",
+     "name": "Dakar",
+     "note": "Senegal"
+    },
+    {
+     "id": "naccra",
+     "name": "Accra",
+     "note": "Ghana"
+    },
+    {
+     "id": "nlagos",
+     "name": "Lagos",
+     "note": "Nigeria"
+    },
+    {
+     "id": "naddis-ababa",
+     "name": "Addis Ababa",
+     "note": "Ethiopia"
+    },
+    {
+     "id": "nnairobi",
+     "name": "Nairobi",
+     "note": "Kenya"
+    },
+    {
+     "id": "nzanzibar",
+     "name": "Zanzibar",
+     "note": "Tanzania"
+    },
+    {
+     "id": "nkigali",
+     "name": "Kigali",
+     "note": "Rwanda"
+    },
+    {
+     "id": "nvictoria-falls",
+     "name": "Victoria Falls",
+     "note": "Zimbabwe"
+    },
+    {
+     "id": "njohannesburg",
+     "name": "Johannesburg",
+     "note": "South Africa"
+    },
+    {
+     "id": "ndurban",
+     "name": "Durban",
+     "note": "South Africa"
+    },
+    {
+     "id": "ncape-town",
+     "name": "Cape Town",
+     "note": "South Africa"
     }
    ]
   },
@@ -17970,73 +19153,525 @@
    "short": "Anne Hathaway movies"
   },
   {
-   "id": "zodiac-signs",
-   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Astrology\",\"title\":\"Zodiac signs\",\"picks\":[[\"Aries\",\"♈ Mar 21 to Apr 19\"],[\"Taurus\",\"♉ Apr 20 to May 20\"],[\"Gemini\",\"♊ May 21 to Jun 20\"],[\"Cancer\",\"♋ Jun 21 to Jul 22\"],[\"Leo\",\"♌ Jul 23 to Aug 22\"],[\"Virgo\",\"♍ Aug 23 to Sep 22\"],[\"Libra\",\"♎ Sep 23 to Oct 22\"],[\"Scorpio\",\"♏ Oct 23 to Nov 21\"],[\"Sagittarius\",\"♐ Nov 22 to Dec 21\"],[\"Capricorn\",\"♑ Dec 22 to Jan 19\"],[\"Aquarius\",\"♒ Jan 20 to Feb 18\"],[\"Pisces\",\"♓ Feb 19 to Mar 20\"]]}",
+   "id": "favourite-niche-perfumes",
+   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Perfumes\",\"title\":\"Favourite niche perfumes\",\"short\":\"Niche favourites\",\"picks\":[[\"Warm Bulb\",\"Clue\"],[\"Delina\",\"Parfums de Marly\"],[\"Santal 33\",\"Le Labo\"],[\"Jazz\",\"Zernell Gillie\"],[\"Girl of the Year\",\"Thin Wild Mercury\"],[\"Tears\",\"Régime des Fleurs\"],[\"Pas de Chat\",\"Odette\"],[\"Delizia di Marshmallow\",\"Kyse\"],[\"Bee\",\"Zoologist\"],[\"Nosferatu\",\"Heretic\"],[\"Queening\",\"Mind Games\"],[\"Peach's Revenge\",\"Sarah Baker\"],[\"The Soft Lawn\",\"Imaginary Authors\"],[\"White Rice\",\"d'Annam\"],[\"Dear Polly\",\"Vilhelm Parfumerie\"]]}",
    "t": "names",
    "cat": "Misc",
-   "group": "Astrology",
-   "short": "Zodiac signs",
-   "title": "Zodiac signs",
+   "group": "Perfumes",
+   "short": "Niche favourites",
+   "title": "Favourite niche perfumes",
    "items": [
     {
-     "id": "naries",
-     "name": "Aries",
-     "note": "♈ Mar 21 to Apr 19"
+     "id": "nwarm-bulb",
+     "name": "Warm Bulb",
+     "note": "Clue",
+     "img": "images/favourite-niche-perfumes/warm-bulb.jpeg"
     },
     {
-     "id": "ntaurus",
-     "name": "Taurus",
-     "note": "♉ Apr 20 to May 20"
+     "id": "ndelina",
+     "name": "Delina",
+     "note": "Parfums de Marly",
+     "img": "images/favourite-niche-perfumes/delina.jpeg"
     },
     {
-     "id": "ngemini",
-     "name": "Gemini",
-     "note": "♊ May 21 to Jun 20"
+     "id": "nsantal-33",
+     "name": "Santal 33",
+     "note": "Le Labo",
+     "img": "images/favourite-niche-perfumes/santal-33.jpeg"
     },
     {
-     "id": "ncancer",
-     "name": "Cancer",
-     "note": "♋ Jun 21 to Jul 22"
+     "id": "njazz",
+     "name": "Jazz",
+     "note": "Zernell Gillie",
+     "img": "images/favourite-niche-perfumes/jazz.jpeg"
     },
     {
-     "id": "nleo",
-     "name": "Leo",
-     "note": "♌ Jul 23 to Aug 22"
+     "id": "ngirl-of-the-year",
+     "name": "Girl of the Year",
+     "note": "Thin Wild Mercury",
+     "img": "images/favourite-niche-perfumes/girl-of-the-year.jpeg"
     },
     {
-     "id": "nvirgo",
-     "name": "Virgo",
-     "note": "♍ Aug 23 to Sep 22"
+     "id": "ntears",
+     "name": "Tears",
+     "note": "Régime des Fleurs",
+     "img": "images/favourite-niche-perfumes/tears.jpeg"
     },
     {
-     "id": "nlibra",
-     "name": "Libra",
-     "note": "♎ Sep 23 to Oct 22"
+     "id": "npas-de-chat",
+     "name": "Pas de Chat",
+     "note": "Odette",
+     "img": "images/favourite-niche-perfumes/pas-de-chat.jpeg"
     },
     {
-     "id": "nscorpio",
-     "name": "Scorpio",
-     "note": "♏ Oct 23 to Nov 21"
+     "id": "ndelizia-di-marshmallow",
+     "name": "Delizia di Marshmallow",
+     "note": "Kyse",
+     "img": "images/favourite-niche-perfumes/delizia-di-marshmallow.jpeg"
     },
     {
-     "id": "nsagittarius",
-     "name": "Sagittarius",
-     "note": "♐ Nov 22 to Dec 21"
+     "id": "nbee",
+     "name": "Bee",
+     "note": "Zoologist",
+     "img": "images/favourite-niche-perfumes/bee.jpeg"
     },
     {
-     "id": "ncapricorn",
-     "name": "Capricorn",
-     "note": "♑ Dec 22 to Jan 19"
+     "id": "nnosferatu",
+     "name": "Nosferatu",
+     "note": "Heretic",
+     "img": "images/favourite-niche-perfumes/nosferatu.jpeg"
     },
     {
-     "id": "naquarius",
-     "name": "Aquarius",
-     "note": "♒ Jan 20 to Feb 18"
+     "id": "nqueening",
+     "name": "Queening",
+     "note": "Mind Games",
+     "img": "images/favourite-niche-perfumes/queening.jpeg"
     },
     {
-     "id": "npisces",
-     "name": "Pisces",
-     "note": "♓ Feb 19 to Mar 20"
+     "id": "npeach-s-revenge",
+     "name": "Peach's Revenge",
+     "note": "Sarah Baker",
+     "img": "images/favourite-niche-perfumes/peach-s-revenge.jpeg"
+    },
+    {
+     "id": "nthe-soft-lawn",
+     "name": "The Soft Lawn",
+     "note": "Imaginary Authors",
+     "img": "images/favourite-niche-perfumes/the-soft-lawn.jpeg"
+    },
+    {
+     "id": "nwhite-rice",
+     "name": "White Rice",
+     "note": "d'Annam",
+     "img": "images/favourite-niche-perfumes/white-rice.jpeg"
+    },
+    {
+     "id": "ndear-polly",
+     "name": "Dear Polly",
+     "note": "Vilhelm Parfumerie",
+     "img": "images/favourite-niche-perfumes/dear-polly.jpeg"
+    }
+   ]
+  },
+  {
+   "id": "favourite-designer-perfumes",
+   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Perfumes\",\"title\":\"Favourite designer perfumes\",\"short\":\"Designer favourites\",\"picks\":[[\"Libre\",\"Yves Saint Laurent\"],[\"Black Opium\",\"Yves Saint Laurent\"],[\"Miss Dior\",\"Dior\"],[\"J'adore\",\"Dior\"],[\"Chance Eau Tendre\",\"Chanel\"],[\"Daisy\",\"Marc Jacobs\"],[\"Flora Gorgeous Gardenia\",\"Gucci\"],[\"Born in Roma Donna\",\"Valentino\"],[\"La Vie Est Belle\",\"Lancôme\"],[\"Flowerbomb\",\"Viktor & Rolf\"],[\"Paradoxe\",\"Prada\"],[\"Goddess\",\"Burberry\"],[\"Good Girl\",\"Carolina Herrera\"],[\"My Way\",\"Giorgio Armani\"],[\"Black Orchid\",\"Tom Ford\"]]}",
+   "t": "names",
+   "cat": "Misc",
+   "group": "Perfumes",
+   "short": "Designer favourites",
+   "title": "Favourite designer perfumes",
+   "items": [
+    {
+     "id": "nlibre",
+     "name": "Libre",
+     "note": "Yves Saint Laurent"
+    },
+    {
+     "id": "nblack-opium",
+     "name": "Black Opium",
+     "note": "Yves Saint Laurent"
+    },
+    {
+     "id": "nmiss-dior",
+     "name": "Miss Dior",
+     "note": "Dior"
+    },
+    {
+     "id": "nj-adore",
+     "name": "J'adore",
+     "note": "Dior"
+    },
+    {
+     "id": "nchance-eau-tendre",
+     "name": "Chance Eau Tendre",
+     "note": "Chanel"
+    },
+    {
+     "id": "ndaisy",
+     "name": "Daisy",
+     "note": "Marc Jacobs"
+    },
+    {
+     "id": "nflora-gorgeous-gardenia",
+     "name": "Flora Gorgeous Gardenia",
+     "note": "Gucci"
+    },
+    {
+     "id": "nborn-in-roma-donna",
+     "name": "Born in Roma Donna",
+     "note": "Valentino"
+    },
+    {
+     "id": "nla-vie-est-belle",
+     "name": "La Vie Est Belle",
+     "note": "Lancôme"
+    },
+    {
+     "id": "nflowerbomb",
+     "name": "Flowerbomb",
+     "note": "Viktor & Rolf"
+    },
+    {
+     "id": "nparadoxe",
+     "name": "Paradoxe",
+     "note": "Prada"
+    },
+    {
+     "id": "ngoddess",
+     "name": "Goddess",
+     "note": "Burberry"
+    },
+    {
+     "id": "ngood-girl",
+     "name": "Good Girl",
+     "note": "Carolina Herrera"
+    },
+    {
+     "id": "nmy-way",
+     "name": "My Way",
+     "note": "Giorgio Armani"
+    },
+    {
+     "id": "nblack-orchid",
+     "name": "Black Orchid",
+     "note": "Tom Ford"
+    }
+   ]
+  },
+  {
+   "id": "kayali-perfumes",
+   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Perfumes\",\"title\":\"Kayali perfumes\",\"short\":\"Kayali\",\"picks\":[[\"Vanilla 28\",\"2018\"],[\"Musk 12\",\"2018\"],[\"Elixir 11\",\"2018\"],[\"Citrus 08\",\"2018\"],[\"Déjà Vu White Flower 57\",\"2020\"],[\"Utopia Vanilla Coco 21\",\"2021\"],[\"Sweet Diamond Pink Pepper 25\",\"2021\"],[\"Invite Only Amber 23\",\"2021\"],[\"Eden Juicy Apple 01\",\"2021\"],[\"Lovefest Burning Cherry 48\",\"2022\"],[\"Vanilla Royale Sugared Patchouli 64\",\"2022\"],[\"Yum Pistachio Gelato 33\",\"2023\"],[\"Eden Sparkling Lychee 39\",\"2023\"],[\"The Wedding Silk Santal 36\",\"2023\"],[\"The Wedding Velvet Santal 35\",\"2023\"],[\"Oudgasm Vanilla Oud 36\",\"2023\"],[\"Oudgasm Rose Oud 16\",\"2023\"],[\"Oudgasm Café Oud 19\",\"2023\"],[\"Oudgasm Tobacco Oud 04\",\"2023\"],[\"Oudgasm Smoky Oud 07\",\"2024\"],[\"Vanilla Candy Rock Sugar 42\",\"2024\"],[\"Yum Boujee Marshmallow 81\",\"2024\"],[\"Capri in a Bottle Lemon Sugar 14\",\"2024\"],[\"Maldives in a Bottle Ylang Coco 20\",\"2024\"],[\"Marrakesh in a Bottle Orange Blossom 24\",\"2024\"],[\"Maui in a Bottle Sweet Banana 37\",\"2024\"],[\"Fleur Majesty Rose Royale 31\",\"2025\"],[\"Oudgasm Chocolate Oud 11\",\"2025\"],[\"Oudgasm Milky Musk Oud 30\",\"2025\"],[\"Freedom Musk Santal 34\",\"2025\"],[\"Freedom Musk Matcha 45\",\"2025\"],[\"Freedom Musk Latte 41\",\"2025\"],[\"Freedom Musk Bouquet 27\",\"2025\"],[\"Eden Plush Pear 23\",\"2026\"],[\"Eden Sweet Peach 35\",\"2026\"],[\"Boujee Kitty Caramel Milk 22\",\"2026\"]]}",
+   "t": "names",
+   "cat": "Misc",
+   "group": "Perfumes",
+   "short": "Kayali",
+   "title": "Kayali perfumes",
+   "items": [
+    {
+     "id": "nvanilla-28",
+     "name": "Vanilla 28",
+     "note": "2018"
+    },
+    {
+     "id": "nmusk-12",
+     "name": "Musk 12",
+     "note": "2018"
+    },
+    {
+     "id": "nelixir-11",
+     "name": "Elixir 11",
+     "note": "2018"
+    },
+    {
+     "id": "ncitrus-08",
+     "name": "Citrus 08",
+     "note": "2018"
+    },
+    {
+     "id": "ndeja-vu-white-flower-57",
+     "name": "Déjà Vu White Flower 57",
+     "note": "2020"
+    },
+    {
+     "id": "nutopia-vanilla-coco-21",
+     "name": "Utopia Vanilla Coco 21",
+     "note": "2021"
+    },
+    {
+     "id": "nsweet-diamond-pink-pepper-25",
+     "name": "Sweet Diamond Pink Pepper 25",
+     "note": "2021"
+    },
+    {
+     "id": "ninvite-only-amber-23",
+     "name": "Invite Only Amber 23",
+     "note": "2021"
+    },
+    {
+     "id": "neden-juicy-apple-01",
+     "name": "Eden Juicy Apple 01",
+     "note": "2021"
+    },
+    {
+     "id": "nlovefest-burning-cherry-48",
+     "name": "Lovefest Burning Cherry 48",
+     "note": "2022"
+    },
+    {
+     "id": "nvanilla-royale-sugared-patchouli-64",
+     "name": "Vanilla Royale Sugared Patchouli 64",
+     "note": "2022"
+    },
+    {
+     "id": "nyum-pistachio-gelato-33",
+     "name": "Yum Pistachio Gelato 33",
+     "note": "2023"
+    },
+    {
+     "id": "neden-sparkling-lychee-39",
+     "name": "Eden Sparkling Lychee 39",
+     "note": "2023"
+    },
+    {
+     "id": "nthe-wedding-silk-santal-36",
+     "name": "The Wedding Silk Santal 36",
+     "note": "2023"
+    },
+    {
+     "id": "nthe-wedding-velvet-santal-35",
+     "name": "The Wedding Velvet Santal 35",
+     "note": "2023"
+    },
+    {
+     "id": "noudgasm-vanilla-oud-36",
+     "name": "Oudgasm Vanilla Oud 36",
+     "note": "2023"
+    },
+    {
+     "id": "noudgasm-rose-oud-16",
+     "name": "Oudgasm Rose Oud 16",
+     "note": "2023"
+    },
+    {
+     "id": "noudgasm-cafe-oud-19",
+     "name": "Oudgasm Café Oud 19",
+     "note": "2023"
+    },
+    {
+     "id": "noudgasm-tobacco-oud-04",
+     "name": "Oudgasm Tobacco Oud 04",
+     "note": "2023"
+    },
+    {
+     "id": "noudgasm-smoky-oud-07",
+     "name": "Oudgasm Smoky Oud 07",
+     "note": "2024"
+    },
+    {
+     "id": "nvanilla-candy-rock-sugar-42",
+     "name": "Vanilla Candy Rock Sugar 42",
+     "note": "2024"
+    },
+    {
+     "id": "nyum-boujee-marshmallow-81",
+     "name": "Yum Boujee Marshmallow 81",
+     "note": "2024"
+    },
+    {
+     "id": "ncapri-in-a-bottle-lemon-sugar-14",
+     "name": "Capri in a Bottle Lemon Sugar 14",
+     "note": "2024"
+    },
+    {
+     "id": "nmaldives-in-a-bottle-ylang-coco-20",
+     "name": "Maldives in a Bottle Ylang Coco 20",
+     "note": "2024"
+    },
+    {
+     "id": "nmarrakesh-in-a-bottle-orange-blossom-24",
+     "name": "Marrakesh in a Bottle Orange Blossom 24",
+     "note": "2024"
+    },
+    {
+     "id": "nmaui-in-a-bottle-sweet-banana-37",
+     "name": "Maui in a Bottle Sweet Banana 37",
+     "note": "2024"
+    },
+    {
+     "id": "nfleur-majesty-rose-royale-31",
+     "name": "Fleur Majesty Rose Royale 31",
+     "note": "2025"
+    },
+    {
+     "id": "noudgasm-chocolate-oud-11",
+     "name": "Oudgasm Chocolate Oud 11",
+     "note": "2025"
+    },
+    {
+     "id": "noudgasm-milky-musk-oud-30",
+     "name": "Oudgasm Milky Musk Oud 30",
+     "note": "2025"
+    },
+    {
+     "id": "nfreedom-musk-santal-34",
+     "name": "Freedom Musk Santal 34",
+     "note": "2025"
+    },
+    {
+     "id": "nfreedom-musk-matcha-45",
+     "name": "Freedom Musk Matcha 45",
+     "note": "2025"
+    },
+    {
+     "id": "nfreedom-musk-latte-41",
+     "name": "Freedom Musk Latte 41",
+     "note": "2025"
+    },
+    {
+     "id": "nfreedom-musk-bouquet-27",
+     "name": "Freedom Musk Bouquet 27",
+     "note": "2025"
+    },
+    {
+     "id": "neden-plush-pear-23",
+     "name": "Eden Plush Pear 23",
+     "note": "2026"
+    },
+    {
+     "id": "neden-sweet-peach-35",
+     "name": "Eden Sweet Peach 35",
+     "note": "2026"
+    },
+    {
+     "id": "nboujee-kitty-caramel-milk-22",
+     "name": "Boujee Kitty Caramel Milk 22",
+     "note": "2026"
+    }
+   ]
+  },
+  {
+   "id": "favourite-celebrity-perfumes",
+   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Perfumes\",\"title\":\"Favourite celebrity perfumes\",\"short\":\"Celebrity favourites\",\"picks\":[[\"White Diamonds\",\"Elizabeth Taylor\"],[\"Glow\",\"Jennifer Lopez\"],[\"Curious\",\"Britney Spears\"],[\"Fantasy\",\"Britney Spears\"],[\"Lovely\",\"Sarah Jessica Parker\"],[\"Heat\",\"Beyoncé\"],[\"Purr\",\"Katy Perry\"],[\"Someday\",\"Justin Bieber\"],[\"Wonderstruck\",\"Taylor Swift\"],[\"Fame\",\"Lady Gaga\"],[\"Pink Friday\",\"Nicki Minaj\"],[\"Cloud\",\"Ariana Grande\"],[\"Thank U, Next\",\"Ariana Grande\"],[\"Eilish\",\"Billie Eilish\"],[\"Fenty Eau de Parfum\",\"Rihanna\"]]}",
+   "t": "names",
+   "cat": "Misc",
+   "group": "Perfumes",
+   "short": "Celebrity favourites",
+   "title": "Favourite celebrity perfumes",
+   "items": [
+    {
+     "id": "nwhite-diamonds",
+     "name": "White Diamonds",
+     "note": "Elizabeth Taylor"
+    },
+    {
+     "id": "nglow",
+     "name": "Glow",
+     "note": "Jennifer Lopez"
+    },
+    {
+     "id": "ncurious",
+     "name": "Curious",
+     "note": "Britney Spears"
+    },
+    {
+     "id": "nfantasy",
+     "name": "Fantasy",
+     "note": "Britney Spears"
+    },
+    {
+     "id": "nlovely",
+     "name": "Lovely",
+     "note": "Sarah Jessica Parker"
+    },
+    {
+     "id": "nheat",
+     "name": "Heat",
+     "note": "Beyoncé"
+    },
+    {
+     "id": "npurr",
+     "name": "Purr",
+     "note": "Katy Perry"
+    },
+    {
+     "id": "nsomeday",
+     "name": "Someday",
+     "note": "Justin Bieber"
+    },
+    {
+     "id": "nwonderstruck",
+     "name": "Wonderstruck",
+     "note": "Taylor Swift"
+    },
+    {
+     "id": "nfame",
+     "name": "Fame",
+     "note": "Lady Gaga"
+    },
+    {
+     "id": "npink-friday",
+     "name": "Pink Friday",
+     "note": "Nicki Minaj"
+    },
+    {
+     "id": "ncloud",
+     "name": "Cloud",
+     "note": "Ariana Grande"
+    },
+    {
+     "id": "nthank-u-next",
+     "name": "Thank U, Next",
+     "note": "Ariana Grande"
+    },
+    {
+     "id": "neilish",
+     "name": "Eilish",
+     "note": "Billie Eilish"
+    },
+    {
+     "id": "nfenty-eau-de-parfum",
+     "name": "Fenty Eau de Parfum",
+     "note": "Rihanna"
+    }
+   ]
+  },
+  {
+   "id": "bath-body-works-candles",
+   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Perfumes\",\"title\":\"Bath & Body Works candles\",\"short\":\"Bath & Body Works candles\",\"picks\":[\"Mahogany Teakwood\",\"Eucalyptus Spearmint\",\"Champagne Toast\",\"Warm Vanilla Sugar\",\"Japanese Cherry Blossom\",\"A Thousand Wishes\",\"White Tea & Sage\",\"Into the Night\",\"Gingham\",\"Sweet Pea\",\"Ocean\",\"Midnight Blue Citrus\"]}",
+   "t": "names",
+   "cat": "Misc",
+   "group": "Perfumes",
+   "short": "Bath & Body Works candles",
+   "title": "Bath & Body Works candles",
+   "items": [
+    {
+     "id": "nmahogany-teakwood",
+     "name": "Mahogany Teakwood"
+    },
+    {
+     "id": "neucalyptus-spearmint",
+     "name": "Eucalyptus Spearmint"
+    },
+    {
+     "id": "nchampagne-toast",
+     "name": "Champagne Toast"
+    },
+    {
+     "id": "nwarm-vanilla-sugar",
+     "name": "Warm Vanilla Sugar"
+    },
+    {
+     "id": "njapanese-cherry-blossom",
+     "name": "Japanese Cherry Blossom"
+    },
+    {
+     "id": "na-thousand-wishes",
+     "name": "A Thousand Wishes"
+    },
+    {
+     "id": "nwhite-tea-sage",
+     "name": "White Tea & Sage"
+    },
+    {
+     "id": "ninto-the-night",
+     "name": "Into the Night"
+    },
+    {
+     "id": "ngingham",
+     "name": "Gingham"
+    },
+    {
+     "id": "nsweet-pea",
+     "name": "Sweet Pea"
+    },
+    {
+     "id": "nocean",
+     "name": "Ocean"
+    },
+    {
+     "id": "nmidnight-blue-citrus",
+     "name": "Midnight Blue Citrus"
     }
    ]
   },
@@ -19178,6 +20813,97 @@
    ],
    "group": "Directors",
    "short": "Films directed by Quentin Tarantino"
+  },
+  {
+   "id": "hobbymaxxing",
+   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Hobbies\",\"title\":\"Hobbymaxxing\",\"short\":\"Hobbymaxxing: crafts and hobbies\",\"picks\":[\"Crocheting\",\"Knitting\",\"Embroidery\",\"Sourdough baking\",\"Pottery\",\"Jigsaw puzzles\",\"Gardening\",\"Houseplants\",\"Film photography\",\"Journaling\",\"Watercolour painting\",\"LEGO building\",\"Diamond painting\",\"Candle making\",\"Pickleball\",\"Run clubs\",\"Book clubs\",\"Board games\",\"Bouldering\",\"Thrifting\"]}",
+   "t": "names",
+   "cat": "Misc",
+   "group": "Hobbies",
+   "short": "Hobbymaxxing: crafts and hobbies",
+   "title": "Hobbymaxxing",
+   "items": [
+    {
+     "id": "ncrocheting",
+     "name": "Crocheting"
+    },
+    {
+     "id": "nknitting",
+     "name": "Knitting"
+    },
+    {
+     "id": "nembroidery",
+     "name": "Embroidery"
+    },
+    {
+     "id": "nsourdough-baking",
+     "name": "Sourdough baking"
+    },
+    {
+     "id": "npottery",
+     "name": "Pottery"
+    },
+    {
+     "id": "njigsaw-puzzles",
+     "name": "Jigsaw puzzles"
+    },
+    {
+     "id": "ngardening",
+     "name": "Gardening"
+    },
+    {
+     "id": "nhouseplants",
+     "name": "Houseplants"
+    },
+    {
+     "id": "nfilm-photography",
+     "name": "Film photography"
+    },
+    {
+     "id": "njournaling",
+     "name": "Journaling"
+    },
+    {
+     "id": "nwatercolour-painting",
+     "name": "Watercolour painting"
+    },
+    {
+     "id": "nlego-building",
+     "name": "LEGO building"
+    },
+    {
+     "id": "ndiamond-painting",
+     "name": "Diamond painting"
+    },
+    {
+     "id": "ncandle-making",
+     "name": "Candle making"
+    },
+    {
+     "id": "npickleball",
+     "name": "Pickleball"
+    },
+    {
+     "id": "nrun-clubs",
+     "name": "Run clubs"
+    },
+    {
+     "id": "nbook-clubs",
+     "name": "Book clubs"
+    },
+    {
+     "id": "nboard-games",
+     "name": "Board games"
+    },
+    {
+     "id": "nbouldering",
+     "name": "Bouldering"
+    },
+    {
+     "id": "nthrifting",
+     "name": "Thrifting"
+    }
+   ]
   },
   {
    "id": "most-popular-authors",
@@ -20757,7 +22483,7 @@
      "id": "m765",
      "name": "Evil Dead II",
      "note": "1987",
-     "poster": "/xfPOxLpHexVguBauZRPpYs8hueo.jpg"
+     "poster": "/4zqCKJVHUolGs6C5AZwAZqLWixW.jpg"
     },
     {
      "id": "m378",
@@ -23336,7 +25062,7 @@
      "id": "m82690",
      "name": "Wreck-It Ralph",
      "note": "2012",
-     "poster": "/nrEupcBwf4O1zihCM34NoXusZDq.jpg"
+     "poster": "/zWoIgZ7mgmPkaZjG0102BSKFIqQ.jpg"
     },
     {
      "id": "m82693",
@@ -24068,6 +25794,77 @@
      "name": "1917",
      "note": "2019",
      "poster": "/iZf0KyrE25z1sage4SYFLCCrMi9.jpg"
+    }
+   ]
+  },
+  {
+   "id": "zodiac-signs",
+   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Astrology\",\"title\":\"Zodiac signs\",\"picks\":[[\"Aries\",\"♈ Mar 21 to Apr 19\"],[\"Taurus\",\"♉ Apr 20 to May 20\"],[\"Gemini\",\"♊ May 21 to Jun 20\"],[\"Cancer\",\"♋ Jun 21 to Jul 22\"],[\"Leo\",\"♌ Jul 23 to Aug 22\"],[\"Virgo\",\"♍ Aug 23 to Sep 22\"],[\"Libra\",\"♎ Sep 23 to Oct 22\"],[\"Scorpio\",\"♏ Oct 23 to Nov 21\"],[\"Sagittarius\",\"♐ Nov 22 to Dec 21\"],[\"Capricorn\",\"♑ Dec 22 to Jan 19\"],[\"Aquarius\",\"♒ Jan 20 to Feb 18\"],[\"Pisces\",\"♓ Feb 19 to Mar 20\"]]}",
+   "t": "names",
+   "cat": "Misc",
+   "group": "Astrology",
+   "short": "Zodiac signs",
+   "title": "Zodiac signs",
+   "items": [
+    {
+     "id": "naries",
+     "name": "Aries",
+     "note": "♈ Mar 21 to Apr 19"
+    },
+    {
+     "id": "ntaurus",
+     "name": "Taurus",
+     "note": "♉ Apr 20 to May 20"
+    },
+    {
+     "id": "ngemini",
+     "name": "Gemini",
+     "note": "♊ May 21 to Jun 20"
+    },
+    {
+     "id": "ncancer",
+     "name": "Cancer",
+     "note": "♋ Jun 21 to Jul 22"
+    },
+    {
+     "id": "nleo",
+     "name": "Leo",
+     "note": "♌ Jul 23 to Aug 22"
+    },
+    {
+     "id": "nvirgo",
+     "name": "Virgo",
+     "note": "♍ Aug 23 to Sep 22"
+    },
+    {
+     "id": "nlibra",
+     "name": "Libra",
+     "note": "♎ Sep 23 to Oct 22"
+    },
+    {
+     "id": "nscorpio",
+     "name": "Scorpio",
+     "note": "♏ Oct 23 to Nov 21"
+    },
+    {
+     "id": "nsagittarius",
+     "name": "Sagittarius",
+     "note": "♐ Nov 22 to Dec 21"
+    },
+    {
+     "id": "ncapricorn",
+     "name": "Capricorn",
+     "note": "♑ Dec 22 to Jan 19"
+    },
+    {
+     "id": "naquarius",
+     "name": "Aquarius",
+     "note": "♒ Jan 20 to Feb 18"
+    },
+    {
+     "id": "npisces",
+     "name": "Pisces",
+     "note": "♓ Feb 19 to Mar 20"
     }
    ]
   },
