@@ -42,6 +42,12 @@ const DEFS = [
     ["Kill Bill: Vol. 2", 2004], ["Before Sunset", 2004], ["The Dark Knight", 2008], ["The Twilight Saga: New Moon", 2009],
     ["The Hunger Games: Catching Fire", 2013], ["Paddington 2", 2017], ["Blade Runner 2049", 2017], ["Top Gun: Maverick", 2022],
     ["Dune: Part Two", 2024], ["Inside Out 2", 2024], ["Wicked: For Good", 2025] ] },
+  // Remakes of earlier films (the year is the remake's).
+  { type: "films", cat: "Franchises", title: "Movie remakes", short: "Remakes", picks: [
+    ["The Magnificent Seven", 1960], ["The Thing", 1982], ["Scarface", 1983], ["The Fly", 1986], ["Little Shop of Horrors", 1986],
+    ["Cape Fear", 1991], ["Scent of a Woman", 1992], ["Ocean's Eleven", 2001], ["The Ring", 2002], ["Insomnia", 2002], ["The Italian Job", 2003],
+    ["The Departed", 2006], ["True Grit", 2010], ["The Girl with the Dragon Tattoo", 2011], ["A Star Is Born", 2018], ["West Side Story", 2021],
+    ["Nosferatu", 2024] ] },
   { type: "films", cat: "Franchises", title: "Planet of the Apes films", picks: [
     ["Planet of the Apes", 1968], ["Beneath the Planet of the Apes", 1970], ["Escape from the Planet of the Apes", 1971],
     ["Conquest of the Planet of the Apes", 1972], ["Battle for the Planet of the Apes", 1973], ["Planet of the Apes", 2001],
@@ -113,6 +119,7 @@ const DEFS = [
   { type: "albums",     name: "Linkin Park" },
   { type: "albums",     name: "Michael Jackson" },
   { type: "albums",     name: "Black Sabbath" },
+  { type: "albums",     name: "Gorillaz" },
   { type: "tracks",     artist: "Lorde", albums: ["Pure Heroine", "Melodrama", "Virgin"] },
   //   "singles" ranks an artist's singles.
   { type: "singles",    name: "Spice Girls" },
@@ -180,6 +187,31 @@ const DEFS = [
   { type: "names", title: "Top pop girl groups", short: "Pop girl groups", picks: [
     "The Supremes", "The Ronettes", "Bananarama", "The Go-Go's", "The Bangles", "En Vogue", "TLC", "Spice Girls", "All Saints",
     "Destiny's Child", "Sugababes", "Girls Aloud", "The Pussycat Dolls", "Fifth Harmony", "Little Mix" ] },
+  { type: "names", group: "Gorillaz", title: "Gorillaz singles", short: "Singles", picks: [
+    ["Clint Eastwood", "2001"], ["19-2000", "2001"], ["Rock the House", "2001"], ["Tomorrow Comes Today", "2002"],
+    ["Feel Good Inc.", "2005"], ["Dare", "2005"], ["Dirty Harry", "2005"], ["Kids with Guns", "2006"], ["El Mañana", "2006"],
+    ["Stylo", "2010"], ["Superfast Jellyfish", "2010"], ["On Melancholy Hill", "2010"], ["Doncamatic", "2010"], ["Saturnz Barz", "2017"],
+    ["Andromeda", "2017"], ["Humility", "2018"], ["Tranz", "2018"], ["Momentary Bliss", "2020"], ["New Gold", "2022"],
+    ["Silent Running", "2023"] ] },
+  // Album of the Year winners grouped by the decade of the ceremony (the 1980s list runs from the 1980 to the 1989 Grammys).
+  { type: "curated", group: "Grammy Album of the Year", title: "Grammy Album of the Year: 1980s", short: "1980s ceremonies", picks: [
+    ["Billy Joel", "52nd Street"], ["Christopher Cross", "Christopher Cross"], ["John Lennon", "Double Fantasy"], ["Toto", "Toto IV"],
+    ["Michael Jackson", "Thriller"], ["Lionel Richie", "Can't Slow Down"], ["Phil Collins", "No Jacket Required"],
+    ["Paul Simon", "Graceland"], ["U2", "The Joshua Tree"], ["George Michael", "Faith"] ] },
+  { type: "curated", group: "Grammy Album of the Year", title: "Grammy Album of the Year: 1990s", short: "1990s ceremonies", picks: [
+    ["Bonnie Raitt", "Nick of Time"], ["Quincy Jones", "Back on the Block"], ["Natalie Cole", "Unforgettable... with Love"],
+    ["Eric Clapton", "Unplugged"], ["Whitney Houston", "The Bodyguard"], ["Tony Bennett", "MTV Unplugged"],
+    ["Alanis Morissette", "Jagged Little Pill"], ["Celine Dion", "Falling into You"], ["Bob Dylan", "Time Out of Mind"],
+    ["Lauryn Hill", "The Miseducation of Lauryn Hill"] ] },
+  { type: "curated", group: "Grammy Album of the Year", title: "Grammy Album of the Year: 2000s", short: "2000s ceremonies", picks: [
+    ["Santana", "Supernatural"], ["Steely Dan", "Two Against Nature"], ["Various Artists", "O Brother, Where Art Thou?"],
+    ["Norah Jones", "Come Away with Me"], ["OutKast", "Speakerboxxx/The Love Below"], ["Ray Charles", "Genius Loves Company"],
+    ["U2", "How to Dismantle an Atomic Bomb"], ["Dixie Chicks", "Taking the Long Way"], ["Herbie Hancock", "River: The Joni Letters"],
+    ["Robert Plant & Alison Krauss", "Raising Sand"] ] },
+  { type: "curated", group: "Grammy Album of the Year", title: "Grammy Album of the Year: 2010s", short: "2010s ceremonies", picks: [
+    ["Taylor Swift", "Fearless"], ["Arcade Fire", "The Suburbs"], ["Adele", "21"], ["Mumford & Sons", "Babel"],
+    ["Daft Punk", "Random Access Memories"], ["Beck", "Morning Phase"], ["Taylor Swift", "1989"], ["Adele", "25"],
+    ["Bruno Mars", "24K Magic"], ["Kacey Musgraves", "Golden Hour"] ] },
   { type: "names", title: "Top pop solo women", short: "Pop solo women", picks: [
     "Madonna", "Whitney Houston", "Mariah Carey", "Britney Spears", "Beyoncé", "Rihanna", "Lady Gaga", "Katy Perry",
     "Adele", "Taylor Swift", "Ariana Grande", "Dua Lipa", "Billie Eilish", "Olivia Rodrigo", "Sabrina Carpenter" ] },
@@ -252,6 +284,24 @@ const DEFS = [
     ["Pretty Cure", "Futari wa Pretty Cure", 2004], ["Magical Girl Lyrical Nanoha", "Magical Girl Lyrical Nanoha", 2004],
     ["Shugo Chara!", "Shugo Chara!", 2007], ["Puella Magi Madoka Magica", "Puella Magi Madoka Magica", 2011],
     ["Symphogear", "Symphogear", 2012], ["Little Witch Academia", "Little Witch Academia", 2017] ] },
+  // Anime characters: hand-picked name tiles (TMDB credits anime by voice actor, which would show the wrong photos).
+  { type: "names", cat: "TV", menu: "TV > Anime > Characters", title: "One Piece main characters", short: "One Piece", picks: [
+    "Monkey D. Luffy", "Roronoa Zoro", "Nami", "Usopp", "Sanji", "Tony Tony Chopper", "Nico Robin", "Franky", "Brook", "Jinbe",
+    "Nefertari Vivi", "Portgas D. Ace", "Sabo", "Shanks", "Trafalgar Law" ] },
+  { type: "names", cat: "TV", menu: "TV > Anime > Characters", title: "Sailor Moon characters", short: "Sailor Moon", picks: [
+    ["Sailor Moon", "Usagi Tsukino"], ["Sailor Mercury", "Ami Mizuno"], ["Sailor Mars", "Rei Hino"], ["Sailor Jupiter", "Makoto Kino"],
+    ["Sailor Venus", "Minako Aino"], ["Tuxedo Mask", "Mamoru Chiba"], ["Sailor Chibi Moon", "Chibiusa"], ["Sailor Pluto", "Setsuna Meioh"],
+    ["Sailor Uranus", "Haruka Tenoh"], ["Sailor Neptune", "Michiru Kaioh"], ["Sailor Saturn", "Hotaru Tomoe"], ["Luna", "Usagi's cat"],
+    ["Artemis", "Minako's cat"], ["Queen Beryl", "Dark Kingdom"] ] },
+  { type: "names", cat: "TV", menu: "TV > Anime > Characters", title: "Dragon Ball Z characters", short: "Dragon Ball Z", picks: [
+    "Goku", "Vegeta", "Gohan", "Piccolo", "Krillin", "Future Trunks", "Goten", "Bulma", "Chi-Chi", "Master Roshi", "Yamcha", "Tien",
+    "Android 18", "Frieza", "Cell", "Majin Buu" ] },
+  { type: "names", cat: "TV", menu: "TV > Anime > Characters", title: "Anime villains", short: "Villains (two per series at most)", picks: [
+    ["Frieza", "Dragon Ball Z"], ["Cell", "Dragon Ball Z"], ["Orochimaru", "Naruto"], ["Madara Uchiha", "Naruto"],
+    ["Sosuke Aizen", "Bleach"], ["Dio Brando", "JoJo's Bizarre Adventure"], ["Hisoka", "Hunter x Hunter"], ["Meruem", "Hunter x Hunter"],
+    ["Johan Liebert", "Monster"], ["Griffith", "Berserk"], ["Father", "Fullmetal Alchemist: Brotherhood"], ["Light Yagami", "Death Note"],
+    ["Shogo Makishima", "Psycho-Pass"], ["Donquixote Doflamingo", "One Piece"], ["Muzan Kibutsuji", "Demon Slayer"],
+    ["Ryomen Sukuna", "Jujutsu Kaisen"], ["All For One", "My Hero Academia"], ["Queen Beryl", "Sailor Moon"] ] },
   { type: "shows", menu: "TV > Anime", title: "Slice of life anime", short: "Slice of life", picks: [
     ["Azumanga Daioh", "Azumanga Daioh", 2002], ["Aria the Animation", "Aria the Animation", 2005], ["Lucky Star", "Lucky Star", 2007],
     ["Natsume's Book of Friends", "Natsume's Book of Friends", 2008], ["K-On!", "K-On!", 2009], ["Nichijou", "Nichijou", 2011],
@@ -318,6 +368,53 @@ const DEFS = [
     ["Lovely", "Sarah Jessica Parker"], ["Heat", "Beyoncé"], ["Purr", "Katy Perry"], ["Someday", "Justin Bieber"],
     ["Wonderstruck", "Taylor Swift"], ["Fame", "Lady Gaga"], ["Pink Friday", "Nicki Minaj"], ["Cloud", "Ariana Grande"],
     ["Thank U, Next", "Ariana Grande"], ["Eilish", "Billie Eilish"], ["Fenty Eau de Parfum", "Rihanna"] ] },
+  { type: "names", cat: "Misc", group: "Food", title: "Sushi types", picks: [
+    ["Nigiri", "fish over pressed rice"], ["Sashimi", "sliced fish, no rice"], ["Maki", "seaweed on the outside"],
+    ["Uramaki", "rice on the outside"], ["Temaki", "hand roll"], ["Gunkan", "seaweed-wrapped 'battleship'"],
+    ["Chirashi", "fish scattered over rice"], ["Inari", "rice in fried tofu"], ["Oshizushi", "pressed box sushi"],
+    ["Tamago", "sweet omelette"], ["Unagi", "grilled eel"], ["California roll", "crab, avocado, cucumber"],
+    ["Spicy tuna roll", "tuna with spicy mayo"], ["Dragon roll", "topped with eel and avocado"],
+    ["Rainbow roll", "topped with assorted fish"], ["Philadelphia roll", "salmon and cream cheese"] ] },
+  { type: "names", cat: "Misc", group: "Drinks", title: "Ontario breweries", picks: [
+    ["Steam Whistle", "Toronto"], ["Mill Street", "Toronto"], ["Amsterdam Brewery", "Toronto"], ["Great Lakes Brewery", "Toronto"],
+    ["Bellwoods Brewery", "Toronto"], ["Henderson Brewing", "Toronto"], ["Left Field Brewery", "Toronto"], ["Collective Arts", "Hamilton"],
+    ["Nickel Brook", "Burlington"], ["Bench Brewing", "Beamsville"], ["Sleeman", "Guelph"], ["Waterloo Brewing", "Kitchener"],
+    ["Side Launch", "Collingwood"], ["Flying Monkeys", "Barrie"], ["Muskoka Brewery", "Bracebridge"], ["Sawdust City", "Gravenhurst"],
+    ["Beau's", "Vankleek Hill"] ] },
+  { type: "names", cat: "Misc", group: "Hobbies", title: "Hobbymaxxing", short: "Hobbymaxxing: crafts and hobbies", picks: [
+    "Crocheting", "Knitting", "Embroidery", "Sourdough baking", "Pottery", "Jigsaw puzzles", "Gardening", "Houseplants", "Film photography",
+    "Journaling", "Watercolour painting", "LEGO building", "Diamond painting", "Candle making", "Pickleball", "Run clubs", "Book clubs",
+    "Board games", "Bouldering", "Thrifting" ] },
+  // Year-round three-wick candles (seasonal scents left out).
+  { type: "names", cat: "Misc", group: "Perfumes", title: "Bath & Body Works candles", short: "Bath & Body Works candles", picks: [
+    "Mahogany Teakwood", "Eucalyptus Spearmint", "Champagne Toast", "Warm Vanilla Sugar", "Japanese Cherry Blossom", "A Thousand Wishes",
+    "White Tea & Sage", "Into the Night", "Gingham", "Sweet Pea", "Ocean", "Midnight Blue Citrus" ] },
+  // Geography: a mix of big-name cities and popular travel spots.
+  { type: "names", cat: "Geography", group: "Capitals", title: "World capitals", picks: [
+    ["Tokyo", "Japan"], ["Seoul", "South Korea"], ["Beijing", "China"], ["Bangkok", "Thailand"], ["New Delhi", "India"],
+    ["Canberra", "Australia"], ["Paris", "France"], ["London", "United Kingdom"], ["Rome", "Italy"], ["Madrid", "Spain"],
+    ["Berlin", "Germany"], ["Athens", "Greece"], ["Ottawa", "Canada"], ["Washington, D.C.", "United States"], ["Mexico City", "Mexico"],
+    ["Buenos Aires", "Argentina"], ["Cairo", "Egypt"], ["Nairobi", "Kenya"] ] },
+  { type: "names", cat: "Geography", group: "Cities", title: "North American cities", short: "North America", picks: [
+    ["New York City", "New York"], ["Los Angeles", "California"], ["San Francisco", "California"], ["Las Vegas", "Nevada"],
+    ["Chicago", "Illinois"], ["New Orleans", "Louisiana"], ["Miami", "Florida"], ["Boston", "Massachusetts"], ["Seattle", "Washington"],
+    ["Nashville", "Tennessee"], ["Honolulu", "Hawaii"], ["Toronto", "Ontario"], ["Vancouver", "British Columbia"], ["Montreal", "Quebec"],
+    ["Quebec City", "Quebec"], ["Mexico City", "Mexico"], ["Cancún", "Mexico"] ] },
+  { type: "names", cat: "Geography", group: "Cities", title: "European cities", short: "Europe", picks: [
+    ["Paris", "France"], ["London", "England"], ["Rome", "Italy"], ["Venice", "Italy"], ["Florence", "Italy"], ["Barcelona", "Spain"],
+    ["Lisbon", "Portugal"], ["Amsterdam", "Netherlands"], ["Berlin", "Germany"], ["Prague", "Czechia"], ["Vienna", "Austria"],
+    ["Budapest", "Hungary"], ["Dublin", "Ireland"], ["Edinburgh", "Scotland"], ["Copenhagen", "Denmark"], ["Santorini", "Greece"],
+    ["Dubrovnik", "Croatia"], ["Istanbul", "Turkey"] ] },
+  { type: "names", cat: "Geography", group: "Cities", title: "Asian cities", short: "Asia", picks: [
+    ["Tokyo", "Japan"], ["Kyoto", "Japan"], ["Osaka", "Japan"], ["Seoul", "South Korea"], ["Busan", "South Korea"], ["Beijing", "China"],
+    ["Shanghai", "China"], ["Hong Kong", "China"], ["Taipei", "Taiwan"], ["Bangkok", "Thailand"], ["Singapore", "Singapore"],
+    ["Kuala Lumpur", "Malaysia"], ["Bali", "Indonesia"], ["Hanoi", "Vietnam"], ["Ho Chi Minh City", "Vietnam"], ["Manila", "Philippines"],
+    ["Mumbai", "India"], ["Dubai", "United Arab Emirates"] ] },
+  { type: "names", cat: "Geography", group: "Cities", title: "African cities", short: "Africa", picks: [
+    ["Cairo", "Egypt"], ["Luxor", "Egypt"], ["Marrakesh", "Morocco"], ["Casablanca", "Morocco"], ["Tunis", "Tunisia"], ["Dakar", "Senegal"],
+    ["Accra", "Ghana"], ["Lagos", "Nigeria"], ["Addis Ababa", "Ethiopia"], ["Nairobi", "Kenya"], ["Zanzibar", "Tanzania"],
+    ["Kigali", "Rwanda"], ["Victoria Falls", "Zimbabwe"], ["Johannesburg", "South Africa"], ["Durban", "South Africa"],
+    ["Cape Town", "South Africa"] ] },
   { type: "names", cat: "Misc", group: "Astrology", title: "Zodiac signs", picks: [
     ["Aries", "\u2648 Mar 21 to Apr 19"], ["Taurus", "\u2649 Apr 20 to May 20"], ["Gemini", "\u264A May 21 to Jun 20"],
     ["Cancer", "\u264B Jun 21 to Jul 22"], ["Leo", "\u264C Jul 23 to Aug 22"], ["Virgo", "\u264D Aug 23 to Sep 22"],
@@ -1201,7 +1298,8 @@ const MENU_ORDER = {
   Movies: ["Franchises", "Genres", "Actors", "Directors", "By year", "Awards", "Characters"],
   Books: ["Popular", "Genres", "Young adult", "Authors"],
   Games: ["Franchises", "Genres", "Consoles", "Awards"],
-  Misc: ["Food", "Perfumes", "Astrology"]
+  Misc: ["Food", "Drinks", "Perfumes", "Hobbies", "Astrology"],
+  Geography: ["Capitals", "Cities"]
 };
 const KIND_ORDER = { tv: 0, albums: 0, episodes: 1, singles: 1, cast: 2, filmcast: 2, names: 3, people: 3, tracks: 4 };
 function kindRank(list) {
