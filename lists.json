@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-16",
+ "generated": "2026-10-19",
  "lists": [
   {
    "id": "harry-potter-films",
@@ -951,7 +951,7 @@
      "id": "m277834",
      "name": "Moana",
      "note": "2016",
-     "poster": "/4JeejGugONWpJkbnvL12hVoYEDa.jpg"
+     "poster": "/m5MDZOIFEFlxGiLuAzWzFSsWcye.jpg"
     },
     {
      "id": "m527774",
@@ -1025,7 +1025,7 @@
      "id": "af1d08326-c23b-4b43-be3b-20b33ab10bf6",
      "name": "folklore",
      "note": "2020",
-     "img": "https://coverartarchive.org/release-group/f1d08326-c23b-4b43-be3b-20b33ab10bf6/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -1053,7 +1053,7 @@
      "id": "a0dcc84fb-c592-46e9-ba92-a52bb44dd553",
      "name": "Midnights",
      "note": "2022",
-     "img": "https://coverartarchive.org/release-group/0dcc84fb-c592-46e9-ba92-a52bb44dd553/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -3000,7 +3000,7 @@
      "id": "ab7d0d3f5-8980-32c6-995d-db6f8226f1ca",
      "name": "The Woods",
      "note": "2005",
-     "img": "https://coverartarchive.org/release-group/b7d0d3f5-8980-32c6-995d-db6f8226f1ca/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -3074,7 +3074,7 @@
      "id": "a67553e23-8dad-3792-b6f2-8fedd5650ff3",
      "name": "…And Justice for All",
      "note": "1988",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/67553e23-8dad-3792-b6f2-8fedd5650ff3/front-250",
      "sq": true
     },
     {
@@ -3448,7 +3448,7 @@
      "id": "aa5711a77-42d1-3f4c-830c-e27a96f0800f",
      "name": "Bad",
      "note": "1987",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/a5711a77-42d1-3f4c-830c-e27a96f0800f/front-250",
      "sq": true
     },
     {
@@ -4193,7 +4193,7 @@
      "id": "g8c66ffff-4f95-3d9b-9286-574123e6063d",
      "name": "Goodbye",
      "note": "1998",
-     "img": "https://coverartarchive.org/release-group/8c66ffff-4f95-3d9b-9286-574123e6063d/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -5432,7 +5432,7 @@
      "id": "cmarvin-gaye-what-s-going-on",
      "name": "What's Going On",
      "note": "Marvin Gaye, 1971",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/c1fa4d2c-ec62-37d5-b01d-6df7f8fd2c90/front-250",
      "sq": true
     },
     {
@@ -5453,7 +5453,7 @@
      "id": "cmary-j-blige-my-life",
      "name": "My Life",
      "note": "Mary J. Blige, 1994",
-     "img": "https://coverartarchive.org/release-group/49acb129-7958-3132-988c-bb85955b1c3c/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -5502,7 +5502,7 @@
      "id": "calicia-keys-songs-in-a-minor",
      "name": "Songs in A Minor",
      "note": "Alicia Keys, 2001",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/5701e04b-efc2-3429-b8af-c6596f1d08cf/front-250",
      "sq": true
     },
     {
@@ -5516,21 +5516,21 @@
      "id": "cfrank-ocean-channel-orange",
      "name": "Channel Orange",
      "note": "Frank Ocean, 2012",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/f8f4167d-897c-4b25-a171-638374d1dfa4/front-250",
      "sq": true
     },
     {
      "id": "cbeyonce-lemonade",
      "name": "Lemonade",
      "note": "Beyoncé, 2016",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/c1f22e07-7bdf-4a4f-8b50-7747c1091ef6/front-250",
      "sq": true
     },
     {
      "id": "csza-ctrl",
      "name": "Ctrl",
      "note": "SZA, 2017",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/8f892c1b-0709-4cf4-9711-493892a9eb9b/front-250",
      "sq": true
     }
    ]
@@ -5590,7 +5590,7 @@
      "id": "cnas-illmatic",
      "name": "Illmatic",
      "note": "Nas, 1994",
-     "img": "https://coverartarchive.org/release-group/28298e2c-4d70-3eed-a0f5-a3280c662b3d/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -5734,7 +5734,7 @@
      "id": "ctaylor-swift-1989",
      "name": "1989",
      "note": "Taylor Swift, 2014",
-     "img": "https://coverartarchive.org/release-group/4d9ec1c2-58ec-48a4-aa0a-916718adead0/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -5903,14 +5903,14 @@
      "id": "cpearl-jam-ten",
      "name": "Ten",
      "note": "Pearl Jam, 1991",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/cea5d18a-1924-3cda-bebc-38933834b25d/front-250",
      "sq": true
     },
     {
      "id": "cdr-dre-the-chronic",
      "name": "The Chronic",
      "note": "Dr. Dre, 1992",
-     "img": "https://coverartarchive.org/release-group/ad444843-7160-33d7-b0c9-fc99f2c14a99/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -5987,7 +5987,7 @@
      "id": "cradiohead-ok-computer",
      "name": "OK Computer",
      "note": "Radiohead, 1997",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/b1392450-e666-3926-a536-22c65f834433/front-250",
      "sq": true
     },
     {
@@ -6096,7 +6096,7 @@
      "id": "cgreen-day-american-idiot",
      "name": "American Idiot",
      "note": "Green Day, 2004",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/de9bf827-a9b0-348b-a7c9-556c03c3fb07/front-250",
      "sq": true
     },
     {
@@ -13638,7 +13638,7 @@
      "id": "p11863",
      "name": "Buffy Summers",
      "note": "Sarah Michelle Gellar",
-     "poster": "/grlhyolOpwZAnpeFvuTC3SQAUij.jpg"
+     "poster": "/xKe52w4tpv61ohz9iz75wNdzcwZ.jpg"
     },
     {
      "id": "p71675",
@@ -13977,7 +13977,7 @@
      "id": "p80860",
      "name": "Lord Anthony Bridgerton",
      "note": "Jonathan Bailey",
-     "poster": "/i9m6JsYKQot3kbMMFsvbEuFarvq.jpg"
+     "poster": "/kMtZtavkXIXYA0CnhaWqbNo6uFV.jpg"
     },
     {
      "id": "p2301682",
@@ -14594,7 +14594,7 @@
      "id": "m64682",
      "name": "The Great Gatsby",
      "note": "2013",
-     "poster": "/nimh1rrDDLhgpG8XAYoUZXHYwb6.jpg"
+     "poster": "/tyxfCBQv6Ap74jcu3xd7aBiaa29.jpg"
     },
     {
      "id": "m152601",
@@ -17434,7 +17434,7 @@
      "id": "m64682",
      "name": "The Great Gatsby",
      "note": "2013",
-     "poster": "/nimh1rrDDLhgpG8XAYoUZXHYwb6.jpg"
+     "poster": "/tyxfCBQv6Ap74jcu3xd7aBiaa29.jpg"
     },
     {
      "id": "m106646",
@@ -20722,7 +20722,7 @@
      "id": "m192",
      "name": "The Name of the Rose",
      "note": "1986",
-     "poster": "/2BuVu0j6v2kNY2gGxtO3sDGyob2.jpg"
+     "poster": "/fY8MAv403bTIfFPP4ePdHGHUKrp.jpg"
     },
     {
      "id": "m9671",
@@ -23377,7 +23377,7 @@
      "id": "m64682",
      "name": "The Great Gatsby",
      "note": "2013",
-     "poster": "/nimh1rrDDLhgpG8XAYoUZXHYwb6.jpg"
+     "poster": "/tyxfCBQv6Ap74jcu3xd7aBiaa29.jpg"
     },
     {
      "id": "m75656",
@@ -23550,7 +23550,7 @@
      "id": "m131631",
      "name": "The Hunger Games: Mockingjay - Part 1",
      "note": "2014",
-     "poster": "/4FAA18ZIja70d1Tu5hr5cj2q1sB.jpg"
+     "poster": "/meSGXQ8MXqiC8bXxkKu7lPqnu0L.jpg"
     },
     {
      "id": "m122917",
@@ -23728,7 +23728,7 @@
      "id": "m277834",
      "name": "Moana",
      "note": "2016",
-     "poster": "/4JeejGugONWpJkbnvL12hVoYEDa.jpg"
+     "poster": "/m5MDZOIFEFlxGiLuAzWzFSsWcye.jpg"
     },
     {
      "id": "m329865",
