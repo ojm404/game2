@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-19",
+ "generated": "2026-10-20",
  "lists": [
   {
    "id": "harry-potter-films",
@@ -1159,7 +1159,7 @@
      "id": "a67727253-f1c0-4243-9270-f9f1401c3b8c",
      "name": "Red (Taylor’s version)",
      "note": "2021",
-     "img": "https://coverartarchive.org/release-group/67727253-f1c0-4243-9270-f9f1401c3b8c/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -3078,7 +3078,7 @@
      "id": "a3da3cb84-2196-34bf-a67b-f9e4ee22ae76",
      "name": "Call the Doctor",
      "note": "1996",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/3da3cb84-2196-34bf-a67b-f9e4ee22ae76/front-250",
      "sq": true
     },
     {
@@ -3099,7 +3099,7 @@
      "id": "a1e6a0fd9-8c91-3ee7-941a-4af11765f25d",
      "name": "All Hands on the Bad One",
      "note": "2000",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/1e6a0fd9-8c91-3ee7-941a-4af11765f25d/front-250",
      "sq": true
     },
     {
@@ -4113,7 +4113,7 @@
   },
   {
    "id": "gorillaz-singles",
-   "src": "{\"type\":\"names\",\"group\":\"Gorillaz\",\"title\":\"Gorillaz singles\",\"short\":\"Singles\",\"picks\":[[\"Clint Eastwood\",\"2001\"],[\"19-2000\",\"2001\"],[\"Rock the House\",\"2001\"],[\"Tomorrow Comes Today\",\"2002\"],[\"Feel Good Inc.\",\"2005\"],[\"Dare\",\"2005\"],[\"Dirty Harry\",\"2005\"],[\"Kids with Guns\",\"2006\"],[\"El Mañana\",\"2006\"],[\"Stylo\",\"2010\"],[\"Superfast Jellyfish\",\"2010\"],[\"On Melancholy Hill\",\"2010\"],[\"Doncamatic\",\"2010\"],[\"Saturnz Barz\",\"2017\"],[\"Andromeda\",\"2017\"],[\"Humility\",\"2018\"],[\"Tranz\",\"2018\"],[\"Momentary Bliss\",\"2020\"],[\"New Gold\",\"2022\"],[\"Silent Running\",\"2023\"]]}",
+   "src": "{\"type\":\"names\",\"group\":\"Gorillaz\",\"title\":\"Gorillaz singles\",\"short\":\"Singles\",\"picks\":[[\"Clint Eastwood\",\"2001\"],[\"19-2000\",\"2001\"],[\"Rock the House\",\"2001\"],[\"Tomorrow Comes Today\",\"2002\"],[\"Feel Good Inc.\",\"2005\"],[\"Dare\",\"2005\"],[\"Dirty Harry\",\"2005\"],[\"Kids with Guns\",\"2006\"],[\"El Mañana\",\"2006\"],[\"Stylo\",\"2010\"],[\"Superfast Jellyfish\",\"2010\"],[\"On Melancholy Hill\",\"2010\"],[\"Doncamatic\",\"2010\"],[\"Saturnz Barz\",\"2017\"],[\"Andromeda\",\"2017\"],[\"Humility\",\"2018\"],[\"Tranz\",\"2018\"],[\"Momentary Bliss\",\"2020\"],[\"New Gold\",\"2022\"],[\"Silent Running\",\"2023\"],[\"The Happy Dictator\",\"2025\"],[\"The Manifesto\",\"2025\"],[\"The God of Lying\",\"2025\"],[\"Damascus\",\"2025\"],[\"The Hardest Thing\",\"2026\"],[\"Orange County\",\"2026\"]]}",
    "t": "names",
    "cat": "Music",
    "group": "Gorillaz",
@@ -4238,6 +4238,42 @@
      "id": "nsilent-running",
      "name": "Silent Running",
      "note": "2023",
+     "sq": true
+    },
+    {
+     "id": "nthe-happy-dictator",
+     "name": "The Happy Dictator",
+     "note": "2025",
+     "sq": true
+    },
+    {
+     "id": "nthe-manifesto",
+     "name": "The Manifesto",
+     "note": "2025",
+     "sq": true
+    },
+    {
+     "id": "nthe-god-of-lying",
+     "name": "The God of Lying",
+     "note": "2025",
+     "sq": true
+    },
+    {
+     "id": "ndamascus",
+     "name": "Damascus",
+     "note": "2025",
+     "sq": true
+    },
+    {
+     "id": "nthe-hardest-thing",
+     "name": "The Hardest Thing",
+     "note": "2026",
+     "sq": true
+    },
+    {
+     "id": "norange-county",
+     "name": "Orange County",
+     "note": "2026",
      "sq": true
     }
    ]
@@ -5831,7 +5867,7 @@
      "id": "cray-charles-genius-loves-company",
      "name": "Genius Loves Company",
      "note": "Ray Charles, 2004",
-     "img": "https://coverartarchive.org/release-group/775273bc-8a5b-3de7-8eb5-6c1ab4de8b68/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -6545,7 +6581,7 @@
      "id": "cpearl-jam-ten",
      "name": "Ten",
      "note": "Pearl Jam, 1991",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/cea5d18a-1924-3cda-bebc-38933834b25d/front-250",
      "sq": true
     },
     {
@@ -6696,7 +6732,7 @@
      "id": "ccoldplay-a-rush-of-blood-to-the-head",
      "name": "A Rush of Blood to the Head",
      "note": "Coldplay, 2002",
-     "img": "https://coverartarchive.org/release-group/120c786d-a3b2-3c19-b4ff-2b7b3b4435bf/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -6854,7 +6890,7 @@
      "id": "csza-ctrl",
      "name": "Ctrl",
      "note": "SZA, 2017",
-     "img": "https://coverartarchive.org/release-group/8f892c1b-0709-4cf4-9711-493892a9eb9b/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -7651,7 +7687,7 @@
   },
   {
    "id": "sailor-moon-characters",
-   "src": "{\"type\":\"names\",\"cat\":\"TV\",\"menu\":\"TV > Anime > Characters\",\"title\":\"Sailor Moon characters\",\"short\":\"Sailor Moon\",\"picks\":[[\"Sailor Moon\",\"Usagi Tsukino\"],[\"Sailor Mercury\",\"Ami Mizuno\"],[\"Sailor Mars\",\"Rei Hino\"],[\"Sailor Jupiter\",\"Makoto Kino\"],[\"Sailor Venus\",\"Minako Aino\"],[\"Tuxedo Mask\",\"Mamoru Chiba\"],[\"Sailor Chibi Moon\",\"Chibiusa\"],[\"Sailor Pluto\",\"Setsuna Meioh\"],[\"Sailor Uranus\",\"Haruka Tenoh\"],[\"Sailor Neptune\",\"Michiru Kaioh\"],[\"Sailor Saturn\",\"Hotaru Tomoe\"],[\"Luna\",\"Usagi's cat\"],[\"Artemis\",\"Minako's cat\"],[\"Queen Beryl\",\"Dark Kingdom\"]]}",
+   "src": "{\"type\":\"names\",\"cat\":\"TV\",\"menu\":\"TV > Anime > Characters\",\"title\":\"Sailor Moon characters\",\"short\":\"Sailor Moon\",\"picks\":[[\"Sailor Moon\",\"Usagi Tsukino\"],[\"Sailor Mercury\",\"Ami Mizuno\"],[\"Sailor Mars\",\"Rei Hino\"],[\"Sailor Jupiter\",\"Makoto Kino\"],[\"Sailor Venus\",\"Minako Aino\"],[\"Tuxedo Mask\",\"Mamoru Chiba\"],[\"Sailor Chibi Moon\",\"Chibiusa\"],[\"Sailor Pluto\",\"Setsuna Meioh\"],[\"Sailor Uranus\",\"Haruka Tenoh\"],[\"Sailor Neptune\",\"Michiru Kaioh\"],[\"Sailor Saturn\",\"Hotaru Tomoe\"],[\"Luna\",\"Usagi's cat\"],[\"Artemis\",\"Minako's cat\"],[\"Queen Beryl\",\"Dark Kingdom\"],[\"Jadeite\",\"Dark Kingdom\"],[\"Nephrite\",\"Dark Kingdom\"],[\"Zoisite\",\"Dark Kingdom\"],[\"Kunzite\",\"Dark Kingdom\"],[\"Queen Metaria\",\"Dark Kingdom\"]]}",
    "t": "names",
    "cat": "TV",
    "group": "Anime > Characters",
@@ -7726,6 +7762,31 @@
     {
      "id": "nqueen-beryl",
      "name": "Queen Beryl",
+     "note": "Dark Kingdom"
+    },
+    {
+     "id": "njadeite",
+     "name": "Jadeite",
+     "note": "Dark Kingdom"
+    },
+    {
+     "id": "nnephrite",
+     "name": "Nephrite",
+     "note": "Dark Kingdom"
+    },
+    {
+     "id": "nzoisite",
+     "name": "Zoisite",
+     "note": "Dark Kingdom"
+    },
+    {
+     "id": "nkunzite",
+     "name": "Kunzite",
+     "note": "Dark Kingdom"
+    },
+    {
+     "id": "nqueen-metaria",
+     "name": "Queen Metaria",
      "note": "Dark Kingdom"
     }
    ]
@@ -7807,11 +7868,11 @@
   },
   {
    "id": "anime-villains",
-   "src": "{\"type\":\"names\",\"cat\":\"TV\",\"menu\":\"TV > Anime > Characters\",\"title\":\"Anime villains\",\"short\":\"Villains (two per series at most)\",\"picks\":[[\"Frieza\",\"Dragon Ball Z\"],[\"Cell\",\"Dragon Ball Z\"],[\"Orochimaru\",\"Naruto\"],[\"Madara Uchiha\",\"Naruto\"],[\"Sosuke Aizen\",\"Bleach\"],[\"Dio Brando\",\"JoJo's Bizarre Adventure\"],[\"Hisoka\",\"Hunter x Hunter\"],[\"Meruem\",\"Hunter x Hunter\"],[\"Johan Liebert\",\"Monster\"],[\"Griffith\",\"Berserk\"],[\"Father\",\"Fullmetal Alchemist: Brotherhood\"],[\"Light Yagami\",\"Death Note\"],[\"Shogo Makishima\",\"Psycho-Pass\"],[\"Donquixote Doflamingo\",\"One Piece\"],[\"Muzan Kibutsuji\",\"Demon Slayer\"],[\"Ryomen Sukuna\",\"Jujutsu Kaisen\"],[\"All For One\",\"My Hero Academia\"],[\"Queen Beryl\",\"Sailor Moon\"]]}",
+   "src": "{\"type\":\"names\",\"cat\":\"TV\",\"menu\":\"TV > Anime > Characters\",\"title\":\"Anime villains\",\"short\":\"Villains\",\"picks\":[[\"Frieza\",\"Dragon Ball Z\"],[\"Cell\",\"Dragon Ball Z\"],[\"Orochimaru\",\"Naruto\"],[\"Madara Uchiha\",\"Naruto\"],[\"Sosuke Aizen\",\"Bleach\"],[\"Dio Brando\",\"JoJo's Bizarre Adventure\"],[\"Hisoka\",\"Hunter x Hunter\"],[\"Meruem\",\"Hunter x Hunter\"],[\"Johan Liebert\",\"Monster\"],[\"Griffith\",\"Berserk\"],[\"Father\",\"Fullmetal Alchemist: Brotherhood\"],[\"Light Yagami\",\"Death Note\"],[\"Shogo Makishima\",\"Psycho-Pass\"],[\"Donquixote Doflamingo\",\"One Piece\"],[\"Muzan Kibutsuji\",\"Demon Slayer\"],[\"Ryomen Sukuna\",\"Jujutsu Kaisen\"],[\"All For One\",\"My Hero Academia\"],[\"Queen Beryl\",\"Sailor Moon\"]]}",
    "t": "names",
    "cat": "TV",
    "group": "Anime > Characters",
-   "short": "Villains (two per series at most)",
+   "short": "Villains",
    "title": "Anime villains",
    "items": [
     {
@@ -8583,6 +8644,219 @@
      "id": "nphiladelphia-roll",
      "name": "Philadelphia roll",
      "note": "salmon and cream cheese"
+    }
+   ]
+  },
+  {
+   "id": "chip-flavours",
+   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Food\",\"title\":\"Chip flavours\",\"picks\":[\"Original\",\"All Dressed\",\"Ketchup\",\"Dill Pickle\",\"Salt & Vinegar\",\"Sour Cream & Onion\",\"Barbecue\",\"Salt & Pepper\",\"Jalapeño\",\"Honey Dijon\",\"Smokey Bacon\",\"Poutine\",\"Nacho Cheese\",\"Cool Ranch\",\"Sweet Chili Heat\"]}",
+   "t": "names",
+   "cat": "Misc",
+   "group": "Food",
+   "short": "Chip flavours",
+   "title": "Chip flavours",
+   "items": [
+    {
+     "id": "noriginal",
+     "name": "Original"
+    },
+    {
+     "id": "nall-dressed",
+     "name": "All Dressed"
+    },
+    {
+     "id": "nketchup",
+     "name": "Ketchup"
+    },
+    {
+     "id": "ndill-pickle",
+     "name": "Dill Pickle"
+    },
+    {
+     "id": "nsalt-vinegar",
+     "name": "Salt & Vinegar"
+    },
+    {
+     "id": "nsour-cream-onion",
+     "name": "Sour Cream & Onion"
+    },
+    {
+     "id": "nbarbecue",
+     "name": "Barbecue"
+    },
+    {
+     "id": "nsalt-pepper",
+     "name": "Salt & Pepper"
+    },
+    {
+     "id": "njalapeno",
+     "name": "Jalapeño"
+    },
+    {
+     "id": "nhoney-dijon",
+     "name": "Honey Dijon"
+    },
+    {
+     "id": "nsmokey-bacon",
+     "name": "Smokey Bacon"
+    },
+    {
+     "id": "npoutine",
+     "name": "Poutine"
+    },
+    {
+     "id": "nnacho-cheese",
+     "name": "Nacho Cheese"
+    },
+    {
+     "id": "ncool-ranch",
+     "name": "Cool Ranch"
+    },
+    {
+     "id": "nsweet-chili-heat",
+     "name": "Sweet Chili Heat"
+    }
+   ]
+  },
+  {
+   "id": "pop-tarts-flavours",
+   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Food\",\"title\":\"Pop-Tarts flavours\",\"picks\":[\"Frosted Strawberry\",\"Unfrosted Strawberry\",\"Frosted Brown Sugar Cinnamon\",\"Frosted Blueberry\",\"Frosted Cherry\",\"Frosted Raspberry\",\"Frosted Wild Berry\",\"Frosted Wild Grape\",\"Frosted S'mores\",\"Frosted Chocolate Fudge\",\"Frosted Cookies & Creme\",\"Frosted Confetti Cupcake\",\"Frosted Hot Fudge Sundae\",\"Frosted Cinnamon Roll\",\"Frosted Blue Raspberry\"]}",
+   "t": "names",
+   "cat": "Misc",
+   "group": "Food",
+   "short": "Pop-Tarts flavours",
+   "title": "Pop-Tarts flavours",
+   "items": [
+    {
+     "id": "nfrosted-strawberry",
+     "name": "Frosted Strawberry"
+    },
+    {
+     "id": "nunfrosted-strawberry",
+     "name": "Unfrosted Strawberry"
+    },
+    {
+     "id": "nfrosted-brown-sugar-cinnamon",
+     "name": "Frosted Brown Sugar Cinnamon"
+    },
+    {
+     "id": "nfrosted-blueberry",
+     "name": "Frosted Blueberry"
+    },
+    {
+     "id": "nfrosted-cherry",
+     "name": "Frosted Cherry"
+    },
+    {
+     "id": "nfrosted-raspberry",
+     "name": "Frosted Raspberry"
+    },
+    {
+     "id": "nfrosted-wild-berry",
+     "name": "Frosted Wild Berry"
+    },
+    {
+     "id": "nfrosted-wild-grape",
+     "name": "Frosted Wild Grape"
+    },
+    {
+     "id": "nfrosted-s-mores",
+     "name": "Frosted S'mores"
+    },
+    {
+     "id": "nfrosted-chocolate-fudge",
+     "name": "Frosted Chocolate Fudge"
+    },
+    {
+     "id": "nfrosted-cookies-creme",
+     "name": "Frosted Cookies & Creme"
+    },
+    {
+     "id": "nfrosted-confetti-cupcake",
+     "name": "Frosted Confetti Cupcake"
+    },
+    {
+     "id": "nfrosted-hot-fudge-sundae",
+     "name": "Frosted Hot Fudge Sundae"
+    },
+    {
+     "id": "nfrosted-cinnamon-roll",
+     "name": "Frosted Cinnamon Roll"
+    },
+    {
+     "id": "nfrosted-blue-raspberry",
+     "name": "Frosted Blue Raspberry"
+    }
+   ]
+  },
+  {
+   "id": "hot-dog-and-burger-condiments",
+   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Food\",\"title\":\"Hot dog and burger condiments\",\"short\":\"Condiments\",\"picks\":[\"Ketchup\",\"Yellow mustard\",\"Dijon mustard\",\"Mayonnaise\",\"Relish\",\"Hot sauce\",\"Barbecue sauce\",\"Sriracha mayo\",\"Sauerkraut\",\"Raw onions\",\"Fried onions\",\"Pickles\",\"Jalapeños\",\"Chili\",\"Cheese sauce\"]}",
+   "t": "names",
+   "cat": "Misc",
+   "group": "Food",
+   "short": "Condiments",
+   "title": "Hot dog and burger condiments",
+   "items": [
+    {
+     "id": "nketchup",
+     "name": "Ketchup"
+    },
+    {
+     "id": "nyellow-mustard",
+     "name": "Yellow mustard"
+    },
+    {
+     "id": "ndijon-mustard",
+     "name": "Dijon mustard"
+    },
+    {
+     "id": "nmayonnaise",
+     "name": "Mayonnaise"
+    },
+    {
+     "id": "nrelish",
+     "name": "Relish"
+    },
+    {
+     "id": "nhot-sauce",
+     "name": "Hot sauce"
+    },
+    {
+     "id": "nbarbecue-sauce",
+     "name": "Barbecue sauce"
+    },
+    {
+     "id": "nsriracha-mayo",
+     "name": "Sriracha mayo"
+    },
+    {
+     "id": "nsauerkraut",
+     "name": "Sauerkraut"
+    },
+    {
+     "id": "nraw-onions",
+     "name": "Raw onions"
+    },
+    {
+     "id": "nfried-onions",
+     "name": "Fried onions"
+    },
+    {
+     "id": "npickles",
+     "name": "Pickles"
+    },
+    {
+     "id": "njalapenos",
+     "name": "Jalapeños"
+    },
+    {
+     "id": "nchili",
+     "name": "Chili"
+    },
+    {
+     "id": "ncheese-sauce",
+     "name": "Cheese sauce"
     }
    ]
   },
@@ -14967,7 +15241,7 @@
   },
   {
    "id": "whedonverse-best-characters",
-   "src": "{\"type\":\"people\",\"cat\":\"TV\",\"group\":\"Whedonverse\",\"title\":\"Whedonverse best characters\",\"short\":\"Best characters across the Whedonverse\",\"picks\":[[\"Buffy Summers\",\"Buffy the Vampire Slayer\",\"Sarah Michelle Gellar\"],[\"Willow Rosenberg\",\"Buffy the Vampire Slayer\",\"Alyson Hannigan\"],[\"Spike\",\"Buffy the Vampire Slayer\",\"James Marsters\"],[\"Angel\",\"Angel\",\"David Boreanaz\"],[\"Cordelia Chase\",\"Angel\",\"Charisma Carpenter\"],[\"Wesley Wyndam-Pryce\",\"Angel\",\"Alexis Denisof\"],[\"Malcolm Reynolds\",\"Firefly\",\"Nathan Fillion\"],[\"River Tam\",\"Firefly\",\"Summer Glau\"],[\"Kaylee Frye\",\"Firefly\",\"Jewel Staite\"],[\"Echo\",\"Dollhouse\",\"Eliza Dushku\"],[\"Topher Brink\",\"Dollhouse\",\"Fran Kranz\"],[\"Dr. Horrible\",\"Dr. Horrible's Sing-Along Blog\",\"Neil Patrick Harris\"],[\"Penny\",\"Dr. Horrible's Sing-Along Blog\",\"Felicia Day\"]]}",
+   "src": "{\"type\":\"people\",\"cat\":\"TV\",\"group\":\"Whedonverse\",\"title\":\"Whedonverse best characters\",\"short\":\"Best characters across the Whedonverse\",\"picks\":[[\"Buffy Summers\",\"Buffy the Vampire Slayer\",\"Sarah Michelle Gellar\"],[\"Willow Rosenberg\",\"Buffy the Vampire Slayer\",\"Alyson Hannigan\"],[\"Xander Harris\",\"Buffy the Vampire Slayer\",\"Nicholas Brendon\"],[\"Rupert Giles\",\"Buffy the Vampire Slayer\",\"Anthony Head\"],[\"Spike\",\"Buffy the Vampire Slayer\",\"James Marsters\"],[\"Angel\",\"Angel\",\"David Boreanaz\"],[\"Cordelia Chase\",\"Angel\",\"Charisma Carpenter\"],[\"Wesley Wyndam-Pryce\",\"Angel\",\"Alexis Denisof\"],[\"Charles Gunn\",\"Angel\",\"J. August Richards\"],[\"Fred Burkle\",\"Angel\",\"Amy Acker\"],[\"Malcolm Reynolds\",\"Firefly\",\"Nathan Fillion\"],[\"Hoban 'Wash' Washburne\",\"Firefly\",\"Alan Tudyk\"],[\"Jayne Cobb\",\"Firefly\",\"Adam Baldwin\"],[\"Kaylee Frye\",\"Firefly\",\"Jewel Staite\"],[\"River Tam\",\"Firefly\",\"Summer Glau\"],[\"Echo\",\"Dollhouse\",\"Eliza Dushku\"],[\"Topher Brink\",\"Dollhouse\",\"Fran Kranz\"],[\"Adelle DeWitt\",\"Dollhouse\",\"Olivia Williams\"],[\"Dr. Horrible\",\"Dr. Horrible's Sing-Along Blog\",\"Neil Patrick Harris\"],[\"Captain Hammer\",\"Dr. Horrible's Sing-Along Blog\",\"Nathan Fillion\"],[\"Penny\",\"Dr. Horrible's Sing-Along Blog\",\"Felicia Day\"],[\"Moist\",\"Dr. Horrible's Sing-Along Blog\",\"Simon Helberg\"]]}",
    "t": "people",
    "cat": "TV",
    "group": "Whedonverse",
@@ -14985,6 +15259,18 @@
      "name": "Willow Rosenberg",
      "note": "Buffy the Vampire Slayer",
      "poster": "/bO16z8rAzZWdjCga8dcbJ2AFAh2.jpg"
+    },
+    {
+     "id": "hxander-harris",
+     "name": "Xander Harris",
+     "note": "Buffy the Vampire Slayer",
+     "poster": "/6O5sg97Fv07EzdWjpoq3lb8KnTM.jpg"
+    },
+    {
+     "id": "hrupert-giles",
+     "name": "Rupert Giles",
+     "note": "Buffy the Vampire Slayer",
+     "poster": "/eRfRWnoipu1Tx84fcuOEdfR87qb.jpg"
     },
     {
      "id": "hspike",
@@ -15011,22 +15297,46 @@
      "poster": "/luTHwbaLutoKYWJSpk2WyuPasvk.jpg"
     },
     {
+     "id": "hcharles-gunn",
+     "name": "Charles Gunn",
+     "note": "Angel",
+     "poster": "/6UdvucJpYJipyoTPlKLJU6u90CJ.jpg"
+    },
+    {
+     "id": "hfred-burkle",
+     "name": "Fred Burkle",
+     "note": "Angel",
+     "poster": "/9lpLwfscOoG4jyYIH761SRnm09U.jpg"
+    },
+    {
      "id": "hmalcolm-reynolds",
      "name": "Malcolm Reynolds",
      "note": "Firefly",
      "poster": "/aW6vCxkUZtwb6iH2Wf88Uq0XNVv.jpg"
     },
     {
-     "id": "hriver-tam",
-     "name": "River Tam",
+     "id": "hhoban-wash-washburne",
+     "name": "Hoban 'Wash' Washburne",
      "note": "Firefly",
-     "poster": "/rDTxblyw0AwU5oSeksgP7GwMyrF.jpg"
+     "poster": "/jUuUbPuMGonFT5E2pcs4alfqaCN.jpg"
+    },
+    {
+     "id": "hjayne-cobb",
+     "name": "Jayne Cobb",
+     "note": "Firefly",
+     "poster": "/lfbyJWNWGbiYfU0Yr1tjn6Trd2V.jpg"
     },
     {
      "id": "hkaylee-frye",
      "name": "Kaylee Frye",
      "note": "Firefly",
      "poster": "/ztxDIZvuPreUixO6ZPxwkCg2UlO.jpg"
+    },
+    {
+     "id": "hriver-tam",
+     "name": "River Tam",
+     "note": "Firefly",
+     "poster": "/rDTxblyw0AwU5oSeksgP7GwMyrF.jpg"
     },
     {
      "id": "hecho",
@@ -15041,16 +15351,34 @@
      "poster": "/hBg88mL38BxMpSjtMjSAz2NnDKg.jpg"
     },
     {
+     "id": "hadelle-dewitt",
+     "name": "Adelle DeWitt",
+     "note": "Dollhouse",
+     "poster": "/gnL7XGfLiAbhqIjV4jAGIZgySJh.jpg"
+    },
+    {
      "id": "hdr-horrible",
      "name": "Dr. Horrible",
      "note": "Dr. Horrible's Sing-Along Blog",
      "poster": "/r2twLWLwDpKJ7JyhWsD1YsL7rJV.jpg"
     },
     {
+     "id": "hcaptain-hammer",
+     "name": "Captain Hammer",
+     "note": "Dr. Horrible's Sing-Along Blog",
+     "poster": "/aW6vCxkUZtwb6iH2Wf88Uq0XNVv.jpg"
+    },
+    {
      "id": "hpenny",
      "name": "Penny",
      "note": "Dr. Horrible's Sing-Along Blog",
      "poster": "/wnggOc7HCXvjOGMbqxTftQbX6t5.jpg"
+    },
+    {
+     "id": "hmoist",
+     "name": "Moist",
+     "note": "Dr. Horrible's Sing-Along Blog",
+     "poster": "/zGrQSfQEw0vO6otWdSXiBHfwv7S.jpg"
     }
    ]
   },
@@ -19618,7 +19946,7 @@
   },
   {
    "id": "bath-body-works-candles",
-   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Perfumes\",\"title\":\"Bath & Body Works candles\",\"short\":\"Bath & Body Works candles\",\"picks\":[\"Mahogany Teakwood\",\"Eucalyptus Spearmint\",\"Champagne Toast\",\"Warm Vanilla Sugar\",\"Japanese Cherry Blossom\",\"A Thousand Wishes\",\"White Tea & Sage\",\"Into the Night\",\"Gingham\",\"Sweet Pea\",\"Ocean\",\"Midnight Blue Citrus\"]}",
+   "src": "{\"type\":\"names\",\"cat\":\"Misc\",\"group\":\"Perfumes\",\"title\":\"Bath & Body Works candles\",\"short\":\"Bath & Body Works candles\",\"picks\":[[\"Mahogany Teakwood\",\"Year-round\"],[\"Eucalyptus Spearmint\",\"Year-round\"],[\"Champagne Toast\",\"Year-round\"],[\"Warm Vanilla Sugar\",\"Year-round\"],[\"Japanese Cherry Blossom\",\"Year-round\"],[\"A Thousand Wishes\",\"Year-round\"],[\"White Tea & Sage\",\"Year-round\"],[\"Into the Night\",\"Year-round\"],[\"Gingham\",\"Year-round\"],[\"Sweet Pea\",\"Year-round\"],[\"Ocean\",\"Year-round\"],[\"Midnight Blue Citrus\",\"Year-round\"],[\"Leaves\",\"Fall\"],[\"Sweater Weather\",\"Fall\"],[\"Marshmallow Fireside\",\"Fall\"],[\"Pumpkin Pecan Waffles\",\"Fall\"],[\"Sweet Cinnamon Pumpkin\",\"Fall\"],[\"Flannel\",\"Fall\"],[\"Fresh Balsam\",\"Holiday\"],[\"Winter\",\"Holiday\"],[\"Vanilla Bean Noel\",\"Holiday\"],[\"Twisted Peppermint\",\"Holiday\"],[\"Winter Candy Apple\",\"Holiday\"],[\"Frosted Cranberry\",\"Holiday\"]]}",
    "t": "names",
    "cat": "Misc",
    "group": "Perfumes",
@@ -19627,51 +19955,123 @@
    "items": [
     {
      "id": "nmahogany-teakwood",
-     "name": "Mahogany Teakwood"
+     "name": "Mahogany Teakwood",
+     "note": "Year-round"
     },
     {
      "id": "neucalyptus-spearmint",
-     "name": "Eucalyptus Spearmint"
+     "name": "Eucalyptus Spearmint",
+     "note": "Year-round"
     },
     {
      "id": "nchampagne-toast",
-     "name": "Champagne Toast"
+     "name": "Champagne Toast",
+     "note": "Year-round"
     },
     {
      "id": "nwarm-vanilla-sugar",
-     "name": "Warm Vanilla Sugar"
+     "name": "Warm Vanilla Sugar",
+     "note": "Year-round"
     },
     {
      "id": "njapanese-cherry-blossom",
-     "name": "Japanese Cherry Blossom"
+     "name": "Japanese Cherry Blossom",
+     "note": "Year-round"
     },
     {
      "id": "na-thousand-wishes",
-     "name": "A Thousand Wishes"
+     "name": "A Thousand Wishes",
+     "note": "Year-round"
     },
     {
      "id": "nwhite-tea-sage",
-     "name": "White Tea & Sage"
+     "name": "White Tea & Sage",
+     "note": "Year-round"
     },
     {
      "id": "ninto-the-night",
-     "name": "Into the Night"
+     "name": "Into the Night",
+     "note": "Year-round"
     },
     {
      "id": "ngingham",
-     "name": "Gingham"
+     "name": "Gingham",
+     "note": "Year-round"
     },
     {
      "id": "nsweet-pea",
-     "name": "Sweet Pea"
+     "name": "Sweet Pea",
+     "note": "Year-round"
     },
     {
      "id": "nocean",
-     "name": "Ocean"
+     "name": "Ocean",
+     "note": "Year-round"
     },
     {
      "id": "nmidnight-blue-citrus",
-     "name": "Midnight Blue Citrus"
+     "name": "Midnight Blue Citrus",
+     "note": "Year-round"
+    },
+    {
+     "id": "nleaves",
+     "name": "Leaves",
+     "note": "Fall"
+    },
+    {
+     "id": "nsweater-weather",
+     "name": "Sweater Weather",
+     "note": "Fall"
+    },
+    {
+     "id": "nmarshmallow-fireside",
+     "name": "Marshmallow Fireside",
+     "note": "Fall"
+    },
+    {
+     "id": "npumpkin-pecan-waffles",
+     "name": "Pumpkin Pecan Waffles",
+     "note": "Fall"
+    },
+    {
+     "id": "nsweet-cinnamon-pumpkin",
+     "name": "Sweet Cinnamon Pumpkin",
+     "note": "Fall"
+    },
+    {
+     "id": "nflannel",
+     "name": "Flannel",
+     "note": "Fall"
+    },
+    {
+     "id": "nfresh-balsam",
+     "name": "Fresh Balsam",
+     "note": "Holiday"
+    },
+    {
+     "id": "nwinter",
+     "name": "Winter",
+     "note": "Holiday"
+    },
+    {
+     "id": "nvanilla-bean-noel",
+     "name": "Vanilla Bean Noel",
+     "note": "Holiday"
+    },
+    {
+     "id": "ntwisted-peppermint",
+     "name": "Twisted Peppermint",
+     "note": "Holiday"
+    },
+    {
+     "id": "nwinter-candy-apple",
+     "name": "Winter Candy Apple",
+     "note": "Holiday"
+    },
+    {
+     "id": "nfrosted-cranberry",
+     "name": "Frosted Cranberry",
+     "note": "Holiday"
     }
    ]
   },
