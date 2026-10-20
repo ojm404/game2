@@ -192,7 +192,8 @@ const DEFS = [
     ["Feel Good Inc.", "2005"], ["Dare", "2005"], ["Dirty Harry", "2005"], ["Kids with Guns", "2006"], ["El Mañana", "2006"],
     ["Stylo", "2010"], ["Superfast Jellyfish", "2010"], ["On Melancholy Hill", "2010"], ["Doncamatic", "2010"], ["Saturnz Barz", "2017"],
     ["Andromeda", "2017"], ["Humility", "2018"], ["Tranz", "2018"], ["Momentary Bliss", "2020"], ["New Gold", "2022"],
-    ["Silent Running", "2023"] ] },
+    ["Silent Running", "2023"], ["The Happy Dictator", "2025"], ["The Manifesto", "2025"], ["The God of Lying", "2025"], ["Damascus", "2025"],
+    ["The Hardest Thing", "2026"], ["Orange County", "2026"] ] },
   // Album of the Year winners grouped by the decade of the ceremony (the 1980s list runs from the 1980 to the 1989 Grammys).
   { type: "curated", group: "Grammy Album of the Year", title: "Grammy Album of the Year: 1980s", short: "1980s ceremonies", picks: [
     ["Billy Joel", "52nd Street"], ["Christopher Cross", "Christopher Cross"], ["John Lennon", "Double Fantasy"], ["Toto", "Toto IV"],
@@ -292,11 +293,12 @@ const DEFS = [
     ["Sailor Moon", "Usagi Tsukino"], ["Sailor Mercury", "Ami Mizuno"], ["Sailor Mars", "Rei Hino"], ["Sailor Jupiter", "Makoto Kino"],
     ["Sailor Venus", "Minako Aino"], ["Tuxedo Mask", "Mamoru Chiba"], ["Sailor Chibi Moon", "Chibiusa"], ["Sailor Pluto", "Setsuna Meioh"],
     ["Sailor Uranus", "Haruka Tenoh"], ["Sailor Neptune", "Michiru Kaioh"], ["Sailor Saturn", "Hotaru Tomoe"], ["Luna", "Usagi's cat"],
-    ["Artemis", "Minako's cat"], ["Queen Beryl", "Dark Kingdom"] ] },
+    ["Artemis", "Minako's cat"], ["Queen Beryl", "Dark Kingdom"], ["Jadeite", "Dark Kingdom"], ["Nephrite", "Dark Kingdom"],
+    ["Zoisite", "Dark Kingdom"], ["Kunzite", "Dark Kingdom"], ["Queen Metaria", "Dark Kingdom"] ] },
   { type: "names", cat: "TV", menu: "TV > Anime > Characters", title: "Dragon Ball Z characters", short: "Dragon Ball Z", picks: [
     "Goku", "Vegeta", "Gohan", "Piccolo", "Krillin", "Future Trunks", "Goten", "Bulma", "Chi-Chi", "Master Roshi", "Yamcha", "Tien",
     "Android 18", "Frieza", "Cell", "Majin Buu" ] },
-  { type: "names", cat: "TV", menu: "TV > Anime > Characters", title: "Anime villains", short: "Villains (two per series at most)", picks: [
+  { type: "names", cat: "TV", menu: "TV > Anime > Characters", title: "Anime villains", short: "Villains", picks: [
     ["Frieza", "Dragon Ball Z"], ["Cell", "Dragon Ball Z"], ["Orochimaru", "Naruto"], ["Madara Uchiha", "Naruto"],
     ["Sosuke Aizen", "Bleach"], ["Dio Brando", "JoJo's Bizarre Adventure"], ["Hisoka", "Hunter x Hunter"], ["Meruem", "Hunter x Hunter"],
     ["Johan Liebert", "Monster"], ["Griffith", "Berserk"], ["Father", "Fullmetal Alchemist: Brotherhood"], ["Light Yagami", "Death Note"],
@@ -375,6 +377,16 @@ const DEFS = [
     ["Tamago", "sweet omelette"], ["Unagi", "grilled eel"], ["California roll", "crab, avocado, cucumber"],
     ["Spicy tuna roll", "tuna with spicy mayo"], ["Dragon roll", "topped with eel and avocado"],
     ["Rainbow roll", "topped with assorted fish"], ["Philadelphia roll", "salmon and cream cheese"] ] },
+  { type: "names", cat: "Misc", group: "Food", title: "Chip flavours", picks: [
+    "Original", "All Dressed", "Ketchup", "Dill Pickle", "Salt & Vinegar", "Sour Cream & Onion", "Barbecue", "Salt & Pepper", "Jalapeño",
+    "Honey Dijon", "Smokey Bacon", "Poutine", "Nacho Cheese", "Cool Ranch", "Sweet Chili Heat" ] },
+  { type: "names", cat: "Misc", group: "Food", title: "Pop-Tarts flavours", picks: [
+    "Frosted Strawberry", "Unfrosted Strawberry", "Frosted Brown Sugar Cinnamon", "Frosted Blueberry", "Frosted Cherry", "Frosted Raspberry",
+    "Frosted Wild Berry", "Frosted Wild Grape", "Frosted S'mores", "Frosted Chocolate Fudge", "Frosted Cookies & Creme",
+    "Frosted Confetti Cupcake", "Frosted Hot Fudge Sundae", "Frosted Cinnamon Roll", "Frosted Blue Raspberry" ] },
+  { type: "names", cat: "Misc", group: "Food", title: "Hot dog and burger condiments", short: "Condiments", picks: [
+    "Ketchup", "Yellow mustard", "Dijon mustard", "Mayonnaise", "Relish", "Hot sauce", "Barbecue sauce", "Sriracha mayo", "Sauerkraut",
+    "Raw onions", "Fried onions", "Pickles", "Jalapeños", "Chili", "Cheese sauce" ] },
   { type: "names", cat: "Misc", group: "Drinks", title: "Ontario breweries", picks: [
     ["Steam Whistle", "Toronto"], ["Mill Street", "Toronto"], ["Amsterdam Brewery", "Toronto"], ["Great Lakes Brewery", "Toronto"],
     ["Bellwoods Brewery", "Toronto"], ["Henderson Brewing", "Toronto"], ["Left Field Brewery", "Toronto"], ["Collective Arts", "Hamilton"],
@@ -386,9 +398,15 @@ const DEFS = [
     "Journaling", "Watercolour painting", "LEGO building", "Diamond painting", "Candle making", "Pickleball", "Run clubs", "Book clubs",
     "Board games", "Bouldering", "Thrifting" ] },
   // Year-round three-wick candles (seasonal scents left out).
+  // Three-wick candles: the year-round favourites, then popular seasonal ones (shown under each name).
   { type: "names", cat: "Misc", group: "Perfumes", title: "Bath & Body Works candles", short: "Bath & Body Works candles", picks: [
-    "Mahogany Teakwood", "Eucalyptus Spearmint", "Champagne Toast", "Warm Vanilla Sugar", "Japanese Cherry Blossom", "A Thousand Wishes",
-    "White Tea & Sage", "Into the Night", "Gingham", "Sweet Pea", "Ocean", "Midnight Blue Citrus" ] },
+    ["Mahogany Teakwood", "Year-round"], ["Eucalyptus Spearmint", "Year-round"], ["Champagne Toast", "Year-round"],
+    ["Warm Vanilla Sugar", "Year-round"], ["Japanese Cherry Blossom", "Year-round"], ["A Thousand Wishes", "Year-round"],
+    ["White Tea & Sage", "Year-round"], ["Into the Night", "Year-round"], ["Gingham", "Year-round"], ["Sweet Pea", "Year-round"],
+    ["Ocean", "Year-round"], ["Midnight Blue Citrus", "Year-round"], ["Leaves", "Fall"], ["Sweater Weather", "Fall"],
+    ["Marshmallow Fireside", "Fall"], ["Pumpkin Pecan Waffles", "Fall"], ["Sweet Cinnamon Pumpkin", "Fall"], ["Flannel", "Fall"],
+    ["Fresh Balsam", "Holiday"], ["Winter", "Holiday"], ["Vanilla Bean Noel", "Holiday"], ["Twisted Peppermint", "Holiday"],
+    ["Winter Candy Apple", "Holiday"], ["Frosted Cranberry", "Holiday"] ] },
   // Geography: a mix of big-name cities and popular travel spots.
   { type: "names", cat: "Geography", group: "Capitals", title: "World capitals", picks: [
     ["Tokyo", "Japan"], ["Seoul", "South Korea"], ["Beijing", "China"], ["Bangkok", "Thailand"], ["New Delhi", "India"],
@@ -625,10 +643,14 @@ const DEFS = [
   { type: "cast",       name: "Angel", year: 1999, perSeason: 6, count: 12, group: "Whedonverse", short: "Angel characters" },
   { type: "people", cat: "TV", group: "Whedonverse", title: "Whedonverse best characters", short: "Best characters across the Whedonverse", picks: [
     ["Buffy Summers", "Buffy the Vampire Slayer", "Sarah Michelle Gellar"], ["Willow Rosenberg", "Buffy the Vampire Slayer", "Alyson Hannigan"],
+    ["Xander Harris", "Buffy the Vampire Slayer", "Nicholas Brendon"], ["Rupert Giles", "Buffy the Vampire Slayer", "Anthony Head"],
     ["Spike", "Buffy the Vampire Slayer", "James Marsters"], ["Angel", "Angel", "David Boreanaz"], ["Cordelia Chase", "Angel", "Charisma Carpenter"],
-    ["Wesley Wyndam-Pryce", "Angel", "Alexis Denisof"], ["Malcolm Reynolds", "Firefly", "Nathan Fillion"], ["River Tam", "Firefly", "Summer Glau"],
-    ["Kaylee Frye", "Firefly", "Jewel Staite"], ["Echo", "Dollhouse", "Eliza Dushku"], ["Topher Brink", "Dollhouse", "Fran Kranz"],
-    ["Dr. Horrible", "Dr. Horrible's Sing-Along Blog", "Neil Patrick Harris"], ["Penny", "Dr. Horrible's Sing-Along Blog", "Felicia Day"] ] },
+    ["Wesley Wyndam-Pryce", "Angel", "Alexis Denisof"], ["Charles Gunn", "Angel", "J. August Richards"], ["Fred Burkle", "Angel", "Amy Acker"],
+    ["Malcolm Reynolds", "Firefly", "Nathan Fillion"], ["Hoban 'Wash' Washburne", "Firefly", "Alan Tudyk"], ["Jayne Cobb", "Firefly", "Adam Baldwin"],
+    ["Kaylee Frye", "Firefly", "Jewel Staite"], ["River Tam", "Firefly", "Summer Glau"], ["Echo", "Dollhouse", "Eliza Dushku"],
+    ["Topher Brink", "Dollhouse", "Fran Kranz"], ["Adelle DeWitt", "Dollhouse", "Olivia Williams"],
+    ["Dr. Horrible", "Dr. Horrible's Sing-Along Blog", "Neil Patrick Harris"], ["Captain Hammer", "Dr. Horrible's Sing-Along Blog", "Nathan Fillion"],
+    ["Penny", "Dr. Horrible's Sing-Along Blog", "Felicia Day"], ["Moist", "Dr. Horrible's Sing-Along Blog", "Simon Helberg"] ] },
   { type: "cast",       name: "Bridgerton", perSeason: 8, count: 18, exclude: ["Whistledown"] },
   // Hand-picked, because each Simpsons voice actor plays many characters and TMDB credits them as one combined role.
   { type: "names", cat: "TV", group: "The Simpsons", title: "The Simpsons main characters", short: "Main characters", picks: [
