@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-20",
+ "generated": "2026-10-26",
  "lists": [
   {
    "id": "harry-potter-films",
@@ -1159,7 +1159,7 @@
      "id": "a67727253-f1c0-4243-9270-f9f1401c3b8c",
      "name": "Red (Taylor’s version)",
      "note": "2021",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/67727253-f1c0-4243-9270-f9f1401c3b8c/front-250",
      "sq": true
     },
     {
@@ -3071,7 +3071,7 @@
      "id": "ae652c8d0-a4fa-35a0-afaf-01860fe2bdf6",
      "name": "Sleater-Kinney",
      "note": "1995",
-     "img": "https://coverartarchive.org/release-group/e652c8d0-a4fa-35a0-afaf-01860fe2bdf6/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -4093,6 +4093,13 @@
      "name": "Song Machine, Season One: Strange Timez",
      "note": "2020",
      "img": "https://coverartarchive.org/release-group/bd8866c2-3d48-4c4e-97d8-442ec2792b40/front-250",
+     "sq": true
+    },
+    {
+     "id": "a84312c94-5d05-46dc-b94b-d98caa0534a3",
+     "name": "Gorillaz: Deep Cuts",
+     "note": "2023",
+     "img": null,
      "sq": true
     },
     {
@@ -5867,7 +5874,7 @@
      "id": "cray-charles-genius-loves-company",
      "name": "Genius Loves Company",
      "note": "Ray Charles, 2004",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/775273bc-8a5b-3de7-8eb5-6c1ab4de8b68/front-250",
      "sq": true
     },
     {
@@ -6131,7 +6138,7 @@
      "id": "cmary-j-blige-my-life",
      "name": "My Life",
      "note": "Mary J. Blige, 1994",
-     "img": "https://coverartarchive.org/release-group/49acb129-7958-3132-988c-bb85955b1c3c/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -6690,7 +6697,7 @@
      "id": "cradiohead-kid-a",
      "name": "Kid A",
      "note": "Radiohead, 2000",
-     "img": "https://coverartarchive.org/release-group/e75c0549-ad55-39e3-8025-c72c5d4a3c5d/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -6725,14 +6732,14 @@
      "id": "cjay-z-the-blueprint",
      "name": "The Blueprint",
      "note": "Jay-Z, 2001",
-     "img": "https://coverartarchive.org/release-group/11ae8c9c-27c1-3308-9761-edb87c8f54ea/front-250",
+     "img": null,
      "sq": true
     },
     {
      "id": "ccoldplay-a-rush-of-blood-to-the-head",
      "name": "A Rush of Blood to the Head",
      "note": "Coldplay, 2002",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/120c786d-a3b2-3c19-b4ff-2b7b3b4435bf/front-250",
      "sq": true
     },
     {
@@ -6876,7 +6883,7 @@
      "id": "cfrank-ocean-blonde",
      "name": "Blonde",
      "note": "Frank Ocean, 2016",
-     "img": "https://coverartarchive.org/release-group/0da340a0-6ad7-4fc2-a272-6f94393a7831/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -6890,7 +6897,7 @@
      "id": "csza-ctrl",
      "name": "Ctrl",
      "note": "SZA, 2017",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/8f892c1b-0709-4cf4-9711-493892a9eb9b/front-250",
      "sq": true
     },
     {
@@ -7384,7 +7391,7 @@
      "id": "t70523",
      "name": "Dark",
      "note": "2017",
-     "poster": "/wSXJHO9WHLb0aCwvQrtco7vOmWA.jpg"
+     "poster": "/wiiyc3m6HKaQhFBYeuM7ySCNQsG.jpg"
     },
     {
      "id": "t75006",
@@ -8335,7 +8342,7 @@
      "id": "t31724",
      "name": "Code Geass",
      "note": "2006",
-     "poster": "/3mGPTXdavSQzikuLG4m9Bp6Ucye.jpg"
+     "poster": "/vf1h4GamzZJZ45ZZRgJccxYu5ri.jpg"
     },
     {
      "id": "t21729",
@@ -11559,7 +11566,7 @@
      "id": "p26085",
      "name": "Jack O'Neill",
      "note": "Richard Dean Anderson",
-     "poster": "/hHCSMRiI4OMT1AxgWQhugtipvy2.jpg"
+     "poster": "/e1wWDXNuL44suxtb1ZTCWEmEVtl.jpg"
     },
     {
      "id": "p15863",
@@ -13191,7 +13198,7 @@
      "id": "e85987",
      "name": "Pilot",
      "note": "Episode 1",
-     "poster": "/avlrGgZhwkszL6xxE2ThNFs3CZj.jpg",
+     "poster": "/Slm6IczgHJWpR4dIv33IRtNrq5.jpg",
      "wide": true
     },
     {
@@ -13219,7 +13226,7 @@
      "id": "e86034",
      "name": "The One with the East German Laundry Detergent",
      "note": "Episode 5",
-     "poster": "/1JLPosNtPdj83jOwwPCBRhuJu3m.jpg",
+     "poster": "/m2PCayytQnoTOf3u4R6Tt737gFL.jpg",
      "wide": true
     },
     {
@@ -13261,7 +13268,7 @@
      "id": "e86066",
      "name": "The One with Mrs. Bing",
      "note": "Episode 11",
-     "poster": "/pCStDEs8Ga900w8dz8Forg4PCjL.jpg",
+     "poster": "/58nJXiv4gVLpaxKmI937ppmbCgy.jpg",
      "wide": true
     },
     {
@@ -15471,7 +15478,7 @@
     },
     {
      "id": "p2301682",
-     "name": "Francesca Bridgerton",
+     "name": "Lady Francesca Stirling",
      "note": "Hannah Dodd",
      "poster": "/74dHuedzHpVqEr0fVvi1o10MQnq.jpg"
     },
@@ -17524,7 +17531,7 @@
      "id": "bfrankenstein-mary-shelley",
      "name": "Frankenstein",
      "note": "Mary Shelley",
-     "img": "https://covers.openlibrary.org/b/id/15118068-M.jpg"
+     "img": "https://covers.openlibrary.org/b/id/15266215-M.jpg"
     },
     {
      "id": "bthe-war-of-the-worlds-h-g-wells",
@@ -19355,7 +19362,7 @@
      "id": "m224141",
      "name": "Into the Woods",
      "note": "2014",
-     "poster": "/bINGDDuvUnZyde2sIcSx41IE5b6.jpg"
+     "poster": "/pf0TdnITu380Zp8DMQx0jcwDsAS.jpg"
     },
     {
      "id": "m446354",
@@ -19474,7 +19481,7 @@
      "id": "m1368337",
      "name": "The Odyssey",
      "note": "2026",
-     "poster": "/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg"
+     "poster": "/krVa7rKCQb4OBfsr2LTJv4rTz5q.jpg"
     }
    ],
    "group": "Actors",
@@ -20923,7 +20930,7 @@
      "id": "m1368337",
      "name": "The Odyssey",
      "note": "2026",
-     "poster": "/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg"
+     "poster": "/krVa7rKCQb4OBfsr2LTJv4rTz5q.jpg"
     }
    ],
    "group": "Directors",
@@ -22343,7 +22350,7 @@
      "id": "m387",
      "name": "Das Boot",
      "note": "1981",
-     "poster": "/u8FhQPncOAkwcei2OI9orPWhV6K.jpg"
+     "poster": "/hNfAYNCMRthp9iruF5Q6S1z4bVA.jpg"
     },
     {
      "id": "m11281",
@@ -23044,7 +23051,7 @@
      "id": "m11216",
      "name": "Cinema Paradiso",
      "note": "1988",
-     "poster": "/9JhfVOveaY00o8njQu2Xrp4YWud.jpg"
+     "poster": "/aRgPnx4aPS96f7CnhJH7IG5dN1A.jpg"
     },
     {
      "id": "m12144",
@@ -23549,7 +23556,7 @@
      "id": "m788",
      "name": "Mrs. Doubtfire",
      "note": "1993",
-     "poster": "/shHrSmXS5140o6sQzgzXxn3KqSm.jpg"
+     "poster": "/ualFkVe5zYDphGuJv37byW2Suim.jpg"
     },
     {
      "id": "m424",
@@ -23864,7 +23871,7 @@
      "id": "m75",
      "name": "Mars Attacks!",
      "note": "1996",
-     "poster": "/hll4O5vSAfnZDb6JbnP06GPtz7b.jpg"
+     "poster": "/m6BxrwE9RL6ly1B7841n7UTSCQE.jpg"
     },
     {
      "id": "m4232",
@@ -24232,7 +24239,7 @@
      "id": "m107",
      "name": "Snatch",
      "note": "2000",
-     "poster": "/kJZoAHq1SLDdWjeNGtlHAnGpmFV.jpg"
+     "poster": "/kIBMvdZ3qLUycHLbT6IFs7UtaCq.jpg"
     },
     {
      "id": "m641",
@@ -24850,7 +24857,7 @@
      "id": "m1417",
      "name": "Pan's Labyrinth",
      "note": "2006",
-     "poster": "/7wb2Ldp0oAx1lcZvffq9RfWoI2h.jpg"
+     "poster": "/khBQ6nN5FLfg9XgPXIZDkABJjqo.jpg"
     },
     {
      "id": "m1124",
@@ -24981,7 +24988,7 @@
      "id": "m6479",
      "name": "I Am Legend",
      "note": "2007",
-     "poster": "/iPDkaSdKk2jRLTM65UOEoKtsIZ8.jpg"
+     "poster": "/fhbiz5BsGUVEZmzPP72SoPlbMz0.jpg"
     }
    ]
   },
@@ -25533,7 +25540,7 @@
      "id": "m68726",
      "name": "Pacific Rim",
      "note": "2013",
-     "poster": "/lC4ULSf5J4X9jnBOKcY3pwbAwmT.jpg"
+     "poster": "/mmznhaQDwlHWpUwKuNxtQiubbmM.jpg"
     },
     {
      "id": "m138843",
@@ -26572,7 +26579,7 @@
      "id": "hrenesmee-cullen",
      "name": "Renesmee Cullen",
      "note": "Mackenzie Foy",
-     "poster": "/wzH60SrqWp2XMkBfLgdBhx5EJ82.jpg"
+     "poster": "/ga2HkX7gBjjXooegTu9cLgXy9nE.jpg"
     }
    ]
   },
