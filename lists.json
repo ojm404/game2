@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09",
+ "generated": "2026-11-16",
  "lists": [
   {
    "id": "harry-potter-films",
@@ -95,7 +95,7 @@
      "id": "m177677",
      "name": "Mission: Impossible - Rogue Nation",
      "note": "2015",
-     "poster": "/fRJLXQBHK2wyznK5yZbO7vmsuVK.jpg"
+     "poster": "/mXwC63mlpijqllhoeGnKBGgPtBa.jpg"
     },
     {
      "id": "m353081",
@@ -512,7 +512,7 @@
      "id": "m508883",
      "name": "The Boy and the Heron",
      "note": "2023",
-     "poster": "/f4oZTcfGrVTXKTWg157AwikXqmP.jpg"
+     "poster": "/4GKye5dR4uJyYbcyTveSue1gATD.jpg"
     }
    ],
    "group": "Franchises",
@@ -1096,7 +1096,7 @@
      "id": "a63eba062-847c-3b73-8b0f-6baf27bba6fa",
      "name": "Fearless",
      "note": "2008",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/63eba062-847c-3b73-8b0f-6baf27bba6fa/front-250",
      "sq": true
     },
     {
@@ -1131,7 +1131,7 @@
      "id": "a30e9785b-7b50-4d29-b3d1-96fb55e3397f",
      "name": "Lover",
      "note": "2019",
-     "img": "https://coverartarchive.org/release-group/30e9785b-7b50-4d29-b3d1-96fb55e3397f/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -1152,7 +1152,7 @@
      "id": "ad2e4838d-90e1-471c-bda0-fd816dabb2d4",
      "name": "Fearless (Taylor’s version)",
      "note": "2021",
-     "img": "https://coverartarchive.org/release-group/d2e4838d-90e1-471c-bda0-fd816dabb2d4/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -1166,14 +1166,14 @@
      "id": "a0dcc84fb-c592-46e9-ba92-a52bb44dd553",
      "name": "Midnights",
      "note": "2022",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/0dcc84fb-c592-46e9-ba92-a52bb44dd553/front-250",
      "sq": true
     },
     {
      "id": "a0441b1b2-de57-4a9a-b007-1f6e159921d5",
      "name": "Speak Now (Taylor’s version)",
      "note": "2023",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/0441b1b2-de57-4a9a-b007-1f6e159921d5/front-250",
      "sq": true
     },
     {
@@ -3085,7 +3085,7 @@
      "id": "a209b45b7-8b2f-3e07-b194-efff9cde80dd",
      "name": "Dig Me Out",
      "note": "1997",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/209b45b7-8b2f-3e07-b194-efff9cde80dd/front-250",
      "sq": true
     },
     {
@@ -3268,7 +3268,7 @@
      "id": "a09474d62-17dd-3a4f-98fb-04c65f38a479",
      "name": "Meteora",
      "note": "2003",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/09474d62-17dd-3a4f-98fb-04c65f38a479/front-250",
      "sq": true
     },
     {
@@ -3296,7 +3296,7 @@
      "id": "a20292abb-7023-495b-8081-4b7be106a3b1",
      "name": "The Hunting Party",
      "note": "2014",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/20292abb-7023-495b-8081-4b7be106a3b1/front-250",
      "sq": true
     },
     {
@@ -3568,7 +3568,7 @@
      "id": "ad6b52521-0dfa-390f-970f-790174c22752",
      "name": "Dangerous",
      "note": "1991",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/d6b52521-0dfa-390f-970f-790174c22752/front-250",
      "sq": true
     },
     {
@@ -3597,13 +3597,6 @@
      "name": "Xscape",
      "note": "2014",
      "img": "https://coverartarchive.org/release-group/c78abbe0-82a4-4868-9344-401ec34f5b69/front-250",
-     "sq": true
-    },
-    {
-     "id": "a6a8d21f1-e518-4cc4-aa45-4039e9ec58f9",
-     "name": "Thriller 40",
-     "note": "2022",
-     "img": null,
      "sq": true
     }
    ]
@@ -4498,7 +4491,7 @@
      "id": "gb50ee798-2b55-3c1b-9d67-f8d0d8395732",
      "name": "Wannabe",
      "note": "1996",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/b50ee798-2b55-3c1b-9d67-f8d0d8395732/front-250",
      "sq": true
     },
     {
@@ -4526,7 +4519,7 @@
      "id": "gcc4c71b2-905f-3ddb-935b-103303680188",
      "name": "Mama / Who Do You Think You Are",
      "note": "1997",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/cc4c71b2-905f-3ddb-935b-103303680188/front-250",
      "sq": true
     },
     {
@@ -4579,17 +4572,17 @@
      "sq": true
     },
     {
+     "id": "g0a73a49a-87fd-469b-abf9-71b5e144207a",
+     "name": "Tell Me Why",
+     "note": "2000",
+     "img": "https://coverartarchive.org/release-group/0a73a49a-87fd-469b-abf9-71b5e144207a/front-250",
+     "sq": true
+    },
+    {
      "id": "g741e5371-7f73-3e97-b539-cc803734a060",
      "name": "Headlines (Friendship Never Ends)",
      "note": "2007",
      "img": "https://coverartarchive.org/release-group/741e5371-7f73-3e97-b539-cc803734a060/front-250",
-     "sq": true
-    },
-    {
-     "id": "g0a73a49a-87fd-469b-abf9-71b5e144207a",
-     "name": "Tell Me Why",
-     "note": "2026",
-     "img": "https://coverartarchive.org/release-group/0a73a49a-87fd-469b-abf9-71b5e144207a/front-250",
      "sq": true
     }
    ]
@@ -4712,14 +4705,14 @@
      "id": "gd715a038-31fb-486b-bc5c-d4e4020e47f5",
      "name": "Gotta Be You",
      "note": "2011",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/d715a038-31fb-486b-bc5c-d4e4020e47f5/front-250",
      "sq": true
     },
     {
      "id": "gb2e8ae67-d11a-4e61-be1f-58b5040b8cbd",
      "name": "Wishing on a Star",
      "note": "2011",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/b2e8ae67-d11a-4e61-be1f-58b5040b8cbd/front-250",
      "sq": true
     },
     {
@@ -4747,7 +4740,7 @@
      "id": "g3d7ddcfe-f2cc-4980-aaca-2c1d5dfa1a71",
      "name": "Kiss You",
      "note": "2013",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/3d7ddcfe-f2cc-4980-aaca-2c1d5dfa1a71/front-250",
      "sq": true
     },
     {
@@ -4775,7 +4768,7 @@
      "id": "gc5f3f1ad-6eff-457c-8d55-09f4b468cb68",
      "name": "Midnight Memories",
      "note": "2014",
-     "img": "https://coverartarchive.org/release-group/c5f3f1ad-6eff-457c-8d55-09f4b468cb68/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -5747,7 +5740,7 @@
      "id": "cu2-the-joshua-tree",
      "name": "The Joshua Tree",
      "note": "U2, 1987",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/6f3e9fa6-be7a-3de8-a2b2-2072ece8a54d/front-250",
      "sq": true
     },
     {
@@ -5779,14 +5772,14 @@
      "id": "cquincy-jones-back-on-the-block",
      "name": "Back on the Block",
      "note": "Quincy Jones, 1989",
-     "img": "https://coverartarchive.org/release-group/1ad5316f-a6b7-31d0-ba33-a5bc767ae3dd/front-250",
+     "img": null,
      "sq": true
     },
     {
      "id": "cnatalie-cole-unforgettable-with-love",
      "name": "Unforgettable... with Love",
      "note": "Natalie Cole, 1991",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/26e9dbcc-d124-38cd-a9ae-5db7f8ab2a73/front-250",
      "sq": true
     },
     {
@@ -5821,7 +5814,7 @@
      "id": "cceline-dion-falling-into-you",
      "name": "Falling into You",
      "note": "Celine Dion, 1996",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/7c89982d-e6a6-3811-828d-5462a69f0ddf/front-250",
      "sq": true
     },
     {
@@ -5888,14 +5881,14 @@
      "id": "cray-charles-genius-loves-company",
      "name": "Genius Loves Company",
      "note": "Ray Charles, 2004",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/775273bc-8a5b-3de7-8eb5-6c1ab4de8b68/front-250",
      "sq": true
     },
     {
      "id": "cu2-how-to-dismantle-an-atomic-bomb",
      "name": "How to Dismantle an Atomic Bomb",
      "note": "U2, 2004",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/3ab33753-c16f-3e44-ae67-2fba4fd0e823/front-250",
      "sq": true
     },
     {
@@ -6084,8 +6077,8 @@
     {
      "id": "ctool-nima",
      "name": "Ænima",
-     "note": "Tool, 1996",
-     "img": "https://coverartarchive.org/release-group/ef1e8130-dd5f-336a-85fa-4936a47342bd/front-250",
+     "note": "Tool",
+     "img": null,
      "sq": true
     },
     {
@@ -6138,7 +6131,7 @@
      "id": "cstevie-wonder-songs-in-the-key-of-life",
      "name": "Songs in the Key of Life",
      "note": "Stevie Wonder, 1976",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/ea88b09b-fd34-33cf-a3e5-25a3a2fb4c6f/front-250",
      "sq": true
     },
     {
@@ -6159,7 +6152,7 @@
      "id": "ctlc-crazysexycool",
      "name": "CrazySexyCool",
      "note": "TLC, 1994",
-     "img": "https://coverartarchive.org/release-group/3d886c06-a4c7-3431-be87-2b2940f07acd/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -6296,14 +6289,14 @@
      "id": "cthe-notorious-b-i-g-ready-to-die",
      "name": "Ready to Die",
      "note": "The Notorious B.I.G., 1994",
-     "img": "https://coverartarchive.org/release-group/5afcfeac-118a-35e6-af0d-35ec9003354d/front-250",
+     "img": null,
      "sq": true
     },
     {
      "id": "c2pac-all-eyez-on-me",
      "name": "All Eyez on Me",
      "note": "2Pac, 1996",
-     "img": "https://coverartarchive.org/release-group/e2621417-9236-36b4-9f9e-376c416dc4b0/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -6337,8 +6330,8 @@
     {
      "id": "ckanye-west-my-beautiful-dark-twisted-fantasy",
      "name": "My Beautiful Dark Twisted Fantasy",
-     "note": "Kanye West, 2010",
-     "img": "https://coverartarchive.org/release-group/5d6e21e1-deb5-428e-bb42-c2a567f3619b/front-250",
+     "note": "Kanye West",
+     "img": null,
      "sq": true
     },
     {
@@ -6384,7 +6377,7 @@
      "id": "cspice-girls-spice",
      "name": "Spice",
      "note": "Spice Girls, 1996",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/4180845c-8700-3fda-af8f-0b9f3a932009/front-250",
      "sq": true
     },
     {
@@ -6454,7 +6447,7 @@
      "id": "colivia-rodrigo-sour",
      "name": "Sour",
      "note": "Olivia Rodrigo, 2021",
-     "img": "https://coverartarchive.org/release-group/2ae2e504-7116-4b4f-b632-9748bb18ccd2/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -6534,8 +6527,8 @@
     {
      "id": "cac-dc-back-in-black",
      "name": "Back in Black",
-     "note": "AC/DC, 1980",
-     "img": "https://coverartarchive.org/release-group/d3bc1a64-7561-3787-b680-0003aa50f8f1/front-250",
+     "note": "AC/DC, 2003",
+     "img": null,
      "sq": true
     },
     {
@@ -6570,7 +6563,7 @@
      "id": "cfoo-fighters-the-colour-and-the-shape",
      "name": "The Colour and the Shape",
      "note": "Foo Fighters, 1997",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/7822977a-984d-358d-823f-426139c0eaba/front-250",
      "sq": true
     },
     {
@@ -6609,14 +6602,14 @@
      "id": "cdr-dre-the-chronic",
      "name": "The Chronic",
      "note": "Dr. Dre, 1992",
-     "img": "https://coverartarchive.org/release-group/ad444843-7160-33d7-b0c9-fc99f2c14a99/front-250",
+     "img": null,
      "sq": true
     },
     {
      "id": "cr-e-m-automatic-for-the-people",
      "name": "Automatic for the People",
      "note": "R.E.M., 1992",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/c86c6af9-d10e-3079-b34b-30b682a797eb/front-250",
      "sq": true
     },
     {
@@ -6630,7 +6623,7 @@
      "id": "cnas-illmatic",
      "name": "Illmatic",
      "note": "Nas, 1994",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/28298e2c-4d70-3eed-a0f5-a3280c662b3d/front-250",
      "sq": true
     },
     {
@@ -6693,7 +6686,7 @@
      "id": "clauryn-hill-the-miseducation-of-lauryn-hill",
      "name": "The Miseducation of Lauryn Hill",
      "note": "Lauryn Hill, 1998",
-     "img": "https://coverartarchive.org/release-group/8691d12c-abd8-385c-b1eb-d841190124f7/front-250",
+     "img": null,
      "sq": true
     }
    ]
@@ -6746,7 +6739,7 @@
      "id": "cjay-z-the-blueprint",
      "name": "The Blueprint",
      "note": "Jay-Z, 2001",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/11ae8c9c-27c1-3308-9761-edb87c8f54ea/front-250",
      "sq": true
     },
     {
@@ -6767,7 +6760,7 @@
      "id": "cyeah-yeah-yeahs-fever-to-tell",
      "name": "Fever to Tell",
      "note": "Yeah Yeah Yeahs, 2003",
-     "img": "https://coverartarchive.org/release-group/e8e2d824-dd32-3b24-9c7c-24619fbe86a9/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -6802,7 +6795,7 @@
      "id": "camy-winehouse-back-to-black",
      "name": "Back to Black",
      "note": "Amy Winehouse, 2006",
-     "img": "https://coverartarchive.org/release-group/6eac2e57-ee50-36f8-b0c4-c4c847a2c098/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -6841,7 +6834,7 @@
      "id": "cadele-21",
      "name": "21",
      "note": "Adele, 2011",
-     "img": "https://coverartarchive.org/release-group/e4174758-d333-4a8e-a31f-dd0edd51518e/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -6897,7 +6890,7 @@
      "id": "cfrank-ocean-blonde",
      "name": "Blonde",
      "note": "Frank Ocean, 2016",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/0da340a0-6ad7-4fc2-a272-6f94393a7831/front-250",
      "sq": true
     },
     {
@@ -6918,7 +6911,7 @@
      "id": "cbillie-eilish-when-we-all-fall-asleep-where-do-we-go",
      "name": "When We All Fall Asleep, Where Do We Go?",
      "note": "Billie Eilish, 2019",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/72375978-a9a1-4254-b957-85565c716b7e/front-250",
      "sq": true
     },
     {
@@ -6950,7 +6943,7 @@
      "id": "cneil-young-harvest",
      "name": "Harvest",
      "note": "Neil Young, 1972",
-     "img": "https://coverartarchive.org/release-group/b25419cf-71bf-3a54-8cd4-2161c61056a0/front-250",
+     "img": null,
      "sq": true
     },
     {
@@ -7020,7 +7013,7 @@
      "id": "csimple-plan-no-pads-no-helmets-just-balls",
      "name": "No Pads, No Helmets...Just Balls",
      "note": "Simple Plan, 2002",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/918e4df1-d1c3-33d1-805a-1228f9c684db/front-250",
      "sq": true
     },
     {
@@ -7363,7 +7356,7 @@
      "id": "t1402",
      "name": "The Walking Dead",
      "note": "2010",
-     "poster": "/yTNP9UOdUbGBUZ7SSVng75IwAaY.jpg"
+     "poster": "/ng3cMtxYKt1OSQYqFlnKWnVsqNO.jpg"
     },
     {
      "id": "t1399",
@@ -7551,7 +7544,7 @@
      "id": "t3570",
      "name": "Sailor Moon",
      "note": "1992",
-     "poster": "/m0e8QxAM0n3XK9GPvkxzRB0YL4k.jpg"
+     "poster": "/3cIE7XXtV9ADjvYNZNBBvWpsigR.jpg"
     },
     {
      "id": "t34158",
@@ -8118,7 +8111,7 @@
      "id": "t25760",
      "name": "Higurashi: When They Cry",
      "note": "2006",
-     "poster": "/m71gbHge6qp1kbWGJD5PsSWZpzI.jpg"
+     "poster": "/z6GrUoKte5lzPxR7HWyiSLVieUC.jpg"
     },
     {
      "id": "t16660",
@@ -8237,7 +8230,7 @@
      "id": "t65648",
      "name": "Maid Sama!",
      "note": "2010",
-     "poster": "/igkn0M1bgMeATz59LShvVxZNdVd.jpg"
+     "poster": "/q7Wrrzy8rZ6GZ7ZLwpNuN59HmLb.jpg"
     },
     {
      "id": "t61663",
@@ -8350,7 +8343,7 @@
      "id": "t889",
      "name": "Eureka Seven",
      "note": "2005",
-     "poster": "/1FRY2GvHGV5GX12td2lbFqFCfxt.jpg"
+     "poster": "/5Hq9bEoRasVUmIOmtY8HJHqB6FH.jpg"
     },
     {
      "id": "t31724",
@@ -15095,7 +15088,7 @@
      "id": "p11863",
      "name": "Buffy Summers",
      "note": "Sarah Michelle Gellar",
-     "poster": "/lQD0YNIfpoFlUnn5ThTNFXvp6tH.jpg"
+     "poster": "/xKe52w4tpv61ohz9iz75wNdzcwZ.jpg"
     },
     {
      "id": "p71675",
@@ -15273,7 +15266,7 @@
      "id": "hbuffy-summers",
      "name": "Buffy Summers",
      "note": "Buffy the Vampire Slayer",
-     "poster": "/lQD0YNIfpoFlUnn5ThTNFXvp6tH.jpg"
+     "poster": "/xKe52w4tpv61ohz9iz75wNdzcwZ.jpg"
     },
     {
      "id": "hwillow-rosenberg",
@@ -15357,7 +15350,7 @@
      "id": "hriver-tam",
      "name": "River Tam",
      "note": "Firefly",
-     "poster": "/rDTxblyw0AwU5oSeksgP7GwMyrF.jpg"
+     "poster": "/fWnAHoLiH6qERs8nPcV1gVbHSLl.jpg"
     },
     {
      "id": "hecho",
@@ -15986,7 +15979,7 @@
      "id": "m176",
      "name": "Saw",
      "note": "2004",
-     "poster": "/rLNSOudrayDBo1uqXjrhxcjODIC.jpg"
+     "poster": "/4da0TS3iQ1IzuyhDS8elgkmOfrN.jpg"
     },
     {
      "id": "m19908",
@@ -16329,7 +16322,7 @@
     },
     {
      "id": "m466272",
-     "name": "Once Upon a Time in… Hollywood",
+     "name": "Once Upon a Time in... Hollywood",
      "note": "2019",
      "poster": "/8j58iEBw9pOXFD2L0nt0ZXeHviB.jpg"
     },
@@ -16497,7 +16490,7 @@
      "id": "m808",
      "name": "Shrek",
      "note": "2001",
-     "poster": "/iB64vpL3dIObOtMZgX3RqdVdQDc.jpg"
+     "poster": "/zscUsmzDJFZjUY8f8BQqMSWlmNQ.jpg"
     },
     {
      "id": "m585",
@@ -16681,7 +16674,7 @@
      "id": "m808",
      "name": "Shrek",
      "note": "2001",
-     "poster": "/iB64vpL3dIObOtMZgX3RqdVdQDc.jpg"
+     "poster": "/zscUsmzDJFZjUY8f8BQqMSWlmNQ.jpg"
     },
     {
      "id": "m585",
@@ -18213,7 +18206,7 @@
      "id": "bthe-deal-elle-kennedy",
      "name": "The Deal",
      "note": "Elle Kennedy, 2015",
-     "img": "https://covers.openlibrary.org/b/id/10201611-M.jpg"
+     "img": "https://covers.openlibrary.org/b/id/15217419-M.jpg"
     },
     {
      "id": "bgame-changer-rachel-reid",
@@ -18982,7 +18975,7 @@
     },
     {
      "id": "m466272",
-     "name": "Once Upon a Time in… Hollywood",
+     "name": "Once Upon a Time in... Hollywood",
      "note": "2019",
      "poster": "/8j58iEBw9pOXFD2L0nt0ZXeHviB.jpg"
     },
@@ -19162,7 +19155,7 @@
      "id": "m187",
      "name": "Sin City",
      "note": "2005",
-     "poster": "/i66G50wATMmPrvpP95f0XP6ZdVS.jpg"
+     "poster": "/cByFo9vMktkRsZ6ji6FvOZggBWv.jpg"
     },
     {
      "id": "m39514",
@@ -19477,7 +19470,7 @@
      "id": "m257211",
      "name": "The Intern",
      "note": "2015",
-     "poster": "/bTQ46fupPbjBfFBHuzfD3hxxL0Q.jpg"
+     "poster": "/rdWkIocdGPEPn9no4wKwQ9LmlY.jpg"
     },
     {
      "id": "m241259",
@@ -21227,7 +21220,7 @@
     },
     {
      "id": "m466272",
-     "name": "Once Upon a Time in… Hollywood",
+     "name": "Once Upon a Time in... Hollywood",
      "note": "2019",
      "poster": "/8j58iEBw9pOXFD2L0nt0ZXeHviB.jpg"
     }
@@ -21995,7 +21988,7 @@
      "id": "m808",
      "name": "Shrek",
      "note": "2001",
-     "poster": "/iB64vpL3dIObOtMZgX3RqdVdQDc.jpg"
+     "poster": "/zscUsmzDJFZjUY8f8BQqMSWlmNQ.jpg"
     },
     {
      "id": "m129",
@@ -22667,7 +22660,7 @@
      "id": "m377",
      "name": "A Nightmare on Elm Street",
      "note": "1984",
-     "poster": "/wGTpGGRMZmyFCcrY2YoxVTIBlli.jpg"
+     "poster": "/b9rMHAAKISRmIonaQd9Cccx0S4X.jpg"
     },
     {
      "id": "m90",
@@ -23017,7 +23010,7 @@
      "id": "m1370",
      "name": "Rambo III",
      "note": "1988",
-     "poster": "/1eSQvGuD25ezKaiaQsyDDG3e9iN.jpg"
+     "poster": "/pTVm2HrqV5kOt8tG4ZURNuhrmAq.jpg"
     },
     {
      "id": "m2280",
@@ -23959,16 +23952,16 @@
      "poster": "/4UOa079915QjiTA2u5hT2yKVgUu.jpg"
     },
     {
+     "id": "m2118",
+     "name": "L.A. Confidential",
+     "note": "1997",
+     "poster": "/7jqrauDn3HabyvKfeKTBjzKNeom.jpg"
+    },
+    {
      "id": "m1813",
      "name": "The Devil's Advocate",
      "note": "1997",
      "poster": "/5ZzBGpxy55OQzHxKVY11IpY6a0o.jpg"
-    },
-    {
-     "id": "m8078",
-     "name": "Alien Resurrection",
-     "note": "1997",
-     "poster": "/9aRDMlU5Zwpysilm0WCWzU2PCFv.jpg"
     },
     {
      "id": "m489",
@@ -24330,7 +24323,7 @@
      "id": "m808",
      "name": "Shrek",
      "note": "2001",
-     "poster": "/iB64vpL3dIObOtMZgX3RqdVdQDc.jpg"
+     "poster": "/zscUsmzDJFZjUY8f8BQqMSWlmNQ.jpg"
     },
     {
      "id": "m676",
@@ -24687,7 +24680,7 @@
      "id": "m176",
      "name": "Saw",
      "note": "2004",
-     "poster": "/rLNSOudrayDBo1uqXjrhxcjODIC.jpg"
+     "poster": "/4da0TS3iQ1IzuyhDS8elgkmOfrN.jpg"
     },
     {
      "id": "m9806",
@@ -24722,7 +24715,7 @@
      "id": "m187",
      "name": "Sin City",
      "note": "2005",
-     "poster": "/i66G50wATMmPrvpP95f0XP6ZdVS.jpg"
+     "poster": "/cByFo9vMktkRsZ6ji6FvOZggBWv.jpg"
     },
     {
      "id": "m1895",
@@ -24853,7 +24846,7 @@
      "id": "m773",
      "name": "Little Miss Sunshine",
      "note": "2006",
-     "poster": "/wKn7AJw730emlmzLSmJtzquwaeW.jpg"
+     "poster": "/niNdhTpPHSgw22tK0PLjQMV640v.jpg"
     },
     {
      "id": "m9693",
@@ -26056,16 +26049,16 @@
      "poster": "/x2Us3jR6ToMJjbcPbLimYoxf6xr.jpg"
     },
     {
-     "id": "m402900",
-     "name": "Ocean's Eight",
-     "note": "2018",
-     "poster": "/MvYpKlpFukTivnlBhizGbkAe3v.jpg"
-    },
-    {
      "id": "m493922",
      "name": "Hereditary",
      "note": "2018",
      "poster": "/4GFPuL14eXi66V96xBWY73Y9PfR.jpg"
+    },
+    {
+     "id": "m402900",
+     "name": "Ocean's Eight",
+     "note": "2018",
+     "poster": "/MvYpKlpFukTivnlBhizGbkAe3v.jpg"
     },
     {
      "id": "m260513",
@@ -26170,7 +26163,7 @@
     },
     {
      "id": "m466272",
-     "name": "Once Upon a Time in… Hollywood",
+     "name": "Once Upon a Time in... Hollywood",
      "note": "2019",
      "poster": "/8j58iEBw9pOXFD2L0nt0ZXeHviB.jpg"
     },
@@ -26515,7 +26508,7 @@
      "id": "hbella-swan",
      "name": "Bella Swan",
      "note": "Kristen Stewart",
-     "poster": "/xldswdQ1VnpcOf2wZMPguZ3avgO.jpg"
+     "poster": "/ryhCjTGqS6G6OprbR0qUEH355lA.jpg"
     },
     {
      "id": "hedward-cullen",
