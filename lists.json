@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16",
+ "generated": "2026-11-23",
  "lists": [
   {
    "id": "harry-potter-films",
@@ -947,7 +947,7 @@
      "id": "hsean-connery",
      "name": "Sean Connery",
      "note": "1962 to 1971, and 1983",
-     "poster": "/cd0zKpYJ6eSutkrZkLFxQCGjhnF.jpg"
+     "poster": "/hbB676mW62gjsh0f51ICYE11niG.jpg"
     },
     {
      "id": "hgeorge-lazenby",
@@ -1110,7 +1110,7 @@
      "id": "aa73cecde-0923-40ad-aad1-e8c24ba6c3d2",
      "name": "Red",
      "note": "2012",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/a73cecde-0923-40ad-aad1-e8c24ba6c3d2/front-250",
      "sq": true
     },
     {
@@ -1131,7 +1131,7 @@
      "id": "a30e9785b-7b50-4d29-b3d1-96fb55e3397f",
      "name": "Lover",
      "note": "2019",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/30e9785b-7b50-4d29-b3d1-96fb55e3397f/front-250",
      "sq": true
     },
     {
@@ -1152,7 +1152,7 @@
      "id": "ad2e4838d-90e1-471c-bda0-fd816dabb2d4",
      "name": "Fearless (Taylor’s version)",
      "note": "2021",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/d2e4838d-90e1-471c-bda0-fd816dabb2d4/front-250",
      "sq": true
     },
     {
@@ -4691,7 +4691,7 @@
      "id": "gfe620afc-3426-48fc-90b8-50d4d873d02f",
      "name": "What Makes You Beautiful",
      "note": "2011",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/fe620afc-3426-48fc-90b8-50d4d873d02f/front-250",
      "sq": true
     },
     {
@@ -4768,7 +4768,7 @@
      "id": "gc5f3f1ad-6eff-457c-8d55-09f4b468cb68",
      "name": "Midnight Memories",
      "note": "2014",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/c5f3f1ad-6eff-457c-8d55-09f4b468cb68/front-250",
      "sq": true
     },
     {
@@ -5747,7 +5747,7 @@
      "id": "cgeorge-michael-faith",
      "name": "Faith",
      "note": "George Michael, 1987",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/4e61585f-f341-3174-85cf-afad8df46fbe/front-250",
      "sq": true
     }
    ]
@@ -5772,7 +5772,7 @@
      "id": "cquincy-jones-back-on-the-block",
      "name": "Back on the Block",
      "note": "Quincy Jones, 1989",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/1ad5316f-a6b7-31d0-ba33-a5bc767ae3dd/front-250",
      "sq": true
     },
     {
@@ -6042,8 +6042,8 @@
     {
      "id": "cmetallica-master-of-puppets",
      "name": "Master of Puppets",
-     "note": "Metallica, 1986",
-     "img": "https://coverartarchive.org/release-group/3d00fb45-f8ab-3436-a8e1-b4bfc4d66913/front-250",
+     "note": "Metallica",
+     "img": null,
      "sq": true
     },
     {
@@ -6077,8 +6077,8 @@
     {
      "id": "ctool-nima",
      "name": "Ænima",
-     "note": "Tool",
-     "img": null,
+     "note": "Tool, 1996",
+     "img": "https://coverartarchive.org/release-group/ef1e8130-dd5f-336a-85fa-4936a47342bd/front-250",
      "sq": true
     },
     {
@@ -6152,7 +6152,7 @@
      "id": "ctlc-crazysexycool",
      "name": "CrazySexyCool",
      "note": "TLC, 1994",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/3d886c06-a4c7-3431-be87-2b2940f07acd/front-250",
      "sq": true
     },
     {
@@ -6289,14 +6289,14 @@
      "id": "cthe-notorious-b-i-g-ready-to-die",
      "name": "Ready to Die",
      "note": "The Notorious B.I.G., 1994",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/5afcfeac-118a-35e6-af0d-35ec9003354d/front-250",
      "sq": true
     },
     {
      "id": "c2pac-all-eyez-on-me",
      "name": "All Eyez on Me",
      "note": "2Pac, 1996",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/e2621417-9236-36b4-9f9e-376c416dc4b0/front-250",
      "sq": true
     },
     {
@@ -6330,8 +6330,8 @@
     {
      "id": "ckanye-west-my-beautiful-dark-twisted-fantasy",
      "name": "My Beautiful Dark Twisted Fantasy",
-     "note": "Kanye West",
-     "img": null,
+     "note": "Kanye West, 2010",
+     "img": "https://coverartarchive.org/release-group/5d6e21e1-deb5-428e-bb42-c2a567f3619b/front-250",
      "sq": true
     },
     {
@@ -6390,8 +6390,8 @@
     {
      "id": "cbackstreet-boys-millennium",
      "name": "Millennium",
-     "note": "Backstreet Boys, 1999",
-     "img": "https://coverartarchive.org/release-group/a8fb6ac6-a659-320f-8736-87b52ad65e3a/front-250",
+     "note": "Backstreet Boys",
+     "img": null,
      "sq": true
     },
     {
@@ -6447,7 +6447,7 @@
      "id": "colivia-rodrigo-sour",
      "name": "Sour",
      "note": "Olivia Rodrigo, 2021",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/2ae2e504-7116-4b4f-b632-9748bb18ccd2/front-250",
      "sq": true
     },
     {
@@ -6527,8 +6527,8 @@
     {
      "id": "cac-dc-back-in-black",
      "name": "Back in Black",
-     "note": "AC/DC, 2003",
-     "img": null,
+     "note": "AC/DC, 1980",
+     "img": "https://coverartarchive.org/release-group/d3bc1a64-7561-3787-b680-0003aa50f8f1/front-250",
      "sq": true
     },
     {
@@ -6602,7 +6602,7 @@
      "id": "cdr-dre-the-chronic",
      "name": "The Chronic",
      "note": "Dr. Dre, 1992",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/ad444843-7160-33d7-b0c9-fc99f2c14a99/front-250",
      "sq": true
     },
     {
@@ -6686,7 +6686,7 @@
      "id": "clauryn-hill-the-miseducation-of-lauryn-hill",
      "name": "The Miseducation of Lauryn Hill",
      "note": "Lauryn Hill, 1998",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/8691d12c-abd8-385c-b1eb-d841190124f7/front-250",
      "sq": true
     }
    ]
@@ -6760,7 +6760,7 @@
      "id": "cyeah-yeah-yeahs-fever-to-tell",
      "name": "Fever to Tell",
      "note": "Yeah Yeah Yeahs, 2003",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/e8e2d824-dd32-3b24-9c7c-24619fbe86a9/front-250",
      "sq": true
     },
     {
@@ -6795,7 +6795,7 @@
      "id": "camy-winehouse-back-to-black",
      "name": "Back to Black",
      "note": "Amy Winehouse, 2006",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/6eac2e57-ee50-36f8-b0c4-c4c847a2c098/front-250",
      "sq": true
     },
     {
@@ -6834,7 +6834,7 @@
      "id": "cadele-21",
      "name": "21",
      "note": "Adele, 2011",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/e4174758-d333-4a8e-a31f-dd0edd51518e/front-250",
      "sq": true
     },
     {
@@ -6943,7 +6943,7 @@
      "id": "cneil-young-harvest",
      "name": "Harvest",
      "note": "Neil Young, 1972",
-     "img": null,
+     "img": "https://coverartarchive.org/release-group/b25419cf-71bf-3a54-8cd4-2161c61056a0/front-250",
      "sq": true
     },
     {
@@ -8236,7 +8236,7 @@
      "id": "t61663",
      "name": "Your Lie in April",
      "note": "2014",
-     "poster": "/92P9cD5uOzLVgx0QDTnwkXffjEG.jpg"
+     "poster": "/rRjfH3ckTYz8z8aSkJshFL4VyK9.jpg"
     },
     {
      "id": "t62565",
@@ -13419,7 +13419,7 @@
      "id": "e86121",
      "name": "The One with the Baby on the Bus",
      "note": "Episode 6",
-     "poster": "/4RxxAAbQgt8wgOXDWXcKVUVqXr5.jpg",
+     "poster": "/8EHG3SXlNQd6lBcMs7jL10BiHIV.jpg",
      "wide": true
     },
     {
@@ -13433,112 +13433,112 @@
      "id": "e86098",
      "name": "The One with the List",
      "note": "Episode 8",
-     "poster": "/n3RqceqlBjcehUTwa4IhFfUVoYX.jpg",
+     "poster": "/3cZTgl9glX1Q4lEmrhgquhytzQv.jpg",
      "wide": true
     },
     {
      "id": "e86230",
      "name": "The One with Phoebe's Dad",
      "note": "Episode 9",
-     "poster": "/HiNO3Gyp69e59Pax6a0g2Vhr1S.jpg",
+     "poster": "/fJgiebuu4D1Ws9lB0fiyp617VAc.jpg",
      "wide": true
     },
     {
      "id": "e86131",
      "name": "The One with Russ",
      "note": "Episode 10",
-     "poster": "/wqusgdKbcwbOjhYVWA9c0X5paa7.jpg",
+     "poster": "/iXDet6Epkx7lonm7VbUzcd7vIlI.jpg",
      "wide": true
     },
     {
      "id": "e86102",
      "name": "The One with the Lesbian Wedding",
      "note": "Episode 11",
-     "poster": "/pvB9Hz5aaixc1HH7gvKvIwRteIU.jpg",
+     "poster": "/avmzICEfdbSfAEWedsabR7JOq8p.jpg",
      "wide": true
     },
     {
      "id": "e86132",
      "name": "The One After the Super Bowl (1)",
      "note": "Episode 12",
-     "poster": "/5n6NK2LyhgOZUb3bIbgKbnGutak.jpg",
+     "poster": "/m4iUg2aTQ5hJ1NhTXCiP0JmKCIS.jpg",
      "wide": true
     },
     {
      "id": "e4537938",
      "name": "The One After the Super Bowl (2)",
      "note": "Episode 13",
-     "poster": "/tNM92lAgpRacWZ2K46ixJF02o8r.jpg",
+     "poster": "/4G7VL6y2khJxTXSmgxS6zH3OGFY.jpg",
      "wide": true
     },
     {
      "id": "e86097",
      "name": "The One with the Prom Video",
      "note": "Episode 14",
-     "poster": "/pdNU0SwVoHJmkCQXumvM63mSt1v.jpg",
+     "poster": "/NmxLMshoj6BZn6jTvCawX9KYNZ.jpg",
      "wide": true
     },
     {
      "id": "e86134",
      "name": "The One Where Ross and Rachel... You Know",
      "note": "Episode 15",
-     "poster": "/lHkBkXSc2FoiHVBGsQDzpso1WZs.jpg",
+     "poster": "/1EhPU1PzyLSL4VyAlH7Z7SYESDw.jpg",
      "wide": true
     },
     {
      "id": "e87700",
      "name": "The One Where Joey Moves Out",
      "note": "Episode 16",
-     "poster": "/sNPUHrQcEXHHLOu3U1Tp5DtVRCG.jpg",
+     "poster": "/2P0kfBhSqPGbiFTYHyGLjWVUysR.jpg",
      "wide": true
     },
     {
      "id": "e86157",
      "name": "The One Where Eddie Moves In",
      "note": "Episode 17",
-     "poster": "/gZ5BmBxgxtTUY1pLxW5n4QivWpd.jpg",
+     "poster": "/xyIxnC6KULB2bPSPO6RIcrbnMJk.jpg",
      "wide": true
     },
     {
      "id": "e1007805",
      "name": "The One Where Dr. Ramoray Dies",
      "note": "Episode 18",
-     "poster": "/hUnAG3CmpJkJo4FJ7r1MYOAqpoO.jpg",
+     "poster": "/jBzcWz525ZS3nTRRpNgtXn9tTK2.jpg",
      "wide": true
     },
     {
      "id": "e86184",
      "name": "The One Where Eddie Won't Go",
      "note": "Episode 19",
-     "poster": "/f51JwcffwM9PjjQnSGPjXDiMXeF.jpg",
+     "poster": "/f5wlJ2AZCUFlEWq0SD7Waxade6f.jpg",
      "wide": true
     },
     {
      "id": "e86207",
      "name": "The One Where Old Yeller Dies",
      "note": "Episode 20",
-     "poster": "/skkcu25uGvQQFnYEIGbmsopP40d.jpg",
+     "poster": "/wyQ6i0mN24DWA2VBX1orps9bcCD.jpg",
      "wide": true
     },
     {
      "id": "e86210",
      "name": "The One with the Bullies",
      "note": "Episode 21",
-     "poster": "/36e0hB0dPMtjzMrOdqSIGhPqoPl.jpg",
+     "poster": "/8u6V40Ny5jO3mJlH6v1FUGFQpYv.jpg",
      "wide": true
     },
     {
      "id": "e86212",
      "name": "The One with the Two Parties",
      "note": "Episode 22",
-     "poster": "/74LSOxfvUVYODuoof2Y3OJbGxs4.jpg",
+     "poster": "/1qunQDGjUjEm7ziZDGbylXQmlKg.jpg",
      "wide": true
     },
     {
      "id": "e1007806",
      "name": "The One with the Chicken Pox",
      "note": "Episode 23",
-     "poster": "/wwpRkZol7k9pDJp5J75TczT1AFD.jpg",
+     "poster": "/nMCSXkQcH6bs6sGWhGoWA8vYYJz.jpg",
      "wide": true
     },
     {
@@ -15457,7 +15457,7 @@
      "id": "p1794961",
      "name": "Colin Bridgerton",
      "note": "Luke Newton",
-     "poster": "/hQsWTiBUpE2Jywg8vvvrDLVmG5m.jpg"
+     "poster": "/vslRejwgDfzxRYa7y8a3aWfpHkL.jpg"
     },
     {
      "id": "p6416",
@@ -15481,7 +15481,7 @@
      "id": "p80860",
      "name": "Lord Anthony Bridgerton",
      "note": "Jonathan Bailey",
-     "poster": "/kMtZtavkXIXYA0CnhaWqbNo6uFV.jpg"
+     "poster": "/i9m6JsYKQot3kbMMFsvbEuFarvq.jpg"
     },
     {
      "id": "p2301682",
@@ -15493,13 +15493,13 @@
      "id": "p1232756",
      "name": "Daphne Bridgerton",
      "note": "Phoebe Dynevor",
-     "poster": "/gvriCFuwIvOoZyYph5YkYGZyFR9.jpg"
+     "poster": "/cviluUTn94TaPy9rlVSkHpgGxRR.jpg"
     },
     {
      "id": "p2223752",
      "name": "Kathani 'Kate' Sharma",
      "note": "Simone Ashley",
-     "poster": "/uL7t73kzhrRLY9ilNze1dYhHfg3.jpg"
+     "poster": "/uSwyLJYhZM5Lk0cZSBM7wmLbKXH.jpg"
     },
     {
      "id": "p1628687",
@@ -15920,7 +15920,7 @@
      "id": "m135397",
      "name": "Jurassic World",
      "note": "2015",
-     "poster": "/rhr4y79GpxQF9IsfJItRXVaoGs4.jpg"
+     "poster": "/bkXjL03yWPmiuFqxWEp4zSYVZBY.jpg"
     },
     {
      "id": "m286217",
@@ -16062,7 +16062,7 @@
      "id": "m13",
      "name": "Forrest Gump",
      "note": "1994",
-     "poster": "/saHP97rTPS5eLmrLQEcANmKrsFl.jpg"
+     "poster": "/Cw4hIUIAmSYfK9QfaUW5igp9La.jpg"
     },
     {
      "id": "m597",
@@ -16169,7 +16169,7 @@
      "id": "m13",
      "name": "Forrest Gump",
      "note": "1994",
-     "poster": "/saHP97rTPS5eLmrLQEcANmKrsFl.jpg"
+     "poster": "/Cw4hIUIAmSYfK9QfaUW5igp9La.jpg"
     },
     {
      "id": "m854",
@@ -16466,7 +16466,7 @@
      "id": "m13",
      "name": "Forrest Gump",
      "note": "1994",
-     "poster": "/saHP97rTPS5eLmrLQEcANmKrsFl.jpg"
+     "poster": "/Cw4hIUIAmSYfK9QfaUW5igp9La.jpg"
     },
     {
      "id": "m680",
@@ -17503,7 +17503,8 @@
     {
      "id": "bthe-guest-list-lucy-foley",
      "name": "The Guest List",
-     "note": "Lucy Foley"
+     "note": "Lucy Foley",
+     "img": "https://covers.openlibrary.org/b/id/10096112-M.jpg"
     },
     {
      "id": "bthe-thursday-murder-club-richard-osman",
@@ -17644,7 +17645,8 @@
     {
      "id": "bthe-three-body-problem-cixin-liu",
      "name": "The Three-Body Problem",
-     "note": "Cixin Liu"
+     "note": "Cixin Liu",
+     "img": "https://covers.openlibrary.org/b/id/15282926-M.jpg"
     },
     {
      "id": "bthe-expanse-james-s-a-corey",
@@ -19256,7 +19258,7 @@
      "id": "m39538",
      "name": "Contagion",
      "note": "2011",
-     "poster": "/qL0IooP0bjXy0KXl9KEyPo22ll0.jpg"
+     "poster": "/2xYil8iO3uaNncmTTMxKbwV3MP.jpg"
     },
     {
      "id": "m68724",
@@ -21905,7 +21907,7 @@
      "id": "m13",
      "name": "Forrest Gump",
      "note": "1994",
-     "poster": "/saHP97rTPS5eLmrLQEcANmKrsFl.jpg"
+     "poster": "/Cw4hIUIAmSYfK9QfaUW5igp9La.jpg"
     },
     {
      "id": "m680",
@@ -22137,7 +22139,7 @@
      "id": "m135397",
      "name": "Jurassic World",
      "note": "2015",
-     "poster": "/rhr4y79GpxQF9IsfJItRXVaoGs4.jpg"
+     "poster": "/bkXjL03yWPmiuFqxWEp4zSYVZBY.jpg"
     },
     {
      "id": "m150540",
@@ -22345,7 +22347,7 @@
      "id": "m11644",
      "name": "Blow Out",
      "note": "1981",
-     "poster": "/uFzMscVLDrTaYd6KXOXlr6dly7w.jpg"
+     "poster": "/eaX40QqDv5uKeM8ZI9EAPN3yU87.jpg"
     },
     {
      "id": "m814",
@@ -23622,7 +23624,7 @@
      "id": "m13",
      "name": "Forrest Gump",
      "note": "1994",
-     "poster": "/saHP97rTPS5eLmrLQEcANmKrsFl.jpg"
+     "poster": "/Cw4hIUIAmSYfK9QfaUW5igp9La.jpg"
     },
     {
      "id": "m36955",
@@ -23949,7 +23951,7 @@
      "id": "m2649",
      "name": "The Game",
      "note": "1997",
-     "poster": "/4UOa079915QjiTA2u5hT2yKVgUu.jpg"
+     "poster": "/eRInC7NTiDkt6dnm7Ryzu4hQZEs.jpg"
     },
     {
      "id": "m2118",
@@ -24068,7 +24070,7 @@
      "id": "m2109",
      "name": "Rush Hour",
      "note": "1998",
-     "poster": "/nwPhAsfnb7f46bZkWLG7IRP5HXr.jpg"
+     "poster": "/3WsLE6FtxEPRa6U9sbY1ckrn39s.jpg"
     },
     {
      "id": "m8916",
@@ -25690,7 +25692,7 @@
      "id": "m131631",
      "name": "The Hunger Games: Mockingjay - Part 1",
      "note": "2014",
-     "poster": "/meSGXQ8MXqiC8bXxkKu7lPqnu0L.jpg"
+     "poster": "/4FAA18ZIja70d1Tu5hr5cj2q1sB.jpg"
     },
     {
      "id": "m122917",
@@ -25749,7 +25751,7 @@
      "id": "m135397",
      "name": "Jurassic World",
      "note": "2015",
-     "poster": "/rhr4y79GpxQF9IsfJItRXVaoGs4.jpg"
+     "poster": "/bkXjL03yWPmiuFqxWEp4zSYVZBY.jpg"
     },
     {
      "id": "m150540",
@@ -25898,7 +25900,7 @@
      "id": "m330459",
      "name": "Rogue One: A Star Wars Story",
      "note": "2016",
-     "poster": "/i0yw1mFbB7sNGHCs7EXZPzFkdA1.jpg"
+     "poster": "/1zoZ0e2q34FUnT7xuEnGazBFrbL.jpg"
     },
     {
      "id": "m274870",
@@ -26319,7 +26321,7 @@
      "id": "m13",
      "name": "Forrest Gump",
      "note": "1994",
-     "poster": "/saHP97rTPS5eLmrLQEcANmKrsFl.jpg"
+     "poster": "/Cw4hIUIAmSYfK9QfaUW5igp9La.jpg"
     },
     {
      "id": "m197",
